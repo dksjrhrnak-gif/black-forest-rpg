@@ -1,0 +1,20 @@
+{
+  "baselineCommit": "793a996a25a96fd15c59d99190495f7a3031b965",
+  "htmlBefore": 295584,
+  "htmlSourceRebuiltBefore": 290693,
+  "htmlAfter": 299365,
+  "htmlChange": 3781,
+  "rotBeforeThisTask": 4535,
+  "rotAfterThisTask": 4535,
+  "historicalFullRot": 184374,
+  "historicalRngOnly": 4535,
+  "historicalRemoved": 179839,
+  "htmlSha256": "76be8558017f5c99bbccff5e6aa4643d89a7d77fd6b544226e56d6cfc8322d4f",
+  "newImageBytes": 835684,
+  "javascriptBefore": 234981,
+  "cssBefore": 58445,
+  "javascriptAfter": 243212,
+  "cssAfter": 54011,
+  "browserLoadBefore": "NOT TESTED",
+  "physicalMobileParsing": "NOT TESTED"
+}

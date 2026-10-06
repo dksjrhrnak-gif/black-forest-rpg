@@ -1,11 +1,11 @@
 {
-  "uniqueImageFiles": 105,
-  "registryLinks": 106,
-  "nullMappings": 1094,
+  "uniqueImageFiles": 112,
+  "registryLinks": 114,
+  "nullMappings": 1086,
   "categories": {
     "classes": {
-      "linked": 29,
-      "fallback": 85
+      "linked": 36,
+      "fallback": 78
     },
     "enemies": {
       "linked": 33,
@@ -28,8 +28,8 @@
       "fallback": 6
     },
     "story": {
-      "linked": 4,
-      "fallback": 3
+      "linked": 5,
+      "fallback": 2
     },
     "misc": {
       "linked": 2,
@@ -45,11 +45,8 @@
     }
   },
   "missingClasses": [
-    "x_magic_0",
     "x_magic_1",
     "x_magic_2",
-    "x_magic_3",
-    "x_magic_4",
     "x_magic_5",
     "x_magic_6",
     "x_magic_7",
@@ -65,7 +62,6 @@
     "x_magic_17",
     "x_ranged_0",
     "x_ranged_1",
-    "x_ranged_2",
     "x_ranged_3",
     "x_ranged_4",
     "x_ranged_5",
@@ -116,9 +112,6 @@
     "x_occult_14",
     "x_occult_15",
     "x_occult_16",
-    "adventurer",
-    "hunter",
-    "guardian",
     "whale_slayer",
     "self_named",
     "dream_guard",
@@ -141,9 +134,8 @@
   ],
   "missingStory": [
     "queen",
-    "victor",
     "quixote"
   ],
   "gearStrategy": "1,000 item records share 3 slot fallbacks; no per-variant artwork",
-  "browserQA": "NOT RUN: managed control-browser unavailable"
+  "browserQA": "Tracked separately in browser-results.txt and mobile-results-*.txt; this script is static validation only"
 }

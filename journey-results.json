@@ -1,0 +1,10 @@
+{
+  "rewardCases": 36,
+  "reloadDeterminism": "PASS",
+  "claimOnce": "PASS",
+  "legacyCreditedLoot": "PASS",
+  "optionalMidboss": "PASS",
+  "playerControlled": "PASS",
+  "checkpointPreservation": "PASS",
+  "pendingValidation": "PASS"
+}
