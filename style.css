@@ -927,3 +927,37 @@
 #black-forest-game .armory .gear-equipped{animation:armory-equip .55s ease-out}@keyframes armory-equip{0%{transform:scale(.94)}45%{transform:scale(1.055);filter:brightness(1.5)}100%{transform:scale(1)}}
 @media(max-height:500px){#black-forest-game .armory-hub{padding:5px 10px;gap:8px}#black-forest-game .armory-slots{gap:3px}#black-forest-game .armory .gear-slot{grid-template-columns:20px minmax(0,1fr);padding:2px 5px}#black-forest-game .armory .gear-slot .armory-icon{width:20px;height:20px;font-size:15px}#black-forest-game .armory .gear-slot small{display:none}}
 @media(prefers-reduced-motion:reduce){#black-forest-game .armory .gear-equipped{animation:none;outline:2px solid #eedba6}}
+
+/* UI 5.4.1 — decision context + distinct HP/MP colors */
+#black-forest-game .chapter-brief{
+  margin:14px 0 16px;
+  padding:13px 14px;
+  border:1px solid #3a443d;
+  border-left:3px solid #b39a61;
+  border-radius:5px;
+  background:#121714;
+}
+#black-forest-game .chapter-brief .eyebrow{margin-bottom:5px}
+#black-forest-game .chapter-question{
+  margin:0 0 7px;
+  color:#f0e8d8;
+  font-size:15px;
+  line-height:1.65;
+  font-weight:650;
+}
+#black-forest-game .chapter-brief .muted{
+  margin:0;
+  font-size:12px;
+  line-height:1.65;
+}
+#black-forest-game .stats>div:nth-child(1) progress{accent-color:#c94747}
+#black-forest-game .stats>div:nth-child(1) progress::-webkit-progress-value{background:#c94747}
+#black-forest-game .stats>div:nth-child(1) progress::-moz-progress-bar{background:#c94747}
+#black-forest-game .stats>div:nth-child(2) progress{accent-color:#4d82d6}
+#black-forest-game .stats>div:nth-child(2) progress::-webkit-progress-value{background:#4d82d6}
+#black-forest-game .stats>div:nth-child(2) progress::-moz-progress-bar{background:#4d82d6}
+@media(max-width:700px){
+  #black-forest-game .chapter-brief{margin:11px 0 13px;padding:11px 12px}
+  #black-forest-game .chapter-question{font-size:14px}
+}
+
