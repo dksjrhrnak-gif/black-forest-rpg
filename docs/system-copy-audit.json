@@ -8,6 +8,7 @@
     "class-tree.js",
     "effects.js",
     "relationships.js",
+    "narrative.js",
     "engine.js",
     "qa-relationships.js",
     "career.js",
@@ -16,7 +17,7 @@
     "ui.js",
     "shell.html"
   ],
-  "candidateStrings": 1916,
+  "candidateStrings": 1901,
   "failures": [],
   "exceptions": [
     {

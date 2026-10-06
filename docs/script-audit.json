@@ -1,0 +1,415 @@
+{
+  "status": "PASS",
+  "canonicalSynchronization": "checked thread/quest/NPC generated messages and choices",
+  "sourceStringCount": 1901,
+  "choiceCount": 261,
+  "over18": [
+    {
+      "key": "chapter.0.0.0",
+      "label": "증언을 숨겨 생존자의 이름을 지킨다",
+      "length": 19
+    },
+    {
+      "key": "chapter.0.0.2",
+      "label": "증언을 미끼로 명령의 출처를 추적한다",
+      "length": 20
+    },
+    {
+      "key": "chapter.0.1.0",
+      "label": "뿌리를 풀어 이름을 가족에게 돌려준다",
+      "length": 20
+    },
+    {
+      "key": "chapter.0.1.1",
+      "label": "이름을 복사한 뒤 뿌리를 다시 봉인한다",
+      "length": 21
+    },
+    {
+      "key": "chapter.0.1.2",
+      "label": "이름을 묶은 자의 흔적부터 추적한다",
+      "length": 19
+    },
+    {
+      "key": "chapter.0.2.0",
+      "label": "명령 각인을 부숴 파수꾼을 해방한다",
+      "length": 19
+    },
+    {
+      "key": "chapter.0.2.1",
+      "label": "명령권을 법정의 관리 체계로 넘긴다",
+      "length": 19
+    },
+    {
+      "key": "chapter.0.2.2",
+      "label": "명령 신호를 따라 배후의 근원을 추적한다",
+      "length": 22
+    },
+    {
+      "key": "chapter.1.0.0",
+      "label": "피조물에게 등불 수리를 맡기고 주민과 함께 쓴다",
+      "length": 26
+    },
+    {
+      "key": "chapter.1.0.1",
+      "label": "수리 과정을 등록하고 사용 규칙을 만든다",
+      "length": 22
+    },
+    {
+      "key": "chapter.1.0.2",
+      "label": "등불의 힘이 어디서 오는지 추적한다",
+      "length": 19
+    },
+    {
+      "key": "chapter.1.1.0",
+      "label": "재료 목록을 지우고 사람의 이름으로 되돌린다",
+      "length": 24
+    },
+    {
+      "key": "chapter.1.1.1",
+      "label": "기록을 증거로 보존하고 이름을 공식 등록한다",
+      "length": 24
+    },
+    {
+      "key": "chapter.1.1.2",
+      "label": "목록을 따라 사라진 사람들의 행방을 추적한다",
+      "length": 24
+    },
+    {
+      "key": "chapter.1.2.0",
+      "label": "기억 삭제 기능을 멈추고 다른 동력을 찾는다",
+      "length": 24
+    },
+    {
+      "key": "chapter.1.2.1",
+      "label": "삭제 범위를 제한해 종을 계속 가동한다",
+      "length": 21
+    },
+    {
+      "key": "chapter.1.2.2",
+      "label": "종의 동력선을 따라 원천을 추적한다",
+      "length": 19
+    },
+    {
+      "key": "chapter.2.0.0",
+      "label": "공격을 멈추고 백경의 상처부터 살핀다",
+      "length": 20
+    },
+    {
+      "key": "chapter.2.0.1",
+      "label": "포획 구역을 정하고 접근을 통제한다",
+      "length": 19
+    },
+    {
+      "key": "chapter.2.1.0",
+      "label": "거울을 깨고 정해진 결말을 거부한다",
+      "length": 19
+    },
+    {
+      "key": "chapter.2.1.2",
+      "label": "거울 속 흔적으로 백경의 위치를 추적한다",
+      "length": 22
+    },
+    {
+      "key": "chapter.2.2.2",
+      "label": "상처를 만든 사슬의 주인을 추적한다",
+      "length": 19
+    },
+    {
+      "key": "chapter.3.0.0",
+      "label": "죄목에 이의를 제기하고 억울한 이를 보호한다",
+      "length": 24
+    },
+    {
+      "key": "chapter.3.0.1",
+      "label": "임시 죄목을 받아들이고 절차대로 입성한다",
+      "length": 22
+    },
+    {
+      "key": "chapter.3.0.2",
+      "label": "도장을 훔쳐 누가 죄목을 고쳐 쓰는지 추적한다",
+      "length": 25
+    },
+    {
+      "key": "chapter.3.1.0",
+      "label": "법 밖에서도 증언을 공개해 누구나 듣게 한다",
+      "length": 24
+    },
+    {
+      "key": "chapter.3.1.1",
+      "label": "법을 고쳐 증언을 공식 기록으로 인정한다",
+      "length": 22
+    },
+    {
+      "key": "chapter.3.1.2",
+      "label": "지워진 예외 기록에서 조작의 흔적을 추적한다",
+      "length": 24
+    },
+    {
+      "key": "chapter.3.2.0",
+      "label": "집행을 막고 증인들의 말을 먼저 듣는다",
+      "length": 21
+    },
+    {
+      "key": "chapter.3.2.1",
+      "label": "재심 절차를 열어 판결을 다시 검토한다",
+      "length": 21
+    },
+    {
+      "key": "chapter.3.2.2",
+      "label": "거짓 판결을 내린 권한의 출처를 추적한다",
+      "length": 22
+    },
+    {
+      "key": "chapter.4.0.0",
+      "label": "여행자부터 보호하고 그림자의 정체를 살핀다",
+      "length": 23
+    },
+    {
+      "key": "chapter.4.0.1",
+      "label": "안전 구역을 정하고 추적을 금지한다",
+      "length": 19
+    },
+    {
+      "key": "chapter.4.0.2",
+      "label": "에이해브와 함께 그림자를 즉시 추적한다",
+      "length": 21
+    },
+    {
+      "key": "chapter.4.1.0",
+      "label": "물을 나누고 원정대를 끝까지 함께 데려간다",
+      "length": 23
+    },
+    {
+      "key": "chapter.4.1.1",
+      "label": "배급 규칙을 정해 생존 가능성을 높인다",
+      "length": 21
+    },
+    {
+      "key": "chapter.4.1.2",
+      "label": "정찰대에 자원을 몰아 오아시스를 찾게 한다",
+      "length": 23
+    },
+    {
+      "key": "chapter.4.2.0",
+      "label": "귀환할 사람의 이름부터 적어 결말을 바꾼다",
+      "length": 23
+    },
+    {
+      "key": "chapter.4.2.1",
+      "label": "승선 명단을 확정해 예언을 관리한다",
+      "length": 19
+    },
+    {
+      "key": "chapter.4.2.2",
+      "label": "예언서를 찢고 그것을 쓴 자를 추적한다",
+      "length": 21
+    },
+    {
+      "key": "chapter.5.0.0",
+      "label": "두 기록을 모두 보존해 당사자들이 판단하게 한다",
+      "length": 26
+    },
+    {
+      "key": "chapter.5.0.1",
+      "label": "증거를 비교해 하나의 공식 기록을 만든다",
+      "length": 22
+    },
+    {
+      "key": "chapter.5.0.2",
+      "label": "두 기록을 충돌시킨 편집자의 흔적을 추적한다",
+      "length": 24
+    },
+    {
+      "key": "chapter.5.1.1",
+      "label": "동의한 사람만 이름을 고정해 보호한다",
+      "length": 20
+    },
+    {
+      "key": "chapter.5.1.2",
+      "label": "이름 고정의 저주에 틈이 있는지 추적한다",
+      "length": 22
+    },
+    {
+      "key": "chapter.5.2.0",
+      "label": "누구나 자신의 문장을 덧쓸 수 있게 남긴다",
+      "length": 23
+    },
+    {
+      "key": "chapter.5.2.1",
+      "label": "자유와 질서를 함께 지킬 규칙을 적는다",
+      "length": 21
+    },
+    {
+      "key": "chapter.6.0.0",
+      "label": "거인에게 자신의 이름과 선택을 가르친다",
+      "length": 21
+    },
+    {
+      "key": "chapter.6.0.1",
+      "label": "명령 체계를 점검하고 책임자를 지정한다",
+      "length": 21
+    },
+    {
+      "key": "chapter.6.0.2",
+      "label": "명령이 내려오는 중심 장치를 추적한다",
+      "length": 20
+    },
+    {
+      "key": "chapter.6.1.0",
+      "label": "자발적으로 나눈 불씨만 사용하게 바꾼다",
+      "length": 21
+    },
+    {
+      "key": "chapter.6.1.1",
+      "label": "공식 규칙 아래 불씨 사용량을 제한한다",
+      "length": 21
+    },
+    {
+      "key": "chapter.6.1.2",
+      "label": "회로를 끊고 최초 동력원을 추적한다",
+      "length": 19
+    },
+    {
+      "key": "chapter.6.2.0",
+      "label": "명령을 해제하고 거인의 선택을 따른다",
+      "length": 20
+    },
+    {
+      "key": "chapter.6.2.1",
+      "label": "거인의 동의를 받아 필요한 명령만 남긴다",
+      "length": 22
+    },
+    {
+      "key": "chapter.6.2.2",
+      "label": "통제 장치를 파괴하고 창조주의 흔적을 추적한다",
+      "length": 25
+    },
+    {
+      "key": "chapter.7.0.1",
+      "label": "증언을 정리해 하나의 공적 기록으로 만든다",
+      "length": 23
+    },
+    {
+      "key": "chapter.7.0.2",
+      "label": "기억의 모순을 만든 조작자를 추적한다",
+      "length": 20
+    },
+    {
+      "key": "chapter.7.1.0",
+      "label": "여러 결말이 동시에 존재하도록 지킨다",
+      "length": 20
+    },
+    {
+      "key": "chapter.7.1.1",
+      "label": "모두가 동의할 최소한의 결말을 협상한다",
+      "length": 21
+    },
+    {
+      "key": "chapter.7.1.2",
+      "label": "편집자를 쓰러뜨려 결말 강제를 끝낸다",
+      "length": 20
+    },
+    {
+      "key": "chapter.7.2.2",
+      "label": "사슬을 끊고 근원을 끝까지 추적한다",
+      "length": 19
+    },
+    {
+      "key": "thread.alice.0.3",
+      "label": "앨리스와 함께 증언의 원본을 확인한다",
+      "length": 20
+    },
+    {
+      "key": "thread.alice.1.3",
+      "label": "앨리스와 사본을 만들어 함께 공개한다",
+      "length": 20
+    },
+    {
+      "key": "thread.adam.0.0",
+      "label": "피조물에게 자기 이름을 고르게 한다",
+      "length": 19
+    },
+    {
+      "key": "thread.adam.0.3",
+      "label": "피조물과 대체 심장 설계도를 확인한다",
+      "length": 20
+    },
+    {
+      "key": "bond.alice.0",
+      "label": "기록상을 찾아 증언의 사본을 사 온다",
+      "length": 20
+    },
+    {
+      "key": "bond.alice.1",
+      "label": "약초 잉크로 지워진 증인들의 이름을 복원한다",
+      "length": 24
+    },
+    {
+      "key": "bond.adam.0",
+      "label": "봉합에 쓸 금속을 모아 새 심장틀을 만든다",
+      "length": 23
+    },
+    {
+      "key": "bond.adam.1",
+      "label": "약초를 건네고 피조물이 자기 이름을 새기도록 돕는다",
+      "length": 28
+    },
+    {
+      "key": "bond.ahab.0",
+      "label": "목재를 모아 남은 선원들의 구명정을 수리한다",
+      "length": 24
+    },
+    {
+      "key": "bond.ahab.1",
+      "label": "항해 지도를 사서 선원들의 귀환 항로를 확보한다",
+      "length": 26
+    }
+  ],
+  "over30": [],
+  "voiceChecks": {
+    "creature": 13,
+    "quixote": 5
+  },
+  "auxSpacingFailures": [],
+  "termFailures": [],
+  "similarNarrationQuestions": [],
+  "exceptions": [
+    {
+      "term": "거울 복도의 권투사",
+      "reason": "Named class/location lore refers to a mirror corridor, not the 별 없는 회랑. ID and name remain."
+    },
+    {
+      "term": "종탑",
+      "reason": "Chapter 2 exterior describes the building; 종탑의 까마귀 names the bird at that building. Device/function uses 종."
+    },
+    {
+      "term": "사냥",
+      "reason": "White-whale/faction narration and named hunters remain. No story/event action choice contains 사냥."
+    },
+    {
+      "term": "골드",
+      "reason": "Stats, prices and quantified effect/reward descriptions only; narrative choice 화폐 uses 동전."
+    },
+    {
+      "term": "돌려주다",
+      "reason": "Lexical compound (return an object/name to its owner), Korean Language Institute Q&A 316147; retained."
+    },
+    {
+      "term": "놓아주다",
+      "reason": "Lexical verb, Korean Basic Dictionary entry 45300; prescribed final action label is also explicitly frozen."
+    },
+    {
+      "term": "물어보다",
+      "reason": "Lexical compound (ask), Korean Language Institute FAQ 8606; retained."
+    },
+    {
+      "term": "Past-tense results/history",
+      "reason": "Resolved actions and saved historical logs retain past tense; active chapter entrance narration uses present tense."
+    },
+    {
+      "term": "Legacy saved string logs",
+      "reason": "Historical text is preserved in saves. Current entry scenes use canonical copy; old ending title is normalized only for display."
+    }
+  ],
+  "failures": []
+}
