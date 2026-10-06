@@ -1,0 +1,1759 @@
+{
+  "reviewScope": "219 current Library image metadata records; original runtime artwork remains connected by authoritative repository manifest. HELD does not mean the runtime counterpart is missing.",
+  "confirmedAdditionalPortraitSources": 16,
+  "additionalSourcesHeld": 203,
+  "items": [
+    {
+      "fileId": "libfile_400341f3427881919f1a57d53521e3a8",
+      "path": "/텍스트 rpg/검은 숲의 마지막 안개마법사.png",
+      "status": "CONNECTED",
+      "classId": "x_magic_11",
+      "runtimePath": "assets/class_x_magic_11.webp",
+      "reason": "Confirmed dedicated class ID, provenance and subject"
+    },
+    {
+      "fileId": "libfile_b0af0db9165c81919f4d21d80642e35b",
+      "path": "/텍스트 rpg/거울 뒤의 연금술사.png",
+      "status": "CONNECTED",
+      "classId": "x_magic_10",
+      "runtimePath": "assets/class_x_magic_10.webp",
+      "reason": "Confirmed dedicated class ID, provenance and subject"
+    },
+    {
+      "fileId": "libfile_6f0f4101471481919ed2f889ce5cae27",
+      "path": "/텍스트 rpg/검은 숲의 꿈결 마도사.png",
+      "status": "CONNECTED",
+      "classId": "x_magic_9",
+      "runtimePath": "assets/class_x_magic_9.webp",
+      "reason": "Confirmed dedicated class ID, provenance and subject"
+    },
+    {
+      "fileId": "libfile_3729890495f88191bce8eb862e9c9677",
+      "path": "/텍스트 rpg/번개를 담은 실험실 마도사.png",
+      "status": "CONNECTED",
+      "classId": "x_magic_7",
+      "runtimePath": "assets/class_x_magic_7.webp",
+      "reason": "Confirmed dedicated class ID, provenance and subject"
+    },
+    {
+      "fileId": "libfile_ea25453a48388191a00498a1c546b1c9",
+      "path": "/텍스트 rpg/황금 실로 생명을 잇는 생체술사.png",
+      "status": "CONNECTED",
+      "classId": "x_magic_8",
+      "runtimePath": "assets/class_x_magic_8.webp",
+      "reason": "Confirmed dedicated class ID, provenance and subject"
+    },
+    {
+      "fileId": "libfile_8f3a73d2489481918b186934963d1a93",
+      "path": "/텍스트 rpg/녹색 안경의 주술사.png",
+      "status": "CONNECTED",
+      "classId": "x_magic_6",
+      "runtimePath": "assets/class_x_magic_6.webp",
+      "reason": "Confirmed dedicated class ID, provenance and subject"
+    },
+    {
+      "fileId": "libfile_9fd485721b688191b53fd99280eecc67",
+      "path": "/텍스트 rpg/검은 숲의 허수아비 학자.png",
+      "status": "CONNECTED",
+      "classId": "x_magic_1",
+      "runtimePath": "assets/class_x_magic_1.webp",
+      "reason": "Confirmed dedicated class ID, provenance and subject"
+    },
+    {
+      "fileId": "libfile_96bb9d9606e0819183dfda699ac8dfb4",
+      "path": "/텍스트 rpg/별자리로 귀환길을 그리는 방랑 마도사.png",
+      "status": "CONNECTED",
+      "classId": "x_magic_2",
+      "runtimePath": "assets/class_x_magic_2.webp",
+      "reason": "Confirmed dedicated class ID, provenance and subject"
+    },
+    {
+      "fileId": "libfile_8b3a9ddad2448191b08377c1b94f1c9a",
+      "path": "/텍스트 rpg/장미 그림자를 빚는 환술사.png",
+      "status": "CONNECTED",
+      "classId": "x_magic_5",
+      "runtimePath": "assets/class_x_magic_5.webp",
+      "reason": "Confirmed dedicated class ID, provenance and subject"
+    },
+    {
+      "fileId": "libfile_859f0d88f4c881919c40c40844f1f3e2",
+      "path": "/텍스트 rpg/고딕 성당의 붉은 보석 성배.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_f36758f906548191aa056f3866b185a4",
+      "path": "/텍스트 rpg/고딕 사파이어 반지와 촛불의 밤.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_332e60d37a948191b9b7827df28a9cb9",
+      "path": "/텍스트 rpg/고딕 성당의 신비로운 모래시계.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_e179b14ef3bc8191ba4b09deaf1061a7",
+      "path": "/텍스트 rpg/달빛 아래 고딕 도시의 후드 궁수.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_23abc0e474e08191a5d530181630072d",
+      "path": "/텍스트 rpg/안개 낀 폐허 정원의 슬링샷 사냥꾼.png",
+      "status": "CONNECTED",
+      "classId": "x_ranged_2",
+      "runtimePath": "assets/class_x_ranged_2.webp",
+      "reason": "Confirmed dedicated class ID, provenance and subject"
+    },
+    {
+      "fileId": "libfile_dcf0587f47648191a0cce6e4e56275a8",
+      "path": "/텍스트 rpg/고딕 성당의 천문 나침반.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_cca2e6bee34c81918649ef59091988f4",
+      "path": "/텍스트 rpg/달빛 아래 고딕 성녀와 황금 성스러운 지팡이.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_7d43877705648191bcf6eea43d5c14ac",
+      "path": "/텍스트 rpg/달빛 아래 황금빛 대성당의 여사제.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_18a545a993fc8191abaab24ea13a2822",
+      "path": "/텍스트 rpg/금이 간 고딕 앤티크 거울.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_53aa3806a0bc8191838b4b2e6a340087",
+      "path": "/텍스트 rpg/비 내리는 폐허의 고독한 궁수.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_a3c0f32e7858819180e43f5272a62165",
+      "path": "/텍스트 rpg/고딕 성당의 진홍빛 연금술 병.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_60783fa6953481919d2d32cf2a80f6f1",
+      "path": "/텍스트 rpg/달빛 아래 고딕 헌터와 까마귀.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_adc69354e45c81918d655a0400438119",
+      "path": "/텍스트 rpg/고딕 성채의 장미 기사여왕.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_1b0213d6c87081918c4bc8a909b2832e",
+      "path": "/텍스트 rpg/침몰한 성당의 바다 마녀.png",
+      "status": "CONNECTED",
+      "classId": "x_magic_4",
+      "runtimePath": "assets/class_x_magic_4.webp",
+      "reason": "Confirmed dedicated class ID, provenance and subject"
+    },
+    {
+      "fileId": "libfile_40b46be34a2c8191a43f52930ce6c558",
+      "path": "/텍스트 rpg/촛불 아래 검은 토끼발 부적.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_efda038ecd14819180713723d86682a6",
+      "path": "/텍스트 rpg/비 내리는 고딕 우물의 마법사.png",
+      "status": "CONNECTED",
+      "classId": "x_magic_3",
+      "runtimePath": "assets/class_x_magic_3.webp",
+      "reason": "Confirmed dedicated class ID, provenance and subject"
+    },
+    {
+      "fileId": "libfile_d35f862930288191a0fb3ddd7118e9ad",
+      "path": "/텍스트 rpg/폭풍 속 고딕 성채의 사냥꾼.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_12bbdd18a12881919db0da5ca99fb5b1",
+      "path": "/텍스트 rpg/달빛 아래 고딕 기사의 성채.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_42e7b322b6748191984f3db18c5d1a1a",
+      "path": "/텍스트 rpg/촛불 아래 낡은 나무 십자가.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_6b5908636ef48191bd68ba1adcf2d15d",
+      "path": "/텍스트 rpg/비 내리는 폐허의 까마귀 마법사.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_8df70ad242e08191a0908441750146af",
+      "path": "/텍스트 rpg/핏빛 고딕 왕관과 촛불의 제단.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_a2c754c57e9c81918c9d78ae1fb2f528",
+      "path": "/텍스트 rpg/핏빛 루비의 고딕 왕관.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_b00c782bd45881918310e9576333a7e9",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/달빛 아래의 고딕 성녀 자세.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_b976ffb335e8819195de789a55f3427e",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/고딕 양식의 붉은 보석 그리모어.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_6067378adb7081918372801020723777",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/핏빛 루비의 고딕 왕관.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_a048cfae51188191add7ff6b7b4eba3f",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/폭풍우 속 고딕 뱀파이어 기사.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_58dd37c549908191b32fa77f8fc4d90d",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/달빛 아래의 고딕 마법사.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_e91332edc514819196d66fc2acb68d9a",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/폐허의 서고를 지배하는 잉크 마법사.png",
+      "status": "CONNECTED",
+      "classId": "x_magic_0",
+      "runtimePath": "assets/class_x_magic_0.webp",
+      "reason": "Confirmed dedicated class ID, provenance and subject"
+    },
+    {
+      "fileId": "libfile_7e56a61861f88191a0a8964507cb5f05",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/붉은 모래의 고딕 hourglass.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_201a49c4eea48191b5df6dceecea2302",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/핏빛 루비의 고딕 아뮬렛.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_7a0a78238f4c81919e57ff4d4b2bc86b",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/비 내리는 고딕 도시의 사냥꾼.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_11f5d8245d9c8191a23b95492571f9eb",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/폐허를 걷는 고독한 모험가(1).png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_d035ffdd145481918a05fa2a47e2e213",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/폐허의 안개 속 판타지 방랑자.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_c73650b6b62081919764ec91ad171dbb",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/고딕 양식의 천문 회중시계 유물.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_700f28273aac81918f3717b4e6729698",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/폐허를 걷는 고독한 방랑자.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_dcd0f0a500088191bbf75887cfe3274d",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/안개 낀 고딕 도시의 방랑자.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_bf7a77796c908191aff2ab752e8003fa",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/안개 낀 고딕 폐허의 방랑 전사.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_f7b472cecb60819185ed69cbcba465c1",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/폭풍우 속 고딕 도시의 방랑자.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_abe332631e30819187242440d7d3f6d8",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/비 내리는 고딕 도시의 방랑자.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_56bf9bd574d48191b49a958404cb8a6a",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/안개 낀 폐허를 걷는 방랑자.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_7f15822c7a3c81919c368d5dc33b4f5d",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/고딕 양식의 낡은 열쇠와 촛불.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_bcfd38d8c1148191bc00849dafc09028",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/안개 속 고딕 폐허의 방랑자.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_03b8bf61d22c81919eb69e329dce4458",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/안개 낀 고딕 폐허의 방랑자(3).png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_0a71bd3bd79081918ff7e3fa33b44314",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/안개 낀 고딕 폐허의 방랑자(2).png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_750a4f5de138819187d1b624146db06e",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/폐허를 바라보는 방랑 모험가.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_df41dbc8f558819181cb3a58844375e2",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/고대 문양의 낡은 마법서.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_3223c84940648191a7fe599eb8cf17b0",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/고대 고딕 그리모어와 촛불【zh?】.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_28ec3c3031c081918f3c01e61a7f69e6",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/고딕 연금술사의 붉은 마법 물약.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_64fa0ece7754819183b3eb79e62cca6b",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/혈석이 박힌 고딕 성물 팬던트.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_21a2429983608191950e40676d6ec46a",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/핏빛 보석의 고딕 부적.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_9a4b9c81f52c8191ba6941f1adfa6045",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/폭풍 속 폐허를 지키는 기사.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_2cf56c5622d88191af673f70ecc39e94",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/안개 낀 고딕 폐허의 활잡이.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_4d662aad64a88191ad72140580f2f949",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/달빛 아래 고딕 헌터와 사냥개.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_23981ffd74e481918eeda6e78f1cbb64",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/달빛 아래의 고딕 마녀 탐험가.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_e16c1c368b3c8191bf61909448765a46",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/달빛 아래의 사냥꾼과 늑대.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_63cb3d1d6274819189d38d0e850094bb",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/잉크 마법사의 폐허 도서관.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_7245719cb24081919cf5e5573aaa26f9",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/달빛 아래 사냥꾼과 늑대.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_0394ca72d2008191a8356485233ca5b1",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/폭풍 속 고서와 마녀 학자.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_9e4f477db1b881919923f1dc7b60197c",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/달빛 아래 고딕 사냥꾼과 늑대.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_a4bf9edb775c8191a0e3d748f31cba3a",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/고딕 폐허의 달빛 사냥꾼.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_85d9b338ae1c8191abf9196aa6f36678",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/어둠 속 전투 갑옷 유물.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_d2ab9f6a75908191b556cad938cfd417",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/어둠 속 녹슨 촛불 랜턴.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_baf989c348b881919b4611eae2fc4348",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/고풍스러운 가죽 주머니와 촛불ೇಜ.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_a323429d7f008191bb1bf9555834a096",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/녹슨 전장의 대형 워해머.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_b0bdbdc02e4c8191a9809c888b045da4",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/안개 낀 고딕 숲의 사냥꾼(1).png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_3da543dda09c8191a00db0996dce2511",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/안개 속 폐허의 사슴 사냥꾼.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_652d47a80f58819198758bf41893cc2c",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/안개 낀 황혼의 고딕 사냥꾼.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_5edb7bc3b53c8191a718b2059b966abf",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/안개 낀 고딕 폐허의 방랑자(1).png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_0b5966a3188c81919bc6e32a5f099d59",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/안개 낀 폐허의 방랑자.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_dad28580aee48191a8f5edc3003da80d",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/안개 낀 고딕 숲의 사냥꾼.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_668288c5e50c8191a6c664d44d26a90f",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/안개 낀 고성의 방랑 검객.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_b2f79814cb088191aa16eaee918e8dc3",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/안개 낀 고딕 폐허의 방랑자.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_9703ee2deb648191af9e144ad3f632d5",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/image-gen-10(2).png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_9b050f12a24c81918c90bfad0be7a0cf",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/image-gen-9(3).png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_58fa0ae0ba4c8191b28a1cb0ddb147b4",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/image-gen-8(3).png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_e287d7376b048191806252bbaa6b7c55",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/image-gen-7(3).png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_4ab1e385ca248191a16ac3f54096b8b3",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/image-gen-6(3).png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_265d3b6381248191beed61412561f555",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/image-gen-5(3).png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_32e36d46a8108191b796ad6b52093535",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/image-gen-4(3).png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_39190b15d220819185f23de74c6ecab3",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/image-gen-3(3).png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_274d69a6bbcc8191a5f96126006b63b6",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/image-gen-2(3).png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_c232c9b7e6e48191bb076f103398a7a5",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/image-gen-1(3).png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_cf7ec97bef1c819197ca203a97f7e701",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/image-gen-10(1).png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_78484c9e672c81919c6ebed47127b91d",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/image-gen-9(2).png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_34495553b8d481918c3c0047b7435baf",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/image-gen-8(2).png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_0f6c808c0a2481919f27b8834e4686af",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/image-gen-7(2).png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_c5abd0682660819189742e5a1b917239",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/image-gen-6(2).png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_8f850c1e56c48191a0d189f17190a61d",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/image-gen-5(2).png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_0a0f514d8d1c8191b4f3e1a782c4db50",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/image-gen-4(2).png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_537f510d7cd0819181cd5ec48f6a06bc",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/image-gen-3(2).png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_1e8d790d9c488191932140a7fdd4ba93",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/image-gen-2(2).png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_f1af83c8ad888191912af44ec3e98871",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/image-gen-1(2).png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_177f75d88b4c819187d1c8e7924b16de",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/붉은 달 아래 고딕 성채의 사냥꾼.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_b0737e4d72ec8191978f1c1c052313f2",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/달빛 아래 은빛 마녀의 주문.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_d4690c98bec48191b76ed294acbffeb5",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/폐허의 달빛 마도서술사.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_3bbc021d82b88191833e8538ad03a581",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/비 내리는 고딕 도시의 외로운 사냥꾼.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_5db8115b91b8819191ee32d8b5d3a64e",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/안개 숲의 늑대 동료 ranger.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_1ba73417803081919adf46c99bca43d1",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/폐허의 고딕 성을 향한 방랑 기사.png",
+      "status": "CONNECTED",
+      "classId": "guardian",
+      "runtimePath": "assets/class_guardian.webp",
+      "reason": "Confirmed dedicated class ID, provenance and subject"
+    },
+    {
+      "fileId": "libfile_7535c368cc8c81918aa60582c0b00033",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/폭풍 속 고딕 아처의 귀환.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_91bd01b3bc9c819195c4f862a7a6e10a",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/고딕 판타지 인물 초상 컬렉션.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_b2c69d205b1481918d35b18db9bf6063",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/폐허 속의 고독한 기사.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_b1d0ea5393e08191940531518505d0db",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/안개 낀 폐허의 고독한 사냥꾼.png",
+      "status": "CONNECTED",
+      "classId": "hunter",
+      "runtimePath": "assets/class_hunter.webp",
+      "reason": "Confirmed dedicated class ID, provenance and subject"
+    },
+    {
+      "fileId": "libfile_ae40422fe4308191abded89afd4eeec2",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/image-gen-10.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_ae9fc0eedf008191892de706a3c31e76",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/image-gen-9(1).png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_a263bcb618988191b1f44b9dff703424",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/image-gen-8(1).png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_da01ae7e68388191abb4c4cc333d7041",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/image-gen-7(1).png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_7dbc88b3fac0819181b9b5f9362b0a45",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/image-gen-6(1).png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_386e2cb3eb6c81918bfe52ed44c2a924",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/image-gen-5(1).png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_2dd6967df5588191a4e15b763fd90818",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/image-gen-4(1).png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_080aaf4e7adc8191b31e15855c170844",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/image-gen-3(1).png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_a8bc56b8bca88191b0004ac761572458",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/image-gen-2(1).png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_e10b3428f7248191bf7034b7b4cba3c3",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/image-gen-1(1).png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_b8346ba3e720819180b6c5f9776f5d37",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/폐허를 걷는 고독한 모험가.png",
+      "status": "CONNECTED",
+      "classId": "adventurer",
+      "runtimePath": "assets/class_adventurer.webp",
+      "reason": "Confirmed dedicated class ID, provenance and subject"
+    },
+    {
+      "fileId": "libfile_04bd64c5b8b88191a40b290d36a46cd4",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/안개 낀 고딕 황야의 방랑 전사.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_d5d44d5c9ddc81918964e1c60f6aa9ae",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/안개 낀 폐허의 방랑 검객.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_d7e2474a831c8191b4eb7adf64e44ef3",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/고딕 폐허를 걷는 생존자.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_91fc8045b1e481919a4538abe0a29f3c",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/폐허를 지키는 방랑 전사.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_29c86b5cb99881919a33e7d72a64a37c",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/image-gen-9.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_eccd64f395c88191bef14fb13e7ea7a8",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/image-gen-8.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_a6d709e1ef008191bfaccdbe7992c216",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/image-gen-7.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_e8a10a03dc248191b9711374a9a1ae87",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/image-gen-6.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_24f6f0c24ef481918f519ea23b28da5d",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/image-gen-5.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_1b804b08c32081919bb51dc6cefaa7bf",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/image-gen-4.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_dde30d1aa3f48191a039665066269218",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/image-gen-3.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_ee27101eb764819193338dc3db126e28",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/image-gen-2.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_2848f594fe1c81919cb4455e503aa7a8",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/image-gen-1.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_98a3efb7eb948191aa198f233679fb14",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/검은 일식 아래의 마지막 불씨.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_1f0d30bc05f881918712dcfb9ce7179b",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/별의 심장을 품은 우주 용광로.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_0b22be6eeed08191a06ccd6e0407dfb4",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/달빛이 흐르는 기묘한 도서관.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_9134167e1f20819182e02ab1e78c6053",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/붉은 하트 깃발의 잊힌 성.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_a1f20c0aa8ec819185e229329f4b60a4",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/붉은 사막의 좌초된 포경선.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_afb3842f14708191a8fa33bfa9aa24cb",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/유리 늪의 흰 고래 그림자.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_c382f274ca3c8191b381570fa1ae6682",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/번개 연구소 너머의 폐허 마을.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_543f31e59a6881919ebde63f8a5a4049",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/붕괴하는 균열 너머의 별 없는 회랑.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_5459826452c88191b3c81619daa5a4ad",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/가면의 숲, 빈 의자로의 초대.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_5a217f1d43e081919bd226cc7937f9f6",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/꺼진 등불 곁, 짐을 버린 상인.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_b7aed5256608819194b65a8f1b1a06f4",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/황금빛 별 조각의 분화구.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_9f25ae1f71b08191aac7bc9fde2dd0bf",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/비가 멈춘 고딕 시계.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_8152cd4185708191ab292d8dc5da84c7",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/어둠의 협곡 위, 보물이 빛나는 유리 다리.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_55713d8dee0881919c279fe16053cfac",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/알 둥지의 잠든 고대 용.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_9ba484647a448191b36c67743a7a5114",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/금서를 품고 달아나는 견습생.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_f194b904f9f081918b735669f68b63af",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/이끼 그루터기의 까마귀 거래.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_608ca4a32cd08191bcd755412434ec9e",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/실루엣을 지우는 가면 없는 문지기.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_6cfc6709dd88819189cd3e71c63993fe",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/등불 아래 보물지도를 건네는 상인.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_51b80627fad8819190a49f0b7d2cf74a",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/현실을 삼키는 우주의 편집자.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_270823adf74c8191b6a3d8d98634916a",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/무너진 광산의 빛나는 광맥.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_0f809bf0634c81918b0d825655905fc9",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/청색 번개를 품은 프랑켄슈타인 거상.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_f0f034862d8081919031e81936ec4ea1",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/안개 속 폐허를 가리키는 작은 유령.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_3a2601062e948191b4f475da62288b49",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/검은 제단과 불씨의 숲.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_d3b109a43cd48191ae4cdcfc841b408c",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/봉인 서책의 달빛 사서.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_333b8eff9e6881919af7fa6f08e9db38",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/전복된 수레 아래의 사냥꾼.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_e567b970cecc819181f8a59e3e14531a",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/붉은 사막의 별모래 예언자.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_969f2d1558088191a938345d44388803",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/붉은 심장 가면의 여왕.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_0b4bc72b3e648191bca84b42da2393c8",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/은발의 시간 마도사.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_ba4cdd66f01c8191b099d7623f99eb29",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/거울 마녀의 유리 늪.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_0624a6739918819183d198887f7bf505",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/시계태엽 시간 감시자.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_0e22a9e003ac81919a7a865cc257c279",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/망령 마을의 종지기 모르.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_631ec95556fc819186953d6b315909d8",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/검은 숲의 가시 파수꾼.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_a5530193acdc8191bb423c5341be67b6",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/주사위를 부리는 빅토리아 도박사.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_a66c3c2d464481919b136495450bd71b",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/번개 실험실과 빛나는 기계 심장.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_985b601a6c708191870e20ed015be31a",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/숲길의 이빨 달린 괴물 상자.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_67c554f75a3881918b54389479b77ba5",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/보랏빛 눈의 그림자 군주.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_f966823332e88191916377d4d9c1aa42",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/일식의 후광을 지닌 흑태양 사제.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_9dc67b45048c81919ddceadf3b395776",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/붉은 사막 아래의 흰 고래.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_ea2bb9561de4819194133b705aff46bb",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/푸른 룬의 검무사.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_1a02424309c48191935bf25e020718cc",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/앨리스와 하트 여왕의 기억 재판.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_4118f7dca8488191a3eb638838548073",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/별 없는 심연의 기사.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_3a43ba8f8e5c819196d9b2b7bfe03292",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/장미 예배당의 붉은 혈기사.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_a957d9d1f9388191b89cc83a5487e9ea",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/황금 가면의 공허한 왕.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_5b8a5395f3848191b05a1fcf8397f2c7",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/여명 성당의 치유 성기사.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_db4af5ec8bc08191b9006a22c29f2963",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/불씨 눈의 검은 사냥개.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_9c397a095088819198a3de72fca6fb3f",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/용광로 기사와 괴물의 대치.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_2ff81ecf658c81918532364cf7bdc339",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/서가를 떠도는 검은 잉크 유령.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_09b9bfd76fd88191a548b1ef5793b1d0",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/흑갑 기사와 괴수의 대치.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_071b7dc84e948191b8e75ce22586e3b2",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/용광로 심장의 철 거인.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_8c6acc6aea088191b4eaa13112839afe",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/성벽을 지키는 베테랑 용병대장.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_367cd34536bc8191ac39b4ecfffaa5e8",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/대장간의 불꽃 악령.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_147cf4de5dcc819187b45ed064647649",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/해골 바위 위 진홍 독수리.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_8aa77c4524948191811dea56ad37431b",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/부서진 후광의 타락한 수호자.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_09ac929962888191bc054951d6b0ebd3",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/달빛 관절의 도자기 인형.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_7e271c664dcc81919e6e159ac4f05535",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/루비 독침의 유리 전갈.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_e4aa221cbe648191ab385195c56cc74a",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/폐허 성의 거대한 도끼 집행자.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_b24f6911c7c08191b13a9cc462a2b220",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/왕좌에 맞선 가시관 전사.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_adcc399d4e748191b0df86a278d5d586",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/달빛 도서관의 금서 든 유령 학자.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_1eff3396642081918e9c20610ff4d142",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/금빛 지팡이의 미라 사제.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_142c80df934c81919993679a5af61d14",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/이끼 비늘 거대 늪 악어.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_23c78bec5f888191a8b39188617e02de",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/멈춘 시계의 황금 레이피어 결투사.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_6859c6ad8b108191b48e188af6f3c6f5",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/모래바람의 사막 도적.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_b725a6b706248191921849be1a559597",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/종이 검을 든 양피지 수호자.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_889dc45e7f208191b8cf17e1868189eb",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/늪에서 솟은 고대 이끼 골렘.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_bee5ad462c30819186b1e16fd6b79d6d",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/기억을 삼키는 얼굴 없는 포식자.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_e2ec6fed35c081919f83fcd7c498c03c",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/심해의 닻 기사.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_6cbb16758c2c8191be3cbc75a8eab135",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/독안개 늪의 망령.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_ea26d99314608191b55fc7d3847395b3",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/폐허의 종탑 위 검은 까마귀.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_c5841d28f4748191b1990397ed862fa2",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/성당 지하묘지의 뱀파이어 사냥꾼.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_1642a4e79c248191aba43e728ad0cbde",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/위협적인 빈 기사 갑옷.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_aaeb550d583881919d3cc08a079a62c8",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/사슬과 책장을 가르는 검객.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_d550b0c3e9708191a5ce262ea3585b45",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/빛나는 눈의 저주받은 주민.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_46dde0c4bf2881919002178d7ac0cc42",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/가스등 거리의 두 얼굴 검객.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_47350567e7f881919f841e1cea38e7b7",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/황량한 마을의 잿빛 도끼 약탈자.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_020b133407b08191b286eb20c27985ca",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/황혼의 기계장치 백기사.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_b023b753a19081919318979916c3141d",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/푸른 실험실의 봉합 검객.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_700d13d3754c8191ad8cc485c62e58c3",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/거울을 깨뜨리는 복서의 일격.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_7380603d85b88191981997fe03c83763",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/심장 법정의 가면 집행자.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_3d3d6649332081919c7bb9cc1f8b1163",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/거대 토끼 굴의 흰 토끼 수문장.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_89c990992f2c8191ad64ca365fde6da1",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/무너진 풍차 앞의 기사.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_7e917c12effc8191bd089d2b5c5bd684",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/폭풍 갑판의 작살과 흰 고래.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_100faa8382d88191851499ab70707e69",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/폭풍우 속 고래잡이 배의 선원 검객.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_dc772f643614819198525251c3254e15",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/황금빛 방패의 시골 수호자.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_db3a63e9bf9c8191adf228852cfa6d9d",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/풍차 아래의 황동 결투가.png",
+      "status": "HELD / existing runtime retained",
+      "classId": null,
+      "runtimePath": null,
+      "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    }
+  ]
+}

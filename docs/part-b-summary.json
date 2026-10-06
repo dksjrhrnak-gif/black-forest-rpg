@@ -1,0 +1,522 @@
+{
+  "status": "PASS",
+  "totalFiles": 121,
+  "classes": {
+    "connected": [
+      {
+        "id": "warrior",
+        "name": "전사",
+        "path": "assets/class_warrior.webp"
+      },
+      {
+        "id": "rogue",
+        "name": "도적",
+        "path": "assets/class_rogue.webp"
+      },
+      {
+        "id": "mage",
+        "name": "마도사",
+        "path": "assets/class_mage.webp"
+      },
+      {
+        "id": "paladin",
+        "name": "성기사",
+        "path": "assets/class_paladin.webp"
+      },
+      {
+        "id": "blood",
+        "name": "혈기사",
+        "path": "assets/class_blood.webp"
+      },
+      {
+        "id": "rune",
+        "name": "룬검사",
+        "path": "assets/class_rune.webp"
+      },
+      {
+        "id": "shadow",
+        "name": "그림자 군주",
+        "path": "assets/class_shadow.webp"
+      },
+      {
+        "id": "gambler",
+        "name": "운명의 도박사",
+        "path": "assets/class_gambler.webp"
+      },
+      {
+        "id": "chrono",
+        "name": "시간술사",
+        "path": "assets/class_chrono.webp"
+      },
+      {
+        "id": "rabbit_guard",
+        "name": "토끼굴 문지기",
+        "path": "assets/class_rabbit_guard.webp"
+      },
+      {
+        "id": "pequod",
+        "name": "피쿼드호 갑판검사",
+        "path": "assets/class_pequod.webp"
+      },
+      {
+        "id": "windmill",
+        "name": "풍차의 결투자",
+        "path": "assets/class_windmill.webp"
+      },
+      {
+        "id": "stitch",
+        "name": "봉합된 검투사",
+        "path": "assets/class_stitch.webp"
+      },
+      {
+        "id": "card_spear",
+        "name": "찢긴 카드 창병",
+        "path": "assets/class_card_spear.webp"
+      },
+      {
+        "id": "sancho",
+        "name": "산초의 방패지기",
+        "path": "assets/class_sancho.webp"
+      },
+      {
+        "id": "coffin",
+        "name": "빈 관의 파수꾼",
+        "path": "assets/class_coffin.webp"
+      },
+      {
+        "id": "mirror_fist",
+        "name": "거울 복도의 권투사",
+        "path": "assets/class_mirror_fist.webp"
+      },
+      {
+        "id": "ahab_harpoon",
+        "name": "광기에 찬 포경선 작살잡이",
+        "path": "assets/class_ahab_harpoon.webp"
+      },
+      {
+        "id": "fallen_dreamer",
+        "name": "기사도를 잃은 몽상가",
+        "path": "assets/class_fallen_dreamer.webp"
+      },
+      {
+        "id": "queen_exec",
+        "name": "하트 법정의 참수인",
+        "path": "assets/class_queen_exec.webp"
+      },
+      {
+        "id": "adam_sword",
+        "name": "피조물의 자유검사",
+        "path": "assets/class_adam_sword.webp"
+      },
+      {
+        "id": "twin_duel",
+        "name": "지킬의 이중 결투자",
+        "path": "assets/class_twin_duel.webp"
+      },
+      {
+        "id": "white_knight",
+        "name": "백기사의 균형검",
+        "path": "assets/class_white_knight.webp"
+      },
+      {
+        "id": "grave_hunter",
+        "name": "성당 지하의 사냥꾼",
+        "path": "assets/class_grave_hunter.webp"
+      },
+      {
+        "id": "pagebreaker",
+        "name": "끝장을 찢는 검성",
+        "path": "assets/class_pagebreaker.webp"
+      },
+      {
+        "id": "abyss_anchor",
+        "name": "심연을 고정하는 닻기사",
+        "path": "assets/class_abyss_anchor.webp"
+      },
+      {
+        "id": "clock_reaver",
+        "name": "멈춘 시계의 결투왕",
+        "path": "assets/class_clock_reaver.webp"
+      },
+      {
+        "id": "thorn_crown",
+        "name": "가시 왕관의 반역자",
+        "path": "assets/class_thorn_crown.webp"
+      },
+      {
+        "id": "last_margin",
+        "name": "마지막 여백의 용병왕",
+        "path": "assets/class_last_margin.webp"
+      },
+      {
+        "id": "adventurer",
+        "name": "모험가",
+        "path": "assets/class_adventurer.webp"
+      },
+      {
+        "id": "hunter",
+        "name": "사냥꾼",
+        "path": "assets/class_hunter.webp"
+      },
+      {
+        "id": "guardian",
+        "name": "수호자",
+        "path": "assets/class_guardian.webp"
+      },
+      {
+        "id": "x_magic_0",
+        "name": "잉크 견습생",
+        "path": "assets/class_x_magic_0.webp"
+      },
+      {
+        "id": "x_magic_3",
+        "name": "우물의 이름술사",
+        "path": "assets/class_x_magic_3.webp"
+      },
+      {
+        "id": "x_magic_4",
+        "name": "해저 전류술사",
+        "path": "assets/class_x_magic_4.webp"
+      },
+      {
+        "id": "x_ranged_2",
+        "name": "이상한 정원의 새총잡이",
+        "path": "assets/class_x_ranged_2.webp"
+      },
+      {
+        "id": "x_magic_11",
+        "name": "빅토리아의 안개술사",
+        "path": "assets/class_x_magic_11.webp"
+      },
+      {
+        "id": "x_magic_10",
+        "name": "거울 뒷면의 연금술사",
+        "path": "assets/class_x_magic_10.webp"
+      },
+      {
+        "id": "x_magic_9",
+        "name": "그림 동화의 잠술사",
+        "path": "assets/class_x_magic_9.webp"
+      },
+      {
+        "id": "x_magic_7",
+        "name": "번개 실험실의 도전술사",
+        "path": "assets/class_x_magic_7.webp"
+      },
+      {
+        "id": "x_magic_8",
+        "name": "프랑켄슈타인의 생체술사",
+        "path": "assets/class_x_magic_8.webp"
+      },
+      {
+        "id": "x_magic_6",
+        "name": "녹색 안경의 주술사",
+        "path": "assets/class_x_magic_6.webp"
+      },
+      {
+        "id": "x_magic_1",
+        "name": "오즈의 허수아비 학자",
+        "path": "assets/class_x_magic_1.webp"
+      },
+      {
+        "id": "x_magic_2",
+        "name": "네버랜드 별읽기",
+        "path": "assets/class_x_magic_2.webp"
+      },
+      {
+        "id": "x_magic_5",
+        "name": "장미 정원의 환술사",
+        "path": "assets/class_x_magic_5.webp"
+      }
+    ],
+    "missing": [
+      "x_magic_12",
+      "x_magic_13",
+      "x_magic_14",
+      "x_magic_15",
+      "x_magic_16",
+      "x_magic_17",
+      "x_ranged_0",
+      "x_ranged_1",
+      "x_ranged_3",
+      "x_ranged_4",
+      "x_ranged_5",
+      "x_ranged_6",
+      "x_ranged_7",
+      "x_ranged_8",
+      "x_ranged_9",
+      "x_ranged_10",
+      "x_ranged_11",
+      "x_ranged_12",
+      "x_ranged_13",
+      "x_ranged_14",
+      "x_ranged_15",
+      "x_ranged_16",
+      "x_ranged_17",
+      "x_support_0",
+      "x_support_1",
+      "x_support_2",
+      "x_support_3",
+      "x_support_4",
+      "x_support_5",
+      "x_support_6",
+      "x_support_7",
+      "x_support_8",
+      "x_support_9",
+      "x_support_10",
+      "x_support_11",
+      "x_support_12",
+      "x_support_13",
+      "x_support_14",
+      "x_support_15",
+      "x_support_16",
+      "x_support_17",
+      "x_occult_0",
+      "x_occult_1",
+      "x_occult_2",
+      "x_occult_3",
+      "x_occult_4",
+      "x_occult_5",
+      "x_occult_6",
+      "x_occult_7",
+      "x_occult_8",
+      "x_occult_9",
+      "x_occult_10",
+      "x_occult_11",
+      "x_occult_12",
+      "x_occult_13",
+      "x_occult_14",
+      "x_occult_15",
+      "x_occult_16",
+      "whale_slayer",
+      "self_named",
+      "dream_guard",
+      "court_witness",
+      "alice_return",
+      "victor_heir",
+      "quixote_squire",
+      "sherwood_warden",
+      "oz_restorer",
+      "faust_release",
+      "margin_keeper"
+    ]
+  },
+  "areas": [
+    {
+      "id": 0,
+      "name": "검은 숲",
+      "path": "assets/location_00.webp",
+      "boss": "가시의 파수꾼",
+      "bossPath": "assets/boss_00.webp"
+    },
+    {
+      "id": 1,
+      "name": "침묵의 마을",
+      "path": "assets/location_01.webp",
+      "boss": "종지기 모르",
+      "bossPath": "assets/boss_01.webp"
+    },
+    {
+      "id": 2,
+      "name": "유리 늪",
+      "path": "assets/location_02.webp",
+      "boss": "거울의 마녀",
+      "bossPath": "assets/boss_02.webp"
+    },
+    {
+      "id": 3,
+      "name": "잊힌 왕성",
+      "path": "assets/location_03.webp",
+      "boss": "하트 여왕의 집행관",
+      "bossPath": "assets/boss_03.webp"
+    },
+    {
+      "id": 4,
+      "name": "붉은 사막",
+      "path": "assets/location_04.webp",
+      "boss": "사막의 예언자",
+      "bossPath": "assets/boss_04.webp"
+    },
+    {
+      "id": 5,
+      "name": "달의 도서관",
+      "path": "assets/location_05.webp",
+      "boss": "금서의 사서",
+      "bossPath": "assets/boss_05.webp"
+    },
+    {
+      "id": 6,
+      "name": "공허의 용광로",
+      "path": "assets/location_06.webp",
+      "boss": "빅터의 봉합 거인",
+      "bossPath": "assets/boss_06.webp"
+    },
+    {
+      "id": 7,
+      "name": "새벽 없는 왕좌",
+      "path": "assets/location_07.webp",
+      "boss": "결말을 먹는 편집자",
+      "bossPath": "assets/boss_07.webp"
+    }
+  ],
+  "enemies": {
+    "굶주린 늑대": "assets/enemy_01.webp",
+    "가시 고블린": "assets/enemy_02.webp",
+    "추방된 사냥꾼": "assets/enemy_03.webp",
+    "흙의 정령": "assets/enemy_04.webp",
+    "잿빛 약탈자": "assets/enemy_05.webp",
+    "저주받은 주민": "assets/enemy_06.webp",
+    "빈 갑옷": "assets/enemy_07.webp",
+    "종탑의 까마귀": "assets/enemy_08.webp",
+    "독안개 망령": "assets/enemy_09.webp",
+    "늪의 포식자": "assets/enemy_10.webp",
+    "수정 거미": "assets/enemy_11.webp",
+    "이끼 골렘": "assets/enemy_12.webp",
+    "왕의 처형인": "assets/enemy_13.webp",
+    "타락한 수호자": "assets/enemy_14.webp",
+    "검은 기사": "assets/enemy_15.webp",
+    "기억을 먹는 자": "assets/enemy_16.webp",
+    "유리 전갈": "assets/enemy_17.webp",
+    "모래 도적": "assets/enemy_18.webp",
+    "미라 사제": "assets/enemy_19.webp",
+    "붉은 독수리": "assets/enemy_20.webp",
+    "잉크 망령": "assets/enemy_21.webp",
+    "종이 수호자": "assets/enemy_22.webp",
+    "사라진 학자": "assets/enemy_23.webp",
+    "달빛 인형": "assets/enemy_24.webp",
+    "철의 거인": "assets/enemy_25.webp",
+    "불꽃 악령": "assets/enemy_26.webp",
+    "검댕 사냥개": "assets/enemy_27.webp",
+    "쇳물 기사": "assets/enemy_28.webp",
+    "무명의 왕": "assets/enemy_29.webp",
+    "시간의 파수병": "assets/enemy_30.webp",
+    "공허의 기사": "assets/enemy_31.webp",
+    "검은 태양의 사도": "assets/enemy_32.webp",
+    "보급함 미믹": "assets/enemy_mimic.webp"
+  },
+  "events": [
+    {
+      "id": 0,
+      "name": "부상당한 사냥꾼",
+      "path": "assets/event_00.webp"
+    },
+    {
+      "id": 1,
+      "name": "검은 제단",
+      "path": "assets/event_01.webp"
+    },
+    {
+      "id": 2,
+      "name": "돌아갈 곳",
+      "path": "assets/event_02.webp"
+    },
+    {
+      "id": 3,
+      "name": "무너진 광산",
+      "path": "assets/event_03.webp"
+    },
+    {
+      "id": 4,
+      "name": "수상한 지도",
+      "path": "assets/event_04.webp"
+    },
+    {
+      "id": 5,
+      "name": "까마귀의 거래",
+      "path": "assets/event_05.webp"
+    },
+    {
+      "id": 6,
+      "name": "부서진 대장간",
+      "path": "assets/event_06.webp"
+    },
+    {
+      "id": 7,
+      "name": "달빛 우물",
+      "path": "assets/event_07.webp"
+    },
+    {
+      "id": 8,
+      "name": "이름 없는 묘지",
+      "path": "assets/event_08.webp"
+    },
+    {
+      "id": 9,
+      "name": "운명의 탁자",
+      "path": "assets/event_09.webp"
+    },
+    {
+      "id": 10,
+      "name": "도망친 견습생",
+      "path": "assets/event_10.webp"
+    },
+    {
+      "id": 11,
+      "name": "잠든 용의 둥지",
+      "path": "assets/event_11.webp"
+    },
+    {
+      "id": 12,
+      "name": "유리 다리",
+      "path": "assets/event_12.webp"
+    },
+    {
+      "id": 13,
+      "name": "얼어붙은 시간",
+      "path": "assets/event_13.webp"
+    },
+    {
+      "id": 14,
+      "name": "별의 낙하",
+      "path": "assets/event_14.webp"
+    },
+    {
+      "id": 15,
+      "name": "마지막 장사",
+      "path": "assets/event_15.webp"
+    },
+    {
+      "id": 16,
+      "name": "숲의 연회",
+      "path": "assets/event_16.webp"
+    },
+    {
+      "id": 17,
+      "name": "닫히는 균열",
+      "path": "assets/event_17.webp"
+    }
+  ],
+  "story": {
+    "alice": "assets/story_alice.webp",
+    "adam": "assets/story_adam.webp",
+    "ahab": "assets/story_ahab.webp",
+    "creature": "assets/story_adam.webp",
+    "queen": null,
+    "quixote": null,
+    "victor": "assets/story_adam.webp"
+  },
+  "npcs": {
+    "alice": null,
+    "queen": null,
+    "creature": null,
+    "victor": null,
+    "ahab": null,
+    "quixote": null
+  },
+  "orphans": [],
+  "dedicatedSceneFallbacks": [
+    "merchant",
+    "shrine",
+    "secret",
+    "optional midboss"
+  ],
+  "localHttp": {
+    "base": "http://127.0.0.1:4173/",
+    "htmlSha256": "be4a3406d94ffd05763d8db9823182879eeecd676c581ed728164310c42512b8",
+    "assetFiles": 121,
+    "http200": true,
+    "exactAssetBytes": true,
+    "status": "PASS"
+  },
+  "pages": "NOT TESTED for new B assets until final main integration"
+}

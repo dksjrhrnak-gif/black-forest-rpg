@@ -12,4 +12,4 @@ A gate: GitHub Actions run 37533781963, job 112509448887, SUCCESS before any B c
 
 ## Browser gate
 
-Pending remote Chromium/WebKit runs after B publication; do not start C until success. All required widths are device emulation; physical devices are NOT TESTED. Live Pages checks happen after the final approved main integration, so the newly added files on live Pages are NOT TESTED at this gate.
+PASS: remote runs 37535467636 and 37535893902, Chromium click/touch and WebKit touch. The latter also verifies actual archived BF2 browser import, refresh/RNG, rest continuation and elite art. Both completed SUCCESS before C started. All required widths are device emulation; physical devices are NOT TESTED. Live Pages checks happen after the final approved main integration, so the newly added files on live Pages are NOT TESTED at this gate.

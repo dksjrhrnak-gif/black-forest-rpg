@@ -1,0 +1,6 @@
+{
+  "status": "PASS",
+  "baseline": "43b35605d216a56b3e7b1c2c1cfb36e8428a9a22",
+  "caseCount": 156,
+  "scope": "72 chapter results, 24 thread results, 18 quest outcomes/defer, 36 event choices, 3 endings and 3 postgames. Entire state and RNG checked, excluding message/log/ending title and decision text (decision keys retained)."
+}

@@ -16,7 +16,7 @@ jobs:
           node-version: '22'
       - run: npm install --ignore-scripts
       - run: npm test
-      - run: python3 build.py && node export-data.cjs && python3 export-site.py
+      - run: python3 build.py && node export-data.cjs && python3 export-site.py && python3 verify-html.py
       - run: npx playwright install --with-deps chromium webkit
       - name: Start isolated preview
         run: python3 -m http.server 4173 --directory dist > /tmp/bf-preview.log 2>&1 &
@@ -55,3 +55,47 @@ jobs:
             integration-results.json
             screenshots/
             dist/
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: integrated-qa-evidence
+          path: |
+            docs/*audit.json
+            docs/part-c-numeric-results.json
+            *-http-results.json
+            browser-results.txt
+            mobile-results*.txt
+            journey-results.json
+            screenshots/
+  script-review:
+    name: Script ${{ matrix.browser }} ${{ matrix.width }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        browser: [chromium, webkit]
+        width: [320, 360, 375, 390, 430]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm ci --ignore-scripts
+      - run: python3 build.py && node export-data.cjs && python3 export-site.py && python3 verify-html.py
+      - run: npx playwright install --with-deps ${{ matrix.browser }}
+      - name: Start isolated preview
+        run: python3 -m http.server 4173 --directory dist > /tmp/bf-script-preview.log 2>&1 &
+      - name: Every scripted scene, choice and result
+        env:
+          BF_BROWSER: ${{ matrix.browser }}
+          BF_WIDTH: ${{ matrix.width }}
+          BF_QA_URL: http://127.0.0.1:4173/
+        run: node test-script-ui.cjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: script-${{ matrix.browser }}-${{ matrix.width }}
+          path: |
+            script-browser-*.json
+            screenshots/
