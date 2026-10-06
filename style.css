@@ -854,3 +854,27 @@
   #black-forest-game .is-conversation .actions button{min-height:54px}
 }
 
+/* UI 5.3.1 — opening prologue readability */
+#black-forest-game .opening-story{
+  min-height:0;
+  margin:16px 0 20px;
+  padding:15px 16px;
+  border-left:2px solid #b39a61;
+  background:#151b18;
+  color:#e6e1d6;
+  font-size:15px;
+  line-height:1.9;
+}
+#black-forest-game .opening-story::first-line{
+  color:#d5bd82;
+  font-weight:700;
+}
+@media(max-width:700px){
+  #black-forest-game .opening-story{
+    margin:12px 0 16px;
+    padding:13px 14px;
+    font-size:14px;
+    line-height:1.85;
+  }
+}
+

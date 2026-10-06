@@ -21,7 +21,17 @@ class Game{
  dodge(){return Math.min(.35,this.bonus('dodge')/100+root.BFContent.effectValue(this.s.job,'dodgeBase')+(this.traits().dodgeBonus||0))}
  need(){return 22+this.s.level*13}
  note(text){this.s.message=text;this.s.log.unshift(text);this.s.log=this.s.log.slice(0,30)}
- start(job){if(this.s.scene!=='start'||!JOBS[job]||!this.s.offers.includes(job))return;this.s.job=job;this.s.weapon.name=job==='mage'?'금 간 지팡이':job==='rogue'?'무딘 단검':'낡은 장검';this.s.hp=this.maxHp();this.s.mp=this.maxMp();this.s.scene='camp';this.note('불씨를 되살렸다. 캠프의 직업 비전서에서 숨겨진 운명의 단서를 확인할 수 있다.')}
+ start(job){if(this.s.scene!=='start'||!JOBS[job]||!this.s.offers.includes(job))return;this.s.job=job;this.s.weapon.name=job==='mage'?'금 간 지팡이':job==='rogue'?'무딘 단검':'낡은 장검';this.s.hp=this.maxHp();this.s.mp=this.maxMp();this.s.scene='camp';const memory={warrior:'손이 먼저 검자루를 찾는다. 몸은 싸우는 법을 기억한다.',rogue:'발소리를 죽이는 법과 잠긴 문을 여는 감각만은 선명하다.',mage:'손끝에 남은 미약한 열기와 오래된 주문의 조각이 되살아난다.',hunter:'바람의 방향과 발자국을 읽는 감각이 본능처럼 돌아온다.',guardian:'누군가의 앞을 막아 서야 한다는 감각이 가장 먼저 떠오른다.',adventurer:'특별한 기억은 없지만, 어떤 길도 걸어갈 수 있다는 감각이 남아 있다.'}[job]||'과거의 이름은 잊었지만 살아남는 법 하나만은 몸에 남아 있다.';this.note(`프롤로그 — 마지막 불씨
+
+책들의 마지막 장이 한꺼번에 찢어진 밤, 서로 다른 이야기들이 하나의 세계에 봉합되었다. 앨리스의 법정, 프랑켄슈타인의 실험실, 에이해브의 바다와 라만차의 꿈까지 서로의 경계를 잃고 검은 숲으로 흘러들었다.
+
+세계의 중심에는 흩어진 이야기를 이어 붙이는 ‘첫 불씨’가 있었다. 그러나 누군가가 불씨의 힘으로 결말을 먹기 시작했고, 도시와 사람들은 이름과 기억을 잃어가고 있다.
+
+당신은 꺼져가던 모닥불 곁에서 눈을 뜬다. 자신의 이름도, 이곳에 온 이유도 기억나지 않는다. ${memory} 그것이 지금 당신에게 남은 첫 번째 운명, ‘${JOBS[job].name}’이다.
+
+검은 숲 너머에는 여덟 개의 지역 인장과 서로 다른 결말을 원하는 세 세력이 기다린다. 인장을 되찾고, 사라지는 사람들의 이야기를 따라가며 첫 불씨를 둘러싼 진실에 도달해야 한다.
+
+멀리서 종이 한 번 울린다. 첫 길은 검은 숲으로 이어진다.`)}
  xp(n){this.s.xp+=n;let up=false;while(this.s.xp>=this.need()){this.s.xp-=this.need();this.s.level++;up=true}if(up){this.s.hp=this.maxHp();this.s.mp=this.maxMp();return `\n레벨 ${this.s.level}! HP·MP 완전 회복.`}return ''}
  limit(){return this.s.kind==='rift'?4:6}
  travel(a){const s=this.s;if(s.scene!=='camp')return;if(a===8){if(s.secrets<1&&s.cleared.length<4)return;s.kind='rift';s.area=Math.max(1,Math.min(7,s.cleared.length));}else{if(!Number.isInteger(a)||a<0||a>7||a>s.cleared.length)return;s.kind='story';s.area=a}s.step=0;s.scene='map';this.routes();this.note(s.kind==='rift'?`별 없는 회랑 ${s.rift+1}층. 네 갈림길 뒤의 수문장이 전설을 감추고 있다.`:AREAS[s.area].subtitle)}
