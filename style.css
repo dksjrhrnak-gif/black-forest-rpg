@@ -979,9 +979,6 @@
 #black-forest-game .scene-hero-question strong{display:block;margin:4px 0 3px;color:#fff9eb;font-size:15px;line-height:1.55;word-break:keep-all}
 #black-forest-game .scene-hero.scene-chapter,#black-forest-game .scene-hero.scene-dialogue,#black-forest-game .scene-hero.scene-npc,#black-forest-game .scene-hero.scene-bond{min-height:450px}
 #black-forest-game .scene-hero.scene-chapter .scene-art img,#black-forest-game .scene-hero.scene-dialogue .scene-art img,#black-forest-game .scene-hero.scene-npc .scene-art img,#black-forest-game .scene-hero.scene-bond .scene-art img{object-position:center 22%}
-#black-forest-game .auto-encounter{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:10px 0 2px;padding:10px 12px;border:1px solid #344139;border-radius:5px;background:#111914}
-#black-forest-game .auto-encounter strong{color:#d0b56f;font-size:13px}
-#black-forest-game .auto-encounter span{color:#9fa79f;font-size:11px;text-align:right}
 @media(max-width:700px){
  #black-forest-game .scene-hero{min-height:360px;margin-left:0;margin-right:0;border-radius:6px}
  #black-forest-game .scene-hero.scene-chapter,#black-forest-game .scene-hero.scene-dialogue,#black-forest-game .scene-hero.scene-npc,#black-forest-game .scene-hero.scene-bond{min-height:430px}
@@ -991,7 +988,14 @@
  #black-forest-game .scene-hero-text{font-size:14px;line-height:1.68}
  #black-forest-game .scene-hero-quote{font-size:15px;line-height:1.65}
  #black-forest-game .scene-hero-question strong{font-size:14px}
- #black-forest-game .auto-encounter{align-items:flex-start;flex-direction:column;gap:3px}
- #black-forest-game .auto-encounter span{text-align:left;line-height:1.45}
 }
 
+
+/* Artwork and long names remain readable without horizontal clipping. */
+#black-forest-game .classcards .class-art,#black-forest-game .joblist .class-art,#black-forest-game .panel .item>.class-art{display:block;max-width:160px;margin:8px auto}
+#black-forest-game .classcards .class-art img,#black-forest-game .joblist .class-art img,#black-forest-game .panel .item>.class-art img{display:block;width:100%;height:auto;aspect-ratio:2/3;object-fit:contain}
+#black-forest-game button,#black-forest-game .armory-slots{overflow-wrap:anywhere;min-width:0;white-space:normal}
+#black-forest-game .armory .gear-slot strong,#black-forest-game .armory .gear-slot small{white-space:normal;overflow:visible;text-overflow:clip;overflow-wrap:anywhere}
+#black-forest-game .armory-hub{overflow-y:auto;overscroll-behavior:contain}
+#black-forest-game .armory-slots{grid-template-rows:repeat(3,minmax(65px,auto))}
+#black-forest-game .armory-portrait{position:sticky;top:0;max-height:100%}

@@ -1536,7 +1536,7 @@
         "bosses": 1
       },
       "masteryAction": "defend",
-      "image": null,
+      "image": "assets/class_x_magic_0.webp",
       "effects": [
         {
           "type": "defendMana",
@@ -1719,7 +1719,7 @@
         "bosses": 1
       },
       "masteryAction": "skill",
-      "image": null,
+      "image": "assets/class_x_magic_3.webp",
       "effects": [
         {
           "type": "healKill",
@@ -1782,7 +1782,7 @@
         "bosses": 1
       },
       "masteryAction": "skill",
-      "image": null,
+      "image": "assets/class_x_magic_4.webp",
       "effects": [
         {
           "type": "dodgeBonus",
@@ -2779,7 +2779,7 @@
         "bosses": 1
       },
       "masteryAction": "defend",
-      "image": null,
+      "image": "assets/class_x_ranged_2.webp",
       "effects": [
         {
           "type": "guardNext",
@@ -5972,7 +5972,7 @@
         "bosses": 0
       },
       "masteryAction": "defend",
-      "image": null,
+      "image": "assets/class_adventurer.webp",
       "effects": [
         {
           "type": "healKill",
@@ -6031,7 +6031,7 @@
         "bosses": 0
       },
       "masteryAction": "critical",
-      "image": null,
+      "image": "assets/class_hunter.webp",
       "effects": [
         {
           "type": "damageMultiplier",
@@ -6095,7 +6095,7 @@
         "bosses": 0
       },
       "masteryAction": "defend",
-      "image": null,
+      "image": "assets/class_guardian.webp",
       "effects": [
         {
           "type": "guardHeal",
@@ -27945,7 +27945,7 @@
       "npc": "alice",
       "midboss": false,
       "text": [
-        "토끼굴의 문짝이 나무뿌리에 걸려 있다. 앨리스의 증언 한 장이 바람에 날린다. 법정은 이 길을 존재하지 않는 길이라 부른다.",
+        "검은 숲에서 흰 토끼와 주민들의 이름이 하나둘 사라지기 시작했다. 법정 기록에서 이름이 지워지면 사람들의 기억에서도 그 존재가 흐려졌다. 앨리스는 사라진 이들이 실제로 존재했다는 증언을 모아 하트 여왕의 법정으로 갔다. 공식 기록에 이름을 되돌리면 사람들을 되찾을 수 있다고 믿었기 때문이다. 하지만 법정은 서로 다른 세계의 기억이 섞인 증언을 ‘질서를 흔드는 모순’이라 판정하고 소각을 명령했다. 앨리스는 남은 증언서를 빼돌려 검은 숲으로 돌아왔다.",
         "뿌리에 묶인 기억은 거짓 증언이 아니라 돌아갈 집을 잃은 사람의 이름이었다. 누가 이 이름을 지울 권리가 있는가?",
         "파수꾼의 가시는 숲 밖의 명령으로 자랐다. 이름을 보존할지, 질서를 위해 봉인할지, 그 명령을 추적할지 정해야 한다."
       ],
