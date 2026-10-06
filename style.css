@@ -961,3 +961,37 @@
   #black-forest-game .chapter-question{font-size:14px}
 }
 
+/* UI 5.5 — cinematic encounter hero + automatic journey flow */
+#black-forest-game .scene-hero{position:relative;margin:0 0 14px;min-width:0;overflow:hidden;border:1px solid #354039;border-radius:7px;background:#070b09;box-shadow:0 12px 34px #0005}
+#black-forest-game .scene-hero .scene-art{margin:0;border:0;border-radius:0;background:#070b09}
+#black-forest-game .scene-hero .scene-art img{display:block;width:100%;height:clamp(310px,43vh,430px);object-fit:cover;object-position:center 30%}
+#black-forest-game .scene-hero .art-fallback{min-height:360px;display:flex;align-items:center;justify-content:center}
+#black-forest-game .scene-hero .art-fallback[hidden]{display:none}
+#black-forest-game .scene-hero-shade{position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(4,8,6,.78) 0%,rgba(4,8,6,.18) 27%,rgba(4,8,6,.12) 48%,rgba(4,8,6,.92) 100%)}
+#black-forest-game .scene-hero-head{position:absolute;z-index:2;top:0;left:0;right:0;padding:18px 20px 10px;pointer-events:none}
+#black-forest-game .scene-hero-head .eyebrow{margin:0 0 5px;color:#d1b66e;text-shadow:0 2px 12px #000}
+#black-forest-game .scene-hero-head h2{margin:0;color:#fff8e9;font-size:24px;line-height:1.25;text-shadow:0 2px 14px #000,0 1px 2px #000}
+#black-forest-game .scene-hero-body{position:absolute;z-index:2;left:0;right:0;bottom:0;max-height:62%;overflow:auto;padding:48px 20px 18px;color:#f3eee4;scrollbar-width:thin;scrollbar-color:#786a49 transparent;text-shadow:0 2px 8px #000}
+#black-forest-game .scene-hero-text{margin:0 0 7px;font-size:15px;line-height:1.72;white-space:pre-line}
+#black-forest-game .scene-hero-quote{margin:8px 0;padding:8px 0 8px 12px;border-left:2px solid #c3a85f;color:#fff7e6;font:500 16px/1.7 Georgia,'Noto Serif KR',serif;background:linear-gradient(90deg,#0a0e0bb8,transparent)}
+#black-forest-game .scene-hero-question{margin-top:12px;padding-top:11px;border-top:1px solid #aa945d80}
+#black-forest-game .scene-hero-question span,#black-forest-game .scene-hero-question small{display:block;color:#d1bd88;font-size:10px;letter-spacing:.08em}
+#black-forest-game .scene-hero-question strong{display:block;margin:4px 0 3px;color:#fff9eb;font-size:15px;line-height:1.55}
+#black-forest-game .scene-hero.scene-chapter .scene-art img,#black-forest-game .scene-hero.scene-dialogue .scene-art img,#black-forest-game .scene-hero.scene-npc .scene-art img,#black-forest-game .scene-hero.scene-bond .scene-art img{object-position:center 22%}
+#black-forest-game .auto-encounter{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:10px 0 2px;padding:10px 12px;border:1px solid #344139;border-radius:5px;background:#111914}
+#black-forest-game .auto-encounter strong{color:#d0b56f;font-size:13px}
+#black-forest-game .auto-encounter span{color:#9fa79f;font-size:11px;text-align:right}
+@media(max-width:700px){
+ #black-forest-game .scene-hero{margin-left:0;margin-right:0;border-radius:6px}
+ #black-forest-game .scene-hero .scene-art img{height:clamp(290px,52vh,390px)}
+ #black-forest-game .scene-hero.scene-chapter .scene-art img{height:clamp(350px,60vh,460px)}
+ #black-forest-game .scene-hero-head{padding:14px 14px 8px}
+ #black-forest-game .scene-hero-head h2{font-size:20px}
+ #black-forest-game .scene-hero-body{max-height:66%;padding:42px 14px 14px}
+ #black-forest-game .scene-hero-text{font-size:14px;line-height:1.66}
+ #black-forest-game .scene-hero-quote{font-size:15px;line-height:1.65}
+ #black-forest-game .scene-hero-question strong{font-size:14px}
+ #black-forest-game .auto-encounter{align-items:flex-start;flex-direction:column;gap:3px}
+ #black-forest-game .auto-encounter span{text-align:left;line-height:1.45}
+}
+
