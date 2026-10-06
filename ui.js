@@ -1,6 +1,6 @@
 (function(){'use strict';
 const root=document.getElementById('black-forest-game');document.getElementById('bf-downloads').hidden=!/^https?:$/.test(location.protocol);if(!root||root.dataset.ready)return;root.dataset.ready='1';
-const {Game,FAMILY_LABELS,JOBS,AREAS,TYPES,RARITIES,WEIGHTS,AFFIXES,ITEMS,EVENTS,FACTIONS,THREADS,COMPANIONS,NPCS,ASSETS,asset,gearAsset,CHAPTERS}=BlackForest;
+const {Game,FAMILY_LABELS,JOBS,AREAS,TYPES,RARITIES,WEIGHTS,AFFIXES,ITEMS,EVENTS,FACTIONS,THREADS,COMPANIONS,NPCS,ASSETS,asset,gearAsset,CHAPTERS,CHAPTER_DECISIONS}=BlackForest;
 const $=id=>root.querySelector('#bf-'+id),KEY='black-forest-last-ember-v2',LEGACY='black-forest-last-ember-v1';let game=new Game(),panel='',warning='',panelOrigin='';const hiddenCount=Object.values(JOBS).filter(j=>j.hidden).length;const views={jobs:{query:'',family:'',page:0},codex:{query:'',slot:'',grade:'',found:false,page:0}};
 const esc=t=>String(t).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const b=(label,cmd,arg='',sub='',disabled=false,cls='')=>`<button type="button" class="cursor-interaction ${cls}" data-cmd="${cmd}" data-arg="${esc(arg)}" ${disabled?'disabled':''}>${esc(label)}${sub?`<span>${esc(sub)}</span>`:''}</button>`;
