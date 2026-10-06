@@ -1,0 +1,17 @@
+{
+  "githubMainCommit": "6b78d47327b54d17c2c1a104c4fa5a2a840cdf2a",
+  "workV4Commit": "b5a741e6d826053c6f334290c9c176eac84dfbae",
+  "githubMainHTMLBytes": 333171,
+  "workV4HTMLBytes": 221545,
+  "mergedHTMLBytes": 224818,
+  "mainToMergedReduction": 108353,
+  "githubMainInlineJSBytes": 313078,
+  "mergedInlineJSBytes": 205663,
+  "inlineJSReduction": 107415,
+  "rngBefore": 184374,
+  "rngAfter": 4535,
+  "rngReduction": 179839,
+  "mergedSHA256": "59be4fb897c89831cd8794df6031c75dc997a494160dea582464464ee1f18cbe",
+  "firstScreenLoading": "NOT TESTED",
+  "mobileParsing": "NOT TESTED"
+}

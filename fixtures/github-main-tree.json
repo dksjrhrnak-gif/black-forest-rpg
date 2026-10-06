@@ -1,0 +1,962 @@
+[
+  {
+    "path": "GEMINI_CARD_PROMPTS.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "ffab29c0d12e6dd6a3df9b027996cee56cc52761",
+    "size": 52939,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/ffab29c0d12e6dd6a3df9b027996cee56cc52761"
+  },
+  {
+    "path": "README.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "7de769b0ffc831f959f2346cb91db51136d73ffd",
+    "size": 71,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/7de769b0ffc831f959f2346cb91db51136d73ffd"
+  },
+  {
+    "path": "art-gallery.html",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "a4c46aee6b133ec4be25cec1b8ef71dcacca87dd",
+    "size": 17742,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/a4c46aee6b133ec4be25cec1b8ef71dcacca87dd"
+  },
+  {
+    "path": "art-manifest.json",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "7535c2e971347747f3931db67ee0eb1365539c27",
+    "size": 67197,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/7535c2e971347747f3931db67ee0eb1365539c27"
+  },
+  {
+    "path": "boss_00.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "ed413b037fa3f3d227451427049386efd8f9270a",
+    "size": 174888,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/ed413b037fa3f3d227451427049386efd8f9270a"
+  },
+  {
+    "path": "boss_01.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "d51991252235b76db20c9ede065531a444603e97",
+    "size": 161288,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/d51991252235b76db20c9ede065531a444603e97"
+  },
+  {
+    "path": "boss_02.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "b46964288e59df0f62fe96c1a80fff4caf1ba1fd",
+    "size": 185490,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/b46964288e59df0f62fe96c1a80fff4caf1ba1fd"
+  },
+  {
+    "path": "boss_03.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "f2a19f31b530a4268e01e2ca9d48193e1b1424db",
+    "size": 149088,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/f2a19f31b530a4268e01e2ca9d48193e1b1424db"
+  },
+  {
+    "path": "boss_04.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "fc7c562e1073191255e5a4f3325d43059ba3de6d",
+    "size": 142476,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/fc7c562e1073191255e5a4f3325d43059ba3de6d"
+  },
+  {
+    "path": "boss_05.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "a1fbe2a87c710b5f963508ebc4adf76d25cf5048",
+    "size": 157818,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/a1fbe2a87c710b5f963508ebc4adf76d25cf5048"
+  },
+  {
+    "path": "boss_06.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "f3b70b2dbf307d4ae2dd8ad700bffbeacb0f7044",
+    "size": 172512,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/f3b70b2dbf307d4ae2dd8ad700bffbeacb0f7044"
+  },
+  {
+    "path": "boss_07.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "d674a2c691bbb55101907d4692732434d35ee67f",
+    "size": 178602,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/d674a2c691bbb55101907d4692732434d35ee67f"
+  },
+  {
+    "path": "boss_rift.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "3dbab12b8b16f6cdde3ce6cff158c6261ace09b5",
+    "size": 120398,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/3dbab12b8b16f6cdde3ce6cff158c6261ace09b5"
+  },
+  {
+    "path": "camp-card.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "72332959db582c5ebf2178a4c06d5fbe996bb0f7",
+    "size": 42022,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/72332959db582c5ebf2178a4c06d5fbe996bb0f7"
+  },
+  {
+    "path": "character-0.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "9c0466d892a6664edc7e44d69cdb9d519671f580",
+    "size": 72530,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/9c0466d892a6664edc7e44d69cdb9d519671f580"
+  },
+  {
+    "path": "character-1.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "5169cb8294e167ecb688d7c37e7becccd9d89a06",
+    "size": 60076,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/5169cb8294e167ecb688d7c37e7becccd9d89a06"
+  },
+  {
+    "path": "character-2.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "7fed0c2209af94734645b48696e4fa4e4844884f",
+    "size": 68828,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/7fed0c2209af94734645b48696e4fa4e4844884f"
+  },
+  {
+    "path": "character-3.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "aa012e8d960cd97eaebd391c021d161cd0e01fa4",
+    "size": 71204,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/aa012e8d960cd97eaebd391c021d161cd0e01fa4"
+  },
+  {
+    "path": "character-4.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "c4134ac903c0c5c89a6d2ee12d4586aebefe0717",
+    "size": 67516,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/c4134ac903c0c5c89a6d2ee12d4586aebefe0717"
+  },
+  {
+    "path": "character-5.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "48c9b717f8209dd25559b4b84c6540c1fa9f07dd",
+    "size": 68218,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/48c9b717f8209dd25559b4b84c6540c1fa9f07dd"
+  },
+  {
+    "path": "class_abyss_anchor.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "77630e88d44f6a0ed2185ba7ec0895386746f6ed",
+    "size": 180374,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/77630e88d44f6a0ed2185ba7ec0895386746f6ed"
+  },
+  {
+    "path": "class_adam_sword.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "0f58b6bea9309400beeac29cc8c369bc1d9d5e27",
+    "size": 134666,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/0f58b6bea9309400beeac29cc8c369bc1d9d5e27"
+  },
+  {
+    "path": "class_ahab_harpoon.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "1edde8bb35556a052a6de1eb063fc4d9fc30f5bc",
+    "size": 117132,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/1edde8bb35556a052a6de1eb063fc4d9fc30f5bc"
+  },
+  {
+    "path": "class_blood.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "e84d6a33294289c9aebf4225382c5e2981b3111f",
+    "size": 160288,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/e84d6a33294289c9aebf4225382c5e2981b3111f"
+  },
+  {
+    "path": "class_card_spear.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "c4134ac903c0c5c89a6d2ee12d4586aebefe0717",
+    "size": 67516,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/c4134ac903c0c5c89a6d2ee12d4586aebefe0717"
+  },
+  {
+    "path": "class_chrono.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "e4cb72c09e6cd13d7ee51fbd0c2a085919b64d88",
+    "size": 167204,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/e4cb72c09e6cd13d7ee51fbd0c2a085919b64d88"
+  },
+  {
+    "path": "class_clock_reaver.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "6f6d384d08e4ffd29d07998d9eaa10d612a5bc94",
+    "size": 160526,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/6f6d384d08e4ffd29d07998d9eaa10d612a5bc94"
+  },
+  {
+    "path": "class_coffin.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "48c9b717f8209dd25559b4b84c6540c1fa9f07dd",
+    "size": 68218,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/48c9b717f8209dd25559b4b84c6540c1fa9f07dd"
+  },
+  {
+    "path": "class_fallen_dreamer.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "e1289fc9997bab65a88ced0503fc475f57297f8a",
+    "size": 144170,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/e1289fc9997bab65a88ced0503fc475f57297f8a"
+  },
+  {
+    "path": "class_gambler.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "f45e3a472026ade4c285a1b690d1419ad061e053",
+    "size": 105000,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/f45e3a472026ade4c285a1b690d1419ad061e053"
+  },
+  {
+    "path": "class_grave_hunter.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "2129a397307c892a5648b0d95db07b09da2aab22",
+    "size": 142894,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/2129a397307c892a5648b0d95db07b09da2aab22"
+  },
+  {
+    "path": "class_last_margin.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "e5df9cfa18e3e1e7927243e86b25346ba9a0dd9f",
+    "size": 180740,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/e5df9cfa18e3e1e7927243e86b25346ba9a0dd9f"
+  },
+  {
+    "path": "class_mage.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "7fed0c2209af94734645b48696e4fa4e4844884f",
+    "size": 68828,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/7fed0c2209af94734645b48696e4fa4e4844884f"
+  },
+  {
+    "path": "class_mirror_fist.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "133f34ca2feb59b5ab16d00deebcdfbbd08f26e5",
+    "size": 58976,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/133f34ca2feb59b5ab16d00deebcdfbbd08f26e5"
+  },
+  {
+    "path": "class_pagebreaker.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "16e5ad7a442ba4b56e2b90aa65b58d61d0e14523",
+    "size": 173722,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/16e5ad7a442ba4b56e2b90aa65b58d61d0e14523"
+  },
+  {
+    "path": "class_paladin.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "ff79d3aabc11229d4e533e9511dbd1d2ed384813",
+    "size": 171560,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/ff79d3aabc11229d4e533e9511dbd1d2ed384813"
+  },
+  {
+    "path": "class_pequod.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "eea40ac12bc9c477f6f806f812dcea0c267be14e",
+    "size": 83088,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/eea40ac12bc9c477f6f806f812dcea0c267be14e"
+  },
+  {
+    "path": "class_queen_exec.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "19f2fbc4cd44465c781d27cf4f9441654511789f",
+    "size": 117486,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/19f2fbc4cd44465c781d27cf4f9441654511789f"
+  },
+  {
+    "path": "class_rabbit_guard.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "17bd2197ae78b9218d84dae40e070ae187ec0564",
+    "size": 143516,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/17bd2197ae78b9218d84dae40e070ae187ec0564"
+  },
+  {
+    "path": "class_rogue.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "5169cb8294e167ecb688d7c37e7becccd9d89a06",
+    "size": 60076,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/5169cb8294e167ecb688d7c37e7becccd9d89a06"
+  },
+  {
+    "path": "class_rune.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "3726066771b2af43aa81968ed21fbeeb557e3ee6",
+    "size": 161816,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/3726066771b2af43aa81968ed21fbeeb557e3ee6"
+  },
+  {
+    "path": "class_sancho.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "aac21bee80ca86c0730a47276dda62d395afcb3e",
+    "size": 152320,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/aac21bee80ca86c0730a47276dda62d395afcb3e"
+  },
+  {
+    "path": "class_shadow.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "cbf58859292f38680f9f48aea42a67e6f928e06a",
+    "size": 97916,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/cbf58859292f38680f9f48aea42a67e6f928e06a"
+  },
+  {
+    "path": "class_stitch.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "aa012e8d960cd97eaebd391c021d161cd0e01fa4",
+    "size": 71204,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/aa012e8d960cd97eaebd391c021d161cd0e01fa4"
+  },
+  {
+    "path": "class_thorn_crown.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "e6cd3d57717b2b16589b9896733ea3b347269f8f",
+    "size": 168792,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/e6cd3d57717b2b16589b9896733ea3b347269f8f"
+  },
+  {
+    "path": "class_twin_duel.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "99cc49800c8dff31067b517951d6a25673deb815",
+    "size": 166680,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/99cc49800c8dff31067b517951d6a25673deb815"
+  },
+  {
+    "path": "class_warrior.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "9c0466d892a6664edc7e44d69cdb9d519671f580",
+    "size": 72530,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/9c0466d892a6664edc7e44d69cdb9d519671f580"
+  },
+  {
+    "path": "class_white_knight.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "47233dee9d7b31eb035cc7a1ea82c370b593e663",
+    "size": 143738,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/47233dee9d7b31eb035cc7a1ea82c370b593e663"
+  },
+  {
+    "path": "class_windmill.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "55f1d40d8c656abf929d7b667db0ad2cbbe27c0b",
+    "size": 144828,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/55f1d40d8c656abf929d7b667db0ad2cbbe27c0b"
+  },
+  {
+    "path": "enemy_01.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "1ff8f3358d2ffff403f7850c3531b8aa4cc28760",
+    "size": 53356,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/1ff8f3358d2ffff403f7850c3531b8aa4cc28760"
+  },
+  {
+    "path": "enemy_02.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "836475f0543f14d690864f27735ff2db3e418142",
+    "size": 56764,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/836475f0543f14d690864f27735ff2db3e418142"
+  },
+  {
+    "path": "enemy_03.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "e33fc36c0eb8471182b1d7729d4dd851fd612989",
+    "size": 55470,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/e33fc36c0eb8471182b1d7729d4dd851fd612989"
+  },
+  {
+    "path": "enemy_04.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "e179cdc090f9af69f5915f715b63649f2b2016d5",
+    "size": 76874,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/e179cdc090f9af69f5915f715b63649f2b2016d5"
+  },
+  {
+    "path": "enemy_05.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "112420aa0f8488ffaeaf93e85c1d2a61a8fe103c",
+    "size": 133786,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/112420aa0f8488ffaeaf93e85c1d2a61a8fe103c"
+  },
+  {
+    "path": "enemy_06.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "5afa348d70220227a2565627f4d3391d7318281d",
+    "size": 124242,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/5afa348d70220227a2565627f4d3391d7318281d"
+  },
+  {
+    "path": "enemy_07.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "695fdda8b4907fe84e23626966b6de2575f368fd",
+    "size": 159606,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/695fdda8b4907fe84e23626966b6de2575f368fd"
+  },
+  {
+    "path": "enemy_08.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "1c2dc10ebabf65fa5cfc2e59bd932754c54e4980",
+    "size": 139384,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/1c2dc10ebabf65fa5cfc2e59bd932754c54e4980"
+  },
+  {
+    "path": "enemy_09.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "029b4e48b93dfe0cde74d63b1161df7f5294da81",
+    "size": 124058,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/029b4e48b93dfe0cde74d63b1161df7f5294da81"
+  },
+  {
+    "path": "enemy_10.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "f6d7fc32f3f10f1fe8a5e0107145562ac66f6abb",
+    "size": 165054,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/f6d7fc32f3f10f1fe8a5e0107145562ac66f6abb"
+  },
+  {
+    "path": "enemy_11.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "1f0ef4de5defa90247d37bba5d34a9d7f6c570db",
+    "size": 76706,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/1f0ef4de5defa90247d37bba5d34a9d7f6c570db"
+  },
+  {
+    "path": "enemy_12.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "53ea0c9a0db9b826a46324723ec009cef431ccb2",
+    "size": 170924,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/53ea0c9a0db9b826a46324723ec009cef431ccb2"
+  },
+  {
+    "path": "enemy_13.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "50062229befe845a8bcdda370d7221d974707c12",
+    "size": 138028,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/50062229befe845a8bcdda370d7221d974707c12"
+  },
+  {
+    "path": "enemy_14.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "c261b23232582ca6156e42af833ee6a0a65b8157",
+    "size": 152848,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/c261b23232582ca6156e42af833ee6a0a65b8157"
+  },
+  {
+    "path": "enemy_15.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "6dc43f3f4e0bddfd0bef97c9183e9bbc3e2508f9",
+    "size": 137086,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/6dc43f3f4e0bddfd0bef97c9183e9bbc3e2508f9"
+  },
+  {
+    "path": "enemy_16.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "8e1078b5e7fe1905d37a3aba61b2c4a41939e928",
+    "size": 143674,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/8e1078b5e7fe1905d37a3aba61b2c4a41939e928"
+  },
+  {
+    "path": "enemy_17.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "b1bc4c90a729904e76cb6a0526a877f162101da9",
+    "size": 141066,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/b1bc4c90a729904e76cb6a0526a877f162101da9"
+  },
+  {
+    "path": "enemy_18.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "24382955de713517a645b00f1fbc001e5337bb82",
+    "size": 168300,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/24382955de713517a645b00f1fbc001e5337bb82"
+  },
+  {
+    "path": "enemy_19.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "f5a41c0041df1fcb24c34116b758f41afb69a86a",
+    "size": 149176,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/f5a41c0041df1fcb24c34116b758f41afb69a86a"
+  },
+  {
+    "path": "enemy_20.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "ce0cd29d16ada957f15ac54152e069943dd8023b",
+    "size": 133406,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/ce0cd29d16ada957f15ac54152e069943dd8023b"
+  },
+  {
+    "path": "enemy_21.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "2629d29fb129a44c786d8c2d77a0df7a36758a2b",
+    "size": 144132,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/2629d29fb129a44c786d8c2d77a0df7a36758a2b"
+  },
+  {
+    "path": "enemy_22.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "6f2e0c2951efdec55e2a439c688036846333a903",
+    "size": 153262,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/6f2e0c2951efdec55e2a439c688036846333a903"
+  },
+  {
+    "path": "enemy_23.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "03b9613c3da4895ecb9e1c561d9c0df05fcbfd5d",
+    "size": 145072,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/03b9613c3da4895ecb9e1c561d9c0df05fcbfd5d"
+  },
+  {
+    "path": "enemy_24.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "474b134f6946d965e720ccf62b262761e79ee529",
+    "size": 149446,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/474b134f6946d965e720ccf62b262761e79ee529"
+  },
+  {
+    "path": "enemy_25.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "453b317ae7a9834d42b7107e4bffec69e269d966",
+    "size": 158966,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/453b317ae7a9834d42b7107e4bffec69e269d966"
+  },
+  {
+    "path": "enemy_26.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "ff05c0f3e34c5dc28ce2e18e15ebc0d29c430f88",
+    "size": 177922,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/ff05c0f3e34c5dc28ce2e18e15ebc0d29c430f88"
+  },
+  {
+    "path": "enemy_27.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "b46155c236b9b5074a46e93b01dd0d7a2b60e57e",
+    "size": 143060,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/b46155c236b9b5074a46e93b01dd0d7a2b60e57e"
+  },
+  {
+    "path": "enemy_28.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "8cfb48944d4f2de1279879a981526a2199bdc624",
+    "size": 144678,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/8cfb48944d4f2de1279879a981526a2199bdc624"
+  },
+  {
+    "path": "enemy_29.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "0ed7a0f16a3a6b44081c193e0d378789d289093c",
+    "size": 131658,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/0ed7a0f16a3a6b44081c193e0d378789d289093c"
+  },
+  {
+    "path": "enemy_30.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "2e915176571073a42e06e0b04d8ece52328aefc5",
+    "size": 163354,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/2e915176571073a42e06e0b04d8ece52328aefc5"
+  },
+  {
+    "path": "enemy_31.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "de792c028cbac49cc26f9ed0984c901af69f8611",
+    "size": 127388,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/de792c028cbac49cc26f9ed0984c901af69f8611"
+  },
+  {
+    "path": "enemy_32.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "43287f0fb40392bd6c413e1a660a01ec908af062",
+    "size": 146808,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/43287f0fb40392bd6c413e1a660a01ec908af062"
+  },
+  {
+    "path": "enemy_mimic.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "3c64faf67010e1bd318c826c361d7a2bfaab087a",
+    "size": 150828,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/3c64faf67010e1bd318c826c361d7a2bfaab087a"
+  },
+  {
+    "path": "event_00.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "fa9dda30a7a9f7bfb7f518f1ec3f1cc329d7d051",
+    "size": 132840,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/fa9dda30a7a9f7bfb7f518f1ec3f1cc329d7d051"
+  },
+  {
+    "path": "event_01.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "50dc3d8cced28b45646eab37b7c7893b9f80bf24",
+    "size": 161750,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/50dc3d8cced28b45646eab37b7c7893b9f80bf24"
+  },
+  {
+    "path": "event_02.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "792733e2114be6549929d7c8c247f98963b0597e",
+    "size": 135232,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/792733e2114be6549929d7c8c247f98963b0597e"
+  },
+  {
+    "path": "event_03.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "285edf1365ef1eb26f458b2874942244f12522fd",
+    "size": 187146,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/285edf1365ef1eb26f458b2874942244f12522fd"
+  },
+  {
+    "path": "event_04.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "73435aa50c53f96f0f60e61ef2d7ecf536ae5c4f",
+    "size": 147348,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/73435aa50c53f96f0f60e61ef2d7ecf536ae5c4f"
+  },
+  {
+    "path": "event_05.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "91bda2f64f09e5d5ca3d6f727d82ef404911679d",
+    "size": 167756,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/91bda2f64f09e5d5ca3d6f727d82ef404911679d"
+  },
+  {
+    "path": "event_06.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "e1d83a0767c4a291bd1fa461fec94693b9cb3ee4",
+    "size": 158740,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/e1d83a0767c4a291bd1fa461fec94693b9cb3ee4"
+  },
+  {
+    "path": "event_07.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "b74333c5c8233c32ad1752269ef6b54a982a5680",
+    "size": 151090,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/b74333c5c8233c32ad1752269ef6b54a982a5680"
+  },
+  {
+    "path": "event_08.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "7880d3da6658827d61aa382c53a526d0b291d68e",
+    "size": 156046,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/7880d3da6658827d61aa382c53a526d0b291d68e"
+  },
+  {
+    "path": "event_09.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "a8a1c65b20f2c729ba9ba3e0e8db7afd162342a7",
+    "size": 127492,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/a8a1c65b20f2c729ba9ba3e0e8db7afd162342a7"
+  },
+  {
+    "path": "event_10.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "1173c5f4788289fc715ede8c525d8dc67d625adf",
+    "size": 143240,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/1173c5f4788289fc715ede8c525d8dc67d625adf"
+  },
+  {
+    "path": "event_11.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "daf95aae08666c6fa50a545a23ca4c551c1a12a9",
+    "size": 144364,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/daf95aae08666c6fa50a545a23ca4c551c1a12a9"
+  },
+  {
+    "path": "event_12.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "da1d976e055ed3b5587816a6a9db224b34001a6c",
+    "size": 149596,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/da1d976e055ed3b5587816a6a9db224b34001a6c"
+  },
+  {
+    "path": "event_13.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "82bd482fa29fd5fe58f0df3ba7aff4a6d2f6f1fd",
+    "size": 164428,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/82bd482fa29fd5fe58f0df3ba7aff4a6d2f6f1fd"
+  },
+  {
+    "path": "event_14.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "5b4ab347eeb6d81e049bc645afaf24df70a65199",
+    "size": 165096,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/5b4ab347eeb6d81e049bc645afaf24df70a65199"
+  },
+  {
+    "path": "event_15.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "52eb3d2bf4876cd82432de273887ed270c7f151a",
+    "size": 142776,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/52eb3d2bf4876cd82432de273887ed270c7f151a"
+  },
+  {
+    "path": "event_16.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "25ba7d1f59f643d9f3d0df83daa9fdac944585b1",
+    "size": 156410,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/25ba7d1f59f643d9f3d0df83daa9fdac944585b1"
+  },
+  {
+    "path": "event_17.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "a30c9bfa8a88d2e70e5e4cc82a6faf31c5551e31",
+    "size": 153910,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/a30c9bfa8a88d2e70e5e4cc82a6faf31c5551e31"
+  },
+  {
+    "path": "forest-banner.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "cc7e087a431e67c4756497b6cf94eec24437002d",
+    "size": 67148,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/cc7e087a431e67c4756497b6cf94eec24437002d"
+  },
+  {
+    "path": "guardian-card.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "22050a3ae0820b26a4a0508efb3b5276bcab02f8",
+    "size": 44218,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/22050a3ae0820b26a4a0508efb3b5276bcab02f8"
+  },
+  {
+    "path": "index.html",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "03019ab3e6113d882cf62d93f3151f845415be76",
+    "size": 333171,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/03019ab3e6113d882cf62d93f3151f845415be76"
+  },
+  {
+    "path": "location_00.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "cc7e087a431e67c4756497b6cf94eec24437002d",
+    "size": 67148,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/cc7e087a431e67c4756497b6cf94eec24437002d"
+  },
+  {
+    "path": "location_01.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "ebd087ceb9ca08ee591032f6f7b16347d88bc41c",
+    "size": 145406,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/ebd087ceb9ca08ee591032f6f7b16347d88bc41c"
+  },
+  {
+    "path": "location_02.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "3f2b56f41869d54f8d022b36a0d2a9fcab5f0e3a",
+    "size": 136206,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/3f2b56f41869d54f8d022b36a0d2a9fcab5f0e3a"
+  },
+  {
+    "path": "location_03.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "b4956f91d6e458309706ee18627a39afcf79736f",
+    "size": 157056,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/b4956f91d6e458309706ee18627a39afcf79736f"
+  },
+  {
+    "path": "location_04.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "edd9c6e24f94ca4364c394714a4ac7112d5d4e00",
+    "size": 108212,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/edd9c6e24f94ca4364c394714a4ac7112d5d4e00"
+  },
+  {
+    "path": "location_05.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "c312e304b558c4294606828b82c2b1f2262485ae",
+    "size": 170694,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/c312e304b558c4294606828b82c2b1f2262485ae"
+  },
+  {
+    "path": "location_06.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "72752a707df65bf8486ee6e50b2eb7581f9ef23f",
+    "size": 165900,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/72752a707df65bf8486ee6e50b2eb7581f9ef23f"
+  },
+  {
+    "path": "location_07.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "1bdf23f63408821de8cb9f15600d72002bbac8fb",
+    "size": 173856,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/1bdf23f63408821de8cb9f15600d72002bbac8fb"
+  },
+  {
+    "path": "monster-0.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "1ff8f3358d2ffff403f7850c3531b8aa4cc28760",
+    "size": 53356,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/1ff8f3358d2ffff403f7850c3531b8aa4cc28760"
+  },
+  {
+    "path": "monster-1.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "836475f0543f14d690864f27735ff2db3e418142",
+    "size": 56764,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/836475f0543f14d690864f27735ff2db3e418142"
+  },
+  {
+    "path": "monster-2.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "e33fc36c0eb8471182b1d7729d4dd851fd612989",
+    "size": 55470,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/e33fc36c0eb8471182b1d7729d4dd851fd612989"
+  },
+  {
+    "path": "monster-3.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "e179cdc090f9af69f5915f715b63649f2b2016d5",
+    "size": 76874,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/e179cdc090f9af69f5915f715b63649f2b2016d5"
+  },
+  {
+    "path": "monster-4.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "4dd243a603c3be8718309565bb98075330460a37",
+    "size": 53946,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/4dd243a603c3be8718309565bb98075330460a37"
+  },
+  {
+    "path": "monster-5.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "1f0ef4de5defa90247d37bba5d34a9d7f6c570db",
+    "size": 76706,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/1f0ef4de5defa90247d37bba5d34a9d7f6c570db"
+  },
+  {
+    "path": "story_adam.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "f680209275a19de18f6fe6963aaf4386814f777b",
+    "size": 116836,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/f680209275a19de18f6fe6963aaf4386814f777b"
+  },
+  {
+    "path": "story_ahab.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "d63705ca0e92fc05b7121135d26fa635d1e01dc6",
+    "size": 109828,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/d63705ca0e92fc05b7121135d26fa635d1e01dc6"
+  },
+  {
+    "path": "story_alice.webp",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "590e436c81c0b6aecad2140d6f6fef60d2ec651c",
+    "size": 147320,
+    "url": "https://api.github.com/repos/dksjrhrnak-gif/black-forest-rpg/git/blobs/590e436c81c0b6aecad2140d6f6fef60d2ec651c"
+  }
+]

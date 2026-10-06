@@ -1,0 +1,6693 @@
+
+/*
+Copyright (c) 2012-now(), Ondrej Zara
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, 
+are permitted provided that the following conditions are met:
+
+	* Redistributions of source code must retain the above copyright notice, 
+	  this list of conditions and the following disclaimer.
+	* Redistributions in binary form must reproduce the above copyright notice, 
+	  this list of conditions and the following disclaimer in the documentation 
+	  and/or other materials provided with the distribution.
+	* Neither the name of Ondrej Zara nor the names of its contributors may be used 
+	  to endorse or promote products derived from this software without specific 
+	  prior written permission.
+			
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
+ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED 
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. 
+IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, 
+INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, 
+BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, 
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY 
+OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING 
+NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, 
+EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+
+The MIT License (MIT)
+
+Copyright (c) 2015 John Watson
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
+
+MIT License
+
+Copyright (c) 2013 pieroxy
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+*/
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+function _createForOfIteratorHelperLoose(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (it) return (it = it.call(o)).next.bind(it); if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; return function () { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
+function _inheritsLoose(subClass, superClass) { subClass.prototype = Object.create(superClass.prototype); subClass.prototype.constructor = subClass; _setPrototypeOf(subClass, superClass); }
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+(function (global, factory) {
+  typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) : typeof define === 'function' && define.amd ? define(['exports'], factory) : (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.ROT = {}));
+})(this, function (exports) {
+  'use strict';
+
+  /**
+   * This code is an implementation of Alea algorithm; (C) 2010 Johannes Baagøe.
+   * Alea is licensed according to the http://en.wikipedia.org/wiki/MIT_License.
+   */
+  var FRAC = 2.3283064365386963e-10; /* 2^-32 */
+  var RNG = /*#__PURE__*/function () {
+    function RNG() {
+      this._seed = 0;
+      this._s0 = 0;
+      this._s1 = 0;
+      this._s2 = 0;
+      this._c = 0;
+    }
+    var _proto = RNG.prototype;
+    _proto.getSeed = function getSeed() {
+      return this._seed;
+    }
+    /**
+     * Seed the number generator
+     */;
+    _proto.setSeed = function setSeed(seed) {
+      seed = seed < 1 ? 1 / seed : seed;
+      this._seed = seed;
+      this._s0 = (seed >>> 0) * FRAC;
+      seed = seed * 69069 + 1 >>> 0;
+      this._s1 = seed * FRAC;
+      seed = seed * 69069 + 1 >>> 0;
+      this._s2 = seed * FRAC;
+      this._c = 1;
+      return this;
+    }
+    /**
+     * @returns Pseudorandom value [0,1), uniformly distributed
+     */;
+    _proto.getUniform = function getUniform() {
+      var t = 2091639 * this._s0 + this._c * FRAC;
+      this._s0 = this._s1;
+      this._s1 = this._s2;
+      this._c = t | 0;
+      this._s2 = t - this._c;
+      return this._s2;
+    }
+    /**
+     * @param lowerBound The lower end of the range to return a value from, inclusive
+     * @param upperBound The upper end of the range to return a value from, inclusive
+     * @returns Pseudorandom value [lowerBound, upperBound], using ROT.RNG.getUniform() to distribute the value
+     */;
+    _proto.getUniformInt = function getUniformInt(lowerBound, upperBound) {
+      var max = Math.max(lowerBound, upperBound);
+      var min = Math.min(lowerBound, upperBound);
+      return Math.floor(this.getUniform() * (max - min + 1)) + min;
+    }
+    /**
+     * @param mean Mean value
+     * @param stddev Standard deviation. ~95% of the absolute values will be lower than 2*stddev.
+     * @returns A normally distributed pseudorandom value
+     */;
+    _proto.getNormal = function getNormal(mean, stddev) {
+      if (mean === void 0) {
+        mean = 0;
+      }
+      if (stddev === void 0) {
+        stddev = 1;
+      }
+      var u, v, r;
+      do {
+        u = 2 * this.getUniform() - 1;
+        v = 2 * this.getUniform() - 1;
+        r = u * u + v * v;
+      } while (r > 1 || r == 0);
+      var gauss = u * Math.sqrt(-2 * Math.log(r) / r);
+      return mean + gauss * stddev;
+    }
+    /**
+     * @returns Pseudorandom value [1,100] inclusive, uniformly distributed
+     */;
+    _proto.getPercentage = function getPercentage() {
+      return 1 + Math.floor(this.getUniform() * 100);
+    }
+    /**
+     * @returns Randomly picked item, null when length=0
+     */;
+    _proto.getItem = function getItem(array) {
+      if (!array.length) {
+        return null;
+      }
+      return array[Math.floor(this.getUniform() * array.length)];
+    }
+    /**
+     * @returns New array with randomized items
+     */;
+    _proto.shuffle = function shuffle(array) {
+      var result = [];
+      var clone = array.slice();
+      while (clone.length) {
+        var _index = clone.indexOf(this.getItem(clone));
+        result.push(clone.splice(_index, 1)[0]);
+      }
+      return result;
+    }
+    /**
+     * @param data key=whatever, value=weight (relative probability)
+     * @returns whatever
+     */;
+    _proto.getWeightedValue = function getWeightedValue(data) {
+      var total = 0;
+      for (var _id in data) {
+        total += data[_id];
+      }
+      var random = this.getUniform() * total;
+      var id,
+        part = 0;
+      for (id in data) {
+        part += data[id];
+        if (random < part) {
+          return id;
+        }
+      }
+      // If by some floating-point annoyance we have
+      // random >= total, just return the last id.
+      return id;
+    }
+    /**
+     * Get RNG state. Useful for storing the state and re-setting it via setState.
+     * @returns Internal state
+     */;
+    _proto.getState = function getState() {
+      return [this._s0, this._s1, this._s2, this._c];
+    }
+    /**
+     * Set a previously retrieved state.
+     */;
+    _proto.setState = function setState(state) {
+      this._s0 = state[0];
+      this._s1 = state[1];
+      this._s2 = state[2];
+      this._c = state[3];
+      return this;
+    }
+    /**
+     * Returns a cloned RNG
+     */;
+    _proto.clone = function clone() {
+      var clone = new RNG();
+      return clone.setState(this.getState());
+    };
+    return RNG;
+  }();
+  var RNG$1 = new RNG().setSeed(Date.now());
+
+  /**
+   * @class Abstract display backend module
+   * @private
+   */
+  var Backend = /*#__PURE__*/function () {
+    function Backend() {}
+    var _proto2 = Backend.prototype;
+    _proto2.getContainer = function getContainer() {
+      return null;
+    };
+    _proto2.setOptions = function setOptions(options) {
+      this._options = options;
+    };
+    return Backend;
+  }();
+  var Canvas = /*#__PURE__*/function (_Backend) {
+    _inheritsLoose(Canvas, _Backend);
+    function Canvas() {
+      var _this;
+      _this = _Backend.call(this) || this;
+      _this._ctx = document.createElement("canvas").getContext("2d");
+      return _this;
+    }
+    var _proto3 = Canvas.prototype;
+    _proto3.schedule = function schedule(cb) {
+      requestAnimationFrame(cb);
+    };
+    _proto3.getContainer = function getContainer() {
+      return this._ctx.canvas;
+    };
+    _proto3.setOptions = function setOptions(opts) {
+      _Backend.prototype.setOptions.call(this, opts);
+      var style = opts.fontStyle ? opts.fontStyle + " " : "";
+      var font = style + " " + opts.fontSize + "px " + opts.fontFamily;
+      this._ctx.font = font;
+      this._updateSize();
+      this._ctx.font = font;
+      this._ctx.textAlign = "center";
+      this._ctx.textBaseline = "middle";
+    };
+    _proto3.clear = function clear() {
+      var oldComposite = this._ctx.globalCompositeOperation;
+      this._ctx.globalCompositeOperation = "copy";
+      this._ctx.fillStyle = this._options.bg;
+      this._ctx.fillRect(0, 0, this._ctx.canvas.width, this._ctx.canvas.height);
+      this._ctx.globalCompositeOperation = oldComposite;
+    };
+    _proto3.eventToPosition = function eventToPosition(x, y) {
+      var canvas = this._ctx.canvas;
+      var rect = canvas.getBoundingClientRect();
+      x -= rect.left;
+      y -= rect.top;
+      x *= canvas.width / rect.width;
+      y *= canvas.height / rect.height;
+      if (x < 0 || y < 0 || x >= canvas.width || y >= canvas.height) {
+        return [-1, -1];
+      }
+      return this._normalizedEventToPosition(x, y);
+    };
+    return Canvas;
+  }(Backend);
+  /**
+   * Always positive modulus
+   * @param x Operand
+   * @param n Modulus
+   * @returns x modulo n
+   */
+  function mod(x, n) {
+    return (x % n + n) % n;
+  }
+  function clamp(val, min, max) {
+    if (min === void 0) {
+      min = 0;
+    }
+    if (max === void 0) {
+      max = 1;
+    }
+    if (val < min) return min;
+    if (val > max) return max;
+    return val;
+  }
+  function capitalize(string) {
+    return string.charAt(0).toUpperCase() + string.substring(1);
+  }
+  /**
+   * Format a string in a flexible way. Scans for %s strings and replaces them with arguments. List of patterns is modifiable via String.format.map.
+   * @param {string} template
+   * @param {any} [argv]
+   */
+  function format(template) {
+    for (var _len = arguments.length, args = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
+      args[_key - 1] = arguments[_key];
+    }
+    var map = format.map;
+    var replacer = function replacer(match, group1, group2, index) {
+      if (template.charAt(index - 1) == "%") {
+        return match.substring(1);
+      }
+      if (!args.length) {
+        return match;
+      }
+      var obj = args[0];
+      var group = group1 || group2;
+      var parts = group.split(",");
+      var name = parts.shift() || "";
+      var method = map[name.toLowerCase()];
+      if (!method) {
+        return match;
+      }
+      obj = args.shift();
+      var replaced = obj[method].apply(obj, parts);
+      var first = name.charAt(0);
+      if (first != first.toLowerCase()) {
+        replaced = capitalize(replaced);
+      }
+      return replaced;
+    };
+    return template.replace(/%(?:([a-z]+)|(?:{([^}]+)}))/gi, replacer);
+  }
+  format.map = {
+    "s": "toString"
+  };
+  var util = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    mod: mod,
+    clamp: clamp,
+    capitalize: capitalize,
+    format: format
+  });
+
+  /**
+   * @class Hexagonal backend
+   * @private
+   */
+  var Hex = /*#__PURE__*/function (_Canvas) {
+    _inheritsLoose(Hex, _Canvas);
+    function Hex() {
+      var _this2;
+      _this2 = _Canvas.call(this) || this;
+      _this2._spacingX = 0;
+      _this2._spacingY = 0;
+      _this2._hexSize = 0;
+      return _this2;
+    }
+    var _proto4 = Hex.prototype;
+    _proto4.draw = function draw(data, clearBefore) {
+      var x = data[0],
+        y = data[1],
+        ch = data[2],
+        fg = data[3],
+        bg = data[4];
+      var px = [(x + 1) * this._spacingX, y * this._spacingY + this._hexSize];
+      if (this._options.transpose) {
+        px.reverse();
+      }
+      if (clearBefore) {
+        this._ctx.fillStyle = bg;
+        this._fill(px[0], px[1]);
+      }
+      if (!ch) {
+        return;
+      }
+      this._ctx.fillStyle = fg;
+      var chars = [].concat(ch);
+      for (var i = 0; i < chars.length; i++) {
+        this._ctx.fillText(chars[i], px[0], Math.ceil(px[1]));
+      }
+    };
+    _proto4.computeSize = function computeSize(availWidth, availHeight) {
+      if (this._options.transpose) {
+        availWidth += availHeight;
+        availHeight = availWidth - availHeight;
+        availWidth -= availHeight;
+      }
+      var width = Math.floor(availWidth / this._spacingX) - 1;
+      var height = Math.floor((availHeight - 2 * this._hexSize) / this._spacingY + 1);
+      return [width, height];
+    };
+    _proto4.computeFontSize = function computeFontSize(availWidth, availHeight) {
+      if (this._options.transpose) {
+        availWidth += availHeight;
+        availHeight = availWidth - availHeight;
+        availWidth -= availHeight;
+      }
+      var hexSizeWidth = 2 * availWidth / ((this._options.width + 1) * Math.sqrt(3)) - 1;
+      var hexSizeHeight = availHeight / (2 + 1.5 * (this._options.height - 1));
+      var hexSize = Math.min(hexSizeWidth, hexSizeHeight);
+      // compute char ratio
+      var oldFont = this._ctx.font;
+      this._ctx.font = "100px " + this._options.fontFamily;
+      var width = Math.ceil(this._ctx.measureText("W").width);
+      this._ctx.font = oldFont;
+      var ratio = width / 100;
+      hexSize = Math.floor(hexSize) + 1; // closest larger hexSize
+      // FIXME char size computation does not respect transposed hexes
+      var fontSize = 2 * hexSize / (this._options.spacing * (1 + ratio / Math.sqrt(3)));
+      // closest smaller fontSize
+      return Math.ceil(fontSize) - 1;
+    };
+    _proto4._normalizedEventToPosition = function _normalizedEventToPosition(x, y) {
+      var nodeSize;
+      if (this._options.transpose) {
+        x += y;
+        y = x - y;
+        x -= y;
+        nodeSize = this._ctx.canvas.width;
+      } else {
+        nodeSize = this._ctx.canvas.height;
+      }
+      var size = nodeSize / this._options.height;
+      y = Math.floor(y / size);
+      if (mod(y, 2)) {
+        /* odd row */
+        x -= this._spacingX;
+        x = 1 + 2 * Math.floor(x / (2 * this._spacingX));
+      } else {
+        x = 2 * Math.floor(x / (2 * this._spacingX));
+      }
+      return [x, y];
+    }
+    /**
+     * Arguments are pixel values. If "transposed" mode is enabled, then these two are already swapped.
+     */;
+    _proto4._fill = function _fill(cx, cy) {
+      var a = this._hexSize;
+      var b = this._options.border;
+      var ctx = this._ctx;
+      ctx.beginPath();
+      if (this._options.transpose) {
+        ctx.moveTo(cx - a + b, cy);
+        ctx.lineTo(cx - a / 2 + b, cy + this._spacingX - b);
+        ctx.lineTo(cx + a / 2 - b, cy + this._spacingX - b);
+        ctx.lineTo(cx + a - b, cy);
+        ctx.lineTo(cx + a / 2 - b, cy - this._spacingX + b);
+        ctx.lineTo(cx - a / 2 + b, cy - this._spacingX + b);
+        ctx.lineTo(cx - a + b, cy);
+      } else {
+        ctx.moveTo(cx, cy - a + b);
+        ctx.lineTo(cx + this._spacingX - b, cy - a / 2 + b);
+        ctx.lineTo(cx + this._spacingX - b, cy + a / 2 - b);
+        ctx.lineTo(cx, cy + a - b);
+        ctx.lineTo(cx - this._spacingX + b, cy + a / 2 - b);
+        ctx.lineTo(cx - this._spacingX + b, cy - a / 2 + b);
+        ctx.lineTo(cx, cy - a + b);
+      }
+      ctx.fill();
+    };
+    _proto4._updateSize = function _updateSize() {
+      var opts = this._options;
+      var charWidth = Math.ceil(this._ctx.measureText("W").width);
+      this._hexSize = Math.floor(opts.spacing * (opts.fontSize + charWidth / Math.sqrt(3)) / 2);
+      this._spacingX = this._hexSize * Math.sqrt(3) / 2;
+      this._spacingY = this._hexSize * 1.5;
+      var xprop;
+      var yprop;
+      if (opts.transpose) {
+        xprop = "height";
+        yprop = "width";
+      } else {
+        xprop = "width";
+        yprop = "height";
+      }
+      this._ctx.canvas[xprop] = Math.ceil((opts.width + 1) * this._spacingX);
+      this._ctx.canvas[yprop] = Math.ceil((opts.height - 1) * this._spacingY + 2 * this._hexSize);
+    };
+    return Hex;
+  }(Canvas);
+  /**
+   * @class Rectangular backend
+   * @private
+   */
+  var Rect = /*#__PURE__*/function (_Canvas2) {
+    _inheritsLoose(Rect, _Canvas2);
+    function Rect() {
+      var _this3;
+      _this3 = _Canvas2.call(this) || this;
+      _this3._spacingX = 0;
+      _this3._spacingY = 0;
+      _this3._canvasCache = {};
+      return _this3;
+    }
+    var _proto5 = Rect.prototype;
+    _proto5.setOptions = function setOptions(options) {
+      _Canvas2.prototype.setOptions.call(this, options);
+      this._canvasCache = {};
+    };
+    _proto5.draw = function draw(data, clearBefore) {
+      if (Rect.cache) {
+        this._drawWithCache(data);
+      } else {
+        this._drawNoCache(data, clearBefore);
+      }
+    };
+    _proto5._drawWithCache = function _drawWithCache(data) {
+      var x = data[0],
+        y = data[1],
+        ch = data[2],
+        fg = data[3],
+        bg = data[4];
+      var hash = "" + ch + fg + bg;
+      var canvas;
+      if (hash in this._canvasCache) {
+        canvas = this._canvasCache[hash];
+      } else {
+        var b = this._options.border;
+        canvas = document.createElement("canvas");
+        var ctx = canvas.getContext("2d");
+        canvas.width = this._spacingX;
+        canvas.height = this._spacingY;
+        ctx.fillStyle = bg;
+        ctx.fillRect(b, b, canvas.width - b, canvas.height - b);
+        if (ch) {
+          ctx.fillStyle = fg;
+          ctx.font = this._ctx.font;
+          ctx.textAlign = "center";
+          ctx.textBaseline = "middle";
+          var chars = [].concat(ch);
+          for (var i = 0; i < chars.length; i++) {
+            ctx.fillText(chars[i], this._spacingX / 2, Math.ceil(this._spacingY / 2));
+          }
+        }
+        this._canvasCache[hash] = canvas;
+      }
+      this._ctx.drawImage(canvas, x * this._spacingX, y * this._spacingY);
+    };
+    _proto5._drawNoCache = function _drawNoCache(data, clearBefore) {
+      var x = data[0],
+        y = data[1],
+        ch = data[2],
+        fg = data[3],
+        bg = data[4];
+      if (clearBefore) {
+        var b = this._options.border;
+        this._ctx.fillStyle = bg;
+        this._ctx.fillRect(x * this._spacingX + b, y * this._spacingY + b, this._spacingX - b, this._spacingY - b);
+      }
+      if (!ch) {
+        return;
+      }
+      this._ctx.fillStyle = fg;
+      var chars = [].concat(ch);
+      for (var i = 0; i < chars.length; i++) {
+        this._ctx.fillText(chars[i], (x + 0.5) * this._spacingX, Math.ceil((y + 0.5) * this._spacingY));
+      }
+    };
+    _proto5.computeSize = function computeSize(availWidth, availHeight) {
+      var width = Math.floor(availWidth / this._spacingX);
+      var height = Math.floor(availHeight / this._spacingY);
+      return [width, height];
+    };
+    _proto5.computeFontSize = function computeFontSize(availWidth, availHeight) {
+      var boxWidth = Math.floor(availWidth / this._options.width);
+      var boxHeight = Math.floor(availHeight / this._options.height);
+      /* compute char ratio */
+      var oldFont = this._ctx.font;
+      this._ctx.font = "100px " + this._options.fontFamily;
+      var width = Math.ceil(this._ctx.measureText("W").width);
+      this._ctx.font = oldFont;
+      var ratio = width / 100;
+      var widthFraction = ratio * boxHeight / boxWidth;
+      if (widthFraction > 1) {
+        /* too wide with current aspect ratio */
+        boxHeight = Math.floor(boxHeight / widthFraction);
+      }
+      return Math.floor(boxHeight / this._options.spacing);
+    };
+    _proto5._normalizedEventToPosition = function _normalizedEventToPosition(x, y) {
+      return [Math.floor(x / this._spacingX), Math.floor(y / this._spacingY)];
+    };
+    _proto5._updateSize = function _updateSize() {
+      var opts = this._options;
+      var charWidth = Math.ceil(this._ctx.measureText("W").width);
+      this._spacingX = Math.ceil(opts.spacing * charWidth);
+      this._spacingY = Math.ceil(opts.spacing * opts.fontSize);
+      if (opts.forceSquareRatio) {
+        this._spacingX = this._spacingY = Math.max(this._spacingX, this._spacingY);
+      }
+      this._ctx.canvas.width = opts.width * this._spacingX;
+      this._ctx.canvas.height = opts.height * this._spacingY;
+    };
+    return Rect;
+  }(Canvas);
+  Rect.cache = false;
+
+  /**
+   * @class Tile backend
+   * @private
+   */
+  var Tile = /*#__PURE__*/function (_Canvas3) {
+    _inheritsLoose(Tile, _Canvas3);
+    function Tile() {
+      var _this4;
+      _this4 = _Canvas3.call(this) || this;
+      _this4._colorCanvas = document.createElement("canvas");
+      return _this4;
+    }
+    var _proto6 = Tile.prototype;
+    _proto6.draw = function draw(data, clearBefore) {
+      var x = data[0],
+        y = data[1],
+        ch = data[2],
+        fg = data[3],
+        bg = data[4];
+      var tileWidth = this._options.tileWidth;
+      var tileHeight = this._options.tileHeight;
+      if (clearBefore) {
+        if (this._options.tileColorize) {
+          this._ctx.clearRect(x * tileWidth, y * tileHeight, tileWidth, tileHeight);
+        } else {
+          this._ctx.fillStyle = bg;
+          this._ctx.fillRect(x * tileWidth, y * tileHeight, tileWidth, tileHeight);
+        }
+      }
+      if (!ch) {
+        return;
+      }
+      var chars = [].concat(ch);
+      var fgs = [].concat(fg);
+      var bgs = [].concat(bg);
+      for (var i = 0; i < chars.length; i++) {
+        var tile = this._options.tileMap[chars[i]];
+        if (!tile) {
+          throw new Error("Char \"" + chars[i] + "\" not found in tileMap");
+        }
+        if (this._options.tileColorize) {
+          // apply colorization
+          var canvas = this._colorCanvas;
+          var context = canvas.getContext("2d");
+          context.globalCompositeOperation = "source-over";
+          context.clearRect(0, 0, tileWidth, tileHeight);
+          var _fg = fgs[i];
+          var _bg = bgs[i];
+          context.drawImage(this._options.tileSet, tile[0], tile[1], tileWidth, tileHeight, 0, 0, tileWidth, tileHeight);
+          if (_fg != "transparent") {
+            context.fillStyle = _fg;
+            context.globalCompositeOperation = "source-atop";
+            context.fillRect(0, 0, tileWidth, tileHeight);
+          }
+          if (_bg != "transparent") {
+            context.fillStyle = _bg;
+            context.globalCompositeOperation = "destination-over";
+            context.fillRect(0, 0, tileWidth, tileHeight);
+          }
+          this._ctx.drawImage(canvas, x * tileWidth, y * tileHeight, tileWidth, tileHeight);
+        } else {
+          // no colorizing, easy
+          this._ctx.drawImage(this._options.tileSet, tile[0], tile[1], tileWidth, tileHeight, x * tileWidth, y * tileHeight, tileWidth, tileHeight);
+        }
+      }
+    };
+    _proto6.computeSize = function computeSize(availWidth, availHeight) {
+      var width = Math.floor(availWidth / this._options.tileWidth);
+      var height = Math.floor(availHeight / this._options.tileHeight);
+      return [width, height];
+    };
+    _proto6.computeFontSize = function computeFontSize() {
+      throw new Error("Tile backend does not understand font size");
+    };
+    _proto6._normalizedEventToPosition = function _normalizedEventToPosition(x, y) {
+      return [Math.floor(x / this._options.tileWidth), Math.floor(y / this._options.tileHeight)];
+    };
+    _proto6._updateSize = function _updateSize() {
+      var opts = this._options;
+      this._ctx.canvas.width = opts.width * opts.tileWidth;
+      this._ctx.canvas.height = opts.height * opts.tileHeight;
+      this._colorCanvas.width = opts.tileWidth;
+      this._colorCanvas.height = opts.tileHeight;
+    };
+    return Tile;
+  }(Canvas);
+  function fromString(str) {
+    var cached, r;
+    if (str in CACHE) {
+      cached = CACHE[str];
+    } else {
+      if (str.charAt(0) == "#") {
+        // hex rgb
+        var matched = str.match(/[0-9a-f]/gi) || [];
+        var values = matched.map(function (x) {
+          return parseInt(x, 16);
+        });
+        if (values.length == 3) {
+          cached = values.map(function (x) {
+            return x * 17;
+          });
+        } else {
+          for (var i = 0; i < 3; i++) {
+            values[i + 1] += 16 * values[i];
+            values.splice(i, 1);
+          }
+          cached = values;
+        }
+      } else if (r = str.match(/rgb\(([0-9, ]+)\)/i)) {
+        // decimal rgb
+        cached = r[1].split(/\s*,\s*/).map(function (x) {
+          return parseInt(x);
+        });
+      } else {
+        // html name
+        cached = [0, 0, 0];
+      }
+      CACHE[str] = cached;
+    }
+    return cached.slice();
+  }
+  /**
+   * Add two or more colors
+   */
+  function add(color1) {
+    var result = color1.slice();
+    for (var _len2 = arguments.length, colors = new Array(_len2 > 1 ? _len2 - 1 : 0), _key2 = 1; _key2 < _len2; _key2++) {
+      colors[_key2 - 1] = arguments[_key2];
+    }
+    for (var i = 0; i < 3; i++) {
+      for (var j = 0; j < colors.length; j++) {
+        result[i] += colors[j][i];
+      }
+    }
+    return result;
+  }
+  /**
+   * Add two or more colors, MODIFIES FIRST ARGUMENT
+   */
+  function add_(color1) {
+    for (var _len3 = arguments.length, colors = new Array(_len3 > 1 ? _len3 - 1 : 0), _key3 = 1; _key3 < _len3; _key3++) {
+      colors[_key3 - 1] = arguments[_key3];
+    }
+    for (var i = 0; i < 3; i++) {
+      for (var j = 0; j < colors.length; j++) {
+        color1[i] += colors[j][i];
+      }
+    }
+    return color1;
+  }
+  /**
+   * Multiply (mix) two or more colors
+   */
+  function multiply(color1) {
+    var result = color1.slice();
+    for (var _len4 = arguments.length, colors = new Array(_len4 > 1 ? _len4 - 1 : 0), _key4 = 1; _key4 < _len4; _key4++) {
+      colors[_key4 - 1] = arguments[_key4];
+    }
+    for (var i = 0; i < 3; i++) {
+      for (var j = 0; j < colors.length; j++) {
+        result[i] *= colors[j][i] / 255;
+      }
+      result[i] = Math.round(result[i]);
+    }
+    return result;
+  }
+  /**
+   * Multiply (mix) two or more colors, MODIFIES FIRST ARGUMENT
+   */
+  function multiply_(color1) {
+    for (var _len5 = arguments.length, colors = new Array(_len5 > 1 ? _len5 - 1 : 0), _key5 = 1; _key5 < _len5; _key5++) {
+      colors[_key5 - 1] = arguments[_key5];
+    }
+    for (var i = 0; i < 3; i++) {
+      for (var j = 0; j < colors.length; j++) {
+        color1[i] *= colors[j][i] / 255;
+      }
+      color1[i] = Math.round(color1[i]);
+    }
+    return color1;
+  }
+  /**
+   * Interpolate (blend) two colors with a given factor
+   */
+  function interpolate(color1, color2, factor) {
+    if (factor === void 0) {
+      factor = 0.5;
+    }
+    var result = color1.slice();
+    for (var i = 0; i < 3; i++) {
+      result[i] = Math.round(result[i] + factor * (color2[i] - color1[i]));
+    }
+    return result;
+  }
+  var lerp = interpolate;
+  /**
+   * Interpolate (blend) two colors with a given factor in HSL mode
+   */
+  function interpolateHSL(color1, color2, factor) {
+    if (factor === void 0) {
+      factor = 0.5;
+    }
+    var hsl1 = rgb2hsl(color1);
+    var hsl2 = rgb2hsl(color2);
+    for (var i = 0; i < 3; i++) {
+      hsl1[i] += factor * (hsl2[i] - hsl1[i]);
+    }
+    return hsl2rgb(hsl1);
+  }
+  var lerpHSL = interpolateHSL;
+  /**
+   * Create a new random color based on this one
+   * @param color
+   * @param diff Set of standard deviations
+   */
+  function randomize(color, diff) {
+    if (!(diff instanceof Array)) {
+      diff = Math.round(RNG$1.getNormal(0, diff));
+    }
+    var result = color.slice();
+    for (var i = 0; i < 3; i++) {
+      result[i] += diff instanceof Array ? Math.round(RNG$1.getNormal(0, diff[i])) : diff;
+    }
+    return result;
+  }
+  /**
+   * Converts an RGB color value to HSL. Expects 0..255 inputs, produces 0..1 outputs.
+   */
+  function rgb2hsl(color) {
+    var r = color[0] / 255;
+    var g = color[1] / 255;
+    var b = color[2] / 255;
+    var max = Math.max(r, g, b),
+      min = Math.min(r, g, b);
+    var h = 0,
+      s,
+      l = (max + min) / 2;
+    if (max == min) {
+      s = 0; // achromatic
+    } else {
+      var d = max - min;
+      s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+      switch (max) {
+        case r:
+          h = (g - b) / d + (g < b ? 6 : 0);
+          break;
+        case g:
+          h = (b - r) / d + 2;
+          break;
+        case b:
+          h = (r - g) / d + 4;
+          break;
+      }
+      h /= 6;
+    }
+    return [h, s, l];
+  }
+  function hue2rgb(p, q, t) {
+    if (t < 0) t += 1;
+    if (t > 1) t -= 1;
+    if (t < 1 / 6) return p + (q - p) * 6 * t;
+    if (t < 1 / 2) return q;
+    if (t < 2 / 3) return p + (q - p) * (2 / 3 - t) * 6;
+    return p;
+  }
+  /**
+   * Converts an HSL color value to RGB. Expects 0..1 inputs, produces 0..255 outputs.
+   */
+  function hsl2rgb(color) {
+    var l = color[2];
+    if (color[1] == 0) {
+      l = Math.round(l * 255);
+      return [l, l, l];
+    } else {
+      var s = color[1];
+      var q = l < 0.5 ? l * (1 + s) : l + s - l * s;
+      var p = 2 * l - q;
+      var r = hue2rgb(p, q, color[0] + 1 / 3);
+      var g = hue2rgb(p, q, color[0]);
+      var b = hue2rgb(p, q, color[0] - 1 / 3);
+      return [Math.round(r * 255), Math.round(g * 255), Math.round(b * 255)];
+    }
+  }
+  function toRGB(color) {
+    var clamped = color.map(function (x) {
+      return clamp(x, 0, 255);
+    });
+    return "rgb(" + clamped.join(",") + ")";
+  }
+  function toHex(color) {
+    var clamped = color.map(function (x) {
+      return clamp(x, 0, 255).toString(16).padStart(2, "0");
+    });
+    return "#" + clamped.join("");
+  }
+  var CACHE = {
+    "black": [0, 0, 0],
+    "navy": [0, 0, 128],
+    "darkblue": [0, 0, 139],
+    "mediumblue": [0, 0, 205],
+    "blue": [0, 0, 255],
+    "darkgreen": [0, 100, 0],
+    "green": [0, 128, 0],
+    "teal": [0, 128, 128],
+    "darkcyan": [0, 139, 139],
+    "deepskyblue": [0, 191, 255],
+    "darkturquoise": [0, 206, 209],
+    "mediumspringgreen": [0, 250, 154],
+    "lime": [0, 255, 0],
+    "springgreen": [0, 255, 127],
+    "aqua": [0, 255, 255],
+    "cyan": [0, 255, 255],
+    "midnightblue": [25, 25, 112],
+    "dodgerblue": [30, 144, 255],
+    "forestgreen": [34, 139, 34],
+    "seagreen": [46, 139, 87],
+    "darkslategray": [47, 79, 79],
+    "darkslategrey": [47, 79, 79],
+    "limegreen": [50, 205, 50],
+    "mediumseagreen": [60, 179, 113],
+    "turquoise": [64, 224, 208],
+    "royalblue": [65, 105, 225],
+    "steelblue": [70, 130, 180],
+    "darkslateblue": [72, 61, 139],
+    "mediumturquoise": [72, 209, 204],
+    "indigo": [75, 0, 130],
+    "darkolivegreen": [85, 107, 47],
+    "cadetblue": [95, 158, 160],
+    "cornflowerblue": [100, 149, 237],
+    "mediumaquamarine": [102, 205, 170],
+    "dimgray": [105, 105, 105],
+    "dimgrey": [105, 105, 105],
+    "slateblue": [106, 90, 205],
+    "olivedrab": [107, 142, 35],
+    "slategray": [112, 128, 144],
+    "slategrey": [112, 128, 144],
+    "lightslategray": [119, 136, 153],
+    "lightslategrey": [119, 136, 153],
+    "mediumslateblue": [123, 104, 238],
+    "lawngreen": [124, 252, 0],
+    "chartreuse": [127, 255, 0],
+    "aquamarine": [127, 255, 212],
+    "maroon": [128, 0, 0],
+    "purple": [128, 0, 128],
+    "olive": [128, 128, 0],
+    "gray": [128, 128, 128],
+    "grey": [128, 128, 128],
+    "skyblue": [135, 206, 235],
+    "lightskyblue": [135, 206, 250],
+    "blueviolet": [138, 43, 226],
+    "darkred": [139, 0, 0],
+    "darkmagenta": [139, 0, 139],
+    "saddlebrown": [139, 69, 19],
+    "darkseagreen": [143, 188, 143],
+    "lightgreen": [144, 238, 144],
+    "mediumpurple": [147, 112, 216],
+    "darkviolet": [148, 0, 211],
+    "palegreen": [152, 251, 152],
+    "darkorchid": [153, 50, 204],
+    "yellowgreen": [154, 205, 50],
+    "sienna": [160, 82, 45],
+    "brown": [165, 42, 42],
+    "darkgray": [169, 169, 169],
+    "darkgrey": [169, 169, 169],
+    "lightblue": [173, 216, 230],
+    "greenyellow": [173, 255, 47],
+    "paleturquoise": [175, 238, 238],
+    "lightsteelblue": [176, 196, 222],
+    "powderblue": [176, 224, 230],
+    "firebrick": [178, 34, 34],
+    "darkgoldenrod": [184, 134, 11],
+    "mediumorchid": [186, 85, 211],
+    "rosybrown": [188, 143, 143],
+    "darkkhaki": [189, 183, 107],
+    "silver": [192, 192, 192],
+    "mediumvioletred": [199, 21, 133],
+    "indianred": [205, 92, 92],
+    "peru": [205, 133, 63],
+    "chocolate": [210, 105, 30],
+    "tan": [210, 180, 140],
+    "lightgray": [211, 211, 211],
+    "lightgrey": [211, 211, 211],
+    "palevioletred": [216, 112, 147],
+    "thistle": [216, 191, 216],
+    "orchid": [218, 112, 214],
+    "goldenrod": [218, 165, 32],
+    "crimson": [220, 20, 60],
+    "gainsboro": [220, 220, 220],
+    "plum": [221, 160, 221],
+    "burlywood": [222, 184, 135],
+    "lightcyan": [224, 255, 255],
+    "lavender": [230, 230, 250],
+    "darksalmon": [233, 150, 122],
+    "violet": [238, 130, 238],
+    "palegoldenrod": [238, 232, 170],
+    "lightcoral": [240, 128, 128],
+    "khaki": [240, 230, 140],
+    "aliceblue": [240, 248, 255],
+    "honeydew": [240, 255, 240],
+    "azure": [240, 255, 255],
+    "sandybrown": [244, 164, 96],
+    "wheat": [245, 222, 179],
+    "beige": [245, 245, 220],
+    "whitesmoke": [245, 245, 245],
+    "mintcream": [245, 255, 250],
+    "ghostwhite": [248, 248, 255],
+    "salmon": [250, 128, 114],
+    "antiquewhite": [250, 235, 215],
+    "linen": [250, 240, 230],
+    "lightgoldenrodyellow": [250, 250, 210],
+    "oldlace": [253, 245, 230],
+    "red": [255, 0, 0],
+    "fuchsia": [255, 0, 255],
+    "magenta": [255, 0, 255],
+    "deeppink": [255, 20, 147],
+    "orangered": [255, 69, 0],
+    "tomato": [255, 99, 71],
+    "hotpink": [255, 105, 180],
+    "coral": [255, 127, 80],
+    "darkorange": [255, 140, 0],
+    "lightsalmon": [255, 160, 122],
+    "orange": [255, 165, 0],
+    "lightpink": [255, 182, 193],
+    "pink": [255, 192, 203],
+    "gold": [255, 215, 0],
+    "peachpuff": [255, 218, 185],
+    "navajowhite": [255, 222, 173],
+    "moccasin": [255, 228, 181],
+    "bisque": [255, 228, 196],
+    "mistyrose": [255, 228, 225],
+    "blanchedalmond": [255, 235, 205],
+    "papayawhip": [255, 239, 213],
+    "lavenderblush": [255, 240, 245],
+    "seashell": [255, 245, 238],
+    "cornsilk": [255, 248, 220],
+    "lemonchiffon": [255, 250, 205],
+    "floralwhite": [255, 250, 240],
+    "snow": [255, 250, 250],
+    "yellow": [255, 255, 0],
+    "lightyellow": [255, 255, 224],
+    "ivory": [255, 255, 240],
+    "white": [255, 255, 255]
+  };
+  var color = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    fromString: fromString,
+    add: add,
+    add_: add_,
+    multiply: multiply,
+    multiply_: multiply_,
+    interpolate: interpolate,
+    lerp: lerp,
+    interpolateHSL: interpolateHSL,
+    lerpHSL: lerpHSL,
+    randomize: randomize,
+    rgb2hsl: rgb2hsl,
+    hsl2rgb: hsl2rgb,
+    toRGB: toRGB,
+    toHex: toHex
+  });
+
+  /**
+   * @class Tile backend
+   * @private
+   */
+  var TileGL = /*#__PURE__*/function (_Backend2) {
+    _inheritsLoose(TileGL, _Backend2);
+    function TileGL() {
+      var _this5;
+      _this5 = _Backend2.call(this) || this;
+      _this5._uniforms = {};
+      try {
+        _this5._gl = _this5._initWebGL();
+      } catch (e) {
+        if (typeof e === "string") {
+          alert(e);
+        } else if (e instanceof Error) {
+          alert(e.message);
+        }
+      }
+      return _this5;
+    }
+    TileGL.isSupported = function isSupported() {
+      return !!document.createElement("canvas").getContext("webgl2", {
+        preserveDrawingBuffer: true
+      });
+    };
+    var _proto7 = TileGL.prototype;
+    _proto7.schedule = function schedule(cb) {
+      requestAnimationFrame(cb);
+    };
+    _proto7.getContainer = function getContainer() {
+      return this._gl.canvas;
+    };
+    _proto7.setOptions = function setOptions(opts) {
+      var _this6 = this;
+      _Backend2.prototype.setOptions.call(this, opts);
+      this._updateSize();
+      var tileSet = this._options.tileSet;
+      if (tileSet && "complete" in tileSet && !tileSet.complete) {
+        tileSet.addEventListener("load", function () {
+          return _this6._updateTexture(tileSet);
+        });
+      } else {
+        this._updateTexture(tileSet);
+      }
+    };
+    _proto7.draw = function draw(data, clearBefore) {
+      var gl = this._gl;
+      var opts = this._options;
+      var x = data[0],
+        y = data[1],
+        ch = data[2],
+        fg = data[3],
+        bg = data[4];
+      var scissorY = gl.canvas.height - (y + 1) * opts.tileHeight;
+      gl.scissor(x * opts.tileWidth, scissorY, opts.tileWidth, opts.tileHeight);
+      if (clearBefore) {
+        if (opts.tileColorize) {
+          gl.clearColor(0, 0, 0, 0);
+        } else {
+          gl.clearColor.apply(gl, parseColor(bg));
+        }
+        gl.clear(gl.COLOR_BUFFER_BIT);
+      }
+      if (!ch) {
+        return;
+      }
+      var chars = [].concat(ch);
+      var bgs = [].concat(bg);
+      var fgs = [].concat(fg);
+      gl.uniform2fv(this._uniforms["targetPosRel"], [x, y]);
+      for (var i = 0; i < chars.length; i++) {
+        var tile = this._options.tileMap[chars[i]];
+        if (!tile) {
+          throw new Error("Char \"" + chars[i] + "\" not found in tileMap");
+        }
+        gl.uniform1f(this._uniforms["colorize"], opts.tileColorize ? 1 : 0);
+        gl.uniform2fv(this._uniforms["tilesetPosAbs"], tile);
+        if (opts.tileColorize) {
+          gl.uniform4fv(this._uniforms["tint"], parseColor(fgs[i]));
+          gl.uniform4fv(this._uniforms["bg"], parseColor(bgs[i]));
+        }
+        gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+      }
+      /*
+      
+      
+              for (let i=0;i<chars.length;i++) {
+      
+                  if (this._options.tileColorize) { // apply colorization
+                      let canvas = this._colorCanvas;
+                      let context = canvas.getContext("2d") as CanvasRenderingContext2D;
+                      context.globalCompositeOperation = "source-over";
+                      context.clearRect(0, 0, tileWidth, tileHeight);
+      
+                      let fg = fgs[i];
+                      let bg = bgs[i];
+      
+                      context.drawImage(
+                          this._options.tileSet!,
+                          tile[0], tile[1], tileWidth, tileHeight,
+                          0, 0, tileWidth, tileHeight
+                      );
+      
+                      if (fg != "transparent") {
+                          context.fillStyle = fg;
+                          context.globalCompositeOperation = "source-atop";
+                          context.fillRect(0, 0, tileWidth, tileHeight);
+                      }
+      
+                      if (bg != "transparent") {
+                          context.fillStyle = bg;
+                          context.globalCompositeOperation = "destination-over";
+                          context.fillRect(0, 0, tileWidth, tileHeight);
+                      }
+      
+                      this._ctx.drawImage(canvas, x*tileWidth, y*tileHeight, tileWidth, tileHeight);
+                  } else { // no colorizing, easy
+                      this._ctx.drawImage(
+                          this._options.tileSet!,
+                          tile[0], tile[1], tileWidth, tileHeight,
+                          x*tileWidth, y*tileHeight, tileWidth, tileHeight
+                      );
+                  }
+              }
+      
+      */
+    };
+    _proto7.clear = function clear() {
+      var gl = this._gl;
+      gl.clearColor.apply(gl, parseColor(this._options.bg));
+      gl.scissor(0, 0, gl.canvas.width, gl.canvas.height);
+      gl.clear(gl.COLOR_BUFFER_BIT);
+    };
+    _proto7.computeSize = function computeSize(availWidth, availHeight) {
+      var width = Math.floor(availWidth / this._options.tileWidth);
+      var height = Math.floor(availHeight / this._options.tileHeight);
+      return [width, height];
+    };
+    _proto7.computeFontSize = function computeFontSize() {
+      throw new Error("Tile backend does not understand font size");
+    };
+    _proto7.eventToPosition = function eventToPosition(x, y) {
+      var canvas = this._gl.canvas;
+      var rect = canvas.getBoundingClientRect();
+      x -= rect.left;
+      y -= rect.top;
+      x *= canvas.width / rect.width;
+      y *= canvas.height / rect.height;
+      if (x < 0 || y < 0 || x >= canvas.width || y >= canvas.height) {
+        return [-1, -1];
+      }
+      return this._normalizedEventToPosition(x, y);
+    };
+    _proto7._initWebGL = function _initWebGL() {
+      var _this7 = this;
+      var gl = document.createElement("canvas").getContext("webgl2", {
+        preserveDrawingBuffer: true
+      });
+      window.gl = gl;
+      var program = createProgram(gl, VS, FS);
+      gl.useProgram(program);
+      createQuad(gl);
+      UNIFORMS.forEach(function (name) {
+        return _this7._uniforms[name] = gl.getUniformLocation(program, name);
+      });
+      this._program = program;
+      gl.enable(gl.BLEND);
+      gl.blendFuncSeparate(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA, gl.ONE, gl.ONE_MINUS_SRC_ALPHA);
+      gl.enable(gl.SCISSOR_TEST);
+      return gl;
+    };
+    _proto7._normalizedEventToPosition = function _normalizedEventToPosition(x, y) {
+      return [Math.floor(x / this._options.tileWidth), Math.floor(y / this._options.tileHeight)];
+    };
+    _proto7._updateSize = function _updateSize() {
+      var gl = this._gl;
+      var opts = this._options;
+      var canvasSize = [opts.width * opts.tileWidth, opts.height * opts.tileHeight];
+      gl.canvas.width = canvasSize[0];
+      gl.canvas.height = canvasSize[1];
+      gl.viewport(0, 0, canvasSize[0], canvasSize[1]);
+      gl.uniform2fv(this._uniforms["tileSize"], [opts.tileWidth, opts.tileHeight]);
+      gl.uniform2fv(this._uniforms["targetSize"], canvasSize);
+    };
+    _proto7._updateTexture = function _updateTexture(tileSet) {
+      createTexture(this._gl, tileSet);
+    };
+    return TileGL;
+  }(Backend);
+  var UNIFORMS = ["targetPosRel", "tilesetPosAbs", "tileSize", "targetSize", "colorize", "bg", "tint"];
+  var VS = "\n#version 300 es\n\nin vec2 tilePosRel;\nout vec2 tilesetPosPx;\n\nuniform vec2 tilesetPosAbs;\nuniform vec2 tileSize;\nuniform vec2 targetSize;\nuniform vec2 targetPosRel;\n\nvoid main() {\n\tvec2 targetPosPx = (targetPosRel + tilePosRel) * tileSize;\n\tvec2 targetPosNdc = ((targetPosPx / targetSize)-0.5)*2.0;\n\ttargetPosNdc.y *= -1.0;\n\n\tgl_Position = vec4(targetPosNdc, 0.0, 1.0);\n\ttilesetPosPx = tilesetPosAbs + tilePosRel * tileSize;\n}".trim();
+  var FS = "\n#version 300 es\nprecision highp float;\n\nin vec2 tilesetPosPx;\nout vec4 fragColor;\nuniform sampler2D image;\nuniform bool colorize;\nuniform vec4 bg;\nuniform vec4 tint;\n\nvoid main() {\n\tfragColor = vec4(0, 0, 0, 1);\n\n\tvec4 texel = texelFetch(image, ivec2(tilesetPosPx), 0);\n\n\tif (colorize) {\n\t\ttexel.rgb = tint.a * tint.rgb + (1.0-tint.a) * texel.rgb;\n\t\tfragColor.rgb = texel.a*texel.rgb + (1.0-texel.a)*bg.rgb;\n\t\tfragColor.a = texel.a + (1.0-texel.a)*bg.a;\n\t} else {\n\t\tfragColor = texel;\n\t}\n}".trim();
+  function createProgram(gl, vss, fss) {
+    var vs = gl.createShader(gl.VERTEX_SHADER);
+    gl.shaderSource(vs, vss);
+    gl.compileShader(vs);
+    if (!gl.getShaderParameter(vs, gl.COMPILE_STATUS)) {
+      throw new Error(gl.getShaderInfoLog(vs) || "");
+    }
+    var fs = gl.createShader(gl.FRAGMENT_SHADER);
+    gl.shaderSource(fs, fss);
+    gl.compileShader(fs);
+    if (!gl.getShaderParameter(fs, gl.COMPILE_STATUS)) {
+      throw new Error(gl.getShaderInfoLog(fs) || "");
+    }
+    var p = gl.createProgram();
+    gl.attachShader(p, vs);
+    gl.attachShader(p, fs);
+    gl.linkProgram(p);
+    if (!gl.getProgramParameter(p, gl.LINK_STATUS)) {
+      throw new Error(gl.getProgramInfoLog(p) || "");
+    }
+    return p;
+  }
+  function createQuad(gl) {
+    var pos = new Float32Array([0, 0, 1, 0, 0, 1, 1, 1]);
+    var buf = gl.createBuffer();
+    gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+    gl.bufferData(gl.ARRAY_BUFFER, pos, gl.STATIC_DRAW);
+    gl.enableVertexAttribArray(0);
+    gl.vertexAttribPointer(0, 2, gl.FLOAT, false, 0, 0);
+  }
+  function createTexture(gl, data) {
+    var t = gl.createTexture();
+    gl.bindTexture(gl.TEXTURE_2D, t);
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.NEAREST);
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.NEAREST);
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.REPEAT);
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.REPEAT);
+    gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, 0);
+    gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, data);
+    return t;
+  }
+  var colorCache = {};
+  function parseColor(color$1) {
+    if (!(color$1 in colorCache)) {
+      var parsed;
+      if (color$1 == "transparent") {
+        parsed = [0, 0, 0, 0];
+      } else if (color$1.indexOf("rgba") > -1) {
+        parsed = (color$1.match(/[\d.]+/g) || []).map(Number);
+        for (var i = 0; i < 3; i++) {
+          parsed[i] = parsed[i] / 255;
+        }
+      } else {
+        parsed = fromString(color$1).map(function ($) {
+          return $ / 255;
+        });
+        parsed.push(1);
+      }
+      colorCache[color$1] = parsed;
+    }
+    return colorCache[color$1];
+  }
+  function clearToAnsi(bg) {
+    return "\x1B[0;48;5;" + termcolor(bg) + "m\x1B[2J";
+  }
+  function colorToAnsi(fg, bg) {
+    return "\x1B[0;38;5;" + termcolor(fg) + ";48;5;" + termcolor(bg) + "m";
+  }
+  function positionToAnsi(x, y) {
+    return "\x1B[" + (y + 1) + ";" + (x + 1) + "H";
+  }
+  function termcolor(color$1) {
+    var SRC_COLORS = 256.0;
+    var DST_COLORS = 6.0;
+    var COLOR_RATIO = DST_COLORS / SRC_COLORS;
+    var rgb = fromString(color$1);
+    var r = Math.floor(rgb[0] * COLOR_RATIO);
+    var g = Math.floor(rgb[1] * COLOR_RATIO);
+    var b = Math.floor(rgb[2] * COLOR_RATIO);
+    return r * 36 + g * 6 + b * 1 + 16;
+  }
+  var Term = /*#__PURE__*/function (_Backend3) {
+    _inheritsLoose(Term, _Backend3);
+    function Term() {
+      var _this8;
+      _this8 = _Backend3.call(this) || this;
+      _this8._offset = [0, 0];
+      _this8._cursor = [-1, -1];
+      _this8._lastColor = "";
+      return _this8;
+    }
+    var _proto8 = Term.prototype;
+    _proto8.schedule = function schedule(cb) {
+      setTimeout(cb, 1000 / 60);
+    };
+    _proto8.setOptions = function setOptions(options) {
+      _Backend3.prototype.setOptions.call(this, options);
+      var size = [options.width, options.height];
+      var avail = this.computeSize();
+      this._offset = avail.map(function (val, index) {
+        return Math.floor((val - size[index]) / 2);
+      });
+    };
+    _proto8.clear = function clear() {
+      process.stdout.write(clearToAnsi(this._options.bg));
+    };
+    _proto8.draw = function draw(data, clearBefore) {
+      // determine where to draw what with what colors
+      var x = data[0],
+        y = data[1],
+        ch = data[2],
+        fg = data[3],
+        bg = data[4];
+      // determine if we need to move the terminal cursor
+      var dx = this._offset[0] + x;
+      var dy = this._offset[1] + y;
+      var size = this.computeSize();
+      if (dx < 0 || dx >= size[0]) {
+        return;
+      }
+      if (dy < 0 || dy >= size[1]) {
+        return;
+      }
+      if (dx !== this._cursor[0] || dy !== this._cursor[1]) {
+        process.stdout.write(positionToAnsi(dx, dy));
+        this._cursor[0] = dx;
+        this._cursor[1] = dy;
+      }
+      // terminals automatically clear, but if we're clearing when we're
+      // not otherwise provided with a character, just use a space instead
+      if (clearBefore) {
+        if (!ch) {
+          ch = " ";
+        }
+      }
+      // if we're not clearing and not provided with a character, do nothing
+      if (!ch) {
+        return;
+      }
+      // determine if we need to change colors
+      var newColor = colorToAnsi(fg, bg);
+      if (newColor !== this._lastColor) {
+        process.stdout.write(newColor);
+        this._lastColor = newColor;
+      }
+      if (ch != '\t') {
+        // write the provided symbol to the display
+        var chars = [].concat(ch);
+        process.stdout.write(chars[0]);
+      }
+      // update our position, given that we wrote a character
+      this._cursor[0]++;
+      if (this._cursor[0] >= size[0]) {
+        this._cursor[0] = 0;
+        this._cursor[1]++;
+      }
+    };
+    _proto8.computeFontSize = function computeFontSize() {
+      throw new Error("Terminal backend has no notion of font size");
+    };
+    _proto8.eventToPosition = function eventToPosition(x, y) {
+      return [x, y];
+    };
+    _proto8.computeSize = function computeSize() {
+      return [process.stdout.columns, process.stdout.rows];
+    };
+    return Term;
+  }(Backend);
+  /**
+   * @namespace
+   * Contains text tokenization and breaking routines
+   */
+  var RE_COLORS = /%([bc]){([^}]*)}/g;
+  // token types
+  var TYPE_TEXT = 0;
+  var TYPE_NEWLINE = 1;
+  var TYPE_FG = 2;
+  var TYPE_BG = 3;
+  /**
+   * Measure size of a resulting text block
+   */
+  function measure(str, maxWidth) {
+    var result = {
+      width: 0,
+      height: 1
+    };
+    var tokens = tokenize(str, maxWidth);
+    var lineWidth = 0;
+    for (var i = 0; i < tokens.length; i++) {
+      var token = tokens[i];
+      switch (token.type) {
+        case TYPE_TEXT:
+          lineWidth += token.value.length;
+          break;
+        case TYPE_NEWLINE:
+          result.height++;
+          result.width = Math.max(result.width, lineWidth);
+          lineWidth = 0;
+          break;
+      }
+    }
+    result.width = Math.max(result.width, lineWidth);
+    return result;
+  }
+  /**
+   * Convert string to a series of a formatting commands
+   */
+  function tokenize(str, maxWidth) {
+    var result = [];
+    /* first tokenization pass - split texts and color formatting commands */
+    var offset = 0;
+    str.replace(RE_COLORS, function (match, type, name, index) {
+      /* string before */
+      var part = str.substring(offset, index);
+      if (part.length) {
+        result.push({
+          type: TYPE_TEXT,
+          value: part
+        });
+      }
+      /* color command */
+      result.push({
+        type: type == "c" ? TYPE_FG : TYPE_BG,
+        value: name.trim()
+      });
+      offset = index + match.length;
+      return "";
+    });
+    /* last remaining part */
+    var part = str.substring(offset);
+    if (part.length) {
+      result.push({
+        type: TYPE_TEXT,
+        value: part
+      });
+    }
+    return breakLines(result, maxWidth);
+  }
+  /* insert line breaks into first-pass tokenized data */
+  function breakLines(tokens, maxWidth) {
+    if (!maxWidth) {
+      maxWidth = Infinity;
+    }
+    var i = 0;
+    var lineLength = 0;
+    var lastTokenWithSpace = -1;
+    while (i < tokens.length) {
+      /* take all text tokens, remove space, apply linebreaks */
+      var token = tokens[i];
+      if (token.type == TYPE_NEWLINE) {
+        /* reset */
+        lineLength = 0;
+        lastTokenWithSpace = -1;
+      }
+      if (token.type != TYPE_TEXT) {
+        /* skip non-text tokens */
+        i++;
+        continue;
+      }
+      /* remove spaces at the beginning of line */
+      while (lineLength == 0 && token.value.charAt(0) == " ") {
+        token.value = token.value.substring(1);
+      }
+      /* forced newline? insert two new tokens after this one */
+      var _index2 = token.value.indexOf("\n");
+      if (_index2 != -1) {
+        token.value = breakInsideToken(tokens, i, _index2, true);
+        /* if there are spaces at the end, we must remove them (we do not want the line too long) */
+        var arr = token.value.split("");
+        while (arr.length && arr[arr.length - 1] == " ") {
+          arr.pop();
+        }
+        token.value = arr.join("");
+      }
+      /* token degenerated? */
+      if (!token.value.length) {
+        tokens.splice(i, 1);
+        continue;
+      }
+      if (lineLength + token.value.length > maxWidth) {
+        /* line too long, find a suitable breaking spot */
+        /* is it possible to break within this token? */
+        var _index3 = -1;
+        while (1) {
+          var nextIndex = token.value.indexOf(" ", _index3 + 1);
+          if (nextIndex == -1) {
+            break;
+          }
+          if (lineLength + nextIndex > maxWidth) {
+            break;
+          }
+          _index3 = nextIndex;
+        }
+        if (_index3 != -1) {
+          /* break at space within this one */
+          token.value = breakInsideToken(tokens, i, _index3, true);
+        } else if (lastTokenWithSpace != -1) {
+          /* is there a previous token where a break can occur? */
+          var _token = tokens[lastTokenWithSpace];
+          var breakIndex = _token.value.lastIndexOf(" ");
+          _token.value = breakInsideToken(tokens, lastTokenWithSpace, breakIndex, true);
+          i = lastTokenWithSpace;
+        } else {
+          /* force break in this token */
+          token.value = breakInsideToken(tokens, i, maxWidth - lineLength, false);
+        }
+      } else {
+        /* line not long, continue */
+        lineLength += token.value.length;
+        if (token.value.indexOf(" ") != -1) {
+          lastTokenWithSpace = i;
+        }
+      }
+      i++; /* advance to next token */
+    }
+
+    tokens.push({
+      type: TYPE_NEWLINE
+    }); /* insert fake newline to fix the last text line */
+    /* remove trailing space from text tokens before newlines */
+    var lastTextToken = null;
+    for (var _i = 0; _i < tokens.length; _i++) {
+      var _token2 = tokens[_i];
+      switch (_token2.type) {
+        case TYPE_TEXT:
+          lastTextToken = _token2;
+          break;
+        case TYPE_NEWLINE:
+          if (lastTextToken) {
+            /* remove trailing space */
+            var _arr = lastTextToken.value.split("");
+            while (_arr.length && _arr[_arr.length - 1] == " ") {
+              _arr.pop();
+            }
+            lastTextToken.value = _arr.join("");
+          }
+          lastTextToken = null;
+          break;
+      }
+    }
+    tokens.pop(); /* remove fake token */
+    return tokens;
+  }
+  /**
+   * Create new tokens and insert them into the stream
+   * @param {object[]} tokens
+   * @param {int} tokenIndex Token being processed
+   * @param {int} breakIndex Index within current token's value
+   * @param {bool} removeBreakChar Do we want to remove the breaking character?
+   * @returns {string} remaining unbroken token value
+   */
+  function breakInsideToken(tokens, tokenIndex, breakIndex, removeBreakChar) {
+    var newBreakToken = {
+      type: TYPE_NEWLINE
+    };
+    var newTextToken = {
+      type: TYPE_TEXT,
+      value: tokens[tokenIndex].value.substring(breakIndex + (removeBreakChar ? 1 : 0))
+    };
+    tokens.splice(tokenIndex + 1, 0, newBreakToken, newTextToken);
+    return tokens[tokenIndex].value.substring(0, breakIndex);
+  }
+  var text = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    TYPE_TEXT: TYPE_TEXT,
+    TYPE_NEWLINE: TYPE_NEWLINE,
+    TYPE_FG: TYPE_FG,
+    TYPE_BG: TYPE_BG,
+    measure: measure,
+    tokenize: tokenize
+  });
+
+  /** Default with for display and map generators */
+  var DEFAULT_WIDTH = 80;
+  /** Default height for display and map generators */
+  var DEFAULT_HEIGHT = 25;
+  var DIRS = {
+    4: [[0, -1], [1, 0], [0, 1], [-1, 0]],
+    8: [[0, -1], [1, -1], [1, 0], [1, 1], [0, 1], [-1, 1], [-1, 0], [-1, -1]],
+    6: [[-1, -1], [1, -1], [2, 0], [1, 1], [-1, 1], [-2, 0]]
+  };
+  var KEYS = {
+    /** Cancel key. */
+    VK_CANCEL: 3,
+    /** Help key. */
+    VK_HELP: 6,
+    /** Backspace key. */
+    VK_BACK_SPACE: 8,
+    /** Tab key. */
+    VK_TAB: 9,
+    /** 5 key on Numpad when NumLock is unlocked. Or on Mac, clear key which is positioned at NumLock key. */
+    VK_CLEAR: 12,
+    /** Return/enter key on the main keyboard. */
+    VK_RETURN: 13,
+    /** Reserved, but not used. */
+    VK_ENTER: 14,
+    /** Shift key. */
+    VK_SHIFT: 16,
+    /** Control key. */
+    VK_CONTROL: 17,
+    /** Alt (Option on Mac) key. */
+    VK_ALT: 18,
+    /** Pause key. */
+    VK_PAUSE: 19,
+    /** Caps lock. */
+    VK_CAPS_LOCK: 20,
+    /** Escape key. */
+    VK_ESCAPE: 27,
+    /** Space bar. */
+    VK_SPACE: 32,
+    /** Page Up key. */
+    VK_PAGE_UP: 33,
+    /** Page Down key. */
+    VK_PAGE_DOWN: 34,
+    /** End key. */
+    VK_END: 35,
+    /** Home key. */
+    VK_HOME: 36,
+    /** Left arrow. */
+    VK_LEFT: 37,
+    /** Up arrow. */
+    VK_UP: 38,
+    /** Right arrow. */
+    VK_RIGHT: 39,
+    /** Down arrow. */
+    VK_DOWN: 40,
+    /** Print Screen key. */
+    VK_PRINTSCREEN: 44,
+    /** Ins(ert) key. */
+    VK_INSERT: 45,
+    /** Del(ete) key. */
+    VK_DELETE: 46,
+    /***/
+    VK_0: 48,
+    /***/
+    VK_1: 49,
+    /***/
+    VK_2: 50,
+    /***/
+    VK_3: 51,
+    /***/
+    VK_4: 52,
+    /***/
+    VK_5: 53,
+    /***/
+    VK_6: 54,
+    /***/
+    VK_7: 55,
+    /***/
+    VK_8: 56,
+    /***/
+    VK_9: 57,
+    /** Colon (:) key. Requires Gecko 15.0 */
+    VK_COLON: 58,
+    /** Semicolon (;) key. */
+    VK_SEMICOLON: 59,
+    /** Less-than (<) key. Requires Gecko 15.0 */
+    VK_LESS_THAN: 60,
+    /** Equals (=) key. */
+    VK_EQUALS: 61,
+    /** Greater-than (>) key. Requires Gecko 15.0 */
+    VK_GREATER_THAN: 62,
+    /** Question mark (?) key. Requires Gecko 15.0 */
+    VK_QUESTION_MARK: 63,
+    /** Atmark (@) key. Requires Gecko 15.0 */
+    VK_AT: 64,
+    /***/
+    VK_A: 65,
+    /***/
+    VK_B: 66,
+    /***/
+    VK_C: 67,
+    /***/
+    VK_D: 68,
+    /***/
+    VK_E: 69,
+    /***/
+    VK_F: 70,
+    /***/
+    VK_G: 71,
+    /***/
+    VK_H: 72,
+    /***/
+    VK_I: 73,
+    /***/
+    VK_J: 74,
+    /***/
+    VK_K: 75,
+    /***/
+    VK_L: 76,
+    /***/
+    VK_M: 77,
+    /***/
+    VK_N: 78,
+    /***/
+    VK_O: 79,
+    /***/
+    VK_P: 80,
+    /***/
+    VK_Q: 81,
+    /***/
+    VK_R: 82,
+    /***/
+    VK_S: 83,
+    /***/
+    VK_T: 84,
+    /***/
+    VK_U: 85,
+    /***/
+    VK_V: 86,
+    /***/
+    VK_W: 87,
+    /***/
+    VK_X: 88,
+    /***/
+    VK_Y: 89,
+    /***/
+    VK_Z: 90,
+    /***/
+    VK_CONTEXT_MENU: 93,
+    /** 0 on the numeric keypad. */
+    VK_NUMPAD0: 96,
+    /** 1 on the numeric keypad. */
+    VK_NUMPAD1: 97,
+    /** 2 on the numeric keypad. */
+    VK_NUMPAD2: 98,
+    /** 3 on the numeric keypad. */
+    VK_NUMPAD3: 99,
+    /** 4 on the numeric keypad. */
+    VK_NUMPAD4: 100,
+    /** 5 on the numeric keypad. */
+    VK_NUMPAD5: 101,
+    /** 6 on the numeric keypad. */
+    VK_NUMPAD6: 102,
+    /** 7 on the numeric keypad. */
+    VK_NUMPAD7: 103,
+    /** 8 on the numeric keypad. */
+    VK_NUMPAD8: 104,
+    /** 9 on the numeric keypad. */
+    VK_NUMPAD9: 105,
+    /** * on the numeric keypad. */
+    VK_MULTIPLY: 106,
+    /** + on the numeric keypad. */
+    VK_ADD: 107,
+    /***/
+    VK_SEPARATOR: 108,
+    /** - on the numeric keypad. */
+    VK_SUBTRACT: 109,
+    /** Decimal point on the numeric keypad. */
+    VK_DECIMAL: 110,
+    /** / on the numeric keypad. */
+    VK_DIVIDE: 111,
+    /** F1 key. */
+    VK_F1: 112,
+    /** F2 key. */
+    VK_F2: 113,
+    /** F3 key. */
+    VK_F3: 114,
+    /** F4 key. */
+    VK_F4: 115,
+    /** F5 key. */
+    VK_F5: 116,
+    /** F6 key. */
+    VK_F6: 117,
+    /** F7 key. */
+    VK_F7: 118,
+    /** F8 key. */
+    VK_F8: 119,
+    /** F9 key. */
+    VK_F9: 120,
+    /** F10 key. */
+    VK_F10: 121,
+    /** F11 key. */
+    VK_F11: 122,
+    /** F12 key. */
+    VK_F12: 123,
+    /** F13 key. */
+    VK_F13: 124,
+    /** F14 key. */
+    VK_F14: 125,
+    /** F15 key. */
+    VK_F15: 126,
+    /** F16 key. */
+    VK_F16: 127,
+    /** F17 key. */
+    VK_F17: 128,
+    /** F18 key. */
+    VK_F18: 129,
+    /** F19 key. */
+    VK_F19: 130,
+    /** F20 key. */
+    VK_F20: 131,
+    /** F21 key. */
+    VK_F21: 132,
+    /** F22 key. */
+    VK_F22: 133,
+    /** F23 key. */
+    VK_F23: 134,
+    /** F24 key. */
+    VK_F24: 135,
+    /** Num Lock key. */
+    VK_NUM_LOCK: 144,
+    /** Scroll Lock key. */
+    VK_SCROLL_LOCK: 145,
+    /** Circumflex (^) key. Requires Gecko 15.0 */
+    VK_CIRCUMFLEX: 160,
+    /** Exclamation (!) key. Requires Gecko 15.0 */
+    VK_EXCLAMATION: 161,
+    /** Double quote () key. Requires Gecko 15.0 */
+    VK_DOUBLE_QUOTE: 162,
+    /** Hash (#) key. Requires Gecko 15.0 */
+    VK_HASH: 163,
+    /** Dollar sign ($) key. Requires Gecko 15.0 */
+    VK_DOLLAR: 164,
+    /** Percent (%) key. Requires Gecko 15.0 */
+    VK_PERCENT: 165,
+    /** Ampersand (&) key. Requires Gecko 15.0 */
+    VK_AMPERSAND: 166,
+    /** Underscore (_) key. Requires Gecko 15.0 */
+    VK_UNDERSCORE: 167,
+    /** Open parenthesis (() key. Requires Gecko 15.0 */
+    VK_OPEN_PAREN: 168,
+    /** Close parenthesis ()) key. Requires Gecko 15.0 */
+    VK_CLOSE_PAREN: 169,
+    /* Asterisk (*) key. Requires Gecko 15.0 */
+    VK_ASTERISK: 170,
+    /** Plus (+) key. Requires Gecko 15.0 */
+    VK_PLUS: 171,
+    /** Pipe (|) key. Requires Gecko 15.0 */
+    VK_PIPE: 172,
+    /** Hyphen-US/docs/Minus (-) key. Requires Gecko 15.0 */
+    VK_HYPHEN_MINUS: 173,
+    /** Open curly bracket ({) key. Requires Gecko 15.0 */
+    VK_OPEN_CURLY_BRACKET: 174,
+    /** Close curly bracket (}) key. Requires Gecko 15.0 */
+    VK_CLOSE_CURLY_BRACKET: 175,
+    /** Tilde (~) key. Requires Gecko 15.0 */
+    VK_TILDE: 176,
+    /** Comma (,) key. */
+    VK_COMMA: 188,
+    /** Period (.) key. */
+    VK_PERIOD: 190,
+    /** Slash (/) key. */
+    VK_SLASH: 191,
+    /** Back tick (`) key. */
+    VK_BACK_QUOTE: 192,
+    /** Open square bracket ([) key. */
+    VK_OPEN_BRACKET: 219,
+    /** Back slash (\) key. */
+    VK_BACK_SLASH: 220,
+    /** Close square bracket (]) key. */
+    VK_CLOSE_BRACKET: 221,
+    /** Quote (''') key. */
+    VK_QUOTE: 222,
+    /** Meta key on Linux, Command key on Mac. */
+    VK_META: 224,
+    /** AltGr key on Linux. Requires Gecko 15.0 */
+    VK_ALTGR: 225,
+    /** Windows logo key on Windows. Or Super or Hyper key on Linux. Requires Gecko 15.0 */
+    VK_WIN: 91,
+    /** Linux support for this keycode was added in Gecko 4.0. */
+    VK_KANA: 21,
+    /** Linux support for this keycode was added in Gecko 4.0. */
+    VK_HANGUL: 21,
+    /** 英数 key on Japanese Mac keyboard. Requires Gecko 15.0 */
+    VK_EISU: 22,
+    /** Linux support for this keycode was added in Gecko 4.0. */
+    VK_JUNJA: 23,
+    /** Linux support for this keycode was added in Gecko 4.0. */
+    VK_FINAL: 24,
+    /** Linux support for this keycode was added in Gecko 4.0. */
+    VK_HANJA: 25,
+    /** Linux support for this keycode was added in Gecko 4.0. */
+    VK_KANJI: 25,
+    /** Linux support for this keycode was added in Gecko 4.0. */
+    VK_CONVERT: 28,
+    /** Linux support for this keycode was added in Gecko 4.0. */
+    VK_NONCONVERT: 29,
+    /** Linux support for this keycode was added in Gecko 4.0. */
+    VK_ACCEPT: 30,
+    /** Linux support for this keycode was added in Gecko 4.0. */
+    VK_MODECHANGE: 31,
+    /** Linux support for this keycode was added in Gecko 4.0. */
+    VK_SELECT: 41,
+    /** Linux support for this keycode was added in Gecko 4.0. */
+    VK_PRINT: 42,
+    /** Linux support for this keycode was added in Gecko 4.0. */
+    VK_EXECUTE: 43,
+    /** Linux support for this keycode was added in Gecko 4.0.	 */
+    VK_SLEEP: 95
+  };
+  var BACKENDS = {
+    "hex": Hex,
+    "rect": Rect,
+    "tile": Tile,
+    "tile-gl": TileGL,
+    "term": Term
+  };
+  var DEFAULT_OPTIONS = {
+    width: DEFAULT_WIDTH,
+    height: DEFAULT_HEIGHT,
+    transpose: false,
+    layout: "rect",
+    fontSize: 15,
+    spacing: 1,
+    border: 0,
+    forceSquareRatio: false,
+    fontFamily: "monospace",
+    fontStyle: "",
+    fg: "#ccc",
+    bg: "#000",
+    tileWidth: 32,
+    tileHeight: 32,
+    tileMap: {},
+    tileSet: null,
+    tileColorize: false
+  };
+  /**
+   * @class Visual map display
+   */
+  var Display = /*#__PURE__*/function () {
+    function Display(options) {
+      if (options === void 0) {
+        options = {};
+      }
+      this._data = {};
+      this._dirty = false; // false = nothing, true = all, object = dirty cells
+      this._options = {};
+      options = Object.assign({}, DEFAULT_OPTIONS, options);
+      this.setOptions(options);
+      this.DEBUG = this.DEBUG.bind(this);
+      this._tick = this._tick.bind(this);
+      this._backend.schedule(this._tick);
+    }
+    /**
+     * Debug helper, ideal as a map generator callback. Always bound to this.
+     * @param {int} x
+     * @param {int} y
+     * @param {int} what
+     */
+    var _proto9 = Display.prototype;
+    _proto9.DEBUG = function DEBUG(x, y, what) {
+      var colors = [this._options.bg, this._options.fg];
+      this.draw(x, y, null, null, colors[what % colors.length]);
+    }
+    /**
+     * Clear the whole display (cover it with background color)
+     */;
+    _proto9.clear = function clear() {
+      this._data = {};
+      this._dirty = true;
+    }
+    /**
+     * @see ROT.Display
+     */;
+    _proto9.setOptions = function setOptions(options) {
+      Object.assign(this._options, options);
+      if (options.width || options.height || options.fontSize || options.fontFamily || options.spacing || options.layout) {
+        if (options.layout) {
+          var ctor = BACKENDS[options.layout];
+          this._backend = new ctor();
+        }
+        this._backend.setOptions(this._options);
+        this._dirty = true;
+      }
+      return this;
+    }
+    /**
+     * Returns currently set options
+     */;
+    _proto9.getOptions = function getOptions() {
+      return this._options;
+    }
+    /**
+     * Returns the DOM node of this display
+     */;
+    _proto9.getContainer = function getContainer() {
+      return this._backend.getContainer();
+    }
+    /**
+     * Compute the maximum width/height to fit into a set of given constraints
+     * @param {int} availWidth Maximum allowed pixel width
+     * @param {int} availHeight Maximum allowed pixel height
+     * @returns {int[2]} cellWidth,cellHeight
+     */;
+    _proto9.computeSize = function computeSize(availWidth, availHeight) {
+      return this._backend.computeSize(availWidth, availHeight);
+    }
+    /**
+     * Compute the maximum font size to fit into a set of given constraints
+     * @param {int} availWidth Maximum allowed pixel width
+     * @param {int} availHeight Maximum allowed pixel height
+     * @returns {int} fontSize
+     */;
+    _proto9.computeFontSize = function computeFontSize(availWidth, availHeight) {
+      return this._backend.computeFontSize(availWidth, availHeight);
+    };
+    _proto9.computeTileSize = function computeTileSize(availWidth, availHeight) {
+      var width = Math.floor(availWidth / this._options.width);
+      var height = Math.floor(availHeight / this._options.height);
+      return [width, height];
+    }
+    /**
+     * Convert a DOM event (mouse or touch) to map coordinates. Uses first touch for multi-touch.
+     * @param {Event} e event
+     * @returns {int[2]} -1 for values outside of the canvas
+     */;
+    _proto9.eventToPosition = function eventToPosition(e) {
+      var x, y;
+      if ("touches" in e) {
+        x = e.touches[0].clientX;
+        y = e.touches[0].clientY;
+      } else {
+        x = e.clientX;
+        y = e.clientY;
+      }
+      return this._backend.eventToPosition(x, y);
+    }
+    /**
+     * @param {int} x
+     * @param {int} y
+     * @param {string || string[]} ch One or more chars (will be overlapping themselves)
+     * @param {string} [fg] foreground color
+     * @param {string} [bg] background color
+     */;
+    _proto9.draw = function draw(x, y, ch, fg, bg) {
+      if (!fg) {
+        fg = this._options.fg;
+      }
+      if (!bg) {
+        bg = this._options.bg;
+      }
+      var key = x + "," + y;
+      this._data[key] = [x, y, ch, fg, bg];
+      if (this._dirty === true) {
+        return;
+      } // will already redraw everything 
+      if (!this._dirty) {
+        this._dirty = {};
+      } // first!
+      this._dirty[key] = true;
+    }
+    /**
+     * @param {int} x
+     * @param {int} y
+     * @param {string || string[]} ch One or more chars (will be overlapping themselves)
+     * @param {string || null} [fg] foreground color
+     * @param {string || null} [bg] background color
+     */;
+    _proto9.drawOver = function drawOver(x, y, ch, fg, bg) {
+      var key = x + "," + y;
+      var existing = this._data[key];
+      if (existing) {
+        existing[2] = ch || existing[2];
+        existing[3] = fg || existing[3];
+        existing[4] = bg || existing[4];
+      } else {
+        this.draw(x, y, ch, fg, bg);
+      }
+    }
+    /**
+     * Draws a text at given position. Optionally wraps at a maximum length. Currently does not work with hex layout.
+     * @param {int} x
+     * @param {int} y
+     * @param {string} text May contain color/background format specifiers, %c{name}/%b{name}, both optional. %c{}/%b{} resets to default.
+     * @param {int} [maxWidth] wrap at what width?
+     * @returns {int} lines drawn
+     */;
+    _proto9.drawText = function drawText(x, y, text$1, maxWidth) {
+      var fg = null;
+      var bg = null;
+      var cx = x;
+      var cy = y;
+      var lines = 1;
+      if (!maxWidth) {
+        maxWidth = this._options.width - x;
+      }
+      var tokens = tokenize(text$1, maxWidth);
+      while (tokens.length) {
+        // interpret tokenized opcode stream
+        var token = tokens.shift();
+        switch (token.type) {
+          case TYPE_TEXT:
+            var isSpace = false,
+              isPrevSpace = false,
+              isFullWidth = false,
+              isPrevFullWidth = false;
+            for (var i = 0; i < token.value.length; i++) {
+              var cc = token.value.charCodeAt(i);
+              var c = token.value.charAt(i);
+              if (this._options.layout === "term") {
+                var cch = cc >> 8;
+                var isCJK = cch === 0x11 || cch >= 0x2e && cch <= 0x9f || cch >= 0xac && cch <= 0xd7 || cc >= 0xA960 && cc <= 0xA97F;
+                if (isCJK) {
+                  this.draw(cx + 0, cy, c, fg, bg);
+                  this.draw(cx + 1, cy, "\t", fg, bg);
+                  cx += 2;
+                  continue;
+                }
+              }
+              // Assign to `true` when the current char is full-width.
+              isFullWidth = cc > 0xff00 && cc < 0xff61 || cc > 0xffdc && cc < 0xffe8 || cc > 0xffee;
+              // Current char is space, whatever full-width or half-width both are OK.
+              isSpace = c.charCodeAt(0) == 0x20 || c.charCodeAt(0) == 0x3000;
+              // The previous char is full-width and
+              // current char is nether half-width nor a space.
+              if (isPrevFullWidth && !isFullWidth && !isSpace) {
+                cx++;
+              } // add an extra position
+              // The current char is full-width and
+              // the previous char is not a space.
+              if (isFullWidth && !isPrevSpace) {
+                cx++;
+              } // add an extra position
+              this.draw(cx++, cy, c, fg, bg);
+              isPrevSpace = isSpace;
+              isPrevFullWidth = isFullWidth;
+            }
+            break;
+          case TYPE_FG:
+            fg = token.value || null;
+            break;
+          case TYPE_BG:
+            bg = token.value || null;
+            break;
+          case TYPE_NEWLINE:
+            cx = x;
+            cy++;
+            lines++;
+            break;
+        }
+      }
+      return lines;
+    }
+    /**
+     * Timer tick: update dirty parts
+     */;
+    _proto9._tick = function _tick() {
+      this._backend.schedule(this._tick);
+      if (!this._dirty) {
+        return;
+      }
+      if (this._dirty === true) {
+        // draw all
+        this._backend.clear();
+        for (var id in this._data) {
+          this._draw(id, false);
+        } // redraw cached data 
+      } else {
+        // draw only dirty 
+        for (var key in this._dirty) {
+          this._draw(key, true);
+        }
+      }
+      this._dirty = false;
+    }
+    /**
+     * @param {string} key What to draw
+     * @param {bool} clearBefore Is it necessary to clean before?
+     */;
+    _proto9._draw = function _draw(key, clearBefore) {
+      var data = this._data[key];
+      if (data[4] != this._options.bg) {
+        clearBefore = true;
+      }
+      this._backend.draw(data, clearBefore);
+    };
+    return Display;
+  }();
+  Display.Rect = Rect;
+  Display.Hex = Hex;
+  Display.Tile = Tile;
+  Display.TileGL = TileGL;
+  Display.Term = Term;
+
+  /**
+   * @class (Markov process)-based string generator.
+   * Copied from a <a href="http://roguebasin.com/index.php/Names_from_a_high_order_Markov_Process_and_a_simplified_Katz_back-off_scheme">RogueBasin article</a>.
+   * Offers configurable order and prior.
+   */
+  var StringGenerator = /*#__PURE__*/function () {
+    function StringGenerator(options) {
+      this._options = {
+        words: false,
+        order: 3,
+        prior: 0.001
+      };
+      Object.assign(this._options, options);
+      this._boundary = String.fromCharCode(0);
+      this._suffix = this._boundary;
+      this._prefix = [];
+      for (var i = 0; i < this._options.order; i++) {
+        this._prefix.push(this._boundary);
+      }
+      this._priorValues = {};
+      this._priorValues[this._boundary] = this._options.prior;
+      this._data = {};
+    }
+    /**
+     * Remove all learning data
+     */
+    var _proto10 = StringGenerator.prototype;
+    _proto10.clear = function clear() {
+      this._data = {};
+      this._priorValues = {};
+    }
+    /**
+     * @returns {string} Generated string
+     */;
+    _proto10.generate = function generate() {
+      var result = [this._sample(this._prefix)];
+      while (result[result.length - 1] != this._boundary) {
+        result.push(this._sample(result));
+      }
+      return this._join(result.slice(0, -1));
+    }
+    /**
+     * Observe (learn) a string from a training set
+     */;
+    _proto10.observe = function observe(string) {
+      var tokens = this._split(string);
+      for (var i = 0; i < tokens.length; i++) {
+        this._priorValues[tokens[i]] = this._options.prior;
+      }
+      tokens = this._prefix.concat(tokens).concat(this._suffix); /* add boundary symbols */
+      for (var _i2 = this._options.order; _i2 < tokens.length; _i2++) {
+        var context = tokens.slice(_i2 - this._options.order, _i2);
+        var event = tokens[_i2];
+        for (var j = 0; j < context.length; j++) {
+          var subcontext = context.slice(j);
+          this._observeEvent(subcontext, event);
+        }
+      }
+    };
+    _proto10.getStats = function getStats() {
+      var parts = [];
+      var priorCount = Object.keys(this._priorValues).length;
+      priorCount--; // boundary
+      parts.push("distinct samples: " + priorCount);
+      var dataCount = Object.keys(this._data).length;
+      var eventCount = 0;
+      for (var p in this._data) {
+        eventCount += Object.keys(this._data[p]).length;
+      }
+      parts.push("dictionary size (contexts): " + dataCount);
+      parts.push("dictionary size (events): " + eventCount);
+      return parts.join(", ");
+    }
+    /**
+     * @param {string}
+     * @returns {string[]}
+     */;
+    _proto10._split = function _split(str) {
+      return str.split(this._options.words ? /\s+/ : "");
+    }
+    /**
+     * @param {string[]}
+     * @returns {string}
+     */;
+    _proto10._join = function _join(arr) {
+      return arr.join(this._options.words ? " " : "");
+    }
+    /**
+     * @param {string[]} context
+     * @param {string} event
+     */;
+    _proto10._observeEvent = function _observeEvent(context, event) {
+      var key = this._join(context);
+      if (!(key in this._data)) {
+        this._data[key] = {};
+      }
+      var data = this._data[key];
+      if (!(event in data)) {
+        data[event] = 0;
+      }
+      data[event]++;
+    }
+    /**
+     * @param {string[]}
+     * @returns {string}
+     */;
+    _proto10._sample = function _sample(context) {
+      context = this._backoff(context);
+      var key = this._join(context);
+      var data = this._data[key];
+      var available = {};
+      if (this._options.prior) {
+        for (var event in this._priorValues) {
+          available[event] = this._priorValues[event];
+        }
+        for (var _event in data) {
+          available[_event] += data[_event];
+        }
+      } else {
+        available = data;
+      }
+      return RNG$1.getWeightedValue(available);
+    }
+    /**
+     * @param {string[]}
+     * @returns {string[]}
+     */;
+    _proto10._backoff = function _backoff(context) {
+      if (context.length > this._options.order) {
+        context = context.slice(-this._options.order);
+      } else if (context.length < this._options.order) {
+        context = this._prefix.slice(0, this._options.order - context.length).concat(context);
+      }
+      while (!(this._join(context) in this._data) && context.length > 0) {
+        context = context.slice(1);
+      }
+      return context;
+    };
+    return StringGenerator;
+  }();
+  var MinHeap = /*#__PURE__*/function () {
+    function MinHeap() {
+      this.heap = [];
+      this.timestamp = 0;
+    }
+    var _proto11 = MinHeap.prototype;
+    _proto11.lessThan = function lessThan(a, b) {
+      return a.key == b.key ? a.timestamp < b.timestamp : a.key < b.key;
+    };
+    _proto11.shift = function shift(v) {
+      this.heap = this.heap.map(function (_ref) {
+        var key = _ref.key,
+          value = _ref.value,
+          timestamp = _ref.timestamp;
+        return {
+          key: key + v,
+          value: value,
+          timestamp: timestamp
+        };
+      });
+    };
+    _proto11.len = function len() {
+      return this.heap.length;
+    };
+    _proto11.push = function push(value, key) {
+      this.timestamp += 1;
+      var loc = this.len();
+      this.heap.push({
+        value: value,
+        timestamp: this.timestamp,
+        key: key
+      });
+      this.updateUp(loc);
+    };
+    _proto11.pop = function pop() {
+      if (this.len() == 0) {
+        throw new Error("no element to pop");
+      }
+      var top = this.heap[0];
+      if (this.len() > 1) {
+        this.heap[0] = this.heap.pop();
+        this.updateDown(0);
+      } else {
+        this.heap.pop();
+      }
+      return top;
+    };
+    _proto11.find = function find(v) {
+      for (var i = 0; i < this.len(); i++) {
+        if (v == this.heap[i].value) {
+          return this.heap[i];
+        }
+      }
+      return null;
+    };
+    _proto11.remove = function remove(v) {
+      var index = null;
+      for (var i = 0; i < this.len(); i++) {
+        if (v == this.heap[i].value) {
+          index = i;
+        }
+      }
+      if (index === null) {
+        return false;
+      }
+      if (this.len() > 1) {
+        var last = this.heap.pop();
+        if (last.value != v) {
+          // if the last one is being removed, do nothing
+          this.heap[index] = last;
+          this.updateDown(index);
+        }
+        return true;
+      } else {
+        this.heap.pop();
+      }
+      return true;
+    };
+    _proto11.parentNode = function parentNode(x) {
+      return Math.floor((x - 1) / 2);
+    };
+    _proto11.leftChildNode = function leftChildNode(x) {
+      return 2 * x + 1;
+    };
+    _proto11.rightChildNode = function rightChildNode(x) {
+      return 2 * x + 2;
+    };
+    _proto11.existNode = function existNode(x) {
+      return x >= 0 && x < this.heap.length;
+    };
+    _proto11.swap = function swap(x, y) {
+      var t = this.heap[x];
+      this.heap[x] = this.heap[y];
+      this.heap[y] = t;
+    };
+    _proto11.minNode = function minNode(numbers) {
+      var validnumbers = numbers.filter(this.existNode.bind(this));
+      var minimal = validnumbers[0];
+      for (var _iterator = _createForOfIteratorHelperLoose(validnumbers), _step; !(_step = _iterator()).done;) {
+        var i = _step.value;
+        if (this.lessThan(this.heap[i], this.heap[minimal])) {
+          minimal = i;
+        }
+      }
+      return minimal;
+    };
+    _proto11.updateUp = function updateUp(x) {
+      if (x == 0) {
+        return;
+      }
+      var parent = this.parentNode(x);
+      if (this.existNode(parent) && this.lessThan(this.heap[x], this.heap[parent])) {
+        this.swap(x, parent);
+        this.updateUp(parent);
+      }
+    };
+    _proto11.updateDown = function updateDown(x) {
+      var leftChild = this.leftChildNode(x);
+      var rightChild = this.rightChildNode(x);
+      if (!this.existNode(leftChild)) {
+        return;
+      }
+      var m = this.minNode([x, leftChild, rightChild]);
+      if (m != x) {
+        this.swap(x, m);
+        this.updateDown(m);
+      }
+    };
+    _proto11.debugPrint = function debugPrint() {
+      console.log(this.heap);
+    };
+    return MinHeap;
+  }();
+  var EventQueue = /*#__PURE__*/function () {
+    /**
+     * @class Generic event queue: stores events and retrieves them based on their time
+     */
+    function EventQueue() {
+      this._time = 0;
+      this._events = new MinHeap();
+    }
+    /**
+     * @returns {number} Elapsed time
+     */
+    var _proto12 = EventQueue.prototype;
+    _proto12.getTime = function getTime() {
+      return this._time;
+    }
+    /**
+     * Clear all scheduled events
+     */;
+    _proto12.clear = function clear() {
+      this._events = new MinHeap();
+      return this;
+    }
+    /**
+     * @param {?} event
+     * @param {number} time
+     */;
+    _proto12.add = function add(event, time) {
+      this._events.push(event, time);
+    }
+    /**
+     * Locates the nearest event, advances time if necessary. Returns that event and removes it from the queue.
+     * @returns {? || null} The event previously added by addEvent, null if no event available
+     */;
+    _proto12.get = function get() {
+      if (!this._events.len()) {
+        return null;
+      }
+      var _this$_events$pop = this._events.pop(),
+        time = _this$_events$pop.key,
+        event = _this$_events$pop.value;
+      if (time > 0) {
+        /* advance */
+        this._time += time;
+        this._events.shift(-time);
+      }
+      return event;
+    }
+    /**
+     * Get the time associated with the given event
+     * @param {?} event
+     * @returns {number} time
+     */;
+    _proto12.getEventTime = function getEventTime(event) {
+      var r = this._events.find(event);
+      if (r) {
+        var key = r.key;
+        return key;
+      }
+      return undefined;
+    }
+    /**
+     * Remove an event from the queue
+     * @param {?} event
+     * @returns {bool} success?
+     */;
+    _proto12.remove = function remove(event) {
+      return this._events.remove(event);
+    };
+    return EventQueue;
+  }();
+  var Scheduler = /*#__PURE__*/function () {
+    /**
+     * @class Abstract scheduler
+     */
+    function Scheduler() {
+      this._queue = new EventQueue();
+      this._repeat = [];
+      this._current = null;
+    }
+    /**
+     * @see ROT.EventQueue#getTime
+     */
+    var _proto13 = Scheduler.prototype;
+    _proto13.getTime = function getTime() {
+      return this._queue.getTime();
+    }
+    /**
+     * @param {?} item
+     * @param {bool} repeat
+     */;
+    _proto13.add = function add(item, repeat) {
+      if (repeat) {
+        this._repeat.push(item);
+      }
+      return this;
+    }
+    /**
+     * Get the time the given item is scheduled for
+     * @param {?} item
+     * @returns {number} time
+     */;
+    _proto13.getTimeOf = function getTimeOf(item) {
+      return this._queue.getEventTime(item);
+    }
+    /**
+     * Clear all items
+     */;
+    _proto13.clear = function clear() {
+      this._queue.clear();
+      this._repeat = [];
+      this._current = null;
+      return this;
+    }
+    /**
+     * Remove a previously added item
+     * @param {?} item
+     * @returns {bool} successful?
+     */;
+    _proto13.remove = function remove(item) {
+      var result = this._queue.remove(item);
+      var index = this._repeat.indexOf(item);
+      if (index != -1) {
+        this._repeat.splice(index, 1);
+      }
+      if (this._current == item) {
+        this._current = null;
+      }
+      return result;
+    }
+    /**
+     * Schedule next item
+     * @returns {?}
+     */;
+    _proto13.next = function next() {
+      this._current = this._queue.get();
+      return this._current;
+    };
+    return Scheduler;
+  }();
+  /**
+   * @class Simple fair scheduler (round-robin style)
+   */
+  var Simple = /*#__PURE__*/function (_Scheduler) {
+    _inheritsLoose(Simple, _Scheduler);
+    function Simple() {
+      return _Scheduler.apply(this, arguments) || this;
+    }
+    var _proto14 = Simple.prototype;
+    _proto14.add = function add(item, repeat) {
+      this._queue.add(item, 0);
+      return _Scheduler.prototype.add.call(this, item, repeat);
+    };
+    _proto14.next = function next() {
+      if (this._current !== null && this._repeat.indexOf(this._current) != -1) {
+        this._queue.add(this._current, 0);
+      }
+      return _Scheduler.prototype.next.call(this);
+    };
+    return Simple;
+  }(Scheduler);
+  /**
+   * @class Speed-based scheduler
+   */
+  var Speed = /*#__PURE__*/function (_Scheduler2) {
+    _inheritsLoose(Speed, _Scheduler2);
+    function Speed() {
+      return _Scheduler2.apply(this, arguments) || this;
+    }
+    var _proto15 = Speed.prototype;
+    /**
+     * @param {object} item anything with "getSpeed" method
+     * @param {bool} repeat
+     * @param {number} [time=1/item.getSpeed()]
+     * @see ROT.Scheduler#add
+     */
+    _proto15.add = function add(item, repeat, time) {
+      this._queue.add(item, time !== undefined ? time : 1 / item.getSpeed());
+      return _Scheduler2.prototype.add.call(this, item, repeat);
+    }
+    /**
+     * @see ROT.Scheduler#next
+     */;
+    _proto15.next = function next() {
+      if (this._current && this._repeat.indexOf(this._current) != -1) {
+        this._queue.add(this._current, 1 / this._current.getSpeed());
+      }
+      return _Scheduler2.prototype.next.call(this);
+    };
+    return Speed;
+  }(Scheduler);
+  /**
+   * @class Action-based scheduler
+   * @augments ROT.Scheduler
+   */
+  var Action = /*#__PURE__*/function (_Scheduler3) {
+    _inheritsLoose(Action, _Scheduler3);
+    function Action() {
+      var _this9;
+      _this9 = _Scheduler3.call(this) || this;
+      _this9._defaultDuration = 1; /* for newly added */
+      _this9._duration = _this9._defaultDuration; /* for this._current */
+      return _this9;
+    }
+    /**
+     * @param {object} item
+     * @param {bool} repeat
+     * @param {number} [time=1]
+     * @see ROT.Scheduler#add
+     */
+    var _proto16 = Action.prototype;
+    _proto16.add = function add(item, repeat, time) {
+      this._queue.add(item, time || this._defaultDuration);
+      return _Scheduler3.prototype.add.call(this, item, repeat);
+    };
+    _proto16.clear = function clear() {
+      this._duration = this._defaultDuration;
+      return _Scheduler3.prototype.clear.call(this);
+    };
+    _proto16.remove = function remove(item) {
+      if (item == this._current) {
+        this._duration = this._defaultDuration;
+      }
+      return _Scheduler3.prototype.remove.call(this, item);
+    }
+    /**
+     * @see ROT.Scheduler#next
+     */;
+    _proto16.next = function next() {
+      if (this._current !== null && this._repeat.indexOf(this._current) != -1) {
+        this._queue.add(this._current, this._duration || this._defaultDuration);
+        this._duration = this._defaultDuration;
+      }
+      return _Scheduler3.prototype.next.call(this);
+    }
+    /**
+     * Set duration for the active item
+     */;
+    _proto16.setDuration = function setDuration(time) {
+      if (this._current) {
+        this._duration = time;
+      }
+      return this;
+    };
+    return Action;
+  }(Scheduler);
+  var index$4 = {
+    Simple: Simple,
+    Speed: Speed,
+    Action: Action
+  };
+  var FOV = /*#__PURE__*/function () {
+    /**
+     * @class Abstract FOV algorithm
+     * @param {function} lightPassesCallback Does the light pass through x,y?
+     * @param {object} [options]
+     * @param {int} [options.topology=8] 4/6/8
+     */
+    function FOV(lightPassesCallback, options) {
+      if (options === void 0) {
+        options = {};
+      }
+      this._lightPasses = lightPassesCallback;
+      this._options = Object.assign({
+        topology: 8
+      }, options);
+    }
+    /**
+     * Return all neighbors in a concentric ring
+     * @param {int} cx center-x
+     * @param {int} cy center-y
+     * @param {int} r range
+     */
+    var _proto17 = FOV.prototype;
+    _proto17._getCircle = function _getCircle(cx, cy, r) {
+      var result = [];
+      var dirs, countFactor, startOffset;
+      switch (this._options.topology) {
+        case 4:
+          countFactor = 1;
+          startOffset = [0, 1];
+          dirs = [DIRS[8][7], DIRS[8][1], DIRS[8][3], DIRS[8][5]];
+          break;
+        case 6:
+          dirs = DIRS[6];
+          countFactor = 1;
+          startOffset = [-1, 1];
+          break;
+        case 8:
+          dirs = DIRS[4];
+          countFactor = 2;
+          startOffset = [-1, 1];
+          break;
+        default:
+          throw new Error("Incorrect topology for FOV computation");
+      }
+      /* starting neighbor */
+      var x = cx + startOffset[0] * r;
+      var y = cy + startOffset[1] * r;
+      /* circle */
+      for (var i = 0; i < dirs.length; i++) {
+        for (var j = 0; j < r * countFactor; j++) {
+          result.push([x, y]);
+          x += dirs[i][0];
+          y += dirs[i][1];
+        }
+      }
+      return result;
+    };
+    return FOV;
+  }();
+  /**
+   * @class Discrete shadowcasting algorithm. Obsoleted by Precise shadowcasting.
+   * @augments ROT.FOV
+   */
+  var DiscreteShadowcasting = /*#__PURE__*/function (_FOV) {
+    _inheritsLoose(DiscreteShadowcasting, _FOV);
+    function DiscreteShadowcasting() {
+      return _FOV.apply(this, arguments) || this;
+    }
+    var _proto18 = DiscreteShadowcasting.prototype;
+    _proto18.compute = function compute(x, y, R, callback) {
+      /* this place is always visible */
+      callback(x, y, 0, 1);
+      /* standing in a dark place. FIXME is this a good idea?  */
+      if (!this._lightPasses(x, y)) {
+        return;
+      }
+      /* start and end angles */
+      var DATA = [];
+      var A, B, cx, cy, blocks;
+      /* analyze surrounding cells in concentric rings, starting from the center */
+      for (var r = 1; r <= R; r++) {
+        var neighbors = this._getCircle(x, y, r);
+        var angle = 360 / neighbors.length;
+        for (var i = 0; i < neighbors.length; i++) {
+          cx = neighbors[i][0];
+          cy = neighbors[i][1];
+          A = angle * (i - 0.5);
+          B = A + angle;
+          blocks = !this._lightPasses(cx, cy);
+          if (this._visibleCoords(Math.floor(A), Math.ceil(B), blocks, DATA)) {
+            callback(cx, cy, r, 1);
+          }
+          if (DATA.length == 2 && DATA[0] == 0 && DATA[1] == 360) {
+            return;
+          } /* cutoff? */
+        } /* for all cells in this ring */
+      } /* for all rings */
+    }
+    /**
+     * @param {int} A start angle
+     * @param {int} B end angle
+     * @param {bool} blocks Does current cell block visibility?
+     * @param {int[][]} DATA shadowed angle pairs
+     */;
+    _proto18._visibleCoords = function _visibleCoords(A, B, blocks, DATA) {
+      if (A < 0) {
+        var v1 = this._visibleCoords(0, B, blocks, DATA);
+        var v2 = this._visibleCoords(360 + A, 360, blocks, DATA);
+        return v1 || v2;
+      }
+      var index = 0;
+      while (index < DATA.length && DATA[index] < A) {
+        index++;
+      }
+      if (index == DATA.length) {
+        /* completely new shadow */
+        if (blocks) {
+          DATA.push(A, B);
+        }
+        return true;
+      }
+      var count = 0;
+      if (index % 2) {
+        /* this shadow starts in an existing shadow, or within its ending boundary */
+        while (index < DATA.length && DATA[index] < B) {
+          index++;
+          count++;
+        }
+        if (count == 0) {
+          return false;
+        }
+        if (blocks) {
+          if (count % 2) {
+            DATA.splice(index - count, count, B);
+          } else {
+            DATA.splice(index - count, count);
+          }
+        }
+        return true;
+      } else {
+        /* this shadow starts outside an existing shadow, or within a starting boundary */
+        while (index < DATA.length && DATA[index] < B) {
+          index++;
+          count++;
+        }
+        /* visible when outside an existing shadow, or when overlapping */
+        if (A == DATA[index - count] && count == 1) {
+          return false;
+        }
+        if (blocks) {
+          if (count % 2) {
+            DATA.splice(index - count, count, A);
+          } else {
+            DATA.splice(index - count, count, A, B);
+          }
+        }
+        return true;
+      }
+    };
+    return DiscreteShadowcasting;
+  }(FOV);
+  /**
+   * @class Precise shadowcasting algorithm
+   * @augments ROT.FOV
+   */
+  var PreciseShadowcasting = /*#__PURE__*/function (_FOV2) {
+    _inheritsLoose(PreciseShadowcasting, _FOV2);
+    function PreciseShadowcasting() {
+      return _FOV2.apply(this, arguments) || this;
+    }
+    var _proto19 = PreciseShadowcasting.prototype;
+    _proto19.compute = function compute(x, y, R, callback) {
+      /* this place is always visible */
+      callback(x, y, 0, 1);
+      /* standing in a dark place. FIXME is this a good idea?  */
+      if (!this._lightPasses(x, y)) {
+        return;
+      }
+      /* list of all shadows */
+      var SHADOWS = [];
+      var cx, cy, blocks, A1, A2, visibility;
+      /* analyze surrounding cells in concentric rings, starting from the center */
+      for (var r = 1; r <= R; r++) {
+        var neighbors = this._getCircle(x, y, r);
+        var neighborCount = neighbors.length;
+        for (var i = 0; i < neighborCount; i++) {
+          cx = neighbors[i][0];
+          cy = neighbors[i][1];
+          /* shift half-an-angle backwards to maintain consistency of 0-th cells */
+          A1 = [i ? 2 * i - 1 : 2 * neighborCount - 1, 2 * neighborCount];
+          A2 = [2 * i + 1, 2 * neighborCount];
+          blocks = !this._lightPasses(cx, cy);
+          visibility = this._checkVisibility(A1, A2, blocks, SHADOWS);
+          if (visibility) {
+            callback(cx, cy, r, visibility);
+          }
+          if (SHADOWS.length == 2 && SHADOWS[0][0] == 0 && SHADOWS[1][0] == SHADOWS[1][1]) {
+            return;
+          } /* cutoff? */
+        } /* for all cells in this ring */
+      } /* for all rings */
+    }
+    /**
+     * @param {int[2]} A1 arc start
+     * @param {int[2]} A2 arc end
+     * @param {bool} blocks Does current arc block visibility?
+     * @param {int[][]} SHADOWS list of active shadows
+     */;
+    _proto19._checkVisibility = function _checkVisibility(A1, A2, blocks, SHADOWS) {
+      if (A1[0] > A2[0]) {
+        /* split into two sub-arcs */
+        var v1 = this._checkVisibility(A1, [A1[1], A1[1]], blocks, SHADOWS);
+        var v2 = this._checkVisibility([0, 1], A2, blocks, SHADOWS);
+        return (v1 + v2) / 2;
+      }
+      /* index1: first shadow >= A1 */
+      var index1 = 0,
+        edge1 = false;
+      while (index1 < SHADOWS.length) {
+        var old = SHADOWS[index1];
+        var diff = old[0] * A1[1] - A1[0] * old[1];
+        if (diff >= 0) {
+          /* old >= A1 */
+          if (diff == 0 && !(index1 % 2)) {
+            edge1 = true;
+          }
+          break;
+        }
+        index1++;
+      }
+      /* index2: last shadow <= A2 */
+      var index2 = SHADOWS.length,
+        edge2 = false;
+      while (index2--) {
+        var _old = SHADOWS[index2];
+        var _diff = A2[0] * _old[1] - _old[0] * A2[1];
+        if (_diff >= 0) {
+          /* old <= A2 */
+          if (_diff == 0 && index2 % 2) {
+            edge2 = true;
+          }
+          break;
+        }
+      }
+      var visible = true;
+      if (index1 == index2 && (edge1 || edge2)) {
+        /* subset of existing shadow, one of the edges match */
+        visible = false;
+      } else if (edge1 && edge2 && index1 + 1 == index2 && index2 % 2) {
+        /* completely equivalent with existing shadow */
+        visible = false;
+      } else if (index1 > index2 && index1 % 2) {
+        /* subset of existing shadow, not touching */
+        visible = false;
+      }
+      if (!visible) {
+        return 0;
+      } /* fast case: not visible */
+      var visibleLength;
+      /* compute the length of visible arc, adjust list of shadows (if blocking) */
+      var remove = index2 - index1 + 1;
+      if (remove % 2) {
+        if (index1 % 2) {
+          /* first edge within existing shadow, second outside */
+          var P = SHADOWS[index1];
+          visibleLength = (A2[0] * P[1] - P[0] * A2[1]) / (P[1] * A2[1]);
+          if (blocks) {
+            SHADOWS.splice(index1, remove, A2);
+          }
+        } else {
+          /* second edge within existing shadow, first outside */
+          var _P = SHADOWS[index2];
+          visibleLength = (_P[0] * A1[1] - A1[0] * _P[1]) / (A1[1] * _P[1]);
+          if (blocks) {
+            SHADOWS.splice(index1, remove, A1);
+          }
+        }
+      } else {
+        if (index1 % 2) {
+          /* both edges within existing shadows */
+          var P1 = SHADOWS[index1];
+          var P2 = SHADOWS[index2];
+          visibleLength = (P2[0] * P1[1] - P1[0] * P2[1]) / (P1[1] * P2[1]);
+          if (blocks) {
+            SHADOWS.splice(index1, remove);
+          }
+        } else {
+          /* both edges outside existing shadows */
+          if (blocks) {
+            SHADOWS.splice(index1, remove, A1, A2);
+          }
+          return 1; /* whole arc visible! */
+        }
+      }
+
+      var arcLength = (A2[0] * A1[1] - A1[0] * A2[1]) / (A1[1] * A2[1]);
+      return visibleLength / arcLength;
+    };
+    return PreciseShadowcasting;
+  }(FOV);
+  /** Octants used for translating recursive shadowcasting offsets */
+  var OCTANTS = [[-1, 0, 0, 1], [0, -1, 1, 0], [0, -1, -1, 0], [-1, 0, 0, -1], [1, 0, 0, -1], [0, 1, -1, 0], [0, 1, 1, 0], [1, 0, 0, 1]];
+  /**
+   * @class Recursive shadowcasting algorithm
+   * Currently only supports 4/8 topologies, not hexagonal.
+   * Based on Peter Harkins' implementation of Björn Bergström's algorithm described here: http://www.roguebasin.com/index.php?title=FOV_using_recursive_shadowcasting
+   * @augments ROT.FOV
+   */
+  var RecursiveShadowcasting = /*#__PURE__*/function (_FOV3) {
+    _inheritsLoose(RecursiveShadowcasting, _FOV3);
+    function RecursiveShadowcasting() {
+      return _FOV3.apply(this, arguments) || this;
+    }
+    var _proto20 = RecursiveShadowcasting.prototype;
+    /**
+     * Compute visibility for a 360-degree circle
+     * @param {int} x
+     * @param {int} y
+     * @param {int} R Maximum visibility radius
+     * @param {function} callback
+     */
+    _proto20.compute = function compute(x, y, R, callback) {
+      //You can always see your own tile
+      callback(x, y, 0, 1);
+      for (var i = 0; i < OCTANTS.length; i++) {
+        this._renderOctant(x, y, OCTANTS[i], R, callback);
+      }
+    }
+    /**
+     * Compute visibility for a 180-degree arc
+     * @param {int} x
+     * @param {int} y
+     * @param {int} R Maximum visibility radius
+     * @param {int} dir Direction to look in (expressed in a ROT.DIRS value);
+     * @param {function} callback
+     */;
+    _proto20.compute180 = function compute180(x, y, R, dir, callback) {
+      //You can always see your own tile
+      callback(x, y, 0, 1);
+      var previousOctant = (dir - 1 + 8) % 8; //Need to retrieve the previous octant to render a full 180 degrees
+      var nextPreviousOctant = (dir - 2 + 8) % 8; //Need to retrieve the previous two octants to render a full 180 degrees
+      var nextOctant = (dir + 1 + 8) % 8; //Need to grab to next octant to render a full 180 degrees
+      this._renderOctant(x, y, OCTANTS[nextPreviousOctant], R, callback);
+      this._renderOctant(x, y, OCTANTS[previousOctant], R, callback);
+      this._renderOctant(x, y, OCTANTS[dir], R, callback);
+      this._renderOctant(x, y, OCTANTS[nextOctant], R, callback);
+    };
+    /**
+     * Compute visibility for a 90-degree arc
+     * @param {int} x
+     * @param {int} y
+     * @param {int} R Maximum visibility radius
+     * @param {int} dir Direction to look in (expressed in a ROT.DIRS value);
+     * @param {function} callback
+     */
+    _proto20.compute90 = function compute90(x, y, R, dir, callback) {
+      //You can always see your own tile
+      callback(x, y, 0, 1);
+      var previousOctant = (dir - 1 + 8) % 8; //Need to retrieve the previous octant to render a full 90 degrees
+      this._renderOctant(x, y, OCTANTS[dir], R, callback);
+      this._renderOctant(x, y, OCTANTS[previousOctant], R, callback);
+    }
+    /**
+     * Render one octant (45-degree arc) of the viewshed
+     * @param {int} x
+     * @param {int} y
+     * @param {int} octant Octant to be rendered
+     * @param {int} R Maximum visibility radius
+     * @param {function} callback
+     */;
+    _proto20._renderOctant = function _renderOctant(x, y, octant, R, callback) {
+      //Radius incremented by 1 to provide same coverage area as other shadowcasting radiuses
+      this._castVisibility(x, y, 1, 1.0, 0.0, R + 1, octant[0], octant[1], octant[2], octant[3], callback);
+    }
+    /**
+     * Actually calculates the visibility
+     * @param {int} startX The starting X coordinate
+     * @param {int} startY The starting Y coordinate
+     * @param {int} row The row to render
+     * @param {float} visSlopeStart The slope to start at
+     * @param {float} visSlopeEnd The slope to end at
+     * @param {int} radius The radius to reach out to
+     * @param {int} xx
+     * @param {int} xy
+     * @param {int} yx
+     * @param {int} yy
+     * @param {function} callback The callback to use when we hit a block that is visible
+     */;
+    _proto20._castVisibility = function _castVisibility(startX, startY, row, visSlopeStart, visSlopeEnd, radius, xx, xy, yx, yy, callback) {
+      if (visSlopeStart < visSlopeEnd) {
+        return;
+      }
+      for (var i = row; i <= radius; i++) {
+        var dx = -i - 1;
+        var dy = -i;
+        var blocked = false;
+        var newStart = 0;
+        //'Row' could be column, names here assume octant 0 and would be flipped for half the octants
+        while (dx <= 0) {
+          dx += 1;
+          //Translate from relative coordinates to map coordinates
+          var mapX = startX + dx * xx + dy * xy;
+          var mapY = startY + dx * yx + dy * yy;
+          //Range of the row
+          var slopeStart = (dx - 0.5) / (dy + 0.5);
+          var slopeEnd = (dx + 0.5) / (dy - 0.5);
+          //Ignore if not yet at left edge of Octant
+          if (slopeEnd > visSlopeStart) {
+            continue;
+          }
+          //Done if past right edge
+          if (slopeStart < visSlopeEnd) {
+            break;
+          }
+          //If it's in range, it's visible
+          if (dx * dx + dy * dy < radius * radius) {
+            callback(mapX, mapY, i, 1);
+          }
+          if (!blocked) {
+            //If tile is a blocking tile, cast around it
+            if (!this._lightPasses(mapX, mapY) && i < radius) {
+              blocked = true;
+              this._castVisibility(startX, startY, i + 1, visSlopeStart, slopeStart, radius, xx, xy, yx, yy, callback);
+              newStart = slopeEnd;
+            }
+          } else {
+            //Keep narrowing if scanning across a block
+            if (!this._lightPasses(mapX, mapY)) {
+              newStart = slopeEnd;
+              continue;
+            }
+            //Block has ended
+            blocked = false;
+            visSlopeStart = newStart;
+          }
+        }
+        if (blocked) {
+          break;
+        }
+      }
+    };
+    return RecursiveShadowcasting;
+  }(FOV);
+  var index$3 = {
+    DiscreteShadowcasting: DiscreteShadowcasting,
+    PreciseShadowcasting: PreciseShadowcasting,
+    RecursiveShadowcasting: RecursiveShadowcasting
+  };
+  var Map = /*#__PURE__*/function () {
+    /**
+     * @class Base map generator
+     * @param {int} [width=ROT.DEFAULT_WIDTH]
+     * @param {int} [height=ROT.DEFAULT_HEIGHT]
+     */
+    function Map(width, height) {
+      if (width === void 0) {
+        width = DEFAULT_WIDTH;
+      }
+      if (height === void 0) {
+        height = DEFAULT_HEIGHT;
+      }
+      this._width = width;
+      this._height = height;
+    }
+    var _proto21 = Map.prototype;
+    _proto21._fillMap = function _fillMap(value) {
+      var map = [];
+      for (var i = 0; i < this._width; i++) {
+        map.push([]);
+        for (var j = 0; j < this._height; j++) {
+          map[i].push(value);
+        }
+      }
+      return map;
+    };
+    return Map;
+  }();
+  /**
+   * @class Simple empty rectangular room
+   * @augments ROT.Map
+   */
+  var Arena = /*#__PURE__*/function (_Map) {
+    _inheritsLoose(Arena, _Map);
+    function Arena() {
+      return _Map.apply(this, arguments) || this;
+    }
+    var _proto22 = Arena.prototype;
+    _proto22.create = function create(callback) {
+      var w = this._width - 1;
+      var h = this._height - 1;
+      for (var i = 0; i <= w; i++) {
+        for (var j = 0; j <= h; j++) {
+          var empty = i && j && i < w && j < h;
+          callback(i, j, empty ? 0 : 1);
+        }
+      }
+      return this;
+    };
+    return Arena;
+  }(Map);
+  /**
+   * @class Dungeon map: has rooms and corridors
+   * @augments ROT.Map
+   */
+  var Dungeon = /*#__PURE__*/function (_Map2) {
+    _inheritsLoose(Dungeon, _Map2);
+    function Dungeon(width, height) {
+      var _this10;
+      _this10 = _Map2.call(this, width, height) || this;
+      _this10._rooms = [];
+      _this10._corridors = [];
+      return _this10;
+    }
+    /**
+     * Get all generated rooms
+     * @returns {ROT.Map.Feature.Room[]}
+     */
+    var _proto23 = Dungeon.prototype;
+    _proto23.getRooms = function getRooms() {
+      return this._rooms;
+    }
+    /**
+     * Get all generated corridors
+     * @returns {ROT.Map.Feature.Corridor[]}
+     */;
+    _proto23.getCorridors = function getCorridors() {
+      return this._corridors;
+    };
+    return Dungeon;
+  }(Map);
+  /**
+   * @class Dungeon feature; has own .create() method
+   */
+  var Feature = function Feature() {};
+  /**
+   * @class Room
+   * @augments ROT.Map.Feature
+   * @param {int} x1
+   * @param {int} y1
+   * @param {int} x2
+   * @param {int} y2
+   * @param {int} [doorX]
+   * @param {int} [doorY]
+   */
+  var Room = /*#__PURE__*/function (_Feature) {
+    _inheritsLoose(Room, _Feature);
+    function Room(x1, y1, x2, y2, doorX, doorY) {
+      var _this11;
+      _this11 = _Feature.call(this) || this;
+      _this11._x1 = x1;
+      _this11._y1 = y1;
+      _this11._x2 = x2;
+      _this11._y2 = y2;
+      _this11._doors = {};
+      if (doorX !== undefined && doorY !== undefined) {
+        _this11.addDoor(doorX, doorY);
+      }
+      return _this11;
+    }
+    /**
+     * Room of random size, with a given doors and direction
+     */
+    Room.createRandomAt = function createRandomAt(x, y, dx, dy, options) {
+      var min = options.roomWidth[0];
+      var max = options.roomWidth[1];
+      var width = RNG$1.getUniformInt(min, max);
+      min = options.roomHeight[0];
+      max = options.roomHeight[1];
+      var height = RNG$1.getUniformInt(min, max);
+      if (dx == 1) {
+        /* to the right */
+        var y2 = y - Math.floor(RNG$1.getUniform() * height);
+        return new this(x + 1, y2, x + width, y2 + height - 1, x, y);
+      }
+      if (dx == -1) {
+        /* to the left */
+        var _y = y - Math.floor(RNG$1.getUniform() * height);
+        return new this(x - width, _y, x - 1, _y + height - 1, x, y);
+      }
+      if (dy == 1) {
+        /* to the bottom */
+        var x2 = x - Math.floor(RNG$1.getUniform() * width);
+        return new this(x2, y + 1, x2 + width - 1, y + height, x, y);
+      }
+      if (dy == -1) {
+        /* to the top */
+        var _x = x - Math.floor(RNG$1.getUniform() * width);
+        return new this(_x, y - height, _x + width - 1, y - 1, x, y);
+      }
+      throw new Error("dx or dy must be 1 or -1");
+    }
+    /**
+     * Room of random size, positioned around center coords
+     */;
+    Room.createRandomCenter = function createRandomCenter(cx, cy, options) {
+      var min = options.roomWidth[0];
+      var max = options.roomWidth[1];
+      var width = RNG$1.getUniformInt(min, max);
+      min = options.roomHeight[0];
+      max = options.roomHeight[1];
+      var height = RNG$1.getUniformInt(min, max);
+      var x1 = cx - Math.floor(RNG$1.getUniform() * width);
+      var y1 = cy - Math.floor(RNG$1.getUniform() * height);
+      var x2 = x1 + width - 1;
+      var y2 = y1 + height - 1;
+      return new this(x1, y1, x2, y2);
+    }
+    /**
+     * Room of random size within a given dimensions
+     */;
+    Room.createRandom = function createRandom(availWidth, availHeight, options) {
+      var min = options.roomWidth[0];
+      var max = options.roomWidth[1];
+      var width = RNG$1.getUniformInt(min, max);
+      min = options.roomHeight[0];
+      max = options.roomHeight[1];
+      var height = RNG$1.getUniformInt(min, max);
+      var left = availWidth - width - 1;
+      var top = availHeight - height - 1;
+      var x1 = 1 + Math.floor(RNG$1.getUniform() * left);
+      var y1 = 1 + Math.floor(RNG$1.getUniform() * top);
+      var x2 = x1 + width - 1;
+      var y2 = y1 + height - 1;
+      return new this(x1, y1, x2, y2);
+    };
+    var _proto24 = Room.prototype;
+    _proto24.addDoor = function addDoor(x, y) {
+      this._doors[x + "," + y] = 1;
+      return this;
+    }
+    /**
+     * @param {function}
+     */;
+    _proto24.getDoors = function getDoors(cb) {
+      for (var key in this._doors) {
+        var parts = key.split(",");
+        cb(parseInt(parts[0]), parseInt(parts[1]));
+      }
+      return this;
+    };
+    _proto24.clearDoors = function clearDoors() {
+      this._doors = {};
+      return this;
+    };
+    _proto24.addDoors = function addDoors(isWallCallback) {
+      var left = this._x1 - 1;
+      var right = this._x2 + 1;
+      var top = this._y1 - 1;
+      var bottom = this._y2 + 1;
+      for (var x = left; x <= right; x++) {
+        for (var y = top; y <= bottom; y++) {
+          if (x != left && x != right && y != top && y != bottom) {
+            continue;
+          }
+          if (isWallCallback(x, y)) {
+            continue;
+          }
+          this.addDoor(x, y);
+        }
+      }
+      return this;
+    };
+    _proto24.debug = function debug() {
+      console.log("room", this._x1, this._y1, this._x2, this._y2);
+    };
+    _proto24.isValid = function isValid(isWallCallback, canBeDugCallback) {
+      var left = this._x1 - 1;
+      var right = this._x2 + 1;
+      var top = this._y1 - 1;
+      var bottom = this._y2 + 1;
+      for (var x = left; x <= right; x++) {
+        for (var y = top; y <= bottom; y++) {
+          if (x == left || x == right || y == top || y == bottom) {
+            if (!isWallCallback(x, y)) {
+              return false;
+            }
+          } else {
+            if (!canBeDugCallback(x, y)) {
+              return false;
+            }
+          }
+        }
+      }
+      return true;
+    }
+    /**
+     * @param {function} digCallback Dig callback with a signature (x, y, value). Values: 0 = empty, 1 = wall, 2 = door. Multiple doors are allowed.
+     */;
+    _proto24.create = function create(digCallback) {
+      var left = this._x1 - 1;
+      var right = this._x2 + 1;
+      var top = this._y1 - 1;
+      var bottom = this._y2 + 1;
+      var value = 0;
+      for (var x = left; x <= right; x++) {
+        for (var y = top; y <= bottom; y++) {
+          if (x + "," + y in this._doors) {
+            value = 2;
+          } else if (x == left || x == right || y == top || y == bottom) {
+            value = 1;
+          } else {
+            value = 0;
+          }
+          digCallback(x, y, value);
+        }
+      }
+    };
+    _proto24.getCenter = function getCenter() {
+      return [Math.round((this._x1 + this._x2) / 2), Math.round((this._y1 + this._y2) / 2)];
+    };
+    _proto24.getLeft = function getLeft() {
+      return this._x1;
+    };
+    _proto24.getRight = function getRight() {
+      return this._x2;
+    };
+    _proto24.getTop = function getTop() {
+      return this._y1;
+    };
+    _proto24.getBottom = function getBottom() {
+      return this._y2;
+    };
+    return Room;
+  }(Feature);
+  /**
+   * @class Corridor
+   * @augments ROT.Map.Feature
+   * @param {int} startX
+   * @param {int} startY
+   * @param {int} endX
+   * @param {int} endY
+   */
+  var Corridor = /*#__PURE__*/function (_Feature2) {
+    _inheritsLoose(Corridor, _Feature2);
+    function Corridor(startX, startY, endX, endY) {
+      var _this12;
+      _this12 = _Feature2.call(this) || this;
+      _this12._startX = startX;
+      _this12._startY = startY;
+      _this12._endX = endX;
+      _this12._endY = endY;
+      _this12._endsWithAWall = true;
+      return _this12;
+    }
+    Corridor.createRandomAt = function createRandomAt(x, y, dx, dy, options) {
+      var min = options.corridorLength[0];
+      var max = options.corridorLength[1];
+      var length = RNG$1.getUniformInt(min, max);
+      return new this(x, y, x + dx * length, y + dy * length);
+    };
+    var _proto25 = Corridor.prototype;
+    _proto25.debug = function debug() {
+      console.log("corridor", this._startX, this._startY, this._endX, this._endY);
+    };
+    _proto25.isValid = function isValid(isWallCallback, canBeDugCallback) {
+      var sx = this._startX;
+      var sy = this._startY;
+      var dx = this._endX - sx;
+      var dy = this._endY - sy;
+      var length = 1 + Math.max(Math.abs(dx), Math.abs(dy));
+      if (dx) {
+        dx = dx / Math.abs(dx);
+      }
+      if (dy) {
+        dy = dy / Math.abs(dy);
+      }
+      var nx = dy;
+      var ny = -dx;
+      var ok = true;
+      for (var i = 0; i < length; i++) {
+        var x = sx + i * dx;
+        var y = sy + i * dy;
+        if (!canBeDugCallback(x, y)) {
+          ok = false;
+        }
+        if (!isWallCallback(x + nx, y + ny)) {
+          ok = false;
+        }
+        if (!isWallCallback(x - nx, y - ny)) {
+          ok = false;
+        }
+        if (!ok) {
+          length = i;
+          this._endX = x - dx;
+          this._endY = y - dy;
+          break;
+        }
+      }
+      /**
+       * If the length degenerated, this corridor might be invalid
+       */
+      /* not supported */
+      if (length == 0) {
+        return false;
+      }
+      /* length 1 allowed only if the next space is empty */
+      if (length == 1 && isWallCallback(this._endX + dx, this._endY + dy)) {
+        return false;
+      }
+      /**
+       * We do not want the corridor to crash into a corner of a room;
+       * if any of the ending corners is empty, the N+1th cell of this corridor must be empty too.
+       *
+       * Situation:
+       * #######1
+       * .......?
+       * #######2
+       *
+       * The corridor was dug from left to right.
+       * 1, 2 - problematic corners, ? = N+1th cell (not dug)
+       */
+      var firstCornerBad = !isWallCallback(this._endX + dx + nx, this._endY + dy + ny);
+      var secondCornerBad = !isWallCallback(this._endX + dx - nx, this._endY + dy - ny);
+      this._endsWithAWall = isWallCallback(this._endX + dx, this._endY + dy);
+      if ((firstCornerBad || secondCornerBad) && this._endsWithAWall) {
+        return false;
+      }
+      return true;
+    }
+    /**
+     * @param {function} digCallback Dig callback with a signature (x, y, value). Values: 0 = empty.
+     */;
+    _proto25.create = function create(digCallback) {
+      var sx = this._startX;
+      var sy = this._startY;
+      var dx = this._endX - sx;
+      var dy = this._endY - sy;
+      var length = 1 + Math.max(Math.abs(dx), Math.abs(dy));
+      if (dx) {
+        dx = dx / Math.abs(dx);
+      }
+      if (dy) {
+        dy = dy / Math.abs(dy);
+      }
+      for (var i = 0; i < length; i++) {
+        var x = sx + i * dx;
+        var y = sy + i * dy;
+        digCallback(x, y, 0);
+      }
+      return true;
+    };
+    _proto25.createPriorityWalls = function createPriorityWalls(priorityWallCallback) {
+      if (!this._endsWithAWall) {
+        return;
+      }
+      var sx = this._startX;
+      var sy = this._startY;
+      var dx = this._endX - sx;
+      var dy = this._endY - sy;
+      if (dx) {
+        dx = dx / Math.abs(dx);
+      }
+      if (dy) {
+        dy = dy / Math.abs(dy);
+      }
+      var nx = dy;
+      var ny = -dx;
+      priorityWallCallback(this._endX + dx, this._endY + dy);
+      priorityWallCallback(this._endX + nx, this._endY + ny);
+      priorityWallCallback(this._endX - nx, this._endY - ny);
+    };
+    return Corridor;
+  }(Feature);
+  /**
+   * @class Dungeon generator which tries to fill the space evenly. Generates independent rooms and tries to connect them.
+   * @augments ROT.Map.Dungeon
+   */
+  var Uniform = /*#__PURE__*/function (_Dungeon) {
+    _inheritsLoose(Uniform, _Dungeon);
+    function Uniform(width, height, options) {
+      var _this13;
+      _this13 = _Dungeon.call(this, width, height) || this;
+      _this13._options = {
+        roomWidth: [3, 9],
+        roomHeight: [3, 5],
+        roomDugPercentage: 0.1,
+        timeLimit: 1000 /* we stop after this much time has passed (msec) */
+      };
+
+      Object.assign(_this13._options, options);
+      _this13._map = [];
+      _this13._dug = 0;
+      _this13._roomAttempts = 20; /* new room is created N-times until is considered as impossible to generate */
+      _this13._corridorAttempts = 20; /* corridors are tried N-times until the level is considered as impossible to connect */
+      _this13._connected = []; /* list of already connected rooms */
+      _this13._unconnected = []; /* list of remaining unconnected rooms */
+      _this13._digCallback = _this13._digCallback.bind(_assertThisInitialized(_this13));
+      _this13._canBeDugCallback = _this13._canBeDugCallback.bind(_assertThisInitialized(_this13));
+      _this13._isWallCallback = _this13._isWallCallback.bind(_assertThisInitialized(_this13));
+      return _this13;
+    }
+    /**
+     * Create a map. If the time limit has been hit, returns null.
+     * @see ROT.Map#create
+     */
+    var _proto26 = Uniform.prototype;
+    _proto26.create = function create(callback) {
+      var t1 = Date.now();
+      while (1) {
+        var t2 = Date.now();
+        if (t2 - t1 > this._options.timeLimit) {
+          return null;
+        } /* time limit! */
+        this._map = this._fillMap(1);
+        this._dug = 0;
+        this._rooms = [];
+        this._unconnected = [];
+        this._generateRooms();
+        if (this._rooms.length < 2) {
+          continue;
+        }
+        if (this._generateCorridors()) {
+          break;
+        }
+      }
+      if (callback) {
+        for (var i = 0; i < this._width; i++) {
+          for (var j = 0; j < this._height; j++) {
+            callback(i, j, this._map[i][j]);
+          }
+        }
+      }
+      return this;
+    }
+    /**
+     * Generates a suitable amount of rooms
+     */;
+    _proto26._generateRooms = function _generateRooms() {
+      var w = this._width - 2;
+      var h = this._height - 2;
+      var room;
+      do {
+        room = this._generateRoom();
+        if (this._dug / (w * h) > this._options.roomDugPercentage) {
+          break;
+        } /* achieved requested amount of free space */
+      } while (room);
+      /* either enough rooms, or not able to generate more of them :) */
+    }
+    /**
+     * Try to generate one room
+     */;
+    _proto26._generateRoom = function _generateRoom() {
+      var count = 0;
+      while (count < this._roomAttempts) {
+        count++;
+        var room = Room.createRandom(this._width, this._height, this._options);
+        if (!room.isValid(this._isWallCallback, this._canBeDugCallback)) {
+          continue;
+        }
+        room.create(this._digCallback);
+        this._rooms.push(room);
+        return room;
+      }
+      /* no room was generated in a given number of attempts */
+      return null;
+    }
+    /**
+     * Generates connectors beween rooms
+     * @returns {bool} success Was this attempt successfull?
+     */;
+    _proto26._generateCorridors = function _generateCorridors() {
+      var cnt = 0;
+      while (cnt < this._corridorAttempts) {
+        cnt++;
+        this._corridors = [];
+        /* dig rooms into a clear map */
+        this._map = this._fillMap(1);
+        for (var i = 0; i < this._rooms.length; i++) {
+          var room = this._rooms[i];
+          room.clearDoors();
+          room.create(this._digCallback);
+        }
+        this._unconnected = RNG$1.shuffle(this._rooms.slice());
+        this._connected = [];
+        if (this._unconnected.length) {
+          this._connected.push(this._unconnected.pop());
+        } /* first one is always connected */
+        while (1) {
+          /* 1. pick random connected room */
+          var connected = RNG$1.getItem(this._connected);
+          if (!connected) {
+            break;
+          }
+          /* 2. find closest unconnected */
+          var room1 = this._closestRoom(this._unconnected, connected);
+          if (!room1) {
+            break;
+          }
+          /* 3. connect it to closest connected */
+          var room2 = this._closestRoom(this._connected, room1);
+          if (!room2) {
+            break;
+          }
+          var ok = this._connectRooms(room1, room2);
+          if (!ok) {
+            break;
+          } /* stop connecting, re-shuffle */
+          if (!this._unconnected.length) {
+            return true;
+          } /* done; no rooms remain */
+        }
+      }
+
+      return false;
+    };
+    /**
+     * For a given room, find the closest one from the list
+     */
+    _proto26._closestRoom = function _closestRoom(rooms, room) {
+      var dist = Infinity;
+      var center = room.getCenter();
+      var result = null;
+      for (var i = 0; i < rooms.length; i++) {
+        var r = rooms[i];
+        var c = r.getCenter();
+        var dx = c[0] - center[0];
+        var dy = c[1] - center[1];
+        var d = dx * dx + dy * dy;
+        if (d < dist) {
+          dist = d;
+          result = r;
+        }
+      }
+      return result;
+    };
+    _proto26._connectRooms = function _connectRooms(room1, room2) {
+      /*
+          room1.debug();
+          room2.debug();
+      */
+      var center1 = room1.getCenter();
+      var center2 = room2.getCenter();
+      var diffX = center2[0] - center1[0];
+      var diffY = center2[1] - center1[1];
+      var start;
+      var end;
+      var dirIndex1, dirIndex2, min, max, index;
+      if (Math.abs(diffX) < Math.abs(diffY)) {
+        /* first try connecting north-south walls */
+        dirIndex1 = diffY > 0 ? 2 : 0;
+        dirIndex2 = (dirIndex1 + 2) % 4;
+        min = room2.getLeft();
+        max = room2.getRight();
+        index = 0;
+      } else {
+        /* first try connecting east-west walls */
+        dirIndex1 = diffX > 0 ? 1 : 3;
+        dirIndex2 = (dirIndex1 + 2) % 4;
+        min = room2.getTop();
+        max = room2.getBottom();
+        index = 1;
+      }
+      start = this._placeInWall(room1, dirIndex1); /* corridor will start here */
+      if (!start) {
+        return false;
+      }
+      if (start[index] >= min && start[index] <= max) {
+        /* possible to connect with straight line (I-like) */
+        end = start.slice();
+        var value = 0;
+        switch (dirIndex2) {
+          case 0:
+            value = room2.getTop() - 1;
+            break;
+          case 1:
+            value = room2.getRight() + 1;
+            break;
+          case 2:
+            value = room2.getBottom() + 1;
+            break;
+          case 3:
+            value = room2.getLeft() - 1;
+            break;
+        }
+        end[(index + 1) % 2] = value;
+        this._digLine([start, end]);
+      } else if (start[index] < min - 1 || start[index] > max + 1) {
+        /* need to switch target wall (L-like) */
+        var diff = start[index] - center2[index];
+        var rotation = 0;
+        switch (dirIndex2) {
+          case 0:
+          case 1:
+            rotation = diff < 0 ? 3 : 1;
+            break;
+          case 2:
+          case 3:
+            rotation = diff < 0 ? 1 : 3;
+            break;
+        }
+        dirIndex2 = (dirIndex2 + rotation) % 4;
+        end = this._placeInWall(room2, dirIndex2);
+        if (!end) {
+          return false;
+        }
+        var mid = [0, 0];
+        mid[index] = start[index];
+        var index2 = (index + 1) % 2;
+        mid[index2] = end[index2];
+        this._digLine([start, mid, end]);
+      } else {
+        /* use current wall pair, but adjust the line in the middle (S-like) */
+        var _index4 = (index + 1) % 2;
+        end = this._placeInWall(room2, dirIndex2);
+        if (!end) {
+          return false;
+        }
+        var _mid = Math.round((end[_index4] + start[_index4]) / 2);
+        var mid1 = [0, 0];
+        var mid2 = [0, 0];
+        mid1[index] = start[index];
+        mid1[_index4] = _mid;
+        mid2[index] = end[index];
+        mid2[_index4] = _mid;
+        this._digLine([start, mid1, mid2, end]);
+      }
+      room1.addDoor(start[0], start[1]);
+      room2.addDoor(end[0], end[1]);
+      index = this._unconnected.indexOf(room1);
+      if (index != -1) {
+        this._unconnected.splice(index, 1);
+        this._connected.push(room1);
+      }
+      index = this._unconnected.indexOf(room2);
+      if (index != -1) {
+        this._unconnected.splice(index, 1);
+        this._connected.push(room2);
+      }
+      return true;
+    };
+    _proto26._placeInWall = function _placeInWall(room, dirIndex) {
+      var start = [0, 0];
+      var dir = [0, 0];
+      var length = 0;
+      switch (dirIndex) {
+        case 0:
+          dir = [1, 0];
+          start = [room.getLeft(), room.getTop() - 1];
+          length = room.getRight() - room.getLeft() + 1;
+          break;
+        case 1:
+          dir = [0, 1];
+          start = [room.getRight() + 1, room.getTop()];
+          length = room.getBottom() - room.getTop() + 1;
+          break;
+        case 2:
+          dir = [1, 0];
+          start = [room.getLeft(), room.getBottom() + 1];
+          length = room.getRight() - room.getLeft() + 1;
+          break;
+        case 3:
+          dir = [0, 1];
+          start = [room.getLeft() - 1, room.getTop()];
+          length = room.getBottom() - room.getTop() + 1;
+          break;
+      }
+      var avail = [];
+      var lastBadIndex = -2;
+      for (var i = 0; i < length; i++) {
+        var x = start[0] + i * dir[0];
+        var y = start[1] + i * dir[1];
+        avail.push(null);
+        var isWall = this._map[x][y] == 1;
+        if (isWall) {
+          if (lastBadIndex != i - 1) {
+            avail[i] = [x, y];
+          }
+        } else {
+          lastBadIndex = i;
+          if (i) {
+            avail[i - 1] = null;
+          }
+        }
+      }
+      for (var _i3 = avail.length - 1; _i3 >= 0; _i3--) {
+        if (!avail[_i3]) {
+          avail.splice(_i3, 1);
+        }
+      }
+      return avail.length ? RNG$1.getItem(avail) : null;
+    }
+    /**
+     * Dig a polyline.
+     */;
+    _proto26._digLine = function _digLine(points) {
+      for (var i = 1; i < points.length; i++) {
+        var start = points[i - 1];
+        var end = points[i];
+        var corridor = new Corridor(start[0], start[1], end[0], end[1]);
+        corridor.create(this._digCallback);
+        this._corridors.push(corridor);
+      }
+    };
+    _proto26._digCallback = function _digCallback(x, y, value) {
+      this._map[x][y] = value;
+      if (value == 0) {
+        this._dug++;
+      }
+    };
+    _proto26._isWallCallback = function _isWallCallback(x, y) {
+      if (x < 0 || y < 0 || x >= this._width || y >= this._height) {
+        return false;
+      }
+      return this._map[x][y] == 1;
+    };
+    _proto26._canBeDugCallback = function _canBeDugCallback(x, y) {
+      if (x < 1 || y < 1 || x + 1 >= this._width || y + 1 >= this._height) {
+        return false;
+      }
+      return this._map[x][y] == 1;
+    };
+    return Uniform;
+  }(Dungeon);
+  /**
+   * @class Cellular automaton map generator
+   * @augments ROT.Map
+   * @param {int} [width=ROT.DEFAULT_WIDTH]
+   * @param {int} [height=ROT.DEFAULT_HEIGHT]
+   * @param {object} [options] Options
+   * @param {int[]} [options.born] List of neighbor counts for a new cell to be born in empty space
+   * @param {int[]} [options.survive] List of neighbor counts for an existing  cell to survive
+   * @param {int} [options.topology] Topology 4 or 6 or 8
+   */
+  var Cellular = /*#__PURE__*/function (_Map3) {
+    _inheritsLoose(Cellular, _Map3);
+    function Cellular(width, height, options) {
+      var _this14;
+      if (options === void 0) {
+        options = {};
+      }
+      _this14 = _Map3.call(this, width, height) || this;
+      _this14._options = {
+        born: [5, 6, 7, 8],
+        survive: [4, 5, 6, 7, 8],
+        topology: 8
+      };
+      _this14.setOptions(options);
+      _this14._dirs = DIRS[_this14._options.topology];
+      _this14._map = _this14._fillMap(0);
+      return _this14;
+    }
+    /**
+     * Fill the map with random values
+     * @param {float} probability Probability for a cell to become alive; 0 = all empty, 1 = all full
+     */
+    var _proto27 = Cellular.prototype;
+    _proto27.randomize = function randomize(probability) {
+      for (var i = 0; i < this._width; i++) {
+        for (var j = 0; j < this._height; j++) {
+          this._map[i][j] = RNG$1.getUniform() < probability ? 1 : 0;
+        }
+      }
+      return this;
+    }
+    /**
+     * Change options.
+     * @see ROT.Map.Cellular
+     */;
+    _proto27.setOptions = function setOptions(options) {
+      Object.assign(this._options, options);
+    };
+    _proto27.set = function set(x, y, value) {
+      this._map[x][y] = value;
+    };
+    _proto27.create = function create(callback) {
+      var newMap = this._fillMap(0);
+      var born = this._options.born;
+      var survive = this._options.survive;
+      for (var j = 0; j < this._height; j++) {
+        var widthStep = 1;
+        var widthStart = 0;
+        if (this._options.topology == 6) {
+          widthStep = 2;
+          widthStart = j % 2;
+        }
+        for (var i = widthStart; i < this._width; i += widthStep) {
+          var cur = this._map[i][j];
+          var ncount = this._getNeighbors(i, j);
+          if (cur && survive.indexOf(ncount) != -1) {
+            /* survive */
+            newMap[i][j] = 1;
+          } else if (!cur && born.indexOf(ncount) != -1) {
+            /* born */
+            newMap[i][j] = 1;
+          }
+        }
+      }
+      this._map = newMap;
+      callback && this._serviceCallback(callback);
+    };
+    _proto27._serviceCallback = function _serviceCallback(callback) {
+      for (var j = 0; j < this._height; j++) {
+        var widthStep = 1;
+        var widthStart = 0;
+        if (this._options.topology == 6) {
+          widthStep = 2;
+          widthStart = j % 2;
+        }
+        for (var i = widthStart; i < this._width; i += widthStep) {
+          callback(i, j, this._map[i][j]);
+        }
+      }
+    }
+    /**
+     * Get neighbor count at [i,j] in this._map
+     */;
+    _proto27._getNeighbors = function _getNeighbors(cx, cy) {
+      var result = 0;
+      for (var i = 0; i < this._dirs.length; i++) {
+        var dir = this._dirs[i];
+        var x = cx + dir[0];
+        var y = cy + dir[1];
+        if (x < 0 || x >= this._width || y < 0 || y >= this._height) {
+          continue;
+        }
+        result += this._map[x][y] == 1 ? 1 : 0;
+      }
+      return result;
+    }
+    /**
+     * Make sure every non-wall space is accessible.
+     * @param {function} callback to call to display map when do
+     * @param {int} value to consider empty space - defaults to 0
+     * @param {function} callback to call when a new connection is made
+     */;
+    _proto27.connect = function connect(callback, value, connectionCallback) {
+      if (!value) value = 0;
+      var allFreeSpace = [];
+      var notConnected = {};
+      // find all free space
+      var widthStep = 1;
+      var widthStarts = [0, 0];
+      if (this._options.topology == 6) {
+        widthStep = 2;
+        widthStarts = [0, 1];
+      }
+      for (var y = 0; y < this._height; y++) {
+        for (var x = widthStarts[y % 2]; x < this._width; x += widthStep) {
+          if (this._freeSpace(x, y, value)) {
+            var p = [x, y];
+            notConnected[this._pointKey(p)] = p;
+            allFreeSpace.push([x, y]);
+          }
+        }
+      }
+      var start = allFreeSpace[RNG$1.getUniformInt(0, allFreeSpace.length - 1)];
+      var key = this._pointKey(start);
+      var connected = {};
+      connected[key] = start;
+      delete notConnected[key];
+      // find what's connected to the starting point
+      this._findConnected(connected, notConnected, [start], false, value);
+      while (Object.keys(notConnected).length > 0) {
+        // find two points from notConnected to connected
+        var _p = this._getFromTo(connected, notConnected);
+        var from = _p[0]; // notConnected
+        var to = _p[1]; // connected
+        // find everything connected to the starting point
+        var local = {};
+        local[this._pointKey(from)] = from;
+        this._findConnected(local, notConnected, [from], true, value);
+        // connect to a connected cell
+        var tunnelFn = this._options.topology == 6 ? this._tunnelToConnected6 : this._tunnelToConnected;
+        tunnelFn.call(this, to, from, connected, notConnected, value, connectionCallback);
+        // now all of local is connected
+        for (var k in local) {
+          var pp = local[k];
+          this._map[pp[0]][pp[1]] = value;
+          connected[k] = pp;
+          delete notConnected[k];
+        }
+      }
+      callback && this._serviceCallback(callback);
+    }
+    /**
+     * Find random points to connect. Search for the closest point in the larger space.
+     * This is to minimize the length of the passage while maintaining good performance.
+     */;
+    _proto27._getFromTo = function _getFromTo(connected, notConnected) {
+      var from = [0, 0],
+        to = [0, 0],
+        d;
+      var connectedKeys = Object.keys(connected);
+      var notConnectedKeys = Object.keys(notConnected);
+      for (var i = 0; i < 5; i++) {
+        if (connectedKeys.length < notConnectedKeys.length) {
+          var keys = connectedKeys;
+          to = connected[keys[RNG$1.getUniformInt(0, keys.length - 1)]];
+          from = this._getClosest(to, notConnected);
+        } else {
+          var _keys = notConnectedKeys;
+          from = notConnected[_keys[RNG$1.getUniformInt(0, _keys.length - 1)]];
+          to = this._getClosest(from, connected);
+        }
+        d = (from[0] - to[0]) * (from[0] - to[0]) + (from[1] - to[1]) * (from[1] - to[1]);
+        if (d < 64) {
+          break;
+        }
+      }
+      // console.log(">>> connected=" + to + " notConnected=" + from + " dist=" + d);
+      return [from, to];
+    };
+    _proto27._getClosest = function _getClosest(point, space) {
+      var minPoint = null;
+      var minDist = null;
+      for (var k in space) {
+        var p = space[k];
+        var d = (p[0] - point[0]) * (p[0] - point[0]) + (p[1] - point[1]) * (p[1] - point[1]);
+        if (minDist == null || d < minDist) {
+          minDist = d;
+          minPoint = p;
+        }
+      }
+      return minPoint;
+    };
+    _proto27._findConnected = function _findConnected(connected, notConnected, stack, keepNotConnected, value) {
+      while (stack.length > 0) {
+        var p = stack.splice(0, 1)[0];
+        var tests = void 0;
+        if (this._options.topology == 6) {
+          tests = [[p[0] + 2, p[1]], [p[0] + 1, p[1] - 1], [p[0] - 1, p[1] - 1], [p[0] - 2, p[1]], [p[0] - 1, p[1] + 1], [p[0] + 1, p[1] + 1]];
+        } else {
+          tests = [[p[0] + 1, p[1]], [p[0] - 1, p[1]], [p[0], p[1] + 1], [p[0], p[1] - 1]];
+        }
+        for (var i = 0; i < tests.length; i++) {
+          var key = this._pointKey(tests[i]);
+          if (connected[key] == null && this._freeSpace(tests[i][0], tests[i][1], value)) {
+            connected[key] = tests[i];
+            if (!keepNotConnected) {
+              delete notConnected[key];
+            }
+            stack.push(tests[i]);
+          }
+        }
+      }
+    };
+    _proto27._tunnelToConnected = function _tunnelToConnected(to, from, connected, notConnected, value, connectionCallback) {
+      var a, b;
+      if (from[0] < to[0]) {
+        a = from;
+        b = to;
+      } else {
+        a = to;
+        b = from;
+      }
+      for (var xx = a[0]; xx <= b[0]; xx++) {
+        this._map[xx][a[1]] = value;
+        var p = [xx, a[1]];
+        var pkey = this._pointKey(p);
+        connected[pkey] = p;
+        delete notConnected[pkey];
+      }
+      if (connectionCallback && a[0] < b[0]) {
+        connectionCallback(a, [b[0], a[1]]);
+      }
+      // x is now fixed
+      var x = b[0];
+      if (from[1] < to[1]) {
+        a = from;
+        b = to;
+      } else {
+        a = to;
+        b = from;
+      }
+      for (var yy = a[1]; yy < b[1]; yy++) {
+        this._map[x][yy] = value;
+        var _p2 = [x, yy];
+        var _pkey = this._pointKey(_p2);
+        connected[_pkey] = _p2;
+        delete notConnected[_pkey];
+      }
+      if (connectionCallback && a[1] < b[1]) {
+        connectionCallback([b[0], a[1]], [b[0], b[1]]);
+      }
+    };
+    _proto27._tunnelToConnected6 = function _tunnelToConnected6(to, from, connected, notConnected, value, connectionCallback) {
+      var a, b;
+      if (from[0] < to[0]) {
+        a = from;
+        b = to;
+      } else {
+        a = to;
+        b = from;
+      }
+      // tunnel diagonally until horizontally level
+      var xx = a[0];
+      var yy = a[1];
+      while (!(xx == b[0] && yy == b[1])) {
+        var stepWidth = 2;
+        if (yy < b[1]) {
+          yy++;
+          stepWidth = 1;
+        } else if (yy > b[1]) {
+          yy--;
+          stepWidth = 1;
+        }
+        if (xx < b[0]) {
+          xx += stepWidth;
+        } else if (xx > b[0]) {
+          xx -= stepWidth;
+        } else if (b[1] % 2) {
+          // Won't step outside map if destination on is map's right edge
+          xx -= stepWidth;
+        } else {
+          // ditto for left edge
+          xx += stepWidth;
+        }
+        this._map[xx][yy] = value;
+        var p = [xx, yy];
+        var pkey = this._pointKey(p);
+        connected[pkey] = p;
+        delete notConnected[pkey];
+      }
+      if (connectionCallback) {
+        connectionCallback(from, to);
+      }
+    };
+    _proto27._freeSpace = function _freeSpace(x, y, value) {
+      return x >= 0 && x < this._width && y >= 0 && y < this._height && this._map[x][y] == value;
+    };
+    _proto27._pointKey = function _pointKey(p) {
+      return p[0] + "." + p[1];
+    };
+    return Cellular;
+  }(Map);
+  var FEATURES = {
+    "room": Room,
+    "corridor": Corridor
+  };
+  /**
+   * Random dungeon generator using human-like digging patterns.
+   * Heavily based on Mike Anderson's ideas from the "Tyrant" algo, mentioned at
+   * http://roguebasin.com/index.php/Dungeon-Building_Algorithm
+   */
+  var Digger = /*#__PURE__*/function (_Dungeon2) {
+    _inheritsLoose(Digger, _Dungeon2);
+    function Digger(width, height, options) {
+      var _this15;
+      if (options === void 0) {
+        options = {};
+      }
+      _this15 = _Dungeon2.call(this, width, height) || this;
+      _this15._options = Object.assign({
+        roomWidth: [3, 9],
+        roomHeight: [3, 5],
+        corridorLength: [3, 10],
+        dugPercentage: 0.2,
+        timeLimit: 1000 /* we stop after this much time has passed (msec) */
+      }, options);
+      _this15._features = {
+        "room": 4,
+        "corridor": 4
+      };
+      _this15._map = [];
+      _this15._featureAttempts = 20; /* how many times do we try to create a feature on a suitable wall */
+      _this15._walls = {}; /* these are available for digging */
+      _this15._dug = 0;
+      _this15._digCallback = _this15._digCallback.bind(_assertThisInitialized(_this15));
+      _this15._canBeDugCallback = _this15._canBeDugCallback.bind(_assertThisInitialized(_this15));
+      _this15._isWallCallback = _this15._isWallCallback.bind(_assertThisInitialized(_this15));
+      _this15._priorityWallCallback = _this15._priorityWallCallback.bind(_assertThisInitialized(_this15));
+      return _this15;
+    }
+    var _proto28 = Digger.prototype;
+    _proto28.create = function create(callback) {
+      this._rooms = [];
+      this._corridors = [];
+      this._map = this._fillMap(1);
+      this._walls = {};
+      this._dug = 0;
+      var area = (this._width - 2) * (this._height - 2);
+      this._firstRoom();
+      var t1 = Date.now();
+      var priorityWalls;
+      do {
+        priorityWalls = 0;
+        var t2 = Date.now();
+        if (t2 - t1 > this._options.timeLimit) {
+          break;
+        }
+        /* find a good wall */
+        var wall = this._findWall();
+        if (!wall) {
+          break;
+        } /* no more walls */
+        var parts = wall.split(",");
+        var x = parseInt(parts[0]);
+        var y = parseInt(parts[1]);
+        var dir = this._getDiggingDirection(x, y);
+        if (!dir) {
+          continue;
+        } /* this wall is not suitable */
+        //		console.log("wall", x, y);
+        /* try adding a feature */
+        var featureAttempts = 0;
+        do {
+          featureAttempts++;
+          if (this._tryFeature(x, y, dir[0], dir[1])) {
+            /* feature added */
+            //if (this._rooms.length + this._corridors.length == 2) { this._rooms[0].addDoor(x, y); } /* first room oficially has doors */
+            this._removeSurroundingWalls(x, y);
+            this._removeSurroundingWalls(x - dir[0], y - dir[1]);
+            break;
+          }
+        } while (featureAttempts < this._featureAttempts);
+        for (var id in this._walls) {
+          if (this._walls[id] > 1) {
+            priorityWalls++;
+          }
+        }
+      } while (this._dug / area < this._options.dugPercentage || priorityWalls); /* fixme number of priority walls */
+      this._addDoors();
+      if (callback) {
+        for (var i = 0; i < this._width; i++) {
+          for (var j = 0; j < this._height; j++) {
+            callback(i, j, this._map[i][j]);
+          }
+        }
+      }
+      this._walls = {};
+      this._map = [];
+      return this;
+    };
+    _proto28._digCallback = function _digCallback(x, y, value) {
+      if (value == 0 || value == 2) {
+        /* empty */
+        this._map[x][y] = 0;
+        this._dug++;
+      } else {
+        /* wall */
+        this._walls[x + "," + y] = 1;
+      }
+    };
+    _proto28._isWallCallback = function _isWallCallback(x, y) {
+      if (x < 0 || y < 0 || x >= this._width || y >= this._height) {
+        return false;
+      }
+      return this._map[x][y] == 1;
+    };
+    _proto28._canBeDugCallback = function _canBeDugCallback(x, y) {
+      if (x < 1 || y < 1 || x + 1 >= this._width || y + 1 >= this._height) {
+        return false;
+      }
+      return this._map[x][y] == 1;
+    };
+    _proto28._priorityWallCallback = function _priorityWallCallback(x, y) {
+      this._walls[x + "," + y] = 2;
+    };
+    _proto28._firstRoom = function _firstRoom() {
+      var cx = Math.floor(this._width / 2);
+      var cy = Math.floor(this._height / 2);
+      var room = Room.createRandomCenter(cx, cy, this._options);
+      this._rooms.push(room);
+      room.create(this._digCallback);
+    }
+    /**
+     * Get a suitable wall
+     */;
+    _proto28._findWall = function _findWall() {
+      var prio1 = [];
+      var prio2 = [];
+      for (var _id2 in this._walls) {
+        var prio = this._walls[_id2];
+        if (prio == 2) {
+          prio2.push(_id2);
+        } else {
+          prio1.push(_id2);
+        }
+      }
+      var arr = prio2.length ? prio2 : prio1;
+      if (!arr.length) {
+        return null;
+      } /* no walls :/ */
+      var id = RNG$1.getItem(arr.sort()); // sort to make the order deterministic
+      delete this._walls[id];
+      return id;
+    }
+    /**
+     * Tries adding a feature
+     * @returns {bool} was this a successful try?
+     */;
+    _proto28._tryFeature = function _tryFeature(x, y, dx, dy) {
+      var featureName = RNG$1.getWeightedValue(this._features);
+      var ctor = FEATURES[featureName];
+      var feature = ctor.createRandomAt(x, y, dx, dy, this._options);
+      if (!feature.isValid(this._isWallCallback, this._canBeDugCallback)) {
+        //		console.log("not valid");
+        //		feature.debug();
+        return false;
+      }
+      feature.create(this._digCallback);
+      //	feature.debug();
+      if (feature instanceof Room) {
+        this._rooms.push(feature);
+      }
+      if (feature instanceof Corridor) {
+        feature.createPriorityWalls(this._priorityWallCallback);
+        this._corridors.push(feature);
+      }
+      return true;
+    };
+    _proto28._removeSurroundingWalls = function _removeSurroundingWalls(cx, cy) {
+      var deltas = DIRS[4];
+      for (var i = 0; i < deltas.length; i++) {
+        var delta = deltas[i];
+        var x = cx + delta[0];
+        var y = cy + delta[1];
+        delete this._walls[x + "," + y];
+        x = cx + 2 * delta[0];
+        y = cy + 2 * delta[1];
+        delete this._walls[x + "," + y];
+      }
+    }
+    /**
+     * Returns vector in "digging" direction, or false, if this does not exist (or is not unique)
+     */;
+    _proto28._getDiggingDirection = function _getDiggingDirection(cx, cy) {
+      if (cx <= 0 || cy <= 0 || cx >= this._width - 1 || cy >= this._height - 1) {
+        return null;
+      }
+      var result = null;
+      var deltas = DIRS[4];
+      for (var i = 0; i < deltas.length; i++) {
+        var delta = deltas[i];
+        var x = cx + delta[0];
+        var y = cy + delta[1];
+        if (!this._map[x][y]) {
+          /* there already is another empty neighbor! */
+          if (result) {
+            return null;
+          }
+          result = delta;
+        }
+      }
+      /* no empty neighbor */
+      if (!result) {
+        return null;
+      }
+      return [-result[0], -result[1]];
+    }
+    /**
+     * Find empty spaces surrounding rooms, and apply doors.
+     */;
+    _proto28._addDoors = function _addDoors() {
+      var data = this._map;
+      function isWallCallback(x, y) {
+        return data[x][y] == 1;
+      }
+      for (var i = 0; i < this._rooms.length; i++) {
+        var room = this._rooms[i];
+        room.clearDoors();
+        room.addDoors(isWallCallback);
+      }
+    };
+    return Digger;
+  }(Dungeon);
+  /**
+   * Join lists with "i" and "i+1"
+   */
+  function addToList(i, L, R) {
+    R[L[i + 1]] = R[i];
+    L[R[i]] = L[i + 1];
+    R[i] = i + 1;
+    L[i + 1] = i;
+  }
+  /**
+   * Remove "i" from its list
+   */
+  function removeFromList(i, L, R) {
+    R[L[i]] = R[i];
+    L[R[i]] = L[i];
+    R[i] = i;
+    L[i] = i;
+  }
+  /**
+   * Maze generator - Eller's algorithm
+   * See http://homepages.cwi.nl/~tromp/maze.html for explanation
+   */
+  var EllerMaze = /*#__PURE__*/function (_Map4) {
+    _inheritsLoose(EllerMaze, _Map4);
+    function EllerMaze() {
+      return _Map4.apply(this, arguments) || this;
+    }
+    var _proto29 = EllerMaze.prototype;
+    _proto29.create = function create(callback) {
+      var map = this._fillMap(1);
+      var w = Math.ceil((this._width - 2) / 2);
+      var rand = 9 / 24;
+      var L = [];
+      var R = [];
+      for (var i = 0; i < w; i++) {
+        L.push(i);
+        R.push(i);
+      }
+      L.push(w - 1); /* fake stop-block at the right side */
+      var j;
+      for (j = 1; j + 3 < this._height; j += 2) {
+        /* one row */
+        for (var _i4 = 0; _i4 < w; _i4++) {
+          /* cell coords (will be always empty) */
+          var x = 2 * _i4 + 1;
+          var y = j;
+          map[x][y] = 0;
+          /* right connection */
+          if (_i4 != L[_i4 + 1] && RNG$1.getUniform() > rand) {
+            addToList(_i4, L, R);
+            map[x + 1][y] = 0;
+          }
+          /* bottom connection */
+          if (_i4 != L[_i4] && RNG$1.getUniform() > rand) {
+            /* remove connection */
+            removeFromList(_i4, L, R);
+          } else {
+            /* create connection */
+            map[x][y + 1] = 0;
+          }
+        }
+      }
+      /* last row */
+      for (var _i5 = 0; _i5 < w; _i5++) {
+        /* cell coords (will be always empty) */
+        var _x2 = 2 * _i5 + 1;
+        var _y2 = j;
+        map[_x2][_y2] = 0;
+        /* right connection */
+        if (_i5 != L[_i5 + 1] && (_i5 == L[_i5] || RNG$1.getUniform() > rand)) {
+          /* dig right also if the cell is separated, so it gets connected to the rest of maze */
+          addToList(_i5, L, R);
+          map[_x2 + 1][_y2] = 0;
+        }
+        removeFromList(_i5, L, R);
+      }
+      for (var _i6 = 0; _i6 < this._width; _i6++) {
+        for (var _j = 0; _j < this._height; _j++) {
+          callback(_i6, _j, map[_i6][_j]);
+        }
+      }
+      return this;
+    };
+    return EllerMaze;
+  }(Map);
+  /**
+   * @class Recursively divided maze, http://en.wikipedia.org/wiki/Maze_generation_algorithm#Recursive_division_method
+   * @augments ROT.Map
+   */
+  var DividedMaze = /*#__PURE__*/function (_Map5) {
+    _inheritsLoose(DividedMaze, _Map5);
+    function DividedMaze() {
+      var _this16;
+      _this16 = _Map5.apply(this, arguments) || this;
+      _this16._stack = [];
+      _this16._map = [];
+      return _this16;
+    }
+    var _proto30 = DividedMaze.prototype;
+    _proto30.create = function create(callback) {
+      var w = this._width;
+      var h = this._height;
+      this._map = [];
+      for (var i = 0; i < w; i++) {
+        this._map.push([]);
+        for (var j = 0; j < h; j++) {
+          var border = i == 0 || j == 0 || i + 1 == w || j + 1 == h;
+          this._map[i].push(border ? 1 : 0);
+        }
+      }
+      this._stack = [[1, 1, w - 2, h - 2]];
+      this._process();
+      for (var _i7 = 0; _i7 < w; _i7++) {
+        for (var _j2 = 0; _j2 < h; _j2++) {
+          callback(_i7, _j2, this._map[_i7][_j2]);
+        }
+      }
+      this._map = [];
+      return this;
+    };
+    _proto30._process = function _process() {
+      while (this._stack.length) {
+        var room = this._stack.shift(); /* [left, top, right, bottom] */
+        this._partitionRoom(room);
+      }
+    };
+    _proto30._partitionRoom = function _partitionRoom(room) {
+      var availX = [];
+      var availY = [];
+      for (var i = room[0] + 1; i < room[2]; i++) {
+        var top = this._map[i][room[1] - 1];
+        var bottom = this._map[i][room[3] + 1];
+        if (top && bottom && !(i % 2)) {
+          availX.push(i);
+        }
+      }
+      for (var j = room[1] + 1; j < room[3]; j++) {
+        var left = this._map[room[0] - 1][j];
+        var right = this._map[room[2] + 1][j];
+        if (left && right && !(j % 2)) {
+          availY.push(j);
+        }
+      }
+      if (!availX.length || !availY.length) {
+        return;
+      }
+      var x = RNG$1.getItem(availX);
+      var y = RNG$1.getItem(availY);
+      this._map[x][y] = 1;
+      var walls = [];
+      var w = [];
+      walls.push(w); /* left part */
+      for (var _i8 = room[0]; _i8 < x; _i8++) {
+        this._map[_i8][y] = 1;
+        if (_i8 % 2) w.push([_i8, y]);
+      }
+      w = [];
+      walls.push(w); /* right part */
+      for (var _i9 = x + 1; _i9 <= room[2]; _i9++) {
+        this._map[_i9][y] = 1;
+        if (_i9 % 2) w.push([_i9, y]);
+      }
+      w = [];
+      walls.push(w); /* top part */
+      for (var _j3 = room[1]; _j3 < y; _j3++) {
+        this._map[x][_j3] = 1;
+        if (_j3 % 2) w.push([x, _j3]);
+      }
+      w = [];
+      walls.push(w); /* bottom part */
+      for (var _j4 = y + 1; _j4 <= room[3]; _j4++) {
+        this._map[x][_j4] = 1;
+        if (_j4 % 2) w.push([x, _j4]);
+      }
+      var solid = RNG$1.getItem(walls);
+      for (var _i10 = 0; _i10 < walls.length; _i10++) {
+        var _w = walls[_i10];
+        if (_w == solid) {
+          continue;
+        }
+        var hole = RNG$1.getItem(_w);
+        this._map[hole[0]][hole[1]] = 0;
+      }
+      this._stack.push([room[0], room[1], x - 1, y - 1]); /* left top */
+      this._stack.push([x + 1, room[1], room[2], y - 1]); /* right top */
+      this._stack.push([room[0], y + 1, x - 1, room[3]]); /* left bottom */
+      this._stack.push([x + 1, y + 1, room[2], room[3]]); /* right bottom */
+    };
+    return DividedMaze;
+  }(Map);
+  /**
+   * Icey's Maze generator
+   * See http://roguebasin.com/index.php/Simple_maze for explanation
+   */
+  var IceyMaze = /*#__PURE__*/function (_Map6) {
+    _inheritsLoose(IceyMaze, _Map6);
+    function IceyMaze(width, height, regularity) {
+      var _this17;
+      if (regularity === void 0) {
+        regularity = 0;
+      }
+      _this17 = _Map6.call(this, width, height) || this;
+      _this17._regularity = regularity;
+      _this17._map = [];
+      return _this17;
+    }
+    var _proto31 = IceyMaze.prototype;
+    _proto31.create = function create(callback) {
+      var width = this._width;
+      var height = this._height;
+      var map = this._fillMap(1);
+      width -= width % 2 ? 1 : 2;
+      height -= height % 2 ? 1 : 2;
+      var cx = 0;
+      var cy = 0;
+      var nx = 0;
+      var ny = 0;
+      var done = 0;
+      var blocked = false;
+      var dirs = [[0, 0], [0, 0], [0, 0], [0, 0]];
+      do {
+        cx = 1 + 2 * Math.floor(RNG$1.getUniform() * (width - 1) / 2);
+        cy = 1 + 2 * Math.floor(RNG$1.getUniform() * (height - 1) / 2);
+        if (!done) {
+          map[cx][cy] = 0;
+        }
+        if (!map[cx][cy]) {
+          this._randomize(dirs);
+          do {
+            if (Math.floor(RNG$1.getUniform() * (this._regularity + 1)) == 0) {
+              this._randomize(dirs);
+            }
+            blocked = true;
+            for (var i = 0; i < 4; i++) {
+              nx = cx + dirs[i][0] * 2;
+              ny = cy + dirs[i][1] * 2;
+              if (this._isFree(map, nx, ny, width, height)) {
+                map[nx][ny] = 0;
+                map[cx + dirs[i][0]][cy + dirs[i][1]] = 0;
+                cx = nx;
+                cy = ny;
+                blocked = false;
+                done++;
+                break;
+              }
+            }
+          } while (!blocked);
+        }
+      } while (done + 1 < width * height / 4);
+      for (var _i11 = 0; _i11 < this._width; _i11++) {
+        for (var j = 0; j < this._height; j++) {
+          callback(_i11, j, map[_i11][j]);
+        }
+      }
+      this._map = [];
+      return this;
+    };
+    _proto31._randomize = function _randomize(dirs) {
+      for (var i = 0; i < 4; i++) {
+        dirs[i][0] = 0;
+        dirs[i][1] = 0;
+      }
+      switch (Math.floor(RNG$1.getUniform() * 4)) {
+        case 0:
+          dirs[0][0] = -1;
+          dirs[1][0] = 1;
+          dirs[2][1] = -1;
+          dirs[3][1] = 1;
+          break;
+        case 1:
+          dirs[3][0] = -1;
+          dirs[2][0] = 1;
+          dirs[1][1] = -1;
+          dirs[0][1] = 1;
+          break;
+        case 2:
+          dirs[2][0] = -1;
+          dirs[3][0] = 1;
+          dirs[0][1] = -1;
+          dirs[1][1] = 1;
+          break;
+        case 3:
+          dirs[1][0] = -1;
+          dirs[0][0] = 1;
+          dirs[3][1] = -1;
+          dirs[2][1] = 1;
+          break;
+      }
+    };
+    _proto31._isFree = function _isFree(map, x, y, width, height) {
+      if (x < 1 || y < 1 || x >= width || y >= height) {
+        return false;
+      }
+      return map[x][y];
+    };
+    return IceyMaze;
+  }(Map);
+  /**
+   * Dungeon generator which uses the "orginal" Rogue dungeon generation algorithm. See https://github.com/Davidslv/rogue-like/blob/master/docs/references/Mark_Damon_Hughes/07_Roguelike_Dungeon_Generation.md
+   * @author hyakugei
+   */
+  var Rogue = /*#__PURE__*/function (_Map7) {
+    _inheritsLoose(Rogue, _Map7);
+    function Rogue(width, height, options) {
+      var _this18;
+      _this18 = _Map7.call(this, width, height) || this;
+      _this18.map = [];
+      _this18.rooms = [];
+      _this18.connectedCells = [];
+      options = Object.assign({
+        cellWidth: 3,
+        cellHeight: 3 //     ie. as an array with min-max values for each direction....
+      }, options);
+      /*
+      Set the room sizes according to the over-all width of the map,
+      and the cell sizes.
+      */
+      if (!options.hasOwnProperty("roomWidth")) {
+        options["roomWidth"] = _this18._calculateRoomSize(_this18._width, options["cellWidth"]);
+      }
+      if (!options.hasOwnProperty("roomHeight")) {
+        options["roomHeight"] = _this18._calculateRoomSize(_this18._height, options["cellHeight"]);
+      }
+      _this18._options = options;
+      return _this18;
+    }
+    var _proto32 = Rogue.prototype;
+    _proto32.create = function create(callback) {
+      this.map = this._fillMap(1);
+      this.rooms = [];
+      this.connectedCells = [];
+      this._initRooms();
+      this._connectRooms();
+      this._connectUnconnectedRooms();
+      this._createRandomRoomConnections();
+      this._createRooms();
+      this._createCorridors();
+      if (callback) {
+        for (var i = 0; i < this._width; i++) {
+          for (var j = 0; j < this._height; j++) {
+            callback(i, j, this.map[i][j]);
+          }
+        }
+      }
+      return this;
+    };
+    _proto32._calculateRoomSize = function _calculateRoomSize(size, cell) {
+      var max = Math.floor(size / cell * 0.8);
+      var min = Math.floor(size / cell * 0.25);
+      if (min < 2) {
+        min = 2;
+      }
+      if (max < 2) {
+        max = 2;
+      }
+      return [min, max];
+    };
+    _proto32._initRooms = function _initRooms() {
+      // create rooms array. This is the "grid" list from the algo.
+      for (var i = 0; i < this._options.cellWidth; i++) {
+        this.rooms.push([]);
+        for (var j = 0; j < this._options.cellHeight; j++) {
+          this.rooms[i].push({
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "connections": [],
+            "cellx": i,
+            "celly": j
+          });
+        }
+      }
+    };
+    _proto32._connectRooms = function _connectRooms() {
+      //pick random starting grid
+      var cgx = RNG$1.getUniformInt(0, this._options.cellWidth - 1);
+      var cgy = RNG$1.getUniformInt(0, this._options.cellHeight - 1);
+      var idx;
+      var ncgx;
+      var ncgy;
+      var found = false;
+      var room;
+      var otherRoom;
+      var dirToCheck;
+      // find  unconnected neighbour cells
+      do {
+        //dirToCheck = [0, 1, 2, 3, 4, 5, 6, 7];
+        dirToCheck = [0, 2, 4, 6];
+        dirToCheck = RNG$1.shuffle(dirToCheck);
+        do {
+          found = false;
+          idx = dirToCheck.pop();
+          ncgx = cgx + DIRS[8][idx][0];
+          ncgy = cgy + DIRS[8][idx][1];
+          if (ncgx < 0 || ncgx >= this._options.cellWidth) {
+            continue;
+          }
+          if (ncgy < 0 || ncgy >= this._options.cellHeight) {
+            continue;
+          }
+          room = this.rooms[cgx][cgy];
+          if (room["connections"].length > 0) {
+            // as long as this room doesn't already coonect to me, we are ok with it.
+            if (room["connections"][0][0] == ncgx && room["connections"][0][1] == ncgy) {
+              break;
+            }
+          }
+          otherRoom = this.rooms[ncgx][ncgy];
+          if (otherRoom["connections"].length == 0) {
+            otherRoom["connections"].push([cgx, cgy]);
+            this.connectedCells.push([ncgx, ncgy]);
+            cgx = ncgx;
+            cgy = ncgy;
+            found = true;
+          }
+        } while (dirToCheck.length > 0 && found == false);
+      } while (dirToCheck.length > 0);
+    };
+    _proto32._connectUnconnectedRooms = function _connectUnconnectedRooms() {
+      //While there are unconnected rooms, try to connect them to a random connected neighbor
+      //(if a room has no connected neighbors yet, just keep cycling, you'll fill out to it eventually).
+      var cw = this._options.cellWidth;
+      var ch = this._options.cellHeight;
+      this.connectedCells = RNG$1.shuffle(this.connectedCells);
+      var room;
+      var otherRoom;
+      var validRoom;
+      for (var i = 0; i < this._options.cellWidth; i++) {
+        for (var j = 0; j < this._options.cellHeight; j++) {
+          room = this.rooms[i][j];
+          if (room["connections"].length == 0) {
+            var directions = [0, 2, 4, 6];
+            directions = RNG$1.shuffle(directions);
+            validRoom = false;
+            do {
+              var dirIdx = directions.pop();
+              var newI = i + DIRS[8][dirIdx][0];
+              var newJ = j + DIRS[8][dirIdx][1];
+              if (newI < 0 || newI >= cw || newJ < 0 || newJ >= ch) {
+                continue;
+              }
+              otherRoom = this.rooms[newI][newJ];
+              validRoom = true;
+              if (otherRoom["connections"].length == 0) {
+                break;
+              }
+              for (var k = 0; k < otherRoom["connections"].length; k++) {
+                if (otherRoom["connections"][k][0] == i && otherRoom["connections"][k][1] == j) {
+                  validRoom = false;
+                  break;
+                }
+              }
+              if (validRoom) {
+                break;
+              }
+            } while (directions.length);
+            if (validRoom) {
+              room["connections"].push([otherRoom["cellx"], otherRoom["celly"]]);
+            } else {
+              console.log("-- Unable to connect room.");
+            }
+          }
+        }
+      }
+    };
+    _proto32._createRandomRoomConnections = function _createRandomRoomConnections() {
+      // Empty for now.
+    };
+    _proto32._createRooms = function _createRooms() {
+      var w = this._width;
+      var h = this._height;
+      var cw = this._options.cellWidth;
+      var ch = this._options.cellHeight;
+      var cwp = Math.floor(this._width / cw);
+      var chp = Math.floor(this._height / ch);
+      var roomw;
+      var roomh;
+      var roomWidth = this._options["roomWidth"];
+      var roomHeight = this._options["roomHeight"];
+      var sx;
+      var sy;
+      var otherRoom;
+      for (var i = 0; i < cw; i++) {
+        for (var j = 0; j < ch; j++) {
+          sx = cwp * i;
+          sy = chp * j;
+          if (sx == 0) {
+            sx = 1;
+          }
+          if (sy == 0) {
+            sy = 1;
+          }
+          roomw = RNG$1.getUniformInt(roomWidth[0], roomWidth[1]);
+          roomh = RNG$1.getUniformInt(roomHeight[0], roomHeight[1]);
+          if (j > 0) {
+            otherRoom = this.rooms[i][j - 1];
+            while (sy - (otherRoom["y"] + otherRoom["height"]) < 3) {
+              sy++;
+            }
+          }
+          if (i > 0) {
+            otherRoom = this.rooms[i - 1][j];
+            while (sx - (otherRoom["x"] + otherRoom["width"]) < 3) {
+              sx++;
+            }
+          }
+          var sxOffset = Math.round(RNG$1.getUniformInt(0, cwp - roomw) / 2);
+          var syOffset = Math.round(RNG$1.getUniformInt(0, chp - roomh) / 2);
+          while (sx + sxOffset + roomw >= w) {
+            if (sxOffset) {
+              sxOffset--;
+            } else {
+              roomw--;
+            }
+          }
+          while (sy + syOffset + roomh >= h) {
+            if (syOffset) {
+              syOffset--;
+            } else {
+              roomh--;
+            }
+          }
+          sx = sx + sxOffset;
+          sy = sy + syOffset;
+          this.rooms[i][j]["x"] = sx;
+          this.rooms[i][j]["y"] = sy;
+          this.rooms[i][j]["width"] = roomw;
+          this.rooms[i][j]["height"] = roomh;
+          for (var ii = sx; ii < sx + roomw; ii++) {
+            for (var jj = sy; jj < sy + roomh; jj++) {
+              this.map[ii][jj] = 0;
+            }
+          }
+        }
+      }
+    };
+    _proto32._getWallPosition = function _getWallPosition(aRoom, aDirection) {
+      var rx;
+      var ry;
+      var door;
+      if (aDirection == 1 || aDirection == 3) {
+        rx = RNG$1.getUniformInt(aRoom["x"] + 1, aRoom["x"] + aRoom["width"] - 2);
+        if (aDirection == 1) {
+          ry = aRoom["y"] - 2;
+          door = ry + 1;
+        } else {
+          ry = aRoom["y"] + aRoom["height"] + 1;
+          door = ry - 1;
+        }
+        this.map[rx][door] = 0; // i'm not setting a specific 'door' tile value right now, just empty space.
+      } else {
+        ry = RNG$1.getUniformInt(aRoom["y"] + 1, aRoom["y"] + aRoom["height"] - 2);
+        if (aDirection == 2) {
+          rx = aRoom["x"] + aRoom["width"] + 1;
+          door = rx - 1;
+        } else {
+          rx = aRoom["x"] - 2;
+          door = rx + 1;
+        }
+        this.map[door][ry] = 0; // i'm not setting a specific 'door' tile value right now, just empty space.
+      }
+
+      return [rx, ry];
+    };
+    _proto32._drawCorridor = function _drawCorridor(startPosition, endPosition) {
+      var xOffset = endPosition[0] - startPosition[0];
+      var yOffset = endPosition[1] - startPosition[1];
+      var xpos = startPosition[0];
+      var ypos = startPosition[1];
+      var tempDist;
+      var xDir;
+      var yDir;
+      var move; // 2 element array, element 0 is the direction, element 1 is the total value to move.
+      var moves = []; // a list of 2 element arrays
+      var xAbs = Math.abs(xOffset);
+      var yAbs = Math.abs(yOffset);
+      var percent = RNG$1.getUniform(); // used to split the move at different places along the long axis
+      var firstHalf = percent;
+      var secondHalf = 1 - percent;
+      xDir = xOffset > 0 ? 2 : 6;
+      yDir = yOffset > 0 ? 4 : 0;
+      if (xAbs < yAbs) {
+        // move firstHalf of the y offset
+        tempDist = Math.ceil(yAbs * firstHalf);
+        moves.push([yDir, tempDist]);
+        // move all the x offset
+        moves.push([xDir, xAbs]);
+        // move sendHalf of the  y offset
+        tempDist = Math.floor(yAbs * secondHalf);
+        moves.push([yDir, tempDist]);
+      } else {
+        //  move firstHalf of the x offset
+        tempDist = Math.ceil(xAbs * firstHalf);
+        moves.push([xDir, tempDist]);
+        // move all the y offset
+        moves.push([yDir, yAbs]);
+        // move secondHalf of the x offset.
+        tempDist = Math.floor(xAbs * secondHalf);
+        moves.push([xDir, tempDist]);
+      }
+      this.map[xpos][ypos] = 0;
+      while (moves.length > 0) {
+        move = moves.pop();
+        while (move[1] > 0) {
+          xpos += DIRS[8][move[0]][0];
+          ypos += DIRS[8][move[0]][1];
+          this.map[xpos][ypos] = 0;
+          move[1] = move[1] - 1;
+        }
+      }
+    };
+    _proto32._createCorridors = function _createCorridors() {
+      // Draw Corridors between connected rooms
+      var cw = this._options.cellWidth;
+      var ch = this._options.cellHeight;
+      var room;
+      var connection;
+      var otherRoom;
+      var wall;
+      var otherWall;
+      for (var i = 0; i < cw; i++) {
+        for (var j = 0; j < ch; j++) {
+          room = this.rooms[i][j];
+          for (var k = 0; k < room["connections"].length; k++) {
+            connection = room["connections"][k];
+            otherRoom = this.rooms[connection[0]][connection[1]];
+            // figure out what wall our corridor will start one.
+            // figure out what wall our corridor will end on.
+            if (otherRoom["cellx"] > room["cellx"]) {
+              wall = 2;
+              otherWall = 4;
+            } else if (otherRoom["cellx"] < room["cellx"]) {
+              wall = 4;
+              otherWall = 2;
+            } else if (otherRoom["celly"] > room["celly"]) {
+              wall = 3;
+              otherWall = 1;
+            } else {
+              wall = 1;
+              otherWall = 3;
+            }
+            this._drawCorridor(this._getWallPosition(room, wall), this._getWallPosition(otherRoom, otherWall));
+          }
+        }
+      }
+    };
+    return Rogue;
+  }(Map);
+  var index$2 = {
+    Arena: Arena,
+    Uniform: Uniform,
+    Cellular: Cellular,
+    Digger: Digger,
+    EllerMaze: EllerMaze,
+    DividedMaze: DividedMaze,
+    IceyMaze: IceyMaze,
+    Rogue: Rogue
+  };
+
+  /**
+   * Base noise generator
+   */
+  var Noise = function Noise() {};
+  var F2 = 0.5 * (Math.sqrt(3) - 1);
+  var G2 = (3 - Math.sqrt(3)) / 6;
+  /**
+   * A simple 2d implementation of simplex noise by Ondrej Zara
+   *
+   * Based on a speed-improved simplex noise algorithm for 2D, 3D and 4D in Java.
+   * Which is based on example code by Stefan Gustavson (stegu@itn.liu.se).
+   * With Optimisations by Peter Eastman (peastman@drizzle.stanford.edu).
+   * Better rank ordering method by Stefan Gustavson in 2012.
+   */
+  var Simplex = /*#__PURE__*/function (_Noise) {
+    _inheritsLoose(Simplex, _Noise);
+    /**
+     * @param gradients Random gradients
+     */
+    function Simplex(gradients) {
+      var _this19;
+      if (gradients === void 0) {
+        gradients = 256;
+      }
+      _this19 = _Noise.call(this) || this;
+      _this19._gradients = [[0, -1], [1, -1], [1, 0], [1, 1], [0, 1], [-1, 1], [-1, 0], [-1, -1]];
+      var permutations = [];
+      for (var i = 0; i < gradients; i++) {
+        permutations.push(i);
+      }
+      permutations = RNG$1.shuffle(permutations);
+      _this19._perms = [];
+      _this19._indexes = [];
+      for (var _i12 = 0; _i12 < 2 * gradients; _i12++) {
+        _this19._perms.push(permutations[_i12 % gradients]);
+        _this19._indexes.push(_this19._perms[_i12] % _this19._gradients.length);
+      }
+      return _this19;
+    }
+    var _proto33 = Simplex.prototype;
+    _proto33.get = function get(xin, yin) {
+      var perms = this._perms;
+      var indexes = this._indexes;
+      var count = perms.length / 2;
+      var n0 = 0,
+        n1 = 0,
+        n2 = 0,
+        gi; // Noise contributions from the three corners
+      // Skew the input space to determine which simplex cell we're in
+      var s = (xin + yin) * F2; // Hairy factor for 2D
+      var i = Math.floor(xin + s);
+      var j = Math.floor(yin + s);
+      var t = (i + j) * G2;
+      var X0 = i - t; // Unskew the cell origin back to (x,y) space
+      var Y0 = j - t;
+      var x0 = xin - X0; // The x,y distances from the cell origin
+      var y0 = yin - Y0;
+      // For the 2D case, the simplex shape is an equilateral triangle.
+      // Determine which simplex we are in.
+      var i1, j1; // Offsets for second (middle) corner of simplex in (i,j) coords
+      if (x0 > y0) {
+        i1 = 1;
+        j1 = 0;
+      } else {
+        // lower triangle, XY order: (0,0)->(1,0)->(1,1)
+        i1 = 0;
+        j1 = 1;
+      } // upper triangle, YX order: (0,0)->(0,1)->(1,1)
+      // A step of (1,0) in (i,j) means a step of (1-c,-c) in (x,y), and
+      // a step of (0,1) in (i,j) means a step of (-c,1-c) in (x,y), where
+      // c = (3-sqrt(3))/6
+      var x1 = x0 - i1 + G2; // Offsets for middle corner in (x,y) unskewed coords
+      var y1 = y0 - j1 + G2;
+      var x2 = x0 - 1 + 2 * G2; // Offsets for last corner in (x,y) unskewed coords
+      var y2 = y0 - 1 + 2 * G2;
+      // Work out the hashed gradient indices of the three simplex corners
+      var ii = mod(i, count);
+      var jj = mod(j, count);
+      // Calculate the contribution from the three corners
+      var t0 = 0.5 - x0 * x0 - y0 * y0;
+      if (t0 >= 0) {
+        t0 *= t0;
+        gi = indexes[ii + perms[jj]];
+        var grad = this._gradients[gi];
+        n0 = t0 * t0 * (grad[0] * x0 + grad[1] * y0);
+      }
+      var t1 = 0.5 - x1 * x1 - y1 * y1;
+      if (t1 >= 0) {
+        t1 *= t1;
+        gi = indexes[ii + i1 + perms[jj + j1]];
+        var _grad = this._gradients[gi];
+        n1 = t1 * t1 * (_grad[0] * x1 + _grad[1] * y1);
+      }
+      var t2 = 0.5 - x2 * x2 - y2 * y2;
+      if (t2 >= 0) {
+        t2 *= t2;
+        gi = indexes[ii + 1 + perms[jj + 1]];
+        var _grad2 = this._gradients[gi];
+        n2 = t2 * t2 * (_grad2[0] * x2 + _grad2[1] * y2);
+      }
+      // Add contributions from each corner to get the final noise value.
+      // The result is scaled to return values in the interval [-1,1].
+      return 70 * (n0 + n1 + n2);
+    };
+    return Simplex;
+  }(Noise);
+  var index$1 = {
+    Simplex: Simplex
+  };
+
+  /**
+   * @class Abstract pathfinder
+   * @param {int} toX Target X coord
+   * @param {int} toY Target Y coord
+   * @param {function} passableCallback Callback to determine map passability
+   * @param {object} [options]
+   * @param {int} [options.topology=8]
+   */
+  var Path = /*#__PURE__*/function () {
+    function Path(toX, toY, passableCallback, options) {
+      if (options === void 0) {
+        options = {};
+      }
+      this._toX = toX;
+      this._toY = toY;
+      this._passableCallback = passableCallback;
+      this._options = Object.assign({
+        topology: 8
+      }, options);
+      this._dirs = DIRS[this._options.topology];
+      if (this._options.topology == 8) {
+        /* reorder dirs for more aesthetic result (vertical/horizontal first) */
+        this._dirs = [this._dirs[0], this._dirs[2], this._dirs[4], this._dirs[6], this._dirs[1], this._dirs[3], this._dirs[5], this._dirs[7]];
+      }
+    }
+    var _proto34 = Path.prototype;
+    _proto34._getNeighbors = function _getNeighbors(cx, cy) {
+      var result = [];
+      for (var i = 0; i < this._dirs.length; i++) {
+        var dir = this._dirs[i];
+        var x = cx + dir[0];
+        var y = cy + dir[1];
+        if (!this._passableCallback(x, y)) {
+          continue;
+        }
+        result.push([x, y]);
+      }
+      return result;
+    };
+    return Path;
+  }();
+  /**
+   * @class Simplified Dijkstra's algorithm: all edges have a value of 1
+   * @augments ROT.Path
+   * @see ROT.Path
+   */
+  var Dijkstra = /*#__PURE__*/function (_Path) {
+    _inheritsLoose(Dijkstra, _Path);
+    function Dijkstra(toX, toY, passableCallback, options) {
+      var _this20;
+      _this20 = _Path.call(this, toX, toY, passableCallback, options) || this;
+      _this20._computed = {};
+      _this20._todo = [];
+      _this20._add(toX, toY, null);
+      return _this20;
+    }
+    /**
+     * Compute a path from a given point
+     * @see ROT.Path#compute
+     */
+    var _proto35 = Dijkstra.prototype;
+    _proto35.compute = function compute(fromX, fromY, callback) {
+      var key = fromX + "," + fromY;
+      if (!(key in this._computed)) {
+        this._compute(fromX, fromY);
+      }
+      if (!(key in this._computed)) {
+        return;
+      }
+      var item = this._computed[key];
+      while (item) {
+        callback(item.x, item.y);
+        item = item.prev;
+      }
+    }
+    /**
+     * Compute a non-cached value
+     */;
+    _proto35._compute = function _compute(fromX, fromY) {
+      while (this._todo.length) {
+        var item = this._todo.shift();
+        if (item.x == fromX && item.y == fromY) {
+          return;
+        }
+        var neighbors = this._getNeighbors(item.x, item.y);
+        for (var i = 0; i < neighbors.length; i++) {
+          var neighbor = neighbors[i];
+          var x = neighbor[0];
+          var y = neighbor[1];
+          var id = x + "," + y;
+          if (id in this._computed) {
+            continue;
+          } /* already done */
+          this._add(x, y, item);
+        }
+      }
+    };
+    _proto35._add = function _add(x, y, prev) {
+      var obj = {
+        x: x,
+        y: y,
+        prev: prev
+      };
+      this._computed[x + "," + y] = obj;
+      this._todo.push(obj);
+    };
+    return Dijkstra;
+  }(Path);
+  /**
+   * @class Simplified A* algorithm: all edges have a value of 1
+   * @augments ROT.Path
+   * @see ROT.Path
+   */
+  var AStar = /*#__PURE__*/function (_Path2) {
+    _inheritsLoose(AStar, _Path2);
+    function AStar(toX, toY, passableCallback, options) {
+      var _this21;
+      if (options === void 0) {
+        options = {};
+      }
+      _this21 = _Path2.call(this, toX, toY, passableCallback, options) || this;
+      _this21._todo = [];
+      _this21._done = {};
+      return _this21;
+    }
+    /**
+     * Compute a path from a given point
+     * @see ROT.Path#compute
+     */
+    var _proto36 = AStar.prototype;
+    _proto36.compute = function compute(fromX, fromY, callback) {
+      this._todo = [];
+      this._done = {};
+      this._fromX = fromX;
+      this._fromY = fromY;
+      this._add(this._toX, this._toY, null);
+      while (this._todo.length) {
+        var _item = this._todo.shift();
+        var id = _item.x + "," + _item.y;
+        if (id in this._done) {
+          continue;
+        }
+        this._done[id] = _item;
+        if (_item.x == fromX && _item.y == fromY) {
+          break;
+        }
+        var neighbors = this._getNeighbors(_item.x, _item.y);
+        for (var i = 0; i < neighbors.length; i++) {
+          var neighbor = neighbors[i];
+          var x = neighbor[0];
+          var y = neighbor[1];
+          var _id3 = x + "," + y;
+          if (_id3 in this._done) {
+            continue;
+          }
+          this._add(x, y, _item);
+        }
+      }
+      var item = this._done[fromX + "," + fromY];
+      if (!item) {
+        return;
+      }
+      while (item) {
+        callback(item.x, item.y);
+        item = item.prev;
+      }
+    };
+    _proto36._add = function _add(x, y, prev) {
+      var h = this._distance(x, y);
+      var obj = {
+        x: x,
+        y: y,
+        prev: prev,
+        g: prev ? prev.g + 1 : 0,
+        h: h
+      };
+      /* insert into priority queue */
+      var f = obj.g + obj.h;
+      for (var i = 0; i < this._todo.length; i++) {
+        var item = this._todo[i];
+        var itemF = item.g + item.h;
+        if (f < itemF || f == itemF && h < item.h) {
+          this._todo.splice(i, 0, obj);
+          return;
+        }
+      }
+      this._todo.push(obj);
+    };
+    _proto36._distance = function _distance(x, y) {
+      switch (this._options.topology) {
+        case 4:
+          return Math.abs(x - this._fromX) + Math.abs(y - this._fromY);
+        case 6:
+          var dx = Math.abs(x - this._fromX);
+          var dy = Math.abs(y - this._fromY);
+          return dy + Math.max(0, (dx - dy) / 2);
+        case 8:
+          return Math.max(Math.abs(x - this._fromX), Math.abs(y - this._fromY));
+      }
+    };
+    return AStar;
+  }(Path);
+  var index = {
+    Dijkstra: Dijkstra,
+    AStar: AStar
+  };
+
+  /**
+   * @class Asynchronous main loop
+   * @param {ROT.Scheduler} scheduler
+   */
+  var Engine = /*#__PURE__*/function () {
+    function Engine(scheduler) {
+      this._scheduler = scheduler;
+      this._lock = 1;
+    }
+    /**
+     * Start the main loop. When this call returns, the loop is locked.
+     */
+    var _proto37 = Engine.prototype;
+    _proto37.start = function start() {
+      return this.unlock();
+    }
+    /**
+     * Interrupt the engine by an asynchronous action
+     */;
+    _proto37.lock = function lock() {
+      this._lock++;
+      return this;
+    }
+    /**
+     * Resume execution (paused by a previous lock)
+     */;
+    _proto37.unlock = function unlock() {
+      if (!this._lock) {
+        throw new Error("Cannot unlock unlocked engine");
+      }
+      this._lock--;
+      while (!this._lock) {
+        var actor = this._scheduler.next();
+        if (!actor) {
+          return this.lock();
+        } /* no actors */
+        var result = actor.act();
+        if (result && result.then) {
+          /* actor returned a "thenable", looks like a Promise */
+          this.lock();
+          result.then(this.unlock.bind(this));
+        }
+      }
+      return this;
+    };
+    return Engine;
+  }();
+  /**
+   * Lighting computation, based on a traditional FOV for multiple light sources and multiple passes.
+   */
+  var Lighting = /*#__PURE__*/function () {
+    function Lighting(reflectivityCallback, options) {
+      if (options === void 0) {
+        options = {};
+      }
+      this._reflectivityCallback = reflectivityCallback;
+      this._options = {};
+      options = Object.assign({
+        passes: 1,
+        emissionThreshold: 100,
+        range: 10
+      }, options);
+      this._lights = {};
+      this._reflectivityCache = {};
+      this._fovCache = {};
+      this.setOptions(options);
+    }
+    /**
+     * Adjust options at runtime
+     */
+    var _proto38 = Lighting.prototype;
+    _proto38.setOptions = function setOptions(options) {
+      Object.assign(this._options, options);
+      if (options && options.range) {
+        this.reset();
+      }
+      return this;
+    }
+    /**
+     * Set the used Field-Of-View algo
+     */;
+    _proto38.setFOV = function setFOV(fov) {
+      this._fov = fov;
+      this._fovCache = {};
+      return this;
+    }
+    /**
+     * Set (or remove) a light source
+     */;
+    _proto38.setLight = function setLight(x, y, color$1) {
+      var key = x + "," + y;
+      if (color$1) {
+        this._lights[key] = typeof color$1 == "string" ? fromString(color$1) : color$1;
+      } else {
+        delete this._lights[key];
+      }
+      return this;
+    }
+    /**
+     * Remove all light sources
+     */;
+    _proto38.clearLights = function clearLights() {
+      this._lights = {};
+    }
+    /**
+     * Reset the pre-computed topology values. Call whenever the underlying map changes its light-passability.
+     */;
+    _proto38.reset = function reset() {
+      this._reflectivityCache = {};
+      this._fovCache = {};
+      return this;
+    }
+    /**
+     * Compute the lighting
+     */;
+    _proto38.compute = function compute(lightingCallback) {
+      var doneCells = {};
+      var emittingCells = {};
+      var litCells = {};
+      for (var key in this._lights) {
+        /* prepare emitters for first pass */
+        var light = this._lights[key];
+        emittingCells[key] = [0, 0, 0];
+        add_(emittingCells[key], light);
+      }
+      for (var i = 0; i < this._options.passes; i++) {
+        /* main loop */
+        this._emitLight(emittingCells, litCells, doneCells);
+        if (i + 1 == this._options.passes) {
+          continue;
+        } /* not for the last pass */
+        emittingCells = this._computeEmitters(litCells, doneCells);
+      }
+      for (var litKey in litCells) {
+        /* let the user know what and how is lit */
+        var parts = litKey.split(",");
+        var x = parseInt(parts[0]);
+        var y = parseInt(parts[1]);
+        lightingCallback(x, y, litCells[litKey]);
+      }
+      return this;
+    }
+    /**
+     * Compute one iteration from all emitting cells
+     * @param emittingCells These emit light
+     * @param litCells Add projected light to these
+     * @param doneCells These already emitted, forbid them from further calculations
+     */;
+    _proto38._emitLight = function _emitLight(emittingCells, litCells, doneCells) {
+      for (var key in emittingCells) {
+        var parts = key.split(",");
+        var x = parseInt(parts[0]);
+        var y = parseInt(parts[1]);
+        this._emitLightFromCell(x, y, emittingCells[key], litCells);
+        doneCells[key] = 1;
+      }
+      return this;
+    }
+    /**
+     * Prepare a list of emitters for next pass
+     */;
+    _proto38._computeEmitters = function _computeEmitters(litCells, doneCells) {
+      var result = {};
+      for (var key in litCells) {
+        if (key in doneCells) {
+          continue;
+        } /* already emitted */
+        var _color = litCells[key];
+        var reflectivity = void 0;
+        if (key in this._reflectivityCache) {
+          reflectivity = this._reflectivityCache[key];
+        } else {
+          var parts = key.split(",");
+          var x = parseInt(parts[0]);
+          var y = parseInt(parts[1]);
+          reflectivity = this._reflectivityCallback(x, y);
+          this._reflectivityCache[key] = reflectivity;
+        }
+        if (reflectivity == 0) {
+          continue;
+        } /* will not reflect at all */
+        /* compute emission color */
+        var emission = [0, 0, 0];
+        var intensity = 0;
+        for (var i = 0; i < 3; i++) {
+          var part = Math.round(_color[i] * reflectivity);
+          emission[i] = part;
+          intensity += part;
+        }
+        if (intensity > this._options.emissionThreshold) {
+          result[key] = emission;
+        }
+      }
+      return result;
+    }
+    /**
+     * Compute one iteration from one cell
+     */;
+    _proto38._emitLightFromCell = function _emitLightFromCell(x, y, color, litCells) {
+      var key = x + "," + y;
+      var fov;
+      if (key in this._fovCache) {
+        fov = this._fovCache[key];
+      } else {
+        fov = this._updateFOV(x, y);
+      }
+      for (var fovKey in fov) {
+        var formFactor = fov[fovKey];
+        var result = void 0;
+        if (fovKey in litCells) {
+          /* already lit */
+          result = litCells[fovKey];
+        } else {
+          /* newly lit */
+          result = [0, 0, 0];
+          litCells[fovKey] = result;
+        }
+        for (var i = 0; i < 3; i++) {
+          result[i] += Math.round(color[i] * formFactor);
+        } /* add light color */
+      }
+
+      return this;
+    }
+    /**
+     * Compute FOV ("form factor") for a potential light source at [x,y]
+     */;
+    _proto38._updateFOV = function _updateFOV(x, y) {
+      var key1 = x + "," + y;
+      var cache = {};
+      this._fovCache[key1] = cache;
+      var range = this._options.range;
+      function cb(x, y, r, vis) {
+        var key2 = x + "," + y;
+        var formFactor = vis * (1 - r / range);
+        if (formFactor == 0) {
+          return;
+        }
+        cache[key2] = formFactor;
+      }
+      this._fov.compute(x, y, range, cb.bind(this));
+      return cache;
+    };
+    return Lighting;
+  }();
+  var Util = util;
+  var Color = color;
+  var Text = text;
+  exports.Color = Color;
+  exports.DEFAULT_HEIGHT = DEFAULT_HEIGHT;
+  exports.DEFAULT_WIDTH = DEFAULT_WIDTH;
+  exports.DIRS = DIRS;
+  exports.Display = Display;
+  exports.Engine = Engine;
+  exports.EventQueue = EventQueue;
+  exports.FOV = index$3;
+  exports.KEYS = KEYS;
+  exports.Lighting = Lighting;
+  exports.Map = index$2;
+  exports.Noise = index$1;
+  exports.Path = index;
+  exports.RNG = RNG$1;
+  exports.Scheduler = index$4;
+  exports.StringGenerator = StringGenerator;
+  exports.Text = Text;
+  exports.Util = Util;
+  Object.defineProperty(exports, '__esModule', {
+    value: true
+  });
+});
+
+
+var LootTable = (function () {
+    'use strict';
+
+    /**
+     * Copyright © 2015 John Watson
+     * Licensed under the terms of the MIT License
+     * ---
+     * LootTable is used to make a random choice among a weighted list of alternatives
+     * for item drops, map generation, and many other processes. Here's a good overview
+     * of loot tables: http://www.lostgarden.com/2014/12/loot-drop-tables.html
+     *
+     * Example:
+     *
+     * var loot = new LootTable();
+     * loot.add('sword', 20);
+     * loot.add('shield', 5);
+     * loot.add('gold', 5);
+     * loot.add(null, 1);
+     * var item = loot.choose(); // most likely a sword, sometimes null
+     */
+
+    // Local adaptation: accept a deterministic RNG; selection algorithm unchanged.
+    var LootTable = function (table, random) {
+        this.random = random || Math.random;
+        this.table = [];
+        if (table !== undefined) this.table = table;
+    };
+
+    LootTable.prototype.constructor = LootTable;
+
+    LootTable.prototype.clear = function () {
+        this.table.length = 0;
+    };
+
+    /**
+     * Add an item
+     *
+     * Weights are arbitrary, not percentages, and don't need to add up to 100.
+     * If one item has a weight of 2 and another has a weight of 1, the first item
+     * is twice as likely to be chosen. If quantity is given, then calls to choose()
+     * will only return that item while some are available. Each choose() that
+     * selects that item will reduce its quantity by 1.
+     *
+     * Item can be anything, not just strings. It could be an array, a number, JSON
+     * data, null, a function... even another LootTable!
+     * 
+     * @param {mixed} item      The item to be chosen
+     * @param {number} weight   (optional) The weight of the item, defaults to 1
+     * @param {number} quantity (optional) Quantity available, defaults to Infinite
+     */
+    LootTable.prototype.add = function(item, weight, quantity) {
+        if (weight === undefined || weight === null || weight <= 0)
+            weight = 1;
+        if (quantity === undefined || quantity === null || quantity <= 0)
+            quantity = Number.POSITIVE_INFINITY;
+        this.table.push({ item: item, weight: weight, quantity: quantity });
+    };
+
+    /**
+     * Return a random item from the LootTable
+     */
+    LootTable.prototype.choose = function() {
+        if (this.table.length === 0)
+            return null;
+        
+        var i, v;
+        var totalWeight = 0;
+        for (i = 0; i < this.table.length; i++) {
+            v = this.table[i];
+            if (v.quantity > 0)
+                totalWeight += v.weight;
+        }
+
+        var choice = 0;
+        var randomNumber = Math.floor(this.random() * totalWeight + 1);
+        var weight = 0;
+        for (i = 0; i < this.table.length; i++) {
+            v = this.table[i];
+            if (v.quantity <= 0)
+                continue;
+
+            weight += v.weight;
+            if (randomNumber <= weight) {
+                choice = i;
+                break;
+            }
+        }
+
+        var chosenItem = this.table[choice];
+        this.table[choice].quantity--;
+
+        return chosenItem.item;
+    };
+
+    return LootTable;
+
+}());
+
+// Copyright (c) 2013 Pieroxy <pieroxy@pieroxy.net>
+// This work is free. You can redistribute it and/or modify it
+// under the terms of the WTFPL, Version 2
+// For more information see LICENSE.txt or http://www.wtfpl.net/
+//
+// For more information, the home page:
+// http://pieroxy.net/blog/pages/lz-string/testing.html
+//
+// LZ-based compression algorithm, version 1.4.5
+var LZString = (function() {
+
+// private property
+var f = String.fromCharCode;
+var keyStrBase64 = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
+var keyStrUriSafe = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+-$";
+var baseReverseDic = {};
+
+function getBaseValue(alphabet, character) {
+  if (!baseReverseDic[alphabet]) {
+    baseReverseDic[alphabet] = {};
+    for (var i=0 ; i<alphabet.length ; i++) {
+      baseReverseDic[alphabet][alphabet.charAt(i)] = i;
+    }
+  }
+  return baseReverseDic[alphabet][character];
+}
+
+var LZString = {
+  compressToBase64 : function (input) {
+    if (input == null) return "";
+    var res = LZString._compress(input, 6, function(a){return keyStrBase64.charAt(a);});
+    switch (res.length % 4) { // To produce valid Base64
+    default: // When could this happen ?
+    case 0 : return res;
+    case 1 : return res+"===";
+    case 2 : return res+"==";
+    case 3 : return res+"=";
+    }
+  },
+
+  decompressFromBase64 : function (input) {
+    if (input == null) return "";
+    if (input == "") return null;
+    return LZString._decompress(input.length, 32, function(index) { return getBaseValue(keyStrBase64, input.charAt(index)); });
+  },
+
+  compressToUTF16 : function (input) {
+    if (input == null) return "";
+    return LZString._compress(input, 15, function(a){return f(a+32);}) + " ";
+  },
+
+  decompressFromUTF16: function (compressed) {
+    if (compressed == null) return "";
+    if (compressed == "") return null;
+    return LZString._decompress(compressed.length, 16384, function(index) { return compressed.charCodeAt(index) - 32; });
+  },
+
+  //compress into uint8array (UCS-2 big endian format)
+  compressToUint8Array: function (uncompressed) {
+    var compressed = LZString.compress(uncompressed);
+    var buf=new Uint8Array(compressed.length*2); // 2 bytes per character
+
+    for (var i=0, TotalLen=compressed.length; i<TotalLen; i++) {
+      var current_value = compressed.charCodeAt(i);
+      buf[i*2] = current_value >>> 8;
+      buf[i*2+1] = current_value % 256;
+    }
+    return buf;
+  },
+
+  //decompress from uint8array (UCS-2 big endian format)
+  decompressFromUint8Array:function (compressed) {
+    if (compressed===null || compressed===undefined){
+        return LZString.decompress(compressed);
+    } else {
+        var buf=new Array(compressed.length/2); // 2 bytes per character
+        for (var i=0, TotalLen=buf.length; i<TotalLen; i++) {
+          buf[i]=compressed[i*2]*256+compressed[i*2+1];
+        }
+
+        var result = [];
+        buf.forEach(function (c) {
+          result.push(f(c));
+        });
+        return LZString.decompress(result.join(''));
+
+    }
+
+  },
+
+
+  //compress into a string that is already URI encoded
+  compressToEncodedURIComponent: function (input) {
+    if (input == null) return "";
+    return LZString._compress(input, 6, function(a){return keyStrUriSafe.charAt(a);});
+  },
+
+  //decompress from an output of compressToEncodedURIComponent
+  decompressFromEncodedURIComponent:function (input) {
+    if (input == null) return "";
+    if (input == "") return null;
+    input = input.replace(/ /g, "+");
+    return LZString._decompress(input.length, 32, function(index) { return getBaseValue(keyStrUriSafe, input.charAt(index)); });
+  },
+
+  compress: function (uncompressed) {
+    return LZString._compress(uncompressed, 16, function(a){return f(a);});
+  },
+  _compress: function (uncompressed, bitsPerChar, getCharFromInt) {
+    if (uncompressed == null) return "";
+    var i, value,
+        context_dictionary= {},
+        context_dictionaryToCreate= {},
+        context_c="",
+        context_wc="",
+        context_w="",
+        context_enlargeIn= 2, // Compensate for the first entry which should not count
+        context_dictSize= 3,
+        context_numBits= 2,
+        context_data=[],
+        context_data_val=0,
+        context_data_position=0,
+        ii;
+
+    for (ii = 0; ii < uncompressed.length; ii += 1) {
+      context_c = uncompressed.charAt(ii);
+      if (!Object.prototype.hasOwnProperty.call(context_dictionary,context_c)) {
+        context_dictionary[context_c] = context_dictSize++;
+        context_dictionaryToCreate[context_c] = true;
+      }
+
+      context_wc = context_w + context_c;
+      if (Object.prototype.hasOwnProperty.call(context_dictionary,context_wc)) {
+        context_w = context_wc;
+      } else {
+        if (Object.prototype.hasOwnProperty.call(context_dictionaryToCreate,context_w)) {
+          if (context_w.charCodeAt(0)<256) {
+            for (i=0 ; i<context_numBits ; i++) {
+              context_data_val = (context_data_val << 1);
+              if (context_data_position == bitsPerChar-1) {
+                context_data_position = 0;
+                context_data.push(getCharFromInt(context_data_val));
+                context_data_val = 0;
+              } else {
+                context_data_position++;
+              }
+            }
+            value = context_w.charCodeAt(0);
+            for (i=0 ; i<8 ; i++) {
+              context_data_val = (context_data_val << 1) | (value&1);
+              if (context_data_position == bitsPerChar-1) {
+                context_data_position = 0;
+                context_data.push(getCharFromInt(context_data_val));
+                context_data_val = 0;
+              } else {
+                context_data_position++;
+              }
+              value = value >> 1;
+            }
+          } else {
+            value = 1;
+            for (i=0 ; i<context_numBits ; i++) {
+              context_data_val = (context_data_val << 1) | value;
+              if (context_data_position ==bitsPerChar-1) {
+                context_data_position = 0;
+                context_data.push(getCharFromInt(context_data_val));
+                context_data_val = 0;
+              } else {
+                context_data_position++;
+              }
+              value = 0;
+            }
+            value = context_w.charCodeAt(0);
+            for (i=0 ; i<16 ; i++) {
+              context_data_val = (context_data_val << 1) | (value&1);
+              if (context_data_position == bitsPerChar-1) {
+                context_data_position = 0;
+                context_data.push(getCharFromInt(context_data_val));
+                context_data_val = 0;
+              } else {
+                context_data_position++;
+              }
+              value = value >> 1;
+            }
+          }
+          context_enlargeIn--;
+          if (context_enlargeIn == 0) {
+            context_enlargeIn = Math.pow(2, context_numBits);
+            context_numBits++;
+          }
+          delete context_dictionaryToCreate[context_w];
+        } else {
+          value = context_dictionary[context_w];
+          for (i=0 ; i<context_numBits ; i++) {
+            context_data_val = (context_data_val << 1) | (value&1);
+            if (context_data_position == bitsPerChar-1) {
+              context_data_position = 0;
+              context_data.push(getCharFromInt(context_data_val));
+              context_data_val = 0;
+            } else {
+              context_data_position++;
+            }
+            value = value >> 1;
+          }
+
+
+        }
+        context_enlargeIn--;
+        if (context_enlargeIn == 0) {
+          context_enlargeIn = Math.pow(2, context_numBits);
+          context_numBits++;
+        }
+        // Add wc to the dictionary.
+        context_dictionary[context_wc] = context_dictSize++;
+        context_w = String(context_c);
+      }
+    }
+
+    // Output the code for w.
+    if (context_w !== "") {
+      if (Object.prototype.hasOwnProperty.call(context_dictionaryToCreate,context_w)) {
+        if (context_w.charCodeAt(0)<256) {
+          for (i=0 ; i<context_numBits ; i++) {
+            context_data_val = (context_data_val << 1);
+            if (context_data_position == bitsPerChar-1) {
+              context_data_position = 0;
+              context_data.push(getCharFromInt(context_data_val));
+              context_data_val = 0;
+            } else {
+              context_data_position++;
+            }
+          }
+          value = context_w.charCodeAt(0);
+          for (i=0 ; i<8 ; i++) {
+            context_data_val = (context_data_val << 1) | (value&1);
+            if (context_data_position == bitsPerChar-1) {
+              context_data_position = 0;
+              context_data.push(getCharFromInt(context_data_val));
+              context_data_val = 0;
+            } else {
+              context_data_position++;
+            }
+            value = value >> 1;
+          }
+        } else {
+          value = 1;
+          for (i=0 ; i<context_numBits ; i++) {
+            context_data_val = (context_data_val << 1) | value;
+            if (context_data_position == bitsPerChar-1) {
+              context_data_position = 0;
+              context_data.push(getCharFromInt(context_data_val));
+              context_data_val = 0;
+            } else {
+              context_data_position++;
+            }
+            value = 0;
+          }
+          value = context_w.charCodeAt(0);
+          for (i=0 ; i<16 ; i++) {
+            context_data_val = (context_data_val << 1) | (value&1);
+            if (context_data_position == bitsPerChar-1) {
+              context_data_position = 0;
+              context_data.push(getCharFromInt(context_data_val));
+              context_data_val = 0;
+            } else {
+              context_data_position++;
+            }
+            value = value >> 1;
+          }
+        }
+        context_enlargeIn--;
+        if (context_enlargeIn == 0) {
+          context_enlargeIn = Math.pow(2, context_numBits);
+          context_numBits++;
+        }
+        delete context_dictionaryToCreate[context_w];
+      } else {
+        value = context_dictionary[context_w];
+        for (i=0 ; i<context_numBits ; i++) {
+          context_data_val = (context_data_val << 1) | (value&1);
+          if (context_data_position == bitsPerChar-1) {
+            context_data_position = 0;
+            context_data.push(getCharFromInt(context_data_val));
+            context_data_val = 0;
+          } else {
+            context_data_position++;
+          }
+          value = value >> 1;
+        }
+
+
+      }
+      context_enlargeIn--;
+      if (context_enlargeIn == 0) {
+        context_enlargeIn = Math.pow(2, context_numBits);
+        context_numBits++;
+      }
+    }
+
+    // Mark the end of the stream
+    value = 2;
+    for (i=0 ; i<context_numBits ; i++) {
+      context_data_val = (context_data_val << 1) | (value&1);
+      if (context_data_position == bitsPerChar-1) {
+        context_data_position = 0;
+        context_data.push(getCharFromInt(context_data_val));
+        context_data_val = 0;
+      } else {
+        context_data_position++;
+      }
+      value = value >> 1;
+    }
+
+    // Flush the last char
+    while (true) {
+      context_data_val = (context_data_val << 1);
+      if (context_data_position == bitsPerChar-1) {
+        context_data.push(getCharFromInt(context_data_val));
+        break;
+      }
+      else context_data_position++;
+    }
+    return context_data.join('');
+  },
+
+  decompress: function (compressed) {
+    if (compressed == null) return "";
+    if (compressed == "") return null;
+    return LZString._decompress(compressed.length, 32768, function(index) { return compressed.charCodeAt(index); });
+  },
+
+  _decompress: function (length, resetValue, getNextValue) {
+    var dictionary = [],
+        next,
+        enlargeIn = 4,
+        dictSize = 4,
+        numBits = 3,
+        entry = "",
+        result = [],
+        i,
+        w,
+        bits, resb, maxpower, power,
+        c,
+        data = {val:getNextValue(0), position:resetValue, index:1};
+
+    for (i = 0; i < 3; i += 1) {
+      dictionary[i] = i;
+    }
+
+    bits = 0;
+    maxpower = Math.pow(2,2);
+    power=1;
+    while (power!=maxpower) {
+      resb = data.val & data.position;
+      data.position >>= 1;
+      if (data.position == 0) {
+        data.position = resetValue;
+        data.val = getNextValue(data.index++);
+      }
+      bits |= (resb>0 ? 1 : 0) * power;
+      power <<= 1;
+    }
+
+    switch (next = bits) {
+      case 0:
+          bits = 0;
+          maxpower = Math.pow(2,8);
+          power=1;
+          while (power!=maxpower) {
+            resb = data.val & data.position;
+            data.position >>= 1;
+            if (data.position == 0) {
+              data.position = resetValue;
+              data.val = getNextValue(data.index++);
+            }
+            bits |= (resb>0 ? 1 : 0) * power;
+            power <<= 1;
+          }
+        c = f(bits);
+        break;
+      case 1:
+          bits = 0;
+          maxpower = Math.pow(2,16);
+          power=1;
+          while (power!=maxpower) {
+            resb = data.val & data.position;
+            data.position >>= 1;
+            if (data.position == 0) {
+              data.position = resetValue;
+              data.val = getNextValue(data.index++);
+            }
+            bits |= (resb>0 ? 1 : 0) * power;
+            power <<= 1;
+          }
+        c = f(bits);
+        break;
+      case 2:
+        return "";
+    }
+    dictionary[3] = c;
+    w = c;
+    result.push(c);
+    while (true) {
+      if (data.index > length) {
+        return "";
+      }
+
+      bits = 0;
+      maxpower = Math.pow(2,numBits);
+      power=1;
+      while (power!=maxpower) {
+        resb = data.val & data.position;
+        data.position >>= 1;
+        if (data.position == 0) {
+          data.position = resetValue;
+          data.val = getNextValue(data.index++);
+        }
+        bits |= (resb>0 ? 1 : 0) * power;
+        power <<= 1;
+      }
+
+      switch (c = bits) {
+        case 0:
+          bits = 0;
+          maxpower = Math.pow(2,8);
+          power=1;
+          while (power!=maxpower) {
+            resb = data.val & data.position;
+            data.position >>= 1;
+            if (data.position == 0) {
+              data.position = resetValue;
+              data.val = getNextValue(data.index++);
+            }
+            bits |= (resb>0 ? 1 : 0) * power;
+            power <<= 1;
+          }
+
+          dictionary[dictSize++] = f(bits);
+          c = dictSize-1;
+          enlargeIn--;
+          break;
+        case 1:
+          bits = 0;
+          maxpower = Math.pow(2,16);
+          power=1;
+          while (power!=maxpower) {
+            resb = data.val & data.position;
+            data.position >>= 1;
+            if (data.position == 0) {
+              data.position = resetValue;
+              data.val = getNextValue(data.index++);
+            }
+            bits |= (resb>0 ? 1 : 0) * power;
+            power <<= 1;
+          }
+          dictionary[dictSize++] = f(bits);
+          c = dictSize-1;
+          enlargeIn--;
+          break;
+        case 2:
+          return result.join('');
+      }
+
+      if (enlargeIn == 0) {
+        enlargeIn = Math.pow(2, numBits);
+        numBits++;
+      }
+
+      if (dictionary[c]) {
+        entry = dictionary[c];
+      } else {
+        if (c === dictSize) {
+          entry = w + w.charAt(0);
+        } else {
+          return null;
+        }
+      }
+      result.push(entry);
+
+      // Add w+entry[0] to the dictionary.
+      dictionary[dictSize++] = w + entry.charAt(0);
+      enlargeIn--;
+
+      w = entry;
+
+      if (enlargeIn == 0) {
+        enlargeIn = Math.pow(2, numBits);
+        numBits++;
+      }
+
+    }
+  }
+};
+  return LZString;
+})();
+
+if (typeof define === 'function' && define.amd) {
+  define(function () { return LZString; });
+} else if( typeof module !== 'undefined' && module != null ) {
+  module.exports = LZString
+} else if( typeof angular !== 'undefined' && angular != null ) {
+  angular.module('LZString', [])
+  .factory('LZString', function () {
+    return LZString;
+  });
+}
+
+/* Original game systems. Third-party RNG: rot.js 2.2.1, BSD-3-Clause; see vendor/ROT-LICENSE.txt. */
+(function (root) {
+'use strict';
+const JOBS={warrior:{name:'전사',hp:52,mp:8,atk:8,def:3,skill:'방패 강타',desc:'강타로 적을 기절시킨다. 높은 체력과 방어.'},rogue:{name:'도적',hp:42,mp:10,atk:10,def:1,skill:'맹독 칼날',desc:'3턴 중독과 높은 치명타. 공격적인 전투.'},mage:{name:'마도사',hp:38,mp:14,atk:11,def:0,skill:'잿불 폭발',desc:'방어를 뚫는 마법과 2턴 화상.'}};
+const AREAS=[{name:'검은 숲',subtitle:'나무들은 당신의 이름을 기억한다.',boss:'가시의 파수꾼',enemies:['굶주린 늑대','가시 고블린','추방된 사냥꾼']},{name:'침묵의 마을',subtitle:'불 꺼진 창문 뒤로 누군가 숨을 쉰다.',boss:'종지기 모르',enemies:['잿빛 약탈자','저주받은 주민','빈 갑옷']},{name:'유리 늪',subtitle:'수면에 비친 것은 당신의 내일이다.',boss:'거울의 마녀',enemies:['독안개 망령','늪의 포식자','수정 거미']},{name:'잊힌 왕성',subtitle:'왕은 아직 마지막 신하를 기다린다.',boss:'검은 숲의 왕',enemies:['왕의 처형인','타락한 수호자','검은 기사']}];
+const TYPES={battle:['칼날의 길','전투 · 경험치와 전리품'],elite:['붉은 흔적','정예 전투 · 희귀 장비'],event:['속삭이는 불빛','이야기 · 선택과 대가'],cache:['버려진 보급품','자원 · 골드와 재료'],shrine:['푸른 샘','회복 · HP와 MP'],merchant:['떠돌이 상인','거래 · 물약과 장비']};
+class Game {
+ constructor(seed=Date.now()){this.rng=root.ROT.RNG.clone().setSeed(seed);this.s={version:1,seed,job:null,scene:'start',level:1,xp:0,hp:1,mp:1,gold:20,potions:3,wood:0,ore:0,herb:0,camp:1,area:0,step:0,cleared:[],routes:[],enemy:null,loot:null,weapon:{name:'낡은 무기',power:1,grade:0,plus:0},armor:{name:'여행자의 외투',power:0,grade:0,plus:0},bag:[],kills:0,elites:0,mercy:0,relics:0,claims:[],eventId:0,turns:0,log:['숲의 입구에 도착했다.'],message:'해가 지면 숲은 길을 바꾼다. 왕의 저주를 풀기 위해, 마지막 불씨를 들고 떠나라.',ending:''};}
+ rand(a,b){return this.rng.getUniformInt(a,b)} pick(a){return this.rng.getItem(a)}
+ maxHp(){return (JOBS[this.s.job]?.hp||1)+(this.s.level-1)*7+(this.s.camp-1)*4}
+ maxMp(){return (JOBS[this.s.job]?.mp||1)+Math.floor((this.s.level-1)/2)}
+ atk(){return (JOBS[this.s.job]?.atk||0)+(this.s.level-1)*2+this.s.weapon.power+this.s.weapon.plus*2}
+ def(){return (JOBS[this.s.job]?.def||0)+Math.floor((this.s.level-1)/2)+this.s.armor.power+this.s.armor.plus}
+ need(){return 18+this.s.level*12}
+ note(t){this.s.message=t;this.s.log.unshift(t);this.s.log=this.s.log.slice(0,25)}
+ start(job){if(this.s.scene!=='start'||!JOBS[job])return;this.s.job=job;this.s.hp=this.maxHp();this.s.mp=this.maxMp();this.s.scene='camp';this.s.weapon.name={warrior:'무딘 장검',rogue:'무딘 단검',mage:'금 간 지팡이'}[job];this.note('불씨가 살아났다. 첫 목적지는 검은 숲의 파수꾼. 캠프에서 준비한 뒤 출발하자.')}
+ xp(n){this.s.xp+=n;let count=0;while(this.s.xp>=this.need()){this.s.xp-=this.need();this.s.level++;count++}if(count){this.s.hp=this.maxHp();this.s.mp=this.maxMp();return `\n레벨 ${this.s.level}! HP·MP 완전 회복.`}return ''}
+ travel(a){if(this.s.scene!=='camp'||!Number.isInteger(a)||a<0||a>3||a>this.s.cleared.length)return;this.s.area=a;this.s.step=0;this.s.scene='map';this.routes();this.note(AREAS[a].subtitle+'\n여섯 갈림길 너머에 지역의 주인이 기다린다.')}
+ routes(){if(this.s.step>=6){this.s.routes=['boss'];return}const pool={battle:38,event:20,cache:14,shrine:12,merchant:9,elite:7};const list=[];for(let i=0;i<3;i++){const t=this.rng.getWeightedValue(pool);list.push(t);delete pool[t]}if(this.s.step===0)list[0]='battle';if(this.s.step===5)list[0]='shrine';this.s.routes=[...new Set(list)]}
+ choose(i){if(this.s.scene!=='map'||!this.s.routes[i])return;const t=this.s.routes[i];this.s.turns++;if(t==='boss'){this.fight(true);return}this.s.step++;if(t==='battle'||t==='elite')return this.fight(false,t==='elite');if(t==='cache'){const g=this.rand(10,18)+this.s.area*8;this.s.gold+=g;this.s.wood+=3;this.s.ore+=2;this.s.herb+=2;this.note(`주인 없는 보급함을 열었다. 골드 +${g}, 목재 +3, 광석 +2, 약초 +2.`+this.xp(8));this.s.scene='reward'}if(t==='shrine'){const heal=Math.min(this.maxHp()-this.s.hp,Math.ceil(this.maxHp()*.5));this.s.hp+=heal;this.s.mp=this.maxMp();this.note(`푸른 샘에서 온기를 되찾았다. HP +${heal}, MP 완전 회복.`);this.s.scene='reward'}if(t==='merchant'){this.s.scene='merchant';this.note('“왕을 만나려면 먼저 살아남아야지.” 상인이 짐을 펼쳤다.')}if(t==='event'){this.s.scene='event';this.s.eventId=this.rand(0,2);this.note(['무너진 수레 아래, 낯선 사냥꾼이 다리를 다쳤다. 손에는 왕가의 문장이 쥐어져 있다.','검은 제단이 속삭인다. “피를 바치면, 네가 원하는 힘을 주겠다.”','아이의 모습을 한 망령이 낡은 동전을 건넨다. “돌아갈 집을 찾아 줘.”'][this.s.eventId])}}
+ advance(){if(!['reward','merchant'].includes(this.s.scene))return;this.s.scene='map';this.routes()}
+ retreat(){if(!['map','reward','merchant'].includes(this.s.scene))return;this.s.scene='camp';this.s.step=0;this.s.routes=[];this.note('불빛이 남아 있는 캠프로 돌아왔다. 지역 탐험은 입구부터 다시 시작한다.')}
+ fight(boss=false,elite=false){const a=this.s.area;const hp=(boss?65:elite?39:24)+a*(boss?25:12);this.s.enemy={name:boss?AREAS[a].boss:elite?'정예 '+this.pick(AREAS[a].enemies):this.pick(AREAS[a].enemies),hp,maxHp:hp,atk:(boss?10:elite?8:6)+a*3,def:a+(elite?2:0),boss,elite,turn:0,intent:'attack',dot:0,dotTurns:0,stun:0};this.intent();this.s.scene='battle';this.note(boss?'거대한 문이 닫혔다. '+this.s.enemy.name+'의 시선이 불씨에 꽂힌다.':this.s.enemy.name+'에게 길을 가로막혔다.')}
+ intent(){const e=this.s.enemy;e.intent=e.boss?['attack','charge','heavy','guard'][e.turn%4]:this.rng.getWeightedValue({attack:60,heavy:22,guard:18})}
+ damagePreview(){const e=this.s.enemy;if(!e||['guard','charge'].includes(e.intent))return 0;return Math.max(1,Math.round(e.atk*(e.intent==='heavy'?1.8:1))-this.def())}
+ act(action){if(this.s.scene!=='battle')return;const s=this.s,e=s.enemy;let msg='',guard=false;
+ if(action==='skill'&&s.mp<3)return;if(action==='potion'&&(!s.potions||s.hp>=this.maxHp()))return;
+ if(action==='attack'||action==='skill'){let dmg=this.atk()+this.rand(0,2);const crit=action==='attack'&&this.rng.getUniform()<(s.job==='rogue'?.28:.1);if(crit)dmg=Math.round(dmg*1.65);if(action==='skill'){s.mp-=3;dmg=Math.round(dmg*(s.job==='mage'?1.9:1.4));if(s.job==='warrior')e.stun=1;else{e.dot=s.job==='rogue'?4:5;e.dotTurns=s.job==='rogue'?3:2}}else s.mp=Math.min(this.maxMp(),s.mp+1);dmg=Math.max(1,dmg-(action==='skill'&&s.job==='mage'?0:e.def));if(e.intent==='guard'&&!(action==='skill'&&s.job==='mage'))dmg=Math.max(1,Math.floor(dmg*.5));e.hp-=dmg;msg=`${action==='skill'?JOBS[s.job].skill:crit?'치명타':'공격'}! ${dmg} 피해.`}
+ else if(action==='defend'){guard=true;s.mp=Math.min(this.maxMp(),s.mp+3);msg='방어 태세. 받는 피해 70% 감소, MP +3.'}
+ else if(action==='potion'){s.potions--;const heal=Math.min(this.maxHp()-s.hp,Math.ceil(this.maxHp()*.55));s.hp+=heal;msg=`물약으로 HP ${heal} 회복.`}
+ else if(action==='flee'){if(e.boss)return;if(this.rng.getUniform()<.75){s.enemy=null;s.scene='reward';this.note('추격을 따돌렸다. 전투 보상은 얻지 못했다.');return}msg='퇴로가 막혔다!'}else return;
+ s.turns++;if(e.hp<=0)return this.victory(msg);
+ if(e.stun){e.stun=0;msg+='\n적이 기절해 행동하지 못했다.'}else if(e.intent==='guard')msg+='\n적은 방어 태세를 유지했다.';else if(e.intent==='charge')msg+='\n적이 힘을 모은다. 다음 턴 강공격을 경계하자.';else{let dmg=this.damagePreview();if(guard)dmg=Math.max(1,Math.floor(dmg*.3));s.hp=Math.max(0,s.hp-dmg);msg+=`\n${e.name}의 ${e.intent==='heavy'?'강공격':'공격'}: ${dmg} 피해.`}
+ if(s.hp<=0){s.scene='dead';this.note(msg+'\n불씨가 꺼졌다. 캠프에서 다시 일어설 수 있다.');return}
+ if(e.dotTurns>0){e.hp-=e.dot;e.dotTurns--;msg+=`\n지속 피해 ${e.dot}.`;if(e.hp<=0)return this.victory(msg)}
+ e.turn++;this.intent();this.note(msg)
+ }
+ victory(msg){const s=this.s,e=s.enemy;const g=(e.boss?50:e.elite?25:12)+s.area*10;const x=(e.boss?35:e.elite?23:15)+s.area*6;s.kills++;if(e.elite)s.elites++;s.gold+=g;s.wood+=2;s.herb++;s.ore+=e.boss?5:2;msg+=`\n${e.name} 격파. ${g}G · ${x} EXP · 목재 2 · 약초 1 · 광석 ${e.boss?5:2}.`;msg+=this.xp(x);s.enemy=null;
+ if(e.boss){if(!s.cleared.includes(s.area)){s.cleared.push(s.area);s.cleared.sort();s.relics++;}if(s.area===3){s.scene='final';this.note(msg+'\n왕관 안에는 숲에서 사라진 사람들의 기억이 갇혀 있었다. 이제 저주의 운명을 정해야 한다.');return}s.scene='camp';s.hp=this.maxHp();s.mp=this.maxMp();this.note(msg+'\n새 지역이 열렸다. 왕의 인장을 얻고 캠프로 귀환했다.');return}
+ if(e.elite||this.rng.getUniform()<.5){s.loot=this.makeGear(e.elite);s.scene='loot'}else s.scene='reward';this.note(msg)
+ }
+ makeGear(rare=false){const grade=rare?this.rand(1,2):Number(this.rng.getWeightedValue({0:58,1:33,2:9}));const slot=this.pick(['weapon','armor']);const prefix=['낡은','정교한','유물'][grade];const name=slot==='weapon'?{warrior:'장검',rogue:'단검',mage:'지팡이'}[this.s.job]:'갑옷';return{slot,name:`${prefix} ${name}`,power:(slot==='weapon'?2:1)+this.s.area*2+grade*2,grade,plus:0}}
+ takeLoot(equip){if(this.s.scene!=='loot'||!this.s.loot)return;const d=this.s.loot;if(equip){const old=this.s[d.slot];this.s[d.slot]=d;this.s.bag.push({...old,slot:d.slot});if(this.s.bag.length>24){this.s.bag.shift();this.s.ore+=2}this.note(d.name+' 장착. 기존 장비는 가방으로 옮겼다.')}else{const g=8+d.grade*8;this.s.gold+=g;this.note(`전리품을 ${g}G에 판매했다.`)}this.s.loot=null;this.s.scene='reward'}
+ event(choice){if(this.s.scene!=='event'||![0,1].includes(choice))return;const s=this.s;let msg='';if(s.eventId===0){if(choice===0){if(!s.potions)return;s.potions--;s.mercy++;s.gold+=18;msg='사냥꾼을 치료했다. 물약 −1, 보답 +18G, 자비 +1.\n“왕은 괴물이 된 게 아니야. 괴물을 가두고 있는 거지.”'}else{s.ore+=3;msg='사냥꾼에게 길을 알려주고 떠났다. 길에서 광석 3개를 찾았다.'}}if(s.eventId===1){if(choice===0){if(s.hp<=10)return;s.hp-=10;s.gold+=28;s.ore+=3;msg='HP −10. 제단에서 28G와 광석 3개를 얻었다.'}else{s.herb+=3;msg='제단을 등지고 약초 3개를 모았다.'}}if(s.eventId===2){if(choice===0){s.mercy++;s.hp=Math.min(this.maxHp(),s.hp+12);msg='아이를 집터까지 데려다주었다. 자비 +1, HP 최대 12 회복.\n사라지는 아이가 속삭였다. “불씨는 나누어도 사라지지 않아.”'}else{s.gold+=20;msg='동전을 받아 쥐었다. 골드 +20. 아이는 안개 속으로 사라졌다.'}}s.scene='reward';this.note(msg+this.xp(10))}
+ rest(){if(this.s.scene!=='camp')return;this.s.hp=this.maxHp();this.s.mp=this.maxMp();this.s.turns++;this.note('모닥불 곁에서 밤을 보냈다. HP·MP 완전 회복.')}
+ buy(kind){if(!['camp','merchant'].includes(this.s.scene))return;const cost=kind==='potion'?14:kind==='gear'?38:10;if(this.s.gold<cost)return;if(kind==='potion'){this.s.gold-=cost;this.s.potions++;this.note('회복 물약을 구매했다. −14G.')}if(kind==='tonic'){this.s.gold-=cost;this.s.mp=this.maxMp();this.note('맑은 영약을 마셨다. MP 완전 회복. −10G.')}if(kind==='gear'){this.s.gold-=cost;this.s.loot=this.makeGear(true);this.s.scene='loot';this.note('상인이 봉인된 장비 상자를 열었다. −38G.')}}
+ craft(){if(this.s.scene!=='camp'||this.s.herb<3)return;this.s.herb-=3;this.s.potions++;this.note('약초 3개로 물약 하나를 만들었다.')}
+ upgrade(slot){if(this.s.scene!=='camp'||!['weapon','armor'].includes(slot))return;const d=this.s[slot],g=20*(d.plus+1),ore=3*(d.plus+1);if(d.plus>=5||this.s.gold<g||this.s.ore<ore)return;this.s.gold-=g;this.s.ore-=ore;d.plus++;this.note(`${d.name} +${d.plus} 강화 성공. ${g}G, 광석 ${ore}개 사용.`)}
+ campUp(){const s=this.s;if(s.scene!=='camp'||s.camp>=5||s.wood<8*s.camp||s.gold<15*s.camp)return;s.wood-=8*s.camp;s.gold-=15*s.camp;s.camp++;s.hp=this.maxHp();this.note(`캠프 Lv.${s.camp}. 최대 HP +4, HP 완전 회복.`)}
+ equipBag(i){const s=this.s;if(s.scene!=='camp'||!s.bag[i])return;const d=s.bag[i],old=s[d.slot];s[d.slot]=d;s.bag[i]={...old,slot:d.slot};this.note(d.name+' 장착.')}
+ sellBag(i){if(this.s.scene!=='camp'||!this.s.bag[i])return;const d=this.s.bag.splice(i,1)[0];this.s.gold+=8+d.grade*8;this.note(d.name+' 판매.')}
+ quests(){const s=this.s;return[{id:'hunter',name:'숲의 사냥꾼',text:'적 5명 처치',now:s.kills,max:5,gold:35},{id:'builder',name:'다시 피는 불씨',text:'캠프 Lv.2 달성',now:s.camp,max:2,gold:25},{id:'warden',name:'첫 번째 인장',text:'지역 보스 1명 처치',now:s.cleared.length,max:1,gold:40},{id:'mercy',name:'남아 있는 온기',text:'자비로운 선택 2회',now:s.mercy,max:2,gold:45}]}
+ claim(id){if(this.s.scene!=='camp')return;const q=this.quests().find(q=>q.id===id);if(!q||q.now<q.max||this.s.claims.includes(id))return;this.s.claims.push(id);this.s.gold+=q.gold;this.s.potions++;this.note(`의뢰 완료: ${q.name}. ${q.gold}G, 물약 1개.`)}
+ revive(){if(this.s.scene!=='dead')return;const lost=Math.floor(this.s.gold*.2);this.s.gold-=lost;this.s.hp=this.maxHp();this.s.mp=this.maxMp();this.s.enemy=null;this.s.step=0;this.s.scene='camp';this.note(`캠프의 불씨가 당신을 불렀다. ${lost}G를 잃고 살아 돌아왔다.`)}
+ finish(choice){if(this.s.scene!=='final'||![0,1,2].includes(choice)||choice===2&&this.s.mercy<2)return;this.s.ending=['불씨의 수호자','검은 왕관의 계승자','새벽을 돌려준 자'][choice];this.s.scene='ending';this.note(['왕관을 부수고 저주를 끝냈다. 숲에는 아침이 찾아왔지만, 갇혔던 기억들은 빛 속으로 흩어졌다.','왕관을 썼다. 숲은 당신에게 길을 열었다. 이제 이 땅의 어둠과 백성을 지키는 책임도 당신의 것이다.','숲에서 구했던 이들의 온기가 불씨에 모였다. 왕관을 태우자, 갇힌 영혼들이 이름을 되찾았다. 누구도 왕이 될 필요 없는 아침이었다.'][choice])}
+ export(){return JSON.stringify({format:'black-forest-v1',state:this.s,rng:this.rng.getState()})}
+ static load(text){const data=JSON.parse(text);const s=data.state;const bad=()=>{throw Error('저장 데이터의 형식 또는 버전이 올바르지 않습니다.')};if(data.format!=='black-forest-v1'||!s||s.version!==1||!JOBS[s.job])bad();const scenes=['camp','map','battle','reward','merchant','event','loot','dead','final','ending'];if(!scenes.includes(s.scene))bad();for(const key of ['seed','level','xp','hp','mp','gold','potions','wood','ore','herb','camp','area','step','kills','elites','mercy','relics','eventId','turns'])if(!Number.isSafeInteger(s[key])||s[key]<0||s[key]>(key==='seed'?Number.MAX_SAFE_INTEGER:1e12))bad();if(s.level<1||s.level>999||s.camp<1||s.camp>5||s.area>3||s.step>6||s.eventId>2)bad();for(const key of ['log','claims','cleared','routes','bag'])if(!Array.isArray(s[key]))bad();if(s.log.length>25||s.bag.length>24||s.routes.length>3||s.cleared.length>4||new Set(s.cleared).size!==s.cleared.length||s.cleared.some((x,i)=>x!==i))bad();if(s.routes.some(x=>!TYPES[x]&&x!=='boss')||s.log.some(x=>typeof x!=='string'||x.length>10000)||s.claims.some(x=>!['hunter','builder','warden','mercy'].includes(x)))bad();for(const k of ['message','ending'])if(typeof s[k]!=='string'||s[k].length>10000)bad();function gear(d,slot=false){if(!d||typeof d.name!=='string'||d.name.length>80||![0,1,2].includes(d.grade)||!Number.isInteger(d.power)||d.power<0||d.power>1000||!Number.isInteger(d.plus)||d.plus<0||d.plus>5||slot&&!['weapon','armor'].includes(d.slot))bad()}gear(s.weapon);gear(s.armor);s.bag.forEach(d=>gear(d,true));if(s.scene==='loot')gear(s.loot,true);if(s.scene==='battle'||s.scene==='dead'){const e=s.enemy;if(!e||typeof e.name!=='string'||e.name.length>80||!['attack','heavy','guard','charge'].includes(e.intent)||typeof e.boss!=='boolean'||typeof e.elite!=='boolean')bad();for(const k of ['hp','maxHp','atk','def','turn','dot','dotTurns','stun'])if(!Number.isInteger(e[k])||e[k]<0||e[k]>10000)bad();if(e.hp>e.maxHp)bad()}if(!Array.isArray(data.rng)||data.rng.length!==4||data.rng.some(x=>!Number.isFinite(x)))bad();if(data.rng.slice(0,3).some(x=>x<0||x>=1)||data.rng[3]<0||!Number.isInteger(data.rng[3]))bad();const g=new Game(s.seed);g.s=s;if(s.hp>g.maxHp()||s.mp>g.maxMp()||s.xp>=g.need()||s.scene!=='dead'&&s.hp===0)bad();g.rng.setState(data.rng);return g}
+}
+root.BlackForestLegacy={Game,JOBS,AREAS,TYPES};
+})(typeof globalThis!=='undefined'?globalThis:window);
+
+/* Original content data for The Last Ember v2. */
+(function(root){'use strict';
+const JOBS={
+ warrior:{name:'전사',hp:56,mp:9,atk:9,def:3,skill:'방패 강타',desc:'1턴 기절. 방어할 때 MP를 모아 빈틈을 찌른다.',hidden:false},
+ rogue:{name:'도적',hp:46,mp:11,atk:11,def:1,skill:'맹독 칼날',desc:'3턴 중독. 기본 치명타 확률 25%.',hidden:false},
+ mage:{name:'마도사',hp:42,mp:15,atk:12,def:0,skill:'잿불 폭발',desc:'방어 무시 마법과 2턴 화상.',hidden:false},
+ paladin:{name:'성기사',hp:64,mp:12,atk:10,def:4,skill:'여명의 심판',desc:'공격과 동시에 최대 HP 15% 회복.',hidden:true,hint:'누군가를 구하고 첫 인장을 되찾은 자',requirement:'자비 3 · 지역 보스 1명'},
+ blood:{name:'혈기사',hp:68,mp:10,atk:13,def:1,skill:'붉은 계약',desc:'강한 일격과 흡혈. 잃은 체력에 비례해 공격 증가.',hidden:true,hint:'죽음의 문턱에서 두 번 살아남은 자',requirement:'전투 중 HP 30% 이하 경험 후 승리 2회 · 처치 10'},
+ rune:{name:'룬검사',hp:54,mp:16,atk:12,def:2,skill:'룬의 연쇄',desc:'방어 무시 일격. 적을 약화하고 다음 피해 감소.',hidden:true,hint:'강철과 약초에 힘을 새긴 자',requirement:'장착 무기 +3 · 물약 제작 3회'},
+ shadow:{name:'그림자 군주',hp:48,mp:13,atk:14,def:1,skill:'밤의 처형',desc:'체력 35% 이하 적에게 큰 피해. 기본 회피 12%.',hidden:true,hint:'강자의 그림자를 세 번 거둔 자',requirement:'정예 처치 3 · 전체 처치 15'},
+ gambler:{name:'운명의 도박사',hp:50,mp:13,atk:11,def:2,skill:'운명의 주사위',desc:'0.8~3.5배 공격. 기본 행운 +5%.',hidden:true,hint:'상자와 희귀한 별을 모은 자',requirement:'보급함 4 · 희귀 이상 장비 획득 2'},
+ chrono:{name:'시간술사',hp:48,mp:18,atk:13,def:1,skill:'멈춰 버린 순간',desc:'1턴 기절과 마법 공격. MP 여유가 큰 직업.',hidden:true,hint:'네 인장과 비밀의 문을 기억하는 자',requirement:'지역 보스 4명 · 비밀 방 발견 2'}
+};
+const AREAS=[
+ ['검은 숲','나무들은 당신의 이름을 기억한다.','가시의 파수꾼',['굶주린 늑대','가시 고블린','추방된 사냥꾼','흙의 정령']],
+ ['침묵의 마을','불 꺼진 창문 뒤로 누군가 숨을 쉰다.','종지기 모르',['잿빛 약탈자','저주받은 주민','빈 갑옷','종탑의 까마귀']],
+ ['유리 늪','수면에 비친 것은 당신의 내일이다.','거울의 마녀',['독안개 망령','늪의 포식자','수정 거미','이끼 골렘']],
+ ['잊힌 왕성','왕관 너머에 더 오래된 저주가 있다.','검은 숲의 왕',['왕의 처형인','타락한 수호자','검은 기사','기억을 먹는 자']],
+ ['붉은 사막','모래 아래 묻힌 도시가 밤마다 깨어난다.','사막의 예언자',['유리 전갈','모래 도적','미라 사제','붉은 독수리']],
+ ['달의 도서관','읽지 않은 책이 당신의 목소리로 말한다.','금서의 사서',['잉크 망령','종이 수호자','사라진 학자','달빛 인형']],
+ ['공허의 용광로','별의 심장이 식지 않은 채 박동한다.','별을 벼린 대장장이',['철의 거인','불꽃 악령','검댕 사냥개','쇳물 기사']],
+ ['새벽 없는 왕좌','첫 불씨가 태어난 곳에 마지막 그림자가 남았다.','불씨를 삼킨 자',['무명의 왕','시간의 파수병','공허의 기사','검은 태양의 사도']]
+].map((a,i)=>({id:i,name:a[0],subtitle:a[1],boss:a[2],enemies:a[3]}));
+const TYPES={battle:['칼날의 길','전투 · 장비 55%'],elite:['붉은 흔적','정예 전투 · 장비 확정'],event:['속삭이는 불빛','이야기 · 선택과 확률'],cache:['버려진 보급함','자원 · 미믹이 숨어 있을 수 있음'],shrine:['푸른 샘','HP 50% · MP 회복'],merchant:['떠돌이 상인','물약 · 장비 거래'],secret:['희미한 균열','비밀 방 · 각성 인장 확정'],mystery:['안개 속의 길','정체를 알 수 없는 조우']};
+const RARITIES=['일반','고급','희귀','영웅','전설','신화'];
+const WEIGHTS={normal:[55,25,13,5,1.8,.2],elite:[10,32,36,17,4.5,.5],boss:[0,10,35,40,13,2],secret:[0,10,35,40,13,2]};
+const AFFIXES=[
+ ['attack','맹공','공격',2,6],['defense','수호','방어',1,3],['health','생명','최대 HP',5,15],['critical','예리함','치명타 %',3,8],['dodge','바람','회피 %',2,5],['leech','흡혈','흡혈 %',3,7],['poison','맹독','20% 중독 피해',2,5],['burn','잿불','20% 화상 피해',2,5],['stun','충격','기절 확률 %',3,7],['thorns','가시','반사 피해',1,4],['mana','집중','최대 MP',1,4],['luck','행운','행운 %',1,3]
+].map(a=>({id:a[0],name:a[1],label:a[2],min:a[3],max:a[4]}));
+const weapons=['쇠 장검','사냥꾼의 단검','참나무 지팡이','수호자의 창','톱날 검','쌍날 도끼','은빛 레이피어','가시 채찍','번개 지팡이','서리 대검','흑요석 낫','룬 장검','사막의 곡도','달빛 활','금서의 마도서','별철 해머','황혼의 서약','밤을 찢는 송곳니','태양의 잿가루','거짓말쟁이의 주사위','시간을 베는 검','왕의 마지막 명령','공허의 심판','첫 불씨'];
+const armors=['가죽 외투','쇠사슬 갑옷','사냥꾼의 망토','수도사의 로브','은빛 흉갑','늪지의 가죽옷','그림자 외투','룬 갑옷','사막의 수의','달의 예복','별철 판금','새벽의 날개'];
+const charms=['낡은 부적','사냥꾼의 이빨','푸른 유리','구리 회중시계','은빛 묵주','마녀의 반지','피의 보석','행운의 동전','달의 조각','별의 나침반','멈춘 시계','잃어버린 왕관'];
+const ITEMS=[...weapons.map((name,i)=>({id:'w'+i,name,slot:'weapon',unique:i>=16,fixed:i>=16?AFFIXES[(i-16+4)%12].id:null})),...armors.map((name,i)=>({id:'a'+i,name,slot:'armor',unique:i>=10,fixed:i>=10?'defense':null})),...charms.map((name,i)=>({id:'t'+i,name,slot:'charm',unique:i>=10,fixed:i>=10?'luck':null}))];
+// Costs are paid before the roll; failed rewards are explicit and never silently consume extra resources.
+const EVENTS=[
+ ['부상당한 사냥꾼','수레 아래 갇힌 사냥꾼이 도움을 청한다.', ['물약을 건넨다',{potions:1},{mercy:1,gold:22},1],['지름길을 물어본다',{}, {ore:3},1]],
+ ['검은 제단','제단은 생명의 온기를 탐낸다.', ['피를 바친다',{hp:10},{gold:40,ore:4},.8,{herb:2}],['약초만 챙긴다',{}, {herb:3},1]],
+ ['돌아갈 곳','아이의 모습을 한 망령이 빈 집터를 가리킨다.', ['함께 집을 찾는다',{}, {mercy:1,heal:14},1],['동전을 받는다',{}, {gold:24},1]],
+ ['무너진 광산','갱도 깊은 곳에서 광석이 빛난다.', ['깊이 내려간다',{hp:6},{ore:9},.65,{ore:2}],['입구에서 채굴한다',{}, {ore:3},1]],
+ ['수상한 지도','상인은 비밀 방의 위치라며 지도를 내민다.', ['지도를 산다',{gold:18},{sigils:1,secrets:1},.4,{wood:4}],['지도를 외우고 떠난다',{}, {xp:10},1]],
+ ['까마귀의 거래','반짝이는 물건을 좋아하는 까마귀 떼가 모였다.', ['골드를 던진다',{gold:12},{gear:'elite'},.55,{herb:3}],['먹이를 찾아 준다',{}, {mercy:1,wood:2},1]],
+ ['부서진 대장간','아직 온기가 남은 모루가 보인다.', ['광석을 넣는다',{ore:3},{gear:'elite',crafts:1},.75,{ore:2}],['도구를 회수한다',{}, {ore:3,wood:3},1]],
+ ['달빛 우물','물속에서 자신의 목소리가 도움을 청한다.', ['목소리에 답한다',{}, {mana:99,mercy:1},.7,{heal:10}],['동전을 던진다',{gold:5},{sigils:1},.25,{heal:20}]],
+ ['이름 없는 묘지','꽃 한 송이 놓이지 않은 묘들이 이어진다.', ['망자를 위해 기도한다',{}, {mercy:1,herb:3},1],['봉인된 관을 조사한다',{hp:8},{gear:'secret'},.5,{gold:20}]],
+ ['운명의 탁자','딜러 없는 탁자 위에 주사위가 놓여 있다.', ['주사위를 굴린다',{gold:15},{gold:55,caches:1},.4,{ore:2}],['탁자를 지나친다',{}, {xp:12},1]],
+ ['도망친 견습생','금서를 훔친 견습생이 떨고 있다.', ['추격자를 따돌려 준다',{hp:5},{mercy:1,sigils:1},.6,{mercy:1,herb:4}],['책을 돌려보낸다',{}, {gold:20,xp:12},1]],
+ ['잠든 용의 둥지','알 사이로 오래된 무기가 보인다.', ['손을 뻗는다',{hp:12},{gear:'boss'},.5,{ore:5}],['비늘만 줍는다',{}, {ore:4},1]],
+ ['유리 다리','다리 아래에서 금속이 부딪히는 소리가 난다.', ['아래로 내려간다',{hp:7},{gold:40,caches:1},.7,{wood:5}],['다리를 수리한다',{wood:3},{mercy:1,xp:18},1]],
+ ['얼어붙은 시간','같은 빗방울이 허공에서 멈춰 있다.', ['틈을 만져본다',{}, {sigils:1,secrets:1},.35,{mana:8,xp:15}],['순간을 기록한다',{}, {xp:20,herb:2},1]],
+ ['별의 낙하','방금 떨어진 별의 파편이 아직 뜨겁다.', ['맨손으로 꺼낸다',{hp:10},{gear:'secret'},.65,{ore:5}],['식을 때까지 기다린다',{}, {ore:5},1]],
+ ['마지막 장사','등불을 잃은 상인이 짐을 버리고 있다.', ['등불을 나눠 준다',{wood:3},{mercy:1,potions:2},1],['짐을 산다',{gold:20},{gear:'elite'},1]],
+ ['숲의 연회','가면 쓴 손님들이 빈 의자를 권한다.', ['잔을 든다',{}, {heal:99,mana:99},.6,{gold:18}],['이야기를 듣는다',{}, {xp:20,mercy:1},1]],
+ ['닫히는 균열','별 없는 복도가 눈앞에서 사라지고 있다.', ['몸을 던진다',{hp:8},{sigils:1,secrets:1,ore:5},.7,{herb:4}],['흔적을 모은다',{}, {ore:4,xp:12},1]]
+].map((e,id)=>({id,title:e[0],text:e[1],choices:e.slice(2).map(c=>({label:c[0],cost:c[1],reward:c[2],chance:c[3],failure:c[4]||{}}))}));
+root.BFContent={JOBS,AREAS,TYPES,RARITIES,WEIGHTS,AFFIXES,ITEMS,EVENTS};
+})(globalThis);
+
+/* Original adaptation of public-domain source motifs. No modern translation text used. */
+(function(root){'use strict';const C=root.BFContent;
+const melee=[
+ ['rabbit_guard','토끼굴 문지기',1,'체력','문턱의 집중','방어 시 MP를 1 더 회복한다.','앨리스의 길목에서 안과 밖을 구분하는 파수꾼.',{defendMana:1}],
+ ['pequod','피쿼드호 갑판검사',1,'힘','갑판의 보폭','일반 적에게 주는 피해 +20%.','흔들리는 갑판에서 균형을 배운 뱃사람.',{commonDmg:.2}],
+ ['windmill','풍차의 결투자',1,'의지','거인을 향한 일격','방어 후 다음 공격 피해 +35%.','작은 위협에서도 거대한 적의 형상을 읽는다.',{guardNext:.35}],
+ ['stitch','봉합된 검투사',1,'체력','다시 잇는 살','승리 시 최대 HP의 8% 회복.','버려진 실험실에서 제 이름을 꿰맨 전사.',{healKill:.08}],
+ ['card_spear','찢긴 카드 창병',1,'민첩','접힌 틈','기본 회피 확률 +8%.','왕정의 문양을 찢고 달아난 종이 병사.',{dodgeBonus:.08}],
+ ['sancho','산초의 방패지기',1,'체력','현실의 위안','방어 시 최대 HP의 4% 회복.','몽상가의 곁에서 살아남는 법을 익혔다.',{guardHeal:.04}],
+ ['coffin','빈 관의 파수꾼',1,'힘','문상객의 가시','적의 공격을 받으면 피해 3 반사.','누구도 잠들지 않은 관을 지키는 경비병.',{thornsBonus:3}],
+ ['mirror_fist','거울 복도의 권투사',1,'민첩','첫 균열','전투 첫 공격 피해 +30%.','자신의 반영보다 먼저 주먹을 내지른다.',{opening:.3}],
+ ['ahab_harpoon','광기에 찬 포경선 작살잡이',2,'힘','백경의 표식','보스에게 주는 피해 +18%.','모비딕의 그림자를 모든 거대한 적에게서 본다.',{boss:.18}],
+ ['fallen_dreamer','기사도를 잃은 몽상가',2,'의지','꺾이지 않는 허상','HP 40% 이하에서 공격 피해 +30%.','돈키호테의 이상을 잃었지만 돌진만은 기억한다.',{below:.3}],
+ ['queen_exec','하트 법정의 참수인',2,'힘','끝나지 않은 판결','HP 30% 이하 적에게 피해 +30%.','유죄보다 먼저 내려오는 칼날을 거두려 한다.',{execution:.3}],
+ ['adam_sword','피조물의 자유검사',2,'체력','빌린 피의 순환','가한 피해의 8% 흡혈.','창조주의 이름 대신 스스로의 이름으로 싸운다.',{leechBonus:.08}],
+ ['twin_duel','지킬의 이중 결투자',2,'민첩','두 번째 인격','세 번째 공격마다 피해 +40%.','절제와 폭력이 같은 칼자루를 번갈아 쥔다.',{comboEvery:3,comboDamage:.4}],
+ ['white_knight','백기사의 균형검',2,'의지','결함 있는 발명','스킬 MP 소모 1 감소.','실패한 발명을 전장의 요령으로 바꾸었다.',{skillSaver:1}],
+ ['grave_hunter','성당 지하의 사냥꾼',2,'민첩','고위 괴물 추적','정예 적에게 주는 피해 +25%.','밤의 귀족이 남기는 흔적만을 좇는다.',{eliteDmg:.25}],
+ ['pagebreaker','끝장을 찢는 검성',3,'힘','제본 파괴','일반 공격이 적 방어력 4를 무시.','이미 쓰인 결말에 칼을 대는 검사.',{normalPierce:4}],
+ ['abyss_anchor','심연을 고정하는 닻기사',3,'체력','심해 호흡','물약 회복량이 최대 HP의 15%만큼 증가.','바다를 잃은 세계에서 닻으로 자신을 붙든다.',{potionBoost:.15}],
+ ['clock_reaver','멈춘 시계의 결투왕',3,'민첩','한순간의 우위','기본 치명타 확률 +15%.','시계가 멈춘 틈에 단 한 번 더 검을 휘두른다.',{critBonus:.15}],
+ ['thorn_crown','가시 왕관의 반역자',3,'의지','반역의 불씨','스킬 사용 시 3턴 동안 지속 피해 5 부여.','머리에 씌운 형벌을 왕좌에 되돌려 준다.',{skillDot:5}],
+ ['last_margin','마지막 여백의 용병왕',3,'힘','기록되지 않은 전리품','전투 골드 보상 +25%.','책에 적히지 않은 사람들을 먹여 살리는 자.',{goldBonus:.25}]
+];
+C.MELEE=melee.map(a=>({id:a[0],name:a[1],tier:a[2],stat:a[3],passive:a[4],effect:a[5],desc:a[6],traits:a[7]}));
+for(const d of C.MELEE){C.JOBS[d.id]={...d,hp:d.stat==='체력'?58:48,mp:d.stat==='의지'?14:11,atk:d.stat==='힘'?12:10,def:d.stat==='체력'?3:2,skill:'서사의 절단',desc:d.effect,hidden:false,family:'melee'};}
+const groups=[
+ ['일반',0, ['물먹은 갑판검','토끼굴의 녹슨 칼','종이 병사의 철편검','봉합사의 절개도','풍차 마을의 연습검','선실의 손잡이 짧은 칼','법정 경비의 직검','안개 여관의 낡은 도','유리공의 무딘 절단검','묘지기의 뼈자루 칼','모자 가게의 재단검','검댕 묻은 작업도','염분에 닳은 사브르','마차 호위의 장도','구빈원의 지급검','무너진 성벽의 군도','강변 나룻배의 곡검','헌책방의 종이칼','길 잃은 종자의 검','폐실험실의 톱날도']],
+ ['희귀',2,['피쿼드의 파도갈이','앨리스의 문틈검','산초의 귀환도','피조물의 이름칼','하트 병사의 반역검','증기 봉합의 절단검','거울의 배면도','회중시계의 초침검','백경 뼈의 양날검','야간 우편의 암검','잊힌 법전의 집행도','황동 정맥의 장검','재판을 거부한 검','붉은 약병의 세검','등대의 그림자검']],
+ ['영웅',3,['에이해브의 맹세도','돈키호테의 없는 거인','창조주의 후회','피조물의 첫 이름','하트 여왕의 공소검','흰 토끼의 지각검','지킬의 절제와 하이드','성채를 떠난 백기사','백지 연맹의 제본검','대홍수의 책갈피']],
+ ['전설',4,['백경의 마지막 수평선','라만차의 부서지지 않는 꿈','프로메테우스의 봉합선','하트 없는 왕관','첫 문장을 베는 자']]
+];
+const effects=['attack','critical','defense','health','leech','dodge','poison','burn','mana','luck'];
+const legendaryFlavor=[
+ '에이해브가 끝내 붙잡지 못한 수평선이 칼날 안에 갇혔다. 휘두를 때마다 먼 바다의 종소리가 난다.',
+ '풍차를 베지 못한 검은 비웃음에도 부러지지 않았다. 누군가를 지키겠다는 거짓말이 끝내 진실이 되었다.',
+ '창조주가 끊어 버린 생명의 실을 다시 잇는다. 이 검의 주인은 만들어진 자의 이름을 먼저 묻는다.',
+ '모든 재판이 끝난 뒤 왕관만 남았다. 목을 베라는 명령 대신 명령 그 자체를 벤다.',
+ '도서계가 찢어지던 밤 이름 없는 독자가 휘두른 검. 종이가 아닌 결말의 가능성을 가른다.'
+];let index=0;
+C.SWORDS=[];for(const [rarity,grade,names] of groups)names.forEach((name,i)=>{const effect=grade===0&&i<10?null:effects[(index+grade)%effects.length];const value=effect? (['health'].includes(effect)?8+grade*3:['critical','dodge','leech'].includes(effect)?3+grade:2+grade):0;const d={id:'lit_sword_'+index,name,slot:'weapon',unique:grade===4,fixedGrade:grade,basePower:grade===0?5+Math.floor(i/2):grade===2?16+Math.floor(i/2):grade===3?28+i:42+i*2,fixed:effect,fixedValue:value,flavor:grade===4?legendaryFlavor[i]:`${name}에는 도서계 붕괴 이전 주인의 선택이 작은 흠집으로 남아 있다.`,rarity};index++;C.SWORDS.push(d);C.ITEMS.push(d)});
+C.FACTIONS=[{id:'lantern',name:'봉합의 등불',goal:'피조물과 책 밖의 사람에게 살아갈 권리를 준다.',leaders:'프랑켄슈타인의 피조물 · 앨리스',benefit:'신뢰 3 이상: 최대 HP +12'},{id:'ink',name:'붉은 잉크 법정',goal:'붕괴를 막기 위해 모든 결말을 하나의 법으로 고정한다.',leaders:'하트 여왕 · 빅터 프랑켄슈타인',benefit:'신뢰 3 이상: 방어 +2'},{id:'hunt',name:'백경 추적단',goal:'세계를 꿰맨 존재를 사냥해 각자의 원래 세계로 돌아간다.',leaders:'에이해브 · 돈키호테',benefit:'신뢰 3 이상: 보스 피해 +10%'}];
+C.THREADS={
+ alice:{name:'증언을 잃은 앨리스',npc:'앨리스 / 하트 여왕',stages:[
+ {text:'앨리스는 법정이 매일 다른 사람의 기억을 증거로 태운다고 말한다. 여왕은 그것만이 세계의 붕괴를 막는 방법이라고 주장한다.',choices:[['앨리스의 증언을 숨긴다','lantern','증언 보호'],['여왕에게 공개 재판을 요구한다','ink','공개 재판'],['흰 토끼의 탈출로를 추적한다','hunt','탈출로 추적']]},
+ {text:'증언 속에는 세상이 책의 마지막 장을 먹으며 버틴다는 사실이 담겨 있다. 누구에게 이 사실을 맡길 것인가?',choices:[['사람들에게 기록을 나누어 준다','lantern','기록 공개'],['법정의 기록 보관소에 봉인한다','ink','기록 봉인'],['추적단에 표적의 위치를 넘긴다','hunt','표적 전달']]}]},
+ adam:{name:'창조주와 이름 없는 자',npc:'피조물 / 빅터 프랑켄슈타인',stages:[
+ {text:'피조물은 자신을 괴물이라 부르지 말아 달라고 한다. 빅터는 그의 심장이 도서계의 균열을 봉합할 유일한 장치라고 말한다.',choices:[['피조물에게 이름을 고르게 한다','lantern','이름 허락'],['빅터의 실험 기록을 검증한다','ink','실험 검증'],['심장의 근원을 함께 사냥한다','hunt','근원 추적']]},
+ {text:'심장을 멈추면 균열 하나가 닫힌다. 그러나 다른 이의 삶을 재료로 삼은 세계가 오래 버틸 수 있을까?',choices:[['사람들의 불씨를 나누어 대체한다','lantern','심장 구원'],['피조물의 동의를 얻어 실험한다','ink','합의된 봉합'],['장치를 부수고 균열 너머로 향한다','hunt','장치 파괴']]}]},
+ ahab:{name:'육지로 올라온 백경',npc:'에이해브 / 돈키호테',stages:[
+ {text:'백경의 그림자가 모래 아래를 헤엄친다. 에이해브는 작살을 들고 돈키호테는 그것을 포로가 된 거인이라 부른다.',choices:[['돈키호테와 백경의 상처를 살핀다','lantern','상처 조사'],['법정의 허가로 포획을 준비한다','ink','포획 허가'],['에이해브와 마지막 항해를 맹세한다','hunt','항해 맹세']]},
+ {text:'백경의 몸에는 사라진 세계들의 마지막 문장이 새겨져 있다. 죽이면 길이 열리고 살리면 기억이 남는다.',choices:[['백경을 풀어 주고 기억을 필사한다','lantern','백경 해방'],['문장을 보존한 채 백경을 봉인한다','ink','백경 봉인'],['작살로 세계를 묶은 사슬을 끊는다','hunt','사슬 절단']]}]}
+};
+C.AREAS[0].subtitle='토끼굴에서 쏟아진 길들이 검은 숲에서 서로 엉켰다.';C.AREAS[1].subtitle='실험실의 번개가 죽은 마을에 다시 이름을 불어넣었다.';C.AREAS[2].subtitle='백경의 그림자가 바다를 잃고 유리 늪을 떠돈다.';C.AREAS[3].boss='하트 여왕의 집행관';C.AREAS[4].subtitle='에이해브의 배는 바다 대신 모래 위로 항해한다.';C.AREAS[5].subtitle='앨리스가 남긴 증언과 빅터의 기록이 같은 서가에서 다툰다.';C.AREAS[6].boss='빅터의 봉합 거인';C.AREAS[7].boss='결말을 먹는 편집자';
+})(globalThis);
+
+/* The Last Ember v2. Game rules are original; probability selection uses adapted MIT LootTable.js. */
+(function(root){'use strict';
+const {JOBS,AREAS,TYPES,RARITIES,WEIGHTS,AFFIXES,ITEMS,EVENTS}=root.BFContent;
+const copy=x=>JSON.parse(JSON.stringify(x));
+/* Equipment schema 1: six canonical slots; legacy fields remain runtime aliases. */
+const GEAR_SLOTS=['weapon','subweapon','head','armor','acc','relic'];
+const gearRarity=grade=>grade>=4?'legend':grade>=3?'epic':grade>=2?'rare':'common';
+const canonicalSlot=slot=>slot==='charm'?'acc':slot;
+function decorateGear(d){
+ if(!d||typeof d!=='object'||Array.isArray(d))throw Error('장비 데이터가 올바르지 않습니다.');
+ d.slot=canonicalSlot(d.slot);
+ if(!GEAR_SLOTS.includes(d.slot))throw Error('알 수 없는 장비 부위입니다.');
+ d.rarity=gearRarity(d.grade??d.fixedGrade??(d.unique?4:0));
+ d.visuals={icon:typeof d.visuals?.icon==='string'?d.visuals.icon:'',cardFrame:d.rarity};
+ return d;
+}
+ITEMS.forEach(decorateGear);
+function bindEquipment(s){
+ for(const key of [...GEAR_SLOTS,'charm']){const slot=canonicalSlot(key);delete s[key];Object.defineProperty(s,key,{configurable:true,enumerable:false,get(){return this.equipment[slot]},set(value){this.equipment[slot]=value==null?null:decorateGear(value)}})}
+ if(s.player&&typeof s.player==='object'&&!Array.isArray(s.player))s.player.equipment=s.equipment;
+ return s;
+}
+function migrateEquipment(s){
+ const target=Object.fromEntries(GEAR_SLOTS.map(slot=>[slot,null]));
+ const source=s.equipment??s.player?.equipment;
+ const normalize=(item,slot)=>{if(item==null)return null;if(typeof item==='string'){const base=ITEMS.find(d=>d.id===item);if(!base)throw Error('저장된 장비 ID를 찾을 수 없습니다.');item={...copy(base),power:base.basePower??0,grade:base.fixedGrade??(base.unique?4:0),plus:0,fails:0,affixes:[]}}return decorateGear({...item,slot:canonicalSlot(item.slot||slot)})};
+ const put=(item,slot)=>{const d=normalize(item,slot);if(!d)return;if(target[d.slot]){if(!Array.isArray(s.bag)||s.bag.length>=40)throw Error('중복 슬롯 장비를 보존할 가방 공간이 부족합니다. 기존 버전에서 가방을 정리해 주세요.');s.bag.push(d)}else target[d.slot]=d};
+ if(Array.isArray(source)){source.forEach(item=>put(item));}
+ else if(source&&typeof source==='object'){for(const [slot,item] of Object.entries(source)){if(item!=null&&(!GEAR_SLOTS.includes(canonicalSlot(slot))||canonicalSlot(item.slot||slot)!==canonicalSlot(slot)))throw Error('장비 슬롯이 일치하지 않습니다.');put(item,slot)}}
+ else if(source!=null)throw Error('장비 저장 형식이 올바르지 않습니다.');
+ // Old deployed saves used top-level weapon/armor/charm rather than an array.
+ for(const slot of [...GEAR_SLOTS,'charm'])if(Object.prototype.hasOwnProperty.call(s,slot)&&s[slot]){
+  const d=normalize(s[slot],slot),current=target[d.slot];
+  if(!current)target[d.slot]=d;
+  else if(JSON.stringify(current)!==JSON.stringify(d))put(d);
+ }
+ if(Array.isArray(s.bag))s.bag=s.bag.map(d=>normalize(d));
+ if(s.loot)s.loot=normalize(s.loot);
+ s.equipment=target;s.equipmentSchema=1;bindEquipment(s);
+ return s;
+}
+
+const bare=(slot)=>({id:'starter-'+slot,name:{weapon:'낡은 장검',armor:'여행자의 외투',charm:'빛바랜 부적'}[slot],slot,power:slot==='weapon'?1:0,grade:0,plus:0,affixes:[],fails:0});
+class Game{
+ constructor(seed=Date.now(),meta={}){this.rng=root.ROT.RNG.clone().setSeed(seed);this.s={version:2,seed,job:null,scene:'start',level:1,xp:0,hp:1,mp:1,gold:30,potions:3,wood:0,ore:0,herb:0,sigils:0,camp:1,area:0,step:0,kind:'story',cleared:[],routes:[],enemy:null,loot:null,weapon:bare('weapon'),armor:bare('armor'),charm:bare('charm'),bag:[],kills:0,elites:0,mercy:0,relics:0,claims:[],eventId:0,turns:0,log:[],message:'첫 불씨를 든 당신. 여덟 인장 너머, 이름을 잃은 힘이 기다린다.',ending:'',unlocked:[...(meta.unlocked||[])],collection:[...(meta.collection||[])],bestiary:{},crafts:0,caches:0,secrets:0,rareFinds:0,lowhpWins:0,pity:0,secretPity:0,rift:0,recentEvents:[],pending:'reward',cycle:meta.cycle||0,factions:{lantern:0,ink:0,hunt:0},threads:{alice:0,adam:0,ahab:0},decisions:{},thread:'',offers:[],endings:[...(meta.endings||[])]};migrateEquipment(this.s);const pool=Object.keys(JOBS).filter(id=>!JOBS[id].hidden&&(JOBS[id].tier||1)===1||this.s.unlocked.includes(id));while(this.s.offers.length<5&&pool.length>0){const id=this.pick(pool);this.s.offers.push(id);pool.splice(pool.indexOf(id),1)}}
+ rand(a,b){return this.rng.getUniformInt(a,b)} pick(a){return this.rng.getItem(a)} chance(n){return this.rng.getUniform()<n}
+ weighted(entries){const t=new root.LootTable(undefined,()=>this.rng.getUniform());for(const [item,w] of entries)if(w>0)t.add(item,Math.round(w*100));return t.choose()}
+ traits(){return JOBS[this.s.job]?.traits||{}}
+ skillCost(){return 4-(this.traits().skillSaver||0)}
+ jobAvailable(id){const j=JOBS[id];return !!j&&(!j.hidden||this.s.unlocked.includes(id))&&(!(j.tier>1)||(this.s.level>=(j.tier===2?4:8)&&this.s.cleared.length>=(j.tier===2?1:3)))}
+ equipment(){return GEAR_SLOTS.map(slot=>this.s.equipment[slot]).filter(Boolean)}
+ bonus(id){return this.equipment().reduce((n,d)=>n+d.affixes.filter(a=>a.id===id).reduce((v,a)=>v+a.value,0),0)}
+ maxHp(){return (JOBS[this.s.job]?.hp||1)+(this.s.level-1)*8+(this.s.camp-1)*5+this.bonus('health')+(this.s.factions.lantern>=3?12:0)}
+ maxMp(){return (JOBS[this.s.job]?.mp||1)+Math.floor((this.s.level-1)/2)+this.bonus('mana')}
+ atk(){return (JOBS[this.s.job]?.atk||0)+(this.s.level-1)*2+(this.s.weapon?.power||0)+(this.s.weapon?.plus||0)*2+(this.s.subweapon?.power||0)+(this.s.subweapon?.plus||0)+this.bonus('attack')+(this.s.job==='blood'?Math.floor((1-this.s.hp/this.maxHp())*10):0)}
+ def(){return (JOBS[this.s.job]?.def||0)+Math.floor((this.s.level-1)/2)+(this.s.armor?.power||0)+(this.s.armor?.plus||0)+(this.s.head?.power||0)+(this.s.head?.plus||0)+this.bonus('defense')+(this.s.factions.ink>=3?2:0)}
+ luck(){return Math.min(.2,(this.bonus('luck')+(this.s.charm?.power||0)+(this.s.charm?.plus||0))/100+(this.s.job==='gambler'?.05:0))}
+ crit(){return Math.min(.65,(this.s.job==='rogue'?.25:.1)+this.bonus('critical')/100+(this.traits().critBonus||0))}
+ dodge(){return Math.min(.35,this.bonus('dodge')/100+(this.s.job==='shadow'?.12:0)+(this.traits().dodgeBonus||0))}
+ need(){return 22+this.s.level*13}
+ note(text){this.s.message=text;this.s.log.unshift(text);this.s.log=this.s.log.slice(0,30)}
+ start(job){if(this.s.scene!=='start'||!JOBS[job]||!this.s.offers.includes(job))return;this.s.job=job;if(!this.s.weapon)this.s.weapon=bare('weapon');this.s.weapon.name=job==='mage'?'금 간 지팡이':job==='rogue'?'무딘 단검':'낡은 장검';this.s.hp=this.maxHp();this.s.mp=this.maxMp();this.s.scene='camp';this.note('불씨를 되살렸다. 캠프의 직업 비전서에서 숨겨진 운명의 단서를 확인할 수 있다.')}
+ xp(n){this.s.xp+=n;let up=false;while(this.s.xp>=this.need()){this.s.xp-=this.need();this.s.level++;up=true}if(up){this.s.hp=this.maxHp();this.s.mp=this.maxMp();return `\n레벨 ${this.s.level}! HP·MP 완전 회복.`}return ''}
+ limit(){return this.s.kind==='rift'?4:6}
+ travel(a){const s=this.s;if(s.scene!=='camp')return;if(a===8){if(s.secrets<1&&s.cleared.length<4)return;s.kind='rift';s.area=Math.max(1,Math.min(7,s.cleared.length));}else{if(!Number.isInteger(a)||a<0||a>7||a>s.cleared.length)return;s.kind='story';s.area=a}s.step=0;s.scene='map';this.routes();this.note(s.kind==='rift'?`별 없는 회랑 ${s.rift+1}층. 네 갈림길 뒤의 수문장이 전설을 감추고 있다.`:AREAS[s.area].subtitle)}
+ routes(){const s=this.s;if(s.step>=this.limit()){s.routes=['boss'];return}const pool={battle:28,elite:8,event:17,cache:13,shrine:9,merchant:7,secret:5,mystery:13};const chosen=[];if(s.step===0)chosen.push('battle');if(s.step===this.limit()-1)chosen.push('shrine');if(s.secretPity>=11&&!chosen.includes('secret'))chosen.push('secret');for(const t of chosen)delete pool[t];while(chosen.length<3){const t=this.weighted(Object.entries(pool));chosen.push(t);delete pool[t]}s.routes=chosen}
+ choose(i){const s=this.s;if(s.scene!=='map'||!s.routes[i])return;let type=s.routes[i];s.turns++;if(type==='boss')return this.fight(true);s.step++;s.secretPity++;if(type==='mystery')type=this.weighted([['battle',35],['elite',15],['event',20],['cache',15],['secret',15]]);
+ if(type==='battle'||type==='elite')return this.fight(false,type==='elite');
+ if(type==='cache'){s.caches++;if(this.chance(.1))return this.fight(false,true,'보급함 미믹');const g=this.rand(12,24)+s.area*10;s.gold+=g;s.wood+=4;s.ore+=3;s.herb+=2;this.note(`보급함 발견. ${g}G · 목재 4 · 광석 3 · 약초 2.`+this.xp(12));if(this.chance(.35)){s.loot=this.makeGear('normal');s.pending='reward';s.scene='loot'}else s.scene='reward'}
+ if(type==='shrine'){const heal=Math.min(this.maxHp()-s.hp,Math.ceil(this.maxHp()*.5));s.hp+=heal;s.mp=this.maxMp();s.scene='reward';this.note(`푸른 샘의 온기. HP +${heal}, MP 완전 회복.`)}
+ if(type==='merchant'){s.scene='merchant';this.note('“이번엔 물건이 좀 특별해. 운이 좋으면 전설도 만날 거야.”')}
+ if(type==='secret'){s.secrets++;s.secretPity=0;s.sigils++;s.loot=this.makeGear('secret');s.pending='reward';s.scene='loot';this.note('벽 너머에 이름 없는 성소가 숨겨져 있었다. 각성 인장 +1. 비밀 보관함을 열었다.')}
+ if(type==='event'){const ids=EVENTS.map(e=>e.id).filter(i=>!s.recentEvents.includes(i));s.eventId=this.pick(ids);s.recentEvents.push(s.eventId);s.recentEvents=s.recentEvents.slice(-6);s.scene='event';this.note(EVENTS[s.eventId].text)}
+ }
+ advance(){if(!['reward','merchant'].includes(this.s.scene))return;this.s.scene='map';this.routes()}
+ retreat(){if(!['map','reward','merchant'].includes(this.s.scene))return;this.s.scene='camp';this.s.step=0;this.s.routes=[];this.note('캠프로 귀환했다. 다음 탐험은 지역 입구에서 시작한다.')}
+ fight(boss=false,elite=false,name=null){const s=this.s,a=s.area,scale=1+s.cycle*.15+(s.kind==='rift'?s.rift*.12:0);const hp=Math.round(((boss?74:elite?46:30)+a*(boss?30:14))*scale);const atk=Math.round(((boss?12:elite?10:8)+a*3)*scale);const patterns=[['attack','charge','heavy','guard'],['attack','guard','heavy','heal'],['charge','heavy','attack','heal'],['heavy','attack','guard','charge']];s.enemy={name:name||(boss?(s.kind==='rift'?'이름을 지운 자':AREAS[a].boss):(elite?'정예 ':'')+this.pick(AREAS[a].enemies)),hp,maxHp:hp,atk,def:a+(elite?2:0),boss,elite,turn:0,intent:'attack',dot:0,dotTurns:0,stun:0,weak:0,low:s.hp<=this.maxHp()*.3,pattern:patterns[a%4]};s.scene='battle';this.intent();this.note((name?'보급함이 날카로운 이빨을 드러냈다!\n':'')+s.enemy.name+'에게 길을 가로막혔다.')}
+ intent(){const e=this.s.enemy;e.intent=e.boss?e.pattern[e.turn%e.pattern.length]:this.weighted([['attack',60],['heavy',22],['guard',18]])}
+ damagePreview(){const e=this.s.enemy;if(!e||['guard','charge','heal'].includes(e.intent))return 0;return Math.max(1,Math.round(e.atk*(e.intent==='heavy'?1.8:1))-this.def())}
+ act(action){const s=this.s,e=s.enemy;if(s.scene!=='battle'||!e)return;if(action==='skill'&&s.mp<this.skillCost()||action==='potion'&&(!s.potions||s.hp>=this.maxHp()))return;let msg='',guard=false,leech=0;
+ if(action==='attack'||action==='skill'){let dmg=this.atk()+this.rand(0,3),magic=false;const crit=action==='attack'&&this.chance(this.crit());if(crit)dmg=Math.round(dmg*1.7);if(action==='skill'){s.mp-=this.skillCost();const multipliers={warrior:1.5,rogue:1.5,mage:2,paladin:1.6,blood:1.9,rune:1.85,shadow:e.hp/e.maxHp<.35?3:1.6,gambler:this.rand(8,35)/10,chrono:1.5};dmg=Math.round(dmg*(multipliers[s.job]||1.7));magic=['mage','rune','chrono'].includes(s.job);if(['warrior','chrono'].includes(s.job))e.stun=1;if(s.job==='rogue'||s.job==='mage'){e.dot=s.job==='rogue'?5+Math.floor(s.level/3):6+Math.floor(s.level/3);e.dotTurns=s.job==='rogue'?3:2}if(s.job==='paladin')s.hp=Math.min(this.maxHp(),s.hp+Math.ceil(this.maxHp()*.15));if(s.job==='blood')leech=.3;if(s.job==='rune')e.weak=1;if(this.traits().skillDot){e.dot=Math.max(e.dot,this.traits().skillDot);e.dotTurns=3}}else s.mp=Math.min(this.maxMp(),s.mp+1);
+ const t=this.traits();let bonus=(e.boss?(t.boss||0)+(s.factions.hunt>=3?.1:0):!e.elite?(t.commonDmg||0):(t.eliteDmg||0));if(!e.attacks)bonus+=t.opening||0;if(e.guarded){bonus+=t.guardNext||0;e.guarded=false}if(s.hp/this.maxHp()<=.4)bonus+=t.below||0;if(e.hp/e.maxHp<=.3)bonus+=t.execution||0;e.attacks=(e.attacks||0)+1;if(t.comboEvery&&e.attacks%t.comboEvery===0)bonus+=t.comboDamage;dmg=Math.round(dmg*(1+bonus));dmg=Math.max(1,dmg-(magic?0:Math.max(0,e.def-(action==='attack'?(t.normalPierce||0):0))));if(e.intent==='guard'&&!magic)dmg=Math.max(1,Math.floor(dmg*.5));e.hp-=dmg;msg=`${action==='skill'?JOBS[s.job].skill:crit?'치명타':'공격'}! ${dmg} 피해.`;const heal=Math.min(this.maxHp()-s.hp,Math.floor(dmg*Math.min(.45,leech+this.bonus('leech')/100+(this.traits().leechBonus||0))));if(heal){s.hp+=heal;msg+=` 흡혈 +${heal}.`}for(const id of ['poison','burn'])if(this.bonus(id)&&this.chance(.2)){e.dot=Math.max(e.dot,this.bonus(id));e.dotTurns=3;msg+=` ${id==='poison'?'중독':'화상'} 발동.`}if(this.bonus('stun')&&this.chance(Math.min(.2,this.bonus('stun')/100))){e.stun=1;msg+=' 충격 발동.'}}
+ else if(action==='defend'){guard=true;s.mp=Math.min(this.maxMp(),s.mp+3+(this.traits().defendMana||0));e.guarded=true;const heal=Math.ceil(this.maxHp()*(this.traits().guardHeal||0));s.hp=Math.min(this.maxHp(),s.hp+heal);msg=`방어 / 집중. 피해 70% 감소, MP +${3+(this.traits().defendMana||0)}${heal?', HP +'+heal:''}.`}
+ else if(action==='potion'){s.potions--;const heal=Math.min(this.maxHp()-s.hp,Math.ceil(this.maxHp()*(.55+(this.traits().potionBoost||0))));s.hp+=heal;msg=`회복 물약: HP +${heal}.`}
+ else if(action==='flee'){if(e.boss)return;if(this.chance(.75)){s.enemy=null;s.scene='reward';this.note('추격을 따돌렸다. 보상은 얻지 못했다.');return}msg='도주에 실패했다.'}else return;
+ s.turns++;if(e.hp<=0)return this.victory(msg);
+ if(e.stun){e.stun=0;msg+='\n적은 기절해 행동하지 못했다.'}else if(e.intent==='heal'){const n=Math.min(e.maxHp-e.hp,Math.ceil(e.maxHp*.1));e.hp+=n;msg+=`\n적이 HP ${n} 회복.`}else if(e.intent==='charge')msg+='\n적이 힘을 모은다. 다음 행동을 확인하자.';else if(e.intent==='guard')msg+='\n적은 방어 태세를 유지했다.';else if(this.chance(this.dodge()))msg+='\n적의 공격을 회피했다!';else{let dmg=this.damagePreview();if(guard)dmg=Math.max(1,Math.floor(dmg*.3));if(e.weak){dmg=Math.max(1,Math.floor(dmg*.7));e.weak=0}s.hp=Math.max(0,s.hp-dmg);msg+=`\n적의 ${e.intent==='heavy'?'강공격':'공격'}: ${dmg} 피해.`;if(s.hp<=this.maxHp()*.3)e.low=true;const reflect=this.bonus('thorns')+(this.traits().thornsBonus||0);if(reflect){e.hp-=reflect;msg+=` 반사 ${reflect}.`}}
+ if(s.hp<=0){s.scene='dead';this.note(msg+'\n불씨가 꺼졌다. 캠프에서 다시 일어설 수 있다.');return}
+ if(e.dotTurns>0){e.hp-=e.dot;e.dotTurns--;msg+=`\n지속 피해 ${e.dot}.`}if(e.hp<=0)return this.victory(msg);e.turn++;this.intent();this.note(msg)
+ }
+ victory(msg){const s=this.s,e=s.enemy;const gold=Math.round(((e.boss?65:e.elite?32:16)+s.area*12)*(1+(this.traits().goldBonus||0))),exp=(e.boss?48:e.elite?28:20)+s.area*8;s.hp=Math.min(this.maxHp(),s.hp+Math.ceil(this.maxHp()*(this.traits().healKill||0)));s.kills++;if(e.elite)s.elites++;if(e.low)s.lowhpWins++;s.bestiary[e.name]=(s.bestiary[e.name]||0)+1;s.gold+=gold;s.wood+=3;s.herb+=2;s.ore+=e.boss?6:3;msg+=`\n${e.name} 격파. ${gold}G · ${exp} EXP · 목재 3 · 약초 2 · 광석 ${e.boss?6:3}.`+this.xp(exp);if(e.boss||this.chance((e.elite?.15:.08)+this.luck()/2)){s.sigils++;msg+='\n각성 인장 +1.'}s.enemy=null;let pending='reward';
+ if(e.boss){pending='camp';if(s.kind==='rift'){s.rift++;msg+=`\n별 없는 회랑 ${s.rift}층 정복.`}else{if(!s.cleared.includes(s.area)){s.cleared.push(s.area);s.cleared.sort((a,b)=>a-b);s.relics++}if(s.area===7)pending='final';msg+='\n지역 인장을 수복했다.'}s.hp=this.maxHp();s.mp=this.maxMp()}
+ if(e.boss||e.elite||this.chance(.55+this.luck())){s.loot=this.makeGear(e.boss?'boss':e.elite?'elite':'normal');s.pending=pending;s.scene='loot'}else s.scene=pending;this.note(msg)
+ }
+ rollGrade(source='normal'){let weights=(WEIGHTS[source]||WEIGHTS.normal).slice();const boost=this.luck();weights=weights.map((w,i)=>w*(i>=3?1+boost*5:1));let grade=this.weighted(weights.map((w,i)=>[i,w]));if(this.s.pity>=29&&grade<4)grade=4;this.s.pity=grade>=4?0:this.s.pity+1;return grade}
+ makeGear(source='normal'){const grade=this.rollGrade(source),slot=this.weighted([['weapon',45],['armor',35],['acc',20]]);const pool=ITEMS.filter(d=>d.slot===slot&&(d.fixedGrade!==undefined?d.fixedGrade===grade:(grade>=4?d.unique:!d.unique)));const base=this.pick(pool);const count=grade<1?0:grade<3?1:grade===3?2:3;let ids=[];if(base.fixed)ids.push(base.fixed);while(ids.length<count){const id=this.pick(AFFIXES).id;if(!ids.includes(id))ids.push(id)}const affixes=ids.map(id=>{const a=AFFIXES.find(a=>a.id===id);return{id,value:base.fixedValue&&id===base.fixed?base.fixedValue:this.rand(a.min,a.max)+Math.floor(grade/2)}});const power=base.basePower!==undefined?base.basePower:slot==='weapon'?2+this.s.area*2+grade*2:slot==='armor'?1+this.s.area+grade:1+Math.floor(grade/2);const d=decorateGear({...base,power,grade,plus:0,affixes,fails:0});if(!this.s.collection.includes(base.id))this.s.collection.push(base.id);if(grade>=2)this.s.rareFinds++;return d}
+ price(d){return 10+d.grade*10+d.plus*5}
+ storeBag(d){if(!d)return;if(this.s.bag.length>=40){const old=this.s.bag.shift();this.s.ore+=2+old.grade}this.s.bag.push(d)}
+ takeLoot(mode){const s=this.s;if(s.scene!=='loot'||!s.loot)return;const d=s.loot;if(mode==='equip'||mode===true){this.storeBag(s[d.slot]);s[d.slot]=d;s.hp=Math.min(s.hp,this.maxHp());s.mp=Math.min(s.mp,this.maxMp());this.note(`${RARITIES[d.grade]} ${d.name} 장착. 기존 장비를 가방으로 옮겼다.`)}else if(mode==='bag'){this.storeBag(d);this.note(d.name+'을 가방에 보관했다.')}else{s.gold+=this.price(d);this.note(`${d.name}을 ${this.price(d)}G에 판매했다.`)}s.loot=null;s.scene=s.pending;s.pending='reward';if(s.scene==='camp'){s.hp=this.maxHp();s.mp=this.maxMp()}if(s.scene==='final')this.note('여덟 인장이 모였다. 첫 불씨 안에는 사라진 사람들의 기억이 갇혀 있다. 이제 숲의 운명을 결정하자.')}
+ canPay(cost){return Object.entries(cost).every(([k,v])=>k==='hp'?this.s.hp>v:this.s[k]>=v)}
+ grant(reward){const s=this.s;const parts=[];for(const [k,v] of Object.entries(reward)){if(k==='gear'){s.loot=this.makeGear(v);s.pending='reward';s.scene='loot';parts.push('장비 발견');}else if(k==='heal'){const n=Math.min(v,this.maxHp()-s.hp);s.hp+=n;parts.push('HP +'+n)}else if(k==='mana'){const n=Math.min(v,this.maxMp()-s.mp);s.mp+=n;parts.push('MP +'+n)}else if(k==='xp'){parts.push('EXP +'+v+this.xp(v))}else{s[k]+=v;parts.push(({gold:'골드',ore:'광석',wood:'목재',herb:'약초',potions:'물약',mercy:'자비',sigils:'각성 인장',secrets:'비밀 발견',crafts:'제작',caches:'보급함'}[k]||k)+' +'+v)}}return parts.join(' · ')}
+ event(choice){const s=this.s;if(s.scene!=='event')return;const c=EVENTS[s.eventId]?.choices[choice];if(!c||!this.canPay(c.cost))return;for(const [k,v] of Object.entries(c.cost))s[k]-=v;const success=this.chance(c.chance);s.scene='reward';this.note(`${c.label}. ${success?'뜻대로 이루어졌다.':'기대와 다른 결과가 나왔다.'}\n${this.grant(success?c.reward:c.failure)}`+this.xp(12))}
+ rest(){if(this.s.scene!=='camp')return;this.s.hp=this.maxHp();this.s.mp=this.maxMp();this.note('모닥불 곁에서 휴식. HP·MP 완전 회복.')}
+ buy(kind){const s=this.s;if(!['camp','merchant'].includes(s.scene))return;const price={potion:16,tonic:12,gear:55}[kind];if(!price||s.gold<price)return;s.gold-=price;if(kind==='potion'){s.potions++;this.note('회복 물약 +1. −16G.')}if(kind==='tonic'){s.mp=this.maxMp();this.note('MP 완전 회복. −12G.')}if(kind==='gear'){s.pending=s.scene;s.loot=this.makeGear('elite');s.scene='loot';this.note('55G를 지불하고 봉인된 장비 상자를 열었다.')}}
+ craft(){const s=this.s;if(s.scene!=='camp'||s.herb<3)return;s.herb-=3;s.potions++;s.crafts++;this.note('약초 3개로 물약 제작. 물약 +1.')}
+ upgradeChance(slot){const d=this.s[slot];return d.plus<5||d.fails>=2?1:[.8,.6,.4][d.plus-5]||0}
+ upgrade(slot){const s=this.s;if(s.scene!=='camp'||!GEAR_SLOTS.includes(canonicalSlot(slot))||!s[slot])return;const d=s[slot],g=20*(d.plus+1),ore=3*(d.plus+1);if(d.plus>=8||s.gold<g||s.ore<ore)return;s.gold-=g;s.ore-=ore;if(this.chance(this.upgradeChance(slot))){d.plus++;d.fails=0;this.note(`${d.name} +${d.plus} 강화 성공.`)}else{d.fails++;this.note(`강화 실패. 장비와 강화 수치는 유지됐다. 연속 실패 ${d.fails}/2 — 다음 보정까지 진행.`)}}
+ reforge(slot){const s=this.s;if(s.scene!=='camp'||!GEAR_SLOTS.includes(canonicalSlot(slot))||!s[slot]||s.gold<40||s.ore<4||!s[slot].affixes.length)return;s.gold-=40;s.ore-=4;const d=s[slot],i=d.affixes.length-1;const pool=AFFIXES.filter(a=>!d.affixes.slice(0,i).some(x=>x.id===a.id));const a=this.pick(pool);d.affixes[i]={id:a.id,value:this.rand(a.min,a.max)+Math.floor(d.grade/2)};s.hp=Math.min(s.hp,this.maxHp());s.mp=Math.min(s.mp,this.maxMp());this.note(`${d.name}의 마지막 옵션 재설정: ${a.label} +${d.affixes[i].value}.`)}
+ campUp(){const s=this.s;if(s.scene!=='camp'||s.camp>=8||s.wood<8*s.camp||s.gold<15*s.camp)return;s.wood-=8*s.camp;s.gold-=15*s.camp;s.camp++;s.hp=this.maxHp();this.note(`캠프 Lv.${s.camp}. 최대 HP +5, HP 회복.`)}
+ equipBag(i){const s=this.s;if(s.scene!=='camp'||!s.bag[i])return;const d=s.bag[i],old=s[d.slot];s[d.slot]=d;if(old)s.bag[i]=old;else s.bag.splice(i,1);s.hp=Math.min(s.hp,this.maxHp());s.mp=Math.min(s.mp,this.maxMp());this.note(d.name+' 장착.')}
+ sellBag(i){const s=this.s;if(s.scene!=='camp'||!s.bag[i])return;const d=s.bag.splice(i,1)[0];s.gold+=this.price(d);this.note(d.name+' 판매.')}
+ salvage(i){const s=this.s;if(s.scene!=='camp'||!s.bag[i])return;const d=s.bag.splice(i,1)[0];s.ore+=2+d.grade;this.note(`${d.name} 분해. 광석 +${2+d.grade}.`)}
+ eligible(job){const s=this.s;return {paladin:s.mercy>=3&&s.cleared.length>=1,blood:s.lowhpWins>=2&&s.kills>=10,rune:(s.weapon?.plus||0)>=3&&s.crafts>=3,shadow:s.elites>=3&&s.kills>=15,gambler:s.caches>=4&&s.rareFinds>=2,chrono:s.cleared.length>=4&&s.secrets>=2}[job]||false}
+ awaken(job){const s=this.s;if(s.scene!=='camp'||!JOBS[job]?.hidden||s.unlocked.includes(job)||!this.eligible(job)||s.sigils<1)return;s.sigils--;s.unlocked.push(job);this.note(`숨겨진 직업, ${JOBS[job].name}의 비전을 깨우쳤다. 이제 캠프에서 전직할 수 있다.`)}
+ changeJob(job){const s=this.s;if(s.scene!=='camp'||!this.jobAvailable(job))return;s.job=job;s.hp=this.maxHp();s.mp=this.maxMp();this.note(`${JOBS[job].name}로 전직했다. ${JOBS[job].desc}`)}
+ thread(id){const s=this.s;if(s.scene!=='camp'||!root.BFContent.THREADS[id]||s.threads[id]>=2||s.cleared.length<1)return;s.thread=id;s.scene='dialogue';this.note(root.BFContent.THREADS[id].stages[s.threads[id]].text)}
+ dialogue(i){const s=this.s;if(s.scene!=='dialogue')return;const t=root.BFContent.THREADS[s.thread],stage=s.threads[s.thread],choice=t?.stages[stage]?.choices[i];if(!choice)return;s.turns++;s.factions[choice[1]]+=stage===1?2:1;s.decisions[s.thread+stage]=choice[2];s.threads[s.thread]++;if(choice[1]==='lantern')s.mercy++;if(stage===1){s.sigils++;s.gold+=35}const result=this.xp(20);s.scene='camp';this.note(`${choice[0]}.\n${root.BFContent.FACTIONS.find(f=>f.id===choice[1]).name}의 신뢰 +${stage===1?2:1}.${stage===1?' 이야기 완료: 각성 인장 +1, 35G.':''}${result}`)}
+ quests(){const s=this.s;return [
+ ['hunter','숲의 사냥꾼','적 5명 처치',s.kills,5,40],['builder','다시 피는 불씨','캠프 Lv.2',s.camp,2,30],['warden','첫 번째 인장','지역 보스 1명',s.cleared.length,1,50],['mercy','남아 있는 온기','자비 3',s.mercy,3,50],['elite','강자의 흔적','정예 3명',s.elites,3,80],['artisan','약초의 지혜','물약 제작 5회',s.crafts,5,50],['collector','빛의 수집가','장비 10종 발견',s.collection.length,10,100],['secret','닫힌 문 너머','비밀 발견 2회',s.secrets,2,80],['awakening','잊힌 이름','히든 직업 1종 해금',s.unlocked.length,1,100],['midway','네 개의 기억','지역 보스 4명',s.cleared.length,4,120],['rift','별 없는 귀환','회랑 1층 정복',s.rift,1,120],['master','마지막 인장','지역 보스 8명',s.cleared.length,8,200]
+ ].map(q=>({id:q[0],name:q[1],text:q[2],now:q[3],max:q[4],gold:q[5]}))}
+ claim(id){const s=this.s;if(s.scene!=='camp')return;const q=this.quests().find(q=>q.id===id);if(!q||q.now<q.max||s.claims.includes(id))return;s.claims.push(id);s.gold+=q.gold;s.potions++;this.note(`의뢰 완료: ${q.name}. ${q.gold}G, 물약 +1.`)}
+ revive(){const s=this.s;if(s.scene!=='dead')return;const loss=Math.floor(s.gold*.2);s.gold-=loss;s.hp=this.maxHp();s.mp=this.maxMp();s.enemy=null;s.scene='camp';s.step=0;this.note(`${loss}G를 잃고 캠프로 돌아왔다. 장비와 직업은 유지된다.`)}
+ finish(i){const s=this.s;if(s.scene!=='final'||![0,1,2].includes(i)||i===2&&s.mercy<5)return;s.ending=['불씨의 수호자','검은 왕관의 계승자','새벽을 돌려준 자'][i];s.scene='ending';if(!s.endings.includes(i))s.endings.push(i);this.note(['불씨를 놓아주었다. 숲에는 마침내 아침이 찾아왔다.','왕관을 썼다. 이제 이 땅의 어둠과 백성을 지키는 책임도 당신의 것이다.','구했던 이들의 온기가 불씨에 모였다. 이름을 되찾은 영혼들이 새벽으로 걸어 나갔다.'][i])}
+ postgame(){if(this.s.scene!=='ending')return;this.s.scene='camp';this.note('숲에 아침이 왔다. 별 없는 회랑과 아직 찾지 못한 비전이 당신을 기다린다.')}
+ newJourney(){return new Game(Date.now(),{unlocked:this.s.unlocked,collection:this.s.collection,endings:this.s.endings,cycle:this.s.cycle+(this.s.cleared.length===8?1:0)})}
+ export(){const raw=JSON.stringify({format:'black-forest-v2',state:this.s,rng:this.rng.getState()});return 'BF2:'+root.LZString.compressToBase64(raw)}
+ static load(input){if(typeof input!=='string'||input.length>300000)throw Error('저장 코드가 너무 큽니다.');let raw=input.trim();if(raw.startsWith('BF2:'))raw=root.LZString.decompressFromBase64(raw.slice(4));if(!raw||raw.length>2000000)throw Error('유효하지 않은 저장 코드');const data=JSON.parse(raw);if(data.format==='black-forest-v1'){const legacy=Game.migrate(raw);legacy.migrationSource=input;return legacy;}const s=data.state,bad=()=>{throw Error('저장 데이터 검증 실패')};if(data.format!=='black-forest-v2'||!s||s.version!==2||(!JOBS[s.job]&&!(s.job===null&&s.scene==='start')))bad();const migrating=s.equipmentSchema!==1||Array.isArray(s.equipment)||Array.isArray(s.player?.equipment);migrateEquipment(s);const numeric=['seed','level','xp','hp','mp','gold','potions','wood','ore','herb','sigils','camp','area','step','kills','elites','mercy','relics','eventId','turns','crafts','caches','secrets','rareFinds','lowhpWins','pity','secretPity','rift','cycle'];for(const key of numeric)if(!Number.isSafeInteger(s[key])||s[key]<0||s[key]>(key==='seed'?Number.MAX_SAFE_INTEGER:1e9))bad();if(s.level<1||s.level>9999||s.camp<1||s.camp>8||s.area>7||s.step>6||s.eventId>=EVENTS.length||s.pity>29)bad();const scenes=['start','camp','map','battle','reward','merchant','event','loot','dead','final','ending','dialogue'];if(!scenes.includes(s.scene)||!['story','rift'].includes(s.kind)||!['reward','camp','merchant','final'].includes(s.pending))bad();for(const k of ['log','claims','cleared','routes','bag','unlocked','collection','recentEvents','endings','offers'])if(!Array.isArray(s[k]))bad();if(s.bag.length>40||s.log.length>30||s.cleared.length>8||s.cleared.some((v,i)=>v!==i)||s.unlocked.some(x=>!JOBS[x]?.hidden)||new Set(s.unlocked).size!==s.unlocked.length)bad();if(s.routes.length>3||s.routes.some(x=>!TYPES[x]&&x!=='boss')||s.collection.some(x=>!ITEMS.some(d=>d.id===x))||s.recentEvents.length>6||s.recentEvents.some(x=>!EVENTS[x])||s.endings.some(x=>![0,1,2].includes(x)))bad();for(const k of ['message','ending'])if(typeof s[k]!=='string'||s[k].length>10000)bad();if(s.log.some(x=>typeof x!=='string'||x.length>10000))bad();function gear(d){if(!d||!GEAR_SLOTS.includes(d.slot)||typeof d.name!=='string'||d.name.length>100||typeof d.id!=='string'||!Number.isInteger(d.power)||d.power<0||d.power>10000||!Number.isInteger(d.grade)||d.grade<0||d.grade>5||!Number.isInteger(d.plus)||d.plus<0||d.plus>8||!Number.isInteger(d.fails)||d.fails<0||d.fails>2||!Array.isArray(d.affixes)||d.affixes.length>3||d.affixes.some(a=>!AFFIXES.some(b=>b.id===a.id)||!Number.isInteger(a.value)||a.value<0||a.value>100))bad()}for(const key of GEAR_SLOTS){if(s.equipment[key]===null)continue;gear(s.equipment[key]);if(s.equipment[key].slot!==key)bad()}s.bag.forEach(gear);if(s.scene==='loot')gear(s.loot);if(s.scene==='battle'||s.scene==='dead'){const e=s.enemy;if(!e||typeof e.name!=='string'||e.name.length>100||!['attack','heavy','guard','charge','heal'].includes(e.intent)||!Array.isArray(e.pattern)||!e.pattern.length||e.pattern.some(x=>!['attack','heavy','guard','charge','heal'].includes(x)))bad();for(const key of ['maxHp','atk','def','turn','dot','dotTurns','stun','weak'])if(!Number.isInteger(e[key])||e[key]<0||e[key]>1e7)bad();if(!Number.isInteger(e.hp)||e.hp>e.maxHp||e.hp< -100000||typeof e.boss!=='boolean'||typeof e.elite!=='boolean'||typeof e.low!=='boolean')bad()}
+ if(!Array.isArray(data.rng)||data.rng.length!==4||data.rng.slice(0,3).some(x=>!Number.isFinite(x)||x<0||x>=1)||!Number.isSafeInteger(data.rng[3])||data.rng[3]<0)bad();if(!s.bestiary||typeof s.bestiary!=='object'||Object.entries(s.bestiary).some(([k,v])=>k.length>100||!Number.isSafeInteger(v)||v<0))bad();const g=new Game(s.seed);g.s=bindEquipment(copy(s));if(migrating)g.migrationSource=input;if(s.hp>g.maxHp()||s.mp>g.maxMp()||s.xp>=g.need()||s.scene!=='dead'&&s.hp===0||JOBS[s.job]?.hidden&&!s.unlocked.includes(s.job))bad();if(s.offers.length!==5||new Set(s.offers).size!==5||s.offers.some(id=>!JOBS[id]))bad();for(const id of ['lantern','ink','hunt'])if(!Number.isSafeInteger(s.factions?.[id])||s.factions[id]<0||s.factions[id]>100)bad();for(const id of ['alice','adam','ahab'])if(!Number.isInteger(s.threads?.[id])||s.threads[id]<0||s.threads[id]>2)bad();if(s.scene==='dialogue'&&(!root.BFContent.THREADS[s.thread]||s.threads[s.thread]>=2))bad();if(!s.decisions||Object.values(s.decisions).some(x=>typeof x!=='string'||x.length>80))bad();const ids=g.quests().map(q=>q.id);if(s.claims.some(id=>!ids.includes(id))||new Set(s.claims).size!==s.claims.length)bad();g.rng.setState(data.rng);return g}
+ static migrate(raw){const old=root.BlackForestLegacy.Game.load(raw),g=new Game(old.s.seed),s=old.s;for(const k of Object.keys(g.s))if(k in s)g.s[k]=copy(s[k]);g.s.version=2;g.s.charm=bare('charm');const convert=(d,slot)=>({...bare(slot),...d,slot,grade:Math.min(5,d.grade*2),affixes:[],fails:0});g.s.weapon=convert(s.weapon,'weapon');g.s.armor=convert(s.armor,'armor');g.s.bag=s.bag.map(d=>convert(d,d.slot));if(s.loot)g.s.loot=convert(s.loot,s.loot.slot);if(s.enemy)Object.assign(g.s.enemy,{weak:0,low:false,pattern:['attack','charge','heavy','guard']});if(['final','ending'].includes(g.s.scene))g.s.scene='camp';g.s.hp=Math.min(g.s.hp,g.maxHp());g.s.mp=Math.min(g.s.mp,g.maxMp());g.rng.setState(old.rng.getState());g.note('이전 모험 기록을 확장판으로 옮겼다. 네 인장 너머로 새로운 길이 열렸다.');return g}
+}
+const finish=Game.prototype.finish;Game.prototype.finish=function(i){finish.call(this,i);if(this.s.scene==='ending'){const f=root.BFContent.FACTIONS.slice().sort((a,b)=>this.s.factions[b.id]-this.s.factions[a.id])[0];const decisions=Object.values(this.s.decisions);this.note(this.s.message+'\n\n'+(this.s.factions[f.id]>0?f.name+'이 남은 세계의 재건을 이끈다.':'어느 세력에도 속하지 않은 사람들이 새벽을 맞는다.')+(decisions.length?'\n여정의 흔적: '+decisions.join(' → '):''))}};
+root.BlackForest={Game,GEAR_SLOTS,gearRarity,migrateEquipment,...root.BFContent};
+})(globalThis);
+

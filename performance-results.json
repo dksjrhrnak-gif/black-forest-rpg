@@ -1,0 +1,14 @@
+{
+  "baselineCommit": "ffc082549294698031074df7b2157f4874b6f842",
+  "htmlBefore": 348147,
+  "htmlAfter": 221545,
+  "htmlReduction": 126602,
+  "inlineJsBefore": 332585,
+  "inlineJsAfter": 202388,
+  "rngBefore": 184374,
+  "rngAfter": 4535,
+  "rngReduction": 179839,
+  "firstScreenLoading": "UNMEASURED: supported browser unavailable",
+  "mobileParsing": "UNMEASURED: file/script byte counts are not browser timing",
+  "inlineJsReduction": 130197
+}

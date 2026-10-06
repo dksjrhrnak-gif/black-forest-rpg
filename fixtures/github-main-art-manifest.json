@@ -1,0 +1,875 @@
+{
+  "version": 2,
+  "source": "GitHub main: b18275568c95590f4d4539e983ba7c9bdf89b580",
+  "assets": [
+    {
+      "key": "class_warrior",
+      "type": "class",
+      "id": "warrior",
+      "name": "전사",
+      "file": "class_warrior.webp",
+      "reuse": "character-0.webp",
+      "prompt": "Use case: stylized-concept. Create ONE vertical 2:3 full-bleed illustrated card for a mobile dark fantasy RPG. Cinematic painterly Victorian gothic, detailed weathered textures, teal shadows, warm amber accents. Readable centered subject, identifying features visible. No text, letters, UI, logos, watermark, card frame or collage. 전사. 1턴 기절. 방어할 때 MP를 모아 빈틈을 찌른다."
+    },
+    {
+      "key": "class_rogue",
+      "type": "class",
+      "id": "rogue",
+      "name": "도적",
+      "file": "class_rogue.webp",
+      "reuse": "character-1.webp",
+      "prompt": "Use case: stylized-concept. Create ONE vertical 2:3 full-bleed illustrated card for a mobile dark fantasy RPG. Cinematic painterly Victorian gothic, detailed weathered textures, teal shadows, warm amber accents. Readable centered subject, identifying features visible. No text, letters, UI, logos, watermark, card frame or collage. 도적. 3턴 중독. 기본 치명타 확률 25%."
+    },
+    {
+      "key": "class_mage",
+      "type": "class",
+      "id": "mage",
+      "name": "마도사",
+      "file": "class_mage.webp",
+      "reuse": "character-2.webp",
+      "prompt": "Use case: stylized-concept. Create ONE vertical 2:3 full-bleed illustrated card for a mobile dark fantasy RPG. Cinematic painterly Victorian gothic, detailed weathered textures, teal shadows, warm amber accents. Readable centered subject, identifying features visible. No text, letters, UI, logos, watermark, card frame or collage. 마도사. 방어 무시 마법과 2턴 화상."
+    },
+    {
+      "key": "class_paladin",
+      "type": "class",
+      "id": "paladin",
+      "name": "성기사",
+      "file": "class_paladin.webp",
+      "reuse": null,
+      "prompt": "Use case: stylized-concept. Create ONE vertical 2:3 full-bleed illustrated card for a mobile dark fantasy RPG. Cinematic painterly Victorian gothic, detailed weathered textures, teal shadows, warm amber accents. Readable centered subject, identifying features visible. No text, letters, UI, logos, watermark, card frame or collage. Radiant paladin in ivory armour bearing a dawn sun emblem, sacred sword and shield, gold healing light from open palm, sunrise cathedral."
+    },
+    {
+      "key": "class_blood",
+      "type": "class",
+      "id": "blood",
+      "name": "혈기사",
+      "file": "class_blood.webp",
+      "reuse": null,
+      "prompt": "Use case: stylized-concept. Create ONE vertical 2:3 full-bleed illustrated card for a mobile dark fantasy RPG. Cinematic painterly Victorian gothic, detailed weathered textures, teal shadows, warm amber accents. Readable centered subject, identifying features visible. No text, letters, UI, logos, watermark, card frame or collage. Crimson armoured blood knight, dark-red glowing blade drawing life-energy ribbons toward chest, angular black armour, ruined rose chapel, no gore."
+    },
+    {
+      "key": "class_rune",
+      "type": "class",
+      "id": "rune",
+      "name": "룬검사",
+      "file": "class_rune.webp",
+      "reuse": null,
+      "prompt": "Use case: stylized-concept. Create ONE vertical 2:3 full-bleed illustrated card for a mobile dark fantasy RPG. Cinematic painterly Victorian gothic, detailed weathered textures, teal shadows, warm amber accents. Readable centered subject, identifying features visible. No text, letters, UI, logos, watermark, card frame or collage. Rune swordswoman in etched steel armour, vivid blue runes along her long sword, arcane protective ring, stone inscriptions, clearly sword-wielder not elderly staff mage."
+    },
+    {
+      "key": "class_shadow",
+      "type": "class",
+      "id": "shadow",
+      "name": "그림자 군주",
+      "file": "class_shadow.webp",
+      "reuse": null,
+      "prompt": "Use case: stylized-concept. Create ONE vertical 2:3 full-bleed illustrated card for a mobile dark fantasy RPG. Cinematic painterly Victorian gothic, detailed weathered textures, teal shadows, warm amber accents. Readable centered subject, identifying features visible. No text, letters, UI, logos, watermark, card frame or collage. Shadow sovereign with jagged black crown, twin dark blades, flowing smoke cloak, almost invisible silhouette except violet eyes, moonless rooftop."
+    },
+    {
+      "key": "class_gambler",
+      "type": "class",
+      "id": "gambler",
+      "name": "운명의 도박사",
+      "file": "class_gambler.webp",
+      "reuse": null,
+      "prompt": "Use case: stylized-concept. Create ONE vertical 2:3 full-bleed illustrated card for a mobile dark fantasy RPG. Cinematic painterly Victorian gothic, detailed weathered textures, teal shadows, warm amber accents. Readable centered subject, identifying features visible. No text, letters, UI, logos, watermark, card frame or collage. Elegant mysterious Victorian gambler in burgundy tailcoat, dice orbiting outstretched hand and playing cards at belt, brass coins, candlelit gaming table. No wizard staff."
+    },
+    {
+      "key": "class_chrono",
+      "type": "class",
+      "id": "chrono",
+      "name": "시간술사",
+      "file": "class_chrono.webp",
+      "reuse": null,
+      "prompt": "Use case: stylized-concept. Create ONE vertical 2:3 full-bleed illustrated card for a mobile dark fantasy RPG. Cinematic painterly Victorian gothic, detailed weathered textures, teal shadows, warm amber accents. Readable centered subject, identifying features visible. No text, letters, UI, logos, watermark, card frame or collage. Female time sorcerer with bronze clockwork astrolabe and hourglass, silver hair, midnight-blue robes, suspended rain and rotating time rings, no sword."
+    },
+    {
+      "key": "class_rabbit_guard",
+      "type": "class",
+      "id": "rabbit_guard",
+      "name": "토끼굴 문지기",
+      "file": "class_rabbit_guard.webp",
+      "reuse": null,
+      "prompt": "Use case: stylized-concept. Create ONE vertical 2:3 full-bleed illustrated card for a mobile dark fantasy RPG. Cinematic painterly Victorian gothic, detailed weathered textures, teal shadows, warm amber accents. Readable centered subject, identifying features visible. No text, letters, UI, logos, watermark, card frame or collage. Anthropomorphic white rabbit gatekeeper with long ears, blue patched guard tunic, iron keys, short sword and doorway-shaped shield, standing at giant rabbit burrow threshold, brass pocket watch."
+    },
+    {
+      "key": "class_pequod",
+      "type": "class",
+      "id": "pequod",
+      "name": "피쿼드호 갑판검사",
+      "file": "class_pequod.webp",
+      "reuse": null,
+      "prompt": "Use case: stylized-concept. Create ONE vertical 2:3 full-bleed illustrated card for a mobile dark fantasy RPG. Cinematic painterly Victorian gothic, detailed weathered textures, teal shadows, warm amber accents. Readable centered subject, identifying features visible. No text, letters, UI, logos, watermark, card frame or collage. Weathered sailor swordsman balancing on rain-soaked whaling ship deck, navy wool coat, striped shirt, curved boarding cutlass, rope rigging, stormy sea. No shield."
+    },
+    {
+      "key": "class_windmill",
+      "type": "class",
+      "id": "windmill",
+      "name": "풍차의 결투자",
+      "file": "class_windmill.webp",
+      "reuse": null,
+      "prompt": "Use case: stylized-concept. Create ONE vertical 2:3 full-bleed illustrated card for a mobile dark fantasy RPG. Cinematic painterly Victorian gothic, detailed weathered textures, teal shadows, warm amber accents. Readable centered subject, identifying features visible. No text, letters, UI, logos, watermark, card frame or collage. Lean middle-aged La Mancha duelist, narrow moustache, battered brass breastplate, raised slender sword, buckler, unmistakable windmill sails towering behind him. Hopeful defiant posture, ochre cloak. NO large tower shield."
+    },
+    {
+      "key": "class_stitch",
+      "type": "class",
+      "id": "stitch",
+      "name": "봉합된 검투사",
+      "file": "class_stitch.webp",
+      "reuse": "character-3.webp",
+      "prompt": "Use case: stylized-concept. Create ONE vertical 2:3 full-bleed illustrated card for a mobile dark fantasy RPG. Cinematic painterly Victorian gothic, detailed weathered textures, teal shadows, warm amber accents. Readable centered subject, identifying features visible. No text, letters, UI, logos, watermark, card frame or collage. 봉합된 검투사. 승리 시 최대 HP의 8% 회복."
+    },
+    {
+      "key": "class_card_spear",
+      "type": "class",
+      "id": "card_spear",
+      "name": "찢긴 카드 창병",
+      "file": "class_card_spear.webp",
+      "reuse": "character-4.webp",
+      "prompt": "Use case: stylized-concept. Create ONE vertical 2:3 full-bleed illustrated card for a mobile dark fantasy RPG. Cinematic painterly Victorian gothic, detailed weathered textures, teal shadows, warm amber accents. Readable centered subject, identifying features visible. No text, letters, UI, logos, watermark, card frame or collage. 찢긴 카드 창병. 기본 회피 확률 +8%."
+    },
+    {
+      "key": "class_sancho",
+      "type": "class",
+      "id": "sancho",
+      "name": "산초의 방패지기",
+      "file": "class_sancho.webp",
+      "reuse": null,
+      "prompt": "Use case: stylized-concept. Create ONE vertical 2:3 full-bleed illustrated card for a mobile dark fantasy RPG. Cinematic painterly Victorian gothic, detailed weathered textures, teal shadows, warm amber accents. Readable centered subject, identifying features visible. No text, letters, UI, logos, watermark, card frame or collage. Stocky practical peasant squire, warm round face and short dark beard, padded brown coat, huge round wooden shield with iron boss protecting his whole torso, simple short sword kept low, healing amber glow at shield edge, humble donkey and roadside camp behind him. NOT a slim noble knight."
+    },
+    {
+      "key": "class_coffin",
+      "type": "class",
+      "id": "coffin",
+      "name": "빈 관의 파수꾼",
+      "file": "class_coffin.webp",
+      "reuse": "character-5.webp",
+      "prompt": "Use case: stylized-concept. Create ONE vertical 2:3 full-bleed illustrated card for a mobile dark fantasy RPG. Cinematic painterly Victorian gothic, detailed weathered textures, teal shadows, warm amber accents. Readable centered subject, identifying features visible. No text, letters, UI, logos, watermark, card frame or collage. 빈 관의 파수꾼. 적의 공격을 받으면 피해 3 반사."
+    },
+    {
+      "key": "class_mirror_fist",
+      "type": "class",
+      "id": "mirror_fist",
+      "name": "거울 복도의 권투사",
+      "file": "class_mirror_fist.webp",
+      "reuse": null,
+      "prompt": "Use case: stylized-concept. Create ONE vertical 2:3 full-bleed illustrated card for a mobile dark fantasy RPG. Cinematic painterly Victorian gothic, detailed weathered textures, teal shadows, warm amber accents. Readable centered subject, identifying features visible. No text, letters, UI, logos, watermark, card frame or collage. Athletic barehanded boxer in wrapped fists, dark sleeveless Victorian vest, lunging fist fractures a tall mirror, reflected fist trails behind, mirrored corridor. No sword or staff."
+    },
+    {
+      "key": "class_ahab_harpoon",
+      "type": "class",
+      "id": "ahab_harpoon",
+      "name": "광기에 찬 포경선 작살잡이",
+      "file": "class_ahab_harpoon.webp",
+      "reuse": null,
+      "prompt": "Use case: stylized-concept. Create ONE vertical 2:3 full-bleed illustrated card for a mobile dark fantasy RPG. Cinematic painterly Victorian gothic, detailed weathered textures, teal shadows, warm amber accents. Readable centered subject, identifying features visible. No text, letters, UI, logos, watermark, card frame or collage. Obsessed weathered elderly whaler with grey beard and ivory prosthetic leg, gripping a long barbed whaling harpoon and coiled rope, white whale silhouette and storm deck."
+    },
+    {
+      "key": "class_fallen_dreamer",
+      "type": "class",
+      "id": "fallen_dreamer",
+      "name": "기사도를 잃은 몽상가",
+      "file": "class_fallen_dreamer.webp",
+      "reuse": null,
+      "prompt": "Use case: stylized-concept. Create ONE vertical 2:3 full-bleed illustrated card for a mobile dark fantasy RPG. Cinematic painterly Victorian gothic, detailed weathered textures, teal shadows, warm amber accents. Readable centered subject, identifying features visible. No text, letters, UI, logos, watermark, card frame or collage. Gaunt exhausted knight in dented mismatched plate, broken lance and torn faded pennant, kneeling then rising defiantly amid toppled windmill, dry ochre palette."
+    },
+    {
+      "key": "class_queen_exec",
+      "type": "class",
+      "id": "queen_exec",
+      "name": "하트 법정의 참수인",
+      "file": "class_queen_exec.webp",
+      "reuse": null,
+      "prompt": "Use case: stylized-concept. Create ONE vertical 2:3 full-bleed illustrated card for a mobile dark fantasy RPG. Cinematic painterly Victorian gothic, detailed weathered textures, teal shadows, warm amber accents. Readable centered subject, identifying features visible. No text, letters, UI, logos, watermark, card frame or collage. Masked heart-court executioner in red-black heraldic attire, enormous single execution blade held upright, heart-shaped seal and courthouse columns, no gore."
+    },
+    {
+      "key": "class_adam_sword",
+      "type": "class",
+      "id": "adam_sword",
+      "name": "피조물의 자유검사",
+      "file": "class_adam_sword.webp",
+      "reuse": null,
+      "prompt": "Use case: stylized-concept. Create ONE vertical 2:3 full-bleed illustrated card for a mobile dark fantasy RPG. Cinematic painterly Victorian gothic, detailed weathered textures, teal shadows, warm amber accents. Readable centered subject, identifying features visible. No text, letters, UI, logos, watermark, card frame or collage. Gentle imposing stitched human creation with clearly visible healed seams, open patched shirt and liberating steel sword, broken manacles, blue laboratory light, dignified self-determination."
+    },
+    {
+      "key": "class_twin_duel",
+      "type": "class",
+      "id": "twin_duel",
+      "name": "지킬의 이중 결투자",
+      "file": "class_twin_duel.webp",
+      "reuse": null,
+      "prompt": "Use case: stylized-concept. Create ONE vertical 2:3 full-bleed illustrated card for a mobile dark fantasy RPG. Cinematic painterly Victorian gothic, detailed weathered textures, teal shadows, warm amber accents. Readable centered subject, identifying features visible. No text, letters, UI, logos, watermark, card frame or collage. Victorian gentleman fencer with one half refined face and other half feral shadow, slim rapier and second spectral blade, green potion in belt, gaslit London street."
+    },
+    {
+      "key": "class_white_knight",
+      "type": "class",
+      "id": "white_knight",
+      "name": "백기사의 균형검",
+      "file": "class_white_knight.webp",
+      "reuse": null,
+      "prompt": "Use case: stylized-concept. Create ONE vertical 2:3 full-bleed illustrated card for a mobile dark fantasy RPG. Cinematic painterly Victorian gothic, detailed weathered textures, teal shadows, warm amber accents. Readable centered subject, identifying features visible. No text, letters, UI, logos, watermark, card frame or collage. White-armoured elderly eccentric knight, elegant balanced sword, small brass gadgets and improvised mechanical counterweights on armour, white horse silhouette, silver pale gold palette."
+    },
+    {
+      "key": "class_grave_hunter",
+      "type": "class",
+      "id": "grave_hunter",
+      "name": "성당 지하의 사냥꾼",
+      "file": "class_grave_hunter.webp",
+      "reuse": null,
+      "prompt": "Use case: stylized-concept. Create ONE vertical 2:3 full-bleed illustrated card for a mobile dark fantasy RPG. Cinematic painterly Victorian gothic, detailed weathered textures, teal shadows, warm amber accents. Readable centered subject, identifying features visible. No text, letters, UI, logos, watermark, card frame or collage. Cathedral crypt vampire hunter, wide-brim worn black hat, leather coat, silver sword and wooden stakes, small crossbow at belt, candlelit crypt and gothic arches."
+    },
+    {
+      "key": "class_pagebreaker",
+      "type": "class",
+      "id": "pagebreaker",
+      "name": "끝장을 찢는 검성",
+      "file": "class_pagebreaker.webp",
+      "reuse": null,
+      "prompt": "Use case: stylized-concept. Create ONE vertical 2:3 full-bleed illustrated card for a mobile dark fantasy RPG. Cinematic painterly Victorian gothic, detailed weathered textures, teal shadows, warm amber accents. Readable centered subject, identifying features visible. No text, letters, UI, logos, watermark, card frame or collage. Master swordsman cutting through enormous floating book pages and heavy binding chains, long luminous steel blade, ink-black coat, torn parchment flaring like wings."
+    },
+    {
+      "key": "class_abyss_anchor",
+      "type": "class",
+      "id": "abyss_anchor",
+      "name": "심연을 고정하는 닻기사",
+      "file": "class_abyss_anchor.webp",
+      "reuse": null,
+      "prompt": "Use case: stylized-concept. Create ONE vertical 2:3 full-bleed illustrated card for a mobile dark fantasy RPG. Cinematic painterly Victorian gothic, detailed weathered textures, teal shadows, warm amber accents. Readable centered subject, identifying features visible. No text, letters, UI, logos, watermark, card frame or collage. Massive deep-sea knight in barnacle-encrusted diving armour wielding a heavy iron anchor, chains, blue-green abyss and drowned ruins, round diving helmet silhouette."
+    },
+    {
+      "key": "class_clock_reaver",
+      "type": "class",
+      "id": "clock_reaver",
+      "name": "멈춘 시계의 결투왕",
+      "file": "class_clock_reaver.webp",
+      "reuse": null,
+      "prompt": "Use case: stylized-concept. Create ONE vertical 2:3 full-bleed illustrated card for a mobile dark fantasy RPG. Cinematic painterly Victorian gothic, detailed weathered textures, teal shadows, warm amber accents. Readable centered subject, identifying features visible. No text, letters, UI, logos, watermark, card frame or collage. Regal swift duelist with narrow gold rapier shaped like a clock hand, dark tailored coat, stopped giant clock dial behind, suspended glass and gears, dynamic fencing stance."
+    },
+    {
+      "key": "class_thorn_crown",
+      "type": "class",
+      "id": "thorn_crown",
+      "name": "가시 왕관의 반역자",
+      "file": "class_thorn_crown.webp",
+      "reuse": null,
+      "prompt": "Use case: stylized-concept. Create ONE vertical 2:3 full-bleed illustrated card for a mobile dark fantasy RPG. Cinematic painterly Victorian gothic, detailed weathered textures, teal shadows, warm amber accents. Readable centered subject, identifying features visible. No text, letters, UI, logos, watermark, card frame or collage. Rebel warrior wearing painful-looking thorn crown but no gore, ragged burgundy cloak, burning sword and broken royal insignia, ember thorns curling outward, defiant against throne."
+    },
+    {
+      "key": "class_last_margin",
+      "type": "class",
+      "id": "last_margin",
+      "name": "마지막 여백의 용병왕",
+      "file": "class_last_margin.webp",
+      "reuse": null,
+      "prompt": "Use case: stylized-concept. Create ONE vertical 2:3 full-bleed illustrated card for a mobile dark fantasy RPG. Cinematic painterly Victorian gothic, detailed weathered textures, teal shadows, warm amber accents. Readable centered subject, identifying features visible. No text, letters, UI, logos, watermark, card frame or collage. Veteran mercenary captain in patched layered armour, broad practical sword, coin purse and rolled contracts, protecting a band of refugees at page-like city walls, warm grounded gold."
+    },
+    {
+      "key": "enemy_01",
+      "type": "enemy",
+      "id": "굶주린 늑대",
+      "name": "굶주린 늑대",
+      "file": "enemy_01.webp",
+      "reuse": "monster-0.webp",
+      "prompt": "Use case: stylized-concept. Create ONE vertical 2:3 full-bleed illustrated card for a mobile dark fantasy RPG. Cinematic painterly Victorian gothic, detailed weathered textures, teal shadows, warm amber accents. Readable centered subject, identifying features visible. No text, letters, UI, logos, watermark, card frame or collage. Gaunt hungry grey wolf in thorn forest. Threatening enemy encounter, single clearly readable creature."
+    },
+    {
+      "key": "enemy_02",
+      "type": "enemy",
+      "id": "가시 고블린",
+      "name": "가시 고블린",
+      "file": "enemy_02.webp",
+      "reuse": "monster-1.webp",
+      "prompt": "Use case: stylized-concept. Create ONE vertical 2:3 full-bleed illustrated card for a mobile dark fantasy RPG. Cinematic painterly Victorian gothic, detailed weathered textures, teal shadows, warm amber accents. Readable centered subject, identifying features visible. No text, letters, UI, logos, watermark, card frame or collage. Small thorn-covered goblin with crooked dagger in forest. Threatening enemy encounter, single clearly readable creature."
+    },
+    {
+      "key": "enemy_03",
+      "type": "enemy",
+      "id": "추방된 사냥꾼",
+      "name": "추방된 사냥꾼",
+      "file": "enemy_03.webp",
+      "reuse": "monster-2.webp",
+      "prompt": "Use case: stylized-concept. Create ONE vertical 2:3 full-bleed illustrated card for a mobile dark fantasy RPG. Cinematic painterly Victorian gothic, detailed weathered textures, teal shadows, warm amber accents. Readable centered subject, identifying features visible. No text, letters, UI, logos, watermark, card frame or collage. Exiled human hunter in tattered green hood holding bow. Threatening enemy encounter, single clearly readable creature."
+    },
+    {
+      "key": "enemy_04",
+      "type": "enemy",
+      "id": "흙의 정령",
+      "name": "흙의 정령",
+      "file": "enemy_04.webp",
+      "reuse": "monster-3.webp",
+      "prompt": "Use case: stylized-concept. Create ONE vertical 2:3 full-bleed illustrated card for a mobile dark fantasy RPG. Cinematic painterly Victorian gothic, detailed weathered textures, teal shadows, warm amber accents. Readable centered subject, identifying features visible. No text, letters, UI, logos, watermark, card frame or collage. Humanoid spirit made of soil roots and floating rocks. Threatening enemy encounter, single clearly readable creature."
+    },
+    {
+      "key": "enemy_05",
+      "type": "enemy",
+      "id": "잿빛 약탈자",
+      "name": "잿빛 약탈자",
+      "file": "enemy_05.webp",
+      "reuse": null,
+      "prompt": "Use case: stylized-concept. Create ONE vertical 2:3 full-bleed illustrated card for a mobile dark fantasy RPG. Cinematic painterly Victorian gothic, detailed weathered textures, teal shadows, warm amber accents. Readable centered subject, identifying features visible. No text, letters, UI, logos, watermark, card frame or collage. Ash-grey human raider with crude axe in deserted village. Threatening enemy encounter, single clearly readable creature."
+    },
+    {
+      "key": "enemy_06",
+      "type": "enemy",
+      "id": "저주받은 주민",
+      "name": "저주받은 주민",
+      "file": "enemy_06.webp",
+      "reuse": null,
+      "prompt": "Use case: stylized-concept. Create ONE vertical 2:3 full-bleed illustrated card for a mobile dark fantasy RPG. Cinematic painterly Victorian gothic, detailed weathered textures, teal shadows, warm amber accents. Readable centered subject, identifying features visible. No text, letters, UI, logos, watermark, card frame or collage. Cursed pale villager with haunted glowing eyes and ragged work clothes, no gore. Threatening enemy encounter, single clearly readable creature."
+    },
+    {
+      "key": "enemy_07",
+      "type": "enemy",
+      "id": "빈 갑옷",
+      "name": "빈 갑옷",
+      "file": "enemy_07.webp",
+      "reuse": null,
+      "prompt": "Use case: stylized-concept. Create ONE vertical 2:3 full-bleed illustrated card for a mobile dark fantasy RPG. Cinematic painterly Victorian gothic, detailed weathered textures, teal shadows, warm amber accents. Readable centered subject, identifying features visible. No text, letters, UI, logos, watermark, card frame or collage. Empty hollow suit of medieval armour, visibly no body within. Threatening enemy encounter, single clearly readable creature."
+    },
+    {
+      "key": "enemy_08",
+      "type": "enemy",
+      "id": "종탑의 까마귀",
+      "name": "종탑의 까마귀",
+      "file": "enemy_08.webp",
+      "reuse": null,
+      "prompt": "Use case: stylized-concept. Create ONE vertical 2:3 full-bleed illustrated card for a mobile dark fantasy RPG. Cinematic painterly Victorian gothic, detailed weathered textures, teal shadows, warm amber accents. Readable centered subject, identifying features visible. No text, letters, UI, logos, watermark, card frame or collage. Enormous black raven with spread wings on ruined bell tower. Threatening enemy encounter, single clearly readable creature."
+    },
+    {
+      "key": "enemy_09",
+      "type": "enemy",
+      "id": "독안개 망령",
+      "name": "독안개 망령",
+      "file": "enemy_09.webp",
+      "reuse": null,
+      "prompt": "Use case: stylized-concept. Create ONE vertical 2:3 full-bleed illustrated card for a mobile dark fantasy RPG. Cinematic painterly Victorian gothic, detailed weathered textures, teal shadows, warm amber accents. Readable centered subject, identifying features visible. No text, letters, UI, logos, watermark, card frame or collage. Poison-mist wraith made of translucent sickly-green fog over swamp. Threatening enemy encounter, single clearly readable creature."
+    },
+    {
+      "key": "enemy_10",
+      "type": "enemy",
+      "id": "늪의 포식자",
+      "name": "늪의 포식자",
+      "file": "enemy_10.webp",
+      "reuse": null,
+      "prompt": "Use case: stylized-concept. Create ONE vertical 2:3 full-bleed illustrated card for a mobile dark fantasy RPG. Cinematic painterly Victorian gothic, detailed weathered textures, teal shadows, warm amber accents. Readable centered subject, identifying features visible. No text, letters, UI, logos, watermark, card frame or collage. Huge amphibious crocodilian swamp predator with long jaws and mossy scales. Threatening enemy encounter, single clearly readable creature."
+    },
+    {
+      "key": "enemy_11",
+      "type": "enemy",
+      "id": "수정 거미",
+      "name": "수정 거미",
+      "file": "enemy_11.webp",
+      "reuse": "monster-5.webp",
+      "prompt": "Use case: stylized-concept. Create ONE vertical 2:3 full-bleed illustrated card for a mobile dark fantasy RPG. Cinematic painterly Victorian gothic, detailed weathered textures, teal shadows, warm amber accents. Readable centered subject, identifying features visible. No text, letters, UI, logos, watermark, card frame or collage. Giant eight-legged translucent crystal spider, violet crystalline body. Threatening enemy encounter, single clearly readable creature."
+    },
+    {
+      "key": "enemy_12",
+      "type": "enemy",
+      "id": "이끼 골렘",
+      "name": "이끼 골렘",
+      "file": "enemy_12.webp",
+      "reuse": null,
+      "prompt": "Use case: stylized-concept. Create ONE vertical 2:3 full-bleed illustrated card for a mobile dark fantasy RPG. Cinematic painterly Victorian gothic, detailed weathered textures, teal shadows, warm amber accents. Readable centered subject, identifying features visible. No text, letters, UI, logos, watermark, card frame or collage. Massive moss-covered stone golem rising from swamp. Threatening enemy encounter, single clearly readable creature."
+    },
+    {
+      "key": "enemy_13",
+      "type": "enemy",
+      "id": "왕의 처형인",
+      "name": "왕의 처형인",
+      "file": "enemy_13.webp",
+      "reuse": null,
+      "prompt": "Use case: stylized-concept. Create ONE vertical 2:3 full-bleed illustrated card for a mobile dark fantasy RPG. Cinematic painterly Victorian gothic, detailed weathered textures, teal shadows, warm amber accents. Readable centered subject, identifying features visible. No text, letters, UI, logos, watermark, card frame or collage. Royal executioner with black hood and enormous axe in ruined castle. Threatening enemy encounter, single clearly readable creature."
+    },
+    {
+      "key": "enemy_14",
+      "type": "enemy",
+      "id": "타락한 수호자",
+      "name": "타락한 수호자",
+      "file": "enemy_14.webp",
+      "reuse": null,
+      "prompt": "Use case: stylized-concept. Create ONE vertical 2:3 full-bleed illustrated card for a mobile dark fantasy RPG. Cinematic painterly Victorian gothic, detailed weathered textures, teal shadows, warm amber accents. Readable centered subject, identifying features visible. No text, letters, UI, logos, watermark, card frame or collage. Fallen winged guardian with cracked stone armour and broken halo. Threatening enemy encounter, single clearly readable creature."
+    },
+    {
+      "key": "enemy_15",
+      "type": "enemy",
+      "id": "검은 기사",
+      "name": "검은 기사",
+      "file": "enemy_15.webp",
+      "reuse": null,
+      "prompt": "Use case: stylized-concept. Create ONE vertical 2:3 full-bleed illustrated card for a mobile dark fantasy RPG. Cinematic painterly Victorian gothic, detailed weathered textures, teal shadows, warm amber accents. Readable centered subject, identifying features visible. No text, letters, UI, logos, watermark, card frame or collage. Black armoured mounted-looking knight on foot with long dark sword. Threatening enemy encounter, single clearly readable creature."
+    },
+    {
+      "key": "enemy_16",
+      "type": "enemy",
+      "id": "기억을 먹는 자",
+      "name": "기억을 먹는 자",
+      "file": "enemy_16.webp",
+      "reuse": null,
+      "prompt": "Use case: stylized-concept. Create ONE vertical 2:3 full-bleed illustrated card for a mobile dark fantasy RPG. Cinematic painterly Victorian gothic, detailed weathered textures, teal shadows, warm amber accents. Readable centered subject, identifying features visible. No text, letters, UI, logos, watermark, card frame or collage. Faceless memory-eater whose mouth pulls luminous fragments from floating ghostly memories. Threatening enemy encounter, single clearly readable creature."
+    },
+    {
+      "key": "enemy_17",
+      "type": "enemy",
+      "id": "유리 전갈",
+      "name": "유리 전갈",
+      "file": "enemy_17.webp",
+      "reuse": null,
+      "prompt": "Use case: stylized-concept. Create ONE vertical 2:3 full-bleed illustrated card for a mobile dark fantasy RPG. Cinematic painterly Victorian gothic, detailed weathered textures, teal shadows, warm amber accents. Readable centered subject, identifying features visible. No text, letters, UI, logos, watermark, card frame or collage. Giant clear-glass scorpion with ruby venom tail in red sand. Threatening enemy encounter, single clearly readable creature."
+    },
+    {
+      "key": "enemy_18",
+      "type": "enemy",
+      "id": "모래 도적",
+      "name": "모래 도적",
+      "file": "enemy_18.webp",
+      "reuse": null,
+      "prompt": "Use case: stylized-concept. Create ONE vertical 2:3 full-bleed illustrated card for a mobile dark fantasy RPG. Cinematic painterly Victorian gothic, detailed weathered textures, teal shadows, warm amber accents. Readable centered subject, identifying features visible. No text, letters, UI, logos, watermark, card frame or collage. Desert bandit in sand-wrapped scarf with curved scimitar. Threatening enemy encounter, single clearly readable creature."
+    },
+    {
+      "key": "enemy_19",
+      "type": "enemy",
+      "id": "미라 사제",
+      "name": "미라 사제",
+      "file": "enemy_19.webp",
+      "reuse": null,
+      "prompt": "Use case: stylized-concept. Create ONE vertical 2:3 full-bleed illustrated card for a mobile dark fantasy RPG. Cinematic painterly Victorian gothic, detailed weathered textures, teal shadows, warm amber accents. Readable centered subject, identifying features visible. No text, letters, UI, logos, watermark, card frame or collage. Ancient mummy priest in linen wraps with golden ritual staff, desert ruins. Threatening enemy encounter, single clearly readable creature."
+    },
+    {
+      "key": "enemy_20",
+      "type": "enemy",
+      "id": "붉은 독수리",
+      "name": "붉은 독수리",
+      "file": "enemy_20.webp",
+      "reuse": null,
+      "prompt": "Use case: stylized-concept. Create ONE vertical 2:3 full-bleed illustrated card for a mobile dark fantasy RPG. Cinematic painterly Victorian gothic, detailed weathered textures, teal shadows, warm amber accents. Readable centered subject, identifying features visible. No text, letters, UI, logos, watermark, card frame or collage. Enormous crimson-feathered vulture hovering over desert skull-shaped rocks. Threatening enemy encounter, single clearly readable creature."
+    },
+    {
+      "key": "enemy_21",
+      "type": "enemy",
+      "id": "잉크 망령",
+      "name": "잉크 망령",
+      "file": "enemy_21.webp",
+      "reuse": null,
+      "prompt": "Use case: stylized-concept. Create ONE vertical 2:3 full-bleed illustrated card for a mobile dark fantasy RPG. Cinematic painterly Victorian gothic, detailed weathered textures, teal shadows, warm amber accents. Readable centered subject, identifying features visible. No text, letters, UI, logos, watermark, card frame or collage. Spectral figure made entirely of flowing black ink among bookshelves. Threatening enemy encounter, single clearly readable creature."
+    },
+    {
+      "key": "enemy_22",
+      "type": "enemy",
+      "id": "종이 수호자",
+      "name": "종이 수호자",
+      "file": "enemy_22.webp",
+      "reuse": null,
+      "prompt": "Use case: stylized-concept. Create ONE vertical 2:3 full-bleed illustrated card for a mobile dark fantasy RPG. Cinematic painterly Victorian gothic, detailed weathered textures, teal shadows, warm amber accents. Readable centered subject, identifying features visible. No text, letters, UI, logos, watermark, card frame or collage. Armoured guardian folded entirely from cream parchment pages, paper sword. Threatening enemy encounter, single clearly readable creature."
+    },
+    {
+      "key": "enemy_23",
+      "type": "enemy",
+      "id": "사라진 학자",
+      "name": "사라진 학자",
+      "file": "enemy_23.webp",
+      "reuse": null,
+      "prompt": "Use case: stylized-concept. Create ONE vertical 2:3 full-bleed illustrated card for a mobile dark fantasy RPG. Cinematic painterly Victorian gothic, detailed weathered textures, teal shadows, warm amber accents. Readable centered subject, identifying features visible. No text, letters, UI, logos, watermark, card frame or collage. Lost spectral scholar with spectacles carrying forbidden books in moon library. Threatening enemy encounter, single clearly readable creature."
+    },
+    {
+      "key": "enemy_24",
+      "type": "enemy",
+      "id": "달빛 인형",
+      "name": "달빛 인형",
+      "file": "enemy_24.webp",
+      "reuse": null,
+      "prompt": "Use case: stylized-concept. Create ONE vertical 2:3 full-bleed illustrated card for a mobile dark fantasy RPG. Cinematic painterly Victorian gothic, detailed weathered textures, teal shadows, warm amber accents. Readable centered subject, identifying features visible. No text, letters, UI, logos, watermark, card frame or collage. Uncanny porcelain doll with moonlit silver joints and blue dress. Threatening enemy encounter, single clearly readable creature."
+    },
+    {
+      "key": "enemy_25",
+      "type": "enemy",
+      "id": "철의 거인",
+      "name": "철의 거인",
+      "file": "enemy_25.webp",
+      "reuse": null,
+      "prompt": "Use case: stylized-concept. Create ONE vertical 2:3 full-bleed illustrated card for a mobile dark fantasy RPG. Cinematic painterly Victorian gothic, detailed weathered textures, teal shadows, warm amber accents. Readable centered subject, identifying features visible. No text, letters, UI, logos, watermark, card frame or collage. Towering iron giant with riveted metal plates and furnace core. Threatening enemy encounter, single clearly readable creature."
+    },
+    {
+      "key": "enemy_26",
+      "type": "enemy",
+      "id": "불꽃 악령",
+      "name": "불꽃 악령",
+      "file": "enemy_26.webp",
+      "reuse": null,
+      "prompt": "Use case: stylized-concept. Create ONE vertical 2:3 full-bleed illustrated card for a mobile dark fantasy RPG. Cinematic painterly Victorian gothic, detailed weathered textures, teal shadows, warm amber accents. Readable centered subject, identifying features visible. No text, letters, UI, logos, watermark, card frame or collage. Writhing demonic spirit of orange flame and black smoke in forge. Threatening enemy encounter, single clearly readable creature."
+    },
+    {
+      "key": "enemy_27",
+      "type": "enemy",
+      "id": "검댕 사냥개",
+      "name": "검댕 사냥개",
+      "file": "enemy_27.webp",
+      "reuse": null,
+      "prompt": "Use case: stylized-concept. Create ONE vertical 2:3 full-bleed illustrated card for a mobile dark fantasy RPG. Cinematic painterly Victorian gothic, detailed weathered textures, teal shadows, warm amber accents. Readable centered subject, identifying features visible. No text, letters, UI, logos, watermark, card frame or collage. Soot-black hunting hound with ember eyes and smoke fur. Threatening enemy encounter, single clearly readable creature."
+    },
+    {
+      "key": "enemy_28",
+      "type": "enemy",
+      "id": "쇳물 기사",
+      "name": "쇳물 기사",
+      "file": "enemy_28.webp",
+      "reuse": null,
+      "prompt": "Use case: stylized-concept. Create ONE vertical 2:3 full-bleed illustrated card for a mobile dark fantasy RPG. Cinematic painterly Victorian gothic, detailed weathered textures, teal shadows, warm amber accents. Readable centered subject, identifying features visible. No text, letters, UI, logos, watermark, card frame or collage. Knight with molten-steel armour and glowing orange seams carrying heated sword. Threatening enemy encounter, single clearly readable creature."
+    },
+    {
+      "key": "enemy_29",
+      "type": "enemy",
+      "id": "무명의 왕",
+      "name": "무명의 왕",
+      "file": "enemy_29.webp",
+      "reuse": null,
+      "prompt": "Use case: stylized-concept. Create ONE vertical 2:3 full-bleed illustrated card for a mobile dark fantasy RPG. Cinematic painterly Victorian gothic, detailed weathered textures, teal shadows, warm amber accents. Readable centered subject, identifying features visible. No text, letters, UI, logos, watermark, card frame or collage. Nameless hollow king with featureless golden mask on dark throne. Threatening enemy encounter, single clearly readable creature."
+    },
+    {
+      "key": "enemy_30",
+      "type": "enemy",
+      "id": "시간의 파수병",
+      "name": "시간의 파수병",
+      "file": "enemy_30.webp",
+      "reuse": null,
+      "prompt": "Use case: stylized-concept. Create ONE vertical 2:3 full-bleed illustrated card for a mobile dark fantasy RPG. Cinematic painterly Victorian gothic, detailed weathered textures, teal shadows, warm amber accents. Readable centered subject, identifying features visible. No text, letters, UI, logos, watermark, card frame or collage. Clockwork time sentinel with cogwheel spear and hourglass chest. Threatening enemy encounter, single clearly readable creature."
+    },
+    {
+      "key": "enemy_31",
+      "type": "enemy",
+      "id": "공허의 기사",
+      "name": "공허의 기사",
+      "file": "enemy_31.webp",
+      "reuse": null,
+      "prompt": "Use case: stylized-concept. Create ONE vertical 2:3 full-bleed illustrated card for a mobile dark fantasy RPG. Cinematic painterly Victorian gothic, detailed weathered textures, teal shadows, warm amber accents. Readable centered subject, identifying features visible. No text, letters, UI, logos, watermark, card frame or collage. Void knight whose armour contains a starless abyss, black lance. Threatening enemy encounter, single clearly readable creature."
+    },
+    {
+      "key": "enemy_32",
+      "type": "enemy",
+      "id": "검은 태양의 사도",
+      "name": "검은 태양의 사도",
+      "file": "enemy_32.webp",
+      "reuse": null,
+      "prompt": "Use case: stylized-concept. Create ONE vertical 2:3 full-bleed illustrated card for a mobile dark fantasy RPG. Cinematic painterly Victorian gothic, detailed weathered textures, teal shadows, warm amber accents. Readable centered subject, identifying features visible. No text, letters, UI, logos, watermark, card frame or collage. Priest of black sun with eclipse halo and sun-shaped staff. Threatening enemy encounter, single clearly readable creature."
+    },
+    {
+      "key": "enemy_mimic",
+      "type": "enemy",
+      "id": "보급함 미믹",
+      "name": "보급함 미믹",
+      "file": "enemy_mimic.webp",
+      "prompt": "Use case: stylized-concept. Create ONE vertical 2:3 full-bleed illustrated card for a mobile dark fantasy RPG. Cinematic painterly Victorian gothic, detailed weathered textures, teal shadows, warm amber accents. Readable centered subject, identifying features visible. No text, letters, UI, logos, watermark, card frame or collage. A battered wooden supply chest transformed into a mimic monster, lid opens as toothy mouth with long tongue, clawed feet, forest path. No human character."
+    },
+    {
+      "key": "boss_00",
+      "type": "boss",
+      "id": "가시의 파수꾼",
+      "name": "가시의 파수꾼",
+      "file": "boss_00.webp",
+      "prompt": "Use case: stylized-concept. Create ONE vertical 2:3 full-bleed illustrated card for a mobile dark fantasy RPG. Cinematic painterly Victorian gothic, detailed weathered textures, teal shadows, warm amber accents. Readable centered subject, identifying features visible. No text, letters, UI, logos, watermark, card frame or collage. Colossal thorn-and-bark sentinel with antlers, tangled roots and dim ember heart guarding a black forest gate. Epic boss scale, imposing silhouette."
+    },
+    {
+      "key": "boss_01",
+      "type": "boss",
+      "id": "종지기 모르",
+      "name": "종지기 모르",
+      "file": "boss_01.webp",
+      "prompt": "Use case: stylized-concept. Create ONE vertical 2:3 full-bleed illustrated card for a mobile dark fantasy RPG. Cinematic painterly Victorian gothic, detailed weathered textures, teal shadows, warm amber accents. Readable centered subject, identifying features visible. No text, letters, UI, logos, watermark, card frame or collage. Hunchback bell keeper Mor holding an enormous iron bell hammer, bronze bell strapped to back, haunted village bell tower. Epic boss scale, imposing silhouette."
+    },
+    {
+      "key": "boss_02",
+      "type": "boss",
+      "id": "거울의 마녀",
+      "name": "거울의 마녀",
+      "file": "boss_02.webp",
+      "prompt": "Use case: stylized-concept. Create ONE vertical 2:3 full-bleed illustrated card for a mobile dark fantasy RPG. Cinematic painterly Victorian gothic, detailed weathered textures, teal shadows, warm amber accents. Readable centered subject, identifying features visible. No text, letters, UI, logos, watermark, card frame or collage. Regal mirror witch in fractured silver gown, floating mirror shards reflect many eyes above glass swamp. Epic boss scale, imposing silhouette."
+    },
+    {
+      "key": "boss_03",
+      "type": "boss",
+      "id": "하트 여왕의 집행관",
+      "name": "하트 여왕의 집행관",
+      "file": "boss_03.webp",
+      "prompt": "Use case: stylized-concept. Create ONE vertical 2:3 full-bleed illustrated card for a mobile dark fantasy RPG. Cinematic painterly Victorian gothic, detailed weathered textures, teal shadows, warm amber accents. Readable centered subject, identifying features visible. No text, letters, UI, logos, watermark, card frame or collage. Heart Queen royal enforcer in red-black heart heraldry, towering ceremonial poleaxe, heart-shaped mask, oppressive red court. Epic boss scale, imposing silhouette."
+    },
+    {
+      "key": "boss_04",
+      "type": "boss",
+      "id": "사막의 예언자",
+      "name": "사막의 예언자",
+      "file": "boss_04.webp",
+      "prompt": "Use case: stylized-concept. Create ONE vertical 2:3 full-bleed illustrated card for a mobile dark fantasy RPG. Cinematic painterly Victorian gothic, detailed weathered textures, teal shadows, warm amber accents. Readable centered subject, identifying features visible. No text, letters, UI, logos, watermark, card frame or collage. Ancient veiled desert prophet with ornate staff, floating sand constellations, red dunes and buried city. Epic boss scale, imposing silhouette."
+    },
+    {
+      "key": "boss_05",
+      "type": "boss",
+      "id": "금서의 사서",
+      "name": "금서의 사서",
+      "file": "boss_05.webp",
+      "prompt": "Use case: stylized-concept. Create ONE vertical 2:3 full-bleed illustrated card for a mobile dark fantasy RPG. Cinematic painterly Victorian gothic, detailed weathered textures, teal shadows, warm amber accents. Readable centered subject, identifying features visible. No text, letters, UI, logos, watermark, card frame or collage. Forbidden librarian with long parchment robes and orbiting sealed occult books, moon library. Epic boss scale, imposing silhouette."
+    },
+    {
+      "key": "boss_06",
+      "type": "boss",
+      "id": "빅터의 봉합 거인",
+      "name": "빅터의 봉합 거인",
+      "file": "boss_06.webp",
+      "prompt": "Use case: stylized-concept. Create ONE vertical 2:3 full-bleed illustrated card for a mobile dark fantasy RPG. Cinematic painterly Victorian gothic, detailed weathered textures, teal shadows, warm amber accents. Readable centered subject, identifying features visible. No text, letters, UI, logos, watermark, card frame or collage. Victor Frankenstein stitched colossus assembled from immense humanoid limbs and brass machinery, blue electricity and furnace, healed seams no gore. Epic boss scale, imposing silhouette."
+    },
+    {
+      "key": "boss_07",
+      "type": "boss",
+      "id": "결말을 먹는 편집자",
+      "name": "결말을 먹는 편집자",
+      "file": "boss_07.webp",
+      "prompt": "Use case: stylized-concept. Create ONE vertical 2:3 full-bleed illustrated card for a mobile dark fantasy RPG. Cinematic painterly Victorian gothic, detailed weathered textures, teal shadows, warm amber accents. Readable centered subject, identifying features visible. No text, letters, UI, logos, watermark, card frame or collage. Cosmic editor devouring the final pages of reality, faceless hooded figure with giant quill and floating book jaws, eclipse throne. Epic boss scale, imposing silhouette."
+    },
+    {
+      "key": "boss_rift",
+      "type": "boss",
+      "id": "이름을 지운 자",
+      "name": "이름을 지운 자",
+      "file": "boss_rift.webp",
+      "prompt": "Use case: stylized-concept. Create ONE vertical 2:3 full-bleed illustrated card for a mobile dark fantasy RPG. Cinematic painterly Victorian gothic, detailed weathered textures, teal shadows, warm amber accents. Readable centered subject, identifying features visible. No text, letters, UI, logos, watermark, card frame or collage. Faceless gatekeeper erasing their own silhouette into torn blank paper, white empty mask, long black cloak, starless corridor and floating vanished name fragments without readable text."
+    },
+    {
+      "key": "event_00",
+      "type": "event",
+      "id": 0,
+      "name": "부상당한 사냥꾼",
+      "file": "event_00.webp",
+      "prompt": "Use case: stylized-concept. Create ONE vertical 2:3 full-bleed illustrated card for a mobile dark fantasy RPG. Cinematic painterly Victorian gothic, detailed weathered textures, teal shadows, warm amber accents. Readable centered subject, identifying features visible. No text, letters, UI, logos, watermark, card frame or collage. Injured hunter trapped under an overturned wooden cart, reaching for help, forest road, no gore. Narrative environment illustration, show the situation clearly, not a character portrait."
+    },
+    {
+      "key": "event_01",
+      "type": "event",
+      "id": 1,
+      "name": "검은 제단",
+      "file": "event_01.webp",
+      "prompt": "Use case: stylized-concept. Create ONE vertical 2:3 full-bleed illustrated card for a mobile dark fantasy RPG. Cinematic painterly Victorian gothic, detailed weathered textures, teal shadows, warm amber accents. Readable centered subject, identifying features visible. No text, letters, UI, logos, watermark, card frame or collage. Ancient black sacrificial altar with an empty bowl and ember light, ominous forest stone circle. Narrative environment illustration, show the situation clearly, not a character portrait."
+    },
+    {
+      "key": "event_02",
+      "type": "event",
+      "id": 2,
+      "name": "돌아갈 곳",
+      "file": "event_02.webp",
+      "prompt": "Use case: stylized-concept. Create ONE vertical 2:3 full-bleed illustrated card for a mobile dark fantasy RPG. Cinematic painterly Victorian gothic, detailed weathered textures, teal shadows, warm amber accents. Readable centered subject, identifying features visible. No text, letters, UI, logos, watermark, card frame or collage. Small translucent child ghost pointing toward ruined foundations of a lost home in fog, poignant and gentle. Narrative environment illustration, show the situation clearly, not a character portrait."
+    },
+    {
+      "key": "event_03",
+      "type": "event",
+      "id": 3,
+      "name": "무너진 광산",
+      "file": "event_03.webp",
+      "prompt": "Use case: stylized-concept. Create ONE vertical 2:3 full-bleed illustrated card for a mobile dark fantasy RPG. Cinematic painterly Victorian gothic, detailed weathered textures, teal shadows, warm amber accents. Readable centered subject, identifying features visible. No text, letters, UI, logos, watermark, card frame or collage. Collapsed mine tunnel with broken timber supports and glowing mineral veins deep below. Narrative environment illustration, show the situation clearly, not a character portrait."
+    },
+    {
+      "key": "event_04",
+      "type": "event",
+      "id": 4,
+      "name": "수상한 지도",
+      "file": "event_04.webp",
+      "prompt": "Use case: stylized-concept. Create ONE vertical 2:3 full-bleed illustrated card for a mobile dark fantasy RPG. Cinematic painterly Victorian gothic, detailed weathered textures, teal shadows, warm amber accents. Readable centered subject, identifying features visible. No text, letters, UI, logos, watermark, card frame or collage. Shady travelling merchant offering a rolled hand-drawn treasure map, dim lantern and forest road. Narrative environment illustration, show the situation clearly, not a character portrait."
+    },
+    {
+      "key": "event_05",
+      "type": "event",
+      "id": 5,
+      "name": "까마귀의 거래",
+      "file": "event_05.webp",
+      "prompt": "Use case: stylized-concept. Create ONE vertical 2:3 full-bleed illustrated card for a mobile dark fantasy RPG. Cinematic painterly Victorian gothic, detailed weathered textures, teal shadows, warm amber accents. Readable centered subject, identifying features visible. No text, letters, UI, logos, watermark, card frame or collage. Flock of ravens exchanging shining coins and trinkets on mossy stump. Narrative environment illustration, show the situation clearly, not a character portrait."
+    },
+    {
+      "key": "event_06",
+      "type": "event",
+      "id": 6,
+      "name": "부서진 대장간",
+      "file": "event_06.webp",
+      "prompt": "Use case: stylized-concept. Create ONE vertical 2:3 full-bleed illustrated card for a mobile dark fantasy RPG. Cinematic painterly Victorian gothic, detailed weathered textures, teal shadows, warm amber accents. Readable centered subject, identifying features visible. No text, letters, UI, logos, watermark, card frame or collage. Abandoned broken blacksmith forge with still-warm glowing anvil and scattered tools. Narrative environment illustration, show the situation clearly, not a character portrait."
+    },
+    {
+      "key": "event_07",
+      "type": "event",
+      "id": 7,
+      "name": "달빛 우물",
+      "file": "event_07.webp",
+      "prompt": "Use case: stylized-concept. Create ONE vertical 2:3 full-bleed illustrated card for a mobile dark fantasy RPG. Cinematic painterly Victorian gothic, detailed weathered textures, teal shadows, warm amber accents. Readable centered subject, identifying features visible. No text, letters, UI, logos, watermark, card frame or collage. Moonlit old stone well with a ghostly human reflection in luminous water. Narrative environment illustration, show the situation clearly, not a character portrait."
+    },
+    {
+      "key": "event_08",
+      "type": "event",
+      "id": 8,
+      "name": "이름 없는 묘지",
+      "file": "event_08.webp",
+      "prompt": "Use case: stylized-concept. Create ONE vertical 2:3 full-bleed illustrated card for a mobile dark fantasy RPG. Cinematic painterly Victorian gothic, detailed weathered textures, teal shadows, warm amber accents. Readable centered subject, identifying features visible. No text, letters, UI, logos, watermark, card frame or collage. Rows of unnamed weathered graves and one sealed coffin in a misty cemetery. Narrative environment illustration, show the situation clearly, not a character portrait."
+    },
+    {
+      "key": "event_09",
+      "type": "event",
+      "id": 9,
+      "name": "운명의 탁자",
+      "file": "event_09.webp",
+      "prompt": "Use case: stylized-concept. Create ONE vertical 2:3 full-bleed illustrated card for a mobile dark fantasy RPG. Cinematic painterly Victorian gothic, detailed weathered textures, teal shadows, warm amber accents. Readable centered subject, identifying features visible. No text, letters, UI, logos, watermark, card frame or collage. Unattended gambling table with ivory dice, playing cards and candle, dark empty room. Narrative environment illustration, show the situation clearly, not a character portrait."
+    },
+    {
+      "key": "event_10",
+      "type": "event",
+      "id": 10,
+      "name": "도망친 견습생",
+      "file": "event_10.webp",
+      "prompt": "Use case: stylized-concept. Create ONE vertical 2:3 full-bleed illustrated card for a mobile dark fantasy RPG. Cinematic painterly Victorian gothic, detailed weathered textures, teal shadows, warm amber accents. Readable centered subject, identifying features visible. No text, letters, UI, logos, watermark, card frame or collage. Frightened young apprentice clutching forbidden leather-bound book, shadow pursuers behind on cobbled street. Narrative environment illustration, show the situation clearly, not a character portrait."
+    },
+    {
+      "key": "event_11",
+      "type": "event",
+      "id": 11,
+      "name": "잠든 용의 둥지",
+      "file": "event_11.webp",
+      "prompt": "Use case: stylized-concept. Create ONE vertical 2:3 full-bleed illustrated card for a mobile dark fantasy RPG. Cinematic painterly Victorian gothic, detailed weathered textures, teal shadows, warm amber accents. Readable centered subject, identifying features visible. No text, letters, UI, logos, watermark, card frame or collage. Sleeping ancient dragon curled around nest of eggs, old sword glinting among eggs, no violence. Narrative environment illustration, show the situation clearly, not a character portrait."
+    },
+    {
+      "key": "event_12",
+      "type": "event",
+      "id": 12,
+      "name": "유리 다리",
+      "file": "event_12.webp",
+      "prompt": "Use case: stylized-concept. Create ONE vertical 2:3 full-bleed illustrated card for a mobile dark fantasy RPG. Cinematic painterly Victorian gothic, detailed weathered textures, teal shadows, warm amber accents. Readable centered subject, identifying features visible. No text, letters, UI, logos, watermark, card frame or collage. Fragile translucent glass bridge over dark ravine, metal treasure glints below. Narrative environment illustration, show the situation clearly, not a character portrait."
+    },
+    {
+      "key": "event_13",
+      "type": "event",
+      "id": 13,
+      "name": "얼어붙은 시간",
+      "file": "event_13.webp",
+      "prompt": "Use case: stylized-concept. Create ONE vertical 2:3 full-bleed illustrated card for a mobile dark fantasy RPG. Cinematic painterly Victorian gothic, detailed weathered textures, teal shadows, warm amber accents. Readable centered subject, identifying features visible. No text, letters, UI, logos, watermark, card frame or collage. Rain droplets suspended motionless in air around fractured antique clock, eerie frozen time. Narrative environment illustration, show the situation clearly, not a character portrait."
+    },
+    {
+      "key": "event_14",
+      "type": "event",
+      "id": 14,
+      "name": "별의 낙하",
+      "file": "event_14.webp",
+      "prompt": "Use case: stylized-concept. Create ONE vertical 2:3 full-bleed illustrated card for a mobile dark fantasy RPG. Cinematic painterly Victorian gothic, detailed weathered textures, teal shadows, warm amber accents. Readable centered subject, identifying features visible. No text, letters, UI, logos, watermark, card frame or collage. Smouldering fallen star fragment embedded in crater among dark rocks, golden cosmic glow. Narrative environment illustration, show the situation clearly, not a character portrait."
+    },
+    {
+      "key": "event_15",
+      "type": "event",
+      "id": 15,
+      "name": "마지막 장사",
+      "file": "event_15.webp",
+      "prompt": "Use case: stylized-concept. Create ONE vertical 2:3 full-bleed illustrated card for a mobile dark fantasy RPG. Cinematic painterly Victorian gothic, detailed weathered textures, teal shadows, warm amber accents. Readable centered subject, identifying features visible. No text, letters, UI, logos, watermark, card frame or collage. Weary merchant abandoning heavy packs beside a dead lantern at night. Narrative environment illustration, show the situation clearly, not a character portrait."
+    },
+    {
+      "key": "event_16",
+      "type": "event",
+      "id": 16,
+      "name": "숲의 연회",
+      "file": "event_16.webp",
+      "prompt": "Use case: stylized-concept. Create ONE vertical 2:3 full-bleed illustrated card for a mobile dark fantasy RPG. Cinematic painterly Victorian gothic, detailed weathered textures, teal shadows, warm amber accents. Readable centered subject, identifying features visible. No text, letters, UI, logos, watermark, card frame or collage. Masked forest banquet guests inviting viewer toward one empty chair, candles and twisted trees. Narrative environment illustration, show the situation clearly, not a character portrait."
+    },
+    {
+      "key": "event_17",
+      "type": "event",
+      "id": 17,
+      "name": "닫히는 균열",
+      "file": "event_17.webp",
+      "prompt": "Use case: stylized-concept. Create ONE vertical 2:3 full-bleed illustrated card for a mobile dark fantasy RPG. Cinematic painterly Victorian gothic, detailed weathered textures, teal shadows, warm amber accents. Readable centered subject, identifying features visible. No text, letters, UI, logos, watermark, card frame or collage. Closing shimmering rift reveals a starless corridor, paper-thin edges collapsing inward. Narrative environment illustration, show the situation clearly, not a character portrait."
+    },
+    {
+      "key": "location_00",
+      "type": "location",
+      "id": 0,
+      "name": "검은 숲",
+      "file": "location_00.webp",
+      "reuse": "forest-banner.webp",
+      "prompt": "Use case: stylized-concept. Create ONE vertical 2:3 full-bleed illustrated card for a mobile dark fantasy RPG. Cinematic painterly Victorian gothic, detailed weathered textures, teal shadows, warm amber accents. Readable centered subject, identifying features visible. No text, letters, UI, logos, watermark, card frame or collage. Black forest of twisting trees, tiny amber lantern path and rabbit-hole arch. Vast atmospheric environment, no foreground character."
+    },
+    {
+      "key": "location_01",
+      "type": "location",
+      "id": 1,
+      "name": "침묵의 마을",
+      "file": "location_01.webp",
+      "reuse": null,
+      "prompt": "Use case: stylized-concept. Create ONE vertical 2:3 full-bleed illustrated card for a mobile dark fantasy RPG. Cinematic painterly Victorian gothic, detailed weathered textures, teal shadows, warm amber accents. Readable centered subject, identifying features visible. No text, letters, UI, logos, watermark, card frame or collage. Abandoned silent village with unlit windows and distant lightning laboratory. Vast atmospheric environment, no foreground character."
+    },
+    {
+      "key": "location_02",
+      "type": "location",
+      "id": 2,
+      "name": "유리 늪",
+      "file": "location_02.webp",
+      "reuse": null,
+      "prompt": "Use case: stylized-concept. Create ONE vertical 2:3 full-bleed illustrated card for a mobile dark fantasy RPG. Cinematic painterly Victorian gothic, detailed weathered textures, teal shadows, warm amber accents. Readable centered subject, identifying features visible. No text, letters, UI, logos, watermark, card frame or collage. Reflective glass swamp with white whale shadow beneath surface. Vast atmospheric environment, no foreground character."
+    },
+    {
+      "key": "location_03",
+      "type": "location",
+      "id": 3,
+      "name": "잊힌 왕성",
+      "file": "location_03.webp",
+      "reuse": null,
+      "prompt": "Use case: stylized-concept. Create ONE vertical 2:3 full-bleed illustrated card for a mobile dark fantasy RPG. Cinematic painterly Victorian gothic, detailed weathered textures, teal shadows, warm amber accents. Readable centered subject, identifying features visible. No text, letters, UI, logos, watermark, card frame or collage. Forgotten gothic royal castle with red heart banners and broken crown gate. Vast atmospheric environment, no foreground character."
+    },
+    {
+      "key": "location_04",
+      "type": "location",
+      "id": 4,
+      "name": "붉은 사막",
+      "file": "location_04.webp",
+      "reuse": null,
+      "prompt": "Use case: stylized-concept. Create ONE vertical 2:3 full-bleed illustrated card for a mobile dark fantasy RPG. Cinematic painterly Victorian gothic, detailed weathered textures, teal shadows, warm amber accents. Readable centered subject, identifying features visible. No text, letters, UI, logos, watermark, card frame or collage. Red desert with a whaling ship stranded on sand dunes. Vast atmospheric environment, no foreground character."
+    },
+    {
+      "key": "location_05",
+      "type": "location",
+      "id": 5,
+      "name": "달의 도서관",
+      "file": "location_05.webp",
+      "reuse": null,
+      "prompt": "Use case: stylized-concept. Create ONE vertical 2:3 full-bleed illustrated card for a mobile dark fantasy RPG. Cinematic painterly Victorian gothic, detailed weathered textures, teal shadows, warm amber accents. Readable centered subject, identifying features visible. No text, letters, UI, logos, watermark, card frame or collage. Moonlit vast library with impossible bookshelves, silver moon and floating pages. Vast atmospheric environment, no foreground character."
+    },
+    {
+      "key": "location_06",
+      "type": "location",
+      "id": 6,
+      "name": "공허의 용광로",
+      "file": "location_06.webp",
+      "reuse": null,
+      "prompt": "Use case: stylized-concept. Create ONE vertical 2:3 full-bleed illustrated card for a mobile dark fantasy RPG. Cinematic painterly Victorian gothic, detailed weathered textures, teal shadows, warm amber accents. Readable centered subject, identifying features visible. No text, letters, UI, logos, watermark, card frame or collage. Cosmic furnace with molten metal channels and a glowing star heart. Vast atmospheric environment, no foreground character."
+    },
+    {
+      "key": "location_07",
+      "type": "location",
+      "id": 7,
+      "name": "새벽 없는 왕좌",
+      "file": "location_07.webp",
+      "reuse": null,
+      "prompt": "Use case: stylized-concept. Create ONE vertical 2:3 full-bleed illustrated card for a mobile dark fantasy RPG. Cinematic painterly Victorian gothic, detailed weathered textures, teal shadows, warm amber accents. Readable centered subject, identifying features visible. No text, letters, UI, logos, watermark, card frame or collage. Sunless throne hall under black eclipse, last ember before empty throne. Vast atmospheric environment, no foreground character."
+    },
+    {
+      "key": "story_alice",
+      "type": "story",
+      "id": "alice",
+      "name": "앨리스의 증언",
+      "file": "story_alice.webp",
+      "prompt": "ONE vertical 2:3 narrative illustration card, cinematic painterly gothic dark fantasy, teal shadow and amber highlights, readable composition, no captions, UI, logos, frames or collage. Alice, a young curious Victorian girl in practical blue dress holding a sealed testimony, faces a stern crowned Heart Queen in a crimson courtroom where memory-pages float above braziers. Clearly two contrasting figures, original public-domain inspired designs, no text."
+    },
+    {
+      "key": "story_adam",
+      "type": "story",
+      "id": "adam",
+      "name": "아담의 심장",
+      "file": "story_adam.webp",
+      "prompt": "ONE vertical 2:3 narrative illustration card, cinematic painterly gothic dark fantasy, teal shadow and amber highlights, readable composition, no captions, UI, logos, frames or collage. A gentle tall stitched human creation with healed seams and broken handcuffs faces his conflicted creator, Victorian scientist Victor in ivory waistcoat, both studying a luminous mechanical heart between them in a lightning laboratory. Compassion and moral tension, no gore."
+    },
+    {
+      "key": "story_ahab",
+      "type": "story",
+      "id": "ahab",
+      "name": "에이해브의 추적",
+      "file": "story_ahab.webp",
+      "prompt": "ONE vertical 2:3 narrative illustration card, cinematic painterly gothic dark fantasy, teal shadow and amber highlights, readable composition, no captions, UI, logos, frames or collage. Weathered elderly Captain Ahab with ivory peg leg and harpoon stands with thin moustached Don Quixote in battered brass armour, studying the enormous luminous white whale swimming beneath red desert sands, stranded whaling ship in distance. Original public-domain inspired designs."
+    }
+  ]
+}

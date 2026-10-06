@@ -1,0 +1,2 @@
+# Generated CSVs intentionally use CRLF for spreadsheet compatibility.
+*.csv whitespace=cr-at-eol

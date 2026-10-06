@@ -1,0 +1,35 @@
+{
+  "githubMain": {
+    "commit": "6b78d47327b54d17c2c1a104c4fa5a2a840cdf2a",
+    "classes": 29,
+    "regular": 23,
+    "hidden": 6,
+    "slots": [
+      "weapon",
+      "subweapon",
+      "head",
+      "armor",
+      "acc",
+      "relic"
+    ]
+  },
+  "v4": {
+    "regular": 100,
+    "hidden": 14,
+    "tiers": [
+      6,
+      37,
+      33,
+      24
+    ],
+    "slots": [
+      "weapon",
+      "armor",
+      "charm"
+    ]
+  },
+  "mainSaveCases": 29,
+  "extraEquipmentPreserved": true,
+  "missingAffinityAndCareer": "PASS",
+  "rngRestore": "PASS"
+}

@@ -1,0 +1,32 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> black-forest-last-ember@4.0.0 test
+> node test-compatibility.cjs && node test-engine.cjs && node test-expansion.cjs && node test-relationships.cjs && node test-integration.cjs && node test-assets.cjs
+
+PASS: exact Alea sequence across 6 seeds; legacy 29 jobs × 3 seeds × 4 actions = 348 combat comparisons; 100 BF2 job saves + archived GitHub 29-job saves migrate without job/equipment/RNG loss.
+DB: 직업 114, 장비 1000, 도검 20/15/10/5, 중복 이름 없음
+신규·전투 저장 및 압축·난수 상태 정확 복원
+v1 → v3 저장 호환
+MP·물약 부족 차단 / 방어 계산
+30번째 전설 보정 / 강화 연속 실패 보정
+비밀 경로 보정·각성 인장·장비 지급
+히든 14종 조건·해금·중복 소모 방지·전직·스킬
+18개 이벤트 양쪽 선택 36개 경로
+비선형 퀘스트 순서·호감도 보상·중복 완료 방지
+확률 normal: 55.12% / 24.93% / 12.93% / 5.02% / 1.81% / 0.19% (n=60000)
+확률 elite: 9.90% / 32.27% / 35.88% / 16.95% / 4.52% / 0.49% (n=60000)
+확률 boss: 0.00% / 9.90% / 35.37% / 39.65% / 13.09% / 2.00% (n=60000)
+확률 secret: 0.00% / 9.90% / 35.37% / 39.65% / 13.09% / 2.00% (n=60000)
+전 직업 114 × 6시드 = 684 캠페인 완주; 전투 행동 76117, 부활 0 (각 직업 직접 지정한 전투 회귀 테스트; 일반 시작 규칙을 우회한 테스트 fixture)
+전 장비 1000개 드롭 도달·옵션 중복 방지·전체 도감 저장 통과
+8지역 × 6등급 × 3슬롯 드롭 지역 제한 통과
+71 신규 직업 패시브 조합 중복 없음·계보·숙련도·콘텐츠 조건 제한 통과
+장비·레벨 준비 없는 최종 보스: 114/114 직업 패배 (공격만 사용)
+PASS: old-save migration, locked branches, 3 companion quests × positive/negative outcomes, one-time rewards, boss support, epilogues, bounded gifts, new journey reset, combat stats.
+PASS Class: 100 ordinary + 14 hidden; tiers 6/37/33/24; ancestry and required metadata; 28 live effect types; bounded base stats
+PASS Career: action mastery, T0→T1→T2→T3 timing + story/affinity gate; no cross-tree change; hidden discovery separate from selection; new-run Tier0 only
+PASS Relationship: six personal saves, independent factions, locked/open dialogue, trust reward and no repeated rewards
+PASS Stage: three sectors, 16 candidate nodes/chapter, 12 visited nodes + boss; checkpoints 4/8/12; two optional midbosses do not grant regional seals
+PASS Equipment: three slots, comparison equals equip delta, failure preserves upgrade, pity success, last-affix reforge, salvage/sale, bag40, BF3 restore
+PASS Gameplay: 6 starters × 3 seeds = 18 natural campaigns; all reach T3 and ending; 12 visits in each of 8 chapters; periodic save/reload exact
+PASS Assets: 105 unique files, 106 links, 1094 null entries (including 1000 gear-template slots); all 8 areas/9 bosses/33 enemies/18 events have valid local assets; lazy load/error fallback/native click wiring inspected. Layout/touch unverified.

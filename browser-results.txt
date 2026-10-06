@@ -1,0 +1,4 @@
+V4 ALL VIEWPORTS: NOT TESTED
+Cloud browser available; supervised preview fails: bwrap cannot mount proc, operation not permitted.
+Direct file: URL rejected by browser security policy; no workaround attempted.
+Live GitHub Pages: six equipment slots and six-node routes observed; v4 not live.

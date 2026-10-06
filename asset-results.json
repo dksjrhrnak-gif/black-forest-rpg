@@ -1,0 +1,149 @@
+{
+  "uniqueImageFiles": 105,
+  "registryLinks": 106,
+  "nullMappings": 1094,
+  "categories": {
+    "classes": {
+      "linked": 29,
+      "fallback": 85
+    },
+    "enemies": {
+      "linked": 33,
+      "fallback": 0
+    },
+    "bosses": {
+      "linked": 9,
+      "fallback": 0
+    },
+    "areas": {
+      "linked": 8,
+      "fallback": 0
+    },
+    "events": {
+      "linked": 18,
+      "fallback": 0
+    },
+    "npcs": {
+      "linked": 0,
+      "fallback": 6
+    },
+    "story": {
+      "linked": 4,
+      "fallback": 3
+    },
+    "misc": {
+      "linked": 2,
+      "fallback": 0
+    },
+    "gear": {
+      "linked": 3,
+      "fallback": 0
+    },
+    "gearTemplates": {
+      "linked": 0,
+      "fallback": 1000
+    }
+  },
+  "missingClasses": [
+    "x_magic_0",
+    "x_magic_1",
+    "x_magic_2",
+    "x_magic_3",
+    "x_magic_4",
+    "x_magic_5",
+    "x_magic_6",
+    "x_magic_7",
+    "x_magic_8",
+    "x_magic_9",
+    "x_magic_10",
+    "x_magic_11",
+    "x_magic_12",
+    "x_magic_13",
+    "x_magic_14",
+    "x_magic_15",
+    "x_magic_16",
+    "x_magic_17",
+    "x_ranged_0",
+    "x_ranged_1",
+    "x_ranged_2",
+    "x_ranged_3",
+    "x_ranged_4",
+    "x_ranged_5",
+    "x_ranged_6",
+    "x_ranged_7",
+    "x_ranged_8",
+    "x_ranged_9",
+    "x_ranged_10",
+    "x_ranged_11",
+    "x_ranged_12",
+    "x_ranged_13",
+    "x_ranged_14",
+    "x_ranged_15",
+    "x_ranged_16",
+    "x_ranged_17",
+    "x_support_0",
+    "x_support_1",
+    "x_support_2",
+    "x_support_3",
+    "x_support_4",
+    "x_support_5",
+    "x_support_6",
+    "x_support_7",
+    "x_support_8",
+    "x_support_9",
+    "x_support_10",
+    "x_support_11",
+    "x_support_12",
+    "x_support_13",
+    "x_support_14",
+    "x_support_15",
+    "x_support_16",
+    "x_support_17",
+    "x_occult_0",
+    "x_occult_1",
+    "x_occult_2",
+    "x_occult_3",
+    "x_occult_4",
+    "x_occult_5",
+    "x_occult_6",
+    "x_occult_7",
+    "x_occult_8",
+    "x_occult_9",
+    "x_occult_10",
+    "x_occult_11",
+    "x_occult_12",
+    "x_occult_13",
+    "x_occult_14",
+    "x_occult_15",
+    "x_occult_16",
+    "adventurer",
+    "hunter",
+    "guardian",
+    "whale_slayer",
+    "self_named",
+    "dream_guard",
+    "court_witness",
+    "alice_return",
+    "victor_heir",
+    "quixote_squire",
+    "sherwood_warden",
+    "oz_restorer",
+    "faust_release",
+    "margin_keeper"
+  ],
+  "missingNpcPortraits": [
+    "alice",
+    "queen",
+    "creature",
+    "victor",
+    "ahab",
+    "quixote"
+  ],
+  "missingStory": [
+    "queen",
+    "victor",
+    "quixote"
+  ],
+  "gearStrategy": "1,000 item records share 3 slot fallbacks; no per-variant artwork",
+  "browserQA": "NOT RUN: managed control-browser unavailable"
+}

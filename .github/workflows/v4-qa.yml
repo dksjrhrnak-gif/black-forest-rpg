@@ -1,0 +1,46 @@
+name: v5 regression and mobile preview QA
+on:
+  push:
+    branches: [qa/v5-mobile-final, main]
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm install --ignore-scripts
+      - run: npm test
+      - run: python3 build.py && node export-data.cjs && python3 export-site.py
+      - run: npx playwright install --with-deps chromium webkit
+      - name: Start isolated preview
+        run: python3 -m http.server 4173 --directory dist > /tmp/bf-preview.log 2>&1 &
+      - name: Chromium viewport and click QA
+        env:
+          BF_QA_URL: http://127.0.0.1:4173
+        run: npm run test:browser
+      - name: Chromium mobile touch QA
+        env:
+          BF_QA_URL: http://127.0.0.1:4173
+        run: npm run test:mobile
+      - name: WebKit mobile touch QA
+        env:
+          BF_QA_URL: http://127.0.0.1:4173
+          BF_BROWSER: webkit
+        run: npm run test:mobile
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v5-preview-and-qa
+          path: |
+            browser-results.txt
+            mobile-results*.txt
+            source-reconciliation-results.json
+            integration-results.json
+            screenshots/
+            dist/

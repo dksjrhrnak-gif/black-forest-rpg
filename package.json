@@ -1,0 +1,16 @@
+{
+  "name": "black-forest-last-ember",
+  "version": "4.0.0",
+  "private": true,
+  "description": "Korean dark-fantasy text RPG with classic-literature quests",
+  "scripts": {
+    "test": "node test-compatibility.cjs && node test-engine.cjs && node test-expansion.cjs && node test-relationships.cjs && node test-integration.cjs && node test-assets.cjs && node test-reconciliation.cjs",
+    "test:browser": "node test-ui.cjs",
+    "build": "python3 build.py",
+    "export:data": "node export-data.cjs",
+    "test:mobile": "node test-mobile.cjs"
+  },
+  "devDependencies": {
+    "playwright": "1.62.1"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "CONNECTED": 105,
+  "registryLinks": 106,
+  "FALLBACK": 1094,
+  "contentFallback": 94,
+  "sharedGearFallback": 1000,
+  "MISSING": 0,
+  "WRONG_MATCH": 0,
+  "wrongMatchScope": "manifest ID → filename comparison, not pixel-level visual inspection",
+  "sameWebP": 102,
+  "changedWebP": [],
+  "wrong": []
+}
