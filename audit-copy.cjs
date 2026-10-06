@@ -1,6 +1,6 @@
 /* Parse source literals, never comments, identifiers or regular expressions. */
 const fs=require('node:fs'),acorn=require('acorn');
-const sources=['content.js','literature.js','expansion.js','supplemental.js','class-tree.js','effects.js','relationships.js','engine.js','qa-relationships.js','career.js','chapters.js','journey.js','ui.js'];
+const sources=['content.js','literature.js','expansion.js','supplemental.js','class-tree.js','effects.js','relationships.js','narrative.js','engine.js','qa-relationships.js','career.js','chapters.js','journey.js','ui.js'];
 function literals(file,source=fs.readFileSync(file,'utf8')){
  const rows=[];function walk(n,path='root'){
   if(!n||typeof n!=='object')return;

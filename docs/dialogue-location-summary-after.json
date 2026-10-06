@@ -1,0 +1,20 @@
+{
+  "files": {
+    "content.js": 261,
+    "literature.js": 209,
+    "expansion.js": 322,
+    "supplemental.js": 62,
+    "class-tree.js": 13,
+    "effects.js": 0,
+    "relationships.js": 30,
+    "narrative.js": 105,
+    "engine.js": 170,
+    "qa-relationships.js": 23,
+    "career.js": 21,
+    "chapters.js": 287,
+    "journey.js": 3,
+    "ui.js": 395
+  },
+  "canonical": "narrative.js",
+  "duplicatePolicy": "UI refers to shared NOVEL_COPY/DIALOGUE_CHOICES; raw thread/quest/NPC fields derive from those arrays at initialization."
+}

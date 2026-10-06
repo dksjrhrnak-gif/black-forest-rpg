@@ -1,8 +1,8 @@
 (function(){'use strict';
 const root=document.getElementById('black-forest-game');document.getElementById('bf-downloads').hidden=!/^https?:$/.test(location.protocol);if(!root||root.dataset.ready)return;root.dataset.ready='1';
-const {Game,FAMILY_LABELS,JOBS,AREAS,TYPES,RARITIES,WEIGHTS,AFFIXES,ITEMS,EVENTS,FACTIONS,THREADS,COMPANIONS,NPCS,ASSETS,asset,gearAsset,CHAPTERS,CHAPTER_DECISIONS}=BlackForest;
+const {Game,FAMILY_LABELS,JOBS,AREAS,TYPES,RARITIES,WEIGHTS,AFFIXES,ITEMS,EVENTS,FACTIONS,THREADS,COMPANIONS,NPCS,ASSETS,asset,gearAsset,CHAPTERS,CHAPTER_DECISIONS,NOVEL_COPY,DIALOGUE_CHOICES}=BlackForest;
 const $=id=>root.querySelector('#bf-'+id),KEY='black-forest-last-ember-v2',LEGACY='black-forest-last-ember-v1';let game=new Game(),panel='',warning='',panelOrigin='';const hiddenCount=Object.values(JOBS).filter(j=>j.hidden).length;const views={jobs:{query:'',family:'',page:0},codex:{query:'',slot:'',grade:'',found:false,page:0}};
-const visibleText=t=>String(t).replace(/보상 받고 다음 조우|다음 조우|계속 진행|자동 이동 중…/g,'계속 나아간다').replace(/보상 수령/g,'전리품을 챙긴다').replace(/체크포인트/g,'쉼터').replace(/경로 선택/g,'길을 살핀다').replace(/랜덤 인카운트/g,'길 위의 사건').replace(/다음 지역/g,'새로운 땅');
+const visibleText=t=>String(t).replace(/보상 받고 다음 조우|다음 조우|계속 진행|자동 이동 중…/g,'계속 나아간다').replace(/보상 수령/g,'전리품을 챙긴다').replace(/체크포인트/g,'쉼터').replace(/경로 선택/g,'길을 살핀다').replace(/랜덤 인카운트/g,'길 위의 사건').replace(/다음 지역/g,'새로운 땅').replace(/불씨의 수호자/g,'불씨를 놓아준 자');
 const esc=t=>visibleText(t).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const b=(label,cmd,arg='',sub='',disabled=false,cls='')=>`<button type="button" class="cursor-interaction ${cls}" data-cmd="${cmd}" data-arg="${esc(arg)}" ${disabled?'disabled':''}>${esc(label)}${sub?`<span>${esc(sub)}</span>`:''}</button>`;
 const menu=(label,type,cls='')=>`<button class="cursor-interaction ${cls}" type="button" data-ui="${type}">${label}</button>`;
@@ -10,63 +10,11 @@ const meter=(label,n,max)=>`<div><div class="statline"><span>${esc(label)}</span
 const art=(category,id,label,cls='scene-art')=>{const src=asset(category,id);return `<figure class="${cls}">${src?`<img src="${esc(src)}" alt="${esc(label)}" loading="lazy" decoding="async" width="400" height="600">`:''}<figcaption class="art-fallback" ${src?'hidden':''}>${esc(label)} · 기록의 여백</figcaption></figure>`;};
 const portrait=id=>art('classes',id,JOBS[id].name,'class-art');
 const conversationScenes=new Set(['dialogue','npc','bond']);
-const NOVEL_COPY={
- dialogue:{
-  alice:[
-   ['앨리스가 가장자리가 탄 증언서를 내민다.','“법정은 매일 누군가의 기억을 증거와 함께 태워.”','멀리서 여왕의 전령이 외친다.','“기억을 남기면 세계가 다시 찢어진다.”'],
-   ['증언의 마지막 장에는 세계가 책의 결말을 먹으며 버틴다는 기록이 남아 있다.','앨리스가 낮게 묻는다.','“이걸 누가 가져야 한다고 생각해?”']
-  ],
-  adam:[
-   ['피조물이 낡은 번호표를 뜯어 손바닥에 올린다.','“괴물도 실험체도 아닌 이름을 갖고 싶다.”','빅터가 굳은 얼굴로 심장 장치를 가리킨다.','“저 심장이 멈추면 균열을 막을 방법도 사라진다.”'],
-   ['장치를 멈추면 균열 하나를 닫을 수 있다. 대신 피조물의 심장도 함께 멈춘다.','피조물이 당신을 똑바로 바라본다.','“내 삶을 재료로 쓸 거라면, 적어도 내게 먼저 물어라.”']
-  ],
-  ahab:[
-   ['모래 아래로 거대한 흰 그림자가 헤엄친다.','에이해브가 작살을 겨눈다.','“이번엔 놓치지 않는다.”','돈키호테가 그 앞을 막아선다.','“저건 괴물이 아니라 상처 입은 거인일지도 모르오.”'],
-   ['백경의 피부에는 사라진 세계들의 마지막 문장이 흉터처럼 새겨져 있다.','에이해브가 작살 끝을 내린다.','“죽이면 길이 열린다. 살리면 기억이 남겠지. 둘 다 가질 순 없다.”']
-  ]
- },
- npc:{
-  alice:['앨리스가 접힌 증언서를 내민다.','“이름이 지워지기 전에, 네가 먼저 읽어줘.”'],
-  queen:['하트 여왕은 판결문에서 시선을 떼지 않는다.','“질서가 사람을 삼키기 시작했다면, 무엇을 고쳐야 하지?”'],
-  creature:['피조물이 가슴의 봉합선을 손끝으로 짚는다.','“만들어진 이름 말고, 내가 고른 이름으로 불리고 싶다.”'],
-  victor:['빅터가 실험 기록을 덮는다.','“다시 시작할 자격이 있다면… 책임부터 져야겠지.”'],
-  ahab:['에이해브가 작살을 바닥에 세운다.','“사냥을 끝낸 뒤에도 내가 남을지는 모르겠군.”'],
-  quixote:['돈키호테가 낡은 방패를 고쳐 쥔다.','“세상이 비웃어도, 누군가의 방패가 되는 꿈까지 버릴 순 없지.”']
- },
- bond:{
-  alice:[
-   ['앨리스가 불탄 명부를 무릎 위에 펼친다.','“내 이름만 남긴다고 끝나는 게 아니야. 사라진 사람들 이름도 되찾고 싶어.”','그녀가 빈칸을 손끝으로 짚는다.','“같이 찾아줄래?”'],
-   ['사본의 빈칸에서 희미한 목소리가 새어 나온다.','앨리스가 펜을 당신에게 건넨다.','“여기 적힌 이름들을 세상에 돌려줄지, 이제 같이 결정하자.”']
-  ],
-  adam:[
-   ['피조물이 가슴에 새겨진 창조주의 번호를 보여준다.','“이 번호로 불리고 싶지 않다.”','그가 심장 쪽을 가리킨다.','“내가 고른 이름으로 살아갈 수 있게 도와줄 수 있나?”'],
-   ['새 심장틀이 완성되자 빅터가 소유권을 주장한다.','피조물은 떨리는 손으로 펜을 집는다.','“이번에는 내 이름을 내가 쓰겠다.”']
-  ],
-  ahab:[
-   ['에이해브가 부러진 배의 승선 명단을 구겨 쥔다.','“백경만 보느라 돌아갈 사람들을 놓쳤군.”','그가 처음으로 작살 대신 구명정을 바라본다.','“아직 늦지 않았다면, 배부터 고치자.”'],
-   ['선원들은 귀환을 원하지만 멀리서 백경의 흔적이 다시 나타난다.','에이해브가 작살을 천천히 내려놓는다.','“이번엔 내가 아니라 네가 정해라. 쫓을지, 돌아갈지.”']
-  ]
- }
-};
-const DIALOGUE_CHOICES={
- alice:[
-  ['증언서를 숨겨 앨리스를 보호한다','여왕에게 공개 재판을 요구한다','흰 토끼의 탈출로를 뒤쫓는다','앨리스와 함께 증언의 원본을 확인한다'],
-  ['기록을 사람들에게 나눠 준다','법정 기록고에 봉인한다','추적단에 표적의 위치를 넘긴다','앨리스와 사본을 만들어 함께 공개한다']
- ],
- adam:[
-  ['피조물에게 자기 이름을 고르게 한다','빅터의 실험 기록부터 검증한다','심장의 근원을 함께 추적한다','피조물과 대체 심장 설계도를 확인한다'],
-  ['사람들의 불씨로 심장을 대신한다','피조물의 동의를 받고 실험한다','장치를 부수고 균열로 들어간다','마지막 선택을 피조물에게 맡긴다']
- ],
- ahab:[
-  ['돈키호테와 백경의 상처를 살핀다','법정 허가를 받아 포획한다','에이해브와 마지막 항해를 맹세한다','선원들의 퇴로부터 확보한다'],
-  ['백경을 풀어주고 문장을 필사한다','기억을 보존한 채 백경을 봉인한다','작살로 세계를 묶은 사슬을 끊는다','선원들을 먼저 귀환시킨다']
- ]
-};
 const conversationSpeaker=s=>s.scene==='npc'?(NPCS[s.thread]?.name||'낯선 인물'):(COMPANIONS[s.thread]?.name||'동행자');
 function conversationLines(s){
- if(s.scene==='dialogue')return NOVEL_COPY.dialogue[s.thread]?.[s.threads[s.thread]]||String(s.message||'').split(/\n+/);
- if(s.scene==='npc')return NOVEL_COPY.npc[s.thread]||String(s.message||'').split(/\n+/);
- if(s.scene==='bond')return NOVEL_COPY.bond[s.thread]?.[s.bondQuests[s.thread]]||String(s.message||'').split(/\n+/);
+ if(s.scene==='dialogue')return [game.relationGreeting(s.thread),...NOVEL_COPY.dialogue[s.thread][s.threads[s.thread]]]||String(s.message||'').split(/\n+/);
+ if(s.scene==='npc')return [...NOVEL_COPY.npc[s.thread],game.relationGreeting(s.thread)]||String(s.message||'').split(/\n+/);
+ if(s.scene==='bond')return [game.relationGreeting(s.thread),...NOVEL_COPY.bond[s.thread][s.bondQuests[s.thread]]]||String(s.message||'').split(/\n+/);
  return String(s.message||'').split(/\n+/);
 }
 function conversationCopy(s){
