@@ -1,0 +1,34 @@
+{
+  "status": "PASS",
+  "checkedFiles": [
+    "content.js",
+    "literature.js",
+    "expansion.js",
+    "supplemental.js",
+    "class-tree.js",
+    "effects.js",
+    "relationships.js",
+    "engine.js",
+    "qa-relationships.js",
+    "career.js",
+    "chapters.js",
+    "journey.js",
+    "ui.js",
+    "shell.html"
+  ],
+  "candidateStrings": 1916,
+  "failures": [],
+  "exceptions": [
+    {
+      "file": "legacy-v1.js",
+      "reason": "Inactive BF1 migration engine; historic saved text retained. UI visibleText normalizes historic forbidden terms without changing stored logs."
+    },
+    {
+      "file": "ui.js visibleText",
+      "reason": "Regex patterns identify historic copy; they are not displayed strings."
+    },
+    {
+      "reason": "Internal IDs, variable names, comments, HTML attributes/classes are excluded by AST parsing/text extraction."
+    }
+  ]
+}

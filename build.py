@@ -2,6 +2,7 @@ from pathlib import Path
 import json, argparse, subprocess
 from urllib.parse import quote
 p=Path(__file__).parent
+subprocess.run(['node',str(p/'audit-copy.cjs')],check=True,cwd=p)
 subprocess.run(['node',str(p/'validate-assets.cjs')],check=True,cwd=p)
 license='\n\n'.join((p/'vendor'/f).read_text(encoding='utf-8') for f in ['ROT-LICENSE.txt','LOOT-LICENSE.txt','LZ-LICENSE.txt'])
 modules=['vendor/rot.js','vendor/loot-table.js','vendor/lz-string.js','legacy-v1.js','content.js','literature.js','expansion.js','supplemental.js','class-tree.js','effects.js','relationships.js','assets.js','equipment-migration.js','engine.js','qa-relationships.js','career.js','chapters.js','journey.js']
