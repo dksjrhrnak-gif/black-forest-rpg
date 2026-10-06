@@ -73,3 +73,134 @@
 @media(prefers-reduced-motion:reduce){#black-forest-game .gear-feedback{animation:none}}
 
 #black-forest-game .frame-1{border-color:#546e5c}#black-forest-game .frame-2{border-color:#47788b}
+
+/* Minimal dark-fantasy UI pass: CSS-first, image-light.
+   Inspired by modular gothic UI patterns; no third-party UI artwork is bundled. */
+#black-forest-game{
+  color-scheme:dark;
+  --bf-bg:#0d1110;
+  --bf-panel:#141a17;
+  --bf-surface:#191f1b;
+  --bf-ink:#ece7da;
+  --bf-dim:#9da39a;
+  --bf-line:#343c36;
+  --bf-accent:#b39a61;
+  --bf-accent-soft:#71613d;
+  --bf-on:#10120f;
+  --bf-tint:#202722;
+  --bf-danger:#d68172;
+  background:linear-gradient(180deg,#0f1412 0%,#0b0f0e 100%);
+  color:var(--bf-ink);
+  max-width:1080px;
+  padding:22px;
+  border:1px solid #222a25;
+  border-radius:0;
+  box-shadow:0 24px 80px #0005;
+}
+#black-forest-game h1{font:500 28px/1.25 Georgia,'Noto Serif KR',serif;letter-spacing:-.6px}
+#black-forest-game h2{font:600 20px/1.4 Georgia,'Noto Serif KR',serif}
+#black-forest-game h3{font-weight:650}
+#black-forest-game .eyebrow{color:#a99361;font-size:10px;letter-spacing:2.2px;text-transform:uppercase}
+#black-forest-game .muted{color:var(--bf-dim)}
+#black-forest-game .top{padding:0 0 14px;margin-bottom:0;border-bottom:1px solid var(--bf-line);align-items:flex-end}
+#black-forest-game .top>div{min-width:0}
+#black-forest-game button{background:#151b18;color:var(--bf-ink);border:1px solid #3b443d;border-radius:4px;box-shadow:none;padding:10px 13px;min-height:44px;transition:background .12s,border-color .12s,transform .08s}
+#black-forest-game button:hover:not(:disabled){background:#1c241f;border-color:#756846}
+#black-forest-game button:active:not(:disabled){transform:translateY(1px)}
+#black-forest-game button.primary{background:#aa945d;color:#10120f;border-color:#c0aa70;font-weight:700}
+#black-forest-game button.primary:hover:not(:disabled){background:#bea86f;border-color:#d0bb7f}
+#black-forest-game button:focus-visible,#black-forest-game input:focus-visible,#black-forest-game select:focus-visible,#black-forest-game textarea:focus-visible{outline:2px solid #d0b978;outline-offset:2px}
+#black-forest-game .stats{margin:0 0 18px;padding:12px 0;gap:10px 18px;border-top:0;border-bottom:1px solid var(--bf-line);background:transparent}
+#black-forest-game .statline{font-size:12px}
+#black-forest-game progress{height:4px;background:#252c28}
+#black-forest-game progress::-webkit-progress-bar{background:#252c28}
+#black-forest-game progress::-webkit-progress-value{background:#ad9560}
+#black-forest-game progress::-moz-progress-bar{background:#ad9560}
+#black-forest-game .layout{grid-template-columns:minmax(0,1fr) 230px;gap:20px}
+#black-forest-game .main{min-width:0}
+#black-forest-game .scene-intro{padding:14px;border:1px solid var(--bf-line);border-radius:6px;background:#111613}
+#black-forest-game .scene-intro.no-art{padding-top:18px}
+#black-forest-game .scene-art{margin:0 0 14px;max-width:100%;border:1px solid #29312c;border-radius:4px;background:#090d0b}
+#black-forest-game .scene-art img{display:block;width:100%;height:clamp(150px,22vh,215px);object-fit:contain}
+#black-forest-game .story{min-height:0;margin:12px 0 18px;max-width:72ch;line-height:1.85}
+#black-forest-game .actions{gap:8px}
+#black-forest-game .actions button{min-height:48px;padding:10px 12px;justify-content:center}
+#black-forest-game .actions button span{color:#aaa99f;opacity:1}
+#black-forest-game aside{border-left:1px solid var(--bf-line);padding-left:18px}
+#black-forest-game .sideblock{margin:0;padding:0 0 16px;border-bottom:1px solid #28302b}
+#black-forest-game .sideblock+.sideblock{padding-top:16px}
+#black-forest-game .item{padding:12px 0;border-bottom:1px solid #2c342f}
+#black-forest-game .enemy{margin:14px 0;padding:13px 14px;background:#151a18;border:1px solid #353d37;border-left:3px solid #77483f;border-radius:4px}
+#black-forest-game .enemy .intent{color:#df9283}
+#black-forest-game .route{gap:5px;margin:14px 0}
+#black-forest-game .step{width:26px;height:26px;line-height:24px;border-radius:3px;background:#121715}
+#black-forest-game .step.done{background:#74643f;color:#f4ead2;border-color:#8d7950}
+#black-forest-game .step.current{outline:1px solid #cfb675;outline-offset:2px}
+#black-forest-game .campnav{gap:7px;margin-top:18px;padding-top:14px}
+#black-forest-game .campnav button{flex:1 1 120px}
+#black-forest-game .panel{max-width:820px;background:#101513;border:1px solid #3b443d;border-radius:6px;box-shadow:0 28px 100px #000b;padding:0 20px 22px}
+#black-forest-game .panelbar{background:#101513;padding:11px 0;margin-bottom:14px;border-bottom:1px solid #343c36;letter-spacing:.04em}
+#black-forest-game .modal-overlay{background:#040706d9}
+#black-forest-game .panel h3{margin:4px 0 8px}
+#black-forest-game .panel .item>.class-art,#black-forest-game .joblist .class-art,#black-forest-game .classcards .class-art{display:none}
+#black-forest-game .joblist{grid-template-columns:repeat(2,minmax(0,1fr));gap:0 18px}
+#black-forest-game .filters{gap:8px;margin:14px 0;padding:10px;background:#121714;border:1px solid #2d3530;border-radius:4px}
+#black-forest-game .filters input,#black-forest-game .filters select{background:#0e1311;border-color:#39423b;border-radius:3px}
+#black-forest-game .collection{gap:5px}
+#black-forest-game .collectionitem{background:#121714;border:1px solid #29312c;border-radius:3px}
+#black-forest-game .collectionitem.found{background:#1a211d;border-color:#3b463e}
+#black-forest-game .badge,#black-forest-game .gear .rarity{background:#1c231f;border:1px solid #343d36;border-radius:3px}
+#black-forest-game .gear-icon{width:34px;height:34px;border-radius:4px;margin:2px 9px 2px 0}
+#black-forest-game .gear-slots{gap:6px;margin:14px 0}
+#black-forest-game .gear-slots button{min-height:78px;padding:8px 6px;background:#121714}
+#black-forest-game .equipment-portrait{max-width:180px;margin:14px auto;padding:7px;border:1px solid #4b554d;border-radius:5px;background:#0c100e}
+#black-forest-game .equipment-portrait .class-art{display:block;margin:0}
+#black-forest-game .equipment-portrait .class-art img{height:200px}
+#black-forest-game .gear-bag{grid-template-columns:1fr;gap:6px;margin:12px 0}
+#black-forest-game .affix-detail{background:#151b18;border:1px solid #303832;border-radius:4px}
+#black-forest-game .comparison{color:#c9b273}
+#black-forest-game .gear-feedback{background:#141a17;color:#eadfca;border-color:#8f7a4e;border-radius:4px}
+#black-forest-game .commandrow{margin-top:18px;padding-top:12px}
+#black-forest-game .commandrow input{background:#0e1311;border-color:#39423b;border-radius:3px}
+#black-forest-game .footer{margin-top:20px;padding-top:12px}
+#black-forest-game .file-label{border-radius:3px;background:#121714}
+#black-forest-game textarea{background:#0c100e;border-radius:3px}
+#black-forest-game table{font-size:12px}
+#black-forest-game td,#black-forest-game th{border-bottom-color:#303832}
+@media(max-width:700px){
+  #black-forest-game{padding:14px max(12px,env(safe-area-inset-right)) max(16px,env(safe-area-inset-bottom)) max(12px,env(safe-area-inset-left));border:0;box-shadow:none}
+  #black-forest-game .top{padding-bottom:10px;align-items:center}
+  #black-forest-game .top .muted{font-size:11px}
+  #black-forest-game h1{font-size:23px}
+  #black-forest-game #bf-stats{background:#0d1110}
+  #black-forest-game .stats{margin-bottom:12px;padding:9px 0;gap:8px 12px}
+  #black-forest-game .layout{grid-template-columns:1fr;gap:14px}
+  #black-forest-game .scene-intro{padding:10px}
+  #black-forest-game .scene-art img{height:min(20vh,175px)}
+  #black-forest-game .story{margin:10px 0 14px;line-height:1.8}
+  #black-forest-game .actions{gap:7px}
+  #black-forest-game .actions button{min-height:48px;padding:9px 10px}
+  #black-forest-game aside{grid-template-columns:1fr;gap:0;border-left:0;border-top:1px solid var(--bf-line);padding:12px 0 0}
+  #black-forest-game .sideblock{padding-bottom:10px}
+  #black-forest-game .sideblock+.sideblock{padding-top:10px}
+  #black-forest-game .panel{inset:max(4px,env(safe-area-inset-top)) max(4px,env(safe-area-inset-right)) max(4px,env(safe-area-inset-bottom)) max(4px,env(safe-area-inset-left));padding:0 13px 18px;border-radius:4px}
+  #black-forest-game .joblist{grid-template-columns:1fr}
+  #black-forest-game .filters{padding:8px}
+  #black-forest-game .equipment-portrait{max-width:150px}
+  #black-forest-game .equipment-portrait .class-art img{height:170px}
+}
+@media(max-width:430px){
+  #black-forest-game .top{gap:8px}
+  #black-forest-game .top>button{padding:7px 9px;min-height:38px}
+  #black-forest-game .scene-art img{height:155px}
+  #black-forest-game .actions{grid-template-columns:repeat(2,minmax(0,1fr))}
+  #black-forest-game .actions .wide{grid-column:1/-1}
+  #black-forest-game .gear-slots .gear-icon{width:32px;height:32px}
+  #black-forest-game .collection{grid-template-columns:1fr 1fr}
+}
+@media(max-width:340px){
+  #black-forest-game .actions{grid-template-columns:1fr}
+  #black-forest-game .collection{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){#black-forest-game button{transition:none}}
+
