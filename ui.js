@@ -1,7 +1,7 @@
 (function(){'use strict';
 const root=document.getElementById('black-forest-game');document.getElementById('bf-downloads').hidden=!/^https?:$/.test(location.protocol);if(!root||root.dataset.ready)return;root.dataset.ready='1';
 const {Game,FAMILY_LABELS,JOBS,AREAS,TYPES,RARITIES,WEIGHTS,AFFIXES,ITEMS,EVENTS,FACTIONS,THREADS,COMPANIONS,NPCS,ASSETS,asset,gearAsset,CHAPTERS,CHAPTER_DECISIONS}=BlackForest;
-const $=id=>root.querySelector('#bf-'+id),KEY='black-forest-last-ember-v2',LEGACY='black-forest-last-ember-v1';let game=new Game(),panel='',warning='',panelOrigin='',autoEncounterTimer=0;const hiddenCount=Object.values(JOBS).filter(j=>j.hidden).length;const views={jobs:{query:'',family:'',page:0},codex:{query:'',slot:'',grade:'',found:false,page:0}};
+const $=id=>root.querySelector('#bf-'+id),KEY='black-forest-last-ember-v2',LEGACY='black-forest-last-ember-v1';let game=new Game(),panel='',warning='',panelOrigin='',autoEncounterTimer=0,autoEncounterFrame=0,autoEncounterToken=0;const hiddenCount=Object.values(JOBS).filter(j=>j.hidden).length;const views={jobs:{query:'',family:'',page:0},codex:{query:'',slot:'',grade:'',found:false,page:0}};
 const esc=t=>String(t).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const b=(label,cmd,arg='',sub='',disabled=false,cls='')=>`<button type="button" class="cursor-interaction ${cls}" data-cmd="${cmd}" data-arg="${esc(arg)}" ${disabled?'disabled':''}>${esc(label)}${sub?`<span>${esc(sub)}</span>`:''}</button>`;
 const menu=(label,type,cls='')=>`<button class="cursor-interaction ${cls}" type="button" data-ui="${type}">${label}</button>`;
@@ -85,19 +85,35 @@ function sceneHero(s,kicker,title){
  const decision=s.scene==='chapter'?CHAPTER_DECISIONS[s.area]?.[s.chapterSector]:null;
  return `<section class="scene-hero scene-${s.scene}">${visual}<div class="scene-hero-shade" aria-hidden="true"></div><header class="scene-hero-head"><p class="eyebrow">${esc(kicker)}</p><h2>${esc(title)}</h2></header><div class="scene-hero-body" aria-live="polite">${heroNarrative(s)}${decision?`<div class="scene-hero-question"><span>지금 결정할 것</span><strong>${esc(decision.question)}</strong><small>무엇을 지키고 무엇을 감수할지 선택한다.</small></div>`:''}</div></section>`;
 }
+function cancelAutoEncounter(){
+ if(autoEncounterTimer)clearTimeout(autoEncounterTimer);
+ if(autoEncounterFrame)cancelAnimationFrame(autoEncounterFrame);
+ autoEncounterTimer=autoEncounterFrame=0;
+ autoEncounterToken++;
+}
 function scheduleAutoEncounter(){
- const checkpoint=game.s.kind==='story'&&[4,8,12].includes(game.s.step);
- const delay=root.dataset.qa==='1'?120:(checkpoint?4200:1800);
- const tick=()=>{
-  if(game.s.scene!=='reward')return;
-  if(panel){autoEncounterTimer=setTimeout(tick,400);return;}
+ cancelAutoEncounter();
+ const token=autoEncounterToken,checkpoint=game.s.kind==='story'&&[4,8,12].includes(game.s.step);
+ const delay=root.dataset.qa==='1'?90:(checkpoint?2200:700),started=performance.now();
+ const go=()=>{
+  if(token!==autoEncounterToken||game.s.scene!=='reward')return;
+  if(panel){autoEncounterTimer=setTimeout(go,200);return;}
+  autoEncounterToken++;
   game.nextEncounter();
-  render();
   save();
+  render();
  };
- autoEncounterTimer=setTimeout(tick,delay);
+ autoEncounterTimer=setTimeout(go,delay);
+ const frame=now=>{
+  if(token!==autoEncounterToken||game.s.scene!=='reward')return;
+  if(now-started>=delay+220){go();return;}
+  autoEncounterFrame=requestAnimationFrame(frame);
+ };
+ autoEncounterFrame=requestAnimationFrame(frame);
 }
 root.addEventListener('error',ev=>{if(ev.target.tagName==='IMG'){ev.target.hidden=true;const caption=ev.target.parentElement.querySelector('.art-fallback');if(caption)caption.hidden=false;}},true);
+document.addEventListener('visibilitychange',()=>{if(!document.hidden&&game.s.scene==='reward')scheduleAutoEncounter()});
+window.addEventListener('pageshow',()=>{if(game.s.scene==='reward')scheduleAutoEncounter()});
 const overlay=document.createElement('div');overlay.className='modal-overlay';overlay.hidden=true;overlay.setAttribute('aria-hidden','true');root.append(overlay);overlay.addEventListener('click',()=>closePanel());let scrollBefore=0,oldBodyStyle=null;
 function lockPanel(){if(oldBodyStyle)return;scrollBefore=window.scrollY;oldBodyStyle={position:document.body.style.position,top:document.body.style.top,width:document.body.style.width,overflow:document.body.style.overflow,boxSizing:document.body.style.boxSizing};Object.assign(document.body.style,{position:'fixed',top:-scrollBefore+'px',width:'100%',overflow:'hidden',boxSizing:'border-box'});overlay.hidden=false;for(const child of root.children)if(child!==overlay&&child!==$('panel'))child.inert=true;}
 function unlockPanel(){if(!oldBodyStyle)return;Object.assign(document.body.style,oldBodyStyle);oldBodyStyle=null;overlay.hidden=true;for(const child of root.children)child.inert=false;window.scrollTo(0,scrollBefore);}
@@ -131,7 +147,7 @@ try{const saved=localStorage.getItem(KEY)||localStorage.getItem(LEGACY);if(saved
 function save(){try{if(game.migrationSource){localStorage.setItem(KEY+'.before-v4',game.migrationSource);delete game.migrationSource;}localStorage.setItem(KEY,game.export());$('save-status').textContent='자동 저장됨 · 통합판 4.0'}catch(e){$('save-status').textContent='자동 저장 불가 · 저장 코드를 복사해 보관하세요.'}}
 const pct=n=>(n*100).toFixed(0)+'%';
 function statusDetails(){const st=game.combatStatus(),j=JOBS[game.s.job];return `<h3>상세 스테이터스</h3><dl class="statgrid">${[['공격력',game.atk()],['방어력',game.def()],['치명타율',pct(st.crit)],['치명타 배율','170%'],['회피율',pct(st.dodge)],['행운',pct(st.luck)],['기본 흡혈',pct(st.leech)],['피해 반사',st.reflect],['일반 공격 방어 관통',st.pierce],['스킬 MP 소모',st.skillCost],['방어 피해 감소','70%']].map(([k,v])=>`<div><dt>${k}</dt><dd>${v}</dd></div>`).join('')}</dl><p class="muted">흡혈은 직업별 스킬에서 추가될 수 있습니다. 행운은 장비 드롭과 등급 가중치에 적용됩니다.</p><div class="item"><p>${esc(j.skill)} · MP ${st.skillCost} · 숙련도 ${st.mastery}</p><p>${esc(j.passive||j.desc)}</p></div><h3>현재 전투 효과</h3><p>${esc(st.statuses.map(x=>({poison:'중독',burn:'화상',bleed:'출혈',damageOverTime:'지속 피해',stun:'기절',atkDown:'공격 약화',guard:'방어 후 집중'}[x.id]||x.id)+' · '+x.duration+'턴 · '+x.value).join(' / ')||'적용 중인 일시 효과 없음')}</p><h3>동료 지원</h3><p>${game.allies().map(id=>esc(COMPANIONS[id].aid)).join(' · ')||'개인 퀘스트 완료 + 호감도 80 이상에서 보스전 지원'}</p>`}
-function render(){if(autoEncounterTimer){clearTimeout(autoEncounterTimer);autoEncounterTimer=0;}const s=game.s;const job=JOBS[s.job];const opening=s.scene==='camp'&&s.cleared.length===0&&s.turns===0&&String(s.message||'').startsWith('프롤로그 — 마지막 불씨');$('stats').innerHTML=job?`<div class="stats">${meter('HP',s.hp,game.maxHp())}${meter('MP',s.mp,game.maxMp())}${meter('Lv.'+s.level+' '+job.name,s.xp,game.need())}<div><div class="statline"><span>골드</span><span>${s.gold} G</span></div><p class="muted">공격 ${game.atk()} · 방어 ${game.def()}</p>${menu('상세 스테이터스','status','small')}</div></div>`:'';
+function render(){cancelAutoEncounter();const s=game.s;root.dataset.scene=s.scene;const job=JOBS[s.job];const opening=s.scene==='camp'&&s.cleared.length===0&&s.turns===0&&String(s.message||'').startsWith('프롤로그 — 마지막 불씨');$('stats').innerHTML=job?`<div class="stats">${meter('HP',s.hp,game.maxHp())}${meter('MP',s.mp,game.maxMp())}${meter('Lv.'+s.level+' '+job.name,s.xp,game.need())}<div><div class="statline"><span>골드</span><span>${s.gold} G</span></div><p class="muted">공격 ${game.atk()} · 방어 ${game.def()}</p>${menu('상세 스테이터스','status','small')}</div></div>`:'';
 if(!job){$('play').innerHTML=`${art('misc','banner','검은 숲으로 향하는 방랑자')}<p class="eyebrow">CAREER / 첫 불씨의 선택</p><div class="story">${esc(s.message)}\n\n8개 지역 · 일반 ${Object.keys(JOBS).length-hiddenCount}개 + 히든 ${hiddenCount}개 직업 · ${ITEMS.length}종의 장비 · 고전 문학이 뒤섞인 도서계\n당신의 싸움은 어떤 모습인가?</div><div class="classcards">${s.offers.map(id=>[id,JOBS[id]]).map(([id,j])=>`<button class="cursor-interaction" type="button" data-cmd="start" data-arg="${id}">${portrait(id)}<b>${j.name}</b><p>${j.desc}</p><p class="muted">HP ${j.hp} · MP ${j.mp} · 공격 ${j.atk}</p></button>`).join('')}</div><p class="muted">히든 직업 해금 ${s.unlocked.length}/${hiddenCount} · 수집한 장비 ${s.collection.length}/${ITEMS.length}</p>`;return}
 let title='',kicker='',actions='',extra='';
 if(s.scene==='chapter'){const decision=CHAPTER_DECISIONS[s.area][s.chapterSector],record='chapter_'+s.area+'_'+s.chapterSector;title=AREAS[s.area].name+' · '+['외곽','심부','중심부'][s.chapterSector];kicker='CHAPTER / 선택의 기록';extra='';actions=s.decisions[record]?b('남긴 기록을 읽고 계속','chapterChoice',0,'이전 선택 유지'):decision.choices.map((c,i)=>b(c.label,'chapterChoice',i,c.result)).join('');}
@@ -141,7 +157,7 @@ if(s.scene==='battle'){const e=s.enemy;title=e.name;kicker=e.boss?'BOSS / 인장
 if(s.scene==='dialogue'){const t=THREADS[s.thread],stage=s.threads[s.thread],labels=DIALOGUE_CHOICES[s.thread]?.[stage];title=t.name;kicker='DIALOGUE / '+COMPANIONS[s.thread].name;extra=meter('호감도 · '+game.affectionLabel(s.thread),s.affection[s.thread],100);actions=game.dialogueOptions().map((c,i)=>b(labels?.[i]||c.label,'dialogue',i,`${c.required?'호감도 '+c.required+' 필요 · ':''}호감도 ${c.delta>=0?'+':''}${c.delta}`,s.affection[s.thread]<c.required)).join('')}
 if(s.scene==='npc'){title=NPCS[s.thread].name;kicker='DIALOGUE / 개인 대화';extra=meter('호감도 · '+game.affinityTier(s.thread),game.getAffinity(s.thread),100);actions=['네 뜻을 먼저 듣겠다','내 판단대로 따르라고 한다','거리를 두고 상황을 기록한다','같이 조사하자'].map((label,i)=>b(label,'npcChoice',i,i===3?'호감도 40 필요 · 인장 +1 · 20G':'호감도 '+[12,-10,4][i],i===3&&game.getAffinity(s.thread)<40)).join('');}
 if(s.scene==='bond'){const c=COMPANIONS[s.thread],stage=s.bondQuests[s.thread];title=c.quest;kicker='BOND / '+c.name;extra=meter('호감도 · '+game.affectionLabel(s.thread),s.affection[s.thread],100);actions=b(c.tasks[stage],'bondChoice',0,'비용: '+resources(c.costs[stage])+' · 호감도 +10',!game.canPay(c.costs[stage]),'primary')+b('부탁을 저버리고 이익을 챙긴다','bondChoice',1,'25G · 호감도 −25 · 개인 퀘스트 종료')+b('나중에 결정한다','bondChoice',2,'진행과 호감도 유지')}
-if(s.scene==='reward'){const checkpoint=s.kind==='story'&&[4,8,12].includes(s.step);title='잠깐의 고요';kicker='JOURNEY / 탐험의 기록';extra=`<div class="auto-encounter" role="status"><strong>${checkpoint?'야영지에서 잠시 숨을 고른다':'다음 조우로 자동 이동 중…'}</strong><span>${checkpoint?'잠시 후 자동 진행 · 필요하면 캠프에서 정비할 수 있다.':'결과를 확인하면 별도 버튼 없이 바로 다음 인카운트가 시작된다.'}</span></div>`;actions=checkpoint?b('캠프 정비','pauseChapter','','같은 지점에서 재개'):''}
+if(s.scene==='reward'){const checkpoint=s.kind==='story'&&[4,8,12].includes(s.step);title='잠깐의 고요';kicker='JOURNEY / 탐험의 기록';extra=`<div class="auto-encounter" role="status"><strong>${checkpoint?'야영지 · 자동 진행 대기':'다음 조우로 이어집니다…'}</strong><span>${checkpoint?'캠프 정비가 필요하면 지금 선택하세요.':'별도 진행 버튼 없이 자동으로 이어집니다.'}</span></div>`;actions=checkpoint?b('캠프 정비','pauseChapter','','같은 지점에서 재개'):''}
 if(s.scene==='merchant'){title='떠돌이 상인';kicker='TRADER / 확률을 파는 가게';actions=b('회복 물약 · 16G','buy','potion','',s.gold<16)+b('맑은 영약 · 12G','buy','tonic','MP 완전 회복',s.gold<12||s.mp===game.maxMp())+b('봉인된 장비 · 55G','buy','gear','정예 장비 확률표 적용',s.gold<55)+b('떠나 계속 탐험','nextEncounter','','다음 랜덤 조우로 바로 이동',false,'primary')}
 if(s.scene==='event'){const ev=EVENTS[s.eventId];title=ev.title;kicker='STORY / 선택과 대가';actions=ev.choices.map((c,i)=>b(c.label,'event',i,`비용: ${resources(c.cost)} · 성공 ${Math.round(c.chance*100)}% · 성공 보상 ${resources(c.reward)}`,!game.canPay(c.cost))).join('');extra=''}
 if(s.scene==='loot'){const d=s.loot;title=gearName(d);kicker='DISCOVERY / 운명이 남긴 물건';extra=gearCard(d)+`<p class="comparison">장착 시: ${esc(differences(d))}</p><p class="muted compare">현재 장비</p>`+gearCard(s[d.slot]);actions=b('장착한다','takeLoot','equip','기존 장비는 가방으로',false,'primary')+b('가방에 보관','takeLoot','bag','캠프에서 장착 가능')+b(`판매 · ${game.price(d)}G`,'takeLoot','sell','',false,'wide')}

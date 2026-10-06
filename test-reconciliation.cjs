@@ -16,3 +16,18 @@ oldGame.s.hp=oldGame.maxHp();oldGame.s.mp=oldGame.maxMp();const g=Game.load(oldG
 const plain=new Game(99);plain.start('warrior');const state=JSON.parse(global.LZString.decompressFromBase64(plain.export().slice(4)));delete state.state.affinity;delete state.state.career;const migrated=Game.load(JSON.stringify(state));assert.equal(Object.keys(migrated.s.affinity).length,6);assert.equal(migrated.s.career.current,'warrior');assert.equal(Game.load(migrated.export()).export(),migrated.export());
 const report={githubMain:baseline,v4:{regular:Object.values(JOBS).filter(j=>!j.hidden).length,hidden:Object.values(JOBS).filter(j=>j.hidden).length,tiers:[0,1,2,3].map(t=>Object.values(JOBS).filter(j=>!j.hidden&&j.tier===t).length),slots:g.equipment().map(d=>d.slot)},mainSaveCases:cases,extraEquipmentPreserved:true,missingAffinityAndCareer:'PASS',rngRestore:'PASS'};
 fs.writeFileSync(__dirname+'/source-reconciliation-results.json',JSON.stringify(report,null,2)+'\n');console.log('PASS Source reconciliation: '+JSON.stringify(report));
+
+const bundleStyle=fs.readFileSync(__dirname+'/style.css','utf8'),bundleShell=fs.readFileSync(__dirname+'/shell.html','utf8'),bundleUi=fs.readFileSync(__dirname+'/ui.js','utf8');
+for(const name of ['black-forest.html','index.html']){
+ const html=fs.readFileSync(__dirname+'/'+name,'utf8'),end=html.lastIndexOf('</html>');
+ assert(end>=0,name+' missing closing html');
+ assert.equal(html.slice(end+7).trim(),'',
+   name+' must not contain CSS/JS/text after </html>');
+ assert.equal((html.match(/<script\b/g)||[]).length,(html.match(/<\/script>/g)||[]).length,name+' script tags');
+ assert.equal((html.match(/<style\b/g)||[]).length,(html.match(/<\/style>/g)||[]).length,name+' style tags');
+ assert(html.includes(bundleStyle),name+' must embed current style.css');
+ assert(html.includes(bundleShell),name+' must embed current shell.html');
+ assert(html.includes(bundleUi),name+' must embed current ui.js');
+}
+assert.equal(fs.readFileSync(__dirname+'/black-forest.html','utf8'),fs.readFileSync(__dirname+'/index.html','utf8'));
+console.log('PASS bundle integrity: generated HTML is source-synchronized with no trailing visible code');
