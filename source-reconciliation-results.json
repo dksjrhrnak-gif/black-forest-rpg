@@ -1,5 +1,6 @@
 {
-  "githubMain": {
+  "currentSourceBaseline": "793a996a25a96fd15c59d99190495f7a3031b965",
+  "archivedSixSlotMain": {
     "commit": "6b78d47327b54d17c2c1a104c4fa5a2a840cdf2a",
     "classes": 29,
     "regular": 23,
@@ -13,7 +14,7 @@
       "relic"
     ]
   },
-  "v4": {
+  "integratedSource": {
     "regular": 100,
     "hidden": 14,
     "tiers": [
