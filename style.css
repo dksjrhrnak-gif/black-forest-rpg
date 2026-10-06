@@ -877,4 +877,54 @@
     line-height:1.85;
   }
 }
+/* UI 5.3.2 — readable character HUD and camp control hierarchy */
+#black-forest-game .character-hud{display:grid;grid-template-columns:minmax(0,1fr) minmax(300px,1.25fr) auto;align-items:center;gap:14px;padding:12px 0 14px;border-top:0}
+#black-forest-game .character-hud>div{background:transparent;border:0;padding:0;min-width:0}
+#black-forest-game .character-id{display:flex;align-items:center;justify-content:space-between;gap:12px}
+#black-forest-game .character-id>div{min-width:0}
+#black-forest-game .hud-label{display:block;margin-bottom:2px;color:#9e9272;font-size:10px;letter-spacing:.12em}
+#black-forest-game .character-name{display:block;color:#f3ead7;font:700 18px/1.25 Georgia,'Noto Serif KR',serif;white-space:normal}
+#black-forest-game .hud-exp{flex:0 0 auto;color:#9ba19a;font-size:11px;font-variant-numeric:tabular-nums}
+#black-forest-game .vitals{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+#black-forest-game .vital{min-width:0;padding:9px 10px;border:1px solid #39423c;border-radius:6px;background:#111713}
+#black-forest-game .vital .statline{align-items:center;font-size:12px}
+#black-forest-game .vital .statline>span{color:#d7cfbd;font-weight:650}
+#black-forest-game .vital .statline small{color:#8e958e;font-size:9px;font-weight:500}
+#black-forest-game .vital .statline strong{color:#f7f1e6;font-size:13px;font-variant-numeric:tabular-nums}
+#black-forest-game .vital progress{height:6px;margin-top:7px}
+#black-forest-game .vital-hp progress::-webkit-progress-value{background:#b89662}
+#black-forest-game .vital-hp progress::-moz-progress-bar{background:#b89662}
+#black-forest-game .vital-mp progress::-webkit-progress-value{background:#788fa0}
+#black-forest-game .vital-mp progress::-moz-progress-bar{background:#788fa0}
+#black-forest-game .hud-meta{display:flex;align-items:center;justify-content:flex-end;gap:9px;color:#b6bbb4;font-size:11px;white-space:nowrap}
+#black-forest-game .hud-gold{color:#d1bb83;font-weight:700}
+#black-forest-game .hud-meta button{min-height:34px;padding:5px 8px}
+#black-forest-game .camp-controls{margin:14px 0 12px;padding:12px;border:1px solid #39423c;border-radius:7px;background:#0e1411}
+#black-forest-game .camp-controls-head,#black-forest-game .region-heading{display:flex;align-items:baseline;gap:8px;margin-bottom:9px}
+#black-forest-game .camp-controls-head span,#black-forest-game .region-heading span{color:#a99260;font-size:9px;letter-spacing:.16em}
+#black-forest-game .camp-controls-head strong,#black-forest-game .region-heading strong{color:#e8e0d0;font-size:13px}
+#black-forest-game .campnav{margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}
+#black-forest-game .campnav button{min-height:46px;padding:7px 6px;font-size:12px;line-height:1.25}
+#black-forest-game .region-heading{margin:16px 0 8px;padding-top:2px}
+#black-forest-game .region-actions{margin-top:0}
+@media(max-width:700px){
+ #black-forest-game #bf-stats{position:sticky;top:0;z-index:9;margin:0 -12px;padding:0 12px;background:#0a0e0cf7;backdrop-filter:blur(12px);border-bottom:1px solid #2b332e}
+ #black-forest-game .character-hud{grid-template-columns:1fr;gap:7px;padding:8px 0 9px}
+ #black-forest-game .character-id{width:100%}
+ #black-forest-game .hud-label{font-size:9px}
+ #black-forest-game .character-name{font-size:16px;line-height:1.2}
+ #black-forest-game .hud-exp{font-size:10px;padding-top:10px}
+ #black-forest-game .vitals{grid-template-columns:1fr 1fr;gap:6px}
+ #black-forest-game .vital{padding:7px 8px}
+ #black-forest-game .vital .statline{font-size:11px}
+ #black-forest-game .vital .statline strong{font-size:12px}
+ #black-forest-game .vital progress{height:7px;margin-top:6px}
+ #black-forest-game .hud-meta{justify-content:flex-start;gap:10px;overflow:hidden}
+ #black-forest-game .hud-meta button{margin-left:auto;min-height:32px}
+ #black-forest-game .camp-controls{margin:12px 0 10px;padding:10px}
+ #black-forest-game .campnav{grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}
+ #black-forest-game .campnav button{min-height:44px;padding:6px;font-size:12px}
+ #black-forest-game .region-heading{margin:14px 0 7px}
+}
+@media(max-width:350px){#black-forest-game .vitals{grid-template-columns:1fr}}
 
