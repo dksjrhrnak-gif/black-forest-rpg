@@ -1595,7 +1595,7 @@
         "bosses": 1
       },
       "masteryAction": "skill",
-      "image": null,
+      "image": "assets/class_x_magic_1.webp",
       "effects": [
         {
           "type": "damageMultiplier",
@@ -1657,7 +1657,7 @@
         "bosses": 1
       },
       "masteryAction": "defend",
-      "image": null,
+      "image": "assets/class_x_magic_2.webp",
       "effects": [
         {
           "type": "guardNext",
@@ -1845,7 +1845,7 @@
         "bosses": 1
       },
       "masteryAction": "defend",
-      "image": null,
+      "image": "assets/class_x_magic_5.webp",
       "effects": [
         {
           "type": "guardHeal",
@@ -1908,7 +1908,7 @@
         "bosses": 1
       },
       "masteryAction": "skill",
-      "image": null,
+      "image": "assets/class_x_magic_6.webp",
       "effects": [
         {
           "type": "thornsBonus",
@@ -1971,7 +1971,7 @@
         "bosses": 3
       },
       "masteryAction": "skill",
-      "image": null,
+      "image": "assets/class_x_magic_7.webp",
       "effects": [
         {
           "type": "damageMultiplier",
@@ -2034,7 +2034,7 @@
         "bosses": 3
       },
       "masteryAction": "skill",
-      "image": null,
+      "image": "assets/class_x_magic_8.webp",
       "effects": [
         {
           "type": "damageMultiplier",
@@ -2096,7 +2096,7 @@
         "bosses": 3
       },
       "masteryAction": "skill",
-      "image": null,
+      "image": "assets/class_x_magic_9.webp",
       "effects": [
         {
           "type": "damageMultiplier",
@@ -2160,7 +2160,7 @@
         "bosses": 3
       },
       "masteryAction": "skill",
-      "image": null,
+      "image": "assets/class_x_magic_10.webp",
       "effects": [
         {
           "type": "damageMultiplier",
@@ -2223,7 +2223,7 @@
         "bosses": 3
       },
       "masteryAction": "skill",
-      "image": null,
+      "image": "assets/class_x_magic_11.webp",
       "effects": [
         {
           "type": "leechBonus",

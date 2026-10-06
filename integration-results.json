@@ -3,7 +3,7 @@
     "PASS Class: 100 ordinary + 14 hidden; tiers 6/37/33/24; ancestry and required metadata; 28 live effect types; bounded base stats",
     "PASS Career: action mastery, T0→T1→T2→T3 timing + story/affinity gate; no cross-tree change; hidden discovery separate from selection; new-run Tier0 only",
     "PASS Relationship: six personal saves, independent factions, locked/open dialogue, trust reward and no repeated rewards",
-    "PASS Stage: three sectors, 16 candidate nodes/chapter, 12 visited nodes + boss; checkpoints 4/8/12; two optional midbosses do not grant regional seals",
+    "PASS Stage: three sectors, single hidden random encounter per node, 12 visited nodes + boss; checkpoints 4/8/12; two optional midbosses do not grant regional seals",
     "PASS Equipment: three slots, comparison equals equip delta, failure preserves upgrade, pity success, last-affix reforge, salvage/sale, bag40, BF3 restore",
     "PASS Gameplay: 6 starters × 3 seeds = 18 natural campaigns; all reach T3 and ending; 12 visits in each of 8 chapters; periodic save/reload exact"
   ],
@@ -11,7 +11,7 @@
     {
       "starter": "warrior",
       "seed": 2,
-      "actions": 387,
+      "actions": 359,
       "history": [
         "warrior",
         "rabbit_guard",
@@ -32,7 +32,7 @@
     {
       "starter": "warrior",
       "seed": 17,
-      "actions": 405,
+      "actions": 340,
       "history": [
         "warrior",
         "rabbit_guard",
@@ -53,7 +53,7 @@
     {
       "starter": "warrior",
       "seed": 91,
-      "actions": 386,
+      "actions": 350,
       "history": [
         "warrior",
         "rabbit_guard",
@@ -74,6 +74,27 @@
     {
       "starter": "rogue",
       "seed": 2,
+      "actions": 349,
+      "history": [
+        "rogue",
+        "card_spear",
+        "queen_exec",
+        "pagebreaker"
+      ],
+      "visits": [
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12
+      ]
+    },
+    {
+      "starter": "rogue",
+      "seed": 17,
       "actions": 359,
       "history": [
         "rogue",
@@ -94,29 +115,8 @@
     },
     {
       "starter": "rogue",
-      "seed": 17,
-      "actions": 392,
-      "history": [
-        "rogue",
-        "card_spear",
-        "queen_exec",
-        "pagebreaker"
-      ],
-      "visits": [
-        12,
-        12,
-        12,
-        12,
-        12,
-        12,
-        12,
-        12
-      ]
-    },
-    {
-      "starter": "rogue",
       "seed": 91,
-      "actions": 374,
+      "actions": 348,
       "history": [
         "rogue",
         "card_spear",
@@ -137,7 +137,7 @@
     {
       "starter": "mage",
       "seed": 2,
-      "actions": 368,
+      "actions": 326,
       "history": [
         "mage",
         "x_magic_0",
@@ -158,7 +158,7 @@
     {
       "starter": "mage",
       "seed": 17,
-      "actions": 357,
+      "actions": 321,
       "history": [
         "mage",
         "x_magic_0",
@@ -179,7 +179,7 @@
     {
       "starter": "mage",
       "seed": 91,
-      "actions": 366,
+      "actions": 325,
       "history": [
         "mage",
         "x_magic_0",
@@ -200,7 +200,7 @@
     {
       "starter": "adventurer",
       "seed": 2,
-      "actions": 364,
+      "actions": 365,
       "history": [
         "adventurer",
         "rabbit_guard",
@@ -221,7 +221,7 @@
     {
       "starter": "adventurer",
       "seed": 17,
-      "actions": 409,
+      "actions": 352,
       "history": [
         "adventurer",
         "rabbit_guard",
@@ -242,7 +242,7 @@
     {
       "starter": "adventurer",
       "seed": 91,
-      "actions": 374,
+      "actions": 349,
       "history": [
         "adventurer",
         "rabbit_guard",
@@ -263,7 +263,7 @@
     {
       "starter": "hunter",
       "seed": 2,
-      "actions": 393,
+      "actions": 356,
       "history": [
         "hunter",
         "pequod",
@@ -284,7 +284,7 @@
     {
       "starter": "hunter",
       "seed": 17,
-      "actions": 398,
+      "actions": 347,
       "history": [
         "hunter",
         "pequod",
@@ -305,7 +305,7 @@
     {
       "starter": "hunter",
       "seed": 91,
-      "actions": 371,
+      "actions": 354,
       "history": [
         "hunter",
         "pequod",
@@ -326,7 +326,7 @@
     {
       "starter": "guardian",
       "seed": 2,
-      "actions": 364,
+      "actions": 365,
       "history": [
         "guardian",
         "rabbit_guard",
@@ -347,7 +347,7 @@
     {
       "starter": "guardian",
       "seed": 17,
-      "actions": 409,
+      "actions": 352,
       "history": [
         "guardian",
         "rabbit_guard",
@@ -368,7 +368,7 @@
     {
       "starter": "guardian",
       "seed": 91,
-      "actions": 374,
+      "actions": 349,
       "history": [
         "guardian",
         "rabbit_guard",
