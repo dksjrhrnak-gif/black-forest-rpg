@@ -1010,6 +1010,13 @@
 #black-forest-game .class-details .class-art img{height:auto;aspect-ratio:2/3;object-fit:contain}
 @media(max-width:600px){#black-forest-game .joblist{grid-template-columns:1fr}}
 
+/* Part A QA follow-up: full-width narrative choices fit two mobile lines. */
+@media(max-width:700px){
+ #black-forest-game .actions:has(button[data-cmd="chapterChoice"]),
+ #black-forest-game .actions:has(button[data-cmd="event"]),
+ #black-forest-game .actions:has(button[data-cmd="finish"]){grid-template-columns:1fr}
+}
+
 </style>
 <div id="black-forest-game">
 <header class="top"><div><p class="eyebrow">THE LAST EMBER · TEXT RPG</p><h1>검은 숲의 방랑자</h1><p class="muted">마지막 불씨 · 통합판 5.6 · 여정과 이미지 연결</p></div><button type="button" data-ui="save" class="small cursor-interaction">저장 / 불러오기</button></header>

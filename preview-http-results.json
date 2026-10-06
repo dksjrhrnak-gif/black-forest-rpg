@@ -1,0 +1,8 @@
+{
+  "base": "http://127.0.0.1:4173/",
+  "htmlSha256": "de3f0425e62902b79d4664f6d5f376939a80a1fd77baa86b3fa6bbe19a061784",
+  "assetFiles": 121,
+  "http200": true,
+  "exactAssetBytes": true,
+  "status": "PASS"
+}
