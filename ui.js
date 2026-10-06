@@ -8,6 +8,70 @@ const menu=(label,type,cls='')=>`<button class="cursor-interaction ${cls}" type=
 const meter=(label,n,max)=>`<div><div class="statline"><span>${esc(label)}</span><span>${n} / ${max}</span></div><progress aria-label="${esc(label)}" value="${Math.max(0,n)}" max="${max}"></progress></div>`;
 const art=(category,id,label,cls='scene-art')=>{const src=asset(category,id);return `<figure class="${cls}">${src?`<img src="${esc(src)}" alt="${esc(label)}" loading="lazy" decoding="async" width="400" height="600">`:''}<figcaption class="art-fallback" ${src?'hidden':''}>${esc(label)} · 기록의 여백</figcaption></figure>`;};
 const portrait=id=>art('classes',id,JOBS[id].name,'class-art');
+const conversationScenes=new Set(['dialogue','npc','bond']);
+const NOVEL_COPY={
+ dialogue:{
+  alice:[
+   ['앨리스가 가장자리가 탄 증언서를 내민다.','“법정은 매일 누군가의 기억을 증거와 함께 태워.”','멀리서 여왕의 전령이 외친다.','“기억을 남기면 세계가 다시 찢어진다.”'],
+   ['증언의 마지막 장에는 세계가 책의 결말을 먹으며 버틴다는 기록이 남아 있다.','앨리스가 낮게 묻는다.','“이걸 누가 가져야 한다고 생각해?”']
+  ],
+  adam:[
+   ['피조물이 낡은 번호표를 뜯어 손바닥에 올린다.','“괴물도 실험체도 아닌 이름을 갖고 싶다.”','빅터가 굳은 얼굴로 심장 장치를 가리킨다.','“저 심장이 멈추면 균열을 막을 방법도 사라진다.”'],
+   ['장치를 멈추면 균열 하나를 닫을 수 있다. 대신 피조물의 심장도 함께 멈춘다.','피조물이 당신을 똑바로 바라본다.','“내 삶을 재료로 쓸 거라면, 적어도 내게 먼저 물어라.”']
+  ],
+  ahab:[
+   ['모래 아래로 거대한 흰 그림자가 헤엄친다.','에이해브가 작살을 겨눈다.','“이번엔 놓치지 않는다.”','돈키호테가 그 앞을 막아선다.','“저건 괴물이 아니라 상처 입은 거인일지도 모르오.”'],
+   ['백경의 피부에는 사라진 세계들의 마지막 문장이 흉터처럼 새겨져 있다.','에이해브가 작살 끝을 내린다.','“죽이면 길이 열린다. 살리면 기억이 남겠지. 둘 다 가질 순 없다.”']
+  ]
+ },
+ npc:{
+  alice:['앨리스가 접힌 증언서를 내민다.','“이름이 지워지기 전에, 네가 먼저 읽어줘.”'],
+  queen:['하트 여왕은 판결문에서 시선을 떼지 않는다.','“질서가 사람을 삼키기 시작했다면, 무엇을 고쳐야 하지?”'],
+  creature:['피조물이 가슴의 봉합선을 손끝으로 짚는다.','“만들어진 이름 말고, 내가 고른 이름으로 불리고 싶다.”'],
+  victor:['빅터가 실험 기록을 덮는다.','“다시 시작할 자격이 있다면… 책임부터 져야겠지.”'],
+  ahab:['에이해브가 작살을 바닥에 세운다.','“사냥을 끝낸 뒤에도 내가 남을지는 모르겠군.”'],
+  quixote:['돈키호테가 낡은 방패를 고쳐 쥔다.','“세상이 비웃어도, 누군가의 방패가 되는 꿈까지 버릴 순 없지.”']
+ },
+ bond:{
+  alice:[
+   ['앨리스가 불탄 명부를 무릎 위에 펼친다.','“내 이름만 남긴다고 끝나는 게 아니야. 사라진 사람들 이름도 되찾고 싶어.”','그녀가 빈칸을 손끝으로 짚는다.','“같이 찾아줄래?”'],
+   ['사본의 빈칸에서 희미한 목소리가 새어 나온다.','앨리스가 펜을 당신에게 건넨다.','“여기 적힌 이름들을 세상에 돌려줄지, 이제 같이 결정하자.”']
+  ],
+  adam:[
+   ['피조물이 가슴에 새겨진 창조주의 번호를 보여준다.','“이 번호로 불리고 싶지 않다.”','그가 심장 쪽을 가리킨다.','“내가 고른 이름으로 살아갈 수 있게 도와줄 수 있나?”'],
+   ['새 심장틀이 완성되자 빅터가 소유권을 주장한다.','피조물은 떨리는 손으로 펜을 집는다.','“이번에는 내 이름을 내가 쓰겠다.”']
+  ],
+  ahab:[
+   ['에이해브가 부러진 배의 승선 명단을 구겨 쥔다.','“백경만 보느라 돌아갈 사람들을 놓쳤군.”','그가 처음으로 작살 대신 구명정을 바라본다.','“아직 늦지 않았다면, 배부터 고치자.”'],
+   ['선원들은 귀환을 원하지만 멀리서 백경의 흔적이 다시 나타난다.','에이해브가 작살을 천천히 내려놓는다.','“이번엔 내가 아니라 네가 정해라. 쫓을지, 돌아갈지.”']
+  ]
+ }
+};
+const DIALOGUE_CHOICES={
+ alice:[
+  ['증언서를 숨겨 앨리스를 보호한다','여왕에게 공개 재판을 요구한다','흰 토끼의 탈출로를 뒤쫓는다','앨리스와 함께 증언의 원본을 확인한다'],
+  ['기록을 사람들에게 나눠 준다','법정 기록고에 봉인한다','추적단에 표적의 위치를 넘긴다','앨리스와 사본을 만들어 함께 공개한다']
+ ],
+ adam:[
+  ['피조물에게 자기 이름을 고르게 한다','빅터의 실험 기록부터 검증한다','심장의 근원을 함께 추적한다','피조물과 대체 심장 설계도를 확인한다'],
+  ['사람들의 불씨로 심장을 대신한다','피조물의 동의를 받고 실험한다','장치를 부수고 균열로 들어간다','마지막 선택을 피조물에게 맡긴다']
+ ],
+ ahab:[
+  ['돈키호테와 백경의 상처를 살핀다','법정 허가를 받아 포획한다','에이해브와 마지막 항해를 맹세한다','선원들의 퇴로부터 확보한다'],
+  ['백경을 풀어주고 문장을 필사한다','기억을 보존한 채 백경을 봉인한다','작살로 세계를 묶은 사슬을 끊는다','선원들을 먼저 귀환시킨다']
+ ]
+};
+const conversationSpeaker=s=>s.scene==='npc'?(NPCS[s.thread]?.name||'낯선 인물'):(COMPANIONS[s.thread]?.name||'동행자');
+function conversationLines(s){
+ if(s.scene==='dialogue')return NOVEL_COPY.dialogue[s.thread]?.[s.threads[s.thread]]||String(s.message||'').split(/\n+/);
+ if(s.scene==='npc')return NOVEL_COPY.npc[s.thread]||String(s.message||'').split(/\n+/);
+ if(s.scene==='bond')return NOVEL_COPY.bond[s.thread]?.[s.bondQuests[s.thread]]||String(s.message||'').split(/\n+/);
+ return String(s.message||'').split(/\n+/);
+}
+function conversationCopy(s){
+ const speaker=conversationSpeaker(s),relation=s.scene==='npc'?game.affinityTier(s.thread):game.affectionLabel(s.thread);
+ return `<section class="conversation-copy" aria-live="polite" aria-label="${esc(speaker)}와의 대화"><header class="conversation-head"><strong>${esc(speaker)}</strong><span>${esc(relation)}</span></header>${conversationLines(s).map(line=>String(line).trim()).filter(Boolean).map(line=>line.startsWith('“')&&line.endsWith('”')?`<blockquote class="conversation-quote">${esc(line)}</blockquote>`:`<p class="conversation-narration">${esc(line)}</p>`).join('')}</section>`;
+}
 function sceneArt(s){if(s.scene==='battle')return art(s.enemy.boss?'bosses':'enemies',(s.enemy.midboss?AREAS[s.area].boss:s.enemy.name).replace(/^정예\s+/,''),s.enemy.name);if(s.scene==='event')return art('events',s.eventId,EVENTS[s.eventId].title);if(['dialogue','bond'].includes(s.scene))return art('story',s.thread,COMPANIONS[s.thread].name);if(s.scene==='npc')return art(asset('npcs',s.thread)?'npcs':'story',s.thread,NPCS[s.thread].name);if(['map','reward'].includes(s.scene))return art('areas',s.area,AREAS[s.area].name);if(s.scene==='camp')return art('misc','camp','불씨의 안식처');if(s.scene==='chapter')return art('story',CHAPTERS[s.area].npc==='creature'?'adam':CHAPTERS[s.area].npc,AREAS[s.area].name+'의 기억');return '';}
 root.addEventListener('error',ev=>{if(ev.target.tagName==='IMG'){ev.target.hidden=true;const caption=ev.target.parentElement.querySelector('.art-fallback');if(caption)caption.hidden=false;}},true);
 const overlay=document.createElement('div');overlay.className='modal-overlay';overlay.hidden=true;overlay.setAttribute('aria-hidden','true');root.append(overlay);overlay.addEventListener('click',()=>closePanel());let scrollBefore=0,oldBodyStyle=null;
@@ -37,8 +101,8 @@ if(s.scene==='chapter'){title=AREAS[s.area].name+' · '+['외곽','심부','중�
 if(s.scene==='camp'){title='방랑자의 캠프';kicker='SANCTUARY / 불씨가 머무는 곳';actions=AREAS.map((a,i)=>b(a.name,'travel',i,i>s.cleared.length?'이전 지역의 인장 필요':s.cleared.includes(i)?'정복 완료 · 재탐험':'외곽 → 심부 → 중심부 · 12노드',i>s.cleared.length,i===s.cleared.length?'primary':'')).join('')+b(`별 없는 회랑 ${s.rift+1}층`,'travel',8,'비밀 발견 1회 또는 보스 4명 처치 후 개방',s.secrets<1&&s.cleared.length<4,'wide');if(s.checkpoint)actions=b('보존한 탐험 재개','resumeChapter','','노드 '+s.checkpoint.step+'/12',false,'primary')+b('경로 포기','abandonChapter','','다른 지역으로 이동하려면 선택');extra=`<div class="campnav">${b('휴식 · 무료','rest','','HP·MP 완전 회복')}${b('물약 · 16G','buy','potion','',s.gold<16)}${menu('제작 / 강화','workshop')}${menu('장비 / 비교','equipment')}${menu('장비 가방','bag')}${menu('직업 비전서','jobs')}${menu('의뢰 게시판','quests')}${menu('인물 / 메인 퀘스트','story')}</div>`}
 if(s.scene==='map'){title=s.kind==='rift'?`별 없는 회랑 ${s.rift+1}층`:AREAS[s.area].name;kicker='JOURNEY / '+(s.kind==='rift'?'회랑':game.sector())+' · 경로 선택';extra=`<div class="route" aria-label="탐험 ${s.step}/${game.limit()}">${Array.from({length:game.limit()+1},(_,i)=>`<span class="step ${i<s.step?'done':''} ${i===s.step?'current':''}">${i===game.limit()?'왕':i+1}</span>`).join('')}</div>`;actions=s.routes.map((t,i)=>b(t==='boss'?(s.kind==='rift'?'이름을 지운 자':AREAS[s.area].boss):TYPES[t][0],'choose',i,t==='boss'?'보스 전투 · 장비와 각성 인장 확정':TYPES[t][1],false,t==='boss'?'primary wide':'')).join('')+b('캠프로 귀환','retreat','','탐험 경로 초기화',false,'wide')}
 if(s.scene==='battle'){const e=s.enemy;title=e.name;kicker=e.boss?'BOSS / 인장의 수호자':e.elite?'ELITE / 위험한 조우':'ENCOUNTER / 전투';extra=`<div class="enemy">${meter(e.name,e.hp,e.maxHp)}<p class="intent">다음 행동: ${{attack:'공격 · 예상 피해 '+game.damagePreview(),heavy:'강공격 · 예상 피해 '+game.damagePreview()+' / 방어 권장',guard:'방어 · 물리 피해 절반',charge:'힘 모으기 · 공격 없음',heal:'회복 · 최대 HP의 10%'}[e.intent]}</p>${e.dotTurns?`<p class="muted">지속 피해 ${e.dot} · ${e.dotTurns}턴</p>`:''}</div>`;actions=b('일반 공격','act','attack','MP +1',false,'primary')+b(job.skill,'act','skill',`MP ${game.skillCost()} · `+job.desc,s.mp<game.skillCost())+b('방어 / 집중','act','defend','피해 70% 감소 · MP +3')+b(`회복 물약 (${s.potions})`,'act','potion','HP 55% 회복 · 적 행동 진행',s.potions<1||s.hp===game.maxHp())+b('도주','act','flee',e.boss?'보스에게서는 도주 불가':'성공 확률 75%',e.boss,'wide')}
-if(s.scene==='dialogue'){const t=THREADS[s.thread];title=t.name;kicker='STORY / '+COMPANIONS[s.thread].name;extra=meter('호감도 · '+game.affectionLabel(s.thread),s.affection[s.thread],100);actions=game.dialogueOptions().map((c,i)=>b(c.label,'dialogue',i,`${c.required?'호감도 '+c.required+' 필요 · ':''}호감도 ${c.delta>=0?'+':''}${c.delta}`,s.affection[s.thread]<c.required)).join('')}
-if(s.scene==='npc'){title=NPCS[s.thread].name;kicker='RELATIONSHIP / 개인 대화';extra=meter('호감도 · '+game.affinityTier(s.thread),game.getAffinity(s.thread),100);actions=['뜻을 존중하고 함께 해결한다','내 뜻을 강요한다','거리를 두고 상황을 기록한다','믿음을 바탕으로 공동 조사한다'].map((label,i)=>b(label,'npcChoice',i,i===3?'호감도 40 필요 · 인장 +1 · 20G':'호감도 '+[12,-10,4][i],i===3&&game.getAffinity(s.thread)<40)).join('');}
+if(s.scene==='dialogue'){const t=THREADS[s.thread],stage=s.threads[s.thread],labels=DIALOGUE_CHOICES[s.thread]?.[stage];title=t.name;kicker='DIALOGUE / '+COMPANIONS[s.thread].name;extra=meter('호감도 · '+game.affectionLabel(s.thread),s.affection[s.thread],100);actions=game.dialogueOptions().map((c,i)=>b(labels?.[i]||c.label,'dialogue',i,`${c.required?'호감도 '+c.required+' 필요 · ':''}호감도 ${c.delta>=0?'+':''}${c.delta}`,s.affection[s.thread]<c.required)).join('')}
+if(s.scene==='npc'){title=NPCS[s.thread].name;kicker='DIALOGUE / 개인 대화';extra=meter('호감도 · '+game.affinityTier(s.thread),game.getAffinity(s.thread),100);actions=['네 뜻을 먼저 듣겠다','내 판단대로 따르라고 한다','거리를 두고 상황을 기록한다','같이 조사하자'].map((label,i)=>b(label,'npcChoice',i,i===3?'호감도 40 필요 · 인장 +1 · 20G':'호감도 '+[12,-10,4][i],i===3&&game.getAffinity(s.thread)<40)).join('');}
 if(s.scene==='bond'){const c=COMPANIONS[s.thread],stage=s.bondQuests[s.thread];title=c.quest;kicker='BOND / '+c.name;extra=meter('호감도 · '+game.affectionLabel(s.thread),s.affection[s.thread],100);actions=b(c.tasks[stage],'bondChoice',0,'비용: '+resources(c.costs[stage])+' · 호감도 +10',!game.canPay(c.costs[stage]),'primary')+b('부탁을 저버리고 이익을 챙긴다','bondChoice',1,'25G · 호감도 −25 · 개인 퀘스트 종료')+b('나중에 결정한다','bondChoice',2,'진행과 호감도 유지')}
 if(s.scene==='reward'){title='잠깐의 고요';kicker='JOURNEY / 탐험의 기록';actions=(s.kind==='story'&&[4,8,12].includes(s.step)?b('경로 보존 · 캠프 정비','pauseChapter','','같은 지점에서 재개'): '')+b('계속 탐험','advance','','다음 갈림길',false,'primary')+b('캠프로 귀환','retreat','','경로 초기화')}
 if(s.scene==='merchant'){title='떠돌이 상인';kicker='TRADER / 확률을 파는 가게';actions=b('회복 물약 · 16G','buy','potion','',s.gold<16)+b('맑은 영약 · 12G','buy','tonic','MP 완전 회복',s.gold<12||s.mp===game.maxMp())+b('봉인된 장비 · 55G','buy','gear','정예 장비 확률표 적용',s.gold<55)+b('떠난다','advance','','',false,'primary')}
@@ -48,7 +112,7 @@ if(s.scene==='dead'){title='아직 꺼지지 않은 불씨';kicker='FALLEN / 다
 if(s.scene==='final'){title='첫 불씨의 기억';kicker='EPILOGUE / 마지막 선택';actions=b('불씨를 놓아준다','finish',0,'저주를 끝내고 기억을 보내 준다')+b('왕관을 쓴다','finish',1,'왕의 힘과 책임을 이어받는다')+b('불씨를 모두에게 나눈다','finish',2,`자비 5 필요 · 현재 ${s.mercy}`,s.mercy<5,'wide primary')}
 if(s.scene==='ending'){title=s.ending;kicker='THE END / 새벽 너머';extra=`<div class="row"><span class="badge">Lv.${s.level} ${job.name}</span><span class="badge">처치 ${s.kills}</span><span class="badge">수집 ${s.collection.length}/${ITEMS.length}</span></div>`;actions=b('캠프로 · 탐험 계속','postgame','','회랑·장비·직업 수집',false,'primary')+menu('해금을 유지하고 새 모험','restart')}
 const side=`<aside><details class="sideblock equipment-details"><summary>장착 장비 · ${esc(s.weapon.name)}</summary>${game.equipment().map(d=>`<div class="item">${gearCard(d)}</div>`).join('')}</details><div class="sideblock"><p class="eyebrow">SUPPLIES</p><p>물약 ${s.potions} · 각성 인장 ${s.sigils}</p><p class="muted">목재 ${s.wood} · 광석 ${s.ore} · 약초 ${s.herb}</p><p class="muted">캠프 Lv.${s.camp} · 자비 ${s.mercy}</p></div><div class="sideblock"><p class="eyebrow">DESTINY</p><p>지역 ${s.cleared.length}/8 · 비전 ${s.unlocked.length}/${hiddenCount}</p><p class="muted">전설 보정 ${s.pity}/29</p><p class="muted">치명타 ${Math.round(game.crit()*100)}% · 회피 ${Math.round(game.dodge()*100)}%</p>${menu('장비 / 비교','equipment','small')}${menu('도감 / 확률표','codex','small')}</div></aside>`;
-$('play').innerHTML=`<div class="layout ${s.scene==='battle'?'in-battle':''}"><main class="main"><p class="eyebrow">${kicker}</p><h2>${esc(title)}</h2>${sceneArt(s)}<div class="story" aria-live="polite">${esc(s.message)}</div>${s.scene!=='camp'?extra:''}<div class="actions">${actions}</div>${s.scene==='camp'?extra:''}</main>${side}</div><form id="bf-command-form" class="commandrow"><label for="bf-command">직접 입력</label><input id="bf-command" type="text" maxlength="80" autocomplete="off" placeholder="예: 공격, 방어, 물약, 1번 선택"><button type="submit" class="cursor-interaction">실행</button><p class="muted" id="bf-command-status" role="status">지원 명령: 공격 · 스킬 · 방어 · 물약 · 도주 · 휴식 · 귀환 · 계속 · 1/2/3/4</p></form>`;
+$('play').innerHTML=`<div class="layout ${s.scene==='battle'?'in-battle':''} ${conversationScenes.has(s.scene)?'is-conversation':''}"><main class="main"><p class="eyebrow">${kicker}</p><h2>${esc(title)}</h2>${sceneArt(s)}${conversationScenes.has(s.scene)?conversationCopy(s):`<div class="story" aria-live="polite">${esc(s.message)}</div>`}${s.scene!=='camp'?extra:''}<div class="actions">${actions}</div>${s.scene==='camp'?extra:''}</main>${side}</div><form id="bf-command-form" class="commandrow"><label for="bf-command">직접 입력</label><input id="bf-command" type="text" maxlength="80" autocomplete="off" placeholder="예: 공격, 방어, 물약, 1번 선택"><button type="submit" class="cursor-interaction">실행</button><p class="muted" id="bf-command-status" role="status">지원 명령: 공격 · 스킬 · 방어 · 물약 · 도주 · 휴식 · 귀환 · 계속 · 1/2/3/4</p></form>`;
 }
 function showPanel(type){if(panel!==type){panelOrigin=type; if(views[type])views[type].page=0;}panel=type;const el=$('panel'),s=game.s;el.hidden=false;lockPanel();const close=menu('닫기','close','small');let html='';
 if(type==='status')html=statusDetails()+close;
