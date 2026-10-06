@@ -209,9 +209,396 @@
 }
 @media(prefers-reduced-motion:reduce){#black-forest-game button{transition:none}}
 
+
+
+/* UI 5.2 — structural mobile redesign.
+   Distinct app-shell hierarchy, compact HUD, sticky action dock and bottom-sheet modals. */
+#black-forest-game{
+  --bf-shell:#0a0e0c;
+  --bf-card:#121815;
+  --bf-card-2:#171e1a;
+  --bf-edge:#303a33;
+  --bf-gold:#b9a06a;
+  --bf-gold-hi:#dcc58c;
+  min-height:100dvh;
+}
+#black-forest-game .top{
+  position:relative;
+  display:grid;
+  grid-template-columns:minmax(0,1fr) auto;
+  align-items:center;
+  gap:14px;
+  padding:16px 2px 15px;
+}
+#black-forest-game .top:after{
+  content:"";
+  position:absolute;
+  left:0;right:0;bottom:0;
+  height:1px;
+  background:linear-gradient(90deg,transparent,#6e6040 18%,#6e6040 82%,transparent);
+}
+#black-forest-game .top h1{font-size:30px}
+#black-forest-game .top .muted{margin-top:3px}
+#black-forest-game .top>button{
+  align-self:center;
+  white-space:nowrap;
+  background:#111713;
+  border-color:#4a5148;
+}
+#black-forest-game .stats{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:8px;
+  border:0;
+  padding:10px 0 14px;
+}
+#black-forest-game .stats>div{
+  min-width:0;
+  background:var(--bf-card);
+  border:1px solid #28312b;
+  border-radius:6px;
+  padding:9px 10px;
+}
+#black-forest-game .stats .statline{gap:5px}
+#black-forest-game .stats progress{margin-top:6px}
+#black-forest-game .layout{
+  align-items:start;
+  gap:14px;
+}
+#black-forest-game .main{
+  background:var(--bf-card);
+  border:1px solid var(--bf-edge);
+  border-radius:8px;
+  padding:14px;
+  box-shadow:0 14px 38px #0003;
+}
+#black-forest-game .main>.scene-art:first-child{
+  margin:-14px -14px 14px;
+  max-width:calc(100% + 28px);
+  border:0;
+  border-bottom:1px solid var(--bf-edge);
+  border-radius:8px 8px 0 0;
+}
+#black-forest-game .main>.scene-art:first-child img{
+  height:clamp(190px,30vh,300px);
+  object-fit:cover;
+  object-position:center 32%;
+}
+#black-forest-game .main h2{
+  margin-top:2px;
+  color:#f0e7d6;
+}
+#black-forest-game .story{
+  color:#d8d7cf;
+  padding-right:4px;
+}
+#black-forest-game .enemy{
+  display:grid;
+  gap:4px;
+  background:#171917;
+  border-color:#423731;
+  border-left-width:4px;
+}
+#black-forest-game .actions{
+  padding-top:10px;
+  border-top:1px solid #2c352f;
+}
+#black-forest-game .actions button{
+  background:#181f1b;
+  border-color:#3b463e;
+  border-radius:6px;
+}
+#black-forest-game .actions button.primary{
+  background:linear-gradient(180deg,#c0aa73,#a58e5b);
+  color:#0d100e;
+}
+#black-forest-game aside{
+  display:grid;
+  gap:10px;
+  border:0;
+  padding:0;
+}
+#black-forest-game .sideblock{
+  background:var(--bf-card);
+  border:1px solid var(--bf-edge);
+  border-radius:7px;
+  padding:12px;
+}
+#black-forest-game .sideblock+.sideblock{padding-top:12px}
+#black-forest-game .sideblock h3,
+#black-forest-game .sectiontitle{
+  color:#cdb77f;
+  letter-spacing:.02em;
+}
+#black-forest-game .route{
+  padding:10px 0 2px;
+  overflow-x:auto;
+  flex-wrap:nowrap;
+  scrollbar-width:none;
+}
+#black-forest-game .route::-webkit-scrollbar{display:none}
+#black-forest-game .step{flex:0 0 auto}
+#black-forest-game .campnav{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  border-top:0;
+  margin-top:12px;
+  padding-top:0;
+}
+#black-forest-game .campnav button{
+  min-height:62px;
+  text-align:center;
+  align-items:center;
+  justify-content:center;
+}
+#black-forest-game .classcards{
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:8px;
+}
+#black-forest-game .classcards button{
+  min-height:116px;
+  padding:14px 12px;
+  background:var(--bf-card);
+  border-color:#333e37;
+}
+#black-forest-game .classcards b{
+  font-size:17px;
+  color:#efe6d3;
+}
+#black-forest-game .panel{
+  background:#0d1210;
+  border-color:#485148;
+}
+#black-forest-game .panelbar{
+  min-height:54px;
+  margin:0 -4px 14px;
+  padding:10px 4px;
+  color:#d6c18c;
+  font-family:Georgia,'Noto Serif KR',serif;
+}
+#black-forest-game .panel .item{
+  background:transparent;
+}
+#black-forest-game .equipment-portrait{
+  border-color:#5b604f;
+  background:#0a0e0c;
+}
+#black-forest-game .gear-slots button{
+  border-color:#3a443d;
+  background:#131915;
+}
+#black-forest-game .gear-bag .item{
+  padding:12px;
+  margin-bottom:7px;
+  border:1px solid #2c352f;
+  border-radius:5px;
+  background:#111713;
+}
+#black-forest-game .joblist .item{
+  padding:13px 0;
+}
+#black-forest-game .footer{
+  opacity:.92;
+}
+#black-forest-game #bf-downloads{margin-top:10px}
+
+@media(max-width:700px){
+  html,body{background:#080b09!important}
+  #black-forest-game{
+    width:100%;
+    max-width:none;
+    padding:0 12px calc(20px + env(safe-area-inset-bottom));
+    background:#0a0e0c;
+  }
+  #black-forest-game .top{
+    padding:calc(10px + env(safe-area-inset-top)) 0 10px;
+  }
+  #black-forest-game .top h1{font-size:22px;white-space:nowrap}
+  #black-forest-game .top .eyebrow{font-size:9px;letter-spacing:1.4px}
+  #black-forest-game .top .muted{display:none}
+  #black-forest-game .top>button{
+    min-height:36px;
+    padding:6px 9px;
+    font-size:11px;
+  }
+
+  #black-forest-game #bf-stats{
+    position:sticky;
+    top:0;
+    z-index:8;
+    margin:0 -12px;
+    padding:0 12px;
+    background:#0a0e0cf2;
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid #252d28;
+  }
+  #black-forest-game .stats{
+    grid-template-columns:repeat(4,minmax(0,1fr));
+    gap:5px;
+    padding:7px 0;
+    margin:0;
+  }
+  #black-forest-game .stats>div{
+    padding:6px 7px;
+    border-radius:5px;
+  }
+  #black-forest-game .stats .statline{
+    display:block;
+    font-size:10px;
+    line-height:1.35;
+  }
+  #black-forest-game .stats .statline span:last-child{
+    display:block;
+    margin-top:2px;
+    color:#eee5d4;
+    font-size:11px;
+    font-variant-numeric:tabular-nums;
+  }
+  #black-forest-game .stats progress{height:3px;margin-top:4px}
+
+  #black-forest-game .layout{
+    display:block;
+    margin-top:10px;
+  }
+  #black-forest-game .main{
+    padding:12px;
+    border-radius:9px;
+  }
+  #black-forest-game .main>.scene-art:first-child{
+    margin:-12px -12px 12px;
+    max-width:calc(100% + 24px);
+    border-radius:9px 9px 0 0;
+  }
+  #black-forest-game .main>.scene-art:first-child img{
+    height:clamp(175px,28vh,235px);
+    object-fit:cover;
+  }
+  #black-forest-game .main h2{font-size:19px}
+  #black-forest-game .story{
+    margin:9px 0 13px;
+    line-height:1.72;
+    font-size:14px;
+  }
+  #black-forest-game .enemy{margin:10px 0;padding:10px 11px}
+  #black-forest-game .route{margin:9px 0;padding:5px 2px}
+
+  #black-forest-game .main>.actions{
+    position:sticky;
+    bottom:max(0px,env(safe-area-inset-bottom));
+    z-index:7;
+    margin:12px -12px -12px;
+    padding:9px 12px calc(9px + env(safe-area-inset-bottom));
+    background:#0c110fee;
+    backdrop-filter:blur(12px);
+    border-top:1px solid #3b443d;
+    border-radius:0 0 9px 9px;
+    box-shadow:0 -12px 30px #0008;
+  }
+  #black-forest-game .main>.actions button{
+    min-height:50px;
+    text-align:center;
+    align-items:center;
+    border-color:#465149;
+  }
+
+  #black-forest-game aside{
+    margin-top:10px;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:7px;
+    border:0;
+    padding:0;
+  }
+  #black-forest-game .sideblock{
+    padding:10px;
+    min-width:0;
+  }
+  #black-forest-game .sideblock+.sideblock{padding-top:10px}
+  #black-forest-game .sideblock .item{padding:7px 0}
+  #black-forest-game .sideblock p,
+  #black-forest-game .sideblock .muted{font-size:11px}
+
+  #black-forest-game .campnav{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:6px;
+  }
+  #black-forest-game .campnav button{min-height:58px}
+  #black-forest-game .classcards{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:7px;
+    margin-top:14px;
+  }
+  #black-forest-game .classcards button{
+    min-height:105px;
+    padding:11px 9px;
+  }
+  #black-forest-game .classcards b{font-size:16px;margin-bottom:6px}
+
+  #black-forest-game .modal-overlay{background:#020403bf}
+  #black-forest-game .panel{
+    inset:auto 0 0 0;
+    width:100%;
+    max-width:none;
+    max-height:86dvh;
+    margin:0;
+    border-left:0;
+    border-right:0;
+    border-bottom:0;
+    border-radius:16px 16px 0 0;
+    padding:0 14px calc(18px + env(safe-area-inset-bottom));
+    box-shadow:0 -24px 70px #000d;
+  }
+  #black-forest-game .panel:before{
+    content:"";
+    display:block;
+    width:42px;
+    height:4px;
+    border-radius:999px;
+    background:#596159;
+    margin:8px auto 1px;
+  }
+  #black-forest-game .panelbar{
+    top:0;
+    min-height:48px;
+    padding:8px 0;
+    background:#0d1210f5;
+  }
+  #black-forest-game .filters{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:7px;
+  }
+  #black-forest-game .filters label{min-width:0}
+  #black-forest-game .joblist{grid-template-columns:1fr}
+  #black-forest-game .gear-slots{grid-template-columns:repeat(3,minmax(0,1fr))}
+  #black-forest-game .gear-slots button{min-height:82px}
+  #black-forest-game .gear-bag{grid-template-columns:1fr}
+  #black-forest-game .footer{
+    display:block;
+    padding-bottom:8px;
+  }
+  #black-forest-game .footer>.row{margin-top:8px}
+}
+
+@media(max-width:430px){
+  #black-forest-game{padding-left:10px;padding-right:10px}
+  #black-forest-game #bf-stats{margin-left:-10px;margin-right:-10px;padding-left:10px;padding-right:10px}
+  #black-forest-game .stats{gap:4px}
+  #black-forest-game .stats>div{padding:5px}
+  #black-forest-game .stats .statline{font-size:9px}
+  #black-forest-game .stats .statline span:last-child{font-size:10px}
+  #black-forest-game .main>.actions{grid-template-columns:repeat(2,minmax(0,1fr))}
+  #black-forest-game aside{grid-template-columns:1fr 1fr}
+  #black-forest-game .filters{grid-template-columns:1fr}
+}
+@media(max-width:350px){
+  #black-forest-game .top h1{font-size:20px}
+  #black-forest-game .main>.actions{grid-template-columns:1fr}
+  #black-forest-game aside{grid-template-columns:1fr}
+}
+
 </style>
 <div id="black-forest-game">
-<header class="top"><div><p class="eyebrow">THE LAST EMBER · TEXT RPG</p><h1>검은 숲의 방랑자</h1><p class="muted">마지막 불씨 · 통합판 5.1 · 절제형 다크 판타지 UI</p></div><button type="button" data-ui="save" class="small cursor-interaction">저장 / 불러오기</button></header>
+<header class="top"><div><p class="eyebrow">THE LAST EMBER · TEXT RPG</p><h1>검은 숲의 방랑자</h1><p class="muted">마지막 불씨 · 통합판 5.2 · 모바일 다크 판타지 UI</p></div><button type="button" data-ui="save" class="small cursor-interaction">저장 / 불러오기</button></header>
 <div id="bf-stats"></div>
 <div id="bf-play"></div>
 <section class="panel" id="bf-panel" hidden></section>
