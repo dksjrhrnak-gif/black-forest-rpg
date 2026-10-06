@@ -1,0 +1,402 @@
+{
+  "counts": {
+    "content.js": 261,
+    "literature.js": 233,
+    "expansion.js": 322,
+    "supplemental.js": 62,
+    "class-tree.js": 13,
+    "relationships.js": 39,
+    "engine.js": 171,
+    "qa-relationships.js": 30,
+    "career.js": 21,
+    "chapters.js": 288,
+    "journey.js": 3,
+    "ui.js": 473
+  },
+  "duplicates": {
+    "떠돌이 상인": [
+      "content.js:24",
+      "ui.js:149"
+    ],
+    "일반": [
+      "content.js:25",
+      "literature.js:28",
+      "ui.js:172"
+    ],
+    "희귀": [
+      "content.js:25",
+      "literature.js:29"
+    ],
+    "영웅": [
+      "content.js:25",
+      "literature.js:30"
+    ],
+    "전설": [
+      "content.js:25",
+      "literature.js:31"
+    ],
+    "공격": [
+      "content.js:28",
+      "engine.js:55",
+      "engine.js:60",
+      "career.js:7",
+      "ui.js:108",
+      "ui.js:192"
+    ],
+    "방어": [
+      "content.js:28",
+      "career.js:7",
+      "ui.js:108",
+      "ui.js:192"
+    ],
+    "행운": [
+      "content.js:28",
+      "expansion.js:18",
+      "ui.js:132"
+    ],
+    "행운 %": [
+      "content.js:28",
+      "ui.js:108"
+    ],
+    "체력": [
+      "literature.js:4",
+      "literature.js:7",
+      "literature.js:9",
+      "literature.js:15",
+      "literature.js:20",
+      "literature.js:26",
+      "literature.js:26"
+    ],
+    "힘": [
+      "literature.js:5",
+      "literature.js:10",
+      "literature.js:12",
+      "literature.js:14",
+      "literature.js:19",
+      "literature.js:23",
+      "literature.js:26"
+    ],
+    "의지": [
+      "literature.js:6",
+      "literature.js:13",
+      "literature.js:17",
+      "literature.js:22",
+      "literature.js:26",
+      "expansion.js:18"
+    ],
+    "민첩": [
+      "literature.js:8",
+      "literature.js:11",
+      "literature.js:16",
+      "literature.js:18",
+      "literature.js:21",
+      "expansion.js:18"
+    ],
+    "서사의 절단": [
+      "literature.js:26",
+      "supplemental.js:18"
+    ],
+    "여왕에게 공개 재판을 요구한다": [
+      "literature.js:45",
+      "ui.js:53"
+    ],
+    "추적단에 표적의 위치를 넘긴다": [
+      "literature.js:46",
+      "ui.js:54"
+    ],
+    "돈키호테와 백경의 상처를 살핀다": [
+      "literature.js:51",
+      "ui.js:61"
+    ],
+    "에이해브와 마지막 항해를 맹세한다": [
+      "literature.js:51",
+      "ui.js:61"
+    ],
+    "작살로 세계를 묶은 사슬을 끊는다": [
+      "literature.js:52",
+      "ui.js:62"
+    ],
+    "마법": [
+      "expansion.js:4",
+      "expansion.js:46"
+    ],
+    "원거리": [
+      "expansion.js:5",
+      "expansion.js:46"
+    ],
+    "서사의 조준": [
+      "expansion.js:5",
+      "supplemental.js:18"
+    ],
+    "지원": [
+      "expansion.js:6",
+      "expansion.js:46"
+    ],
+    "불씨의 나눔": [
+      "expansion.js:6",
+      "supplemental.js:18"
+    ],
+    "기이": [
+      "expansion.js:7",
+      "expansion.js:46"
+    ],
+    "틈새의 거래": [
+      "expansion.js:7",
+      "supplemental.js:18"
+    ],
+    "자비 3": [
+      "expansion.js:19",
+      "engine.js:104"
+    ],
+    "창": [
+      "expansion.js:27",
+      "expansion.js:41",
+      "expansion.js:45"
+    ],
+    "활": [
+      "expansion.js:27",
+      "expansion.js:41",
+      "expansion.js:45"
+    ],
+    "도끼": [
+      "expansion.js:27",
+      "expansion.js:45"
+    ],
+    "해머": [
+      "expansion.js:27",
+      "expansion.js:41",
+      "expansion.js:45"
+    ],
+    "지팡이": [
+      "expansion.js:27",
+      "expansion.js:45",
+      "expansion.js:45"
+    ],
+    "마도서": [
+      "expansion.js:27",
+      "expansion.js:41",
+      "expansion.js:45",
+      "expansion.js:45"
+    ],
+    "낫": [
+      "expansion.js:27",
+      "expansion.js:45"
+    ],
+    "채찍": [
+      "expansion.js:27",
+      "expansion.js:45"
+    ],
+    "지휘봉": [
+      "expansion.js:27",
+      "expansion.js:41"
+    ],
+    "무기-": [
+      "expansion.js:41",
+      "expansion.js:45"
+    ],
+    "검": [
+      "expansion.js:41",
+      "expansion.js:45",
+      "expansion.js:45",
+      "expansion.js:45",
+      "expansion.js:45",
+      "expansion.js:45",
+      "expansion.js:45",
+      "expansion.js:45",
+      "expansion.js:45"
+    ],
+    "단검": [
+      "expansion.js:45",
+      "expansion.js:45"
+    ],
+    "장신구": [
+      "expansion.js:45",
+      "ui.js:104"
+    ],
+    "근접": [
+      "expansion.js:46",
+      "ui.js:182"
+    ],
+    "앨리스": [
+      "relationships.js:4",
+      "qa-relationships.js:2"
+    ],
+    "피조물": [
+      "relationships.js:5",
+      "qa-relationships.js:2"
+    ],
+    "에이해브": [
+      "relationships.js:6",
+      "qa-relationships.js:2"
+    ],
+    "낡은 장검": [
+      "engine.js:5",
+      "engine.js:24"
+    ],
+    "별 없는 회랑 ": [
+      "engine.js:37",
+      "ui.js:137",
+      "ui.js:138"
+    ],
+    "치명타": [
+      "engine.js:55",
+      "career.js:7"
+    ],
+    " 피해.": [
+      "engine.js:55",
+      "engine.js:60"
+    ],
+    "중독": [
+      "engine.js:55",
+      "ui.js:132"
+    ],
+    "화상": [
+      "engine.js:55",
+      "ui.js:132"
+    ],
+    "광석": [
+      "engine.js:74",
+      "ui.js:105"
+    ],
+    "목재": [
+      "engine.js:74",
+      "ui.js:105"
+    ],
+    "약초": [
+      "engine.js:74",
+      "ui.js:105"
+    ],
+    "물약": [
+      "engine.js:74",
+      "ui.js:105",
+      "ui.js:192"
+    ],
+    "자비": [
+      "engine.js:74",
+      "ui.js:105"
+    ],
+    "각성 인장": [
+      "engine.js:74",
+      "ui.js:105"
+    ],
+    "비밀 발견": [
+      "engine.js:74",
+      "career.js:7",
+      "ui.js:105"
+    ],
+    "제작": [
+      "engine.js:74",
+      "ui.js:105"
+    ],
+    "보급함": [
+      "engine.js:74",
+      "ui.js:105"
+    ],
+    "캠프 Lv.": [
+      "engine.js:82",
+      "ui.js:167"
+    ],
+    "로 전직했다. ": [
+      "engine.js:88",
+      "career.js:10"
+    ],
+    "경계": [
+      "engine.js:89",
+      "qa-relationships.js:6"
+    ],
+    "호의": [
+      "engine.js:89",
+      "qa-relationships.js:6"
+    ],
+    "신뢰": [
+      "engine.js:89",
+      "qa-relationships.js:6"
+    ],
+    " 호감도 ": [
+      "engine.js:94",
+      "chapters.js:135"
+    ],
+    "\n관계: ": [
+      "qa-relationships.js:8",
+      "chapters.js:134"
+    ],
+    "스킬": [
+      "career.js:7",
+      "ui.js:192"
+    ],
+    "외곽": [
+      "chapters.js:130",
+      "ui.js:136"
+    ],
+    "심부": [
+      "chapters.js:130",
+      "ui.js:136"
+    ],
+    "중심부": [
+      "chapters.js:130",
+      "ui.js:136"
+    ],
+    "계속 나아간다": [
+      "ui.js:5",
+      "ui.js:138",
+      "ui.js:146"
+    ],
+    "착용": [
+      "ui.js:122",
+      "ui.js:124"
+    ],
+    "판매 ": [
+      "ui.js:122",
+      "ui.js:169"
+    ],
+    " · 공격 ": [
+      "ui.js:120",
+      "ui.js:134"
+    ],
+    " · 숙련도 ": [
+      "ui.js:132",
+      "ui.js:166"
+    ],
+    "층": [
+      "ui.js:137",
+      "ui.js:138"
+    ],
+    "장비 / 비교": [
+      "ui.js:137",
+      "ui.js:155"
+    ],
+    "문 너머로 나아간다": [
+      "ui.js:138",
+      "ui.js:138"
+    ],
+    "호감도 · ": [
+      "ui.js:140",
+      "ui.js:141",
+      "ui.js:142"
+    ],
+    "비용: ": [
+      "ui.js:142",
+      "ui.js:150"
+    ],
+    " · 골드 +": [
+      "ui.js:145",
+      "ui.js:151"
+    ],
+    "전리품을 챙기고 나아간다": [
+      "ui.js:146",
+      "ui.js:151"
+    ],
+    "닫기": [
+      "ui.js:161",
+      "ui.js:174"
+    ],
+    "<p class=\"empty\">검색 결과가 없습니다.</p>": [
+      "ui.js:182",
+      "ui.js:183"
+    ],
+    "전체 선택됨 · 복사 메뉴로 보관하세요.": [
+      "ui.js:190",
+      "ui.js:190"
+    ]
+  }
+}
