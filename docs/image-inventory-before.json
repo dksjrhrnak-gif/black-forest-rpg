@@ -1,0 +1,57 @@
+{
+  "main": "793a996a25a96fd15c59d99190495f7a3031b965",
+  "counts": {
+    "classes": {
+      "connected": 29,
+      "null": 85
+    },
+    "enemies": {
+      "connected": 33,
+      "null": 0
+    },
+    "bosses": {
+      "connected": 9,
+      "null": 0
+    },
+    "areas": {
+      "connected": 8,
+      "null": 0
+    },
+    "events": {
+      "connected": 18,
+      "null": 0
+    },
+    "npcs": {
+      "connected": 0,
+      "null": 6
+    },
+    "story": {
+      "connected": 4,
+      "null": 3
+    },
+    "misc": {
+      "connected": 2,
+      "null": 0
+    },
+    "gear": {
+      "connected": 3,
+      "null": 0
+    },
+    "gearTemplates": {
+      "connected": 0,
+      "null": 1000
+    }
+  },
+  "unique": 105,
+  "prefixes": {
+    "class_": 29,
+    "location_": 8,
+    "enemy_": 33,
+    "boss_": 9,
+    "event_": 18,
+    "story_": 3,
+    "gear_": 3
+  },
+  "orphan": [],
+  "missing": []
+}
