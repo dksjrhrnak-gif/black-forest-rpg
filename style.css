@@ -1006,3 +1006,10 @@
 #black-forest-game .class-details{max-width:260px;margin:16px auto;text-align:center}
 #black-forest-game .class-details .class-art img{height:auto;aspect-ratio:2/3;object-fit:contain}
 @media(max-width:600px){#black-forest-game .joblist{grid-template-columns:1fr}}
+
+/* Part A QA follow-up: full-width narrative choices fit two mobile lines. */
+@media(max-width:700px){
+ #black-forest-game .actions:has(button[data-cmd="chapterChoice"]),
+ #black-forest-game .actions:has(button[data-cmd="event"]),
+ #black-forest-game .actions:has(button[data-cmd="finish"]){grid-template-columns:1fr}
+}
