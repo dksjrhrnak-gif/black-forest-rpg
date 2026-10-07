@@ -2284,7 +2284,7 @@
         "bosses": 3
       },
       "masteryAction": "skill",
-      "image": null,
+      "image": "assets/class_x_magic_12.webp",
       "effects": [
         {
           "type": "skillSaver",
@@ -2343,7 +2343,7 @@
         "bosses": 6
       },
       "masteryAction": "skill",
-      "image": null,
+      "image": "assets/class_x_magic_13.webp",
       "effects": [
         {
           "type": "damageMultiplier",
@@ -2403,7 +2403,7 @@
         "bosses": 6
       },
       "masteryAction": "skill",
-      "image": null,
+      "image": "assets/class_x_magic_14.webp",
       "effects": [
         {
           "type": "normalPierce",
@@ -2462,7 +2462,7 @@
         "bosses": 6
       },
       "masteryAction": "defend",
-      "image": null,
+      "image": "assets/class_x_magic_15.webp",
       "effects": [
         {
           "type": "potionBoost",
@@ -2525,7 +2525,7 @@
         "def": 1
       },
       "masteryAction": "skill",
-      "image": null,
+      "image": "assets/class_x_magic_16.webp",
       "effects": [
         {
           "type": "critBonus",
@@ -2589,7 +2589,7 @@
         "def": 1
       },
       "masteryAction": "defend",
-      "image": null,
+      "image": "assets/class_x_magic_17.webp",
       "effects": [
         {
           "type": "goldBonus",
@@ -2651,7 +2651,7 @@
         "bosses": 1
       },
       "masteryAction": "defend",
-      "image": null,
+      "image": "assets/class_x_ranged_0.webp",
       "effects": [
         {
           "type": "defendMana",
@@ -2714,7 +2714,7 @@
         "bosses": 1
       },
       "masteryAction": "critical",
-      "image": null,
+      "image": "assets/class_x_ranged_1.webp",
       "effects": [
         {
           "type": "damageMultiplier",
@@ -2843,7 +2843,7 @@
         "bosses": 1
       },
       "masteryAction": "critical",
-      "image": null,
+      "image": "assets/class_x_ranged_3.webp",
       "effects": [
         {
           "type": "healKill",
@@ -2907,7 +2907,7 @@
         "bosses": 1
       },
       "masteryAction": "critical",
-      "image": null,
+      "image": "assets/class_x_ranged_4.webp",
       "effects": [
         {
           "type": "dodgeBonus",
@@ -2971,7 +2971,7 @@
         "bosses": 1
       },
       "masteryAction": "defend",
-      "image": null,
+      "image": "assets/class_x_ranged_5.webp",
       "effects": [
         {
           "type": "guardHeal",
@@ -3033,7 +3033,7 @@
         "bosses": 1
       },
       "masteryAction": "critical",
-      "image": null,
+      "image": "assets/class_x_ranged_6.webp",
       "effects": [
         {
           "type": "thornsBonus",
@@ -3095,7 +3095,7 @@
         "bosses": 3
       },
       "masteryAction": "critical",
-      "image": null,
+      "image": "assets/class_x_ranged_7.webp",
       "effects": [
         {
           "type": "damageMultiplier",
@@ -3159,7 +3159,7 @@
         "bosses": 3
       },
       "masteryAction": "critical",
-      "image": null,
+      "image": "assets/class_x_ranged_8.webp",
       "effects": [
         {
           "type": "damageMultiplier",
@@ -3221,7 +3221,7 @@
         "bosses": 3
       },
       "masteryAction": "critical",
-      "image": null,
+      "image": "assets/class_x_ranged_9.webp",
       "effects": [
         {
           "type": "damageMultiplier",
@@ -3283,7 +3283,7 @@
         "bosses": 3
       },
       "masteryAction": "critical",
-      "image": null,
+      "image": "assets/class_x_ranged_10.webp",
       "effects": [
         {
           "type": "damageMultiplier",
