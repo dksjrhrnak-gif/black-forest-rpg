@@ -996,9 +996,9 @@
 #black-forest-game .classcards .class-art img,#black-forest-game .joblist .class-art img,#black-forest-game .panel .item>.class-art img{display:block;width:100%;height:auto;aspect-ratio:2/3;object-fit:contain}
 #black-forest-game button,#black-forest-game .armory-slots{overflow-wrap:anywhere;min-width:0;white-space:normal}
 #black-forest-game .armory .gear-slot strong,#black-forest-game .armory .gear-slot small{white-space:normal;overflow:visible;text-overflow:clip;overflow-wrap:anywhere}
-#black-forest-game .armory-hub{overflow-y:auto;overscroll-behavior:contain}
+#black-forest-game .armory-hub{overflow-y:auto;overscroll-behavior:contain;grid-template-rows:minmax(0,1fr)}
 #black-forest-game .armory-slots{grid-template-rows:repeat(3,minmax(65px,auto))}
-#black-forest-game .armory-portrait{position:sticky;top:0;max-height:100%}
+#black-forest-game .armory-portrait{position:relative;max-height:100%}
 
 /* Class portraits have their own reserved 2:3 frame. */
 #black-forest-game .classcards .class-art{max-width:240px}

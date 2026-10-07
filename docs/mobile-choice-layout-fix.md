@@ -12,3 +12,8 @@ Part B visual follow-up: direct review of the actual 320px chapter screenshot sh
 ## Direct screenshot review after the integrated artwork extension
 
 The 390px Chromium chapter screenshot at commit 54e6295 revealed that object-position alone did not keep Alice visible: the long dark text overlay still covered her lower position in the original 600×900 portrait. This is a visual FAIL, even though automated bounds checks passed. The story-only hero now reserves the whole original 2:3 image (contain, maximum 640px high), keeps the title over the image, and puts growing narrative text below it. Original pictures are unchanged. Landscape battle/event/boss layouts retain their cover behavior. The script browser harness now asserts that story copy follows the image instead of concealing its characters. A fresh full A/B/C gate is required before main.
+
+
+## Armory portrait bounds follow-up
+
+Magnifying the 320px equipment screenshot exposed a second visual FAIL: the armory hub's implicit grid row grew to its three minimum-height gear buttons, so the portrait extended under the detail sheet. The picture's contain fit alone did not prevent parent clipping. Defining the hub's one row as minmax(0,1fr) and removing unnecessary portrait stickiness keeps the full portrait inside the available hub; gear buttons retain their existing scroll area and touch targets. A new assertion checks portrait bounds against the hub at every required mobile width, and early preview artifacts include the armory. Original image files, game state and all C strings remain unchanged.
