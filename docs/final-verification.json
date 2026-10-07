@@ -1,0 +1,150 @@
+{
+  "status": "PASS",
+  "baseline": "a38d692203b73ea92d981ae1f8f85d81566f4016",
+  "reviewedGameCommit": "7162cd647d9e05a84dfb2ca85a01139d45bd4301",
+  "htmlSha256": "29d09ccd374499ef325bfbf3ef06f54e4f289db624323dabd4a5abd86d831d24",
+  "htmlBytes": 303830,
+  "gates": {
+    "A": 37533781963,
+    "B": [
+      37535467636,
+      37535893902
+    ],
+    "C": 37539823734,
+    "final": 37561472529,
+    "mainRegression": 37562614478,
+    "pagesDeployment": 37562614477
+  },
+  "finalJobs": [
+    {
+      "id": 112599480573,
+      "name": "verify",
+      "conclusion": "success"
+    },
+    {
+      "id": 112599480768,
+      "name": "Script chromium 430",
+      "conclusion": "success"
+    },
+    {
+      "id": 112599480964,
+      "name": "Script chromium 390",
+      "conclusion": "success"
+    },
+    {
+      "id": 112599480989,
+      "name": "Script chromium 360",
+      "conclusion": "success"
+    },
+    {
+      "id": 112599480994,
+      "name": "Script webkit 360",
+      "conclusion": "success"
+    },
+    {
+      "id": 112599480995,
+      "name": "Script chromium 375",
+      "conclusion": "success"
+    },
+    {
+      "id": 112599481008,
+      "name": "Script webkit 375",
+      "conclusion": "success"
+    },
+    {
+      "id": 112599481014,
+      "name": "Script webkit 430",
+      "conclusion": "success"
+    },
+    {
+      "id": 112599481035,
+      "name": "Script chromium 320",
+      "conclusion": "success"
+    },
+    {
+      "id": 112599481037,
+      "name": "Script webkit 390",
+      "conclusion": "success"
+    },
+    {
+      "id": 112599481047,
+      "name": "Script webkit 320",
+      "conclusion": "success"
+    }
+  ],
+  "mainJobs": [
+    {
+      "id": 112603076700,
+      "name": "verify",
+      "conclusion": "success"
+    },
+    {
+      "id": 112603076912,
+      "name": "Script chromium 360",
+      "conclusion": "success"
+    },
+    {
+      "id": 112603076954,
+      "name": "Script chromium 390",
+      "conclusion": "success"
+    },
+    {
+      "id": 112603077002,
+      "name": "Script chromium 375",
+      "conclusion": "success"
+    },
+    {
+      "id": 112603077018,
+      "name": "Script webkit 320",
+      "conclusion": "success"
+    },
+    {
+      "id": 112603077019,
+      "name": "Script chromium 430",
+      "conclusion": "success"
+    },
+    {
+      "id": 112603077044,
+      "name": "Script webkit 430",
+      "conclusion": "success"
+    },
+    {
+      "id": 112603077053,
+      "name": "Script webkit 390",
+      "conclusion": "success"
+    },
+    {
+      "id": 112603077078,
+      "name": "Script webkit 375",
+      "conclusion": "success"
+    },
+    {
+      "id": 112603077085,
+      "name": "Script chromium 320",
+      "conclusion": "success"
+    },
+    {
+      "id": 112603077163,
+      "name": "Script webkit 360",
+      "conclusion": "success"
+    }
+  ],
+  "browserWidths": [
+    320,
+    360,
+    375,
+    390,
+    430
+  ],
+  "browserMethod": "Headless Chromium/WebKit mobile emulation; normal BF2 importer and real action taps",
+  "scriptChecksPerJob": 376,
+  "scriptChecksTotal": 3760,
+  "numericBranchRngCases": 156,
+  "originalAssetFilesPreserved": 112,
+  "connectedAssetFiles": 137,
+  "connectedClassImages": 61,
+  "missingClassImages": 53,
+  "physicalDevices": "NOT TESTED",
+  "actualOsTabProcessRestore": "NOT TESTED",
+  "persistedPageShow": "Simulated browser event; PASS"
+}

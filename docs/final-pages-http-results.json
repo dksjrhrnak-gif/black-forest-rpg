@@ -1,0 +1,17 @@
+{
+  "base": "https://dksjrhrnak-gif.github.io/black-forest-rpg/",
+  "reviewedGameCommit": "7162cd647d9e05a84dfb2ca85a01139d45bd4301",
+  "htmlSha256": "29d09ccd374499ef325bfbf3ef06f54e4f289db624323dabd4a5abd86d831d24",
+  "htmlBytes": 303830,
+  "assetFiles": 137,
+  "http200": true,
+  "exactAssetBytes": true,
+  "defaultUrl": {
+    "httpStatus": 200,
+    "htmlSha256": "29d09ccd374499ef325bfbf3ef06f54e4f289db624323dabd4a5abd86d831d24",
+    "cacheControl": "max-age=600",
+    "etag": "\"6ac5afbe-4a2d6\""
+  },
+  "status": "PASS",
+  "mainWorkflow": 37562614478
+}
