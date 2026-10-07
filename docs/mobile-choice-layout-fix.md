@@ -5,3 +5,5 @@ Part C first browser run 37539302147 exposed three-line chapter labels in the ex
 Initial run status: FAIL. Corrected run status: PENDING until workflow completion.
 
 The first 320px run passed the chapter/thread/quest/event/NPC checks and then rejected an invalid synthetic pending-quest epilogue save (null outcome with completed quest). The fixture now uses the existing empty-string outcome and an unfinished quest count. Every synthetic import is validated before touching the save UI. This changes QA fixtures only; game validation and save rules are unchanged.
+
+Part B visual follow-up: direct review of the actual 320px chapter screenshot showed that centered cover cropping cut Alice out of her own story illustration. Alice and Ahab stand on the left in their original approved story art, so those two scene images now anchor cover cropping to the left. Original image files and other mappings are untouched. The Creature/Victor illustration visibly contains both matching people and remains centered; reuse in their matching NPC scenes is therefore valid. Queen/Quixote keep the existing region fallback.

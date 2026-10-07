@@ -1013,3 +1013,7 @@
  #black-forest-game .actions:has(button[data-cmd="event"]),
  #black-forest-game .actions:has(button[data-cmd="finish"]){grid-template-columns:1fr}
 }
+
+/* These story protagonists stand on the left of their original artwork. */
+#black-forest-game .scene-hero .scene-art img[src$="story_alice.webp"],
+#black-forest-game .scene-hero .scene-art img[src$="story_ahab.webp"]{object-position:left 22%}
