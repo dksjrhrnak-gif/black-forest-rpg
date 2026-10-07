@@ -1,0 +1,622 @@
+{
+  "status": "SOURCE VALIDATED; final browser/Pages gate pending",
+  "totalFiles": 137,
+  "classes": {
+    "connected": [
+      {
+        "id": "warrior",
+        "name": "전사",
+        "path": "assets/class_warrior.webp"
+      },
+      {
+        "id": "rogue",
+        "name": "도적",
+        "path": "assets/class_rogue.webp"
+      },
+      {
+        "id": "mage",
+        "name": "마도사",
+        "path": "assets/class_mage.webp"
+      },
+      {
+        "id": "paladin",
+        "name": "성기사",
+        "path": "assets/class_paladin.webp"
+      },
+      {
+        "id": "blood",
+        "name": "혈기사",
+        "path": "assets/class_blood.webp"
+      },
+      {
+        "id": "rune",
+        "name": "룬검사",
+        "path": "assets/class_rune.webp"
+      },
+      {
+        "id": "shadow",
+        "name": "그림자 군주",
+        "path": "assets/class_shadow.webp"
+      },
+      {
+        "id": "gambler",
+        "name": "운명의 도박사",
+        "path": "assets/class_gambler.webp"
+      },
+      {
+        "id": "chrono",
+        "name": "시간술사",
+        "path": "assets/class_chrono.webp"
+      },
+      {
+        "id": "rabbit_guard",
+        "name": "토끼굴 문지기",
+        "path": "assets/class_rabbit_guard.webp"
+      },
+      {
+        "id": "pequod",
+        "name": "피쿼드호 갑판검사",
+        "path": "assets/class_pequod.webp"
+      },
+      {
+        "id": "windmill",
+        "name": "풍차의 결투자",
+        "path": "assets/class_windmill.webp"
+      },
+      {
+        "id": "stitch",
+        "name": "봉합된 검투사",
+        "path": "assets/class_stitch.webp"
+      },
+      {
+        "id": "card_spear",
+        "name": "찢긴 카드 창병",
+        "path": "assets/class_card_spear.webp"
+      },
+      {
+        "id": "sancho",
+        "name": "산초의 방패지기",
+        "path": "assets/class_sancho.webp"
+      },
+      {
+        "id": "coffin",
+        "name": "빈 관의 파수꾼",
+        "path": "assets/class_coffin.webp"
+      },
+      {
+        "id": "mirror_fist",
+        "name": "거울 복도의 권투사",
+        "path": "assets/class_mirror_fist.webp"
+      },
+      {
+        "id": "ahab_harpoon",
+        "name": "광기에 찬 포경선 작살잡이",
+        "path": "assets/class_ahab_harpoon.webp"
+      },
+      {
+        "id": "fallen_dreamer",
+        "name": "기사도를 잃은 몽상가",
+        "path": "assets/class_fallen_dreamer.webp"
+      },
+      {
+        "id": "queen_exec",
+        "name": "하트 법정의 참수인",
+        "path": "assets/class_queen_exec.webp"
+      },
+      {
+        "id": "adam_sword",
+        "name": "피조물의 자유검사",
+        "path": "assets/class_adam_sword.webp"
+      },
+      {
+        "id": "twin_duel",
+        "name": "지킬의 이중 결투자",
+        "path": "assets/class_twin_duel.webp"
+      },
+      {
+        "id": "white_knight",
+        "name": "백기사의 균형검",
+        "path": "assets/class_white_knight.webp"
+      },
+      {
+        "id": "grave_hunter",
+        "name": "성당 지하의 사냥꾼",
+        "path": "assets/class_grave_hunter.webp"
+      },
+      {
+        "id": "pagebreaker",
+        "name": "끝장을 찢는 검성",
+        "path": "assets/class_pagebreaker.webp"
+      },
+      {
+        "id": "abyss_anchor",
+        "name": "심연을 고정하는 닻기사",
+        "path": "assets/class_abyss_anchor.webp"
+      },
+      {
+        "id": "clock_reaver",
+        "name": "멈춘 시계의 결투왕",
+        "path": "assets/class_clock_reaver.webp"
+      },
+      {
+        "id": "thorn_crown",
+        "name": "가시 왕관의 반역자",
+        "path": "assets/class_thorn_crown.webp"
+      },
+      {
+        "id": "last_margin",
+        "name": "마지막 여백의 용병왕",
+        "path": "assets/class_last_margin.webp"
+      },
+      {
+        "id": "x_magic_0",
+        "name": "잉크 견습생",
+        "path": "assets/class_x_magic_0.webp"
+      },
+      {
+        "id": "x_magic_1",
+        "name": "오즈의 허수아비 학자",
+        "path": "assets/class_x_magic_1.webp"
+      },
+      {
+        "id": "x_magic_2",
+        "name": "네버랜드 별읽기",
+        "path": "assets/class_x_magic_2.webp"
+      },
+      {
+        "id": "x_magic_3",
+        "name": "우물의 이름술사",
+        "path": "assets/class_x_magic_3.webp"
+      },
+      {
+        "id": "x_magic_4",
+        "name": "해저 전류술사",
+        "path": "assets/class_x_magic_4.webp"
+      },
+      {
+        "id": "x_magic_5",
+        "name": "장미 정원의 환술사",
+        "path": "assets/class_x_magic_5.webp"
+      },
+      {
+        "id": "x_magic_6",
+        "name": "녹색 안경의 주술사",
+        "path": "assets/class_x_magic_6.webp"
+      },
+      {
+        "id": "x_magic_7",
+        "name": "번개 실험실의 도전술사",
+        "path": "assets/class_x_magic_7.webp"
+      },
+      {
+        "id": "x_magic_8",
+        "name": "프랑켄슈타인의 생체술사",
+        "path": "assets/class_x_magic_8.webp"
+      },
+      {
+        "id": "x_magic_9",
+        "name": "그림 동화의 잠술사",
+        "path": "assets/class_x_magic_9.webp"
+      },
+      {
+        "id": "x_magic_10",
+        "name": "거울 뒷면의 연금술사",
+        "path": "assets/class_x_magic_10.webp"
+      },
+      {
+        "id": "x_magic_11",
+        "name": "빅토리아의 안개술사",
+        "path": "assets/class_x_magic_11.webp"
+      },
+      {
+        "id": "x_magic_12",
+        "name": "노틸러스의 폭풍학자",
+        "path": "assets/class_x_magic_12.webp"
+      },
+      {
+        "id": "x_magic_13",
+        "name": "오즈의 가짜 대마법사",
+        "path": "assets/class_x_magic_13.webp"
+      },
+      {
+        "id": "x_magic_14",
+        "name": "별을 읽는 어린 왕자",
+        "path": "assets/class_x_magic_14.webp"
+      },
+      {
+        "id": "x_magic_15",
+        "name": "시간 기계의 역행술사",
+        "path": "assets/class_x_magic_15.webp"
+      },
+      {
+        "id": "x_magic_16",
+        "name": "파우스트의 계약해독자",
+        "path": "assets/class_x_magic_16.webp"
+      },
+      {
+        "id": "x_magic_17",
+        "name": "금서의 마지막 독자",
+        "path": "assets/class_x_magic_17.webp"
+      },
+      {
+        "id": "x_ranged_0",
+        "name": "셜우드의 견습 궁수",
+        "path": "assets/class_x_ranged_0.webp"
+      },
+      {
+        "id": "x_ranged_1",
+        "name": "피쿼드호 투창수",
+        "path": "assets/class_x_ranged_1.webp"
+      },
+      {
+        "id": "x_ranged_2",
+        "name": "이상한 정원의 새총잡이",
+        "path": "assets/class_x_ranged_2.webp"
+      },
+      {
+        "id": "x_ranged_3",
+        "name": "해적섬의 화승총수",
+        "path": "assets/class_x_ranged_3.webp"
+      },
+      {
+        "id": "x_ranged_4",
+        "name": "황야의 우편 저격수",
+        "path": "assets/class_x_ranged_4.webp"
+      },
+      {
+        "id": "x_ranged_5",
+        "name": "종탑의 까마귀 사수",
+        "path": "assets/class_x_ranged_5.webp"
+      },
+      {
+        "id": "x_ranged_6",
+        "name": "오즈의 양철 포수",
+        "path": "assets/class_x_ranged_6.webp"
+      },
+      {
+        "id": "x_ranged_7",
+        "name": "붉은 머리의 표적꾼",
+        "path": "assets/class_x_ranged_7.webp"
+      },
+      {
+        "id": "x_ranged_8",
+        "name": "로빈후드의 망명 궁수",
+        "path": "assets/class_x_ranged_8.webp"
+      },
+      {
+        "id": "x_ranged_9",
+        "name": "노틸러스의 수압포수",
+        "path": "assets/class_x_ranged_9.webp"
+      },
+      {
+        "id": "x_ranged_10",
+        "name": "퀴퀘그의 문신 투창수",
+        "path": "assets/class_x_ranged_10.webp"
+      },
+      {
+        "id": "adventurer",
+        "name": "모험가",
+        "path": "assets/class_adventurer.webp"
+      },
+      {
+        "id": "hunter",
+        "name": "사냥꾼",
+        "path": "assets/class_hunter.webp"
+      },
+      {
+        "id": "guardian",
+        "name": "수호자",
+        "path": "assets/class_guardian.webp"
+      }
+    ],
+    "missing": [
+      {
+        "id": "x_ranged_11",
+        "name": "지옥 항로의 쇠뇌수",
+        "path": null
+      },
+      {
+        "id": "x_ranged_12",
+        "name": "하멜른의 음표 사수",
+        "path": null
+      },
+      {
+        "id": "x_ranged_13",
+        "name": "성벽의 불씨 투석수",
+        "path": null
+      },
+      {
+        "id": "x_ranged_14",
+        "name": "포그의 일주 저격수",
+        "path": null
+      },
+      {
+        "id": "x_ranged_15",
+        "name": "백경의 망루 사냥꾼",
+        "path": null
+      },
+      {
+        "id": "x_ranged_16",
+        "name": "아르고호의 황금 사수",
+        "path": null
+      },
+      {
+        "id": "x_ranged_17",
+        "name": "수평선 너머의 명사수",
+        "path": null
+      },
+      {
+        "id": "x_support_0",
+        "name": "구빈원 붕대지기",
+        "path": null
+      },
+      {
+        "id": "x_support_1",
+        "name": "촛불 성당의 견습수도사",
+        "path": null
+      },
+      {
+        "id": "x_support_2",
+        "name": "산초의 야전 취사병",
+        "path": null
+      },
+      {
+        "id": "x_support_3",
+        "name": "작은 아씨들의 간호사",
+        "path": null
+      },
+      {
+        "id": "x_support_4",
+        "name": "오즈의 마음 수선공",
+        "path": null
+      },
+      {
+        "id": "x_support_5",
+        "name": "성냥의 온기지기",
+        "path": null
+      },
+      {
+        "id": "x_support_6",
+        "name": "노틸러스의 선의",
+        "path": null
+      },
+      {
+        "id": "x_support_7",
+        "name": "토끼굴 길안내자",
+        "path": null
+      },
+      {
+        "id": "x_support_8",
+        "name": "피조물의 상처봉합사",
+        "path": null
+      },
+      {
+        "id": "x_support_9",
+        "name": "노트르담의 종치유사",
+        "path": null
+      },
+      {
+        "id": "x_support_10",
+        "name": "레미제라블의 은촛대지기",
+        "path": null
+      },
+      {
+        "id": "x_support_11",
+        "name": "캔터베리의 순례의사",
+        "path": null
+      },
+      {
+        "id": "x_support_12",
+        "name": "셜우드의 구호대장",
+        "path": null
+      },
+      {
+        "id": "x_support_13",
+        "name": "백지 연맹의 기록보호자",
+        "path": null
+      },
+      {
+        "id": "x_support_14",
+        "name": "스쿠루지의 새벽 구호가",
+        "path": null
+      },
+      {
+        "id": "x_support_15",
+        "name": "천일야화의 생명 이야기꾼",
+        "path": null
+      },
+      {
+        "id": "x_support_16",
+        "name": "돌아온 성냥불의 성녀",
+        "path": null
+      },
+      {
+        "id": "x_support_17",
+        "name": "유리 심장의 재봉사",
+        "path": null
+      },
+      {
+        "id": "x_occult_0",
+        "name": "거울 장터의 골동품상",
+        "path": null
+      },
+      {
+        "id": "x_occult_1",
+        "name": "허클베리의 강길잡이",
+        "path": null
+      },
+      {
+        "id": "x_occult_2",
+        "name": "몽테크리스토의 장부지기",
+        "path": null
+      },
+      {
+        "id": "x_occult_3",
+        "name": "드라큘라의 주간 문지기",
+        "path": null
+      },
+      {
+        "id": "x_occult_4",
+        "name": "걸리버의 축척기사",
+        "path": null
+      },
+      {
+        "id": "x_occult_5",
+        "name": "도리언의 초상 관리인",
+        "path": null
+      },
+      {
+        "id": "x_occult_6",
+        "name": "보물섬의 암호해독자",
+        "path": null
+      },
+      {
+        "id": "x_occult_7",
+        "name": "시간 여행의 관측자",
+        "path": null
+      },
+      {
+        "id": "x_occult_8",
+        "name": "셜록의 흔적 수집가",
+        "path": null
+      },
+      {
+        "id": "x_occult_9",
+        "name": "오디세우스의 매듭꾼",
+        "path": null
+      },
+      {
+        "id": "x_occult_10",
+        "name": "카르밀라의 야간 감시자",
+        "path": null
+      },
+      {
+        "id": "x_occult_11",
+        "name": "체셔의 미소 밀수꾼",
+        "path": null
+      },
+      {
+        "id": "x_occult_12",
+        "name": "해저 이만리의 유물잠수사",
+        "path": null
+      },
+      {
+        "id": "x_occult_13",
+        "name": "동물 재판의 증언 도둑",
+        "path": null
+      },
+      {
+        "id": "x_occult_14",
+        "name": "세헤라자드의 결말 협상가",
+        "path": null
+      },
+      {
+        "id": "x_occult_15",
+        "name": "지옥문 앞의 길동무",
+        "path": null
+      },
+      {
+        "id": "x_occult_16",
+        "name": "찢어진 장의 경계인",
+        "path": null
+      },
+      {
+        "id": "whale_slayer",
+        "name": "백경 살해자",
+        "path": null
+      },
+      {
+        "id": "self_named",
+        "name": "스스로 이름 붙인 검왕",
+        "path": null
+      },
+      {
+        "id": "dream_guard",
+        "name": "라만차의 꿈 수호자",
+        "path": null
+      },
+      {
+        "id": "court_witness",
+        "name": "하트 법정의 증언기사",
+        "path": null
+      },
+      {
+        "id": "alice_return",
+        "name": "앨리스의 귀환 안내자",
+        "path": null
+      },
+      {
+        "id": "victor_heir",
+        "name": "빅터의 속죄 봉합사",
+        "path": null
+      },
+      {
+        "id": "quixote_squire",
+        "name": "라만차의 맹세 종자",
+        "path": null
+      },
+      {
+        "id": "sherwood_warden",
+        "name": "셜우드의 숲 파수장",
+        "path": null
+      },
+      {
+        "id": "oz_restorer",
+        "name": "오즈의 심장 복원사",
+        "path": null
+      },
+      {
+        "id": "faust_release",
+        "name": "파우스트의 계약 파기자",
+        "path": null
+      },
+      {
+        "id": "margin_keeper",
+        "name": "경계의 여백 수호자",
+        "path": null
+      }
+    ]
+  },
+  "categories": {
+    "classes": {
+      "connected": 61,
+      "null": 53
+    },
+    "enemies": {
+      "connected": 33,
+      "null": 0
+    },
+    "bosses": {
+      "connected": 9,
+      "null": 0
+    },
+    "areas": {
+      "connected": 8,
+      "null": 0
+    },
+    "events": {
+      "connected": 18,
+      "null": 0
+    },
+    "npcs": {
+      "connected": 0,
+      "null": 6
+    },
+    "story": {
+      "connected": 5,
+      "null": 2
+    },
+    "misc": {
+      "connected": 2,
+      "null": 0
+    },
+    "gear": {
+      "connected": 3,
+      "null": 0
+    },
+    "gearTemplates": {
+      "connected": 0,
+      "null": 1000
+    }
+  }
+}

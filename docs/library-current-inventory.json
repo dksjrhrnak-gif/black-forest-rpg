@@ -1,6 +1,6 @@
 {
- "listedAt": "2026-10-07 KST",
- "images": 219,
+ "listedAt": "2026-10-07 01:48 UTC snapshot",
+ "images": 239,
  "folders": 1,
  "documents": 7,
  "items": [
@@ -1819,6 +1819,166 @@
    "mime_type": "text/markdown",
    "size_bytes": 16830,
    "created_at": "2026-10-05T17:03:12.951627Z"
+  },
+  {
+   "name": "황금 실로 현실을 꿰매는 흑림의 방랑자.png",
+   "path": "/텍스트 rpg/황금 실로 현실을 꿰매는 흑림의 방랑자.png",
+   "library_file_id": "libfile_6bc9c45992f48191bf521b4eff306648",
+   "mime_type": "image/png",
+   "size_bytes": 3884412,
+   "created_at": "2026-10-06T21:36:35.969884Z"
+  },
+  {
+   "name": "붉은 봉인을 찢는 계약 해독자.png",
+   "path": "/텍스트 rpg/붉은 봉인을 찢는 계약 해독자.png",
+   "library_file_id": "libfile_7707f1da601c8191b75ce5af864fe12d",
+   "mime_type": "image/png",
+   "size_bytes": 3384031,
+   "created_at": "2026-10-06T21:36:33.171634Z"
+  },
+  {
+   "name": "황폐한 길의 마지막 우편 저격수.png",
+   "path": "/텍스트 rpg/황폐한 길의 마지막 우편 저격수.png",
+   "library_file_id": "libfile_cd566e033f908191b9798be2606afa24",
+   "mime_type": "image/png",
+   "size_bytes": 3169663,
+   "created_at": "2026-10-06T21:27:35.384504Z"
+  },
+  {
+   "name": "폐허 항구의 화승총 사수.png",
+   "path": "/텍스트 rpg/폐허 항구의 화승총 사수.png",
+   "library_file_id": "libfile_1e9dc635ec88819183d0238798bda031",
+   "mime_type": "image/png",
+   "size_bytes": 2906294,
+   "created_at": "2026-10-06T21:27:32.305556Z"
+  },
+  {
+   "name": "폭풍 갑판의 밧줄창 투척수.png",
+   "path": "/텍스트 rpg/폭풍 갑판의 밧줄창 투척수.png",
+   "library_file_id": "libfile_9a5346ec11008191a1807dbff6d0428a",
+   "mime_type": "image/png",
+   "size_bytes": 2969189,
+   "created_at": "2026-10-06T21:27:29.059606Z"
+  },
+  {
+   "name": "안개 속 셔우드 견습 궁수.png",
+   "path": "/텍스트 rpg/안개 속 셔우드 견습 궁수.png",
+   "library_file_id": "libfile_70f29ea88a6881919586b151e3206003",
+   "mime_type": "image/png",
+   "size_bytes": 2919979,
+   "created_at": "2026-10-06T21:27:26.221974Z"
+  },
+  {
+   "name": "황금 실로 어둠을 꿰매는 기록관.png",
+   "path": "/텍스트 rpg/황금 실로 어둠을 꿰매는 기록관.png",
+   "library_file_id": "libfile_da0f24abfe5481919d326a96c6f4c9da",
+   "mime_type": "image/png",
+   "size_bytes": 2903136,
+   "created_at": "2026-10-06T21:27:23.177434Z"
+  },
+  {
+   "name": "검은 숲의 계약 해독자.png",
+   "path": "/텍스트 rpg/검은 숲의 계약 해독자.png",
+   "library_file_id": "libfile_d3b065a8f7a081919a2eda11446484b5",
+   "mime_type": "image/png",
+   "size_bytes": 2577807,
+   "created_at": "2026-10-06T21:27:20.079545Z"
+  },
+  {
+   "name": "폐허 시계탑의 시간 역행 마도사.png",
+   "path": "/텍스트 rpg/폐허 시계탑의 시간 역행 마도사.png",
+   "library_file_id": "libfile_6450f3992f348191b4dcfbc9b7f10ed5",
+   "mime_type": "image/png",
+   "size_bytes": 2902711,
+   "created_at": "2026-10-06T21:27:17.350797Z"
+  },
+  {
+   "name": "어둠 속 별을 품은 왕자.png",
+   "path": "/텍스트 rpg/어둠 속 별을 품은 왕자.png",
+   "library_file_id": "libfile_cac829051b408191aa34d36bba2ee919",
+   "mime_type": "image/png",
+   "size_bytes": 2747814,
+   "created_at": "2026-10-06T21:27:14.751499Z"
+  },
+  {
+   "name": "허상을 걷어내는 에메랄드 마도사.png",
+   "path": "/텍스트 rpg/허상을 걷어내는 에메랄드 마도사.png",
+   "library_file_id": "libfile_8641b363565c8191a36103832216d760",
+   "mime_type": "image/png",
+   "size_bytes": 3027333,
+   "created_at": "2026-10-06T21:27:11.989342Z"
+  },
+  {
+   "name": "폭풍 해류를 부르는 학자.png",
+   "path": "/텍스트 rpg/폭풍 해류를 부르는 학자.png",
+   "library_file_id": "libfile_4548804515808191bc278e11710750ef",
+   "mime_type": "image/png",
+   "size_bytes": 3240018,
+   "created_at": "2026-10-06T21:27:09.384855Z"
+  },
+  {
+   "name": "푸른 선율을 쏘는 폐허의 궁수.png",
+   "path": "/텍스트 rpg/푸른 선율을 쏘는 폐허의 궁수.png",
+   "library_file_id": "libfile_ca605dfd9a98819183b03a8f84957ab1",
+   "mime_type": "image/png",
+   "size_bytes": 3058876,
+   "created_at": "2026-10-06T22:29:08.761788Z"
+  },
+  {
+   "name": "폐허의 돛대 위 은발 석궁수.png",
+   "path": "/텍스트 rpg/폐허의 돛대 위 은발 석궁수.png",
+   "library_file_id": "libfile_aaf5668591e48191a30ad1534334009c",
+   "mime_type": "image/png",
+   "size_bytes": 2669275,
+   "created_at": "2026-10-06T22:29:05.654939Z"
+  },
+  {
+   "name": "폭풍 갑판의 마지막 작살잡이.png",
+   "path": "/텍스트 rpg/폭풍 갑판의 마지막 작살잡이.png",
+   "library_file_id": "libfile_479f774acb648191b333f8afd9ebb110",
+   "mime_type": "image/png",
+   "size_bytes": 2977045,
+   "created_at": "2026-10-06T22:29:02.880849Z"
+  },
+  {
+   "name": "황동 압력포를 든 해저 방랑자.png",
+   "path": "/텍스트 rpg/황동 압력포를 든 해저 방랑자.png",
+   "library_file_id": "libfile_6895ea30d09c8191aa4b2fd3add8e018",
+   "mime_type": "image/png",
+   "size_bytes": 3081306,
+   "created_at": "2026-10-06T22:29:00.099072Z"
+  },
+  {
+   "name": "검은 숲의 마지막 불씨.png",
+   "path": "/텍스트 rpg/검은 숲의 마지막 불씨.png",
+   "library_file_id": "libfile_9451472988408191be3f9f0eebfecd48",
+   "mime_type": "image/png",
+   "size_bytes": 3064464,
+   "created_at": "2026-10-06T22:28:57.161663Z"
+  },
+  {
+   "name": "가스등 아래 마지막 추적자.png",
+   "path": "/텍스트 rpg/가스등 아래 마지막 추적자.png",
+   "library_file_id": "libfile_3b01275d3d008191b325889d035b6af9",
+   "mime_type": "image/png",
+   "size_bytes": 2777711,
+   "created_at": "2026-10-06T22:28:54.342489Z"
+  },
+  {
+   "name": "마지막 불씨를 품은 주석 방랑자.png",
+   "path": "/텍스트 rpg/마지막 불씨를 품은 주석 방랑자.png",
+   "library_file_id": "libfile_8aacfca4e11c81919035da98458eecf2",
+   "mime_type": "image/png",
+   "size_bytes": 3184832,
+   "created_at": "2026-10-06T22:28:51.663022Z"
+  },
+  {
+   "name": "폐허의 종탑, 검은 깃털의 명사수.png",
+   "path": "/텍스트 rpg/폐허의 종탑, 검은 깃털의 명사수.png",
+   "library_file_id": "libfile_d7d9bb6e8308819186db5ff44dd2ed63",
+   "mime_type": "image/png",
+   "size_bytes": 2871913,
+   "created_at": "2026-10-06T22:28:48.589787Z"
   }
  ],
  "scope": "Full recursive /텍스트 rpg listing, two pages. File identity is evidence; generated titles alone do not determine new target IDs."

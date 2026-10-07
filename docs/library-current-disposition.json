@@ -1,7 +1,7 @@
 {
-  "reviewScope": "219 current Library image metadata records; original runtime artwork remains connected by authoritative repository manifest. HELD does not mean the runtime counterpart is missing.",
-  "confirmedAdditionalPortraitSources": 16,
-  "additionalSourcesHeld": 203,
+  "reviewScope": "239 image metadata records as of 2026-10-07 01:48 UTC; 32 additional portrait sources selected, 207 retained/held source candidates. Runtime files are separately validated.",
+  "confirmedAdditionalPortraitSources": 32,
+  "additionalSourcesHeld": 207,
   "items": [
     {
       "fileId": "libfile_400341f3427881919f1a57d53521e3a8",
@@ -1754,6 +1754,166 @@
       "classId": null,
       "runtimePath": null,
       "reason": "No additional target ID or official replacement established. Existing manifest-based runtime artwork is retained; duplicates, composite sheets and foreign gear-ID candidates are not assigned arbitrarily."
+    },
+    {
+      "fileId": "libfile_6bc9c45992f48191bf521b4eff306648",
+      "path": "/텍스트 rpg/황금 실로 현실을 꿰매는 흑림의 방랑자.png",
+      "status": "CONNECTED",
+      "classId": "x_magic_17",
+      "reason": "Explicit 2026-10-06 21:26:59 UTC completed ten-class generation batch, earlier fixed ID/name queue and matching direct pixel inspection; numeric filenames not used. Hidden two use the user-requested stronger revision finished 21:36:23 UTC.",
+      "runtimePath": "assets/class_x_magic_17.webp"
+    },
+    {
+      "fileId": "libfile_7707f1da601c8191b75ce5af864fe12d",
+      "path": "/텍스트 rpg/붉은 봉인을 찢는 계약 해독자.png",
+      "status": "CONNECTED",
+      "classId": "x_magic_16",
+      "reason": "Explicit 2026-10-06 21:26:59 UTC completed ten-class generation batch, earlier fixed ID/name queue and matching direct pixel inspection; numeric filenames not used. Hidden two use the user-requested stronger revision finished 21:36:23 UTC.",
+      "runtimePath": "assets/class_x_magic_16.webp"
+    },
+    {
+      "fileId": "libfile_cd566e033f908191b9798be2606afa24",
+      "path": "/텍스트 rpg/황폐한 길의 마지막 우편 저격수.png",
+      "status": "CONNECTED",
+      "classId": "x_ranged_4",
+      "reason": "Explicit 2026-10-06 21:26:59 UTC completed ten-class generation batch, earlier fixed ID/name queue and matching direct pixel inspection; numeric filenames not used. Hidden two use the user-requested stronger revision finished 21:36:23 UTC.",
+      "runtimePath": "assets/class_x_ranged_4.webp"
+    },
+    {
+      "fileId": "libfile_1e9dc635ec88819183d0238798bda031",
+      "path": "/텍스트 rpg/폐허 항구의 화승총 사수.png",
+      "status": "CONNECTED",
+      "classId": "x_ranged_3",
+      "reason": "Explicit 2026-10-06 21:26:59 UTC completed ten-class generation batch, earlier fixed ID/name queue and matching direct pixel inspection; numeric filenames not used. Hidden two use the user-requested stronger revision finished 21:36:23 UTC.",
+      "runtimePath": "assets/class_x_ranged_3.webp"
+    },
+    {
+      "fileId": "libfile_9a5346ec11008191a1807dbff6d0428a",
+      "path": "/텍스트 rpg/폭풍 갑판의 밧줄창 투척수.png",
+      "status": "CONNECTED",
+      "classId": "x_ranged_1",
+      "reason": "Explicit 2026-10-06 21:26:59 UTC completed ten-class generation batch, earlier fixed ID/name queue and matching direct pixel inspection; numeric filenames not used. Hidden two use the user-requested stronger revision finished 21:36:23 UTC.",
+      "runtimePath": "assets/class_x_ranged_1.webp"
+    },
+    {
+      "fileId": "libfile_70f29ea88a6881919586b151e3206003",
+      "path": "/텍스트 rpg/안개 속 셔우드 견습 궁수.png",
+      "status": "CONNECTED",
+      "classId": "x_ranged_0",
+      "reason": "Explicit 2026-10-06 21:26:59 UTC completed ten-class generation batch, earlier fixed ID/name queue and matching direct pixel inspection; numeric filenames not used. Hidden two use the user-requested stronger revision finished 21:36:23 UTC.",
+      "runtimePath": "assets/class_x_ranged_0.webp"
+    },
+    {
+      "fileId": "libfile_da0f24abfe5481919d326a96c6f4c9da",
+      "name": "황금 실로 어둠을 꿰매는 기록관.png",
+      "path": "/텍스트 rpg/황금 실로 어둠을 꿰매는 기록관.png",
+      "status": "HELD",
+      "classId": null,
+      "reason": "Original Hidden version superseded by user-requested stronger revision, or latest upcoming variant has no confirmed completed generation ID. File preserved."
+    },
+    {
+      "fileId": "libfile_d3b065a8f7a081919a2eda11446484b5",
+      "name": "검은 숲의 계약 해독자.png",
+      "path": "/텍스트 rpg/검은 숲의 계약 해독자.png",
+      "status": "HELD",
+      "classId": null,
+      "reason": "Original Hidden version superseded by user-requested stronger revision, or latest upcoming variant has no confirmed completed generation ID. File preserved."
+    },
+    {
+      "fileId": "libfile_6450f3992f348191b4dcfbc9b7f10ed5",
+      "path": "/텍스트 rpg/폐허 시계탑의 시간 역행 마도사.png",
+      "status": "CONNECTED",
+      "classId": "x_magic_15",
+      "reason": "Explicit 2026-10-06 21:26:59 UTC completed ten-class generation batch, earlier fixed ID/name queue and matching direct pixel inspection; numeric filenames not used. Hidden two use the user-requested stronger revision finished 21:36:23 UTC.",
+      "runtimePath": "assets/class_x_magic_15.webp"
+    },
+    {
+      "fileId": "libfile_cac829051b408191aa34d36bba2ee919",
+      "path": "/텍스트 rpg/어둠 속 별을 품은 왕자.png",
+      "status": "CONNECTED",
+      "classId": "x_magic_14",
+      "reason": "Explicit 2026-10-06 21:26:59 UTC completed ten-class generation batch, earlier fixed ID/name queue and matching direct pixel inspection; numeric filenames not used. Hidden two use the user-requested stronger revision finished 21:36:23 UTC.",
+      "runtimePath": "assets/class_x_magic_14.webp"
+    },
+    {
+      "fileId": "libfile_8641b363565c8191a36103832216d760",
+      "path": "/텍스트 rpg/허상을 걷어내는 에메랄드 마도사.png",
+      "status": "CONNECTED",
+      "classId": "x_magic_13",
+      "reason": "Explicit 2026-10-06 21:26:59 UTC completed ten-class generation batch, earlier fixed ID/name queue and matching direct pixel inspection; numeric filenames not used. Hidden two use the user-requested stronger revision finished 21:36:23 UTC.",
+      "runtimePath": "assets/class_x_magic_13.webp"
+    },
+    {
+      "fileId": "libfile_4548804515808191bc278e11710750ef",
+      "path": "/텍스트 rpg/폭풍 해류를 부르는 학자.png",
+      "status": "CONNECTED",
+      "classId": "x_magic_12",
+      "reason": "Explicit 2026-10-06 21:26:59 UTC completed ten-class generation batch, earlier fixed ID/name queue and matching direct pixel inspection; numeric filenames not used. Hidden two use the user-requested stronger revision finished 21:36:23 UTC.",
+      "runtimePath": "assets/class_x_magic_12.webp"
+    },
+    {
+      "fileId": "libfile_ca605dfd9a98819183b03a8f84957ab1",
+      "name": "푸른 선율을 쏘는 폐허의 궁수.png",
+      "path": "/텍스트 rpg/푸른 선율을 쏘는 폐허의 궁수.png",
+      "status": "HELD",
+      "classId": null,
+      "reason": "Original Hidden version superseded by user-requested stronger revision, or latest upcoming variant has no confirmed completed generation ID. File preserved."
+    },
+    {
+      "fileId": "libfile_aaf5668591e48191a30ad1534334009c",
+      "name": "폐허의 돛대 위 은발 석궁수.png",
+      "path": "/텍스트 rpg/폐허의 돛대 위 은발 석궁수.png",
+      "status": "HELD",
+      "classId": null,
+      "reason": "Original Hidden version superseded by user-requested stronger revision, or latest upcoming variant has no confirmed completed generation ID. File preserved."
+    },
+    {
+      "fileId": "libfile_479f774acb648191b333f8afd9ebb110",
+      "path": "/텍스트 rpg/폭풍 갑판의 마지막 작살잡이.png",
+      "status": "CONNECTED",
+      "classId": "x_ranged_10",
+      "reason": "Explicit completed six-class ordered list at 2026-10-06 22:27:24 UTC, authoritative fixed ID/name queue and current unique JOBS ID/name/lore; direct pixel review agrees with exact targets. No ID inferred from numeric filename.",
+      "runtimePath": "assets/class_x_ranged_10.webp"
+    },
+    {
+      "fileId": "libfile_6895ea30d09c8191aa4b2fd3add8e018",
+      "path": "/텍스트 rpg/황동 압력포를 든 해저 방랑자.png",
+      "status": "CONNECTED",
+      "classId": "x_ranged_9",
+      "reason": "Explicit completed six-class ordered list at 2026-10-06 22:27:24 UTC, authoritative fixed ID/name queue and current unique JOBS ID/name/lore; direct pixel review agrees with exact targets. No ID inferred from numeric filename.",
+      "runtimePath": "assets/class_x_ranged_9.webp"
+    },
+    {
+      "fileId": "libfile_9451472988408191be3f9f0eebfecd48",
+      "path": "/텍스트 rpg/검은 숲의 마지막 불씨.png",
+      "status": "CONNECTED",
+      "classId": "x_ranged_8",
+      "reason": "Explicit completed six-class ordered list at 2026-10-06 22:27:24 UTC, authoritative fixed ID/name queue and current unique JOBS ID/name/lore; direct pixel review agrees with exact targets. No ID inferred from numeric filename.",
+      "runtimePath": "assets/class_x_ranged_8.webp"
+    },
+    {
+      "fileId": "libfile_3b01275d3d008191b325889d035b6af9",
+      "path": "/텍스트 rpg/가스등 아래 마지막 추적자.png",
+      "status": "CONNECTED",
+      "classId": "x_ranged_7",
+      "reason": "Explicit completed six-class ordered list at 2026-10-06 22:27:24 UTC, authoritative fixed ID/name queue and current unique JOBS ID/name/lore; direct pixel review agrees with exact targets. No ID inferred from numeric filename.",
+      "runtimePath": "assets/class_x_ranged_7.webp"
+    },
+    {
+      "fileId": "libfile_8aacfca4e11c81919035da98458eecf2",
+      "path": "/텍스트 rpg/마지막 불씨를 품은 주석 방랑자.png",
+      "status": "CONNECTED",
+      "classId": "x_ranged_6",
+      "reason": "Explicit completed six-class ordered list at 2026-10-06 22:27:24 UTC, authoritative fixed ID/name queue and current unique JOBS ID/name/lore; direct pixel review agrees with exact targets. No ID inferred from numeric filename.",
+      "runtimePath": "assets/class_x_ranged_6.webp"
+    },
+    {
+      "fileId": "libfile_d7d9bb6e8308819186db5ff44dd2ed63",
+      "path": "/텍스트 rpg/폐허의 종탑, 검은 깃털의 명사수.png",
+      "status": "CONNECTED",
+      "classId": "x_ranged_5",
+      "reason": "Explicit completed six-class ordered list at 2026-10-06 22:27:24 UTC, authoritative fixed ID/name queue and current unique JOBS ID/name/lore; direct pixel review agrees with exact targets. No ID inferred from numeric filename.",
+      "runtimePath": "assets/class_x_ranged_5.webp"
     }
   ]
 }

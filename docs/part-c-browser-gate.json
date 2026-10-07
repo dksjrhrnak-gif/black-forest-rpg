@@ -1,0 +1,66 @@
+{
+  "status": "PASS",
+  "run": 37539823734,
+  "commit": "d423f0dfd78a4481bc22705691e2f7fdee2166f1",
+  "jobs": [
+    {
+      "id": 112529807819,
+      "name": "verify",
+      "conclusion": "success"
+    },
+    {
+      "id": 112529808016,
+      "name": "Script webkit 375",
+      "conclusion": "success"
+    },
+    {
+      "id": 112529808106,
+      "name": "Script chromium 375",
+      "conclusion": "success"
+    },
+    {
+      "id": 112529808137,
+      "name": "Script chromium 430",
+      "conclusion": "success"
+    },
+    {
+      "id": 112529808218,
+      "name": "Script chromium 390",
+      "conclusion": "success"
+    },
+    {
+      "id": 112529808221,
+      "name": "Script webkit 390",
+      "conclusion": "success"
+    },
+    {
+      "id": 112529808250,
+      "name": "Script webkit 320",
+      "conclusion": "success"
+    },
+    {
+      "id": 112529808262,
+      "name": "Script webkit 430",
+      "conclusion": "success"
+    },
+    {
+      "id": 112529808275,
+      "name": "Script chromium 320",
+      "conclusion": "success"
+    },
+    {
+      "id": 112529808288,
+      "name": "Script webkit 360",
+      "conclusion": "success"
+    },
+    {
+      "id": 112529808333,
+      "name": "Script chromium 360",
+      "conclusion": "success"
+    }
+  ],
+  "perScriptJobChecks": 376,
+  "method": "headless Chromium and WebKit mobile touch emulation; normal BF2 importer with synthetic valid states",
+  "physicalDevices": "NOT TESTED",
+  "actualProcessTabRestore": "NOT TESTED; persisted pageshow handler simulated"
+}

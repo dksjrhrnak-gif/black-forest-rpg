@@ -67,22 +67,22 @@ Only a fixed creation queue plus matching subject is accepted; numeric order/aut
 | x_magic_9 | 그림 동화의 잠술사 | assets/class_x_magic_9.webp | CONNECTED |
 | x_magic_10 | 거울 뒷면의 연금술사 | assets/class_x_magic_10.webp | CONNECTED |
 | x_magic_11 | 빅토리아의 안개술사 | assets/class_x_magic_11.webp | CONNECTED |
-| x_magic_12 | 노틸러스의 폭풍학자 | null | FALLBACK |
-| x_magic_13 | 오즈의 가짜 대마법사 | null | FALLBACK |
-| x_magic_14 | 별을 읽는 어린 왕자 | null | FALLBACK |
-| x_magic_15 | 시간 기계의 역행술사 | null | FALLBACK |
-| x_magic_16 | 파우스트의 계약해독자 | null | FALLBACK |
-| x_magic_17 | 금서의 마지막 독자 | null | FALLBACK |
-| x_ranged_0 | 셜우드의 견습 궁수 | null | FALLBACK |
-| x_ranged_1 | 피쿼드호 투창수 | null | FALLBACK |
-| x_ranged_3 | 해적섬의 화승총수 | null | FALLBACK |
-| x_ranged_4 | 황야의 우편 저격수 | null | FALLBACK |
-| x_ranged_5 | 종탑의 까마귀 사수 | null | FALLBACK |
-| x_ranged_6 | 오즈의 양철 포수 | null | FALLBACK |
-| x_ranged_7 | 붉은 머리의 표적꾼 | null | FALLBACK |
-| x_ranged_8 | 로빈후드의 망명 궁수 | null | FALLBACK |
-| x_ranged_9 | 노틸러스의 수압포수 | null | FALLBACK |
-| x_ranged_10 | 퀴퀘그의 문신 투창수 | null | FALLBACK |
+| x_magic_12 | 노틸러스의 폭풍학자 | assets/class_x_magic_12.webp | CONNECTED |
+| x_magic_13 | 오즈의 가짜 대마법사 | assets/class_x_magic_13.webp | CONNECTED |
+| x_magic_14 | 별을 읽는 어린 왕자 | assets/class_x_magic_14.webp | CONNECTED |
+| x_magic_15 | 시간 기계의 역행술사 | assets/class_x_magic_15.webp | CONNECTED |
+| x_magic_16 | 파우스트의 계약해독자 | assets/class_x_magic_16.webp | CONNECTED |
+| x_magic_17 | 금서의 마지막 독자 | assets/class_x_magic_17.webp | CONNECTED |
+| x_ranged_0 | 셜우드의 견습 궁수 | assets/class_x_ranged_0.webp | CONNECTED |
+| x_ranged_1 | 피쿼드호 투창수 | assets/class_x_ranged_1.webp | CONNECTED |
+| x_ranged_3 | 해적섬의 화승총수 | assets/class_x_ranged_3.webp | CONNECTED |
+| x_ranged_4 | 황야의 우편 저격수 | assets/class_x_ranged_4.webp | CONNECTED |
+| x_ranged_5 | 종탑의 까마귀 사수 | assets/class_x_ranged_5.webp | CONNECTED |
+| x_ranged_6 | 오즈의 양철 포수 | assets/class_x_ranged_6.webp | CONNECTED |
+| x_ranged_7 | 붉은 머리의 표적꾼 | assets/class_x_ranged_7.webp | CONNECTED |
+| x_ranged_8 | 로빈후드의 망명 궁수 | assets/class_x_ranged_8.webp | CONNECTED |
+| x_ranged_9 | 노틸러스의 수압포수 | assets/class_x_ranged_9.webp | CONNECTED |
+| x_ranged_10 | 퀴퀘그의 문신 투창수 | assets/class_x_ranged_10.webp | CONNECTED |
 | x_ranged_11 | 지옥 항로의 쇠뇌수 | null | FALLBACK |
 | x_ranged_12 | 하멜른의 음표 사수 | null | FALLBACK |
 | x_ranged_13 | 성벽의 불씨 투석수 | null | FALLBACK |
@@ -1438,3 +1438,9 @@ Exact IDs come from dedicated generation context, current ID/name/lore and direc
 | x_magic_5 | 장미 그림자를 빚는 환술사.png | assets/class_x_magic_5.webp | 128134 |
 
 Current runtime: 121 files (45 class / 8 location / 33 enemy / 9 boss / 18 event / 3 story / 3 gear SVG / 2 camp/banner); 123 registry links, 1,077 null entries, assets/ orphan list empty. 69 classes still lack confirmed dedicated art. No existing artwork is replaced. All 118 runtime WebPs were directly viewed in labeled contact sheets, including every original scene/class subject. Original mappings also agree with the authoritative manifest. Three gear SVG slot fallbacks are existing generic icons; no character identity is assigned to them.
+
+## Latest snapshot follow-up
+
+Current runtime: 137 files, 61 class portraits, 53 unconfirmed classes, 139 registry links and 1,061 null entries. Latest Library inventory: 239 images, 7 documents, 1 folder. Exact late mapping tables are in late-image-mapping.md and newest-image-mapping.md. Sixteen additional portraits are connected, including two user-requested stronger Hidden revisions. Original lower-intensity PNGs remain preserved. The two latest crossbow/music-bow candidates are held because completed-generation IDs are not established. All 20 new source PNGs were directly reviewed; current runtime WebPs reviewed total 134. No prior runtime artwork is overwritten.
+
+Quality exception: late Hidden portraits are 238,568 and 263,564 bytes; intricate seal/thread effects warrant retaining quality 84 at 640×960. Other new files above the approximate 150KB target preserve feathers, engraved metal or sea-current detail. Files are loaded only when needed.
