@@ -1017,3 +1017,11 @@
 /* These story protagonists stand on the left of their original artwork. */
 #black-forest-game .scene-hero .scene-art img[src$="story_alice.webp"],
 #black-forest-game .scene-hero .scene-art img[src$="story_ahab.webp"]{object-position:left 22%}
+
+/* Existing story artwork is portrait: preserve every character and let long copy follow. */
+#black-forest-game .scene-hero.scene-story-art{display:block;min-height:0}
+#black-forest-game .scene-story-art .scene-art{position:relative;inset:auto;height:auto;aspect-ratio:2/3;max-height:640px;overflow:hidden}
+#black-forest-game .scene-hero.scene-story-art .scene-art img{height:auto;min-height:0;max-height:640px;aspect-ratio:2/3;object-fit:contain;object-position:center}
+#black-forest-game .scene-story-art .scene-hero-head{position:absolute;top:0;left:0;right:0}
+#black-forest-game .scene-story-art .scene-hero-shade{bottom:auto;aspect-ratio:2/3;max-height:640px;background:linear-gradient(180deg,#030705d6 0%,#03070550 15%,transparent 30%,#03070520 90%,#070b09 100%)}
+#black-forest-game .scene-story-art .scene-hero-body{margin-top:0;padding-top:16px;background:#070b09}

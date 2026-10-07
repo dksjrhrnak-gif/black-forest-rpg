@@ -86,6 +86,19 @@ jobs:
       - run: npx playwright install --with-deps ${{ matrix.browser }}
       - name: Start isolated preview
         run: python3 -m http.server 4173 --directory dist > /tmp/bf-script-preview.log 2>&1 &
+      - name: Early story portrait screenshot
+        if: matrix.width == 320 || matrix.width == 390
+        env:
+          BF_BROWSER: ${{ matrix.browser }}
+          BF_WIDTH: ${{ matrix.width }}
+          BF_PREVIEW_ONLY: '1'
+          BF_QA_URL: http://127.0.0.1:4173/
+        run: node test-script-ui.cjs
+      - uses: actions/upload-artifact@v4
+        if: matrix.width == 320 || matrix.width == 390
+        with:
+          name: story-preview-${{ matrix.browser }}-${{ matrix.width }}
+          path: screenshots/
       - name: Every scripted scene, choice and result
         env:
           BF_BROWSER: ${{ matrix.browser }}
