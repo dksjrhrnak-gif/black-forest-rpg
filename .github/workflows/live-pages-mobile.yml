@@ -1,0 +1,48 @@
+name: Live Pages mobile verification
+on:
+  push:
+    branches: [qa/live-pages-mobile-20261008]
+permissions:
+  contents: read
+jobs:
+  live:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    strategy:
+      fail-fast: false
+      matrix:
+        browser: [chromium, webkit]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: 52ab866eae72c89e54c49fefd87063014a6234ff
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm ci --ignore-scripts
+      - run: npx playwright install --with-deps ${{ matrix.browser }}
+      - name: Verify public HTML matches tested main
+        run: |
+          node - <<'JS'
+          const fs=require('fs'),assert=require('assert');
+          (async()=>{const r=await fetch('https://dksjrhrnak-gif.github.io/black-forest-rpg/');assert.equal(r.status,200);assert(Buffer.from(await r.arrayBuffer()).equals(fs.readFileSync('index.html')));console.log('Public HTML equals main 52ab866');})().catch(e=>{console.error(e);process.exit(1)});
+          JS
+      - name: Live mobile touch, save, shop, progression and duplicate rewards
+        env:
+          BF_QA_URL: https://dksjrhrnak-gif.github.io/black-forest-rpg/
+          BF_BROWSER: ${{ matrix.browser }}
+        run: |
+          node - <<'JS'
+          const fs=require('fs'),Module=require('module'),path=require('path');
+          const filename=path.resolve('test-ui.cjs');
+          const source=fs.readFileSync(filename,'utf8').replace('for(const size of viewports){','for(const size of viewports.filter(v=>[320,375].includes(v.width))){');
+          const m=new Module(filename,module);m.filename=filename;m.paths=module.paths;m._compile(source,filename);
+          m.exports.suite(true).catch(e=>{console.error(e);process.exit(1)});
+          JS
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: live-mobile-${{ matrix.browser }}
+          path: |
+            mobile-results*.txt
+            screenshots/
