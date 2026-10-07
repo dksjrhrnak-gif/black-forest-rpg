@@ -15,9 +15,14 @@
     "chapters.js",
     "journey.js",
     "ui.js",
-    "shell.html"
+    "shell.html",
+    "style.css"
   ],
   "candidateStrings": 1901,
+  "visibleCandidates": 2091,
+  "accessibilityAttributes": true,
+  "englishDisplayArguments": true,
+  "cssGeneratedLabels": 3,
   "failures": [],
   "exceptions": [
     {
@@ -29,7 +34,7 @@
       "reason": "Regex patterns identify historic copy; they are not displayed strings."
     },
     {
-      "reason": "Internal IDs, variable names, comments, HTML attributes/classes are excluded by AST parsing/text extraction."
+      "reason": "Internal IDs, variable names, comments, Internal HTML attributes/classes are excluded; aria-label/title/alt/placeholder and CSS content labels are included."
     }
   ]
 }
