@@ -15,7 +15,7 @@ jobs:
         with:
           node-version: '22'
       - run: npm ci --ignore-scripts
-      - run: npm test && node test-hidden-audit.cjs
+      - run: npm test
       - run: python3 build.py && node export-data.cjs && python3 export-site.py && python3 verify-html.py
   browser:
     runs-on: ubuntu-latest

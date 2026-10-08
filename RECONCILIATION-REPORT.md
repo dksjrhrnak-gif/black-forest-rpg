@@ -1,3 +1,5 @@
+> 과거 작업 당시의 기록입니다. 이 문서의 미배포·미검증 표시는 현재 상태를 뜻하지 않습니다. 현재 상태는 [후속 검수 보고](docs/handoff-audit.md)와 [최종 통합 보고](docs/final-completion-report.md)를 확인하세요.
+
 # v4 / GitHub main 정합성 복구 보고
 
 상태: **소스 통합·Node 검증 완료 / GitHub 반영 및 브라우저 QA 미완료**. 완료 기준 전체를 충족하지 않았습니다.

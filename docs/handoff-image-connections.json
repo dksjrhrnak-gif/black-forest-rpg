@@ -1,0 +1,118 @@
+{
+  "date": "2026-10-08",
+  "connections": [
+    {
+      "id": "x_ranged_13",
+      "name": "성벽의 불씨 투석수.png",
+      "library_file_id": "libfile_ee36fe7f7e1c81919277cdea61c147f7",
+      "source": "/텍스트 rpg/성벽의 불씨 투석수.png",
+      "asset": "assets/class_x_ranged_13.webp",
+      "evidence": "Exact authored class name in Library title; independently inspected full-body artwork; no existing dedicated class image replaced",
+      "source_sha256": "36e401a693d50a6808d25d92fd0af9f27c95976643ec087b40c3c4ef80f0de8b",
+      "asset_sha256": "eee2ff310667c4e65caf0b3e15dbed8ee86d7e793aed0b40aa36afbe7c75d613",
+      "bytes": 132916
+    },
+    {
+      "id": "x_ranged_16",
+      "name": "아르고호의 황금 사수.png",
+      "library_file_id": "libfile_f6654906fde081919a67baf672e2d49e",
+      "source": "/텍스트 rpg/아르고호의 황금 사수.png",
+      "asset": "assets/class_x_ranged_16.webp",
+      "evidence": "Exact authored class name in Library title; independently inspected full-body artwork; no existing dedicated class image replaced",
+      "source_sha256": "fbc87ca8f85d5fa1e6239bb0bd00ba311bc45da4a56a5e9c1fda0b910f380c87",
+      "asset_sha256": "09128d83a895f452ba0143c647fefb55a323d7c248b0a0c290c20441a6601370",
+      "bytes": 189454
+    },
+    {
+      "id": "x_ranged_17",
+      "name": "수평선 너머의 명사수.png",
+      "library_file_id": "libfile_0c6b23e8464881919f55d992e3355d58",
+      "source": "/텍스트 rpg/수평선 너머의 명사수.png",
+      "asset": "assets/class_x_ranged_17.webp",
+      "evidence": "Exact authored class name in Library title; independently inspected full-body artwork; no existing dedicated class image replaced",
+      "source_sha256": "ff3cadb36b827d82ac8c1d05a2c6d235322ff3fb2e26077a5141a87b76984730",
+      "asset_sha256": "9f63fe8d530a7855fe2a97959288c68e23e4e27aa429d75e497608d0f768423c",
+      "bytes": 160194
+    },
+    {
+      "id": "x_support_17",
+      "name": "유리 심장의 재봉사.png",
+      "library_file_id": "libfile_066aae77ebbc81919dabcf4ae4996271",
+      "source": "/텍스트 rpg/유리 심장의 재봉사.png",
+      "asset": "assets/class_x_support_17.webp",
+      "evidence": "Exact authored class name in Library title; independently inspected full-body artwork; no existing dedicated class image replaced",
+      "source_sha256": "9ee9b9947847464e1a81f21297a1860e0b54150d80c70526b7e715f7c9dcefe1",
+      "asset_sha256": "2c4afee76d71559aa995f3480dc1e01ad81db7f6bdf7240bb3c908d741a39655",
+      "bytes": 185970
+    },
+    {
+      "id": "x_occult_13",
+      "name": "동물 재판의 증언 도둑.png",
+      "library_file_id": "libfile_0259d1fdb6508191aa4c25ac67cb9e64",
+      "source": "/텍스트 rpg/동물 재판의 증언 도둑.png",
+      "asset": "assets/class_x_occult_13.webp",
+      "evidence": "Exact authored class name in Library title; independently inspected full-body artwork; no existing dedicated class image replaced",
+      "source_sha256": "d8402ff9cd4dc3d1f41405cd115bf86a9cb539e0b9b94a3e3d9e53af66f57ca2",
+      "asset_sha256": "7d22b9e3a0272bf98cf8797115ff87e1b5684308551584a9c124fa28d5237d4a",
+      "bytes": 150104
+    },
+    {
+      "id": "x_occult_15",
+      "name": "지옥문 앞의 길동무.png",
+      "library_file_id": "libfile_250545c6838c8191859524458bbbb5c2",
+      "source": "/텍스트 rpg/지옥문 앞의 길동무.png",
+      "asset": "assets/class_x_occult_15.webp",
+      "evidence": "Exact authored class name in Library title; independently inspected full-body artwork; no existing dedicated class image replaced",
+      "source_sha256": "94feae8e750d2d88cf29b93623a148fdfc839f085acb474ef748df00934b1982",
+      "asset_sha256": "cb05e5a0ec13e2a394b5d3d4ee23921c0ba8e84cc558053a39e4c0dde23b2861",
+      "bytes": 159968
+    },
+    {
+      "id": "x_occult_16",
+      "name": "찢어진 장의 경계인.png",
+      "library_file_id": "libfile_b2da15ae7a188191a0974e8b9cc28b63",
+      "source": "/텍스트 rpg/찢어진 장의 경계인.png",
+      "asset": "assets/class_x_occult_16.webp",
+      "evidence": "Exact authored class name in Library title; independently inspected full-body artwork; no existing dedicated class image replaced",
+      "source_sha256": "dfcdd2b8e493afabf800519674392bf12633e43a4dd2c0cc4aa1aac30b3f3979",
+      "asset_sha256": "35059a8661b63cd5618498293fefd126265f5c24eeae38d3d49227d39d6ef461",
+      "bytes": 173558
+    },
+    {
+      "id": "self_named",
+      "name": "스스로 이름 붙인 검왕.png",
+      "library_file_id": "libfile_146fd9d0937881919b5cdb859e9adea5",
+      "source": "/텍스트 rpg/스스로 이름 붙인 검왕.png",
+      "asset": "assets/class_self_named.webp",
+      "evidence": "Exact authored class name in Library title; independently inspected full-body artwork; no existing dedicated class image replaced",
+      "source_sha256": "4a4392e514bb5ec52c733379a9df284c38be23c78e7abe967ed48a2be2939beb",
+      "asset_sha256": "bd04a4ea9c97894f02ff38a5a806dca2b63438b632b479e4f0143b06b5755cc7",
+      "bytes": 152276
+    },
+    {
+      "id": "dream_guard",
+      "name": "라만차의 꿈 수호자.png",
+      "library_file_id": "libfile_27b8aad6e41c8191b00be15791e0a1c3",
+      "source": "/텍스트 rpg/라만차의 꿈 수호자.png",
+      "asset": "assets/class_dream_guard.webp",
+      "evidence": "Exact authored class name in Library title; independently inspected full-body artwork; no existing dedicated class image replaced",
+      "source_sha256": "f3a763a0914db810c6cb63b82be701123a516b1b0ea771239c340b65527b673c",
+      "asset_sha256": "68216ad1aa64bfa4e8318829412daec86f72657757da41b1dd32e72def1a8652",
+      "bytes": 158852
+    },
+    {
+      "id": "court_witness",
+      "name": "하트 법정의 증언기사.png",
+      "library_file_id": "libfile_c429b1973d1c8191bc705d80764d7ba2",
+      "source": "/텍스트 rpg/하트 법정의 증언기사.png",
+      "asset": "assets/class_court_witness.webp",
+      "evidence": "Exact authored class name in Library title; independently inspected full-body artwork; no existing dedicated class image replaced",
+      "source_sha256": "ee15ea20d645f2f798f5d4ada0117e6e218aae9ce64df1f18e799c9fb754e1e3",
+      "asset_sha256": "87bd45094bb998eb362e3fad66447c5503fbb7814ee704c348560413c2127851",
+      "bytes": 160390
+    }
+  ],
+  "existingAssetCount": 137,
+  "newImages": 10,
+  "generatedImages": 0
+}

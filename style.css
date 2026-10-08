@@ -410,7 +410,7 @@
   #black-forest-game .top .eyebrow{font-size:9px;letter-spacing:1.4px}
   #black-forest-game .top .muted{display:none}
   #black-forest-game .top>button{
-    min-height:36px;
+    min-height:44px;
     padding:6px 9px;
     font-size:11px;
   }
@@ -671,7 +671,7 @@
   #black-forest-game .stats>div:last-child button{
     width:100%;
     max-width:100%;
-    min-height:36px;
+    min-height:44px;
     padding:6px 8px;
     text-align:center;
     white-space:normal;
@@ -1025,9 +1025,3 @@
 #black-forest-game .scene-story-art .scene-hero-head{position:absolute;top:0;left:0;right:0}
 #black-forest-game .scene-story-art .scene-hero-shade{bottom:auto;aspect-ratio:2/3;max-height:640px;background:linear-gradient(180deg,#030705d6 0%,#03070550 15%,transparent 30%,#03070520 90%,#070b09 100%)}
 #black-forest-game .scene-story-art .scene-hero-body{margin-top:0;padding-top:16px;background:#070b09}
-
-/* Handoff audit: both HUD controls measured 36px on mobile. */
-@media(max-width:700px){
-  #black-forest-game .top>button,
-  #black-forest-game .stats .small{min-height:44px}
-}

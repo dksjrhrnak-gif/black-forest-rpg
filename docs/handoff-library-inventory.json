@@ -1,0 +1,2155 @@
+{
+  "date": "2026-10-08",
+  "files": 307,
+  "inventory": [
+    {
+      "name": "IMG_1132.jpeg",
+      "path": "/텍스트 rpg/IMG_1132.jpeg",
+      "library_file_id": "libfile_0e67ce6b5cb881918bf5b5f742823856",
+      "type": "image/jpeg",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "IMG_1131.png",
+      "path": "/텍스트 rpg/IMG_1131.png",
+      "library_file_id": "libfile_cc7aa25f1d988191b8c568c99f182361",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "하트 법정의 증언기사.png",
+      "path": "/텍스트 rpg/하트 법정의 증언기사.png",
+      "library_file_id": "libfile_c429b1973d1c8191bc705d80764d7ba2",
+      "type": "image/png",
+      "disposition": "CONNECTED_AFTER_VISUAL_REVIEW"
+    },
+    {
+      "name": "라만차의 꿈 수호자.png",
+      "path": "/텍스트 rpg/라만차의 꿈 수호자.png",
+      "library_file_id": "libfile_27b8aad6e41c8191b00be15791e0a1c3",
+      "type": "image/png",
+      "disposition": "CONNECTED_AFTER_VISUAL_REVIEW"
+    },
+    {
+      "name": "백경 사냥을 끝낸 자.png",
+      "path": "/텍스트 rpg/백경 사냥을 끝낸 자.png",
+      "library_file_id": "libfile_79f9777d1b58819190a45c9efc9ed1e0",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "스스로 이름 붙인 검왕.png",
+      "path": "/텍스트 rpg/스스로 이름 붙인 검왕.png",
+      "library_file_id": "libfile_146fd9d0937881919b5cdb859e9adea5",
+      "type": "image/png",
+      "disposition": "CONNECTED_AFTER_VISUAL_REVIEW"
+    },
+    {
+      "name": "찢어진 장의 경계인.png",
+      "path": "/텍스트 rpg/찢어진 장의 경계인.png",
+      "library_file_id": "libfile_b2da15ae7a188191a0974e8b9cc28b63",
+      "type": "image/png",
+      "disposition": "CONNECTED_AFTER_VISUAL_REVIEW"
+    },
+    {
+      "name": "지옥문 앞의 길동무.png",
+      "path": "/텍스트 rpg/지옥문 앞의 길동무.png",
+      "library_file_id": "libfile_250545c6838c8191859524458bbbb5c2",
+      "type": "image/png",
+      "disposition": "CONNECTED_AFTER_VISUAL_REVIEW"
+    },
+    {
+      "name": "죽음을 미루는 결말 협상가.png",
+      "path": "/텍스트 rpg/죽음을 미루는 결말 협상가.png",
+      "library_file_id": "libfile_7db44df346188191b208be58448a4928",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "사라진 미소의 밀수꾼.png",
+      "path": "/텍스트 rpg/사라진 미소의 밀수꾼.png",
+      "library_file_id": "libfile_e9caecfc137c8191af5e766bb0d9c03a",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "깊이를 잃은 바다의 유물잠수사.png",
+      "path": "/텍스트 rpg/깊이를 잃은 바다의 유물잠수사.png",
+      "library_file_id": "libfile_fdce8804be388191a7e271e9d1c0a696",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "카르밀라의 밤을 지키는 감시자.png",
+      "path": "/텍스트 rpg/카르밀라의 밤을 지키는 감시자.png",
+      "library_file_id": "libfile_3d8cdc60a7a081919869bbb6f99c420d",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "동물 재판의 증언 도둑.png",
+      "path": "/텍스트 rpg/동물 재판의 증언 도둑.png",
+      "library_file_id": "libfile_0259d1fdb6508191aa4c25ac67cb9e64",
+      "type": "image/png",
+      "disposition": "CONNECTED_AFTER_VISUAL_REVIEW"
+    },
+    {
+      "name": "귀환의 실을 숨긴 매듭꾼.png",
+      "path": "/텍스트 rpg/귀환의 실을 숨긴 매듭꾼.png",
+      "library_file_id": "libfile_5e5e4265ca008191bd2a4aec5c5707aa",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "재를 되돌리는 성냥불의 성녀.png",
+      "path": "/텍스트 rpg/재를 되돌리는 성냥불의 성녀.png",
+      "library_file_id": "libfile_a6ee1623c6b08191bdd2c8979d1c9d72",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "셜우드의 구호대장.png",
+      "path": "/텍스트 rpg/셜우드의 구호대장.png",
+      "library_file_id": "libfile_b3b87af3616481918ec4c5b59c5798f5",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "추방자에게 울림을 나누는 종치유사.png",
+      "path": "/텍스트 rpg/추방자에게 울림을 나누는 종치유사.png",
+      "library_file_id": "libfile_7e45ff1be34c8191af0bfa9ee13f4b0b",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "유리 심장의 재봉사(1).png",
+      "path": "/텍스트 rpg/유리 심장의 재봉사(1).png",
+      "library_file_id": "libfile_4c5e60bc67ac8191a0a8e3cca9c51ff5",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "전장의 생존자를 이끄는 구호대장.png",
+      "path": "/텍스트 rpg/전장의 생존자를 이끄는 구호대장.png",
+      "library_file_id": "libfile_19602b5132f08191913d7242b91b3805",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "후회를 식량으로 빚는 새벽 구호가.png",
+      "path": "/텍스트 rpg/후회를 식량으로 빚는 새벽 구호가.png",
+      "library_file_id": "libfile_2ee912a54e60819196f28007f144212e",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "유리 심장의 재봉사.png",
+      "path": "/텍스트 rpg/유리 심장의 재봉사.png",
+      "library_file_id": "libfile_066aae77ebbc81919dabcf4ae4996271",
+      "type": "image/png",
+      "disposition": "CONNECTED_AFTER_VISUAL_REVIEW"
+    },
+    {
+      "name": "백지 연맹의 기록수호자.png",
+      "path": "/텍스트 rpg/백지 연맹의 기록수호자.png",
+      "library_file_id": "libfile_94db56e758308191b9a28e6780dbfd8b",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "후회를 양식 삼는 새벽 구호가.png",
+      "path": "/텍스트 rpg/후회를 양식 삼는 새벽 구호가.png",
+      "library_file_id": "libfile_eac1f18af2ec819183132e53fa52573f",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "캔터베리의 순례 의사.png",
+      "path": "/텍스트 rpg/캔터베리의 순례 의사.png",
+      "library_file_id": "libfile_a3d6b3fccc3881919cffac9992475c39",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "지워질 기록의 수호자.png",
+      "path": "/텍스트 rpg/지워질 기록의 수호자.png",
+      "library_file_id": "libfile_601ac2779cf881918c24c34543244e47",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "은촛대지기, 오늘을 구하다.png",
+      "path": "/텍스트 rpg/은촛대지기, 오늘을 구하다.png",
+      "library_file_id": "libfile_f2b854eaa89c8191b4da75e86c3403da",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "캔터베리 순례의사의 치유 성약.png",
+      "path": "/텍스트 rpg/캔터베리 순례의사의 치유 성약.png",
+      "library_file_id": "libfile_8f14271289248191b69bd5d700422512",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "생명의 시간을 엮는 이야기꾼.png",
+      "path": "/텍스트 rpg/생명의 시간을 엮는 이야기꾼.png",
+      "library_file_id": "libfile_38ae7a568f148191b8e2fbc67ec76805",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "오늘의 생명을 구한 은촛대지기.png",
+      "path": "/텍스트 rpg/오늘의 생명을 구한 은촛대지기.png",
+      "library_file_id": "libfile_86514029890c8191819fde8de90c435b",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "피조물의 상처를 꿰매는 자.png",
+      "path": "/텍스트 rpg/피조물의 상처를 꿰매는 자.png",
+      "library_file_id": "libfile_0a9be23e775c819198003b7057e1583f",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "끝나지 않는 생명의 이야기꾼.png",
+      "path": "/텍스트 rpg/끝나지 않는 생명의 이야기꾼.png",
+      "library_file_id": "libfile_4f073730dc4081919ac246ce1d0755d4",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "노틸러스의 심해 치유자.png",
+      "path": "/텍스트 rpg/노틸러스의 심해 치유자.png",
+      "library_file_id": "libfile_59601c9733b88191ad1addf5b08726e2",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "피조물의 상처를 잇는 봉합사.png",
+      "path": "/텍스트 rpg/피조물의 상처를 잇는 봉합사.png",
+      "library_file_id": "libfile_753bef32bf5481919a351d90dcfe21ee",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "어둠 속 토끼굴 길잡이.png",
+      "path": "/텍스트 rpg/어둠 속 토끼굴 길잡이.png",
+      "library_file_id": "libfile_fa2448ad674081918ab3f328aca6f491",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "심해를 치유하는 노틸러스의 선의.png",
+      "path": "/텍스트 rpg/심해를 치유하는 노틸러스의 선의.png",
+      "library_file_id": "libfile_1bbee31044988191b285949915b19cac",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "꺼진 성냥의 온기지기(1).png",
+      "path": "/텍스트 rpg/꺼진 성냥의 온기지기(1).png",
+      "library_file_id": "libfile_5c9335f407d0819181af792ee757bb89",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "토끼굴의 귀환 길잡이.png",
+      "path": "/텍스트 rpg/토끼굴의 귀환 길잡이.png",
+      "library_file_id": "libfile_a8476017b428819199dbc4a09eab8953",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "촛불 성당의 견습 수도사.png",
+      "path": "/텍스트 rpg/촛불 성당의 견습 수도사.png",
+      "library_file_id": "libfile_7a9994f729788191a181765adbfaf877",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "꺼진 성냥의 온기지기.png",
+      "path": "/텍스트 rpg/꺼진 성냥의 온기지기.png",
+      "library_file_id": "libfile_5b1847827a28819195f57001acc3f405",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "기억을 잇는 마음 수선공.png",
+      "path": "/텍스트 rpg/기억을 잇는 마음 수선공.png",
+      "library_file_id": "libfile_5caf01600ecc81919d94e00782014d49",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "적의 이름을 적는 촛불 견습수도사.png",
+      "path": "/텍스트 rpg/적의 이름을 적는 촛불 견습수도사.png",
+      "library_file_id": "libfile_0e67f0d1b860819190034be598c6aa10",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "꿈을 지키는 산초의 야전 취사병.png",
+      "path": "/텍스트 rpg/꿈을 지키는 산초의 야전 취사병.png",
+      "library_file_id": "libfile_9c41da6233308191a90bfbb26b77ae93",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "기억을 잇는 심장 수선공.png",
+      "path": "/텍스트 rpg/기억을 잇는 심장 수선공.png",
+      "library_file_id": "libfile_52b18d9e7a488191af7676c13dd03952",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "수평선 너머의 마법 명사수.png",
+      "path": "/텍스트 rpg/수평선 너머의 마법 명사수.png",
+      "library_file_id": "libfile_d806250cca3c8191b8bac0687dacaf7a",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "현실을 끓이는 야전 취사병.png",
+      "path": "/텍스트 rpg/현실을 끓이는 야전 취사병.png",
+      "library_file_id": "libfile_05ddac7df6608191a0b83a53d7770458",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "붕대와 편지를 든 전장 간호사.png",
+      "path": "/텍스트 rpg/붕대와 편지를 든 전장 간호사.png",
+      "library_file_id": "libfile_9b70eec90598819180c6610de6649676",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "수평선 너머의 명사수.png",
+      "path": "/텍스트 rpg/수평선 너머의 명사수.png",
+      "library_file_id": "libfile_0c6b23e8464881919f55d992e3355d58",
+      "type": "image/png",
+      "disposition": "CONNECTED_AFTER_VISUAL_REVIEW"
+    },
+    {
+      "name": "남은 천의 붕대지기(1).png",
+      "path": "/텍스트 rpg/남은 천의 붕대지기(1).png",
+      "library_file_id": "libfile_115b3d2cb628819180aa17c6aab6a942",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "전장의 편지와 붕대를 품은 간호사.png",
+      "path": "/텍스트 rpg/전장의 편지와 붕대를 품은 간호사.png",
+      "library_file_id": "libfile_f0fcb92b019881919b2bb57664e00474",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "황금 양털의 아르고 사수.png",
+      "path": "/텍스트 rpg/황금 양털의 아르고 사수.png",
+      "library_file_id": "libfile_f3f2c94fce9881919c47a63e65f629e5",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "남은 천의 붕대지기.png",
+      "path": "/텍스트 rpg/남은 천의 붕대지기.png",
+      "library_file_id": "libfile_8b60e97cb8cc8191a7dfd08f99491226",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "안개를 꿰뚫는 백경 사냥꾼.png",
+      "path": "/텍스트 rpg/안개를 꿰뚫는 백경 사냥꾼.png",
+      "library_file_id": "libfile_946c69d973d881918806bfedda3545aa",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "아르고호의 황금 사수.png",
+      "path": "/텍스트 rpg/아르고호의 황금 사수.png",
+      "library_file_id": "libfile_f6654906fde081919a67baf672e2d49e",
+      "type": "image/png",
+      "disposition": "CONNECTED_AFTER_VISUAL_REVIEW"
+    },
+    {
+      "name": "성벽의 불씨 투석수.png",
+      "path": "/텍스트 rpg/성벽의 불씨 투석수.png",
+      "library_file_id": "libfile_ee36fe7f7e1c81919277cdea61c147f7",
+      "type": "image/png",
+      "disposition": "CONNECTED_AFTER_VISUAL_REVIEW"
+    },
+    {
+      "name": "안개 속 백경의 망루 사냥꾼.png",
+      "path": "/텍스트 rpg/안개 속 백경의 망루 사냥꾼.png",
+      "library_file_id": "libfile_82a0a583b4a08191bdccb4695de2e027",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "안개를 가르는 일발의 저격수.png",
+      "path": "/텍스트 rpg/안개를 가르는 일발의 저격수.png",
+      "library_file_id": "libfile_eeece76ac8c88191882785df8dc0ab10",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "꺼지는 도시의 불씨 투석수.png",
+      "path": "/텍스트 rpg/꺼지는 도시의 불씨 투석수.png",
+      "library_file_id": "libfile_74976b2f99c48191b3f16167c233b114",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "음표를 묶는 하멜른의 궁수(1).png",
+      "path": "/텍스트 rpg/음표를 묶는 하멜른의 궁수(1).png",
+      "library_file_id": "libfile_01d86c8183748191a51a7e4682583291",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "안개 속 한 발의 저격수.png",
+      "path": "/텍스트 rpg/안개 속 한 발의 저격수.png",
+      "library_file_id": "libfile_4dab94ee948c81919acd7012b61c3ae7",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "망령을 겨누는 지옥 항로의 쇠뇌수.png",
+      "path": "/텍스트 rpg/망령을 겨누는 지옥 항로의 쇠뇌수.png",
+      "library_file_id": "libfile_d4d14a78eeac819182a72504413ebdc8",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "음표를 묶는 하멜른의 궁수.png",
+      "path": "/텍스트 rpg/음표를 묶는 하멜른의 궁수.png",
+      "library_file_id": "libfile_36a5971aae508191af1fb54dd5c64ba9",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "푸른 선율을 쏘는 폐허의 궁수.png",
+      "path": "/텍스트 rpg/푸른 선율을 쏘는 폐허의 궁수.png",
+      "library_file_id": "libfile_ca605dfd9a98819183b03a8f84957ab1",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "폐허의 돛대 위 은발 석궁수.png",
+      "path": "/텍스트 rpg/폐허의 돛대 위 은발 석궁수.png",
+      "library_file_id": "libfile_aaf5668591e48191a30ad1534334009c",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "폭풍 갑판의 마지막 작살잡이.png",
+      "path": "/텍스트 rpg/폭풍 갑판의 마지막 작살잡이.png",
+      "library_file_id": "libfile_479f774acb648191b333f8afd9ebb110",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "황동 압력포를 든 해저 방랑자.png",
+      "path": "/텍스트 rpg/황동 압력포를 든 해저 방랑자.png",
+      "library_file_id": "libfile_6895ea30d09c8191aa4b2fd3add8e018",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "검은 숲의 마지막 불씨.png",
+      "path": "/텍스트 rpg/검은 숲의 마지막 불씨.png",
+      "library_file_id": "libfile_9451472988408191be3f9f0eebfecd48",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "가스등 아래 마지막 추적자.png",
+      "path": "/텍스트 rpg/가스등 아래 마지막 추적자.png",
+      "library_file_id": "libfile_3b01275d3d008191b325889d035b6af9",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "마지막 불씨를 품은 주석 방랑자.png",
+      "path": "/텍스트 rpg/마지막 불씨를 품은 주석 방랑자.png",
+      "library_file_id": "libfile_8aacfca4e11c81919035da98458eecf2",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "폐허의 종탑, 검은 깃털의 명사수.png",
+      "path": "/텍스트 rpg/폐허의 종탑, 검은 깃털의 명사수.png",
+      "library_file_id": "libfile_d7d9bb6e8308819186db5ff44dd2ed63",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "황금 실로 현실을 꿰매는 흑림의 방랑자.png",
+      "path": "/텍스트 rpg/황금 실로 현실을 꿰매는 흑림의 방랑자.png",
+      "library_file_id": "libfile_6bc9c45992f48191bf521b4eff306648",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "붉은 봉인을 찢는 계약 해독자.png",
+      "path": "/텍스트 rpg/붉은 봉인을 찢는 계약 해독자.png",
+      "library_file_id": "libfile_7707f1da601c8191b75ce5af864fe12d",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "황폐한 길의 마지막 우편 저격수.png",
+      "path": "/텍스트 rpg/황폐한 길의 마지막 우편 저격수.png",
+      "library_file_id": "libfile_cd566e033f908191b9798be2606afa24",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "폐허 항구의 화승총 사수.png",
+      "path": "/텍스트 rpg/폐허 항구의 화승총 사수.png",
+      "library_file_id": "libfile_1e9dc635ec88819183d0238798bda031",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "폭풍 갑판의 밧줄창 투척수.png",
+      "path": "/텍스트 rpg/폭풍 갑판의 밧줄창 투척수.png",
+      "library_file_id": "libfile_9a5346ec11008191a1807dbff6d0428a",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "안개 속 셔우드 견습 궁수.png",
+      "path": "/텍스트 rpg/안개 속 셔우드 견습 궁수.png",
+      "library_file_id": "libfile_70f29ea88a6881919586b151e3206003",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "황금 실로 어둠을 꿰매는 기록관.png",
+      "path": "/텍스트 rpg/황금 실로 어둠을 꿰매는 기록관.png",
+      "library_file_id": "libfile_da0f24abfe5481919d326a96c6f4c9da",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "검은 숲의 계약 해독자.png",
+      "path": "/텍스트 rpg/검은 숲의 계약 해독자.png",
+      "library_file_id": "libfile_d3b065a8f7a081919a2eda11446484b5",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "폐허 시계탑의 시간 역행 마도사.png",
+      "path": "/텍스트 rpg/폐허 시계탑의 시간 역행 마도사.png",
+      "library_file_id": "libfile_6450f3992f348191b4dcfbc9b7f10ed5",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "어둠 속 별을 품은 왕자.png",
+      "path": "/텍스트 rpg/어둠 속 별을 품은 왕자.png",
+      "library_file_id": "libfile_cac829051b408191aa34d36bba2ee919",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "허상을 걷어내는 에메랄드 마도사.png",
+      "path": "/텍스트 rpg/허상을 걷어내는 에메랄드 마도사.png",
+      "library_file_id": "libfile_8641b363565c8191a36103832216d760",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "폭풍 해류를 부르는 학자.png",
+      "path": "/텍스트 rpg/폭풍 해류를 부르는 학자.png",
+      "library_file_id": "libfile_4548804515808191bc278e11710750ef",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "검은 숲의 마지막 안개마법사.png",
+      "path": "/텍스트 rpg/검은 숲의 마지막 안개마법사.png",
+      "library_file_id": "libfile_400341f3427881919f1a57d53521e3a8",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "거울 뒤의 연금술사.png",
+      "path": "/텍스트 rpg/거울 뒤의 연금술사.png",
+      "library_file_id": "libfile_b0af0db9165c81919f4d21d80642e35b",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "검은 숲의 꿈결 마도사.png",
+      "path": "/텍스트 rpg/검은 숲의 꿈결 마도사.png",
+      "library_file_id": "libfile_6f0f4101471481919ed2f889ce5cae27",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "번개를 담은 실험실 마도사.png",
+      "path": "/텍스트 rpg/번개를 담은 실험실 마도사.png",
+      "library_file_id": "libfile_3729890495f88191bce8eb862e9c9677",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "황금 실로 생명을 잇는 생체술사.png",
+      "path": "/텍스트 rpg/황금 실로 생명을 잇는 생체술사.png",
+      "library_file_id": "libfile_ea25453a48388191a00498a1c546b1c9",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "녹색 안경의 주술사.png",
+      "path": "/텍스트 rpg/녹색 안경의 주술사.png",
+      "library_file_id": "libfile_8f3a73d2489481918b186934963d1a93",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "검은 숲의 허수아비 학자.png",
+      "path": "/텍스트 rpg/검은 숲의 허수아비 학자.png",
+      "library_file_id": "libfile_9fd485721b688191b53fd99280eecc67",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "별자리로 귀환길을 그리는 방랑 마도사.png",
+      "path": "/텍스트 rpg/별자리로 귀환길을 그리는 방랑 마도사.png",
+      "library_file_id": "libfile_96bb9d9606e0819183dfda699ac8dfb4",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "장미 그림자를 빚는 환술사.png",
+      "path": "/텍스트 rpg/장미 그림자를 빚는 환술사.png",
+      "library_file_id": "libfile_8b3a9ddad2448191b08377c1b94f1c9a",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "JOURNEY-ARTWORK-FINAL-REPORT.md",
+      "path": "/텍스트 rpg/JOURNEY-ARTWORK-FINAL-REPORT.md",
+      "library_file_id": "libfile_78dc432ddec48191b8cc4fca4bf26c1f",
+      "type": "text/markdown",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "고딕 성당의 붉은 보석 성배.png",
+      "path": "/텍스트 rpg/고딕 성당의 붉은 보석 성배.png",
+      "library_file_id": "libfile_859f0d88f4c881919c40c40844f1f3e2",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "고딕 사파이어 반지와 촛불의 밤.png",
+      "path": "/텍스트 rpg/고딕 사파이어 반지와 촛불의 밤.png",
+      "library_file_id": "libfile_f36758f906548191aa056f3866b185a4",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "고딕 성당의 신비로운 모래시계.png",
+      "path": "/텍스트 rpg/고딕 성당의 신비로운 모래시계.png",
+      "library_file_id": "libfile_332e60d37a948191b9b7827df28a9cb9",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "달빛 아래 고딕 도시의 후드 궁수.png",
+      "path": "/텍스트 rpg/달빛 아래 고딕 도시의 후드 궁수.png",
+      "library_file_id": "libfile_e179b14ef3bc8191ba4b09deaf1061a7",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "안개 낀 폐허 정원의 슬링샷 사냥꾼.png",
+      "path": "/텍스트 rpg/안개 낀 폐허 정원의 슬링샷 사냥꾼.png",
+      "library_file_id": "libfile_23abc0e474e08191a5d530181630072d",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "고딕 성당의 천문 나침반.png",
+      "path": "/텍스트 rpg/고딕 성당의 천문 나침반.png",
+      "library_file_id": "libfile_dcf0587f47648191a0cce6e4e56275a8",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "달빛 아래 고딕 성녀와 황금 성스러운 지팡이.png",
+      "path": "/텍스트 rpg/달빛 아래 고딕 성녀와 황금 성스러운 지팡이.png",
+      "library_file_id": "libfile_cca2e6bee34c81918649ef59091988f4",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "달빛 아래 황금빛 대성당의 여사제.png",
+      "path": "/텍스트 rpg/달빛 아래 황금빛 대성당의 여사제.png",
+      "library_file_id": "libfile_7d43877705648191bcf6eea43d5c14ac",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "금이 간 고딕 앤티크 거울.png",
+      "path": "/텍스트 rpg/금이 간 고딕 앤티크 거울.png",
+      "library_file_id": "libfile_18a545a993fc8191abaab24ea13a2822",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "비 내리는 폐허의 고독한 궁수.png",
+      "path": "/텍스트 rpg/비 내리는 폐허의 고독한 궁수.png",
+      "library_file_id": "libfile_53aa3806a0bc8191838b4b2e6a340087",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "고딕 성당의 진홍빛 연금술 병.png",
+      "path": "/텍스트 rpg/고딕 성당의 진홍빛 연금술 병.png",
+      "library_file_id": "libfile_a3c0f32e7858819180e43f5272a62165",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "붙여넣은 텍스트(1)(3).txt",
+      "path": "/텍스트 rpg/붙여넣은 텍스트(1)(3).txt",
+      "library_file_id": "libfile_47ea4070ac1881919509ede3ca5a7c8a",
+      "type": "text/plain",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "붙여넣은 텍스트(1)(2).txt",
+      "path": "/텍스트 rpg/붙여넣은 텍스트(1)(2).txt",
+      "library_file_id": "libfile_307f614b6c848191aa78d70d6cf3a0d5",
+      "type": "text/plain",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "달빛 아래 고딕 헌터와 까마귀.png",
+      "path": "/텍스트 rpg/달빛 아래 고딕 헌터와 까마귀.png",
+      "library_file_id": "libfile_60783fa6953481919d2d32cf2a80f6f1",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "고딕 성채의 장미 기사여왕.png",
+      "path": "/텍스트 rpg/고딕 성채의 장미 기사여왕.png",
+      "library_file_id": "libfile_adc69354e45c81918d655a0400438119",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "침몰한 성당의 바다 마녀.png",
+      "path": "/텍스트 rpg/침몰한 성당의 바다 마녀.png",
+      "library_file_id": "libfile_1b0213d6c87081918c4bc8a909b2832e",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "촛불 아래 검은 토끼발 부적.png",
+      "path": "/텍스트 rpg/촛불 아래 검은 토끼발 부적.png",
+      "library_file_id": "libfile_40b46be34a2c8191a43f52930ce6c558",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "비 내리는 고딕 우물의 마법사.png",
+      "path": "/텍스트 rpg/비 내리는 고딕 우물의 마법사.png",
+      "library_file_id": "libfile_efda038ecd14819180713723d86682a6",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "폭풍 속 고딕 성채의 사냥꾼.png",
+      "path": "/텍스트 rpg/폭풍 속 고딕 성채의 사냥꾼.png",
+      "library_file_id": "libfile_d35f862930288191a0fb3ddd7118e9ad",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "달빛 아래 고딕 기사의 성채.png",
+      "path": "/텍스트 rpg/달빛 아래 고딕 기사의 성채.png",
+      "library_file_id": "libfile_12bbdd18a12881919db0da5ca99fb5b1",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "촛불 아래 낡은 나무 십자가.png",
+      "path": "/텍스트 rpg/촛불 아래 낡은 나무 십자가.png",
+      "library_file_id": "libfile_42e7b322b6748191984f3db18c5d1a1a",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "비 내리는 폐허의 까마귀 마법사.png",
+      "path": "/텍스트 rpg/비 내리는 폐허의 까마귀 마법사.png",
+      "library_file_id": "libfile_6b5908636ef48191bd68ba1adcf2d15d",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "핏빛 고딕 왕관과 촛불의 제단.png",
+      "path": "/텍스트 rpg/핏빛 고딕 왕관과 촛불의 제단.png",
+      "library_file_id": "libfile_8df70ad242e08191a0908441750146af",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "핏빛 루비의 고딕 왕관.png",
+      "path": "/텍스트 rpg/핏빛 루비의 고딕 왕관.png",
+      "library_file_id": "libfile_a2c754c57e9c81918c9d78ae1fb2f528",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "달빛 아래의 고딕 성녀 자세.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/달빛 아래의 고딕 성녀 자세.png",
+      "library_file_id": "libfile_b00c782bd45881918310e9576333a7e9",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "고딕 양식의 붉은 보석 그리모어.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/고딕 양식의 붉은 보석 그리모어.png",
+      "library_file_id": "libfile_b976ffb335e8819195de789a55f3427e",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "핏빛 루비의 고딕 왕관.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/핏빛 루비의 고딕 왕관.png",
+      "library_file_id": "libfile_6067378adb7081918372801020723777",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "폭풍우 속 고딕 뱀파이어 기사.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/폭풍우 속 고딕 뱀파이어 기사.png",
+      "library_file_id": "libfile_a048cfae51188191add7ff6b7b4eba3f",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "달빛 아래의 고딕 마법사.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/달빛 아래의 고딕 마법사.png",
+      "library_file_id": "libfile_58dd37c549908191b32fa77f8fc4d90d",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "폐허의 서고를 지배하는 잉크 마법사.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/폐허의 서고를 지배하는 잉크 마법사.png",
+      "library_file_id": "libfile_e91332edc514819196d66fc2acb68d9a",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "붉은 모래의 고딕 hourglass.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/붉은 모래의 고딕 hourglass.png",
+      "library_file_id": "libfile_7e56a61861f88191a0a8964507cb5f05",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "핏빛 루비의 고딕 아뮬렛.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/핏빛 루비의 고딕 아뮬렛.png",
+      "library_file_id": "libfile_201a49c4eea48191b5df6dceecea2302",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "비 내리는 고딕 도시의 사냥꾼.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/비 내리는 고딕 도시의 사냥꾼.png",
+      "library_file_id": "libfile_7a0a78238f4c81919e57ff4d4b2bc86b",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "폐허를 걷는 고독한 모험가(1).png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/폐허를 걷는 고독한 모험가(1).png",
+      "library_file_id": "libfile_11f5d8245d9c8191a23b95492571f9eb",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "폐허의 안개 속 판타지 방랑자.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/폐허의 안개 속 판타지 방랑자.png",
+      "library_file_id": "libfile_d035ffdd145481918a05fa2a47e2e213",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "고딕 양식의 천문 회중시계 유물.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/고딕 양식의 천문 회중시계 유물.png",
+      "library_file_id": "libfile_c73650b6b62081919764ec91ad171dbb",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "폐허를 걷는 고독한 방랑자.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/폐허를 걷는 고독한 방랑자.png",
+      "library_file_id": "libfile_700f28273aac81918f3717b4e6729698",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "안개 낀 고딕 도시의 방랑자.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/안개 낀 고딕 도시의 방랑자.png",
+      "library_file_id": "libfile_dcd0f0a500088191bbf75887cfe3274d",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "안개 낀 고딕 폐허의 방랑 전사.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/안개 낀 고딕 폐허의 방랑 전사.png",
+      "library_file_id": "libfile_bf7a77796c908191aff2ab752e8003fa",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "폭풍우 속 고딕 도시의 방랑자.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/폭풍우 속 고딕 도시의 방랑자.png",
+      "library_file_id": "libfile_f7b472cecb60819185ed69cbcba465c1",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "비 내리는 고딕 도시의 방랑자.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/비 내리는 고딕 도시의 방랑자.png",
+      "library_file_id": "libfile_abe332631e30819187242440d7d3f6d8",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "안개 낀 폐허를 걷는 방랑자.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/안개 낀 폐허를 걷는 방랑자.png",
+      "library_file_id": "libfile_56bf9bd574d48191b49a958404cb8a6a",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "고딕 양식의 낡은 열쇠와 촛불.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/고딕 양식의 낡은 열쇠와 촛불.png",
+      "library_file_id": "libfile_7f15822c7a3c81919c368d5dc33b4f5d",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "안개 속 고딕 폐허의 방랑자.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/안개 속 고딕 폐허의 방랑자.png",
+      "library_file_id": "libfile_bcfd38d8c1148191bc00849dafc09028",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "안개 낀 고딕 폐허의 방랑자(3).png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/안개 낀 고딕 폐허의 방랑자(3).png",
+      "library_file_id": "libfile_03b8bf61d22c81919eb69e329dce4458",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "안개 낀 고딕 폐허의 방랑자(2).png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/안개 낀 고딕 폐허의 방랑자(2).png",
+      "library_file_id": "libfile_0a71bd3bd79081918ff7e3fa33b44314",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "폐허를 바라보는 방랑 모험가.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/폐허를 바라보는 방랑 모험가.png",
+      "library_file_id": "libfile_750a4f5de138819187d1b624146db06e",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "고대 문양의 낡은 마법서.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/고대 문양의 낡은 마법서.png",
+      "library_file_id": "libfile_df41dbc8f558819181cb3a58844375e2",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "고대 고딕 그리모어와 촛불【zh?】.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/고대 고딕 그리모어와 촛불【zh?】.png",
+      "library_file_id": "libfile_3223c84940648191a7fe599eb8cf17b0",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "고딕 연금술사의 붉은 마법 물약.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/고딕 연금술사의 붉은 마법 물약.png",
+      "library_file_id": "libfile_28ec3c3031c081918f3c01e61a7f69e6",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "혈석이 박힌 고딕 성물 팬던트.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/혈석이 박힌 고딕 성물 팬던트.png",
+      "library_file_id": "libfile_64fa0ece7754819183b3eb79e62cca6b",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "핏빛 보석의 고딕 부적.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/핏빛 보석의 고딕 부적.png",
+      "library_file_id": "libfile_21a2429983608191950e40676d6ec46a",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "폭풍 속 폐허를 지키는 기사.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/폭풍 속 폐허를 지키는 기사.png",
+      "library_file_id": "libfile_9a4b9c81f52c8191ba6941f1adfa6045",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "안개 낀 고딕 폐허의 활잡이.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/안개 낀 고딕 폐허의 활잡이.png",
+      "library_file_id": "libfile_2cf56c5622d88191af673f70ecc39e94",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "달빛 아래 고딕 헌터와 사냥개.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/달빛 아래 고딕 헌터와 사냥개.png",
+      "library_file_id": "libfile_4d662aad64a88191ad72140580f2f949",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "달빛 아래의 고딕 마녀 탐험가.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/달빛 아래의 고딕 마녀 탐험가.png",
+      "library_file_id": "libfile_23981ffd74e481918eeda6e78f1cbb64",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "달빛 아래의 사냥꾼과 늑대.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/달빛 아래의 사냥꾼과 늑대.png",
+      "library_file_id": "libfile_e16c1c368b3c8191bf61909448765a46",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "잉크 마법사의 폐허 도서관.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/잉크 마법사의 폐허 도서관.png",
+      "library_file_id": "libfile_63cb3d1d6274819189d38d0e850094bb",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "달빛 아래 사냥꾼과 늑대.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/달빛 아래 사냥꾼과 늑대.png",
+      "library_file_id": "libfile_7245719cb24081919cf5e5573aaa26f9",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "폭풍 속 고서와 마녀 학자.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/폭풍 속 고서와 마녀 학자.png",
+      "library_file_id": "libfile_0394ca72d2008191a8356485233ca5b1",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "달빛 아래 고딕 사냥꾼과 늑대.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/달빛 아래 고딕 사냥꾼과 늑대.png",
+      "library_file_id": "libfile_9e4f477db1b881919923f1dc7b60197c",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "고딕 폐허의 달빛 사냥꾼.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/고딕 폐허의 달빛 사냥꾼.png",
+      "library_file_id": "libfile_a4bf9edb775c8191a0e3d748f31cba3a",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "어둠 속 전투 갑옷 유물.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/어둠 속 전투 갑옷 유물.png",
+      "library_file_id": "libfile_85d9b338ae1c8191abf9196aa6f36678",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "어둠 속 녹슨 촛불 랜턴.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/어둠 속 녹슨 촛불 랜턴.png",
+      "library_file_id": "libfile_d2ab9f6a75908191b556cad938cfd417",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "고풍스러운 가죽 주머니와 촛불ೇಜ.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/고풍스러운 가죽 주머니와 촛불ೇಜ.png",
+      "library_file_id": "libfile_baf989c348b881919b4611eae2fc4348",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "녹슨 전장의 대형 워해머.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/녹슨 전장의 대형 워해머.png",
+      "library_file_id": "libfile_a323429d7f008191bb1bf9555834a096",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "안개 낀 고딕 숲의 사냥꾼(1).png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/안개 낀 고딕 숲의 사냥꾼(1).png",
+      "library_file_id": "libfile_b0bdbdc02e4c8191a9809c888b045da4",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "안개 속 폐허의 사슴 사냥꾼.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/안개 속 폐허의 사슴 사냥꾼.png",
+      "library_file_id": "libfile_3da543dda09c8191a00db0996dce2511",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "안개 낀 황혼의 고딕 사냥꾼.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/안개 낀 황혼의 고딕 사냥꾼.png",
+      "library_file_id": "libfile_652d47a80f58819198758bf41893cc2c",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "안개 낀 고딕 폐허의 방랑자(1).png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/안개 낀 고딕 폐허의 방랑자(1).png",
+      "library_file_id": "libfile_5edb7bc3b53c8191a718b2059b966abf",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "안개 낀 폐허의 방랑자.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/안개 낀 폐허의 방랑자.png",
+      "library_file_id": "libfile_0b5966a3188c81919bc6e32a5f099d59",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "안개 낀 고딕 숲의 사냥꾼.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/안개 낀 고딕 숲의 사냥꾼.png",
+      "library_file_id": "libfile_dad28580aee48191a8f5edc3003da80d",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "안개 낀 고성의 방랑 검객.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/안개 낀 고성의 방랑 검객.png",
+      "library_file_id": "libfile_668288c5e50c8191a6c664d44d26a90f",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "안개 낀 고딕 폐허의 방랑자.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/안개 낀 고딕 폐허의 방랑자.png",
+      "library_file_id": "libfile_b2f79814cb088191aa16eaee918e8dc3",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "image-gen-10(2).png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/image-gen-10(2).png",
+      "library_file_id": "libfile_9703ee2deb648191af9e144ad3f632d5",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "image-gen-9(3).png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/image-gen-9(3).png",
+      "library_file_id": "libfile_9b050f12a24c81918c90bfad0be7a0cf",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "image-gen-8(3).png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/image-gen-8(3).png",
+      "library_file_id": "libfile_58fa0ae0ba4c8191b28a1cb0ddb147b4",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "image-gen-7(3).png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/image-gen-7(3).png",
+      "library_file_id": "libfile_e287d7376b048191806252bbaa6b7c55",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "image-gen-6(3).png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/image-gen-6(3).png",
+      "library_file_id": "libfile_4ab1e385ca248191a16ac3f54096b8b3",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "image-gen-5(3).png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/image-gen-5(3).png",
+      "library_file_id": "libfile_265d3b6381248191beed61412561f555",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "image-gen-4(3).png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/image-gen-4(3).png",
+      "library_file_id": "libfile_32e36d46a8108191b796ad6b52093535",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "image-gen-3(3).png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/image-gen-3(3).png",
+      "library_file_id": "libfile_39190b15d220819185f23de74c6ecab3",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "image-gen-2(3).png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/image-gen-2(3).png",
+      "library_file_id": "libfile_274d69a6bbcc8191a5f96126006b63b6",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "image-gen-1(3).png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/image-gen-1(3).png",
+      "library_file_id": "libfile_c232c9b7e6e48191bb076f103398a7a5",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "image-gen-10(1).png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/image-gen-10(1).png",
+      "library_file_id": "libfile_cf7ec97bef1c819197ca203a97f7e701",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "image-gen-9(2).png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/image-gen-9(2).png",
+      "library_file_id": "libfile_78484c9e672c81919c6ebed47127b91d",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "image-gen-8(2).png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/image-gen-8(2).png",
+      "library_file_id": "libfile_34495553b8d481918c3c0047b7435baf",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "image-gen-7(2).png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/image-gen-7(2).png",
+      "library_file_id": "libfile_0f6c808c0a2481919f27b8834e4686af",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "image-gen-6(2).png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/image-gen-6(2).png",
+      "library_file_id": "libfile_c5abd0682660819189742e5a1b917239",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "image-gen-5(2).png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/image-gen-5(2).png",
+      "library_file_id": "libfile_8f850c1e56c48191a0d189f17190a61d",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "image-gen-4(2).png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/image-gen-4(2).png",
+      "library_file_id": "libfile_0a0f514d8d1c8191b4f3e1a782c4db50",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "image-gen-3(2).png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/image-gen-3(2).png",
+      "library_file_id": "libfile_537f510d7cd0819181cd5ec48f6a06bc",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "image-gen-2(2).png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/image-gen-2(2).png",
+      "library_file_id": "libfile_1e8d790d9c488191932140a7fdd4ba93",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "image-gen-1(2).png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/image-gen-1(2).png",
+      "library_file_id": "libfile_f1af83c8ad888191912af44ec3e98871",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "붉은 달 아래 고딕 성채의 사냥꾼.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/붉은 달 아래 고딕 성채의 사냥꾼.png",
+      "library_file_id": "libfile_177f75d88b4c819187d1c8e7924b16de",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "달빛 아래 은빛 마녀의 주문.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/달빛 아래 은빛 마녀의 주문.png",
+      "library_file_id": "libfile_b0737e4d72ec8191978f1c1c052313f2",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "폐허의 달빛 마도서술사.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/폐허의 달빛 마도서술사.png",
+      "library_file_id": "libfile_d4690c98bec48191b76ed294acbffeb5",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "비 내리는 고딕 도시의 외로운 사냥꾼.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/비 내리는 고딕 도시의 외로운 사냥꾼.png",
+      "library_file_id": "libfile_3bbc021d82b88191833e8538ad03a581",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "안개 숲의 늑대 동료 ranger.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/안개 숲의 늑대 동료 ranger.png",
+      "library_file_id": "libfile_5db8115b91b8819191ee32d8b5d3a64e",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "폐허의 고딕 성을 향한 방랑 기사.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/폐허의 고딕 성을 향한 방랑 기사.png",
+      "library_file_id": "libfile_1ba73417803081919adf46c99bca43d1",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "폭풍 속 고딕 아처의 귀환.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/폭풍 속 고딕 아처의 귀환.png",
+      "library_file_id": "libfile_7535c368cc8c81918aa60582c0b00033",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "고딕 판타지 인물 초상 컬렉션.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/고딕 판타지 인물 초상 컬렉션.png",
+      "library_file_id": "libfile_91bd01b3bc9c819195c4f862a7a6e10a",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "폐허 속의 고독한 기사.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/폐허 속의 고독한 기사.png",
+      "library_file_id": "libfile_b2c69d205b1481918d35b18db9bf6063",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "안개 낀 폐허의 고독한 사냥꾼.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/안개 낀 폐허의 고독한 사냥꾼.png",
+      "library_file_id": "libfile_b1d0ea5393e08191940531518505d0db",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "image-gen-10.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/image-gen-10.png",
+      "library_file_id": "libfile_ae40422fe4308191abded89afd4eeec2",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "image-gen-9(1).png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/image-gen-9(1).png",
+      "library_file_id": "libfile_ae9fc0eedf008191892de706a3c31e76",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "image-gen-8(1).png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/image-gen-8(1).png",
+      "library_file_id": "libfile_a263bcb618988191b1f44b9dff703424",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "image-gen-7(1).png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/image-gen-7(1).png",
+      "library_file_id": "libfile_da01ae7e68388191abb4c4cc333d7041",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "image-gen-6(1).png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/image-gen-6(1).png",
+      "library_file_id": "libfile_7dbc88b3fac0819181b9b5f9362b0a45",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "image-gen-5(1).png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/image-gen-5(1).png",
+      "library_file_id": "libfile_386e2cb3eb6c81918bfe52ed44c2a924",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "image-gen-4(1).png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/image-gen-4(1).png",
+      "library_file_id": "libfile_2dd6967df5588191a4e15b763fd90818",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "image-gen-3(1).png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/image-gen-3(1).png",
+      "library_file_id": "libfile_080aaf4e7adc8191b31e15855c170844",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "image-gen-2(1).png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/image-gen-2(1).png",
+      "library_file_id": "libfile_a8bc56b8bca88191b0004ac761572458",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "image-gen-1(1).png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/image-gen-1(1).png",
+      "library_file_id": "libfile_e10b3428f7248191bf7034b7b4cba3c3",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "폐허를 걷는 고독한 모험가.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/폐허를 걷는 고독한 모험가.png",
+      "library_file_id": "libfile_b8346ba3e720819180b6c5f9776f5d37",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "안개 낀 고딕 황야의 방랑 전사.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/안개 낀 고딕 황야의 방랑 전사.png",
+      "library_file_id": "libfile_04bd64c5b8b88191a40b290d36a46cd4",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "안개 낀 폐허의 방랑 검객.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/안개 낀 폐허의 방랑 검객.png",
+      "library_file_id": "libfile_d5d44d5c9ddc81918964e1c60f6aa9ae",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "고딕 폐허를 걷는 생존자.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/고딕 폐허를 걷는 생존자.png",
+      "library_file_id": "libfile_d7e2474a831c8191b4eb7adf64e44ef3",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "폐허를 지키는 방랑 전사.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/폐허를 지키는 방랑 전사.png",
+      "library_file_id": "libfile_91fc8045b1e481919a4538abe0a29f3c",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "image-gen-9.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/image-gen-9.png",
+      "library_file_id": "libfile_29c86b5cb99881919a33e7d72a64a37c",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "image-gen-8.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/image-gen-8.png",
+      "library_file_id": "libfile_eccd64f395c88191bef14fb13e7ea7a8",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "image-gen-7.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/image-gen-7.png",
+      "library_file_id": "libfile_a6d709e1ef008191bfaccdbe7992c216",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "image-gen-6.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/image-gen-6.png",
+      "library_file_id": "libfile_e8a10a03dc248191b9711374a9a1ae87",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "image-gen-5.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/image-gen-5.png",
+      "library_file_id": "libfile_24f6f0c24ef481918f519ea23b28da5d",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "image-gen-4.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/image-gen-4.png",
+      "library_file_id": "libfile_1b804b08c32081919bb51dc6cefaa7bf",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "image-gen-3.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/image-gen-3.png",
+      "library_file_id": "libfile_dde30d1aa3f48191a039665066269218",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "image-gen-2.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/image-gen-2.png",
+      "library_file_id": "libfile_ee27101eb764819193338dc3db126e28",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "image-gen-1.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/image-gen-1.png",
+      "library_file_id": "libfile_2848f594fe1c81919cb4455e503aa7a8",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "붙여넣은 텍스트(1)(1).txt",
+      "path": "/텍스트 rpg/붙여넣은 텍스트(1)(1).txt",
+      "library_file_id": "libfile_c3f8b42a5ba481919c17a61dc35c4724",
+      "type": "text/plain",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "붙여넣은 텍스트(1).txt",
+      "path": "/텍스트 rpg/붙여넣은 텍스트(1).txt",
+      "library_file_id": "libfile_a60b1615f7448191bdbe1eb61f6ccc56",
+      "type": "text/plain",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "검은 일식 아래의 마지막 불씨.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/검은 일식 아래의 마지막 불씨.png",
+      "library_file_id": "libfile_98a3efb7eb948191aa198f233679fb14",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "별의 심장을 품은 우주 용광로.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/별의 심장을 품은 우주 용광로.png",
+      "library_file_id": "libfile_1f0d30bc05f881918712dcfb9ce7179b",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "달빛이 흐르는 기묘한 도서관.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/달빛이 흐르는 기묘한 도서관.png",
+      "library_file_id": "libfile_0b22be6eeed08191a06ccd6e0407dfb4",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "붉은 하트 깃발의 잊힌 성.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/붉은 하트 깃발의 잊힌 성.png",
+      "library_file_id": "libfile_9134167e1f20819182e02ab1e78c6053",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "붉은 사막의 좌초된 포경선.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/붉은 사막의 좌초된 포경선.png",
+      "library_file_id": "libfile_a1f20c0aa8ec819185e229329f4b60a4",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "유리 늪의 흰 고래 그림자.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/유리 늪의 흰 고래 그림자.png",
+      "library_file_id": "libfile_afb3842f14708191a8fa33bfa9aa24cb",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "번개 연구소 너머의 폐허 마을.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/번개 연구소 너머의 폐허 마을.png",
+      "library_file_id": "libfile_c382f274ca3c8191b381570fa1ae6682",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "붕괴하는 균열 너머의 별 없는 회랑.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/붕괴하는 균열 너머의 별 없는 회랑.png",
+      "library_file_id": "libfile_543f31e59a6881919ebde63f8a5a4049",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "가면의 숲, 빈 의자로의 초대.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/가면의 숲, 빈 의자로의 초대.png",
+      "library_file_id": "libfile_5459826452c88191b3c81619daa5a4ad",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "꺼진 등불 곁, 짐을 버린 상인.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/꺼진 등불 곁, 짐을 버린 상인.png",
+      "library_file_id": "libfile_5a217f1d43e081919bd226cc7937f9f6",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "황금빛 별 조각의 분화구.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/황금빛 별 조각의 분화구.png",
+      "library_file_id": "libfile_b7aed5256608819194b65a8f1b1a06f4",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "비가 멈춘 고딕 시계.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/비가 멈춘 고딕 시계.png",
+      "library_file_id": "libfile_9f25ae1f71b08191aac7bc9fde2dd0bf",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "어둠의 협곡 위, 보물이 빛나는 유리 다리.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/어둠의 협곡 위, 보물이 빛나는 유리 다리.png",
+      "library_file_id": "libfile_8152cd4185708191ab292d8dc5da84c7",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "알 둥지의 잠든 고대 용.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/알 둥지의 잠든 고대 용.png",
+      "library_file_id": "libfile_55713d8dee0881919c279fe16053cfac",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "금서를 품고 달아나는 견습생.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/금서를 품고 달아나는 견습생.png",
+      "library_file_id": "libfile_9ba484647a448191b36c67743a7a5114",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "이끼 그루터기의 까마귀 거래.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/이끼 그루터기의 까마귀 거래.png",
+      "library_file_id": "libfile_f194b904f9f081918b735669f68b63af",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "실루엣을 지우는 가면 없는 문지기.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/실루엣을 지우는 가면 없는 문지기.png",
+      "library_file_id": "libfile_608ca4a32cd08191bcd755412434ec9e",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "등불 아래 보물지도를 건네는 상인.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/등불 아래 보물지도를 건네는 상인.png",
+      "library_file_id": "libfile_6cfc6709dd88819189cd3e71c63993fe",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "현실을 삼키는 우주의 편집자.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/현실을 삼키는 우주의 편집자.png",
+      "library_file_id": "libfile_51b80627fad8819190a49f0b7d2cf74a",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "무너진 광산의 빛나는 광맥.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/무너진 광산의 빛나는 광맥.png",
+      "library_file_id": "libfile_270823adf74c8191b6a3d8d98634916a",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "청색 번개를 품은 프랑켄슈타인 거상.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/청색 번개를 품은 프랑켄슈타인 거상.png",
+      "library_file_id": "libfile_0f809bf0634c81918b0d825655905fc9",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "안개 속 폐허를 가리키는 작은 유령.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/안개 속 폐허를 가리키는 작은 유령.png",
+      "library_file_id": "libfile_f0f034862d8081919031e81936ec4ea1",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "검은 제단과 불씨의 숲.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/검은 제단과 불씨의 숲.png",
+      "library_file_id": "libfile_3a2601062e948191b4f475da62288b49",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "봉인 서책의 달빛 사서.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/봉인 서책의 달빛 사서.png",
+      "library_file_id": "libfile_d3b109a43cd48191ae4cdcfc841b408c",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "전복된 수레 아래의 사냥꾼.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/전복된 수레 아래의 사냥꾼.png",
+      "library_file_id": "libfile_333b8eff9e6881919af7fa6f08e9db38",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "붉은 사막의 별모래 예언자.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/붉은 사막의 별모래 예언자.png",
+      "library_file_id": "libfile_e567b970cecc819181f8a59e3e14531a",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "붉은 심장 가면의 여왕.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/붉은 심장 가면의 여왕.png",
+      "library_file_id": "libfile_969f2d1558088191a938345d44388803",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "은발의 시간 마도사.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/은발의 시간 마도사.png",
+      "library_file_id": "libfile_0b4bc72b3e648191bca84b42da2393c8",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "거울 마녀의 유리 늪.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/거울 마녀의 유리 늪.png",
+      "library_file_id": "libfile_ba4cdd66f01c8191b099d7623f99eb29",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "시계태엽 시간 감시자.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/시계태엽 시간 감시자.png",
+      "library_file_id": "libfile_0624a6739918819183d198887f7bf505",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "망령 마을의 종지기 모르.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/망령 마을의 종지기 모르.png",
+      "library_file_id": "libfile_0e22a9e003ac81919a7a865cc257c279",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "검은 숲의 가시 파수꾼.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/검은 숲의 가시 파수꾼.png",
+      "library_file_id": "libfile_631ec95556fc819186953d6b315909d8",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "주사위를 부리는 빅토리아 도박사.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/주사위를 부리는 빅토리아 도박사.png",
+      "library_file_id": "libfile_a5530193acdc8191bb423c5341be67b6",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "번개 실험실과 빛나는 기계 심장.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/번개 실험실과 빛나는 기계 심장.png",
+      "library_file_id": "libfile_a66c3c2d464481919b136495450bd71b",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "숲길의 이빨 달린 괴물 상자.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/숲길의 이빨 달린 괴물 상자.png",
+      "library_file_id": "libfile_985b601a6c708191870e20ed015be31a",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "보랏빛 눈의 그림자 군주.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/보랏빛 눈의 그림자 군주.png",
+      "library_file_id": "libfile_67c554f75a3881918b54389479b77ba5",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "일식의 후광을 지닌 흑태양 사제.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/일식의 후광을 지닌 흑태양 사제.png",
+      "library_file_id": "libfile_f966823332e88191916377d4d9c1aa42",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "붉은 사막 아래의 흰 고래.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/붉은 사막 아래의 흰 고래.png",
+      "library_file_id": "libfile_9dc67b45048c81919ddceadf3b395776",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "푸른 룬의 검무사.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/푸른 룬의 검무사.png",
+      "library_file_id": "libfile_ea2bb9561de4819194133b705aff46bb",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "앨리스와 하트 여왕의 기억 재판.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/앨리스와 하트 여왕의 기억 재판.png",
+      "library_file_id": "libfile_1a02424309c48191935bf25e020718cc",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "별 없는 심연의 기사.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/별 없는 심연의 기사.png",
+      "library_file_id": "libfile_4118f7dca8488191a3eb638838548073",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "장미 예배당의 붉은 혈기사.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/장미 예배당의 붉은 혈기사.png",
+      "library_file_id": "libfile_3a43ba8f8e5c819196d9b2b7bfe03292",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "황금 가면의 공허한 왕.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/황금 가면의 공허한 왕.png",
+      "library_file_id": "libfile_a957d9d1f9388191b89cc83a5487e9ea",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "여명 성당의 치유 성기사.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/여명 성당의 치유 성기사.png",
+      "library_file_id": "libfile_5b8a5395f3848191b05a1fcf8397f2c7",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "불씨 눈의 검은 사냥개.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/불씨 눈의 검은 사냥개.png",
+      "library_file_id": "libfile_db4af5ec8bc08191b9006a22c29f2963",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "용광로 기사와 괴물의 대치.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/용광로 기사와 괴물의 대치.png",
+      "library_file_id": "libfile_9c397a095088819198a3de72fca6fb3f",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "서가를 떠도는 검은 잉크 유령.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/서가를 떠도는 검은 잉크 유령.png",
+      "library_file_id": "libfile_2ff81ecf658c81918532364cf7bdc339",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "흑갑 기사와 괴수의 대치.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/흑갑 기사와 괴수의 대치.png",
+      "library_file_id": "libfile_09b9bfd76fd88191a548b1ef5793b1d0",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "용광로 심장의 철 거인.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/용광로 심장의 철 거인.png",
+      "library_file_id": "libfile_071b7dc84e948191b8e75ce22586e3b2",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "성벽을 지키는 베테랑 용병대장.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/성벽을 지키는 베테랑 용병대장.png",
+      "library_file_id": "libfile_8c6acc6aea088191b4eaa13112839afe",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "대장간의 불꽃 악령.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/대장간의 불꽃 악령.png",
+      "library_file_id": "libfile_367cd34536bc8191ac39b4ecfffaa5e8",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "해골 바위 위 진홍 독수리.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/해골 바위 위 진홍 독수리.png",
+      "library_file_id": "libfile_147cf4de5dcc819187b45ed064647649",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "부서진 후광의 타락한 수호자.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/부서진 후광의 타락한 수호자.png",
+      "library_file_id": "libfile_8aa77c4524948191811dea56ad37431b",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "달빛 관절의 도자기 인형.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/달빛 관절의 도자기 인형.png",
+      "library_file_id": "libfile_09ac929962888191bc054951d6b0ebd3",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "루비 독침의 유리 전갈.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/루비 독침의 유리 전갈.png",
+      "library_file_id": "libfile_7e271c664dcc81919e6e159ac4f05535",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "폐허 성의 거대한 도끼 집행자.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/폐허 성의 거대한 도끼 집행자.png",
+      "library_file_id": "libfile_e4aa221cbe648191ab385195c56cc74a",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "왕좌에 맞선 가시관 전사.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/왕좌에 맞선 가시관 전사.png",
+      "library_file_id": "libfile_b24f6911c7c08191b13a9cc462a2b220",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "달빛 도서관의 금서 든 유령 학자.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/달빛 도서관의 금서 든 유령 학자.png",
+      "library_file_id": "libfile_adcc399d4e748191b0df86a278d5d586",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "금빛 지팡이의 미라 사제.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/금빛 지팡이의 미라 사제.png",
+      "library_file_id": "libfile_1eff3396642081918e9c20610ff4d142",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "이끼 비늘 거대 늪 악어.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/이끼 비늘 거대 늪 악어.png",
+      "library_file_id": "libfile_142c80df934c81919993679a5af61d14",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "멈춘 시계의 황금 레이피어 결투사.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/멈춘 시계의 황금 레이피어 결투사.png",
+      "library_file_id": "libfile_23c78bec5f888191a8b39188617e02de",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "모래바람의 사막 도적.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/모래바람의 사막 도적.png",
+      "library_file_id": "libfile_6859c6ad8b108191b48e188af6f3c6f5",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "종이 검을 든 양피지 수호자.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/종이 검을 든 양피지 수호자.png",
+      "library_file_id": "libfile_b725a6b706248191921849be1a559597",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "늪에서 솟은 고대 이끼 골렘.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/늪에서 솟은 고대 이끼 골렘.png",
+      "library_file_id": "libfile_889dc45e7f208191b8cf17e1868189eb",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "기억을 삼키는 얼굴 없는 포식자.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/기억을 삼키는 얼굴 없는 포식자.png",
+      "library_file_id": "libfile_bee5ad462c30819186b1e16fd6b79d6d",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "심해의 닻 기사.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/심해의 닻 기사.png",
+      "library_file_id": "libfile_e2ec6fed35c081919f83fcd7c498c03c",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "독안개 늪의 망령.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/독안개 늪의 망령.png",
+      "library_file_id": "libfile_6cbb16758c2c8191be3cbc75a8eab135",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "폐허의 종탑 위 검은 까마귀.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/폐허의 종탑 위 검은 까마귀.png",
+      "library_file_id": "libfile_ea26d99314608191b55fc7d3847395b3",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "성당 지하묘지의 뱀파이어 사냥꾼.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/성당 지하묘지의 뱀파이어 사냥꾼.png",
+      "library_file_id": "libfile_c5841d28f4748191b1990397ed862fa2",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "위협적인 빈 기사 갑옷.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/위협적인 빈 기사 갑옷.png",
+      "library_file_id": "libfile_1642a4e79c248191aba43e728ad0cbde",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "사슬과 책장을 가르는 검객.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/사슬과 책장을 가르는 검객.png",
+      "library_file_id": "libfile_aaeb550d583881919d3cc08a079a62c8",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "빛나는 눈의 저주받은 주민.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/빛나는 눈의 저주받은 주민.png",
+      "library_file_id": "libfile_d550b0c3e9708191a5ce262ea3585b45",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "가스등 거리의 두 얼굴 검객.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/가스등 거리의 두 얼굴 검객.png",
+      "library_file_id": "libfile_46dde0c4bf2881919002178d7ac0cc42",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "황량한 마을의 잿빛 도끼 약탈자.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/황량한 마을의 잿빛 도끼 약탈자.png",
+      "library_file_id": "libfile_47350567e7f881919f841e1cea38e7b7",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "황혼의 기계장치 백기사.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/황혼의 기계장치 백기사.png",
+      "library_file_id": "libfile_020b133407b08191b286eb20c27985ca",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "푸른 실험실의 봉합 검객.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/푸른 실험실의 봉합 검객.png",
+      "library_file_id": "libfile_b023b753a19081919318979916c3141d",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "거울을 깨뜨리는 복서의 일격.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/거울을 깨뜨리는 복서의 일격.png",
+      "library_file_id": "libfile_700d13d3754c8191ad8cc485c62e58c3",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "심장 법정의 가면 집행자.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/심장 법정의 가면 집행자.png",
+      "library_file_id": "libfile_7380603d85b88191981997fe03c83763",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "거대 토끼 굴의 흰 토끼 수문장.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/거대 토끼 굴의 흰 토끼 수문장.png",
+      "library_file_id": "libfile_3d3d6649332081919c7bb9cc1f8b1163",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "무너진 풍차 앞의 기사.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/무너진 풍차 앞의 기사.png",
+      "library_file_id": "libfile_89c990992f2c8191ad64ca365fde6da1",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "폭풍 갑판의 작살과 흰 고래.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/폭풍 갑판의 작살과 흰 고래.png",
+      "library_file_id": "libfile_7e917c12effc8191bd089d2b5c5bd684",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "폭풍우 속 고래잡이 배의 선원 검객.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/폭풍우 속 고래잡이 배의 선원 검객.png",
+      "library_file_id": "libfile_100faa8382d88191851499ab70707e69",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "황금빛 방패의 시골 수호자.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/황금빛 방패의 시골 수호자.png",
+      "library_file_id": "libfile_dc772f643614819198525251c3254e15",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "풍차 아래의 황동 결투가.png",
+      "path": "/텍스트 rpg/캐릭터 및 아이템 이미지/풍차 아래의 황동 결투가.png",
+      "library_file_id": "libfile_db3a63e9bf9c8191adf228852cfa6d9d",
+      "type": "image/png",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "GEMINI_ASSET_MANIFEST(1).md",
+      "path": "/텍스트 rpg/GEMINI_ASSET_MANIFEST(1).md",
+      "library_file_id": "libfile_a309a52427988191be366f3d686a41e2",
+      "type": "text/markdown",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    },
+    {
+      "name": "GEMINI_ASSET_MANIFEST.md",
+      "path": "/텍스트 rpg/GEMINI_ASSET_MANIFEST.md",
+      "library_file_id": "libfile_7cc452f9d5388191a8e4d0794cced211",
+      "type": "text/markdown",
+      "disposition": "CANDIDATE_OR_EXISTING_SOURCE; do not assign from filename alone"
+    }
+  ]
+}

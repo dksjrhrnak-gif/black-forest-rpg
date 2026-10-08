@@ -1,7 +1,7 @@
 {
-  "connectedFiles": 137,
-  "connectedMappings": 139,
-  "fallbackMappings": 1061,
+  "connectedFiles": 147,
+  "connectedMappings": 149,
+  "fallbackMappings": 1051,
   "missing": 0,
   "wrongMatch": "verified library selections and existing mapping manifest; not a pixel classifier",
   "unmappedFiles": []

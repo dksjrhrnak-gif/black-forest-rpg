@@ -1,6 +1,6 @@
 # 검은 숲의 방랑자 — 마지막 불씨 4.0
 
-모바일 우선 한국어 텍스트 RPG. 공식 원본은 이 저장소의 모듈 소스이며 `python3 build.py`가 `black-forest.html`을 생성한다. 배포 엔트리는 `.openai/hosting.json`의 `dist/index.html`이다. `black-forest-mobile.html`은 이 저장소에 없다. GitHub Pages의 과거 29직업 배포는 별도 계통이며 이번 작업에서 최신 원격 main을 읽거나 변경하지 못했다.
+모바일 우선 한국어 텍스트 RPG. 공식 원본은 이 저장소의 모듈 소스이며 `python3 build.py`가 `style.css`, `shell.html`과 게임 JavaScript 모듈을 묶어 `black-forest.html`을 생성한다. `python3 export-site.py`가 동일한 HTML을 루트 `index.html`과 `dist/index.html`에 복사한다. GitHub Pages는 main 루트의 `index.html`을 배포한다. `black-forest-mobile.html`은 이 저장소에 없다. 현재 검수 결과와 배포 근거는 [후속 검수 보고](docs/handoff-audit.md)를 확인한다.
 
 ## 최종 데이터
 
@@ -16,7 +16,7 @@
 
 ## 화면과 이미지
 
-`assets.js`에 경로를 모았다. 기존 WebP102개를 보존·연결하고 장비 공용 SVG3개를 추가했다. 직업29·적33·보스9·지역8·이벤트18·Story CG3·배너/캠프2가 있다. 나머지 직업85종, 개인 Portrait6종, Story CG3종은 null과 텍스트 fallback이다. 1,000개 장비는 슬롯별 공용 아이콘3개를 사용한다. 없는 파일을 추측하여 요청하지 않는다. 이미지 오류 시 숨기고 대체 텍스트를 표시한다.
+`assets.js`에 경로를 모았다. 연결 이미지 147개(144 WebP + 공용 장비 SVG 3개): 직업 71종, 적 33종, 보스 9종, 지역 8종, 이벤트 18종, 스토리 CG 3종, 배너/캠프 2종이다. 전용 이미지가 없는 직업 43종은 텍스트 fallback을 사용한다. NPC 전용 Portrait 6종과 Queen/Quixote 스토리 그림은 fallback을 사용하며 Creature/Victor는 기존 피조물 장면을 공유한다. 1,000개 장비는 슬롯별 공용 아이콘 3개를 사용한다. 제작된 개별 장비 그림은 현재 장비 ID와 연결 근거가 없는 후보도 있어 임의로 배정하지 않는다. 확인된 새 연결은 [이미지 연결 근거](docs/handoff-image-connections.json)에 기록한다. 이미지 오류 시 숨기고 대체 텍스트를 표시한다.
 
 장비창은 현재 직업·최고 장비 등급의 테두리·3슬롯·현재 능력치·선택 장비 상세·장착 전 비교를 표시한다. 강화 비용·확률·실패 보정과 기존 옵션 재설정을 호출한다. 변경된 능력치는 약0.9초 표시한다.
 
@@ -39,6 +39,9 @@ python3 export-site.py
 
 `npm test`는 Node에서 실제 게임 로직을 실행한다. 원본29직업의 전투348건 및 Alea 난수 비교, BF1/BF2 마이그레이션, 전직 조건, 1,000종 장비 드롭, 관계, 챕터, 모든 직업의684개 전투 회귀 캠페인과 시작6직업의18개 정상 성장 캠페인을 검증한다.
 
-**이번 환경에서 브라우저 테스트는 실행하지 못했다.** 화면 overflow·실제 touch·Safari/Chrome·콘솔·첫 화면 로딩 시간은 PASS로 처리하지 않는다. 과거 브라우저 결과를 현재 결과로 인용하지 않는다. 사용자 요구에 따라 해당 검증 전에 배포하지 않는다. 휴대폰 체감 플레이타임2–4시간 및 session20–40분은 측정이 필요한 목표다.
+GitHub Actions에서 Chromium/WebKit의 클릭·터치·이미지·진행·저장 회귀를 실행한다. 기존 A/B/C 통합 QA의 완료 기록은 [최종 통합 보고](docs/final-completion-report.md), 2026-10-08 인계 검수와 요청한 화면 크기의 결과는 [후속 검수 보고](docs/handoff-audit.md)에 구분한다. 실제 iOS/Android 기기와 체감 플레이타임 2–4시간, 세션 20–40분은 미측정이다.
 
 지원되는 브라우저 QA 환경에서 `npm run test:browser`, `npm run test:mobile`을 실행한다. `BF_QA_URL`로 검증 서버 URL, `BF_BROWSER=webkit`으로 WebKit, `BF_CHROMIUM`으로 제공된 실행 파일을 지정할 수 있다. Chrome의 모바일 에뮬레이션은 실제 iOS Safari 검증을 대체하지 않는다.
+
+
+`BF_VIEWPORTS`에 `[{"width":375,"height":667},{"width":390,"height":844},{"width":393,"height":852},{"width":430,"height":932}]`를 지정해 요청한 크기만 검증할 수 있다. `BF_AUDIT_CONTROLS=1`은 활성 버튼의 44px 터치 영역, 전투 하단 버튼 접근, 추가 연결된 직업 그림을 검사한다. 별도 지정이 없으면 기존 8개 화면 크기를 유지한다.

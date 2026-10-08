@@ -3465,7 +3465,7 @@
         "bosses": 6
       },
       "masteryAction": "critical",
-      "image": null,
+      "image": "assets/class_x_ranged_13.webp",
       "effects": [
         {
           "type": "damageMultiplier",
@@ -3648,7 +3648,7 @@
         "def": 2
       },
       "masteryAction": "critical",
-      "image": null,
+      "image": "assets/class_x_ranged_16.webp",
       "effects": [
         {
           "type": "critBonus",
@@ -3711,7 +3711,7 @@
         "def": 2
       },
       "masteryAction": "defend",
-      "image": null,
+      "image": "assets/class_x_ranged_17.webp",
       "effects": [
         {
           "type": "goldBonus",
@@ -4827,7 +4827,7 @@
         "def": 3
       },
       "masteryAction": "attack",
-      "image": null,
+      "image": "assets/class_x_support_17.webp",
       "effects": [
         {
           "type": "goldBonus",
@@ -5700,7 +5700,7 @@
         "bosses": 6
       },
       "masteryAction": "skill",
-      "image": null,
+      "image": "assets/class_x_occult_13.webp",
       "effects": [
         {
           "type": "damageMultiplier",
@@ -5821,7 +5821,7 @@
         "def": 2
       },
       "masteryAction": "skill",
-      "image": null,
+      "image": "assets/class_x_occult_15.webp",
       "effects": [
         {
           "type": "potionBoost",
@@ -5882,7 +5882,7 @@
         "def": 2
       },
       "masteryAction": "skill",
-      "image": null,
+      "image": "assets/class_x_occult_16.webp",
       "effects": [
         {
           "type": "critBonus",
@@ -6213,7 +6213,7 @@
         "storyFlag": "chapter_6_seen"
       },
       "masteryAction": "attack",
-      "image": null,
+      "image": "assets/class_self_named.webp",
       "effects": [
         {
           "type": "leechBonus",
@@ -6271,7 +6271,7 @@
         }
       },
       "masteryAction": "defend",
-      "image": null,
+      "image": "assets/class_dream_guard.webp",
       "effects": [
         {
           "type": "guardNext",
@@ -6329,7 +6329,7 @@
         }
       },
       "masteryAction": "defend",
-      "image": null,
+      "image": "assets/class_court_witness.webp",
       "effects": [
         {
           "type": "damageMultiplier",

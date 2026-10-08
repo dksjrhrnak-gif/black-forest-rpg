@@ -1,11 +1,11 @@
 {
-  "uniqueImageFiles": 137,
-  "registryLinks": 139,
-  "nullMappings": 1061,
+  "uniqueImageFiles": 147,
+  "registryLinks": 149,
+  "nullMappings": 1051,
   "categories": {
     "classes": {
-      "linked": 61,
-      "fallback": 53
+      "linked": 71,
+      "fallback": 43
     },
     "enemies": {
       "linked": 33,
@@ -47,11 +47,8 @@
   "missingClasses": [
     "x_ranged_11",
     "x_ranged_12",
-    "x_ranged_13",
     "x_ranged_14",
     "x_ranged_15",
-    "x_ranged_16",
-    "x_ranged_17",
     "x_support_0",
     "x_support_1",
     "x_support_2",
@@ -69,7 +66,6 @@
     "x_support_14",
     "x_support_15",
     "x_support_16",
-    "x_support_17",
     "x_occult_0",
     "x_occult_1",
     "x_occult_2",
@@ -83,14 +79,8 @@
     "x_occult_10",
     "x_occult_11",
     "x_occult_12",
-    "x_occult_13",
     "x_occult_14",
-    "x_occult_15",
-    "x_occult_16",
     "whale_slayer",
-    "self_named",
-    "dream_guard",
-    "court_witness",
     "alice_return",
     "victor_heir",
     "quixote_squire",
