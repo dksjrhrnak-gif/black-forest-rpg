@@ -1,10 +1,11 @@
 name: Handoff audit and requested mobile sizes
 on:
   push:
-    branches: [qa/handoff-audit-20261008, qa/resume-checkpoint-20261008, qa/asset-quality-20261008, main]
+    branches: [qa/handoff-audit-20261008, qa/resume-checkpoint-20261008, qa/asset-quality-20261008, qa/p1-class-identity-20261008, main]
   workflow_dispatch:
 permissions:
   contents: read
+  deployments: read
 jobs:
   logic:
     runs-on: ubuntu-latest
@@ -16,12 +17,17 @@ jobs:
           node-version: '22'
       - run: npm ci --ignore-scripts
       - run: npm test
+      - run: node test-p1-identity.cjs
       - name: Fixed-seed gameplay audit and natural save continuity
+        env:
+          BF_AUDIT_OUT: docs/p1/regression
         run: node audit-gameplay-quality.cjs all
       - uses: actions/upload-artifact@v4
         with:
           name: gameplay-data
-          path: docs/gameplay/*.json
+          path: |
+            docs/p1/**/*.json
+            docs/p1/comparison.json
       - run: python3 build.py && node export-data.cjs && python3 export-site.py && python3 verify-html.py
   browser:
     runs-on: ubuntu-latest
@@ -61,6 +67,12 @@ jobs:
           BF_BROWSER: ${{ matrix.browser }}
           BF_QA_URL: http://127.0.0.1:4173/
         run: node test-quality-mobile.cjs
+      - name: P1 old battle saves, career skills and status reload
+        if: matrix.interaction == 'touch'
+        env:
+          BF_BROWSER: ${{ matrix.browser }}
+          BF_QA_URL: http://127.0.0.1:4173/
+        run: node test-p1-ui.cjs
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -70,6 +82,7 @@ jobs:
             mobile-results*.txt
             handoff-readiness-*.json
             docs/gameplay/mobile-quality-*.json
+            docs/p1/ui-*.json
             screenshots/
 
   live-pages:
@@ -87,6 +100,15 @@ jobs:
           node-version: '22'
       - run: npm ci --ignore-scripts
       - run: npx playwright install --with-deps ${{ matrix.browser }}
+      - name: Wait for this commit to finish Pages deployment
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: node wait-pages-deployment.cjs
+      - name: Public P1 old-save and skill QA
+        env:
+          BF_BROWSER: ${{ matrix.browser }}
+          BF_QA_URL: https://dksjrhrnak-gif.github.io/black-forest-rpg/
+        run: node test-p1-ui.cjs
       - name: Match the deployed game and all mapped assets
         env:
           BF_HTTP_BASE: https://dksjrhrnak-gif.github.io/black-forest-rpg/
@@ -105,5 +127,6 @@ jobs:
           name: resumed-live-${{ matrix.browser }}
           path: |
             pages-http-results.json
+            docs/p1/ui-*.json
             mobile-results*.txt
             screenshots/
