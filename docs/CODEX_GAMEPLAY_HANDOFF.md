@@ -34,3 +34,8 @@ PR: https://github.com/dksjrhrnak-gif/black-forest-rpg/pull/1 . CI의 최신 커
 - 후속 최종 커밋은 위 결과 기록과 직업 제안 문안의 현재 역할 명확화만 포함한다. 실행 소스·데이터·bundle은 검증 코드SHA와 같으며 문서 갱신에 동일 검사를 반복하지 않는다.
 
 승인 우선: P1 직업 내 행동 개성/형제 비교, P2 지역 조건과이벤트3개·장비 선택성, P3 경제·제작 확장/엔딩 차별화. 각 변경의 대상·효과·위험·회귀는 CLASS_IDENTITY_PROPOSALS.md, EXPLORATION_REWARD_REVIEW.md, STORY_REVIEW.md에 구체화했다. 현 PR은 안전 수정과 분석만 리뷰/병합 가능하며, main 병합 이후 새SHA의공개Pages 검수가 다음 배포 단계다.
+
+
+## 2026-10-08 P1 후속 인수인계
+
+위 N–T 체크포인트는 당시 결과로 보존한다. 사용자의 후속 지시에 따라 PR #1은 main에 병합됐고 공개 QA를 통과했다. 114직업 분석에 이어 6개 확장 직업의 기존 효과를 차별화한 P1도 PR #2로 병합했다. 최신 실행 SHA·검증 증거·공개 배포와 잔여 P2/P3는 [P1_HANDOFF.md](P1_HANDOFF.md)를 따른다. 이번 범위의 병합·배포에 별도 사용자 확인을 요구하지 않았다.

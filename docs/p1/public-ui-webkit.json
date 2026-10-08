@@ -1,0 +1,155 @@
+{
+  "status": "PASS",
+  "engine": "webkit",
+  "base": "https://dksjrhrnak-gif.github.io/black-forest-rpg/",
+  "checks": [
+    {
+      "width": 360,
+      "id": "x_magic_0",
+      "skill": "여백의 잔불",
+      "oldSaveExact": true,
+      "skillExact": true,
+      "reloadExact": true
+    },
+    {
+      "width": 360,
+      "id": "x_magic_15",
+      "skill": "찰나의 역행",
+      "oldSaveExact": true,
+      "skillExact": true,
+      "reloadExact": true
+    },
+    {
+      "width": 360,
+      "id": "x_ranged_2",
+      "skill": "흔들리는 표적",
+      "oldSaveExact": true,
+      "skillExact": true,
+      "reloadExact": true
+    },
+    {
+      "width": 360,
+      "id": "x_occult_13",
+      "skill": "빌린 생명의 증언",
+      "oldSaveExact": true,
+      "skillExact": true,
+      "reloadExact": true
+    },
+    {
+      "width": 360,
+      "id": "x_support_16",
+      "skill": "돌아온 온기",
+      "oldSaveExact": true,
+      "skillExact": true,
+      "reloadExact": true
+    },
+    {
+      "width": 360,
+      "id": "x_support_17",
+      "skill": "깨지지 않는 봉합",
+      "oldSaveExact": true,
+      "skillExact": true,
+      "reloadExact": true
+    },
+    {
+      "width": 390,
+      "id": "x_magic_0",
+      "skill": "여백의 잔불",
+      "oldSaveExact": true,
+      "skillExact": true,
+      "reloadExact": true
+    },
+    {
+      "width": 390,
+      "id": "x_magic_15",
+      "skill": "찰나의 역행",
+      "oldSaveExact": true,
+      "skillExact": true,
+      "reloadExact": true
+    },
+    {
+      "width": 390,
+      "id": "x_ranged_2",
+      "skill": "흔들리는 표적",
+      "oldSaveExact": true,
+      "skillExact": true,
+      "reloadExact": true
+    },
+    {
+      "width": 390,
+      "id": "x_occult_13",
+      "skill": "빌린 생명의 증언",
+      "oldSaveExact": true,
+      "skillExact": true,
+      "reloadExact": true
+    },
+    {
+      "width": 390,
+      "id": "x_support_16",
+      "skill": "돌아온 온기",
+      "oldSaveExact": true,
+      "skillExact": true,
+      "reloadExact": true
+    },
+    {
+      "width": 390,
+      "id": "x_support_17",
+      "skill": "깨지지 않는 봉합",
+      "oldSaveExact": true,
+      "skillExact": true,
+      "reloadExact": true
+    },
+    {
+      "width": 430,
+      "id": "x_magic_0",
+      "skill": "여백의 잔불",
+      "oldSaveExact": true,
+      "skillExact": true,
+      "reloadExact": true
+    },
+    {
+      "width": 430,
+      "id": "x_magic_15",
+      "skill": "찰나의 역행",
+      "oldSaveExact": true,
+      "skillExact": true,
+      "reloadExact": true
+    },
+    {
+      "width": 430,
+      "id": "x_ranged_2",
+      "skill": "흔들리는 표적",
+      "oldSaveExact": true,
+      "skillExact": true,
+      "reloadExact": true
+    },
+    {
+      "width": 430,
+      "id": "x_occult_13",
+      "skill": "빌린 생명의 증언",
+      "oldSaveExact": true,
+      "skillExact": true,
+      "reloadExact": true
+    },
+    {
+      "width": 430,
+      "id": "x_support_16",
+      "skill": "돌아온 온기",
+      "oldSaveExact": true,
+      "skillExact": true,
+      "reloadExact": true
+    },
+    {
+      "width": 430,
+      "id": "x_support_17",
+      "skill": "깨지지 않는 봉합",
+      "oldSaveExact": true,
+      "skillExact": true,
+      "reloadExact": true
+    }
+  ],
+  "limitations": [
+    "Mobile emulation, not physical devices.",
+    "Career selection is a controlled archived fixture; natural career gates are separately tested."
+  ]
+}

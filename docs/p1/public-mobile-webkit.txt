@@ -1,0 +1,186 @@
+
+> black-forest-last-ember@4.0.0 test:mobile
+> node test-mobile.cjs
+
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+Journey QA 360 frozen victory
+Journey QA 360 frozen victory reload
+Journey QA 360 enemy art swapped for story
+Journey QA 360 numbered chapter command
+Journey QA 360 archived BF2 browser import
+Journey QA 360 rest point continue
+Journey QA 360 elite battle
+Journey QA 360 rest point
+Journey QA 360 retained journey resumed
+Journey QA 360 retained route npc result reload
+Journey QA 360 retained route npc resume
+Journey QA 360 retained route dialogue result reload
+Journey QA 360 retained route dialogue resume
+Journey QA 360 retained route bond result reload
+Journey QA 360 retained route bond resume
+Journey QA 360 shop
+Journey QA 360 shop exit
+Journey QA 360 boss result
+Journey QA 360 regional seal and camp
+Journey QA 360 event
+Journey QA 360 event result
+Journey QA 360 shrine result
+Journey QA 360 secret result
+Journey QA 360 cache result
+Journey QA 360 NPC
+Journey QA 360 NPC result
+Journey QA 360 optional guardian
+Journey QA 360 guardian avoided
+Journey QA 360 death
+Journey QA 360 escape result
+Journey QA 360 last guardian result
+Journey QA 360 final choice
+Journey QA 360 ending
+Journey QA 360 new journey
+PASS all 10 handoff portraits decode through actual job browser
+Journey QA 390 frozen victory
+Journey QA 390 frozen victory reload
+Journey QA 390 enemy art swapped for story
+Journey QA 390 numbered chapter command
+Journey QA 390 archived BF2 browser import
+Journey QA 390 rest point continue
+Journey QA 390 elite battle
+Journey QA 390 rest point
+Journey QA 390 retained journey resumed
+Journey QA 390 retained route npc result reload
+Journey QA 390 retained route npc resume
+Journey QA 390 retained route dialogue result reload
+Journey QA 390 retained route dialogue resume
+Journey QA 390 retained route bond result reload
+Journey QA 390 retained route bond resume
+Journey QA 390 shop
+Journey QA 390 shop exit
+Journey QA 390 boss result
+Journey QA 390 regional seal and camp
+Journey QA 390 event
+Journey QA 390 event result
+Journey QA 390 shrine result
+Journey QA 390 secret result
+Journey QA 390 cache result
+Journey QA 390 NPC
+Journey QA 390 NPC result
+Journey QA 390 optional guardian
+Journey QA 390 guardian avoided
+Journey QA 390 death
+Journey QA 390 escape result
+Journey QA 390 last guardian result
+Journey QA 390 final choice
+Journey QA 390 ending
+Journey QA 390 new journey
+Journey QA 390 area 0
+Journey QA 390 area 1
+Journey QA 390 area 2
+Journey QA 390 area 3
+Journey QA 390 area 4
+Journey QA 390 area 5
+Journey QA 390 area 6
+Journey QA 390 area 7
+Journey QA 390 enemy 굶주린 늑대
+Journey QA 390 enemy 가시 고블린
+Journey QA 390 enemy 추방된 사냥꾼
+Journey QA 390 enemy 흙의 정령
+Journey QA 390 enemy 잿빛 약탈자
+Journey QA 390 enemy 저주받은 주민
+Journey QA 390 enemy 빈 갑옷
+Journey QA 390 enemy 종탑의 까마귀
+Journey QA 390 enemy 독안개 망령
+Journey QA 390 enemy 늪의 포식자
+Journey QA 390 enemy 수정 거미
+Journey QA 390 enemy 이끼 골렘
+Journey QA 390 enemy 왕의 처형인
+Journey QA 390 enemy 타락한 수호자
+Journey QA 390 enemy 검은 기사
+Journey QA 390 enemy 기억을 먹는 자
+Journey QA 390 enemy 유리 전갈
+Journey QA 390 enemy 모래 도적
+Journey QA 390 enemy 미라 사제
+Journey QA 390 enemy 붉은 독수리
+Journey QA 390 enemy 잉크 망령
+Journey QA 390 enemy 종이 수호자
+Journey QA 390 enemy 사라진 학자
+Journey QA 390 enemy 달빛 인형
+Journey QA 390 enemy 철의 거인
+Journey QA 390 enemy 불꽃 악령
+Journey QA 390 enemy 검댕 사냥개
+Journey QA 390 enemy 쇳물 기사
+Journey QA 390 enemy 무명의 왕
+Journey QA 390 enemy 시간의 파수병
+Journey QA 390 enemy 공허의 기사
+Journey QA 390 enemy 검은 태양의 사도
+Journey QA 390 enemy 보급함 미믹
+Journey QA 390 boss 가시의 파수꾼
+Journey QA 390 boss 종지기 모르
+Journey QA 390 boss 거울의 마녀
+Journey QA 390 boss 하트 여왕의 집행관
+Journey QA 390 boss 사막의 예언자
+Journey QA 390 boss 금서의 사서
+Journey QA 390 boss 빅터의 봉합 거인
+Journey QA 390 boss 결말을 먹는 편집자
+Journey QA 390 boss 이름을 지운 자
+Journey QA 390 event 0
+Journey QA 390 event 1
+Journey QA 390 event 2
+Journey QA 390 event 3
+Journey QA 390 event 4
+Journey QA 390 event 5
+Journey QA 390 event 6
+Journey QA 390 event 7
+Journey QA 390 event 8
+Journey QA 390 event 9
+Journey QA 390 event 10
+Journey QA 390 event 11
+Journey QA 390 event 12
+Journey QA 390 event 13
+Journey QA 390 event 14
+Journey QA 390 event 15
+Journey QA 390 event 16
+Journey QA 390 event 17
+PASS all 10 handoff portraits decode through actual job browser
+Journey QA 430 frozen victory
+Journey QA 430 frozen victory reload
+Journey QA 430 enemy art swapped for story
+Journey QA 430 numbered chapter command
+Journey QA 430 archived BF2 browser import
+Journey QA 430 rest point continue
+Journey QA 430 elite battle
+Journey QA 430 rest point
+Journey QA 430 retained journey resumed
+Journey QA 430 retained route npc result reload
+Journey QA 430 retained route npc resume
+Journey QA 430 retained route dialogue result reload
+Journey QA 430 retained route dialogue resume
+Journey QA 430 retained route bond result reload
+Journey QA 430 retained route bond resume
+Journey QA 430 shop
+Journey QA 430 shop exit
+Journey QA 430 boss result
+Journey QA 430 regional seal and camp
+Journey QA 430 event
+Journey QA 430 event result
+Journey QA 430 shrine result
+Journey QA 430 secret result
+Journey QA 430 cache result
+Journey QA 430 NPC
+Journey QA 430 NPC result
+Journey QA 430 optional guardian
+Journey QA 430 guardian avoided
+Journey QA 430 death
+Journey QA 430 escape result
+Journey QA 430 last guardian result
+Journey QA 430 final choice
+Journey QA 430 ending
+Journey QA 430 new journey
+PASS all 10 handoff portraits decode through actual job browser
+360x800: PASS touch panels, gear, cross-tree lock, dialogue, battle, one tap/turn, reload, corrupt save, image bounds, longest class/equipment names, zero JS/console errors; player-controlled results/reward reload/duplicate clicks/scene image lifetime/HTTP images PASS
+390x844: PASS touch panels, gear, cross-tree lock, dialogue, battle, one tap/turn, reload, corrupt save, image bounds, longest class/equipment names, zero JS/console errors; player-controlled results/reward reload/duplicate clicks/scene image lifetime/HTTP images PASS
+430x932: PASS touch panels, gear, cross-tree lock, dialogue, battle, one tap/turn, reload, corrupt save, image bounds, longest class/equipment names, zero JS/console errors; player-controlled results/reward reload/duplicate clicks/scene image lifetime/HTTP images PASS
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+npm notice To update run: npm install -g npm@12.2.0
+npm notice

@@ -30,9 +30,17 @@
 
 wait-pages-deployment.cjs와 workflow는 해당SHA의Pages성공을 기다린 뒤 공개 검사를 실행한다. 최초 배포에서 확인한 검사/배포 경쟁 조건을 줄인다. export-site.py는 공개 root/preview dist의 CSV를 정식data와 동기화하고 test-http-assets.cjs가3개CSV의바이트를확인한다. 기존 감사 결과는 BF_AUDIT_OUT으로 P1 결과와 분리해 보존한다.
 
-## 다음 상태 기록
+## P1 병합·공개 확인
 
-검증한 P1 커밋을 PR로 main에 병합하고 Actions/Pages/공개 HTML·자산·CSV·이전 저장·6스킬·모바일을 확인한다. 실행 SHA와 최종 원격 결과는 후속 완료 기록에 추가한다. 사용자 중간 확인은 요구하지 않는다.
+- P1 코드 커밋: `17918ee7cccc33ae63714dee84432bb83b39b902`, PR #2. 브랜치 CI 16개 SUCCESS, main과 충돌 없음. Chromium touch의 설치 단계가 약10분 지연되어 그 job만 취소/재시도했고 새 러너에서는 설치/실제 QA가 통과했다. 코드 수정이나 이미 성공한 job의 재실행은 없었다.
+- PR #2 병합 main/실행 SHA: `6062e293f63f9f354a97b20a1b8a6a0eb30d982d`, 2026-10-08 16:28 UTC. PR의 파일 트리와 동일하다.
+- Pages run `37809037918`, deployment `6941039428`: 위 SHA에 SUCCESS. 공개 URL: https://dksjrhrnak-gif.github.io/black-forest-rpg/.
+- 공개 HTML SHA256 `b9421b9a49be4a6386858f515bce5768878955f4dcdb020232c13592a3f1c991`: 현재 index.html과 동일. 149이미지와 CSV3개 HTTP200/바이트 동일. `p1/public-http-assets.json`.
+- 공개 WebKit: 이전 저장→6스킬→상태 저장→reload 3폭×6=18검사 통과; 이미지2장/장비2:3/한국어 비교/강화 30화면 통과. 360/390/430 새 게임/이전 저장/탐험/전투 종료/보상/장비/엔딩/다시 시작/중복터치/이미지 경로 통과. 콘솔/런타임 오류0. `p1/public-ui-webkit.json`, `public-quality-webkit.json`, `public-mobile-summary-webkit.txt`, `public-mobile-webkit.txt`.
+- 원격 공개 Chromium 및 WebKit 모두 같은 공개 스킬/저장/HTML·149자산·CSV/3폭 여정 통과. 클라우드 Chromium의 공개 TLS 신뢰 설정을 변경하지 않고 GitHub CI의 정상 HTTPS Chromium으로 공개 검증했다. 로컬 Chromium은 기존 루프백 QA를 통과했다.
+- main 인수인계 CI run `37809038721`: 7작업 SUCCESS, 공개2작업 포함.
+- main 통합 CI run `37809038747`: 11작업 SUCCESS. main 총18검사 SUCCESS. 실행 SHA/작업명/결론/링크는 `p1/remote-completion.json`에 보존했다.
+- 완료 기록은 문서/증거만 추가한다. 마지막 실행 코드 SHA와 문서만 추가한 최종 main SHA는 구분한다. 런타임/HTML/CSV/이미지 트리의 동일성을 확인하고 최종 main SHA의 Pages 배포·공개 바이트를 다시 확인한다.
 
 P2 잔여: 지역별 이벤트 조건과 제안3개/장비 선택성·보상 가치. P3 잔여: 경제/제작 확장·엔딩 차별화. 이번에 구현하지 않는다. 미해결 검증 한계: 실제 기기/Firefox/사람의 장시간 플레이/모든 히든의 자연 빈도/30턴 이상 자연 전투. 이미지 미제작 직업42·장비999·NPC6·story2, ID불명 후보2도 그대로다. 위험한 저장 이관/콘텐츠 삭제는 필요하지 않았다.
 
@@ -73,3 +81,12 @@ P2 잔여: 지역별 이벤트 조건과 제안3개/장비 선택성·보상 가
 - test-p1-ui.cjs
 - test-results.txt
 - wait-pages-deployment.cjs
+
+
+## 원격 완료·최종 기록
+
+PR #1과 P1은 모두 병합·배포·공개 QA를 완료했다. 실행 코드 SHA `6062e293f63f9f354a97b20a1b8a6a0eb30d982d`의 main18검사와 Pages가 SUCCESS다. 이후 이 완료 문서와 공개 증거만 추가하며 게임/HTML/CSV/이미지는 변경하지 않는다. 문서 commit은 `[skip ci]`로 이미 통과한 코드 검사를 반복하지 않고, 최종 main SHA의 Pages 상태·HTML/149자산/CSV3개를 다시 확인한다. 최종 SHA는 GitHub main 및 제출 보고서에서 확인한다.
+
+후속 기록 변경 파일: `docs/CODEX_GAMEPLAY_HANDOFF.md`, `docs/P1_HANDOFF.md`, `docs/p1/public-http-assets.json`, `public-ui-webkit.json`, `public-quality-webkit.json`, `public-mobile-webkit.txt`, `public-mobile-summary-webkit.txt`, `remote-completion.json`. 앞의 P1 변경35파일과 합친 전수 목록은 중복을 제외한42파일이다.
+
+미해결 기능 오류는 이번 자동 QA 범위에서 발견되지 않았다. 일부 강제 약장비/상위티어 fixture는 집계보다 승률 차이가 크므로 상세 비교를 남겼다. 모든 조건의 완전 균형이나 실제 기기·사람의 재미를 검증했다고 주장하지 않는다. P2/P3 및 누락 이미지 작업은 이번 범위 밖으로 보존했다.
