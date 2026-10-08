@@ -3,6 +3,27 @@ const key='black-forest-last-ember-v2',fresh=(seed=1)=>{const g=new Game(seed);g
 async function verifyJourney({page,activate,restore,fit,size,touch}){
  const failures=[];const bad=resp=>{if(resp.status()>=400&&resp.url().includes('/assets/'))failures.push(resp.url()+' '+resp.status());};page.on('response',bad);
  const state=async()=>Game.load(await page.evaluate(k=>localStorage.getItem(k),key));
+ async function verifyCampMenus(){
+  const current=await state(),camp=current.s.scene==='camp';
+  for(const type of ['workshop','bag','equipment','quests','jobs','story']){
+   const menu=page.locator('[data-ui="'+type+'"]').first();
+   if(await menu.count())assert.equal(await menu.isDisabled(),!camp,type+' availability in '+current.s.scene);
+  }
+  if(!camp){
+   const code=await page.evaluate(k=>localStorage.getItem(k),key);
+   await page.locator('[data-ui="equipment"]').first().evaluate(el=>el.dispatchEvent(new MouseEvent('click',{bubbles:true})));
+   assert(await page.locator('#bf-panel').isHidden(),'exploration must reject camp-only menu dispatch');
+   assert.equal(await page.evaluate(k=>localStorage.getItem(k),key),code,'blocked menu must preserve saved state');
+  }
+ }
+ // Exercise the combat DOM handler, persistence and rendering before importing result fixtures.
+ let combat=fresh();combat.travel(0);combat.fight();combat.s.enemy.hp=1;
+ const won=Game.load(combat.export());won.act('attack');
+ await restore(combat.export());await verifyCampMenus();
+ await activate(page.locator('[data-cmd="act"][data-arg="attack"]'));
+ assert.equal((await state()).export(),won.export(),'attack click must persist exactly the engine victory');
+ assert(['reward','loot'].includes((await state()).s.scene));
+ await page.reload();assert.equal((await state()).export(),won.export(),'victory must survive refresh');
  async function verify(name){console.log('Journey QA '+size.width+' '+name);if(await page.locator('.scene-hero').count())await page.locator('.scene-hero').scrollIntoViewIfNeeded();await page.waitForFunction(()=>[...document.querySelectorAll('#bf-play img')].filter(i=>{const r=i.getBoundingClientRect();return r.bottom>0&&r.top<innerHeight}).every(i=>i.complete&&i.naturalWidth>0),null,{timeout:10000}).catch(async e=>{console.error(name,await page.locator('#bf-play img').evaluateAll(images=>images.map(i=>({src:i.src,complete:i.complete,natural:i.naturalWidth,rect:i.getBoundingClientRect().toJSON(),display:getComputedStyle(i).display}))));throw e;});await fit(name);const visible=await page.locator('#black-forest-game').innerText();assert(!/다음 조우|보상 수령|계속 진행|체크포인트|경로 선택|랜덤 인카운트|다음 지역|자동 이동 중|\b(?:encounter|reward|checkpoint)\b/i.test(visible),name+' forbidden visible copy');}
  let g=fresh();g.travel(0);g.fight();g.s.enemy.hp=1;const before=g.s.gold;g.act('attack');const result=g.export(),image=g.s.resultVisual.id,after=g.s.rewardState.after.gold;await restore(result);await verify('frozen victory');assert.equal((await state()).s.gold,before);assert.equal((await state()).s.rewardState.claimed,false);assert((await page.locator('.scene-hero img').getAttribute('src')).includes(ASSETS.enemies[image]));await page.waitForTimeout(700);assert.equal((await state()).export(),result);await page.reload();await verify('frozen victory reload');assert.equal((await state()).export(),result);
  const collect=page.locator(g.s.scene==='loot'?'[data-cmd="collectLoot"][data-arg="bag"]':'[data-cmd="nextEncounter"]');await page.waitForTimeout(270);if(touch){await collect.scrollIntoViewIfNeeded();const r=await collect.boundingBox();await page.touchscreen.tap(r.x+r.width/2,r.y+r.height/2);await page.touchscreen.tap(r.x+r.width/2,r.y+r.height/2);}else await collect.click({clickCount:2});let collected=await state();assert.equal(collected.s.gold,after);assert.equal(collected.s.rewardState.claimed,true);assert.equal(collected.s.step,1,'double click must create only one scene');assert.equal(collected.s.scene,'chapter');await verify('enemy art swapped for story');assert.equal(await page.locator('.scene-hero img').getAttribute('src'),ASSETS.story.alice);const once=collected.export();await page.reload();assert.equal((await state()).export(),once);
@@ -16,7 +37,12 @@ async function verifyJourney({page,activate,restore,fit,size,touch}){
  // A revealed elite uses its own enemy artwork at every required width.
  g=fresh();g.travel(0);g.fight(false,true,'굶주린 늑대');await restore(g.export());await verify('elite battle');assert.equal(await page.locator('.scene-hero img').getAttribute('src'),ASSETS.enemies['굶주린 늑대']);
  // Return to a retained rest point, then resume with one explicit action.
- g=fresh();g.travel(0);g.s.step=4;g.s.scene='reward';await restore(g.export());await verify('rest point');await activate(page.locator('[data-cmd="pauseChapter"]'));assert.equal((await state()).s.scene,'camp');const checkpoint=await state(),expected=Game.load(checkpoint.export());expected.resumeJourney();await activate(page.locator('[data-cmd="resumeJourney"]'));assert.equal((await state()).export(),expected.export());await verify('retained journey resumed');
+ g=fresh();g.travel(0);g.s.step=4;g.s.scene='reward';await restore(g.export());await verify('rest point');await verifyCampMenus();await activate(page.locator('[data-cmd="pauseChapter"]'));assert.equal((await state()).s.scene,'camp');await verifyCampMenus();
+ const tired=await state();tired.s.hp=Math.max(1,tired.maxHp()-10);tired.s.mp=0;await restore(tired.export());
+ const rested=Game.load(tired.export());rested.rest();await activate(page.locator('[data-cmd="rest"]'));
+ assert.equal((await state()).export(),rested.export(),'rest click must preserve checkpoint and restore stats');
+ await page.reload();assert.equal((await state()).export(),rested.export(),'rested checkpoint must survive refresh');
+ const checkpoint=await state(),expected=Game.load(checkpoint.export());expected.resumeJourney();await activate(page.locator('[data-cmd="resumeJourney"]'));assert.equal((await state()).export(),expected.export());await verifyCampMenus();await verify('retained journey resumed');
  // A camp conversation result with a retained route survives actual import and refresh.
  for(const kind of ['npc','dialogue','bond']){
   g=fresh();g.s.cleared=[0,1];g.travel(2);g.s.step=4;g.s.scene='reward';g.pauseChapter();

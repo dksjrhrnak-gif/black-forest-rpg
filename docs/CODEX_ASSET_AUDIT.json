@@ -1,0 +1,3017 @@
+{
+  "baseline": "13c61375f0545cadc5c53a319a29ed04b8eca194",
+  "linkedUniqueFiles": 147,
+  "linkedMappings": 149,
+  "imageInventory": [
+    {
+      "file": "assets/boss_00.webp",
+      "sha256": "c24e3f977694f3047c3e7e16607262e9d39758839ea8b11d80875cb34153d6d2"
+    },
+    {
+      "file": "assets/boss_01.webp",
+      "sha256": "3fe6a571f451294ffc0cc16e15d668daccb947380816887096f4e4f8f4468b4d"
+    },
+    {
+      "file": "assets/boss_02.webp",
+      "sha256": "5ededee514d7b09b078c7ac25201ee0c551a20a57c92bc77ed2eac93fbd1099c"
+    },
+    {
+      "file": "assets/boss_03.webp",
+      "sha256": "5e83b59b61a8d194ad7039af6392d26746c8a2bbb672577ad9d4920e33964544"
+    },
+    {
+      "file": "assets/boss_04.webp",
+      "sha256": "0c7e3328ae71c0db1d5f68edf205316a743d8696a721793a434719ec3b7c94f2"
+    },
+    {
+      "file": "assets/boss_05.webp",
+      "sha256": "41cc6c90cf2326ad9c54979840b954f406812b77701ef95e119287e7f398095d"
+    },
+    {
+      "file": "assets/boss_06.webp",
+      "sha256": "33debf94947b720bc2f3eca294a9584a17636ec889ed74965b136b6b21dff477"
+    },
+    {
+      "file": "assets/boss_07.webp",
+      "sha256": "9216641e463607412625e6d48b0e996f46173c8f99a545a7480db17ac48044d1"
+    },
+    {
+      "file": "assets/boss_rift.webp",
+      "sha256": "fd973933fd3d739ca9a8435541e6161a9891dd2efa327a6e7d35e1126c41d0ca"
+    },
+    {
+      "file": "assets/camp-card.webp",
+      "sha256": "7573a994385a65dc26155b5f65a4abeed4fbe4f70362e526728d3942eeeebcf8"
+    },
+    {
+      "file": "assets/class_abyss_anchor.webp",
+      "sha256": "72f5780aaf6a5f97edbf3965dc29323e0f20f2f2a32346f21e9f2538fad78011"
+    },
+    {
+      "file": "assets/class_adam_sword.webp",
+      "sha256": "4def47b49fe0c119e6a5f3d80ae572d6ae70629e306a0a4c1b1912992d562d87"
+    },
+    {
+      "file": "assets/class_adventurer.webp",
+      "sha256": "fa879fa7bba2db2d0624c7e0d3069057e2a4b2c92e481ec391f02d59e5fd9ac6"
+    },
+    {
+      "file": "assets/class_ahab_harpoon.webp",
+      "sha256": "8517480e2a40e0613ea2b21281eb38e69a15dbfd03484dee454cbd8782a5137e"
+    },
+    {
+      "file": "assets/class_blood.webp",
+      "sha256": "7653277d2d6296e1422b89dcb3165bbb4c718c7f666934e362b1ed836a51a4c8"
+    },
+    {
+      "file": "assets/class_card_spear.webp",
+      "sha256": "929c607cbb4422610f2222a94b10ebe611004fc560a2d3311fd49a2d5c5703c6"
+    },
+    {
+      "file": "assets/class_chrono.webp",
+      "sha256": "4566d0284afa3086f0d8709f817e828dfe740424bac202824917290b8f851b3d"
+    },
+    {
+      "file": "assets/class_clock_reaver.webp",
+      "sha256": "e0d4343a2f3f28c453b907263365c706ab03afca0689bd099cc6163ce9ffa57c"
+    },
+    {
+      "file": "assets/class_coffin.webp",
+      "sha256": "140a25361c6638040204b87e3e4785a58da41f15a24cb581f00e8236e49a0aac"
+    },
+    {
+      "file": "assets/class_court_witness.webp",
+      "sha256": "87bd45094bb998eb362e3fad66447c5503fbb7814ee704c348560413c2127851"
+    },
+    {
+      "file": "assets/class_dream_guard.webp",
+      "sha256": "68216ad1aa64bfa4e8318829412daec86f72657757da41b1dd32e72def1a8652"
+    },
+    {
+      "file": "assets/class_fallen_dreamer.webp",
+      "sha256": "8edda1fb88236ae092560efc6d5d359401f712729fa5069f838aac186d656431"
+    },
+    {
+      "file": "assets/class_gambler.webp",
+      "sha256": "1c0a65b01bfb366f75ac46a90e6409cc19a11c177c51d7c1a23dfb49ecdba8ab"
+    },
+    {
+      "file": "assets/class_grave_hunter.webp",
+      "sha256": "c7d8b7e35cea7d8b0ebb913f2e61ba3555e9ebaaeab424dec4acd7e7e5723e33"
+    },
+    {
+      "file": "assets/class_guardian.webp",
+      "sha256": "e9a641d78f7f6b54d093f3d8524d7725ba9d937bcb49ae57d26c12f470ec225b"
+    },
+    {
+      "file": "assets/class_hunter.webp",
+      "sha256": "d4fbcb6d798cb362528dc5c704c1cd1ebda56826673afb20215e62e796a1eec8"
+    },
+    {
+      "file": "assets/class_last_margin.webp",
+      "sha256": "d242b10fa40e084acc9ddff83b22a500ca869939c9661f51f1f9e0498fb6a90f"
+    },
+    {
+      "file": "assets/class_mage.webp",
+      "sha256": "acc33209fb77c2ac9eb55d8b6ec9bdbc4990b6d6ded6b086bbc0ce846c31b036"
+    },
+    {
+      "file": "assets/class_mirror_fist.webp",
+      "sha256": "186ee387bd854826827d0522747a8a12519f01e39cc82dcd01cd59b005779e80"
+    },
+    {
+      "file": "assets/class_pagebreaker.webp",
+      "sha256": "4d574a71ec8e31a88132de66759c5dececad988de80667eafc9e5914c667ea32"
+    },
+    {
+      "file": "assets/class_paladin.webp",
+      "sha256": "3f4694ea9d4ffe7e66a32990b6b09d3936f98641c08db3c88963a5b30973f7b9"
+    },
+    {
+      "file": "assets/class_pequod.webp",
+      "sha256": "1acfc3db75c97b02a85df4132a9c8bc1d5782e635e09ccb28dc194c3a181876e"
+    },
+    {
+      "file": "assets/class_queen_exec.webp",
+      "sha256": "7689cc612d0fa1d6ba351cef2c859f56879fc15ad94c8fc6e420f072ce6bf11d"
+    },
+    {
+      "file": "assets/class_rabbit_guard.webp",
+      "sha256": "674a5d61f85a8d5e44699b130fb25a8bb38bd2e94ce92bdce173520b55c4d64d"
+    },
+    {
+      "file": "assets/class_rogue.webp",
+      "sha256": "3e009ff8e8816067b0798ef97b97262e2b58c2cd80bc313b35263df26a9c4ac6"
+    },
+    {
+      "file": "assets/class_rune.webp",
+      "sha256": "ec61c2421258c126393f5b8f0b76aa5678a1546a8d2ef6fc5e876bc005341b79"
+    },
+    {
+      "file": "assets/class_sancho.webp",
+      "sha256": "9344f52a975cfd9d285bd1e6fc8db5ce5476940ce64ec8f8893250b682a90c3e"
+    },
+    {
+      "file": "assets/class_self_named.webp",
+      "sha256": "bd04a4ea9c97894f02ff38a5a806dca2b63438b632b479e4f0143b06b5755cc7"
+    },
+    {
+      "file": "assets/class_shadow.webp",
+      "sha256": "fbf6b280bd397ed514b7001a2d795ab47ddd03d0dd9db4f6b1654a445479bded"
+    },
+    {
+      "file": "assets/class_stitch.webp",
+      "sha256": "7e7516337492ef1cba8c5f1546674fafbcb8927a7aa626c7bc6caa45d756f244"
+    },
+    {
+      "file": "assets/class_thorn_crown.webp",
+      "sha256": "a1adad1932ee91e64438585fc119fb16a187db6b6b93f495ed131ff39306fbbd"
+    },
+    {
+      "file": "assets/class_twin_duel.webp",
+      "sha256": "81896fdc796d56629aa7d22cfb4a12251014cbff08d1c4c96be7b16dac0546ab"
+    },
+    {
+      "file": "assets/class_warrior.webp",
+      "sha256": "95e7c56450d3f669dbf36cfa1511ff8f6ffdaf08b9c16070fa749302c62713cf"
+    },
+    {
+      "file": "assets/class_white_knight.webp",
+      "sha256": "4e73ce9049322332c496ff2bba9db761036bc3c7fce4abdc60d81eb348920227"
+    },
+    {
+      "file": "assets/class_windmill.webp",
+      "sha256": "57e393d275b834614ba574f33db26ea4a50aa8c88fea35277ea815e5c8a58550"
+    },
+    {
+      "file": "assets/class_x_magic_0.webp",
+      "sha256": "1c87b571e3cbdc0d3e0bcafee3ba07f4196d6edc9bcce452e10f01bd2905ccb2"
+    },
+    {
+      "file": "assets/class_x_magic_1.webp",
+      "sha256": "e35426c61c2aa33aaba0dfb3de60bda0c3cb79858ea737cc69d58b2a0dc4ba1f"
+    },
+    {
+      "file": "assets/class_x_magic_10.webp",
+      "sha256": "fe0f00e8a681c1749a494fc05b9d979add8dfaa2e2f38f449e592edd32b2b4d0"
+    },
+    {
+      "file": "assets/class_x_magic_11.webp",
+      "sha256": "a584b0c8abae6e74a4ae0d5309854d7de0858e63fe7f75bddebaeebcd599b5e9"
+    },
+    {
+      "file": "assets/class_x_magic_12.webp",
+      "sha256": "d1709defb360a57785f54415cadf7ef886e6033948fe63b2c1ca9172329fcb4e"
+    },
+    {
+      "file": "assets/class_x_magic_13.webp",
+      "sha256": "7accad7bfe853137f6a783212bb33d0361484af6f7b77df174298e42b07de9ba"
+    },
+    {
+      "file": "assets/class_x_magic_14.webp",
+      "sha256": "96bc95497dc35487a992921545fd77575206e7380f5b107fadcabd05a0d0ce69"
+    },
+    {
+      "file": "assets/class_x_magic_15.webp",
+      "sha256": "248771b82307152a8103ff246942e60c01aca382679f2f850d0087ff7be092ef"
+    },
+    {
+      "file": "assets/class_x_magic_16.webp",
+      "sha256": "830df9271e008374f77fec35803970a3b7578ac2352bb586cdec2edf984860f3"
+    },
+    {
+      "file": "assets/class_x_magic_17.webp",
+      "sha256": "cee7d337f733308b43000766a68e1c92c86b07c2c7538e3e12ee24cbb69a926c"
+    },
+    {
+      "file": "assets/class_x_magic_2.webp",
+      "sha256": "fe6b643eed610a900197f3fb67f8685081749b1bdf0747e6a36936bbfb6f6131"
+    },
+    {
+      "file": "assets/class_x_magic_3.webp",
+      "sha256": "a6fd36d67323981d4b35140ca08a57c1377b13176a2a1ce46bc35fab4ecee31d"
+    },
+    {
+      "file": "assets/class_x_magic_4.webp",
+      "sha256": "29900661a687b62ea05390693282ebef866c1b3ed93897dcabe121ae0c7b07b8"
+    },
+    {
+      "file": "assets/class_x_magic_5.webp",
+      "sha256": "2386feb82a2b06b1eb32f3e192ff2d62b811f9f2c6916a67e363ac71e9e46c09"
+    },
+    {
+      "file": "assets/class_x_magic_6.webp",
+      "sha256": "8855ec6bb4d7313d4fe4d09fd05597cba68ac9b324555ea9e0388585228bc2a3"
+    },
+    {
+      "file": "assets/class_x_magic_7.webp",
+      "sha256": "c8f7313bc4160af75ae689e71d793f33efe7d4fb85a8418d1cd15b2ca86f3bef"
+    },
+    {
+      "file": "assets/class_x_magic_8.webp",
+      "sha256": "372ecf325120923d1be964cbd0111df08b19ba830fa7d21990ad505dde422b35"
+    },
+    {
+      "file": "assets/class_x_magic_9.webp",
+      "sha256": "d0c461085c36a3f7eb8509bd2d9f60ed0e56f76ed4eee8e232f423a2f3d9f887"
+    },
+    {
+      "file": "assets/class_x_occult_13.webp",
+      "sha256": "7d22b9e3a0272bf98cf8797115ff87e1b5684308551584a9c124fa28d5237d4a"
+    },
+    {
+      "file": "assets/class_x_occult_15.webp",
+      "sha256": "cb05e5a0ec13e2a394b5d3d4ee23921c0ba8e84cc558053a39e4c0dde23b2861"
+    },
+    {
+      "file": "assets/class_x_occult_16.webp",
+      "sha256": "35059a8661b63cd5618498293fefd126265f5c24eeae38d3d49227d39d6ef461"
+    },
+    {
+      "file": "assets/class_x_ranged_0.webp",
+      "sha256": "ad66d9d2c149e1f78408b5e10922b49f62c004e6b9eea7931a9b026d66c032d5"
+    },
+    {
+      "file": "assets/class_x_ranged_1.webp",
+      "sha256": "6baaeac1c3330eb71166e0d71f5d729569081a7adb666bc5de3464008c0c6324"
+    },
+    {
+      "file": "assets/class_x_ranged_10.webp",
+      "sha256": "c54fb7a0187f87a4e0c90411ea06fa253b64ba1e604d9152221ce04acbd44170"
+    },
+    {
+      "file": "assets/class_x_ranged_13.webp",
+      "sha256": "eee2ff310667c4e65caf0b3e15dbed8ee86d7e793aed0b40aa36afbe7c75d613"
+    },
+    {
+      "file": "assets/class_x_ranged_16.webp",
+      "sha256": "09128d83a895f452ba0143c647fefb55a323d7c248b0a0c290c20441a6601370"
+    },
+    {
+      "file": "assets/class_x_ranged_17.webp",
+      "sha256": "9f63fe8d530a7855fe2a97959288c68e23e4e27aa429d75e497608d0f768423c"
+    },
+    {
+      "file": "assets/class_x_ranged_2.webp",
+      "sha256": "6d8aa4590648482b1c0dd8a5210aba51210b57d0a7b60c473d304103dcf8690a"
+    },
+    {
+      "file": "assets/class_x_ranged_3.webp",
+      "sha256": "c235fbacb0e74ea13f61d6fbdab0a7e542aa2719c7674c2e087751bdddbd4b9c"
+    },
+    {
+      "file": "assets/class_x_ranged_4.webp",
+      "sha256": "67323fba0f455ad8782afec6164aeb7ec99839639f23e1d50f3d530f4b3d3cf1"
+    },
+    {
+      "file": "assets/class_x_ranged_5.webp",
+      "sha256": "b310a596d26a9165816ce60bca8aef5baaa2995db40183e12d294ce6b7edc637"
+    },
+    {
+      "file": "assets/class_x_ranged_6.webp",
+      "sha256": "d0078217226a8ae896a8d72c5ddcda66132641094709cefa35b3d94971b0b402"
+    },
+    {
+      "file": "assets/class_x_ranged_7.webp",
+      "sha256": "ebb3812c4ba1b8a83cf87558ecceb526ba8bb25c3c9978b8487371e8799e03c5"
+    },
+    {
+      "file": "assets/class_x_ranged_8.webp",
+      "sha256": "abddc7053d2f4ab169dc0f99ccb1850001d8e8f03878ae1b8878139b4b00fedc"
+    },
+    {
+      "file": "assets/class_x_ranged_9.webp",
+      "sha256": "e7d5d3b954407eb7d3b33c858da9199ca31578fa30022e3a90a1d216cb480da1"
+    },
+    {
+      "file": "assets/class_x_support_17.webp",
+      "sha256": "2c4afee76d71559aa995f3480dc1e01ad81db7f6bdf7240bb3c908d741a39655"
+    },
+    {
+      "file": "assets/enemy_01.webp",
+      "sha256": "ec1c5fc00ba12d965511bec5b762abd3606ffcd3f61be5c7fc60e0097b001c5d"
+    },
+    {
+      "file": "assets/enemy_02.webp",
+      "sha256": "44c05501dd5c5ca924e61dacf0537a500074a0830ced42bcd651c0532edcb76d"
+    },
+    {
+      "file": "assets/enemy_03.webp",
+      "sha256": "5de736ae20e70ec5a33baca6567ce95a234f317c2b9d4d9caba3caa4b54578f5"
+    },
+    {
+      "file": "assets/enemy_04.webp",
+      "sha256": "6fa701d4aab608d6979fac21604a8c070b1a6a1e912527416c70b25e6e1176c8"
+    },
+    {
+      "file": "assets/enemy_05.webp",
+      "sha256": "b244d6adf2fed959a9121f1da4b15ca04af8254e5fa010de659ea2309cc9449a"
+    },
+    {
+      "file": "assets/enemy_06.webp",
+      "sha256": "7b25af33cf2c806373a10bbb68461598f8103cd0b890291d999cf8cac1c7cd19"
+    },
+    {
+      "file": "assets/enemy_07.webp",
+      "sha256": "b3932b17c488c984f5939b0f64409a747f89d4e71040b947b4896cf51c8423df"
+    },
+    {
+      "file": "assets/enemy_08.webp",
+      "sha256": "45e7c160065beb8aac82b5f0680640fc0f07db07e284d4a129ab275e2766b1ff"
+    },
+    {
+      "file": "assets/enemy_09.webp",
+      "sha256": "516950ef97f8efd102d3523eccca440fec128931bf000c37fa7db3b2c8ea6ff9"
+    },
+    {
+      "file": "assets/enemy_10.webp",
+      "sha256": "b52f9aed7aa3bb920ebdacbadf8b6ee1b9a3cd665dea109ae611cb09630f73da"
+    },
+    {
+      "file": "assets/enemy_11.webp",
+      "sha256": "f1849106342e8fa6ff50e5a3172b270ce43e5e090fbec0d653da5c3293b1a0bc"
+    },
+    {
+      "file": "assets/enemy_12.webp",
+      "sha256": "7e69ce1c1692597aa77480a70f196f8bba6cb439cbca1dc972b0d815328ad381"
+    },
+    {
+      "file": "assets/enemy_13.webp",
+      "sha256": "eb14299407f86a969717646d137cb310df66e3f483e9c4f5b251b6e0fb82bf5d"
+    },
+    {
+      "file": "assets/enemy_14.webp",
+      "sha256": "41f515f68be00f51330b6d4fe00c41182defd3312d7c0b79398800656991317f"
+    },
+    {
+      "file": "assets/enemy_15.webp",
+      "sha256": "637be83584ec64be0e53730e808222671ae546466690babb26e778305c1f4eb0"
+    },
+    {
+      "file": "assets/enemy_16.webp",
+      "sha256": "a1d1e44389964f97fabaa36f7b7467c62586e3eacb3fb05ed7ebcf78b4c7a6ca"
+    },
+    {
+      "file": "assets/enemy_17.webp",
+      "sha256": "041b45198e7990dac15317902b2a7ef79042af2c3dafaa8684e31c545403f3b6"
+    },
+    {
+      "file": "assets/enemy_18.webp",
+      "sha256": "ba924efe663b9de0f3d723139d7d624e55169fbf628b8342a42b89fb9f748666"
+    },
+    {
+      "file": "assets/enemy_19.webp",
+      "sha256": "24f3109e64ecdcf30ab4cb165fe1542ad83d7f541f8e9f70f38028a377e9d2df"
+    },
+    {
+      "file": "assets/enemy_20.webp",
+      "sha256": "83756d303ae17e65061f2f2bebd16c1ee240d8e1a46d965f000844c4487239bc"
+    },
+    {
+      "file": "assets/enemy_21.webp",
+      "sha256": "e7bd1861eb0c010471de13f47c9b328f0871feeb85063e4e36b127fe19af2ffb"
+    },
+    {
+      "file": "assets/enemy_22.webp",
+      "sha256": "73a8c6d778314031de64ff2b819b0f144e74c4948650f33874ad78e2e6bb76f4"
+    },
+    {
+      "file": "assets/enemy_23.webp",
+      "sha256": "11333859d7977001e859125a7fd2152609ed9c1093f68d9ef3ea286fdc7a4ef5"
+    },
+    {
+      "file": "assets/enemy_24.webp",
+      "sha256": "ea5741e0e31bbc651f19899354cfd6b55057235d6dc370e7d94a13d94dcc9987"
+    },
+    {
+      "file": "assets/enemy_25.webp",
+      "sha256": "af035dbe2221098202dbf71871e8da0052b79f119055880530f761fd14aff7d8"
+    },
+    {
+      "file": "assets/enemy_26.webp",
+      "sha256": "e87555a3ac74d3131a474959236e004a1fc65535f0f5aaec75ae2814a460ce67"
+    },
+    {
+      "file": "assets/enemy_27.webp",
+      "sha256": "23bb05ca483fbc0070892e5ac8ed4bff62ace9362618887df672f5f8407369e5"
+    },
+    {
+      "file": "assets/enemy_28.webp",
+      "sha256": "5d5fa3101479fc1c5847e7ac6cb87c78e9c4d67bbf1792921831fbecc9e62c04"
+    },
+    {
+      "file": "assets/enemy_29.webp",
+      "sha256": "fd689e18ec83f194e9989c841de1df7393409de4ede835d7ba1f180d4520f67d"
+    },
+    {
+      "file": "assets/enemy_30.webp",
+      "sha256": "cd2f8ad8e8ce805d413b910d0e5a65366fc0bc5561769617ec49591280c93620"
+    },
+    {
+      "file": "assets/enemy_31.webp",
+      "sha256": "3948826bdb93fb52ee82642664498d398c1f11603b87c538079f821a77a151c0"
+    },
+    {
+      "file": "assets/enemy_32.webp",
+      "sha256": "4f9ddc9726708a6b16298c76ef566f7f880afb5b526e9ab26824c55208e29750"
+    },
+    {
+      "file": "assets/enemy_mimic.webp",
+      "sha256": "d48aa4912344e50e8a2800e11307f8903f509bec504fc69dbab31fab46250fea"
+    },
+    {
+      "file": "assets/event_00.webp",
+      "sha256": "586077547753b420c7a57f0e5a9122a7a4903a87da4a1b9fe2f6b3bafcb4c778"
+    },
+    {
+      "file": "assets/event_01.webp",
+      "sha256": "0fb96825cf4c505103b87cd89e2b340ce49b5c1be122dd13adfcf45249bcdfd8"
+    },
+    {
+      "file": "assets/event_02.webp",
+      "sha256": "c833f84b96b38c822d4c2117c3761aa70e361e027307f5c4651b522a4f56df5c"
+    },
+    {
+      "file": "assets/event_03.webp",
+      "sha256": "fdb4507de6fdea8870f169d62ac55994251448268be2dc291216ae466a3bd758"
+    },
+    {
+      "file": "assets/event_04.webp",
+      "sha256": "9b86064ae399519c4dd89b1b802a6c7a45efc3305df02bb0fbaef768f9dfca25"
+    },
+    {
+      "file": "assets/event_05.webp",
+      "sha256": "ab5eae15881e2759b50cdcdf172623124b4a90fe76ac13f8eb2d1299e7fc8f02"
+    },
+    {
+      "file": "assets/event_06.webp",
+      "sha256": "92ad0243a8e7293f236f57b9394a54a11de6491037fd446e7aa6022beca73521"
+    },
+    {
+      "file": "assets/event_07.webp",
+      "sha256": "960f4fa8c9e04500bfbcf9c015e4e9ec169b576e5a88bb682c3d1dc205d6d38c"
+    },
+    {
+      "file": "assets/event_08.webp",
+      "sha256": "77f1a00893b8a13e85bb96da8102c9054d1f2d707177514ebd3f7a265f5c7230"
+    },
+    {
+      "file": "assets/event_09.webp",
+      "sha256": "2b079f6e9a5d3c33ec4229fb950466509f8302233c3e020f4dc735387913f815"
+    },
+    {
+      "file": "assets/event_10.webp",
+      "sha256": "d82befeeef45d10afcb5897033b8fd674c69931d47bd0e5059af35cee2478b2c"
+    },
+    {
+      "file": "assets/event_11.webp",
+      "sha256": "5a3bfb31daf5e3a9a031ac30df8bedbfe35a2ae764e9251f68d1c1c50fc3fccc"
+    },
+    {
+      "file": "assets/event_12.webp",
+      "sha256": "ddaa8719ffda4303124a1b19d96468edbfa40b959d392a1d76a0036f94ed4b01"
+    },
+    {
+      "file": "assets/event_13.webp",
+      "sha256": "bf23d84e1959ac3ec8bf2aa0b8d8dd44426102e4f81759a0ab1fdb1d8bd5c9a4"
+    },
+    {
+      "file": "assets/event_14.webp",
+      "sha256": "4d6ca202054785bb2ba314f21851d3aaf8ee889a9fbf2da8f7163f06586bd578"
+    },
+    {
+      "file": "assets/event_15.webp",
+      "sha256": "3ed49806c2fb3ef2cc24538308e0ff3d6e06588d622be68304627044f3913153"
+    },
+    {
+      "file": "assets/event_16.webp",
+      "sha256": "aad4c5941770423efca886bd828f546550ab27aa0a1b5c175f20b5520f83b496"
+    },
+    {
+      "file": "assets/event_17.webp",
+      "sha256": "93eaafed57dfdab3f607c364e93af21446ad08157125f129fa834630079b7f7e"
+    },
+    {
+      "file": "assets/forest-banner.webp",
+      "sha256": "b1d18bbd1a1aed88baaa1e34cafe89a4ed03baf3d4c6d40ab639109e60f3c339"
+    },
+    {
+      "file": "assets/gear_armor.svg",
+      "sha256": "a0600a9acad4ea591fe55d24fcbf6ece16d2c37b9114f835c74608035200a811"
+    },
+    {
+      "file": "assets/gear_charm.svg",
+      "sha256": "2f0812a33e2448b797d0d93e113924554f1a62d6877391ebf1830890ab37eafc"
+    },
+    {
+      "file": "assets/gear_weapon.svg",
+      "sha256": "381031e7079da418b9c511cdc11e8c759772bc7f79ca33098a75efba32d23d6a"
+    },
+    {
+      "file": "assets/location_00.webp",
+      "sha256": "b1d18bbd1a1aed88baaa1e34cafe89a4ed03baf3d4c6d40ab639109e60f3c339"
+    },
+    {
+      "file": "assets/location_01.webp",
+      "sha256": "96fa80862691fe141d3fb20320eee4344af11bb2738c0b491d206f4a04547536"
+    },
+    {
+      "file": "assets/location_02.webp",
+      "sha256": "8bc451751ce8bbcbe9b70b9155096927139b08879597dcc4017818455d470d31"
+    },
+    {
+      "file": "assets/location_03.webp",
+      "sha256": "2469d507366a6a9ca704ba06dfd9bc972db8353df876a9b4953bf88e430672a8"
+    },
+    {
+      "file": "assets/location_04.webp",
+      "sha256": "5adede443376d8785a05ebee54125472a7b89dcbaf8c9f9b1d8a3c67bde4ad50"
+    },
+    {
+      "file": "assets/location_05.webp",
+      "sha256": "7c59013408b6ce5eaa7c1b80f7c25145ef00370c8fb643b431cc9a585d9273ee"
+    },
+    {
+      "file": "assets/location_06.webp",
+      "sha256": "133dd52c3a0a3648a58d6762aae8a67a346ad72ff1b1ea4e16cf45cda297febe"
+    },
+    {
+      "file": "assets/location_07.webp",
+      "sha256": "6e96043d70b6f3681912a55614208e9e40915f5666f5f0e21f925b9d3ab50d3b"
+    },
+    {
+      "file": "assets/story_adam.webp",
+      "sha256": "b3029438e4a3d81e5ec8f8dfc0ff9a93e67d626ed45488ade14939e993b255d8"
+    },
+    {
+      "file": "assets/story_ahab.webp",
+      "sha256": "b56413b7eae896f386091f2ed1255db9abfd46e7616abfc1c1655f8cdff3c55a"
+    },
+    {
+      "file": "assets/story_alice.webp",
+      "sha256": "6130765b8aa3d55f1d4f5410c3f00adcd68a90f50dc00203c403fbcd8b3dbab9"
+    },
+    {
+      "file": "boss_00.webp",
+      "sha256": "c24e3f977694f3047c3e7e16607262e9d39758839ea8b11d80875cb34153d6d2"
+    },
+    {
+      "file": "boss_01.webp",
+      "sha256": "3fe6a571f451294ffc0cc16e15d668daccb947380816887096f4e4f8f4468b4d"
+    },
+    {
+      "file": "boss_02.webp",
+      "sha256": "5ededee514d7b09b078c7ac25201ee0c551a20a57c92bc77ed2eac93fbd1099c"
+    },
+    {
+      "file": "boss_03.webp",
+      "sha256": "5e83b59b61a8d194ad7039af6392d26746c8a2bbb672577ad9d4920e33964544"
+    },
+    {
+      "file": "boss_04.webp",
+      "sha256": "0c7e3328ae71c0db1d5f68edf205316a743d8696a721793a434719ec3b7c94f2"
+    },
+    {
+      "file": "boss_05.webp",
+      "sha256": "41cc6c90cf2326ad9c54979840b954f406812b77701ef95e119287e7f398095d"
+    },
+    {
+      "file": "boss_06.webp",
+      "sha256": "33debf94947b720bc2f3eca294a9584a17636ec889ed74965b136b6b21dff477"
+    },
+    {
+      "file": "boss_07.webp",
+      "sha256": "9216641e463607412625e6d48b0e996f46173c8f99a545a7480db17ac48044d1"
+    },
+    {
+      "file": "boss_rift.webp",
+      "sha256": "fd973933fd3d739ca9a8435541e6161a9891dd2efa327a6e7d35e1126c41d0ca"
+    },
+    {
+      "file": "camp-card.webp",
+      "sha256": "7573a994385a65dc26155b5f65a4abeed4fbe4f70362e526728d3942eeeebcf8"
+    },
+    {
+      "file": "character-0.webp",
+      "sha256": "95e7c56450d3f669dbf36cfa1511ff8f6ffdaf08b9c16070fa749302c62713cf"
+    },
+    {
+      "file": "character-1.webp",
+      "sha256": "3e009ff8e8816067b0798ef97b97262e2b58c2cd80bc313b35263df26a9c4ac6"
+    },
+    {
+      "file": "character-2.webp",
+      "sha256": "acc33209fb77c2ac9eb55d8b6ec9bdbc4990b6d6ded6b086bbc0ce846c31b036"
+    },
+    {
+      "file": "character-3.webp",
+      "sha256": "7e7516337492ef1cba8c5f1546674fafbcb8927a7aa626c7bc6caa45d756f244"
+    },
+    {
+      "file": "character-4.webp",
+      "sha256": "929c607cbb4422610f2222a94b10ebe611004fc560a2d3311fd49a2d5c5703c6"
+    },
+    {
+      "file": "character-5.webp",
+      "sha256": "140a25361c6638040204b87e3e4785a58da41f15a24cb581f00e8236e49a0aac"
+    },
+    {
+      "file": "class_abyss_anchor.webp",
+      "sha256": "72f5780aaf6a5f97edbf3965dc29323e0f20f2f2a32346f21e9f2538fad78011"
+    },
+    {
+      "file": "class_adam_sword.webp",
+      "sha256": "4def47b49fe0c119e6a5f3d80ae572d6ae70629e306a0a4c1b1912992d562d87"
+    },
+    {
+      "file": "class_ahab_harpoon.webp",
+      "sha256": "8517480e2a40e0613ea2b21281eb38e69a15dbfd03484dee454cbd8782a5137e"
+    },
+    {
+      "file": "class_blood.webp",
+      "sha256": "7653277d2d6296e1422b89dcb3165bbb4c718c7f666934e362b1ed836a51a4c8"
+    },
+    {
+      "file": "class_card_spear.webp",
+      "sha256": "929c607cbb4422610f2222a94b10ebe611004fc560a2d3311fd49a2d5c5703c6"
+    },
+    {
+      "file": "class_chrono.webp",
+      "sha256": "4566d0284afa3086f0d8709f817e828dfe740424bac202824917290b8f851b3d"
+    },
+    {
+      "file": "class_clock_reaver.webp",
+      "sha256": "e0d4343a2f3f28c453b907263365c706ab03afca0689bd099cc6163ce9ffa57c"
+    },
+    {
+      "file": "class_coffin.webp",
+      "sha256": "140a25361c6638040204b87e3e4785a58da41f15a24cb581f00e8236e49a0aac"
+    },
+    {
+      "file": "class_fallen_dreamer.webp",
+      "sha256": "8edda1fb88236ae092560efc6d5d359401f712729fa5069f838aac186d656431"
+    },
+    {
+      "file": "class_gambler.webp",
+      "sha256": "1c0a65b01bfb366f75ac46a90e6409cc19a11c177c51d7c1a23dfb49ecdba8ab"
+    },
+    {
+      "file": "class_grave_hunter.webp",
+      "sha256": "c7d8b7e35cea7d8b0ebb913f2e61ba3555e9ebaaeab424dec4acd7e7e5723e33"
+    },
+    {
+      "file": "class_last_margin.webp",
+      "sha256": "d242b10fa40e084acc9ddff83b22a500ca869939c9661f51f1f9e0498fb6a90f"
+    },
+    {
+      "file": "class_mage.webp",
+      "sha256": "acc33209fb77c2ac9eb55d8b6ec9bdbc4990b6d6ded6b086bbc0ce846c31b036"
+    },
+    {
+      "file": "class_mirror_fist.webp",
+      "sha256": "186ee387bd854826827d0522747a8a12519f01e39cc82dcd01cd59b005779e80"
+    },
+    {
+      "file": "class_pagebreaker.webp",
+      "sha256": "4d574a71ec8e31a88132de66759c5dececad988de80667eafc9e5914c667ea32"
+    },
+    {
+      "file": "class_paladin.webp",
+      "sha256": "3f4694ea9d4ffe7e66a32990b6b09d3936f98641c08db3c88963a5b30973f7b9"
+    },
+    {
+      "file": "class_pequod.webp",
+      "sha256": "1acfc3db75c97b02a85df4132a9c8bc1d5782e635e09ccb28dc194c3a181876e"
+    },
+    {
+      "file": "class_queen_exec.webp",
+      "sha256": "7689cc612d0fa1d6ba351cef2c859f56879fc15ad94c8fc6e420f072ce6bf11d"
+    },
+    {
+      "file": "class_rabbit_guard.webp",
+      "sha256": "674a5d61f85a8d5e44699b130fb25a8bb38bd2e94ce92bdce173520b55c4d64d"
+    },
+    {
+      "file": "class_rogue.webp",
+      "sha256": "3e009ff8e8816067b0798ef97b97262e2b58c2cd80bc313b35263df26a9c4ac6"
+    },
+    {
+      "file": "class_rune.webp",
+      "sha256": "ec61c2421258c126393f5b8f0b76aa5678a1546a8d2ef6fc5e876bc005341b79"
+    },
+    {
+      "file": "class_sancho.webp",
+      "sha256": "9344f52a975cfd9d285bd1e6fc8db5ce5476940ce64ec8f8893250b682a90c3e"
+    },
+    {
+      "file": "class_shadow.webp",
+      "sha256": "fbf6b280bd397ed514b7001a2d795ab47ddd03d0dd9db4f6b1654a445479bded"
+    },
+    {
+      "file": "class_stitch.webp",
+      "sha256": "7e7516337492ef1cba8c5f1546674fafbcb8927a7aa626c7bc6caa45d756f244"
+    },
+    {
+      "file": "class_thorn_crown.webp",
+      "sha256": "a1adad1932ee91e64438585fc119fb16a187db6b6b93f495ed131ff39306fbbd"
+    },
+    {
+      "file": "class_twin_duel.webp",
+      "sha256": "81896fdc796d56629aa7d22cfb4a12251014cbff08d1c4c96be7b16dac0546ab"
+    },
+    {
+      "file": "class_warrior.webp",
+      "sha256": "95e7c56450d3f669dbf36cfa1511ff8f6ffdaf08b9c16070fa749302c62713cf"
+    },
+    {
+      "file": "class_white_knight.webp",
+      "sha256": "4e73ce9049322332c496ff2bba9db761036bc3c7fce4abdc60d81eb348920227"
+    },
+    {
+      "file": "class_windmill.webp",
+      "sha256": "57e393d275b834614ba574f33db26ea4a50aa8c88fea35277ea815e5c8a58550"
+    },
+    {
+      "file": "enemy_01.webp",
+      "sha256": "ec1c5fc00ba12d965511bec5b762abd3606ffcd3f61be5c7fc60e0097b001c5d"
+    },
+    {
+      "file": "enemy_02.webp",
+      "sha256": "44c05501dd5c5ca924e61dacf0537a500074a0830ced42bcd651c0532edcb76d"
+    },
+    {
+      "file": "enemy_03.webp",
+      "sha256": "5de736ae20e70ec5a33baca6567ce95a234f317c2b9d4d9caba3caa4b54578f5"
+    },
+    {
+      "file": "enemy_04.webp",
+      "sha256": "6fa701d4aab608d6979fac21604a8c070b1a6a1e912527416c70b25e6e1176c8"
+    },
+    {
+      "file": "enemy_05.webp",
+      "sha256": "b244d6adf2fed959a9121f1da4b15ca04af8254e5fa010de659ea2309cc9449a"
+    },
+    {
+      "file": "enemy_06.webp",
+      "sha256": "7b25af33cf2c806373a10bbb68461598f8103cd0b890291d999cf8cac1c7cd19"
+    },
+    {
+      "file": "enemy_07.webp",
+      "sha256": "b3932b17c488c984f5939b0f64409a747f89d4e71040b947b4896cf51c8423df"
+    },
+    {
+      "file": "enemy_08.webp",
+      "sha256": "45e7c160065beb8aac82b5f0680640fc0f07db07e284d4a129ab275e2766b1ff"
+    },
+    {
+      "file": "enemy_09.webp",
+      "sha256": "516950ef97f8efd102d3523eccca440fec128931bf000c37fa7db3b2c8ea6ff9"
+    },
+    {
+      "file": "enemy_10.webp",
+      "sha256": "b52f9aed7aa3bb920ebdacbadf8b6ee1b9a3cd665dea109ae611cb09630f73da"
+    },
+    {
+      "file": "enemy_11.webp",
+      "sha256": "f1849106342e8fa6ff50e5a3172b270ce43e5e090fbec0d653da5c3293b1a0bc"
+    },
+    {
+      "file": "enemy_12.webp",
+      "sha256": "7e69ce1c1692597aa77480a70f196f8bba6cb439cbca1dc972b0d815328ad381"
+    },
+    {
+      "file": "enemy_13.webp",
+      "sha256": "eb14299407f86a969717646d137cb310df66e3f483e9c4f5b251b6e0fb82bf5d"
+    },
+    {
+      "file": "enemy_14.webp",
+      "sha256": "41f515f68be00f51330b6d4fe00c41182defd3312d7c0b79398800656991317f"
+    },
+    {
+      "file": "enemy_15.webp",
+      "sha256": "637be83584ec64be0e53730e808222671ae546466690babb26e778305c1f4eb0"
+    },
+    {
+      "file": "enemy_16.webp",
+      "sha256": "a1d1e44389964f97fabaa36f7b7467c62586e3eacb3fb05ed7ebcf78b4c7a6ca"
+    },
+    {
+      "file": "enemy_17.webp",
+      "sha256": "041b45198e7990dac15317902b2a7ef79042af2c3dafaa8684e31c545403f3b6"
+    },
+    {
+      "file": "enemy_18.webp",
+      "sha256": "ba924efe663b9de0f3d723139d7d624e55169fbf628b8342a42b89fb9f748666"
+    },
+    {
+      "file": "enemy_19.webp",
+      "sha256": "24f3109e64ecdcf30ab4cb165fe1542ad83d7f541f8e9f70f38028a377e9d2df"
+    },
+    {
+      "file": "enemy_20.webp",
+      "sha256": "83756d303ae17e65061f2f2bebd16c1ee240d8e1a46d965f000844c4487239bc"
+    },
+    {
+      "file": "enemy_21.webp",
+      "sha256": "e7bd1861eb0c010471de13f47c9b328f0871feeb85063e4e36b127fe19af2ffb"
+    },
+    {
+      "file": "enemy_22.webp",
+      "sha256": "73a8c6d778314031de64ff2b819b0f144e74c4948650f33874ad78e2e6bb76f4"
+    },
+    {
+      "file": "enemy_23.webp",
+      "sha256": "11333859d7977001e859125a7fd2152609ed9c1093f68d9ef3ea286fdc7a4ef5"
+    },
+    {
+      "file": "enemy_24.webp",
+      "sha256": "ea5741e0e31bbc651f19899354cfd6b55057235d6dc370e7d94a13d94dcc9987"
+    },
+    {
+      "file": "enemy_25.webp",
+      "sha256": "af035dbe2221098202dbf71871e8da0052b79f119055880530f761fd14aff7d8"
+    },
+    {
+      "file": "enemy_26.webp",
+      "sha256": "e87555a3ac74d3131a474959236e004a1fc65535f0f5aaec75ae2814a460ce67"
+    },
+    {
+      "file": "enemy_27.webp",
+      "sha256": "23bb05ca483fbc0070892e5ac8ed4bff62ace9362618887df672f5f8407369e5"
+    },
+    {
+      "file": "enemy_28.webp",
+      "sha256": "5d5fa3101479fc1c5847e7ac6cb87c78e9c4d67bbf1792921831fbecc9e62c04"
+    },
+    {
+      "file": "enemy_29.webp",
+      "sha256": "fd689e18ec83f194e9989c841de1df7393409de4ede835d7ba1f180d4520f67d"
+    },
+    {
+      "file": "enemy_30.webp",
+      "sha256": "cd2f8ad8e8ce805d413b910d0e5a65366fc0bc5561769617ec49591280c93620"
+    },
+    {
+      "file": "enemy_31.webp",
+      "sha256": "3948826bdb93fb52ee82642664498d398c1f11603b87c538079f821a77a151c0"
+    },
+    {
+      "file": "enemy_32.webp",
+      "sha256": "4f9ddc9726708a6b16298c76ef566f7f880afb5b526e9ab26824c55208e29750"
+    },
+    {
+      "file": "enemy_mimic.webp",
+      "sha256": "d48aa4912344e50e8a2800e11307f8903f509bec504fc69dbab31fab46250fea"
+    },
+    {
+      "file": "event_00.webp",
+      "sha256": "586077547753b420c7a57f0e5a9122a7a4903a87da4a1b9fe2f6b3bafcb4c778"
+    },
+    {
+      "file": "event_01.webp",
+      "sha256": "0fb96825cf4c505103b87cd89e2b340ce49b5c1be122dd13adfcf45249bcdfd8"
+    },
+    {
+      "file": "event_02.webp",
+      "sha256": "c833f84b96b38c822d4c2117c3761aa70e361e027307f5c4651b522a4f56df5c"
+    },
+    {
+      "file": "event_03.webp",
+      "sha256": "fdb4507de6fdea8870f169d62ac55994251448268be2dc291216ae466a3bd758"
+    },
+    {
+      "file": "event_04.webp",
+      "sha256": "9b86064ae399519c4dd89b1b802a6c7a45efc3305df02bb0fbaef768f9dfca25"
+    },
+    {
+      "file": "event_05.webp",
+      "sha256": "ab5eae15881e2759b50cdcdf172623124b4a90fe76ac13f8eb2d1299e7fc8f02"
+    },
+    {
+      "file": "event_06.webp",
+      "sha256": "92ad0243a8e7293f236f57b9394a54a11de6491037fd446e7aa6022beca73521"
+    },
+    {
+      "file": "event_07.webp",
+      "sha256": "960f4fa8c9e04500bfbcf9c015e4e9ec169b576e5a88bb682c3d1dc205d6d38c"
+    },
+    {
+      "file": "event_08.webp",
+      "sha256": "77f1a00893b8a13e85bb96da8102c9054d1f2d707177514ebd3f7a265f5c7230"
+    },
+    {
+      "file": "event_09.webp",
+      "sha256": "2b079f6e9a5d3c33ec4229fb950466509f8302233c3e020f4dc735387913f815"
+    },
+    {
+      "file": "event_10.webp",
+      "sha256": "d82befeeef45d10afcb5897033b8fd674c69931d47bd0e5059af35cee2478b2c"
+    },
+    {
+      "file": "event_11.webp",
+      "sha256": "5a3bfb31daf5e3a9a031ac30df8bedbfe35a2ae764e9251f68d1c1c50fc3fccc"
+    },
+    {
+      "file": "event_12.webp",
+      "sha256": "ddaa8719ffda4303124a1b19d96468edbfa40b959d392a1d76a0036f94ed4b01"
+    },
+    {
+      "file": "event_13.webp",
+      "sha256": "bf23d84e1959ac3ec8bf2aa0b8d8dd44426102e4f81759a0ab1fdb1d8bd5c9a4"
+    },
+    {
+      "file": "event_14.webp",
+      "sha256": "4d6ca202054785bb2ba314f21851d3aaf8ee889a9fbf2da8f7163f06586bd578"
+    },
+    {
+      "file": "event_15.webp",
+      "sha256": "3ed49806c2fb3ef2cc24538308e0ff3d6e06588d622be68304627044f3913153"
+    },
+    {
+      "file": "event_16.webp",
+      "sha256": "aad4c5941770423efca886bd828f546550ab27aa0a1b5c175f20b5520f83b496"
+    },
+    {
+      "file": "event_17.webp",
+      "sha256": "93eaafed57dfdab3f607c364e93af21446ad08157125f129fa834630079b7f7e"
+    },
+    {
+      "file": "forest-banner.webp",
+      "sha256": "b1d18bbd1a1aed88baaa1e34cafe89a4ed03baf3d4c6d40ab639109e60f3c339"
+    },
+    {
+      "file": "guardian-card.webp",
+      "sha256": "6fefe2a68dd33e02ec58f0577b26e09e9e318603c02497a6642e18b35ff94f17"
+    },
+    {
+      "file": "location_00.webp",
+      "sha256": "b1d18bbd1a1aed88baaa1e34cafe89a4ed03baf3d4c6d40ab639109e60f3c339"
+    },
+    {
+      "file": "location_01.webp",
+      "sha256": "96fa80862691fe141d3fb20320eee4344af11bb2738c0b491d206f4a04547536"
+    },
+    {
+      "file": "location_02.webp",
+      "sha256": "8bc451751ce8bbcbe9b70b9155096927139b08879597dcc4017818455d470d31"
+    },
+    {
+      "file": "location_03.webp",
+      "sha256": "2469d507366a6a9ca704ba06dfd9bc972db8353df876a9b4953bf88e430672a8"
+    },
+    {
+      "file": "location_04.webp",
+      "sha256": "5adede443376d8785a05ebee54125472a7b89dcbaf8c9f9b1d8a3c67bde4ad50"
+    },
+    {
+      "file": "location_05.webp",
+      "sha256": "7c59013408b6ce5eaa7c1b80f7c25145ef00370c8fb643b431cc9a585d9273ee"
+    },
+    {
+      "file": "location_06.webp",
+      "sha256": "133dd52c3a0a3648a58d6762aae8a67a346ad72ff1b1ea4e16cf45cda297febe"
+    },
+    {
+      "file": "location_07.webp",
+      "sha256": "6e96043d70b6f3681912a55614208e9e40915f5666f5f0e21f925b9d3ab50d3b"
+    },
+    {
+      "file": "monster-0.webp",
+      "sha256": "ec1c5fc00ba12d965511bec5b762abd3606ffcd3f61be5c7fc60e0097b001c5d"
+    },
+    {
+      "file": "monster-1.webp",
+      "sha256": "44c05501dd5c5ca924e61dacf0537a500074a0830ced42bcd651c0532edcb76d"
+    },
+    {
+      "file": "monster-2.webp",
+      "sha256": "5de736ae20e70ec5a33baca6567ce95a234f317c2b9d4d9caba3caa4b54578f5"
+    },
+    {
+      "file": "monster-3.webp",
+      "sha256": "6fa701d4aab608d6979fac21604a8c070b1a6a1e912527416c70b25e6e1176c8"
+    },
+    {
+      "file": "monster-4.webp",
+      "sha256": "2a6921e9e2dc25eb61ddf4e51943e0095448d3df1463a7add8a1e3449fca7b1a"
+    },
+    {
+      "file": "monster-5.webp",
+      "sha256": "f1849106342e8fa6ff50e5a3172b270ce43e5e090fbec0d653da5c3293b1a0bc"
+    },
+    {
+      "file": "qa-evidence-live-main.jpg",
+      "sha256": "f6cc8c877fac941d676f5c84bc22cdc05dec79f217fd205dd3eaac47ef654c5e"
+    },
+    {
+      "file": "story_adam.webp",
+      "sha256": "b3029438e4a3d81e5ec8f8dfc0ff9a93e67d626ed45488ade14939e993b255d8"
+    },
+    {
+      "file": "story_ahab.webp",
+      "sha256": "b56413b7eae896f386091f2ed1255db9abfd46e7616abfc1c1655f8cdff3c55a"
+    },
+    {
+      "file": "story_alice.webp",
+      "sha256": "6130765b8aa3d55f1d4f5410c3f00adcd68a90f50dc00203c403fbcd8b3dbab9"
+    }
+  ],
+  "assets": [
+    {
+      "category": "classes",
+      "id": "warrior",
+      "file": "assets/class_warrior.webp",
+      "exists": true,
+      "sha256": "95e7c56450d3f669dbf36cfa1511ff8f6ffdaf08b9c16070fa749302c62713cf"
+    },
+    {
+      "category": "classes",
+      "id": "rogue",
+      "file": "assets/class_rogue.webp",
+      "exists": true,
+      "sha256": "3e009ff8e8816067b0798ef97b97262e2b58c2cd80bc313b35263df26a9c4ac6"
+    },
+    {
+      "category": "classes",
+      "id": "mage",
+      "file": "assets/class_mage.webp",
+      "exists": true,
+      "sha256": "acc33209fb77c2ac9eb55d8b6ec9bdbc4990b6d6ded6b086bbc0ce846c31b036"
+    },
+    {
+      "category": "classes",
+      "id": "paladin",
+      "file": "assets/class_paladin.webp",
+      "exists": true,
+      "sha256": "3f4694ea9d4ffe7e66a32990b6b09d3936f98641c08db3c88963a5b30973f7b9"
+    },
+    {
+      "category": "classes",
+      "id": "blood",
+      "file": "assets/class_blood.webp",
+      "exists": true,
+      "sha256": "7653277d2d6296e1422b89dcb3165bbb4c718c7f666934e362b1ed836a51a4c8"
+    },
+    {
+      "category": "classes",
+      "id": "rune",
+      "file": "assets/class_rune.webp",
+      "exists": true,
+      "sha256": "ec61c2421258c126393f5b8f0b76aa5678a1546a8d2ef6fc5e876bc005341b79"
+    },
+    {
+      "category": "classes",
+      "id": "shadow",
+      "file": "assets/class_shadow.webp",
+      "exists": true,
+      "sha256": "fbf6b280bd397ed514b7001a2d795ab47ddd03d0dd9db4f6b1654a445479bded"
+    },
+    {
+      "category": "classes",
+      "id": "gambler",
+      "file": "assets/class_gambler.webp",
+      "exists": true,
+      "sha256": "1c0a65b01bfb366f75ac46a90e6409cc19a11c177c51d7c1a23dfb49ecdba8ab"
+    },
+    {
+      "category": "classes",
+      "id": "chrono",
+      "file": "assets/class_chrono.webp",
+      "exists": true,
+      "sha256": "4566d0284afa3086f0d8709f817e828dfe740424bac202824917290b8f851b3d"
+    },
+    {
+      "category": "classes",
+      "id": "rabbit_guard",
+      "file": "assets/class_rabbit_guard.webp",
+      "exists": true,
+      "sha256": "674a5d61f85a8d5e44699b130fb25a8bb38bd2e94ce92bdce173520b55c4d64d"
+    },
+    {
+      "category": "classes",
+      "id": "pequod",
+      "file": "assets/class_pequod.webp",
+      "exists": true,
+      "sha256": "1acfc3db75c97b02a85df4132a9c8bc1d5782e635e09ccb28dc194c3a181876e"
+    },
+    {
+      "category": "classes",
+      "id": "windmill",
+      "file": "assets/class_windmill.webp",
+      "exists": true,
+      "sha256": "57e393d275b834614ba574f33db26ea4a50aa8c88fea35277ea815e5c8a58550"
+    },
+    {
+      "category": "classes",
+      "id": "stitch",
+      "file": "assets/class_stitch.webp",
+      "exists": true,
+      "sha256": "7e7516337492ef1cba8c5f1546674fafbcb8927a7aa626c7bc6caa45d756f244"
+    },
+    {
+      "category": "classes",
+      "id": "card_spear",
+      "file": "assets/class_card_spear.webp",
+      "exists": true,
+      "sha256": "929c607cbb4422610f2222a94b10ebe611004fc560a2d3311fd49a2d5c5703c6"
+    },
+    {
+      "category": "classes",
+      "id": "sancho",
+      "file": "assets/class_sancho.webp",
+      "exists": true,
+      "sha256": "9344f52a975cfd9d285bd1e6fc8db5ce5476940ce64ec8f8893250b682a90c3e"
+    },
+    {
+      "category": "classes",
+      "id": "coffin",
+      "file": "assets/class_coffin.webp",
+      "exists": true,
+      "sha256": "140a25361c6638040204b87e3e4785a58da41f15a24cb581f00e8236e49a0aac"
+    },
+    {
+      "category": "classes",
+      "id": "mirror_fist",
+      "file": "assets/class_mirror_fist.webp",
+      "exists": true,
+      "sha256": "186ee387bd854826827d0522747a8a12519f01e39cc82dcd01cd59b005779e80"
+    },
+    {
+      "category": "classes",
+      "id": "ahab_harpoon",
+      "file": "assets/class_ahab_harpoon.webp",
+      "exists": true,
+      "sha256": "8517480e2a40e0613ea2b21281eb38e69a15dbfd03484dee454cbd8782a5137e"
+    },
+    {
+      "category": "classes",
+      "id": "fallen_dreamer",
+      "file": "assets/class_fallen_dreamer.webp",
+      "exists": true,
+      "sha256": "8edda1fb88236ae092560efc6d5d359401f712729fa5069f838aac186d656431"
+    },
+    {
+      "category": "classes",
+      "id": "queen_exec",
+      "file": "assets/class_queen_exec.webp",
+      "exists": true,
+      "sha256": "7689cc612d0fa1d6ba351cef2c859f56879fc15ad94c8fc6e420f072ce6bf11d"
+    },
+    {
+      "category": "classes",
+      "id": "adam_sword",
+      "file": "assets/class_adam_sword.webp",
+      "exists": true,
+      "sha256": "4def47b49fe0c119e6a5f3d80ae572d6ae70629e306a0a4c1b1912992d562d87"
+    },
+    {
+      "category": "classes",
+      "id": "twin_duel",
+      "file": "assets/class_twin_duel.webp",
+      "exists": true,
+      "sha256": "81896fdc796d56629aa7d22cfb4a12251014cbff08d1c4c96be7b16dac0546ab"
+    },
+    {
+      "category": "classes",
+      "id": "white_knight",
+      "file": "assets/class_white_knight.webp",
+      "exists": true,
+      "sha256": "4e73ce9049322332c496ff2bba9db761036bc3c7fce4abdc60d81eb348920227"
+    },
+    {
+      "category": "classes",
+      "id": "grave_hunter",
+      "file": "assets/class_grave_hunter.webp",
+      "exists": true,
+      "sha256": "c7d8b7e35cea7d8b0ebb913f2e61ba3555e9ebaaeab424dec4acd7e7e5723e33"
+    },
+    {
+      "category": "classes",
+      "id": "pagebreaker",
+      "file": "assets/class_pagebreaker.webp",
+      "exists": true,
+      "sha256": "4d574a71ec8e31a88132de66759c5dececad988de80667eafc9e5914c667ea32"
+    },
+    {
+      "category": "classes",
+      "id": "abyss_anchor",
+      "file": "assets/class_abyss_anchor.webp",
+      "exists": true,
+      "sha256": "72f5780aaf6a5f97edbf3965dc29323e0f20f2f2a32346f21e9f2538fad78011"
+    },
+    {
+      "category": "classes",
+      "id": "clock_reaver",
+      "file": "assets/class_clock_reaver.webp",
+      "exists": true,
+      "sha256": "e0d4343a2f3f28c453b907263365c706ab03afca0689bd099cc6163ce9ffa57c"
+    },
+    {
+      "category": "classes",
+      "id": "thorn_crown",
+      "file": "assets/class_thorn_crown.webp",
+      "exists": true,
+      "sha256": "a1adad1932ee91e64438585fc119fb16a187db6b6b93f495ed131ff39306fbbd"
+    },
+    {
+      "category": "classes",
+      "id": "last_margin",
+      "file": "assets/class_last_margin.webp",
+      "exists": true,
+      "sha256": "d242b10fa40e084acc9ddff83b22a500ca869939c9661f51f1f9e0498fb6a90f"
+    },
+    {
+      "category": "classes",
+      "id": "adventurer",
+      "file": "assets/class_adventurer.webp",
+      "exists": true,
+      "sha256": "fa879fa7bba2db2d0624c7e0d3069057e2a4b2c92e481ec391f02d59e5fd9ac6"
+    },
+    {
+      "category": "classes",
+      "id": "hunter",
+      "file": "assets/class_hunter.webp",
+      "exists": true,
+      "sha256": "d4fbcb6d798cb362528dc5c704c1cd1ebda56826673afb20215e62e796a1eec8"
+    },
+    {
+      "category": "classes",
+      "id": "guardian",
+      "file": "assets/class_guardian.webp",
+      "exists": true,
+      "sha256": "e9a641d78f7f6b54d093f3d8524d7725ba9d937bcb49ae57d26c12f470ec225b"
+    },
+    {
+      "category": "classes",
+      "id": "x_magic_0",
+      "file": "assets/class_x_magic_0.webp",
+      "exists": true,
+      "sha256": "1c87b571e3cbdc0d3e0bcafee3ba07f4196d6edc9bcce452e10f01bd2905ccb2"
+    },
+    {
+      "category": "classes",
+      "id": "x_magic_3",
+      "file": "assets/class_x_magic_3.webp",
+      "exists": true,
+      "sha256": "a6fd36d67323981d4b35140ca08a57c1377b13176a2a1ce46bc35fab4ecee31d"
+    },
+    {
+      "category": "classes",
+      "id": "x_magic_4",
+      "file": "assets/class_x_magic_4.webp",
+      "exists": true,
+      "sha256": "29900661a687b62ea05390693282ebef866c1b3ed93897dcabe121ae0c7b07b8"
+    },
+    {
+      "category": "classes",
+      "id": "x_ranged_2",
+      "file": "assets/class_x_ranged_2.webp",
+      "exists": true,
+      "sha256": "6d8aa4590648482b1c0dd8a5210aba51210b57d0a7b60c473d304103dcf8690a"
+    },
+    {
+      "category": "classes",
+      "id": "x_magic_11",
+      "file": "assets/class_x_magic_11.webp",
+      "exists": true,
+      "sha256": "a584b0c8abae6e74a4ae0d5309854d7de0858e63fe7f75bddebaeebcd599b5e9"
+    },
+    {
+      "category": "classes",
+      "id": "x_magic_10",
+      "file": "assets/class_x_magic_10.webp",
+      "exists": true,
+      "sha256": "fe0f00e8a681c1749a494fc05b9d979add8dfaa2e2f38f449e592edd32b2b4d0"
+    },
+    {
+      "category": "classes",
+      "id": "x_magic_9",
+      "file": "assets/class_x_magic_9.webp",
+      "exists": true,
+      "sha256": "d0c461085c36a3f7eb8509bd2d9f60ed0e56f76ed4eee8e232f423a2f3d9f887"
+    },
+    {
+      "category": "classes",
+      "id": "x_magic_7",
+      "file": "assets/class_x_magic_7.webp",
+      "exists": true,
+      "sha256": "c8f7313bc4160af75ae689e71d793f33efe7d4fb85a8418d1cd15b2ca86f3bef"
+    },
+    {
+      "category": "classes",
+      "id": "x_magic_8",
+      "file": "assets/class_x_magic_8.webp",
+      "exists": true,
+      "sha256": "372ecf325120923d1be964cbd0111df08b19ba830fa7d21990ad505dde422b35"
+    },
+    {
+      "category": "classes",
+      "id": "x_magic_6",
+      "file": "assets/class_x_magic_6.webp",
+      "exists": true,
+      "sha256": "8855ec6bb4d7313d4fe4d09fd05597cba68ac9b324555ea9e0388585228bc2a3"
+    },
+    {
+      "category": "classes",
+      "id": "x_magic_1",
+      "file": "assets/class_x_magic_1.webp",
+      "exists": true,
+      "sha256": "e35426c61c2aa33aaba0dfb3de60bda0c3cb79858ea737cc69d58b2a0dc4ba1f"
+    },
+    {
+      "category": "classes",
+      "id": "x_magic_2",
+      "file": "assets/class_x_magic_2.webp",
+      "exists": true,
+      "sha256": "fe6b643eed610a900197f3fb67f8685081749b1bdf0747e6a36936bbfb6f6131"
+    },
+    {
+      "category": "classes",
+      "id": "x_magic_5",
+      "file": "assets/class_x_magic_5.webp",
+      "exists": true,
+      "sha256": "2386feb82a2b06b1eb32f3e192ff2d62b811f9f2c6916a67e363ac71e9e46c09"
+    },
+    {
+      "category": "classes",
+      "id": "x_magic_12",
+      "file": "assets/class_x_magic_12.webp",
+      "exists": true,
+      "sha256": "d1709defb360a57785f54415cadf7ef886e6033948fe63b2c1ca9172329fcb4e"
+    },
+    {
+      "category": "classes",
+      "id": "x_magic_13",
+      "file": "assets/class_x_magic_13.webp",
+      "exists": true,
+      "sha256": "7accad7bfe853137f6a783212bb33d0361484af6f7b77df174298e42b07de9ba"
+    },
+    {
+      "category": "classes",
+      "id": "x_magic_14",
+      "file": "assets/class_x_magic_14.webp",
+      "exists": true,
+      "sha256": "96bc95497dc35487a992921545fd77575206e7380f5b107fadcabd05a0d0ce69"
+    },
+    {
+      "category": "classes",
+      "id": "x_magic_15",
+      "file": "assets/class_x_magic_15.webp",
+      "exists": true,
+      "sha256": "248771b82307152a8103ff246942e60c01aca382679f2f850d0087ff7be092ef"
+    },
+    {
+      "category": "classes",
+      "id": "x_magic_16",
+      "file": "assets/class_x_magic_16.webp",
+      "exists": true,
+      "sha256": "830df9271e008374f77fec35803970a3b7578ac2352bb586cdec2edf984860f3"
+    },
+    {
+      "category": "classes",
+      "id": "x_magic_17",
+      "file": "assets/class_x_magic_17.webp",
+      "exists": true,
+      "sha256": "cee7d337f733308b43000766a68e1c92c86b07c2c7538e3e12ee24cbb69a926c"
+    },
+    {
+      "category": "classes",
+      "id": "x_ranged_0",
+      "file": "assets/class_x_ranged_0.webp",
+      "exists": true,
+      "sha256": "ad66d9d2c149e1f78408b5e10922b49f62c004e6b9eea7931a9b026d66c032d5"
+    },
+    {
+      "category": "classes",
+      "id": "x_ranged_1",
+      "file": "assets/class_x_ranged_1.webp",
+      "exists": true,
+      "sha256": "6baaeac1c3330eb71166e0d71f5d729569081a7adb666bc5de3464008c0c6324"
+    },
+    {
+      "category": "classes",
+      "id": "x_ranged_3",
+      "file": "assets/class_x_ranged_3.webp",
+      "exists": true,
+      "sha256": "c235fbacb0e74ea13f61d6fbdab0a7e542aa2719c7674c2e087751bdddbd4b9c"
+    },
+    {
+      "category": "classes",
+      "id": "x_ranged_4",
+      "file": "assets/class_x_ranged_4.webp",
+      "exists": true,
+      "sha256": "67323fba0f455ad8782afec6164aeb7ec99839639f23e1d50f3d530f4b3d3cf1"
+    },
+    {
+      "category": "classes",
+      "id": "x_ranged_5",
+      "file": "assets/class_x_ranged_5.webp",
+      "exists": true,
+      "sha256": "b310a596d26a9165816ce60bca8aef5baaa2995db40183e12d294ce6b7edc637"
+    },
+    {
+      "category": "classes",
+      "id": "x_ranged_6",
+      "file": "assets/class_x_ranged_6.webp",
+      "exists": true,
+      "sha256": "d0078217226a8ae896a8d72c5ddcda66132641094709cefa35b3d94971b0b402"
+    },
+    {
+      "category": "classes",
+      "id": "x_ranged_7",
+      "file": "assets/class_x_ranged_7.webp",
+      "exists": true,
+      "sha256": "ebb3812c4ba1b8a83cf87558ecceb526ba8bb25c3c9978b8487371e8799e03c5"
+    },
+    {
+      "category": "classes",
+      "id": "x_ranged_8",
+      "file": "assets/class_x_ranged_8.webp",
+      "exists": true,
+      "sha256": "abddc7053d2f4ab169dc0f99ccb1850001d8e8f03878ae1b8878139b4b00fedc"
+    },
+    {
+      "category": "classes",
+      "id": "x_ranged_9",
+      "file": "assets/class_x_ranged_9.webp",
+      "exists": true,
+      "sha256": "e7d5d3b954407eb7d3b33c858da9199ca31578fa30022e3a90a1d216cb480da1"
+    },
+    {
+      "category": "classes",
+      "id": "x_ranged_10",
+      "file": "assets/class_x_ranged_10.webp",
+      "exists": true,
+      "sha256": "c54fb7a0187f87a4e0c90411ea06fa253b64ba1e604d9152221ce04acbd44170"
+    },
+    {
+      "category": "classes",
+      "id": "x_ranged_13",
+      "file": "assets/class_x_ranged_13.webp",
+      "exists": true,
+      "sha256": "eee2ff310667c4e65caf0b3e15dbed8ee86d7e793aed0b40aa36afbe7c75d613"
+    },
+    {
+      "category": "classes",
+      "id": "x_ranged_16",
+      "file": "assets/class_x_ranged_16.webp",
+      "exists": true,
+      "sha256": "09128d83a895f452ba0143c647fefb55a323d7c248b0a0c290c20441a6601370"
+    },
+    {
+      "category": "classes",
+      "id": "x_ranged_17",
+      "file": "assets/class_x_ranged_17.webp",
+      "exists": true,
+      "sha256": "9f63fe8d530a7855fe2a97959288c68e23e4e27aa429d75e497608d0f768423c"
+    },
+    {
+      "category": "classes",
+      "id": "x_support_17",
+      "file": "assets/class_x_support_17.webp",
+      "exists": true,
+      "sha256": "2c4afee76d71559aa995f3480dc1e01ad81db7f6bdf7240bb3c908d741a39655"
+    },
+    {
+      "category": "classes",
+      "id": "x_occult_13",
+      "file": "assets/class_x_occult_13.webp",
+      "exists": true,
+      "sha256": "7d22b9e3a0272bf98cf8797115ff87e1b5684308551584a9c124fa28d5237d4a"
+    },
+    {
+      "category": "classes",
+      "id": "x_occult_15",
+      "file": "assets/class_x_occult_15.webp",
+      "exists": true,
+      "sha256": "cb05e5a0ec13e2a394b5d3d4ee23921c0ba8e84cc558053a39e4c0dde23b2861"
+    },
+    {
+      "category": "classes",
+      "id": "x_occult_16",
+      "file": "assets/class_x_occult_16.webp",
+      "exists": true,
+      "sha256": "35059a8661b63cd5618498293fefd126265f5c24eeae38d3d49227d39d6ef461"
+    },
+    {
+      "category": "classes",
+      "id": "self_named",
+      "file": "assets/class_self_named.webp",
+      "exists": true,
+      "sha256": "bd04a4ea9c97894f02ff38a5a806dca2b63438b632b479e4f0143b06b5755cc7"
+    },
+    {
+      "category": "classes",
+      "id": "dream_guard",
+      "file": "assets/class_dream_guard.webp",
+      "exists": true,
+      "sha256": "68216ad1aa64bfa4e8318829412daec86f72657757da41b1dd32e72def1a8652"
+    },
+    {
+      "category": "classes",
+      "id": "court_witness",
+      "file": "assets/class_court_witness.webp",
+      "exists": true,
+      "sha256": "87bd45094bb998eb362e3fad66447c5503fbb7814ee704c348560413c2127851"
+    },
+    {
+      "category": "enemies",
+      "id": "굶주린 늑대",
+      "file": "assets/enemy_01.webp",
+      "exists": true,
+      "sha256": "ec1c5fc00ba12d965511bec5b762abd3606ffcd3f61be5c7fc60e0097b001c5d"
+    },
+    {
+      "category": "enemies",
+      "id": "가시 고블린",
+      "file": "assets/enemy_02.webp",
+      "exists": true,
+      "sha256": "44c05501dd5c5ca924e61dacf0537a500074a0830ced42bcd651c0532edcb76d"
+    },
+    {
+      "category": "enemies",
+      "id": "추방된 사냥꾼",
+      "file": "assets/enemy_03.webp",
+      "exists": true,
+      "sha256": "5de736ae20e70ec5a33baca6567ce95a234f317c2b9d4d9caba3caa4b54578f5"
+    },
+    {
+      "category": "enemies",
+      "id": "흙의 정령",
+      "file": "assets/enemy_04.webp",
+      "exists": true,
+      "sha256": "6fa701d4aab608d6979fac21604a8c070b1a6a1e912527416c70b25e6e1176c8"
+    },
+    {
+      "category": "enemies",
+      "id": "잿빛 약탈자",
+      "file": "assets/enemy_05.webp",
+      "exists": true,
+      "sha256": "b244d6adf2fed959a9121f1da4b15ca04af8254e5fa010de659ea2309cc9449a"
+    },
+    {
+      "category": "enemies",
+      "id": "저주받은 주민",
+      "file": "assets/enemy_06.webp",
+      "exists": true,
+      "sha256": "7b25af33cf2c806373a10bbb68461598f8103cd0b890291d999cf8cac1c7cd19"
+    },
+    {
+      "category": "enemies",
+      "id": "빈 갑옷",
+      "file": "assets/enemy_07.webp",
+      "exists": true,
+      "sha256": "b3932b17c488c984f5939b0f64409a747f89d4e71040b947b4896cf51c8423df"
+    },
+    {
+      "category": "enemies",
+      "id": "종탑의 까마귀",
+      "file": "assets/enemy_08.webp",
+      "exists": true,
+      "sha256": "45e7c160065beb8aac82b5f0680640fc0f07db07e284d4a129ab275e2766b1ff"
+    },
+    {
+      "category": "enemies",
+      "id": "독안개 망령",
+      "file": "assets/enemy_09.webp",
+      "exists": true,
+      "sha256": "516950ef97f8efd102d3523eccca440fec128931bf000c37fa7db3b2c8ea6ff9"
+    },
+    {
+      "category": "enemies",
+      "id": "늪의 포식자",
+      "file": "assets/enemy_10.webp",
+      "exists": true,
+      "sha256": "b52f9aed7aa3bb920ebdacbadf8b6ee1b9a3cd665dea109ae611cb09630f73da"
+    },
+    {
+      "category": "enemies",
+      "id": "수정 거미",
+      "file": "assets/enemy_11.webp",
+      "exists": true,
+      "sha256": "f1849106342e8fa6ff50e5a3172b270ce43e5e090fbec0d653da5c3293b1a0bc"
+    },
+    {
+      "category": "enemies",
+      "id": "이끼 골렘",
+      "file": "assets/enemy_12.webp",
+      "exists": true,
+      "sha256": "7e69ce1c1692597aa77480a70f196f8bba6cb439cbca1dc972b0d815328ad381"
+    },
+    {
+      "category": "enemies",
+      "id": "왕의 처형인",
+      "file": "assets/enemy_13.webp",
+      "exists": true,
+      "sha256": "eb14299407f86a969717646d137cb310df66e3f483e9c4f5b251b6e0fb82bf5d"
+    },
+    {
+      "category": "enemies",
+      "id": "타락한 수호자",
+      "file": "assets/enemy_14.webp",
+      "exists": true,
+      "sha256": "41f515f68be00f51330b6d4fe00c41182defd3312d7c0b79398800656991317f"
+    },
+    {
+      "category": "enemies",
+      "id": "검은 기사",
+      "file": "assets/enemy_15.webp",
+      "exists": true,
+      "sha256": "637be83584ec64be0e53730e808222671ae546466690babb26e778305c1f4eb0"
+    },
+    {
+      "category": "enemies",
+      "id": "기억을 먹는 자",
+      "file": "assets/enemy_16.webp",
+      "exists": true,
+      "sha256": "a1d1e44389964f97fabaa36f7b7467c62586e3eacb3fb05ed7ebcf78b4c7a6ca"
+    },
+    {
+      "category": "enemies",
+      "id": "유리 전갈",
+      "file": "assets/enemy_17.webp",
+      "exists": true,
+      "sha256": "041b45198e7990dac15317902b2a7ef79042af2c3dafaa8684e31c545403f3b6"
+    },
+    {
+      "category": "enemies",
+      "id": "모래 도적",
+      "file": "assets/enemy_18.webp",
+      "exists": true,
+      "sha256": "ba924efe663b9de0f3d723139d7d624e55169fbf628b8342a42b89fb9f748666"
+    },
+    {
+      "category": "enemies",
+      "id": "미라 사제",
+      "file": "assets/enemy_19.webp",
+      "exists": true,
+      "sha256": "24f3109e64ecdcf30ab4cb165fe1542ad83d7f541f8e9f70f38028a377e9d2df"
+    },
+    {
+      "category": "enemies",
+      "id": "붉은 독수리",
+      "file": "assets/enemy_20.webp",
+      "exists": true,
+      "sha256": "83756d303ae17e65061f2f2bebd16c1ee240d8e1a46d965f000844c4487239bc"
+    },
+    {
+      "category": "enemies",
+      "id": "잉크 망령",
+      "file": "assets/enemy_21.webp",
+      "exists": true,
+      "sha256": "e7bd1861eb0c010471de13f47c9b328f0871feeb85063e4e36b127fe19af2ffb"
+    },
+    {
+      "category": "enemies",
+      "id": "종이 수호자",
+      "file": "assets/enemy_22.webp",
+      "exists": true,
+      "sha256": "73a8c6d778314031de64ff2b819b0f144e74c4948650f33874ad78e2e6bb76f4"
+    },
+    {
+      "category": "enemies",
+      "id": "사라진 학자",
+      "file": "assets/enemy_23.webp",
+      "exists": true,
+      "sha256": "11333859d7977001e859125a7fd2152609ed9c1093f68d9ef3ea286fdc7a4ef5"
+    },
+    {
+      "category": "enemies",
+      "id": "달빛 인형",
+      "file": "assets/enemy_24.webp",
+      "exists": true,
+      "sha256": "ea5741e0e31bbc651f19899354cfd6b55057235d6dc370e7d94a13d94dcc9987"
+    },
+    {
+      "category": "enemies",
+      "id": "철의 거인",
+      "file": "assets/enemy_25.webp",
+      "exists": true,
+      "sha256": "af035dbe2221098202dbf71871e8da0052b79f119055880530f761fd14aff7d8"
+    },
+    {
+      "category": "enemies",
+      "id": "불꽃 악령",
+      "file": "assets/enemy_26.webp",
+      "exists": true,
+      "sha256": "e87555a3ac74d3131a474959236e004a1fc65535f0f5aaec75ae2814a460ce67"
+    },
+    {
+      "category": "enemies",
+      "id": "검댕 사냥개",
+      "file": "assets/enemy_27.webp",
+      "exists": true,
+      "sha256": "23bb05ca483fbc0070892e5ac8ed4bff62ace9362618887df672f5f8407369e5"
+    },
+    {
+      "category": "enemies",
+      "id": "쇳물 기사",
+      "file": "assets/enemy_28.webp",
+      "exists": true,
+      "sha256": "5d5fa3101479fc1c5847e7ac6cb87c78e9c4d67bbf1792921831fbecc9e62c04"
+    },
+    {
+      "category": "enemies",
+      "id": "무명의 왕",
+      "file": "assets/enemy_29.webp",
+      "exists": true,
+      "sha256": "fd689e18ec83f194e9989c841de1df7393409de4ede835d7ba1f180d4520f67d"
+    },
+    {
+      "category": "enemies",
+      "id": "시간의 파수병",
+      "file": "assets/enemy_30.webp",
+      "exists": true,
+      "sha256": "cd2f8ad8e8ce805d413b910d0e5a65366fc0bc5561769617ec49591280c93620"
+    },
+    {
+      "category": "enemies",
+      "id": "공허의 기사",
+      "file": "assets/enemy_31.webp",
+      "exists": true,
+      "sha256": "3948826bdb93fb52ee82642664498d398c1f11603b87c538079f821a77a151c0"
+    },
+    {
+      "category": "enemies",
+      "id": "검은 태양의 사도",
+      "file": "assets/enemy_32.webp",
+      "exists": true,
+      "sha256": "4f9ddc9726708a6b16298c76ef566f7f880afb5b526e9ab26824c55208e29750"
+    },
+    {
+      "category": "enemies",
+      "id": "보급함 미믹",
+      "file": "assets/enemy_mimic.webp",
+      "exists": true,
+      "sha256": "d48aa4912344e50e8a2800e11307f8903f509bec504fc69dbab31fab46250fea"
+    },
+    {
+      "category": "bosses",
+      "id": "가시의 파수꾼",
+      "file": "assets/boss_00.webp",
+      "exists": true,
+      "sha256": "c24e3f977694f3047c3e7e16607262e9d39758839ea8b11d80875cb34153d6d2"
+    },
+    {
+      "category": "bosses",
+      "id": "종지기 모르",
+      "file": "assets/boss_01.webp",
+      "exists": true,
+      "sha256": "3fe6a571f451294ffc0cc16e15d668daccb947380816887096f4e4f8f4468b4d"
+    },
+    {
+      "category": "bosses",
+      "id": "거울의 마녀",
+      "file": "assets/boss_02.webp",
+      "exists": true,
+      "sha256": "5ededee514d7b09b078c7ac25201ee0c551a20a57c92bc77ed2eac93fbd1099c"
+    },
+    {
+      "category": "bosses",
+      "id": "하트 여왕의 집행관",
+      "file": "assets/boss_03.webp",
+      "exists": true,
+      "sha256": "5e83b59b61a8d194ad7039af6392d26746c8a2bbb672577ad9d4920e33964544"
+    },
+    {
+      "category": "bosses",
+      "id": "사막의 예언자",
+      "file": "assets/boss_04.webp",
+      "exists": true,
+      "sha256": "0c7e3328ae71c0db1d5f68edf205316a743d8696a721793a434719ec3b7c94f2"
+    },
+    {
+      "category": "bosses",
+      "id": "금서의 사서",
+      "file": "assets/boss_05.webp",
+      "exists": true,
+      "sha256": "41cc6c90cf2326ad9c54979840b954f406812b77701ef95e119287e7f398095d"
+    },
+    {
+      "category": "bosses",
+      "id": "빅터의 봉합 거인",
+      "file": "assets/boss_06.webp",
+      "exists": true,
+      "sha256": "33debf94947b720bc2f3eca294a9584a17636ec889ed74965b136b6b21dff477"
+    },
+    {
+      "category": "bosses",
+      "id": "결말을 먹는 편집자",
+      "file": "assets/boss_07.webp",
+      "exists": true,
+      "sha256": "9216641e463607412625e6d48b0e996f46173c8f99a545a7480db17ac48044d1"
+    },
+    {
+      "category": "bosses",
+      "id": "이름을 지운 자",
+      "file": "assets/boss_rift.webp",
+      "exists": true,
+      "sha256": "fd973933fd3d739ca9a8435541e6161a9891dd2efa327a6e7d35e1126c41d0ca"
+    },
+    {
+      "category": "areas",
+      "id": "0",
+      "file": "assets/location_00.webp",
+      "exists": true,
+      "sha256": "b1d18bbd1a1aed88baaa1e34cafe89a4ed03baf3d4c6d40ab639109e60f3c339"
+    },
+    {
+      "category": "areas",
+      "id": "1",
+      "file": "assets/location_01.webp",
+      "exists": true,
+      "sha256": "96fa80862691fe141d3fb20320eee4344af11bb2738c0b491d206f4a04547536"
+    },
+    {
+      "category": "areas",
+      "id": "2",
+      "file": "assets/location_02.webp",
+      "exists": true,
+      "sha256": "8bc451751ce8bbcbe9b70b9155096927139b08879597dcc4017818455d470d31"
+    },
+    {
+      "category": "areas",
+      "id": "3",
+      "file": "assets/location_03.webp",
+      "exists": true,
+      "sha256": "2469d507366a6a9ca704ba06dfd9bc972db8353df876a9b4953bf88e430672a8"
+    },
+    {
+      "category": "areas",
+      "id": "4",
+      "file": "assets/location_04.webp",
+      "exists": true,
+      "sha256": "5adede443376d8785a05ebee54125472a7b89dcbaf8c9f9b1d8a3c67bde4ad50"
+    },
+    {
+      "category": "areas",
+      "id": "5",
+      "file": "assets/location_05.webp",
+      "exists": true,
+      "sha256": "7c59013408b6ce5eaa7c1b80f7c25145ef00370c8fb643b431cc9a585d9273ee"
+    },
+    {
+      "category": "areas",
+      "id": "6",
+      "file": "assets/location_06.webp",
+      "exists": true,
+      "sha256": "133dd52c3a0a3648a58d6762aae8a67a346ad72ff1b1ea4e16cf45cda297febe"
+    },
+    {
+      "category": "areas",
+      "id": "7",
+      "file": "assets/location_07.webp",
+      "exists": true,
+      "sha256": "6e96043d70b6f3681912a55614208e9e40915f5666f5f0e21f925b9d3ab50d3b"
+    },
+    {
+      "category": "events",
+      "id": "0",
+      "file": "assets/event_00.webp",
+      "exists": true,
+      "sha256": "586077547753b420c7a57f0e5a9122a7a4903a87da4a1b9fe2f6b3bafcb4c778"
+    },
+    {
+      "category": "events",
+      "id": "1",
+      "file": "assets/event_01.webp",
+      "exists": true,
+      "sha256": "0fb96825cf4c505103b87cd89e2b340ce49b5c1be122dd13adfcf45249bcdfd8"
+    },
+    {
+      "category": "events",
+      "id": "2",
+      "file": "assets/event_02.webp",
+      "exists": true,
+      "sha256": "c833f84b96b38c822d4c2117c3761aa70e361e027307f5c4651b522a4f56df5c"
+    },
+    {
+      "category": "events",
+      "id": "3",
+      "file": "assets/event_03.webp",
+      "exists": true,
+      "sha256": "fdb4507de6fdea8870f169d62ac55994251448268be2dc291216ae466a3bd758"
+    },
+    {
+      "category": "events",
+      "id": "4",
+      "file": "assets/event_04.webp",
+      "exists": true,
+      "sha256": "9b86064ae399519c4dd89b1b802a6c7a45efc3305df02bb0fbaef768f9dfca25"
+    },
+    {
+      "category": "events",
+      "id": "5",
+      "file": "assets/event_05.webp",
+      "exists": true,
+      "sha256": "ab5eae15881e2759b50cdcdf172623124b4a90fe76ac13f8eb2d1299e7fc8f02"
+    },
+    {
+      "category": "events",
+      "id": "6",
+      "file": "assets/event_06.webp",
+      "exists": true,
+      "sha256": "92ad0243a8e7293f236f57b9394a54a11de6491037fd446e7aa6022beca73521"
+    },
+    {
+      "category": "events",
+      "id": "7",
+      "file": "assets/event_07.webp",
+      "exists": true,
+      "sha256": "960f4fa8c9e04500bfbcf9c015e4e9ec169b576e5a88bb682c3d1dc205d6d38c"
+    },
+    {
+      "category": "events",
+      "id": "8",
+      "file": "assets/event_08.webp",
+      "exists": true,
+      "sha256": "77f1a00893b8a13e85bb96da8102c9054d1f2d707177514ebd3f7a265f5c7230"
+    },
+    {
+      "category": "events",
+      "id": "9",
+      "file": "assets/event_09.webp",
+      "exists": true,
+      "sha256": "2b079f6e9a5d3c33ec4229fb950466509f8302233c3e020f4dc735387913f815"
+    },
+    {
+      "category": "events",
+      "id": "10",
+      "file": "assets/event_10.webp",
+      "exists": true,
+      "sha256": "d82befeeef45d10afcb5897033b8fd674c69931d47bd0e5059af35cee2478b2c"
+    },
+    {
+      "category": "events",
+      "id": "11",
+      "file": "assets/event_11.webp",
+      "exists": true,
+      "sha256": "5a3bfb31daf5e3a9a031ac30df8bedbfe35a2ae764e9251f68d1c1c50fc3fccc"
+    },
+    {
+      "category": "events",
+      "id": "12",
+      "file": "assets/event_12.webp",
+      "exists": true,
+      "sha256": "ddaa8719ffda4303124a1b19d96468edbfa40b959d392a1d76a0036f94ed4b01"
+    },
+    {
+      "category": "events",
+      "id": "13",
+      "file": "assets/event_13.webp",
+      "exists": true,
+      "sha256": "bf23d84e1959ac3ec8bf2aa0b8d8dd44426102e4f81759a0ab1fdb1d8bd5c9a4"
+    },
+    {
+      "category": "events",
+      "id": "14",
+      "file": "assets/event_14.webp",
+      "exists": true,
+      "sha256": "4d6ca202054785bb2ba314f21851d3aaf8ee889a9fbf2da8f7163f06586bd578"
+    },
+    {
+      "category": "events",
+      "id": "15",
+      "file": "assets/event_15.webp",
+      "exists": true,
+      "sha256": "3ed49806c2fb3ef2cc24538308e0ff3d6e06588d622be68304627044f3913153"
+    },
+    {
+      "category": "events",
+      "id": "16",
+      "file": "assets/event_16.webp",
+      "exists": true,
+      "sha256": "aad4c5941770423efca886bd828f546550ab27aa0a1b5c175f20b5520f83b496"
+    },
+    {
+      "category": "events",
+      "id": "17",
+      "file": "assets/event_17.webp",
+      "exists": true,
+      "sha256": "93eaafed57dfdab3f607c364e93af21446ad08157125f129fa834630079b7f7e"
+    },
+    {
+      "category": "story",
+      "id": "alice",
+      "file": "assets/story_alice.webp",
+      "exists": true,
+      "sha256": "6130765b8aa3d55f1d4f5410c3f00adcd68a90f50dc00203c403fbcd8b3dbab9"
+    },
+    {
+      "category": "story",
+      "id": "adam",
+      "file": "assets/story_adam.webp",
+      "exists": true,
+      "sha256": "b3029438e4a3d81e5ec8f8dfc0ff9a93e67d626ed45488ade14939e993b255d8"
+    },
+    {
+      "category": "story",
+      "id": "ahab",
+      "file": "assets/story_ahab.webp",
+      "exists": true,
+      "sha256": "b56413b7eae896f386091f2ed1255db9abfd46e7616abfc1c1655f8cdff3c55a"
+    },
+    {
+      "category": "story",
+      "id": "creature",
+      "file": "assets/story_adam.webp",
+      "exists": true,
+      "sha256": "b3029438e4a3d81e5ec8f8dfc0ff9a93e67d626ed45488ade14939e993b255d8"
+    },
+    {
+      "category": "story",
+      "id": "victor",
+      "file": "assets/story_adam.webp",
+      "exists": true,
+      "sha256": "b3029438e4a3d81e5ec8f8dfc0ff9a93e67d626ed45488ade14939e993b255d8"
+    },
+    {
+      "category": "misc",
+      "id": "camp",
+      "file": "assets/camp-card.webp",
+      "exists": true,
+      "sha256": "7573a994385a65dc26155b5f65a4abeed4fbe4f70362e526728d3942eeeebcf8"
+    },
+    {
+      "category": "misc",
+      "id": "banner",
+      "file": "assets/forest-banner.webp",
+      "exists": true,
+      "sha256": "b1d18bbd1a1aed88baaa1e34cafe89a4ed03baf3d4c6d40ab639109e60f3c339"
+    },
+    {
+      "category": "gear",
+      "id": "weapon",
+      "file": "assets/gear_weapon.svg",
+      "exists": true,
+      "sha256": "381031e7079da418b9c511cdc11e8c759772bc7f79ca33098a75efba32d23d6a"
+    },
+    {
+      "category": "gear",
+      "id": "armor",
+      "file": "assets/gear_armor.svg",
+      "exists": true,
+      "sha256": "a0600a9acad4ea591fe55d24fcbf6ece16d2c37b9114f835c74608035200a811"
+    },
+    {
+      "category": "gear",
+      "id": "charm",
+      "file": "assets/gear_charm.svg",
+      "exists": true,
+      "sha256": "2f0812a33e2448b797d0d93e113924554f1a62d6877391ebf1830890ab37eafc"
+    }
+  ],
+  "unreferencedImageFiles": [
+    {
+      "file": "boss_00.webp",
+      "sha256": "c24e3f977694f3047c3e7e16607262e9d39758839ea8b11d80875cb34153d6d2"
+    },
+    {
+      "file": "boss_01.webp",
+      "sha256": "3fe6a571f451294ffc0cc16e15d668daccb947380816887096f4e4f8f4468b4d"
+    },
+    {
+      "file": "boss_02.webp",
+      "sha256": "5ededee514d7b09b078c7ac25201ee0c551a20a57c92bc77ed2eac93fbd1099c"
+    },
+    {
+      "file": "boss_03.webp",
+      "sha256": "5e83b59b61a8d194ad7039af6392d26746c8a2bbb672577ad9d4920e33964544"
+    },
+    {
+      "file": "boss_04.webp",
+      "sha256": "0c7e3328ae71c0db1d5f68edf205316a743d8696a721793a434719ec3b7c94f2"
+    },
+    {
+      "file": "boss_05.webp",
+      "sha256": "41cc6c90cf2326ad9c54979840b954f406812b77701ef95e119287e7f398095d"
+    },
+    {
+      "file": "boss_06.webp",
+      "sha256": "33debf94947b720bc2f3eca294a9584a17636ec889ed74965b136b6b21dff477"
+    },
+    {
+      "file": "boss_07.webp",
+      "sha256": "9216641e463607412625e6d48b0e996f46173c8f99a545a7480db17ac48044d1"
+    },
+    {
+      "file": "boss_rift.webp",
+      "sha256": "fd973933fd3d739ca9a8435541e6161a9891dd2efa327a6e7d35e1126c41d0ca"
+    },
+    {
+      "file": "camp-card.webp",
+      "sha256": "7573a994385a65dc26155b5f65a4abeed4fbe4f70362e526728d3942eeeebcf8"
+    },
+    {
+      "file": "character-0.webp",
+      "sha256": "95e7c56450d3f669dbf36cfa1511ff8f6ffdaf08b9c16070fa749302c62713cf"
+    },
+    {
+      "file": "character-1.webp",
+      "sha256": "3e009ff8e8816067b0798ef97b97262e2b58c2cd80bc313b35263df26a9c4ac6"
+    },
+    {
+      "file": "character-2.webp",
+      "sha256": "acc33209fb77c2ac9eb55d8b6ec9bdbc4990b6d6ded6b086bbc0ce846c31b036"
+    },
+    {
+      "file": "character-3.webp",
+      "sha256": "7e7516337492ef1cba8c5f1546674fafbcb8927a7aa626c7bc6caa45d756f244"
+    },
+    {
+      "file": "character-4.webp",
+      "sha256": "929c607cbb4422610f2222a94b10ebe611004fc560a2d3311fd49a2d5c5703c6"
+    },
+    {
+      "file": "character-5.webp",
+      "sha256": "140a25361c6638040204b87e3e4785a58da41f15a24cb581f00e8236e49a0aac"
+    },
+    {
+      "file": "class_abyss_anchor.webp",
+      "sha256": "72f5780aaf6a5f97edbf3965dc29323e0f20f2f2a32346f21e9f2538fad78011"
+    },
+    {
+      "file": "class_adam_sword.webp",
+      "sha256": "4def47b49fe0c119e6a5f3d80ae572d6ae70629e306a0a4c1b1912992d562d87"
+    },
+    {
+      "file": "class_ahab_harpoon.webp",
+      "sha256": "8517480e2a40e0613ea2b21281eb38e69a15dbfd03484dee454cbd8782a5137e"
+    },
+    {
+      "file": "class_blood.webp",
+      "sha256": "7653277d2d6296e1422b89dcb3165bbb4c718c7f666934e362b1ed836a51a4c8"
+    },
+    {
+      "file": "class_card_spear.webp",
+      "sha256": "929c607cbb4422610f2222a94b10ebe611004fc560a2d3311fd49a2d5c5703c6"
+    },
+    {
+      "file": "class_chrono.webp",
+      "sha256": "4566d0284afa3086f0d8709f817e828dfe740424bac202824917290b8f851b3d"
+    },
+    {
+      "file": "class_clock_reaver.webp",
+      "sha256": "e0d4343a2f3f28c453b907263365c706ab03afca0689bd099cc6163ce9ffa57c"
+    },
+    {
+      "file": "class_coffin.webp",
+      "sha256": "140a25361c6638040204b87e3e4785a58da41f15a24cb581f00e8236e49a0aac"
+    },
+    {
+      "file": "class_fallen_dreamer.webp",
+      "sha256": "8edda1fb88236ae092560efc6d5d359401f712729fa5069f838aac186d656431"
+    },
+    {
+      "file": "class_gambler.webp",
+      "sha256": "1c0a65b01bfb366f75ac46a90e6409cc19a11c177c51d7c1a23dfb49ecdba8ab"
+    },
+    {
+      "file": "class_grave_hunter.webp",
+      "sha256": "c7d8b7e35cea7d8b0ebb913f2e61ba3555e9ebaaeab424dec4acd7e7e5723e33"
+    },
+    {
+      "file": "class_last_margin.webp",
+      "sha256": "d242b10fa40e084acc9ddff83b22a500ca869939c9661f51f1f9e0498fb6a90f"
+    },
+    {
+      "file": "class_mage.webp",
+      "sha256": "acc33209fb77c2ac9eb55d8b6ec9bdbc4990b6d6ded6b086bbc0ce846c31b036"
+    },
+    {
+      "file": "class_mirror_fist.webp",
+      "sha256": "186ee387bd854826827d0522747a8a12519f01e39cc82dcd01cd59b005779e80"
+    },
+    {
+      "file": "class_pagebreaker.webp",
+      "sha256": "4d574a71ec8e31a88132de66759c5dececad988de80667eafc9e5914c667ea32"
+    },
+    {
+      "file": "class_paladin.webp",
+      "sha256": "3f4694ea9d4ffe7e66a32990b6b09d3936f98641c08db3c88963a5b30973f7b9"
+    },
+    {
+      "file": "class_pequod.webp",
+      "sha256": "1acfc3db75c97b02a85df4132a9c8bc1d5782e635e09ccb28dc194c3a181876e"
+    },
+    {
+      "file": "class_queen_exec.webp",
+      "sha256": "7689cc612d0fa1d6ba351cef2c859f56879fc15ad94c8fc6e420f072ce6bf11d"
+    },
+    {
+      "file": "class_rabbit_guard.webp",
+      "sha256": "674a5d61f85a8d5e44699b130fb25a8bb38bd2e94ce92bdce173520b55c4d64d"
+    },
+    {
+      "file": "class_rogue.webp",
+      "sha256": "3e009ff8e8816067b0798ef97b97262e2b58c2cd80bc313b35263df26a9c4ac6"
+    },
+    {
+      "file": "class_rune.webp",
+      "sha256": "ec61c2421258c126393f5b8f0b76aa5678a1546a8d2ef6fc5e876bc005341b79"
+    },
+    {
+      "file": "class_sancho.webp",
+      "sha256": "9344f52a975cfd9d285bd1e6fc8db5ce5476940ce64ec8f8893250b682a90c3e"
+    },
+    {
+      "file": "class_shadow.webp",
+      "sha256": "fbf6b280bd397ed514b7001a2d795ab47ddd03d0dd9db4f6b1654a445479bded"
+    },
+    {
+      "file": "class_stitch.webp",
+      "sha256": "7e7516337492ef1cba8c5f1546674fafbcb8927a7aa626c7bc6caa45d756f244"
+    },
+    {
+      "file": "class_thorn_crown.webp",
+      "sha256": "a1adad1932ee91e64438585fc119fb16a187db6b6b93f495ed131ff39306fbbd"
+    },
+    {
+      "file": "class_twin_duel.webp",
+      "sha256": "81896fdc796d56629aa7d22cfb4a12251014cbff08d1c4c96be7b16dac0546ab"
+    },
+    {
+      "file": "class_warrior.webp",
+      "sha256": "95e7c56450d3f669dbf36cfa1511ff8f6ffdaf08b9c16070fa749302c62713cf"
+    },
+    {
+      "file": "class_white_knight.webp",
+      "sha256": "4e73ce9049322332c496ff2bba9db761036bc3c7fce4abdc60d81eb348920227"
+    },
+    {
+      "file": "class_windmill.webp",
+      "sha256": "57e393d275b834614ba574f33db26ea4a50aa8c88fea35277ea815e5c8a58550"
+    },
+    {
+      "file": "enemy_01.webp",
+      "sha256": "ec1c5fc00ba12d965511bec5b762abd3606ffcd3f61be5c7fc60e0097b001c5d"
+    },
+    {
+      "file": "enemy_02.webp",
+      "sha256": "44c05501dd5c5ca924e61dacf0537a500074a0830ced42bcd651c0532edcb76d"
+    },
+    {
+      "file": "enemy_03.webp",
+      "sha256": "5de736ae20e70ec5a33baca6567ce95a234f317c2b9d4d9caba3caa4b54578f5"
+    },
+    {
+      "file": "enemy_04.webp",
+      "sha256": "6fa701d4aab608d6979fac21604a8c070b1a6a1e912527416c70b25e6e1176c8"
+    },
+    {
+      "file": "enemy_05.webp",
+      "sha256": "b244d6adf2fed959a9121f1da4b15ca04af8254e5fa010de659ea2309cc9449a"
+    },
+    {
+      "file": "enemy_06.webp",
+      "sha256": "7b25af33cf2c806373a10bbb68461598f8103cd0b890291d999cf8cac1c7cd19"
+    },
+    {
+      "file": "enemy_07.webp",
+      "sha256": "b3932b17c488c984f5939b0f64409a747f89d4e71040b947b4896cf51c8423df"
+    },
+    {
+      "file": "enemy_08.webp",
+      "sha256": "45e7c160065beb8aac82b5f0680640fc0f07db07e284d4a129ab275e2766b1ff"
+    },
+    {
+      "file": "enemy_09.webp",
+      "sha256": "516950ef97f8efd102d3523eccca440fec128931bf000c37fa7db3b2c8ea6ff9"
+    },
+    {
+      "file": "enemy_10.webp",
+      "sha256": "b52f9aed7aa3bb920ebdacbadf8b6ee1b9a3cd665dea109ae611cb09630f73da"
+    },
+    {
+      "file": "enemy_11.webp",
+      "sha256": "f1849106342e8fa6ff50e5a3172b270ce43e5e090fbec0d653da5c3293b1a0bc"
+    },
+    {
+      "file": "enemy_12.webp",
+      "sha256": "7e69ce1c1692597aa77480a70f196f8bba6cb439cbca1dc972b0d815328ad381"
+    },
+    {
+      "file": "enemy_13.webp",
+      "sha256": "eb14299407f86a969717646d137cb310df66e3f483e9c4f5b251b6e0fb82bf5d"
+    },
+    {
+      "file": "enemy_14.webp",
+      "sha256": "41f515f68be00f51330b6d4fe00c41182defd3312d7c0b79398800656991317f"
+    },
+    {
+      "file": "enemy_15.webp",
+      "sha256": "637be83584ec64be0e53730e808222671ae546466690babb26e778305c1f4eb0"
+    },
+    {
+      "file": "enemy_16.webp",
+      "sha256": "a1d1e44389964f97fabaa36f7b7467c62586e3eacb3fb05ed7ebcf78b4c7a6ca"
+    },
+    {
+      "file": "enemy_17.webp",
+      "sha256": "041b45198e7990dac15317902b2a7ef79042af2c3dafaa8684e31c545403f3b6"
+    },
+    {
+      "file": "enemy_18.webp",
+      "sha256": "ba924efe663b9de0f3d723139d7d624e55169fbf628b8342a42b89fb9f748666"
+    },
+    {
+      "file": "enemy_19.webp",
+      "sha256": "24f3109e64ecdcf30ab4cb165fe1542ad83d7f541f8e9f70f38028a377e9d2df"
+    },
+    {
+      "file": "enemy_20.webp",
+      "sha256": "83756d303ae17e65061f2f2bebd16c1ee240d8e1a46d965f000844c4487239bc"
+    },
+    {
+      "file": "enemy_21.webp",
+      "sha256": "e7bd1861eb0c010471de13f47c9b328f0871feeb85063e4e36b127fe19af2ffb"
+    },
+    {
+      "file": "enemy_22.webp",
+      "sha256": "73a8c6d778314031de64ff2b819b0f144e74c4948650f33874ad78e2e6bb76f4"
+    },
+    {
+      "file": "enemy_23.webp",
+      "sha256": "11333859d7977001e859125a7fd2152609ed9c1093f68d9ef3ea286fdc7a4ef5"
+    },
+    {
+      "file": "enemy_24.webp",
+      "sha256": "ea5741e0e31bbc651f19899354cfd6b55057235d6dc370e7d94a13d94dcc9987"
+    },
+    {
+      "file": "enemy_25.webp",
+      "sha256": "af035dbe2221098202dbf71871e8da0052b79f119055880530f761fd14aff7d8"
+    },
+    {
+      "file": "enemy_26.webp",
+      "sha256": "e87555a3ac74d3131a474959236e004a1fc65535f0f5aaec75ae2814a460ce67"
+    },
+    {
+      "file": "enemy_27.webp",
+      "sha256": "23bb05ca483fbc0070892e5ac8ed4bff62ace9362618887df672f5f8407369e5"
+    },
+    {
+      "file": "enemy_28.webp",
+      "sha256": "5d5fa3101479fc1c5847e7ac6cb87c78e9c4d67bbf1792921831fbecc9e62c04"
+    },
+    {
+      "file": "enemy_29.webp",
+      "sha256": "fd689e18ec83f194e9989c841de1df7393409de4ede835d7ba1f180d4520f67d"
+    },
+    {
+      "file": "enemy_30.webp",
+      "sha256": "cd2f8ad8e8ce805d413b910d0e5a65366fc0bc5561769617ec49591280c93620"
+    },
+    {
+      "file": "enemy_31.webp",
+      "sha256": "3948826bdb93fb52ee82642664498d398c1f11603b87c538079f821a77a151c0"
+    },
+    {
+      "file": "enemy_32.webp",
+      "sha256": "4f9ddc9726708a6b16298c76ef566f7f880afb5b526e9ab26824c55208e29750"
+    },
+    {
+      "file": "enemy_mimic.webp",
+      "sha256": "d48aa4912344e50e8a2800e11307f8903f509bec504fc69dbab31fab46250fea"
+    },
+    {
+      "file": "event_00.webp",
+      "sha256": "586077547753b420c7a57f0e5a9122a7a4903a87da4a1b9fe2f6b3bafcb4c778"
+    },
+    {
+      "file": "event_01.webp",
+      "sha256": "0fb96825cf4c505103b87cd89e2b340ce49b5c1be122dd13adfcf45249bcdfd8"
+    },
+    {
+      "file": "event_02.webp",
+      "sha256": "c833f84b96b38c822d4c2117c3761aa70e361e027307f5c4651b522a4f56df5c"
+    },
+    {
+      "file": "event_03.webp",
+      "sha256": "fdb4507de6fdea8870f169d62ac55994251448268be2dc291216ae466a3bd758"
+    },
+    {
+      "file": "event_04.webp",
+      "sha256": "9b86064ae399519c4dd89b1b802a6c7a45efc3305df02bb0fbaef768f9dfca25"
+    },
+    {
+      "file": "event_05.webp",
+      "sha256": "ab5eae15881e2759b50cdcdf172623124b4a90fe76ac13f8eb2d1299e7fc8f02"
+    },
+    {
+      "file": "event_06.webp",
+      "sha256": "92ad0243a8e7293f236f57b9394a54a11de6491037fd446e7aa6022beca73521"
+    },
+    {
+      "file": "event_07.webp",
+      "sha256": "960f4fa8c9e04500bfbcf9c015e4e9ec169b576e5a88bb682c3d1dc205d6d38c"
+    },
+    {
+      "file": "event_08.webp",
+      "sha256": "77f1a00893b8a13e85bb96da8102c9054d1f2d707177514ebd3f7a265f5c7230"
+    },
+    {
+      "file": "event_09.webp",
+      "sha256": "2b079f6e9a5d3c33ec4229fb950466509f8302233c3e020f4dc735387913f815"
+    },
+    {
+      "file": "event_10.webp",
+      "sha256": "d82befeeef45d10afcb5897033b8fd674c69931d47bd0e5059af35cee2478b2c"
+    },
+    {
+      "file": "event_11.webp",
+      "sha256": "5a3bfb31daf5e3a9a031ac30df8bedbfe35a2ae764e9251f68d1c1c50fc3fccc"
+    },
+    {
+      "file": "event_12.webp",
+      "sha256": "ddaa8719ffda4303124a1b19d96468edbfa40b959d392a1d76a0036f94ed4b01"
+    },
+    {
+      "file": "event_13.webp",
+      "sha256": "bf23d84e1959ac3ec8bf2aa0b8d8dd44426102e4f81759a0ab1fdb1d8bd5c9a4"
+    },
+    {
+      "file": "event_14.webp",
+      "sha256": "4d6ca202054785bb2ba314f21851d3aaf8ee889a9fbf2da8f7163f06586bd578"
+    },
+    {
+      "file": "event_15.webp",
+      "sha256": "3ed49806c2fb3ef2cc24538308e0ff3d6e06588d622be68304627044f3913153"
+    },
+    {
+      "file": "event_16.webp",
+      "sha256": "aad4c5941770423efca886bd828f546550ab27aa0a1b5c175f20b5520f83b496"
+    },
+    {
+      "file": "event_17.webp",
+      "sha256": "93eaafed57dfdab3f607c364e93af21446ad08157125f129fa834630079b7f7e"
+    },
+    {
+      "file": "forest-banner.webp",
+      "sha256": "b1d18bbd1a1aed88baaa1e34cafe89a4ed03baf3d4c6d40ab639109e60f3c339"
+    },
+    {
+      "file": "guardian-card.webp",
+      "sha256": "6fefe2a68dd33e02ec58f0577b26e09e9e318603c02497a6642e18b35ff94f17"
+    },
+    {
+      "file": "location_00.webp",
+      "sha256": "b1d18bbd1a1aed88baaa1e34cafe89a4ed03baf3d4c6d40ab639109e60f3c339"
+    },
+    {
+      "file": "location_01.webp",
+      "sha256": "96fa80862691fe141d3fb20320eee4344af11bb2738c0b491d206f4a04547536"
+    },
+    {
+      "file": "location_02.webp",
+      "sha256": "8bc451751ce8bbcbe9b70b9155096927139b08879597dcc4017818455d470d31"
+    },
+    {
+      "file": "location_03.webp",
+      "sha256": "2469d507366a6a9ca704ba06dfd9bc972db8353df876a9b4953bf88e430672a8"
+    },
+    {
+      "file": "location_04.webp",
+      "sha256": "5adede443376d8785a05ebee54125472a7b89dcbaf8c9f9b1d8a3c67bde4ad50"
+    },
+    {
+      "file": "location_05.webp",
+      "sha256": "7c59013408b6ce5eaa7c1b80f7c25145ef00370c8fb643b431cc9a585d9273ee"
+    },
+    {
+      "file": "location_06.webp",
+      "sha256": "133dd52c3a0a3648a58d6762aae8a67a346ad72ff1b1ea4e16cf45cda297febe"
+    },
+    {
+      "file": "location_07.webp",
+      "sha256": "6e96043d70b6f3681912a55614208e9e40915f5666f5f0e21f925b9d3ab50d3b"
+    },
+    {
+      "file": "monster-0.webp",
+      "sha256": "ec1c5fc00ba12d965511bec5b762abd3606ffcd3f61be5c7fc60e0097b001c5d"
+    },
+    {
+      "file": "monster-1.webp",
+      "sha256": "44c05501dd5c5ca924e61dacf0537a500074a0830ced42bcd651c0532edcb76d"
+    },
+    {
+      "file": "monster-2.webp",
+      "sha256": "5de736ae20e70ec5a33baca6567ce95a234f317c2b9d4d9caba3caa4b54578f5"
+    },
+    {
+      "file": "monster-3.webp",
+      "sha256": "6fa701d4aab608d6979fac21604a8c070b1a6a1e912527416c70b25e6e1176c8"
+    },
+    {
+      "file": "monster-4.webp",
+      "sha256": "2a6921e9e2dc25eb61ddf4e51943e0095448d3df1463a7add8a1e3449fca7b1a"
+    },
+    {
+      "file": "monster-5.webp",
+      "sha256": "f1849106342e8fa6ff50e5a3172b270ce43e5e090fbec0d653da5c3293b1a0bc"
+    },
+    {
+      "file": "qa-evidence-live-main.jpg",
+      "sha256": "f6cc8c877fac941d676f5c84bc22cdc05dec79f217fd205dd3eaac47ef654c5e"
+    },
+    {
+      "file": "story_adam.webp",
+      "sha256": "b3029438e4a3d81e5ec8f8dfc0ff9a93e67d626ed45488ade14939e993b255d8"
+    },
+    {
+      "file": "story_ahab.webp",
+      "sha256": "b56413b7eae896f386091f2ed1255db9abfd46e7616abfc1c1655f8cdff3c55a"
+    },
+    {
+      "file": "story_alice.webp",
+      "sha256": "6130765b8aa3d55f1d4f5410c3f00adcd68a90f50dc00203c403fbcd8b3dbab9"
+    }
+  ],
+  "missingClassPortraits": [
+    {
+      "id": "x_ranged_11",
+      "name": "지옥 항로의 쇠뇌수",
+      "purpose": "class portrait",
+      "file": null,
+      "fallback": "text",
+      "suggestedFuturePath": "assets/class_x_ranged_11.webp",
+      "suggestedPathExists": false
+    },
+    {
+      "id": "x_ranged_12",
+      "name": "하멜른의 음표 사수",
+      "purpose": "class portrait",
+      "file": null,
+      "fallback": "text",
+      "suggestedFuturePath": "assets/class_x_ranged_12.webp",
+      "suggestedPathExists": false
+    },
+    {
+      "id": "x_ranged_14",
+      "name": "포그의 일주 저격수",
+      "purpose": "class portrait",
+      "file": null,
+      "fallback": "text",
+      "suggestedFuturePath": "assets/class_x_ranged_14.webp",
+      "suggestedPathExists": false
+    },
+    {
+      "id": "x_ranged_15",
+      "name": "백경의 망루 사냥꾼",
+      "purpose": "class portrait",
+      "file": null,
+      "fallback": "text",
+      "suggestedFuturePath": "assets/class_x_ranged_15.webp",
+      "suggestedPathExists": false
+    },
+    {
+      "id": "x_support_0",
+      "name": "구빈원 붕대지기",
+      "purpose": "class portrait",
+      "file": null,
+      "fallback": "text",
+      "suggestedFuturePath": "assets/class_x_support_0.webp",
+      "suggestedPathExists": false
+    },
+    {
+      "id": "x_support_1",
+      "name": "촛불 성당의 견습수도사",
+      "purpose": "class portrait",
+      "file": null,
+      "fallback": "text",
+      "suggestedFuturePath": "assets/class_x_support_1.webp",
+      "suggestedPathExists": false
+    },
+    {
+      "id": "x_support_2",
+      "name": "산초의 야전 취사병",
+      "purpose": "class portrait",
+      "file": null,
+      "fallback": "text",
+      "suggestedFuturePath": "assets/class_x_support_2.webp",
+      "suggestedPathExists": false
+    },
+    {
+      "id": "x_support_3",
+      "name": "작은 아씨들의 간호사",
+      "purpose": "class portrait",
+      "file": null,
+      "fallback": "text",
+      "suggestedFuturePath": "assets/class_x_support_3.webp",
+      "suggestedPathExists": false
+    },
+    {
+      "id": "x_support_4",
+      "name": "오즈의 마음 수선공",
+      "purpose": "class portrait",
+      "file": null,
+      "fallback": "text",
+      "suggestedFuturePath": "assets/class_x_support_4.webp",
+      "suggestedPathExists": false
+    },
+    {
+      "id": "x_support_5",
+      "name": "성냥의 온기지기",
+      "purpose": "class portrait",
+      "file": null,
+      "fallback": "text",
+      "suggestedFuturePath": "assets/class_x_support_5.webp",
+      "suggestedPathExists": false
+    },
+    {
+      "id": "x_support_6",
+      "name": "노틸러스의 선의",
+      "purpose": "class portrait",
+      "file": null,
+      "fallback": "text",
+      "suggestedFuturePath": "assets/class_x_support_6.webp",
+      "suggestedPathExists": false
+    },
+    {
+      "id": "x_support_7",
+      "name": "토끼굴 길안내자",
+      "purpose": "class portrait",
+      "file": null,
+      "fallback": "text",
+      "suggestedFuturePath": "assets/class_x_support_7.webp",
+      "suggestedPathExists": false
+    },
+    {
+      "id": "x_support_8",
+      "name": "피조물의 상처봉합사",
+      "purpose": "class portrait",
+      "file": null,
+      "fallback": "text",
+      "suggestedFuturePath": "assets/class_x_support_8.webp",
+      "suggestedPathExists": false
+    },
+    {
+      "id": "x_support_9",
+      "name": "노트르담의 종치유사",
+      "purpose": "class portrait",
+      "file": null,
+      "fallback": "text",
+      "suggestedFuturePath": "assets/class_x_support_9.webp",
+      "suggestedPathExists": false
+    },
+    {
+      "id": "x_support_10",
+      "name": "레미제라블의 은촛대지기",
+      "purpose": "class portrait",
+      "file": null,
+      "fallback": "text",
+      "suggestedFuturePath": "assets/class_x_support_10.webp",
+      "suggestedPathExists": false
+    },
+    {
+      "id": "x_support_11",
+      "name": "캔터베리의 순례의사",
+      "purpose": "class portrait",
+      "file": null,
+      "fallback": "text",
+      "suggestedFuturePath": "assets/class_x_support_11.webp",
+      "suggestedPathExists": false
+    },
+    {
+      "id": "x_support_12",
+      "name": "셜우드의 구호대장",
+      "purpose": "class portrait",
+      "file": null,
+      "fallback": "text",
+      "suggestedFuturePath": "assets/class_x_support_12.webp",
+      "suggestedPathExists": false
+    },
+    {
+      "id": "x_support_13",
+      "name": "백지 연맹의 기록보호자",
+      "purpose": "class portrait",
+      "file": null,
+      "fallback": "text",
+      "suggestedFuturePath": "assets/class_x_support_13.webp",
+      "suggestedPathExists": false
+    },
+    {
+      "id": "x_support_14",
+      "name": "스쿠루지의 새벽 구호가",
+      "purpose": "class portrait",
+      "file": null,
+      "fallback": "text",
+      "suggestedFuturePath": "assets/class_x_support_14.webp",
+      "suggestedPathExists": false
+    },
+    {
+      "id": "x_support_15",
+      "name": "천일야화의 생명 이야기꾼",
+      "purpose": "class portrait",
+      "file": null,
+      "fallback": "text",
+      "suggestedFuturePath": "assets/class_x_support_15.webp",
+      "suggestedPathExists": false
+    },
+    {
+      "id": "x_support_16",
+      "name": "돌아온 성냥불의 성녀",
+      "purpose": "class portrait",
+      "file": null,
+      "fallback": "text",
+      "suggestedFuturePath": "assets/class_x_support_16.webp",
+      "suggestedPathExists": false
+    },
+    {
+      "id": "x_occult_0",
+      "name": "거울 장터의 골동품상",
+      "purpose": "class portrait",
+      "file": null,
+      "fallback": "text",
+      "suggestedFuturePath": "assets/class_x_occult_0.webp",
+      "suggestedPathExists": false
+    },
+    {
+      "id": "x_occult_1",
+      "name": "허클베리의 강길잡이",
+      "purpose": "class portrait",
+      "file": null,
+      "fallback": "text",
+      "suggestedFuturePath": "assets/class_x_occult_1.webp",
+      "suggestedPathExists": false
+    },
+    {
+      "id": "x_occult_2",
+      "name": "몽테크리스토의 장부지기",
+      "purpose": "class portrait",
+      "file": null,
+      "fallback": "text",
+      "suggestedFuturePath": "assets/class_x_occult_2.webp",
+      "suggestedPathExists": false
+    },
+    {
+      "id": "x_occult_3",
+      "name": "드라큘라의 주간 문지기",
+      "purpose": "class portrait",
+      "file": null,
+      "fallback": "text",
+      "suggestedFuturePath": "assets/class_x_occult_3.webp",
+      "suggestedPathExists": false
+    },
+    {
+      "id": "x_occult_4",
+      "name": "걸리버의 축척기사",
+      "purpose": "class portrait",
+      "file": null,
+      "fallback": "text",
+      "suggestedFuturePath": "assets/class_x_occult_4.webp",
+      "suggestedPathExists": false
+    },
+    {
+      "id": "x_occult_5",
+      "name": "도리언의 초상 관리인",
+      "purpose": "class portrait",
+      "file": null,
+      "fallback": "text",
+      "suggestedFuturePath": "assets/class_x_occult_5.webp",
+      "suggestedPathExists": false
+    },
+    {
+      "id": "x_occult_6",
+      "name": "보물섬의 암호해독자",
+      "purpose": "class portrait",
+      "file": null,
+      "fallback": "text",
+      "suggestedFuturePath": "assets/class_x_occult_6.webp",
+      "suggestedPathExists": false
+    },
+    {
+      "id": "x_occult_7",
+      "name": "시간 여행의 관측자",
+      "purpose": "class portrait",
+      "file": null,
+      "fallback": "text",
+      "suggestedFuturePath": "assets/class_x_occult_7.webp",
+      "suggestedPathExists": false
+    },
+    {
+      "id": "x_occult_8",
+      "name": "셜록의 흔적 수집가",
+      "purpose": "class portrait",
+      "file": null,
+      "fallback": "text",
+      "suggestedFuturePath": "assets/class_x_occult_8.webp",
+      "suggestedPathExists": false
+    },
+    {
+      "id": "x_occult_9",
+      "name": "오디세우스의 매듭꾼",
+      "purpose": "class portrait",
+      "file": null,
+      "fallback": "text",
+      "suggestedFuturePath": "assets/class_x_occult_9.webp",
+      "suggestedPathExists": false
+    },
+    {
+      "id": "x_occult_10",
+      "name": "카르밀라의 야간 감시자",
+      "purpose": "class portrait",
+      "file": null,
+      "fallback": "text",
+      "suggestedFuturePath": "assets/class_x_occult_10.webp",
+      "suggestedPathExists": false
+    },
+    {
+      "id": "x_occult_11",
+      "name": "체셔의 미소 밀수꾼",
+      "purpose": "class portrait",
+      "file": null,
+      "fallback": "text",
+      "suggestedFuturePath": "assets/class_x_occult_11.webp",
+      "suggestedPathExists": false
+    },
+    {
+      "id": "x_occult_12",
+      "name": "해저 이만리의 유물잠수사",
+      "purpose": "class portrait",
+      "file": null,
+      "fallback": "text",
+      "suggestedFuturePath": "assets/class_x_occult_12.webp",
+      "suggestedPathExists": false
+    },
+    {
+      "id": "x_occult_14",
+      "name": "세헤라자드의 결말 협상가",
+      "purpose": "class portrait",
+      "file": null,
+      "fallback": "text",
+      "suggestedFuturePath": "assets/class_x_occult_14.webp",
+      "suggestedPathExists": false
+    },
+    {
+      "id": "whale_slayer",
+      "name": "백경 살해자",
+      "purpose": "class portrait",
+      "file": null,
+      "fallback": "text",
+      "suggestedFuturePath": "assets/class_whale_slayer.webp",
+      "suggestedPathExists": false
+    },
+    {
+      "id": "alice_return",
+      "name": "앨리스의 귀환 안내자",
+      "purpose": "class portrait",
+      "file": null,
+      "fallback": "text",
+      "suggestedFuturePath": "assets/class_alice_return.webp",
+      "suggestedPathExists": false
+    },
+    {
+      "id": "victor_heir",
+      "name": "빅터의 속죄 봉합사",
+      "purpose": "class portrait",
+      "file": null,
+      "fallback": "text",
+      "suggestedFuturePath": "assets/class_victor_heir.webp",
+      "suggestedPathExists": false
+    },
+    {
+      "id": "quixote_squire",
+      "name": "라만차의 맹세 종자",
+      "purpose": "class portrait",
+      "file": null,
+      "fallback": "text",
+      "suggestedFuturePath": "assets/class_quixote_squire.webp",
+      "suggestedPathExists": false
+    },
+    {
+      "id": "sherwood_warden",
+      "name": "셜우드의 숲 파수장",
+      "purpose": "class portrait",
+      "file": null,
+      "fallback": "text",
+      "suggestedFuturePath": "assets/class_sherwood_warden.webp",
+      "suggestedPathExists": false
+    },
+    {
+      "id": "oz_restorer",
+      "name": "오즈의 심장 복원사",
+      "purpose": "class portrait",
+      "file": null,
+      "fallback": "text",
+      "suggestedFuturePath": "assets/class_oz_restorer.webp",
+      "suggestedPathExists": false
+    },
+    {
+      "id": "faust_release",
+      "name": "파우스트의 계약 파기자",
+      "purpose": "class portrait",
+      "file": null,
+      "fallback": "text",
+      "suggestedFuturePath": "assets/class_faust_release.webp",
+      "suggestedPathExists": false
+    },
+    {
+      "id": "margin_keeper",
+      "name": "경계의 여백 수호자",
+      "purpose": "class portrait",
+      "file": null,
+      "fallback": "text",
+      "suggestedFuturePath": "assets/class_margin_keeper.webp",
+      "suggestedPathExists": false
+    }
+  ],
+  "npcPortraits": [
+    {
+      "id": "alice",
+      "name": "앨리스",
+      "file": null,
+      "storyFallback": "assets/story_alice.webp",
+      "regionFallback": false
+    },
+    {
+      "id": "queen",
+      "name": "하트 여왕",
+      "file": null,
+      "storyFallback": null,
+      "regionFallback": true
+    },
+    {
+      "id": "creature",
+      "name": "피조물",
+      "file": null,
+      "storyFallback": "assets/story_adam.webp",
+      "regionFallback": false
+    },
+    {
+      "id": "victor",
+      "name": "빅터",
+      "file": null,
+      "storyFallback": "assets/story_adam.webp",
+      "regionFallback": false
+    },
+    {
+      "id": "ahab",
+      "name": "에이해브",
+      "file": null,
+      "storyFallback": "assets/story_ahab.webp",
+      "regionFallback": false
+    },
+    {
+      "id": "quixote",
+      "name": "돈키호테",
+      "file": null,
+      "storyFallback": null,
+      "regionFallback": true
+    }
+  ],
+  "equipment": {
+    "count": 1000,
+    "individualMappings": 0,
+    "fallback": {
+      "weapon": "assets/gear_weapon.svg",
+      "armor": "assets/gear_armor.svg",
+      "charm": "assets/gear_charm.svg"
+    }
+  },
+  "notes": [
+    "Suggested future paths are not existing files or approved image assignments.",
+    "Unreferenced candidates and legacy duplicates remain preserved.",
+    "No dedicated settings screen exists. Mobile browser chrome and actual device behavior require physical testing."
+  ]
+}
