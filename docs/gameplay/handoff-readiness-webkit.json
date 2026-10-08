@@ -1,0 +1,34 @@
+{
+  "status": "PASS",
+  "engine": "webkit",
+  "base": "http://127.0.0.1:4180/",
+  "checks": [
+    "360: warrior actual start/travel/choice/refresh/continue",
+    "360: rogue actual start/travel/choice/refresh/continue",
+    "360: mage actual start/travel/choice/refresh/continue",
+    "360: adventurer actual start/travel/choice/refresh/continue",
+    "360: hunter actual start/travel/choice/refresh/continue",
+    "360: guardian actual start/travel/choice/refresh/continue",
+    "360: inventory/workshop/codex/journal/credits/restart/status, file import, simulated pageshow, null-image fallback",
+    "390: warrior actual start/travel/choice/refresh/continue",
+    "390: rogue actual start/travel/choice/refresh/continue",
+    "390: mage actual start/travel/choice/refresh/continue",
+    "390: adventurer actual start/travel/choice/refresh/continue",
+    "390: hunter actual start/travel/choice/refresh/continue",
+    "390: guardian actual start/travel/choice/refresh/continue",
+    "390: inventory/workshop/codex/journal/credits/restart/status, file import, simulated pageshow, null-image fallback",
+    "430: warrior actual start/travel/choice/refresh/continue",
+    "430: rogue actual start/travel/choice/refresh/continue",
+    "430: mage actual start/travel/choice/refresh/continue",
+    "430: adventurer actual start/travel/choice/refresh/continue",
+    "430: hunter actual start/travel/choice/refresh/continue",
+    "430: guardian actual start/travel/choice/refresh/continue",
+    "430: inventory/workshop/codex/journal/credits/restart/status, file import, simulated pageshow, null-image fallback",
+    "intentional image 404: visible text fallback, game start remains usable, no runtime exception"
+  ],
+  "limitations": [
+    "mobile touch emulation, not physical devices",
+    "persisted pageshow is a dispatched event, not OS process restoration",
+    "no separate settings screen exists; supported panels inspected"
+  ]
+}

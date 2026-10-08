@@ -17,3 +17,9 @@
 ## 안전 수정 checkpoint
 
 `202002a`에서 소규모 이미지2장,2:3 표시,한국어 비교정보와 재생성 bundle/registry를 커밋·push했다. N–T는 별도 분석 커밋으로 이어진다. 미확인 후보 연결/수치 조정/스토리 변경은 없다.
+
+## 통합 검증 checkpoint
+
+분석 커밋 `18099ca995ea1cbfdad8c5e2e5e43b00354eeec9`. 최종 소스의 npm test/build/export/HTML 경계·동기화 통과. Chromium/WebKit의 360·390·430 터치 여정 회귀 모두 통과, 추가 readiness 각각22개 통과, 신규 자산/표시30화면씩 통과. 두 새 이미지 원본과 주요 화면을 직접 열어 확인했다. 런타임/콘솔 오류0. 기존10이미지 decode 회귀도 유지했다.
+
+PR: https://github.com/dksjrhrnak-gif/black-forest-rpg/pull/1 . CI의 최신 커밋 결과는 PR Checks에서 확인한다. main/Pages는 기준 SHA 그대로이며 신규 그림이 공개 페이지에 배포됐다고 주장하지 않는다. 물리 기기·Firefox·장시간 독서·자연 모든 히든·30턴이상 전투는 미검증이다. 남은 큰 변경의 승인 범위와 우선순위는 개성/탐험/이야기 제안 문서에 기록했다.

@@ -12,4 +12,4 @@
 
 ## 후속 완료 상태 (H–M / N–T)
 
-위 목록은 H 완료 당시 checkpoint이며 현재 상태는 CODEX_GAMEPLAY_HANDOFF.md를 따른다. I의 기존 B는0이라 임의 연결하지 않았다. J는 x_support_16/w0 독립2장 제작·검수/연결 완료(72클래스/1전용아이템). K는 360/390/430×Chromium/WebKit의30화면씩 검사 및 해당 화면 육안 확인. L은 GAME_QUALITY_REVIEW.md와 N–T 상세 보고 완료. M은 관련 회귀/CI/PR 준비 중이다. 전체 이미지 제작을 완료했다고 주장하지 않는다.
+위 목록은 H 완료 당시 checkpoint이며 현재 상태는 CODEX_GAMEPLAY_HANDOFF.md를 따른다. I의 기존 B는0이라 임의 연결하지 않았다. J는 x_support_16/w0 독립2장 제작·검수/연결 완료(72클래스/1전용아이템). K는 360/390/430×Chromium/WebKit의30화면씩 검사 및 해당 화면 육안 확인. L은 GAME_QUALITY_REVIEW.md와 N–T 상세 보고 완료. M은 관련 회귀 통과 후 PR #1을 생성했다. 최신 CI 결과는 PR Checks를 따른다. 전체 이미지 제작을 완료했다고 주장하지 않는다.
