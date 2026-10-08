@@ -6,9 +6,9 @@
 
 A: 정상 연결. B: 정확한 ID의 기존 파일이 미연결. C: 파일은 있으나 정확한 ID 불명. D: 전용 파일 없음. E: 연결 오류. 동일 해시 사본과 QA screenshot은 별도 표기한다.
 
-직업 114종 중 71종 A / 43종 D. NPC 전용 portrait 6종 D(4명은 기존 story 그림, 2명은 지역 배경). Queen/Quixote story 2종 D. 장비 1000종은 전용 그림 D이며 3개 공용 슬롯 SVG는 정상 A이다. 공용 아이콘 사용을 개별 그림 완성으로 세지 않는다.
+직업 114종 중 72종 A / 42종 D. NPC 전용 portrait 6종 D(4명은 기존 story 그림, 2명은 지역 배경). Queen/Quixote story 2종 D. 장비 1000종 중 w0 1종은 전용 그림 A, 999종은 D이며 3개 공용 슬롯 SVG는 정상 A이다. 공용 아이콘 사용을 개별 그림 완성으로 세지 않는다.
 
-현재 연결 파일 147개/149매핑. 미연결 파일 중 기존 자산의 동일 사본 113개, QA 사진 1개, 정확한 ID 없는 그림 2개. B/E로 확정된 항목은 0개. root guardian-card.webp와 monster-4.webp를 직접 열었지만 이름/외형만으로 수호자·특정 적에 배정하지 않았다.
+현재 연결 파일 149개/151매핑. 미연결 파일 중 기존 자산의 동일 사본 113개, QA 사진 1개, 정확한 ID 없는 그림 2개. B/E로 확정된 항목은 0개. root guardian-card.webp와 monster-4.webp를 직접 열었지만 이름/외형만으로 수호자·특정 적에 배정하지 않았다.
 
 외부 라이브러리의 307개 과거 metadata는 현재 바이트 접근이 없다. 다운로드/실물 검수 없이 파일 존재나 연결 가능성을 확정하지 않는다.
 
@@ -97,7 +97,7 @@ A: 정상 연결. B: 정확한 ID의 기존 파일이 미연결. C: 파일은 �
 | x_support_13 | 백지 연맹의 기록보호자 | class | 3 | D | 전용 파일 없음 | assets/class_x_support_13.webp |
 | x_support_14 | 스쿠루지의 새벽 구호가 | class | 3 | D | 전용 파일 없음 | assets/class_x_support_14.webp |
 | x_support_15 | 천일야화의 생명 이야기꾼 | class | 3 | D | 전용 파일 없음 | assets/class_x_support_15.webp |
-| x_support_16 | 돌아온 성냥불의 성녀 | class | Hidden | D | 전용 파일 없음 | assets/class_x_support_16.webp |
+| x_support_16 | 돌아온 성냥불의 성녀 | class | Hidden | A | assets/class_x_support_16.webp | assets/class_x_support_16.webp |
 | x_support_17 | 유리 심장의 재봉사 | class | Hidden | A | assets/class_x_support_17.webp | assets/class_x_support_17.webp |
 | x_occult_0 | 거울 장터의 골동품상 | class | 1 | D | 전용 파일 없음 | assets/class_x_occult_0.webp |
 | x_occult_1 | 허클베리의 강길잡이 | class | 1 | D | 전용 파일 없음 | assets/class_x_occult_1.webp |
@@ -151,3 +151,7 @@ A: 정상 연결. B: 정확한 ID의 기존 파일이 미연결. C: 파일은 �
 4. 장비는 데이터 정의가 명확한 항목부터 작은 배치로 검수하고 개별 ID에만 연결. 외부 후보 그림은 제작 ID 근거를 먼저 확보한다.
 
 생성 → 원본 검수 → 2:3 확인 → WebP 배포 파일 → 해당 ID만 연결 → 브라우저 decode/UI/숨김 조건/세이브 보존 검증. 생성되지 않은 나머지는 계속 D로 유지한다.
+
+## 소규모 제작·연결 결과
+
+x_support_16와 w0를 각각 독립 생성했다. 원본 1024×1536을 육안 검수한 뒤 640×960 WebP로 배포용 변환했다. 성인 인물 1명/장검 1개, 문구·UI·콜라주 없음, 기존 화풍과 이름·실제 정의를 대조했다. assets.js의 정확한 ID에만 연결했다. w0는 등급이 드롭마다 달라 전설 고정 장식을 넣지 않았다. 기존 ID 불명 2장은 계속 미연결이다. 원본은 /workspace/generated_images에 남아 있다.

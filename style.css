@@ -1025,3 +1025,10 @@
 #black-forest-game .scene-story-art .scene-hero-head{position:absolute;top:0;left:0;right:0}
 #black-forest-game .scene-story-art .scene-hero-shade{bottom:auto;aspect-ratio:2/3;max-height:640px;background:linear-gradient(180deg,#030705d6 0%,#03070550 15%,transparent 30%,#03070520 90%,#070b09 100%)}
 #black-forest-game .scene-story-art .scene-hero-body{margin-top:0;padding-top:16px;background:#070b09}
+
+/* Dedicated item art preserves its full 2:3 portrait in cards and equipment lists. */
+#black-forest-game .gear-icon.item-art{width:40px;height:60px;aspect-ratio:2/3;object-fit:contain}
+#black-forest-game .gear:has(.item-art){display:flow-root}
+#black-forest-game .armory-sheet .gear .gear-icon.item-art{display:block}
+#black-forest-game .armory-icon:has(.item-art){width:32px;height:48px}
+#black-forest-game .armory-icon .gear-icon.item-art{width:100%;height:100%}

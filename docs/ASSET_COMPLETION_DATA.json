@@ -1580,6 +1580,18 @@
       "sha256": "6130765b8aa3d55f1d4f5410c3f00adcd68a90f50dc00203c403fbcd8b3dbab9",
       "classification": "A_DUPLICATE",
       "needsConnection": false
+    },
+    {
+      "file": "assets/class_x_support_16.webp",
+      "sha256": "6ac72d4b6276bcaaa61ef193f49fd98db955006fd28ad451cc253ae39d1cb2a2",
+      "classification": "A",
+      "needsConnection": false
+    },
+    {
+      "file": "assets/item_w0.webp",
+      "sha256": "aad6ef6f79bdcc3bbb8598655bc8f67da898f359dd336683ad779f3da2c77ba7",
+      "classification": "A",
+      "needsConnection": false
     }
   ],
   "records": [
@@ -3614,16 +3626,16 @@
       "kind": "class",
       "tier": null,
       "hidden": true,
-      "file": null,
-      "exists": false,
-      "classification": "D",
+      "file": "assets/class_x_support_16.webp",
+      "exists": true,
+      "classification": "A",
       "ui": [
         "start if starter",
         "jobs after discovery",
         "equipment",
         "status"
       ],
-      "needsProduction": true,
+      "needsProduction": false,
       "source": {
         "lore": "재가 된 소원을 다시 사람에게 돌려준다.",
         "role": "회복과 방어",
@@ -3631,7 +3643,8 @@
         "description": "치명타 +10% · 첫 공격 피해 +16% / 스킬은 HP 6% 회복"
       },
       "target": "assets/class_x_support_16.webp",
-      "prompt": "ONE independent vertical 2:3 full-bleed illustration. Cinematic painterly Victorian gothic dark fantasy, weathered textures, deep teal shadows and muted warm amber. No text, UI, logos, watermark, collage or card frame. Exactly ONE adult character, no other people. Depict 돌아온 성냥불의 성녀. Literary identity: 재가 된 소원을 다시 사람에게 돌려준다. Role: 회복과 방어. Hidden class: elaborate singular silhouette, intense supernatural light and carefully detailed ceremonial attire. Do not put numerical abilities into the image."
+      "prompt": "ONE independent vertical 2:3 full-bleed illustration. Cinematic painterly Victorian gothic dark fantasy, weathered textures, deep teal shadows and muted warm amber. No text, UI, logos, watermark, collage or card frame. Exactly ONE adult character, no other people. Depict 돌아온 성냥불의 성녀. Literary identity: 재가 된 소원을 다시 사람에게 돌려준다. Role: 회복과 방어. Hidden class: elaborate singular silhouette, intense supernatural light and carefully detailed ceremonial attire. Do not put numerical abilities into the image.",
+      "production": "Generated independently, visually reviewed; 640x960 WebP, 2026-10-08"
     },
     {
       "id": "x_support_17",
@@ -4588,16 +4601,16 @@
       "name": "쇠 장검",
       "kind": "item",
       "tier": "rolled per drop",
-      "file": null,
-      "exists": false,
-      "classification": "D",
+      "file": "assets/item_w0.webp",
+      "exists": true,
+      "classification": "A",
       "ui": [
         "equipment",
         "inventory",
         "loot"
       ],
       "currentSharedIcon": "assets/gear_weapon.svg",
-      "needsProduction": true,
+      "needsProduction": false,
       "source": {
         "slot": "weapon",
         "category": "무기-검",
@@ -4606,7 +4619,8 @@
         "unique": false
       },
       "target": "assets/item_w0.webp",
-      "prompt": "ONE independent vertical 2:3 full-bleed illustration. Cinematic painterly Victorian gothic dark fantasy, weathered textures, deep teal shadows and muted warm amber. No text, UI, logos, watermark, collage or card frame. Exactly ONE standalone item, no person, hand or collection. Object: 쇠 장검. Exact type: 무기-검; slot weapon. Neutral base portrait: rarity is rolled separately and the UI supplies rarity styling, so do not falsely depict this ID as always legendary. Never substitute another object because a candidate filename resembles this name."
+      "prompt": "ONE independent vertical 2:3 full-bleed illustration. Cinematic painterly Victorian gothic dark fantasy, weathered textures, deep teal shadows and muted warm amber. No text, UI, logos, watermark, collage or card frame. Exactly ONE standalone item, no person, hand or collection. Object: 쇠 장검. Exact type: 무기-검; slot weapon. Neutral base portrait: rarity is rolled separately and the UI supplies rarity styling, so do not falsely depict this ID as always legendary. Never substitute another object because a candidate filename resembles this name.",
+      "production": "Generated independently, visually reviewed; 640x960 WebP, 2026-10-08"
     },
     {
       "id": "w1",
@@ -29595,5 +29609,15 @@
     "C": "existing candidate image without exact ID; 2 files retained",
     "D": "no dedicated file; existing shared/text fallback recorded explicitly",
     "E": "wrong reference or image identity; none confirmed"
+  },
+  "currentCompletion": {
+    "connectedFiles": 149,
+    "connectedMappings": 151,
+    "dedicatedClasses": 72,
+    "missingClasses": 42,
+    "dedicatedItems": 1,
+    "missingItems": 999,
+    "missingNpc": 6,
+    "missingStory": 2
   }
 }

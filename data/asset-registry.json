@@ -71,6 +71,7 @@
     "self_named": "assets/class_self_named.webp",
     "dream_guard": "assets/class_dream_guard.webp",
     "court_witness": "assets/class_court_witness.webp",
+    "x_support_16": "assets/class_x_support_16.webp",
     "x_ranged_11": null,
     "x_ranged_12": null,
     "x_ranged_14": null,
@@ -91,7 +92,6 @@
     "x_support_13": null,
     "x_support_14": null,
     "x_support_15": null,
-    "x_support_16": null,
     "x_occult_0": null,
     "x_occult_1": null,
     "x_occult_2": null,
@@ -218,7 +218,7 @@
     "charm": "assets/gear_charm.svg"
   },
   "gearTemplates": {
-    "w0": null,
+    "w0": "assets/item_w0.webp",
     "w1": null,
     "w2": null,
     "w3": null,
