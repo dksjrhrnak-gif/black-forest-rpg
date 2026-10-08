@@ -23,3 +23,14 @@
 분석 커밋 `18099ca995ea1cbfdad8c5e2e5e43b00354eeec9`. 최종 소스의 npm test/build/export/HTML 경계·동기화 통과. Chromium/WebKit의 360·390·430 터치 여정 회귀 모두 통과, 추가 readiness 각각22개 통과, 신규 자산/표시30화면씩 통과. 두 새 이미지 원본과 주요 화면을 직접 열어 확인했다. 런타임/콘솔 오류0. 기존10이미지 decode 회귀도 유지했다.
 
 PR: https://github.com/dksjrhrnak-gif/black-forest-rpg/pull/1 . CI의 최신 커밋 결과는 PR Checks에서 확인한다. main/Pages는 기준 SHA 그대로이며 신규 그림이 공개 페이지에 배포됐다고 주장하지 않는다. 물리 기기·Firefox·장시간 독서·자연 모든 히든·30턴이상 전투는 미검증이다. 남은 큰 변경의 승인 범위와 우선순위는 개성/탐험/이야기 제안 문서에 기록했다.
+
+## 최종 원격 CI 결과
+
+검증 코드 SHA: `a04d0ec0ae594a32fe8a32c37f0408c40e287708`.
+
+- [Handoff QA 37756428734](https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/37756428734): SUCCESS. 로직/고정시드 분석과 Chromium·WebKit 클릭/터치4조합, 추가 readiness/전용 그림30화면 검사.5job 성공. main 전용 live-pages는 QA 브랜치에서 skipped.
+- [통합 QA 37756437708](https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/37756437708): SUCCESS. verify와5폭×2엔진의대사/선택10조합,11job 성공. verify는 실제HTTP149자산과320/360/370/375/390/430/768/1280의 Chromium 클릭·터치/WebKit 터치를 통과했다.
+- 최종 기능 검사 실패0. 이전 코드 커밋의 중복 실행2개는 최신 커밋 검사를 위해 취소했다. 취소와 실패는 구분한다.
+- 후속 최종 커밋은 위 결과 기록과 직업 제안 문안의 현재 역할 명확화만 포함한다. 실행 소스·데이터·bundle은 검증 코드SHA와 같으며 문서 갱신에 동일 검사를 반복하지 않는다.
+
+승인 우선: P1 직업 내 행동 개성/형제 비교, P2 지역 조건과이벤트3개·장비 선택성, P3 경제·제작 확장/엔딩 차별화. 각 변경의 대상·효과·위험·회귀는 CLASS_IDENTITY_PROPOSALS.md, EXPLORATION_REWARD_REVIEW.md, STORY_REVIEW.md에 구체화했다. 현 PR은 안전 수정과 분석만 리뷰/병합 가능하며, main 병합 이후 새SHA의공개Pages 검수가 다음 배포 단계다.
