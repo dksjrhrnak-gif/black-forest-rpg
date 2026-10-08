@@ -1025,3 +1025,9 @@
 #black-forest-game .scene-story-art .scene-hero-head{position:absolute;top:0;left:0;right:0}
 #black-forest-game .scene-story-art .scene-hero-shade{bottom:auto;aspect-ratio:2/3;max-height:640px;background:linear-gradient(180deg,#030705d6 0%,#03070550 15%,transparent 30%,#03070520 90%,#070b09 100%)}
 #black-forest-game .scene-story-art .scene-hero-body{margin-top:0;padding-top:16px;background:#070b09}
+
+/* Handoff audit: both HUD controls measured 36px on mobile. */
+@media(max-width:700px){
+  #black-forest-game .top>button,
+  #black-forest-game .stats .small{min-height:44px}
+}
