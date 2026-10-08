@@ -1,0 +1,77 @@
+{
+  "testedMainCommit": "6b9ede29e7c45f20be14acf24ae090fb8ece1fe1",
+  "applicationCommit": "13c61375f0545cadc5c53a319a29ed04b8eca194",
+  "deployment": {
+    "runId": 37747000199,
+    "deploymentId": 6930365406,
+    "status": "success",
+    "source": "main /"
+  },
+  "http": {
+    "base": "https://dksjrhrnak-gif.github.io/black-forest-rpg/",
+    "htmlSha256": "e1d0ddc6edc4df0f824730765eaf44e3861378c556525fd200aeed175f9e5d81",
+    "assetFiles": 147,
+    "http200": true,
+    "exactAssetBytes": true,
+    "status": "PASS"
+  },
+  "cloudWebKitTouch": [
+    "360x800: PASS touch panels, gear, cross-tree lock, dialogue, battle, one tap/turn, reload, corrupt save, image bounds, longest class/equipment names, zero JS/console errors; player-controlled results/reward reload/duplicate clicks/scene image lifetime/HTTP images PASS",
+    "390x844: PASS touch panels, gear, cross-tree lock, dialogue, battle, one tap/turn, reload, corrupt save, image bounds, longest class/equipment names, zero JS/console errors; player-controlled results/reward reload/duplicate clicks/scene image lifetime/HTTP images PASS",
+    "430x932: PASS touch panels, gear, cross-tree lock, dialogue, battle, one tap/turn, reload, corrupt save, image bounds, longest class/equipment names, zero JS/console errors; player-controlled results/reward reload/duplicate clicks/scene image lifetime/HTTP images PASS"
+  ],
+  "cloudWebKitSupplementary": {
+    "status": "PASS",
+    "engine": "webkit",
+    "base": "https://dksjrhrnak-gif.github.io/black-forest-rpg/",
+    "checks": [
+      "360: warrior actual start/travel/choice/refresh/continue",
+      "360: rogue actual start/travel/choice/refresh/continue",
+      "360: mage actual start/travel/choice/refresh/continue",
+      "360: adventurer actual start/travel/choice/refresh/continue",
+      "360: hunter actual start/travel/choice/refresh/continue",
+      "360: guardian actual start/travel/choice/refresh/continue",
+      "360: inventory/workshop/codex/journal/credits/restart/status, file import, simulated pageshow, null-image fallback",
+      "390: warrior actual start/travel/choice/refresh/continue",
+      "390: rogue actual start/travel/choice/refresh/continue",
+      "390: mage actual start/travel/choice/refresh/continue",
+      "390: adventurer actual start/travel/choice/refresh/continue",
+      "390: hunter actual start/travel/choice/refresh/continue",
+      "390: guardian actual start/travel/choice/refresh/continue",
+      "390: inventory/workshop/codex/journal/credits/restart/status, file import, simulated pageshow, null-image fallback",
+      "430: warrior actual start/travel/choice/refresh/continue",
+      "430: rogue actual start/travel/choice/refresh/continue",
+      "430: mage actual start/travel/choice/refresh/continue",
+      "430: adventurer actual start/travel/choice/refresh/continue",
+      "430: hunter actual start/travel/choice/refresh/continue",
+      "430: guardian actual start/travel/choice/refresh/continue",
+      "430: inventory/workshop/codex/journal/credits/restart/status, file import, simulated pageshow, null-image fallback",
+      "intentional image 404: visible text fallback, game start remains usable, no runtime exception"
+    ],
+    "limitations": [
+      "mobile touch emulation, not physical devices",
+      "persisted pageshow is a dispatched event, not OS process restoration",
+      "no separate settings screen exists; supported panels inspected"
+    ]
+  },
+  "githubActions": {
+    "handoff": {
+      "runId": 37747000995,
+      "status": "success",
+      "publicPagesChromium": "success",
+      "publicPagesWebKit": "success"
+    },
+    "integrated": {
+      "runId": 37747000930,
+      "status": "success",
+      "jobs": 11,
+      "scope": "verify plus Chromium/WebKit story widths 320/360/375/390/430; full existing viewport suite and published asset checks"
+    }
+  },
+  "limitations": {
+    "cloudChromiumPublicPages": "unverified: proxy CA is not trusted; persistent NSS import rejected by automatic approval review, not applied",
+    "firefox": "unverified: host sandbox/framebuffer initialization failure",
+    "physicalDevices": "unverified",
+    "osProcessRestore": "unverified; synthetic pageshow event test only"
+  }
+}

@@ -122,8 +122,26 @@
     "settings": "No separate settings screen exists; available user panels tested"
   },
   "publicPages": {
-    "status": "pending final main deployment",
-    "baselineMain": "d670c57e4073912ba3bc57884262c92eaf1691cf",
-    "baselineHtml": "5edd9a2554993603ae4a081ab58530b4c69cecd57e45b546cdb54283993ee1ae"
+    "status": "PASS",
+    "testedMainCommit": "6b9ede29e7c45f20be14acf24ae090fb8ece1fe1",
+    "htmlSha256": "e1d0ddc6edc4df0f824730765eaf44e3861378c556525fd200aeed175f9e5d81",
+    "linkedAssets": 147,
+    "publicWebKitTouchViewports": [
+      360,
+      390,
+      430
+    ],
+    "publicSupplementaryChecks": 22,
+    "githubActionsChromium": "success",
+    "githubActionsWebKit": "success",
+    "report": "CODEX_PAGES_RESULTS.json"
+  },
+  "campMenuBeforeAfter": {
+    "status": "PASS",
+    "beforeCommit": "d670c57e4073912ba3bc57884262c92eaf1691cf",
+    "afterApplicationCommit": "13c61375f0545cadc5c53a319a29ed04b8eca194",
+    "scene": "chapter",
+    "before": "equipment menu enabled; click silently ignored, saved state preserved",
+    "after": "equipment menu visibly disabled; saved exploration restored"
   }
 }

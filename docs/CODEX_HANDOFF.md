@@ -55,3 +55,25 @@
 - 공개 Pages 기준 main HTML과 바이트 동일 확인. Node는 NODE_USE_ENV_PROXY=1로 지원 프록시 경로를 사용한다. qa-browser.cjs는 BF_USE_ENV_PROXY=1일 때 기존 HTTPS_PROXY를 이용한다. 인증서 값/프록시 자격증명은 저장하지 않는다. CI/로컬 기본 경로는 유지한다.
 - WebKit에서 기존 신뢰 설정으로 공개 Pages HTTP 200 및 실제 시작 버튼 동작 PASS. Chromium은 프록시 CA 신뢰 오류로 공개 Pages 플레이가 미검증이다. 플랫폼 CA를 영구 NSS 저장소에 추가하려던 작업은 자동 승인 검토가 향후 TLS 신뢰 범위 확대를 이유로 거부했고, 해당 저장소를 변경하거나 우회하지 않았다. 공개 사이트 검증은 이미 가능한 WebKit으로 진행한다.
 - 마지막 완료 Phase: F. 다음 시작점: 검증된 QA 변경을 main에 fast-forward 반영 → Pages 새 HTML/147개 자산 동일 확인 → WebKit 공개 URL 3폭 실제 터치 회귀 → 최종 문서 커밋 및 원격 SHA 확인.
+
+## Phase G — 공개 배포 검증
+
+- 검증된 QA를 main에 fast-forward 반영했다. 검증 main/QA: `6b9ede29e7c45f20be14acf24ae090fb8ece1fe1`. 게임 변경의 원래 커밋은 `13c61375f0545cadc5c53a319a29ed04b8eca194`이며 이미 적용된 스토리 입력/저장 수정을 중복 병합하지 않았다.
+- Pages 배포 [37747000199](https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/37747000199) success, deployment `6930365406`, 해당 main SHA 확인. 공개 HTML SHA256 `e1d0ddc6edc4df0f824730765eaf44e3861378c556525fd200aeed175f9e5d81`, 147개 연결 자산 HTTP 200 및 바이트 동일 PASS.
+- 클라우드에서 **공개 URL**의 WebKit 360×800/390×844/430×932 터치 여정 회귀 및 추가 22검사 PASS. 실제 첫 챕터 화면도 열어 그림·서술·세 선택지·비활성 장비 메뉴를 확인했다. localhost 결과를 실서비스 결과로 대체하지 않았다.
+- main 인수인계 Actions [37747000995](https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/37747000995) 전체 success: logic, Chromium/WebKit 클릭/터치 4 job, 공개 Pages Chromium/WebKit 2 job. GitHub Actions의 Chromium 공개 사이트 검증은 클라우드 Chromium의 인증서 제한과 별개로 성공했다.
+- 기존 통합 Actions [37747000930](https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/37747000930) 전체 success: verify와 Chromium/WebKit 스토리 320/360/375/390/430px 10 job. 기존 8폭 클릭/터치와 공개 자산 검사도 verify job에서 통과했다.
+- 이전 main HTML을 그대로 브라우저에 로드해 탐험 chapter에서 장비 메뉴가 활성 상태로 보이지만 클릭이 무시되는 현상을 직접 재현했다. 저장 상태는 보존됐으며, 현재 번들에서는 같은 저장을 복원했을 때 장비 메뉴가 disabled로 표시된다. 기존 QA 수정의 실제 전/후 결과를 CODEX_QA_RESULTS.json에 남겼다.
+- 공개 서비스 증거: CODEX_PAGES_RESULTS.json. 전체 저장소 이미지 263파일의 경로/해시, 연결 및 부족 항목의 명칭/용도/제안 경로: CODEX_ASSET_AUDIT.json. 제안 경로는 실제 존재하는 파일로 취급하지 않는다.
+- 직업 그림 71장 실제 decode PASS. 원본 비율이 다른 토끼굴 문지기(600×720), 피쿼드호 갑판검사(600×500), 거울 복도의 권투사(600×400)는 모바일에서 CSS 2:3 + contain으로 표시되는 것을 따로 확인했다. 원본 이미지 변경·삭제·재생성 0건.
+
+## 최종 상태와 다음 실행
+
+- 마지막 완료 Phase: G (요청된 로직/저장/이미지/모바일/공개 Pages 검증).
+- 이번 신규 게임 수정은 없다. 기존 미완료 야영지 메뉴 수정 1커밋을 검증·반영했고, 테스트/프록시 실행 지원/인수인계 기록만 추가했다. BF1/BF2/BF3 구조와 게임 수치/콘텐츠/디자인을 보존했다.
+- 최종 문서 커밋은 위 검증 커밋 뒤에 이어지는 docs-only 커밋이다. 정확한 최신 SHA는 `git ls-remote origin refs/heads/main refs/heads/qa/resume-checkpoint-20261008`으로 확인한다. 문서 안에 자기 커밋 SHA를 만들기 위해 반복 amend하지 않는다.
+- **P0:** 이번 검사에서 재현된 미해결 치명적 진행/저장/런타임 오류 없음.
+- **P1:** 이번 요청의 필수 자동화 검증에서 미해결 실패 없음.
+- **P2:** 실제 iOS/Android 터치·브라우저 하단 UI·OS 탭/프로세스 복원, 클라우드 Firefox 실행, 기존 미제작/ID 미확정 전용 이미지. 모두 미검증/기존 선택적 보완으로 구분한다. 플레이타임 2–4시간/세션 20–40분도 직접 측정하지 않았다.
+- **다음 시작점:** 먼저 main 최신 SHA와 위 Actions/Pages 상태를 읽고 CODEX_PAGES_RESULTS.json의 검증 SHA/HTML 해시와 비교한다. 코드가 같으면 완료된 기능을 재구현하지 않는다. 새 작업은 실제 기기 검수 또는 원본 ID/제작 정의가 확보된 전용 이미지 연결부터 진행한다. 실기기 오류는 기기/브라우저/폭/입력 순서/저장 코드로 재현한 다음 최소 수정한다.
+- 환경의 network/start_skill 초안도 현재 프록시/브라우저 실행 방식으로 저장했다. 환경 스냅샷 Publish는 사용자가 환경 설정에서 별도로 수행한다. GitHub 코드 반영/Pages 배포와 환경 Publish는 다른 작업이다.

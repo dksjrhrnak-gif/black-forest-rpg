@@ -2962,42 +2962,60 @@
       "name": "앨리스",
       "file": null,
       "storyFallback": "assets/story_alice.webp",
-      "regionFallback": false
+      "regionFallback": false,
+      "purpose": "dedicated NPC portrait",
+      "suggestedFuturePath": "assets/npc_alice.webp",
+      "suggestedPathExists": false
     },
     {
       "id": "queen",
       "name": "하트 여왕",
       "file": null,
       "storyFallback": null,
-      "regionFallback": true
+      "regionFallback": true,
+      "purpose": "dedicated NPC portrait",
+      "suggestedFuturePath": "assets/npc_queen.webp",
+      "suggestedPathExists": false
     },
     {
       "id": "creature",
       "name": "피조물",
       "file": null,
       "storyFallback": "assets/story_adam.webp",
-      "regionFallback": false
+      "regionFallback": false,
+      "purpose": "dedicated NPC portrait",
+      "suggestedFuturePath": "assets/npc_creature.webp",
+      "suggestedPathExists": false
     },
     {
       "id": "victor",
       "name": "빅터",
       "file": null,
       "storyFallback": "assets/story_adam.webp",
-      "regionFallback": false
+      "regionFallback": false,
+      "purpose": "dedicated NPC portrait",
+      "suggestedFuturePath": "assets/npc_victor.webp",
+      "suggestedPathExists": false
     },
     {
       "id": "ahab",
       "name": "에이해브",
       "file": null,
       "storyFallback": "assets/story_ahab.webp",
-      "regionFallback": false
+      "regionFallback": false,
+      "purpose": "dedicated NPC portrait",
+      "suggestedFuturePath": "assets/npc_ahab.webp",
+      "suggestedPathExists": false
     },
     {
       "id": "quixote",
       "name": "돈키호테",
       "file": null,
       "storyFallback": null,
-      "regionFallback": true
+      "regionFallback": true,
+      "purpose": "dedicated NPC portrait",
+      "suggestedFuturePath": "assets/npc_quixote.webp",
+      "suggestedPathExists": false
     }
   ],
   "equipment": {
@@ -3013,5 +3031,508 @@
     "Suggested future paths are not existing files or approved image assignments.",
     "Unreferenced candidates and legacy duplicates remain preserved.",
     "No dedicated settings screen exists. Mobile browser chrome and actual device behavior require physical testing."
+  ],
+  "classImageDimensions": [
+    {
+      "id": "warrior",
+      "src": "assets/class_warrior.webp",
+      "width": 400,
+      "height": 600
+    },
+    {
+      "id": "rogue",
+      "src": "assets/class_rogue.webp",
+      "width": 400,
+      "height": 600
+    },
+    {
+      "id": "mage",
+      "src": "assets/class_mage.webp",
+      "width": 400,
+      "height": 600
+    },
+    {
+      "id": "paladin",
+      "src": "assets/class_paladin.webp",
+      "width": 600,
+      "height": 900
+    },
+    {
+      "id": "blood",
+      "src": "assets/class_blood.webp",
+      "width": 600,
+      "height": 900
+    },
+    {
+      "id": "rune",
+      "src": "assets/class_rune.webp",
+      "width": 600,
+      "height": 900
+    },
+    {
+      "id": "shadow",
+      "src": "assets/class_shadow.webp",
+      "width": 600,
+      "height": 900
+    },
+    {
+      "id": "gambler",
+      "src": "assets/class_gambler.webp",
+      "width": 600,
+      "height": 900
+    },
+    {
+      "id": "chrono",
+      "src": "assets/class_chrono.webp",
+      "width": 600,
+      "height": 900
+    },
+    {
+      "id": "rabbit_guard",
+      "src": "assets/class_rabbit_guard.webp",
+      "width": 600,
+      "height": 720
+    },
+    {
+      "id": "pequod",
+      "src": "assets/class_pequod.webp",
+      "width": 600,
+      "height": 500
+    },
+    {
+      "id": "windmill",
+      "src": "assets/class_windmill.webp",
+      "width": 600,
+      "height": 900
+    },
+    {
+      "id": "stitch",
+      "src": "assets/class_stitch.webp",
+      "width": 400,
+      "height": 600
+    },
+    {
+      "id": "card_spear",
+      "src": "assets/class_card_spear.webp",
+      "width": 400,
+      "height": 600
+    },
+    {
+      "id": "sancho",
+      "src": "assets/class_sancho.webp",
+      "width": 600,
+      "height": 900
+    },
+    {
+      "id": "coffin",
+      "src": "assets/class_coffin.webp",
+      "width": 400,
+      "height": 600
+    },
+    {
+      "id": "mirror_fist",
+      "src": "assets/class_mirror_fist.webp",
+      "width": 600,
+      "height": 400
+    },
+    {
+      "id": "ahab_harpoon",
+      "src": "assets/class_ahab_harpoon.webp",
+      "width": 600,
+      "height": 900
+    },
+    {
+      "id": "fallen_dreamer",
+      "src": "assets/class_fallen_dreamer.webp",
+      "width": 600,
+      "height": 900
+    },
+    {
+      "id": "queen_exec",
+      "src": "assets/class_queen_exec.webp",
+      "width": 600,
+      "height": 900
+    },
+    {
+      "id": "adam_sword",
+      "src": "assets/class_adam_sword.webp",
+      "width": 600,
+      "height": 900
+    },
+    {
+      "id": "twin_duel",
+      "src": "assets/class_twin_duel.webp",
+      "width": 600,
+      "height": 900
+    },
+    {
+      "id": "white_knight",
+      "src": "assets/class_white_knight.webp",
+      "width": 600,
+      "height": 900
+    },
+    {
+      "id": "grave_hunter",
+      "src": "assets/class_grave_hunter.webp",
+      "width": 600,
+      "height": 900
+    },
+    {
+      "id": "pagebreaker",
+      "src": "assets/class_pagebreaker.webp",
+      "width": 600,
+      "height": 900
+    },
+    {
+      "id": "abyss_anchor",
+      "src": "assets/class_abyss_anchor.webp",
+      "width": 600,
+      "height": 900
+    },
+    {
+      "id": "clock_reaver",
+      "src": "assets/class_clock_reaver.webp",
+      "width": 600,
+      "height": 900
+    },
+    {
+      "id": "thorn_crown",
+      "src": "assets/class_thorn_crown.webp",
+      "width": 600,
+      "height": 900
+    },
+    {
+      "id": "last_margin",
+      "src": "assets/class_last_margin.webp",
+      "width": 600,
+      "height": 900
+    },
+    {
+      "id": "adventurer",
+      "src": "assets/class_adventurer.webp",
+      "width": 640,
+      "height": 960
+    },
+    {
+      "id": "hunter",
+      "src": "assets/class_hunter.webp",
+      "width": 640,
+      "height": 960
+    },
+    {
+      "id": "guardian",
+      "src": "assets/class_guardian.webp",
+      "width": 640,
+      "height": 960
+    },
+    {
+      "id": "x_magic_0",
+      "src": "assets/class_x_magic_0.webp",
+      "width": 640,
+      "height": 960
+    },
+    {
+      "id": "x_magic_3",
+      "src": "assets/class_x_magic_3.webp",
+      "width": 640,
+      "height": 960
+    },
+    {
+      "id": "x_magic_4",
+      "src": "assets/class_x_magic_4.webp",
+      "width": 640,
+      "height": 960
+    },
+    {
+      "id": "x_ranged_2",
+      "src": "assets/class_x_ranged_2.webp",
+      "width": 640,
+      "height": 960
+    },
+    {
+      "id": "x_magic_11",
+      "src": "assets/class_x_magic_11.webp",
+      "width": 640,
+      "height": 960
+    },
+    {
+      "id": "x_magic_10",
+      "src": "assets/class_x_magic_10.webp",
+      "width": 640,
+      "height": 960
+    },
+    {
+      "id": "x_magic_9",
+      "src": "assets/class_x_magic_9.webp",
+      "width": 640,
+      "height": 960
+    },
+    {
+      "id": "x_magic_7",
+      "src": "assets/class_x_magic_7.webp",
+      "width": 640,
+      "height": 960
+    },
+    {
+      "id": "x_magic_8",
+      "src": "assets/class_x_magic_8.webp",
+      "width": 640,
+      "height": 960
+    },
+    {
+      "id": "x_magic_6",
+      "src": "assets/class_x_magic_6.webp",
+      "width": 640,
+      "height": 960
+    },
+    {
+      "id": "x_magic_1",
+      "src": "assets/class_x_magic_1.webp",
+      "width": 640,
+      "height": 960
+    },
+    {
+      "id": "x_magic_2",
+      "src": "assets/class_x_magic_2.webp",
+      "width": 640,
+      "height": 960
+    },
+    {
+      "id": "x_magic_5",
+      "src": "assets/class_x_magic_5.webp",
+      "width": 640,
+      "height": 960
+    },
+    {
+      "id": "x_magic_12",
+      "src": "assets/class_x_magic_12.webp",
+      "width": 640,
+      "height": 960
+    },
+    {
+      "id": "x_magic_13",
+      "src": "assets/class_x_magic_13.webp",
+      "width": 640,
+      "height": 960
+    },
+    {
+      "id": "x_magic_14",
+      "src": "assets/class_x_magic_14.webp",
+      "width": 640,
+      "height": 960
+    },
+    {
+      "id": "x_magic_15",
+      "src": "assets/class_x_magic_15.webp",
+      "width": 640,
+      "height": 960
+    },
+    {
+      "id": "x_magic_16",
+      "src": "assets/class_x_magic_16.webp",
+      "width": 640,
+      "height": 960
+    },
+    {
+      "id": "x_magic_17",
+      "src": "assets/class_x_magic_17.webp",
+      "width": 640,
+      "height": 960
+    },
+    {
+      "id": "x_ranged_0",
+      "src": "assets/class_x_ranged_0.webp",
+      "width": 640,
+      "height": 960
+    },
+    {
+      "id": "x_ranged_1",
+      "src": "assets/class_x_ranged_1.webp",
+      "width": 640,
+      "height": 960
+    },
+    {
+      "id": "x_ranged_3",
+      "src": "assets/class_x_ranged_3.webp",
+      "width": 640,
+      "height": 960
+    },
+    {
+      "id": "x_ranged_4",
+      "src": "assets/class_x_ranged_4.webp",
+      "width": 640,
+      "height": 960
+    },
+    {
+      "id": "x_ranged_5",
+      "src": "assets/class_x_ranged_5.webp",
+      "width": 640,
+      "height": 960
+    },
+    {
+      "id": "x_ranged_6",
+      "src": "assets/class_x_ranged_6.webp",
+      "width": 640,
+      "height": 960
+    },
+    {
+      "id": "x_ranged_7",
+      "src": "assets/class_x_ranged_7.webp",
+      "width": 640,
+      "height": 960
+    },
+    {
+      "id": "x_ranged_8",
+      "src": "assets/class_x_ranged_8.webp",
+      "width": 640,
+      "height": 960
+    },
+    {
+      "id": "x_ranged_9",
+      "src": "assets/class_x_ranged_9.webp",
+      "width": 640,
+      "height": 960
+    },
+    {
+      "id": "x_ranged_10",
+      "src": "assets/class_x_ranged_10.webp",
+      "width": 640,
+      "height": 960
+    },
+    {
+      "id": "x_ranged_13",
+      "src": "assets/class_x_ranged_13.webp",
+      "width": 640,
+      "height": 960
+    },
+    {
+      "id": "x_ranged_16",
+      "src": "assets/class_x_ranged_16.webp",
+      "width": 640,
+      "height": 960
+    },
+    {
+      "id": "x_ranged_17",
+      "src": "assets/class_x_ranged_17.webp",
+      "width": 640,
+      "height": 960
+    },
+    {
+      "id": "x_support_17",
+      "src": "assets/class_x_support_17.webp",
+      "width": 640,
+      "height": 960
+    },
+    {
+      "id": "x_occult_13",
+      "src": "assets/class_x_occult_13.webp",
+      "width": 640,
+      "height": 960
+    },
+    {
+      "id": "x_occult_15",
+      "src": "assets/class_x_occult_15.webp",
+      "width": 640,
+      "height": 960
+    },
+    {
+      "id": "x_occult_16",
+      "src": "assets/class_x_occult_16.webp",
+      "width": 640,
+      "height": 960
+    },
+    {
+      "id": "self_named",
+      "src": "assets/class_self_named.webp",
+      "width": 640,
+      "height": 960
+    },
+    {
+      "id": "dream_guard",
+      "src": "assets/class_dream_guard.webp",
+      "width": 640,
+      "height": 960
+    },
+    {
+      "id": "court_witness",
+      "src": "assets/class_court_witness.webp",
+      "width": 640,
+      "height": 960
+    }
+  ],
+  "nonstandardPortraitRendering": [
+    {
+      "id": "토끼굴 문지기",
+      "aspectRatio": "2 / 3",
+      "objectFit": "contain",
+      "width": 165.9375,
+      "height": 249.90625,
+      "naturalWidth": 600,
+      "naturalHeight": 720
+    },
+    {
+      "id": "피쿼드호 갑판검사",
+      "aspectRatio": "2 / 3",
+      "objectFit": "contain",
+      "width": 165.9375,
+      "height": 249.90625,
+      "naturalWidth": 600,
+      "naturalHeight": 500
+    },
+    {
+      "id": "거울 복도의 권투사",
+      "aspectRatio": "2 / 3",
+      "objectFit": "contain",
+      "width": 165.9375,
+      "height": 249.90625,
+      "naturalWidth": 600,
+      "naturalHeight": 400
+    }
+  ],
+  "missingStoryIllustrations": [
+    {
+      "id": "queen",
+      "name": "하트 여왕",
+      "purpose": "dedicated story illustration",
+      "file": null,
+      "fallback": "current region image",
+      "suggestedFuturePath": "assets/story_queen.webp",
+      "suggestedPathExists": false
+    },
+    {
+      "id": "quixote",
+      "name": "돈키호테",
+      "purpose": "dedicated story illustration",
+      "file": null,
+      "fallback": "current region image",
+      "suggestedFuturePath": "assets/story_quixote.webp",
+      "suggestedPathExists": false
+    }
+  ],
+  "optionalSceneIllustrations": [
+    {
+      "scene": "merchant",
+      "file": null,
+      "fallback": "existing region image",
+      "note": "No approved dedicated filename or source assignment exists; retain the existing regional image."
+    },
+    {
+      "scene": "shrine",
+      "file": null,
+      "fallback": "existing region image",
+      "note": "No approved dedicated filename or source assignment exists; retain the existing regional image."
+    },
+    {
+      "scene": "secret",
+      "file": null,
+      "fallback": "existing region image",
+      "note": "No approved dedicated filename or source assignment exists; retain the existing regional image."
+    },
+    {
+      "scene": "midboss",
+      "file": null,
+      "fallback": "existing region image",
+      "note": "No approved dedicated filename or source assignment exists; retain the existing regional image."
+    }
   ]
 }
