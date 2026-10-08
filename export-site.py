@@ -10,6 +10,7 @@ shutil.copy2(p/'.nojekyll',out/'.nojekyll')
 shutil.copytree(p/'assets',out/'assets',dirs_exist_ok=True)
 for name in ['jobs-114.csv','jobs-100.csv','items-1000.csv']:
     shutil.copy2(p/'data'/name,out/name)
+    shutil.copy2(p/'data'/name,p/name)
 with zipfile.ZipFile(out/'black-forest-source.zip','w',zipfile.ZIP_DEFLATED) as z:
     for f in sorted(p.rglob('*')):
         if f.is_file() and not set(f.relative_to(p).parts)&{'.git','.openai','dist','node_modules','.sites-runtime'} and f.suffix!='.png':

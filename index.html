@@ -2156,12 +2156,22 @@ C.STARTERS=Object.keys(J).filter(id=>J[id].tier===0&&!J[id].hidden);
 const targets={commonDmg:'common',boss:'boss',eliteDmg:'elite',opening:'opening',below:'lowHealth',execution:'execution'};
 const passthrough=['defendMana','guardNext','healKill','dodgeBonus','guardHeal','thornsBonus','leechBonus','skillSaver','normalPierce','potionBoost','critBonus','skillDot','goldBonus'];
 const skills={warrior:{power:1.5,stun:1},rogue:{power:1.5,dot:{base:5,turns:3,status:'poison'}},mage:{power:2,magic:true,dot:{base:6,turns:2,status:'burn'}},paladin:{power:1.6,heal:.15},blood:{power:1.9,leech:.3},rune:{power:1.85,magic:true,weak:1},shadow:{power:1.6,execute:{threshold:.35,power:3}},gambler:{power:'roll'},chrono:{power:1.5,magic:true,stun:1}};
+// Six expansion careers trade immediate damage for existing combat effects.
+// Base stats, MP costs, passives, unlocks and the legacy 29 careers stay intact.
+Object.assign(skills,{
+ x_magic_0:{power:1.4,magic:true,dot:{base:2,turns:3,status:'burn'},name:'여백의 잔불',description:'스킬 피해 1.4배 · 방어 무시 · 잿불 지속 피해 3회'},
+ x_magic_15:{power:1.35,magic:true,stun:1,name:'찰나의 역행',description:'스킬 피해 1.35배 · 방어 무시 · 적 행동 1회 기절'},
+ x_ranged_2:{power:1.5,pierce:4,weak:1,name:'흔들리는 표적',description:'스킬 피해 1.5배 · 적 방어 최대 4 관통 · 다음 피격 30% 감소'},
+ x_occult_13:{power:1.6,weak:1,leech:.08,name:'빌린 생명의 증언',description:'스킬 피해 1.6배 · 피해의 8% 흡혈 · 다음 피격 30% 감소'},
+ x_support_16:{power:1.45,heal:.12,name:'돌아온 온기',description:'스킬 피해 1.45배 · 최대 HP의 12% 회복'},
+ x_support_17:{power:1.55,heal:.06,weak:1,name:'깨지지 않는 봉합',description:'스킬 피해 1.55배 · 최대 HP의 6% 회복 · 다음 피격 30% 감소'}
+});
 const stats={rogue:{critBase:.25},blood:{lowHealthAttack:10},shadow:{dodgeBase:.12},gambler:{luckBase:.05}};
 function encode(j){const list=[];for(const [key,value] of Object.entries(j.traits||{})){if(targets[key])list.push({type:'damageMultiplier',target:targets[key],value});else if(passthrough.includes(key))list.push({type:key,value});}if(j.traits?.comboEvery)list.push({type:'combo',every:j.traits.comboEvery,value:j.traits.comboDamage});
  const s=skills[j.id]||{power:1.7,magic:j.family==='magic',heal:j.family==='support'?.06:0,weak:j.family==='occult'?1:0,pierce:j.family==='ranged'?4:0};
  list.push({type:'skillPower',value:s.power});if(s.magic)list.push({type:'skillMagic',value:true});if(s.stun)list.push({type:'skillStun',value:s.stun});if(s.dot)list.push({type:'skillDotLevel',...s.dot});if(s.heal)list.push({type:'skillHeal',value:s.heal});if(s.leech)list.push({type:'skillLeech',value:s.leech});if(s.weak)list.push({type:'skillWeak',value:s.weak});if(s.pierce)list.push({type:'skillPierce',value:s.pierce});if(s.execute)list.push({type:'skillExecution',...s.execute});for(const [type,value] of Object.entries(stats[j.id]||{}))list.push({type,value});return list;
 }
-for(const j of Object.values(C.JOBS))j.effects=encode(j);
+for(const j of Object.values(C.JOBS)){j.effects=encode(j);const spec=skills[j.id];if(spec?.name){j.skill=spec.name;j.desc=j.effect+' / '+spec.description;}}
 C.EFFECT_TYPES=['damageMultiplier',...passthrough,'combo','skillPower','skillMagic','skillStun','skillDotLevel','skillHeal','skillLeech','skillWeak','skillPierce','skillExecution','critBase','lowHealthAttack','dodgeBase','luckBase'];
 C.effectValue=(id,type,fallback=0)=>C.JOBS[id]?.effects.find(e=>e.type===type)?.value??fallback;
 C.effectTraits=function(id){const out={},reverse=Object.fromEntries(Object.entries(targets).map(([k,v])=>[v,k]));for(const e of C.JOBS[id]?.effects||[]){if(e.type==='damageMultiplier')out[reverse[e.target]]=e.value;else if(e.type==='combo'){out.comboEvery=e.every;out.comboDamage=e.value;}else if(passthrough.includes(e.type))out[e.type]=e.value;}return out;};

@@ -1,0 +1,129 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "width": 360,
+      "screen": "start"
+    },
+    {
+      "width": 360,
+      "screen": "camp"
+    },
+    {
+      "width": 360,
+      "screen": "equipment-item"
+    },
+    {
+      "width": 360,
+      "screen": "inventory"
+    },
+    {
+      "width": 360,
+      "screen": "hidden-class"
+    },
+    {
+      "width": 360,
+      "screen": "exploration"
+    },
+    {
+      "width": 360,
+      "screen": "reward"
+    },
+    {
+      "width": 360,
+      "screen": "checkpoint"
+    },
+    {
+      "width": 360,
+      "screen": "battle"
+    },
+    {
+      "width": 360,
+      "screen": "shop"
+    },
+    {
+      "width": 390,
+      "screen": "start"
+    },
+    {
+      "width": 390,
+      "screen": "camp"
+    },
+    {
+      "width": 390,
+      "screen": "equipment-item"
+    },
+    {
+      "width": 390,
+      "screen": "inventory"
+    },
+    {
+      "width": 390,
+      "screen": "hidden-class"
+    },
+    {
+      "width": 390,
+      "screen": "exploration"
+    },
+    {
+      "width": 390,
+      "screen": "reward"
+    },
+    {
+      "width": 390,
+      "screen": "checkpoint"
+    },
+    {
+      "width": 390,
+      "screen": "battle"
+    },
+    {
+      "width": 390,
+      "screen": "shop"
+    },
+    {
+      "width": 430,
+      "screen": "start"
+    },
+    {
+      "width": 430,
+      "screen": "camp"
+    },
+    {
+      "width": 430,
+      "screen": "equipment-item"
+    },
+    {
+      "width": 430,
+      "screen": "inventory"
+    },
+    {
+      "width": 430,
+      "screen": "hidden-class"
+    },
+    {
+      "width": 430,
+      "screen": "exploration"
+    },
+    {
+      "width": 430,
+      "screen": "reward"
+    },
+    {
+      "width": 430,
+      "screen": "checkpoint"
+    },
+    {
+      "width": 430,
+      "screen": "battle"
+    },
+    {
+      "width": 430,
+      "screen": "shop"
+    }
+  ],
+  "limitations": [
+    "Touch emulation, not physical devices.",
+    "Fixtures inspect screens; natural campaign validation is separate."
+  ]
+}

@@ -1,7 +1,7 @@
 /* Reproducible analysis harness. Fixtures are labelled separately from natural campaigns. */
 const fs=require('node:fs'),assert=require('node:assert/strict'),crypto=require('node:crypto');
 const C=require('./test-support.cjs'),{Game,JOBS,AREAS,ITEMS,EVENTS,STARTERS}=C;
-const out='docs/gameplay';fs.mkdirSync(out,{recursive:true});
+const out=process.env.BF_AUDIT_OUT||'docs/gameplay';fs.mkdirSync(out,{recursive:true});
 const seeds=[2,17,91,123,777,2026];
 const mode=process.argv[2]||'all',run=name=>mode==='all'||mode===name;
 const write=(name,data)=>{fs.writeFileSync(`${out}/${name}.json`,JSON.stringify(data,null,2)+'\n');console.log(`Saved ${name}`);};
