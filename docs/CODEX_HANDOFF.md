@@ -44,3 +44,14 @@
 - WebKit은 Debian 서명 검증된 apt 인덱스/패키지를 작업 공간에 받아 필요한 라이브러리를 설치 없이 추출했다. 해당 브라우저의 sys/lib에 없는 라이브러리만 링크했다. ldd 누락이 없는 것을 확인하고 실제 WebKit 페이지 실행 PASS. 사용자 공간 libGLES가 시스템 ldconfig 목록에 없어서 Playwright의 호스트 사전 검사만 생략했다. 패키지 서명·체크섬·TLS 검증은 유지했다.
 - Firefox는 다운로드 완료했으나 `/proc/self/uid_map` 읽기 전용 및 SWGL framebuffer 초기화 실패로 실행 시간초과. 실제 Firefox 플레이는 미검증이며 게임 결함으로 분류하지 않는다.
 - 마지막 완료 Phase: B/C/D. 다음: WebKit E/F 결과 확인 → QA 커밋/원격 저장 → main 반영 전 검사 → Pages 실제 플레이 G.
+
+## Phase E/F 체크포인트
+
+- 테스트/자산 기록 커밋: `aeb1e1b071957e5027b06065189f2eac96c1e9b5`, QA 브랜치 원격 반영 확인.
+- Chromium 및 WebKit, 클릭 및 터치, 360×800/390×844/430×932: 12조합 모두 PASS, 런타임/console 오류 0. 보강 테스트 양쪽 브라우저 22검사씩 PASS. 자세한 실행 결과는 CODEX_QA_RESULTS.json.
+- 모든 화면 폭에서 보상/다음 조우/중복 입력, 패배/회피, NPC/이벤트, 쉼터 저장/휴식/복귀, 상점, 장비, 새로고침/손상 저장 보호, 숫자 스토리/엔딩 입력 및 기존 그림 연결을 검증했다. 장면 진입 일부는 정상 BF2/BF3 불러오기 UI로 fixture를 넣은 뒤 실제 버튼을 입력했다. 정상 성장 18캠페인은 엔진 테스트이며 전부 실제 손플레이했다고 주장하지 않는다.
+- 의도적 단일 이미지 404 검사에서는 그 파일 실패만 허용하고 텍스트 fallback 및 게임 시작을 확인했다. 다른 테스트에서는 네트워크/이미지/console 오류를 허용하지 않는다.
+- 모바일 screenshot도 확인했지만 브라우저 하단 OS UI/실기기 가독성은 별도 검증하지 않았다. 별도 설정 화면은 구현되어 있지 않으므로 존재한다고 보고하지 않는다.
+- 공개 Pages 기준 main HTML과 바이트 동일 확인. Node는 NODE_USE_ENV_PROXY=1로 지원 프록시 경로를 사용한다. qa-browser.cjs는 BF_USE_ENV_PROXY=1일 때 기존 HTTPS_PROXY를 이용한다. 인증서 값/프록시 자격증명은 저장하지 않는다. CI/로컬 기본 경로는 유지한다.
+- WebKit에서 기존 신뢰 설정으로 공개 Pages HTTP 200 및 실제 시작 버튼 동작 PASS. Chromium은 프록시 CA 신뢰 오류로 공개 Pages 플레이가 미검증이다. 플랫폼 CA를 영구 NSS 저장소에 추가하려던 작업은 자동 승인 검토가 향후 TLS 신뢰 범위 확대를 이유로 거부했고, 해당 저장소를 변경하거나 우회하지 않았다. 공개 사이트 검증은 이미 가능한 WebKit으로 진행한다.
+- 마지막 완료 Phase: F. 다음 시작점: 검증된 QA 변경을 main에 fast-forward 반영 → Pages 새 HTML/147개 자산 동일 확인 → WebKit 공개 URL 3폭 실제 터치 회귀 → 최종 문서 커밋 및 원격 SHA 확인.

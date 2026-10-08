@@ -11,8 +11,7 @@ const sizes = process.env.BF_VIEWPORTS ? JSON.parse(process.env.BF_VIEWPORTS) : 
 ];
 
 (async () => {
-  const browser = await pw[engine].launch({headless:true,
-    ...(process.env.BF_CHROMIUM ? {executablePath:process.env.BF_CHROMIUM} : {})});
+  const browser = await pw[engine].launch(require('./qa-browser.cjs')());
   const checks = [];
   try {
     for (const size of sizes) {
