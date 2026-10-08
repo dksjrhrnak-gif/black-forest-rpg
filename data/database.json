@@ -4763,7 +4763,7 @@
         "def": 3
       },
       "masteryAction": "attack",
-      "image": null,
+      "image": "assets/class_x_support_16.webp",
       "effects": [
         {
           "type": "critBonus",

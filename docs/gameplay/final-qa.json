@@ -1,0 +1,53 @@
+{
+  "status": "PASS",
+  "testedCodeSha": "a04d0ec0ae594a32fe8a32c37f0408c40e287708",
+  "mainSha": "5f879371660038d516f71aab8d718fa3cb20b57e",
+  "branch": "qa/asset-quality-20261008",
+  "pullRequest": "https://github.com/dksjrhrnak-gif/black-forest-rpg/pull/1",
+  "ci": [
+    {
+      "run": 37756428734,
+      "status": "success",
+      "successfulJobs": 5,
+      "publicPages": "skipped on QA branch"
+    },
+    {
+      "run": 37756437708,
+      "status": "success",
+      "successfulJobs": 11
+    }
+  ],
+  "local": {
+    "npmTest": "PASS",
+    "buildExportHtml": "PASS",
+    "newPortraitScreens": {
+      "chromium": 30,
+      "webkit": 30
+    },
+    "mobileJourneyWidths": [
+      360,
+      390,
+      430
+    ],
+    "handoffReadiness": {
+      "chromium": 22,
+      "webkit": 22
+    },
+    "combatFixtures": 11880,
+    "naturalCampaigns": 54,
+    "naturalEndings": 54,
+    "exactSaveRestores": 473,
+    "chapterChoices": 72,
+    "endingConditions": 6,
+    "hiddenPositiveFixtures": 14,
+    "exportedGameplayDefinitions": "Identical to main after excluding portrait image references"
+  },
+  "limitations": [
+    "Physical mobile devices",
+    "Firefox",
+    "Natural frequency of all hidden careers",
+    "Human fun/read time",
+    "Natural fights over30turns"
+  ],
+  "deployment": "No main merge or new Pages deployment. Final follow-up commit changes documentation only; tested runtime source is unchanged."
+}
