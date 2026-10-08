@@ -22,9 +22,28 @@
 
 - 기존 main에서 npm test: PASS.
 - 히든 14종 67개 조건/별칭과 부가 제한: PASS.
-- 수정본 npm test·빌드 일치: 진행 중.
-- 요청 크기 375×667, 390×844, 393×852, 430×932의 Chromium/WebKit 클릭·터치: 진행 중.
+- 수정본 npm test·빌드 일치: PASS. 최종 게임 변경 커밋 `a07326de410baacffce9a0bcd60c465362b485e4`.
+- 요청 크기 375×667, 390×844, 393×852, 430×932의 Chromium/WebKit 클릭·터치 16조합: PASS. QA 브랜치 실행 [37725197061](https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/37725197061), main 재검증 [37725528611](https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/37725528611). 신규 그림 10장 모두 실제 직업 검색 UI에서 decode·640×960·contain 확인. 버튼 44px 이상, 전투 하단 sticky, 가로 넘침, 모달 경계·열기·닫기, 저장 새로고침·손상 입력 보호, 보상 및 다음 조우 수동 진행 확인.
+- 기존 npm run test:browser / npm run test:mobile 및 스토리 화면 검증: PASS. main 기존 통합 워크플로 [37725528569](https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/37725528569)의 11개 job 모두 성공(Chromium/WebKit 스토리 320/360/375/390/430 포함).
+- 초기 추가 이미지 테스트는 앞선 테스트가 남긴 히든 계열 필터 때문에 실패했다. 테스트만 전체 계열로 초기화해 재검증했다. 게임 검색 기능은 수정하지 않았다.
+- 로컬 Playwright 설치는 실패하여 로컬 브라우저 실행은 NOT TESTED. 위 브라우저 PASS는 GitHub Actions의 실제 Chromium/WebKit 실행 결과다.
 - 실제 휴대폰 Safari/Chrome: NOT TESTED.
-- main 반영 및 수정본 Pages 배포: QA 통과 후 진행.
+- main 반영 및 수정본 Pages 배포: PASS. 게임 커밋 `a07326de410baacffce9a0bcd60c465362b485e4`의 [Pages 실행 37725528054](https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/37725528054) 성공. 공개 HTML SHA256 `7246215b73f8939f9c90dbbc8b432540bd97c7b9a2dcb933ed31981ee0521681`이 해당 커밋과 일치하며 연결 파일 147개 전체 HTTP 200 및 바이트 일치 PASS(통합 verify job `113142699062`). 이 결과를 기록하는 후속 커밋은 문서만 변경한다.
+- 공개 사이트를 추가로 여는 클라우드 브라우저 호출은 중단되어 수동 육안 확인은 완료하지 못했다. 위 자동 브라우저·실서비스 파일 검증과 구분한다.
 
 실제 배포 파일은 루트 index.html이다. style.css + shell.html + build.py의 모듈 목록(마지막 engine.js/qa-relationships.js/career.js/chapters.js/journey.js 및 ui.js)이 HTML 안에 포함되며 별도 원격 JS를 불러오지 않는다. black-forest.html과 index.html은 생성 파일이므로 직접 고치지 않는다.
+
+## 남은 작업
+
+- 직업 43종 전용 이미지와 Queen/Quixote 스토리 이미지의 원본 ID 확인. 현재 fallback을 유지한다.
+- 장비 후보 24개 파일의 ITEMS ID를 확정할 제작 정의 확보 후 개별 장비 매핑. 기존 그림과 공용 슬롯 이미지를 유지한다.
+- 실제 휴대폰 Safari/Chrome에서 최종 육안·실터치 확인.
+
+## 변경 파일
+
+- style.css: 모바일 버튼 높이 선언 2곳 36→44px.
+- assets.js, assets/class_*.webp 10개: 확인된 기존 그림 연결·배포 형식 변환.
+- data/database.json, data/asset-registry.json, asset-results.json, docs/image-inventory-after.json: 기존 내보내기 절차로 이미지 레지스트리 동기화.
+- black-forest.html, index.html: 정상 빌드로 CSS·이미지 연결 반영.
+- test-hidden-audit.cjs, test-handoff-art-ui.cjs, test-ui.cjs, package.json, .github/workflows/handoff-audit.yml: 해금 조건·요청 해상도·터치 영역·직업 이미지 회귀 검사.
+- README.md, QA-REPORT.md, RECONCILIATION-REPORT.md, docs/handoff-*.json 및 이 문서: 현재 상태와 원본 근거 기록.
