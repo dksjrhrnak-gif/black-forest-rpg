@@ -1,7 +1,7 @@
 name: Handoff audit and requested mobile sizes
 on:
   push:
-    branches: [qa/handoff-audit-20261008, main]
+    branches: [qa/handoff-audit-20261008, qa/resume-checkpoint-20261008, main]
   workflow_dispatch:
 permissions:
   contents: read
@@ -38,7 +38,7 @@ jobs:
         env:
           BF_BROWSER: ${{ matrix.browser }}
           BF_QA_URL: http://127.0.0.1:4173/
-          BF_VIEWPORTS: '[{"width":375,"height":667},{"width":390,"height":844},{"width":393,"height":852},{"width":430,"height":932}]'
+          BF_VIEWPORTS: '[{"width":360,"height":800},{"width":375,"height":667},{"width":390,"height":844},{"width":393,"height":852},{"width":430,"height":932}]'
           BF_AUDIT_CONTROLS: '1'
           BF_INTERACTION: ${{ matrix.interaction }}
         run: |
@@ -49,5 +49,41 @@ jobs:
           name: handoff-${{ matrix.browser }}-${{ matrix.interaction }}
           path: |
             browser-results.txt
+            mobile-results*.txt
+            screenshots/
+
+  live-pages:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    strategy:
+      fail-fast: false
+      matrix:
+        browser: [chromium, webkit]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm ci --ignore-scripts
+      - run: npx playwright install --with-deps ${{ matrix.browser }}
+      - name: Match the deployed game and all mapped assets
+        env:
+          BF_HTTP_BASE: https://dksjrhrnak-gif.github.io/black-forest-rpg/
+          BF_EXPECT_LIVE: '1'
+        run: node test-http-assets.cjs
+      - name: Play the published game at the requested mobile sizes
+        env:
+          BF_BROWSER: ${{ matrix.browser }}
+          BF_QA_URL: https://dksjrhrnak-gif.github.io/black-forest-rpg/
+          BF_VIEWPORTS: '[{"width":360,"height":800},{"width":390,"height":844},{"width":430,"height":932}]'
+          BF_AUDIT_CONTROLS: '1'
+        run: npm run test:mobile
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: resumed-live-${{ matrix.browser }}
+          path: |
+            pages-http-results.json
             mobile-results*.txt
             screenshots/

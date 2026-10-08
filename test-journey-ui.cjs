@@ -14,6 +14,20 @@ async function verifyJourney({page,activate,restore,fit,size,touch}){
  g=fresh();g.travel(0);g.fight(false,true,'굶주린 늑대');await restore(g.export());await verify('elite battle');assert.equal(await page.locator('.scene-hero img').getAttribute('src'),ASSETS.enemies['굶주린 늑대']);
  // Return to a retained rest point, then resume with one explicit action.
  g=fresh();g.travel(0);g.s.step=4;g.s.scene='reward';await restore(g.export());await verify('rest point');await activate(page.locator('[data-cmd="pauseChapter"]'));assert.equal((await state()).s.scene,'camp');const checkpoint=await state(),expected=Game.load(checkpoint.export());expected.resumeJourney();await activate(page.locator('[data-cmd="resumeJourney"]'));assert.equal((await state()).export(),expected.export());await verify('retained journey resumed');
+ // A camp conversation result with a retained route survives actual import and refresh.
+ for(const kind of ['npc','dialogue','bond']){
+  g=fresh();g.s.cleared=[0,1];g.travel(2);g.s.step=4;g.s.scene='reward';g.pauseChapter();
+  if(kind==='bond'){g.s.threads.alice=2;g.addAffinity('alice',80);}
+  const retained=JSON.parse(JSON.stringify(g.s.checkpoint));await restore(g.export());
+  await activate(page.locator('[data-ui="story"]').first());
+  const cmd=kind==='npc'?'meetNpc':kind==='dialogue'?'thread':'bondQuest';
+  await activate(page.locator('[data-cmd="'+cmd+'"][data-arg="alice"]'));
+  await activate(page.locator('[data-cmd="'+(kind==='npc'?'npcChoice':kind==='dialogue'?'dialogue':'bondChoice')+'"][data-arg="'+(kind==='bond'?1:0)+'"]'));
+  assert.equal((await state()).s.returnAfterResult,'camp');assert.equal(await page.locator('[data-cmd="pauseChapter"]').count(),0);
+  const resultCode=(await state()).export();await page.reload();assert.equal((await state()).export(),resultCode);await verify('retained route '+kind+' result reload');
+  await activate(page.locator('[data-cmd="nextEncounter"]'));assert.equal((await state()).s.scene,'camp');assert.deepEqual((await state()).s.checkpoint,retained);
+  await activate(page.locator('[data-cmd="resumeJourney"]'));assert.equal((await state()).s.checkpoint,null);assert.notEqual((await state()).s.scene,'camp');await verify('retained route '+kind+' resume');
+ }
  // Shop purchase stays on the shop; the exit enters the next situation.
  g=fresh();g.travel(0);g.s.scene='merchant';g.s.gold=100;await restore(g.export());await verify('shop');await activate(page.locator('[data-cmd="buy"][data-arg="potion"]'));assert.equal((await state()).s.scene,'merchant');await activate(page.locator('[data-cmd="nextEncounter"]'));assert.notEqual((await state()).s.scene,'map');await verify('shop exit');
  // Boss awards the regional seal exactly once before opening the camp.

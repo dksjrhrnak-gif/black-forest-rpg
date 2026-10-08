@@ -43,7 +43,7 @@ for(const name of ['event','chapterChoice','npcChoice','dialogue','bondChoice'])
  if(['npc','dialogue','bond'].includes(previous)&&this.s.scene==='camp'&&!(name==='bondChoice'&&args[0]===2)){this.s.scene='reward';this.s.returnAfterResult='camp';this.s.resultKind='npc';}
  if(['reward','loot'].includes(this.s.scene))this.s.resultVisual=before;};}
 const act=P.act;P.act=function(action){const before=visual(this);act.call(this,action);if(['dead','reward'].includes(this.s.scene)&&!this.s.resultVisual)this.s.resultVisual=before;};
-const pause=P.pauseChapter;P.pauseChapter=function(){if(this.s.rewardState&&!this.s.rewardState.claimed)return;pause.call(this);};
+const pause=P.pauseChapter;P.pauseChapter=function(){if(this.s.returnAfterResult||this.s.checkpoint||this.s.rewardState&&!this.s.rewardState.claimed)return;pause.call(this);};
 const load=G.load;G.load=function(input){const g=load.call(this,input),s=g.s,bad=()=>{throw Error('여정 기록 검증 실패');};
  s.journeySeq=s.journeySeq??0;s.rewardState=s.rewardState??null;s.resultVisual=s.resultVisual??null;s.resultKind=s.resultKind??'';s.returnAfterResult=s.returnAfterResult??null;s.acceptMidboss=s.acceptMidboss??false;
  if(s.returnAfterResult!==null&&s.returnAfterResult!=='camp'||typeof s.acceptMidboss!=='boolean')bad();

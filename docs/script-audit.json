@@ -1,7 +1,7 @@
 {
   "status": "PASS",
   "canonicalSynchronization": "checked thread/quest/NPC generated messages and choices",
-  "sourceStringCount": 1901,
+  "sourceStringCount": 1902,
   "choiceCount": 261,
   "over18": [
     {

@@ -10,4 +10,20 @@ g=fresh();g.s.scene='loot';g.s.gold=123;g.s.loot=g.makeGear('normal');g.s.pendin
 g=win(fresh()).g;const bad=JSON.parse(global.LZString.decompressFromBase64(g.export().slice(4)));bad.state.rewardState.after.gold=-1;assert.throws(()=>Game.load(JSON.stringify(bad)));bad.state.rewardState.after.gold=999;bad.state.scene='camp';assert.throws(()=>Game.load(JSON.stringify(bad)));
 // Retained checkpoints keep exactly the routes and RNG until the player resumes.
 g=fresh();g.travel(0);g.s.step=4;g.s.scene='reward';g.pauseChapter();const checkpoint=Game.load(g.export()),routes=[...checkpoint.s.checkpoint.routes],rng=[...checkpoint.rng.getState()];checkpoint.resumeChapter();assert.deepEqual(checkpoint.s.routes,routes);assert.deepEqual(checkpoint.rng.getState(),rng);checkpoint.nextEncounter();assert.notEqual(checkpoint.s.scene,'map');
-const ui=fs.readFileSync('ui.js','utf8');assert(!ui.includes('scheduleAutoEncounter')&&!ui.includes('requestAnimationFrame'));assert(ui.includes('lastJourneyAction')&&ui.includes('isConnected'));const report={rewardCases:count,reloadDeterminism:'PASS',claimOnce:'PASS',legacyCreditedLoot:'PASS',optionalMidboss:'PASS',playerControlled:'PASS',checkpointPreservation:'PASS',pendingValidation:'PASS'};fs.writeFileSync('journey-results.json',JSON.stringify(report,null,2)+'\n');console.log('PASS Journey: '+JSON.stringify(report));
+// Camp conversations while a route is retained must remain reloadable at the result.
+let checkpointConversationCases=0;
+for(const step of [4,8,12])for(const kind of ['npc','dialogue','bond']){
+ const x=fresh();x.s.cleared=[0,1];x.travel(2);x.s.step=step;x.s.scene='reward';x.pauseChapter();
+ const retained=JSON.parse(JSON.stringify(x.s.checkpoint));
+ if(kind==='npc'){x.meetNpc('alice');x.npcChoice(0);}
+ if(kind==='dialogue'){x.thread('alice');x.dialogue(0);}
+ if(kind==='bond'){x.s.threads.alice=2;x.addAffinity('alice',80);x.bondQuest('alice');x.bondChoice(1);}
+ assert.equal(x.s.scene,'reward');assert.equal(x.s.returnAfterResult,'camp');
+ const code=x.export(),reloaded=Game.load(code);assert.equal(reloaded.export(),code);
+ const rng=reloaded.rng.getState();reloaded.pauseChapter();assert.equal(reloaded.export(),code,'result must not overwrite the retained route');
+ reloaded.nextEncounter();assert.equal(reloaded.s.scene,'camp');assert.deepEqual(reloaded.s.checkpoint,retained);assert.deepEqual(reloaded.rng.getState(),rng);
+ const camp=Game.load(reloaded.export());camp.resumeJourney();assert.equal(camp.s.checkpoint,null);assert.notEqual(camp.s.scene,'camp');Game.load(camp.export());
+ const invalid=JSON.parse(global.LZString.decompressFromBase64(code.slice(4)));invalid.state.returnAfterResult=null;assert.throws(()=>Game.load(JSON.stringify(invalid)),'unrelated reward cannot contain a checkpoint');
+ checkpointConversationCases++;
+}
+const ui=fs.readFileSync('ui.js','utf8');assert(!ui.includes('scheduleAutoEncounter')&&!ui.includes('requestAnimationFrame'));assert(ui.includes('lastJourneyAction')&&ui.includes('isConnected'));const report={rewardCases:count,checkpointConversationCases,reloadDeterminism:'PASS',claimOnce:'PASS',legacyCreditedLoot:'PASS',optionalMidboss:'PASS',playerControlled:'PASS',checkpointPreservation:'PASS',pendingValidation:'PASS'};fs.writeFileSync('journey-results.json',JSON.stringify(report,null,2)+'\n');console.log('PASS Journey: '+JSON.stringify(report));

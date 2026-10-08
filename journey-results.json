@@ -1,5 +1,6 @@
 {
   "rewardCases": 36,
+  "checkpointConversationCases": 9,
   "reloadDeterminism": "PASS",
   "claimOnce": "PASS",
   "legacyCreditedLoot": "PASS",
