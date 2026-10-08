@@ -2782,7 +2782,7 @@ const $=id=>root.querySelector('#bf-'+id),KEY='black-forest-last-ember-v2',LEGAC
 const visibleText=t=>String(t).replace(/보상 받고 다음 조우|다음 조우|계속 진행|자동 이동 중…/g,'계속 나아간다').replace(/보상 수령/g,'전리품을 챙긴다').replace(/체크포인트/g,'쉼터').replace(/경로 선택/g,'길을 살핀다').replace(/랜덤 인카운트/g,'길 위의 사건').replace(/다음 지역/g,'새로운 땅').replace(/불씨의 수호자/g,'불씨를 놓아준 자');
 const esc=t=>visibleText(t).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const b=(label,cmd,arg='',sub='',disabled=false,cls='')=>`<button type="button" class="cursor-interaction ${cls}" data-cmd="${cmd}" data-arg="${esc(arg)}" ${disabled?'disabled':''}>${esc(label)}${sub?`<span>${esc(sub)}</span>`:''}</button>`;
-const menu=(label,type,cls='')=>`<button class="cursor-interaction ${cls}" type="button" data-ui="${type}">${label}</button>`;
+const menu=(label,type,cls='')=>{const campOnly=['workshop','bag','equipment','quests','jobs','story'].includes(type)&&game.s.scene!=='camp';return `<button class="cursor-interaction ${cls}" type="button" data-ui="${type}" ${campOnly?'disabled title="모닥불로 돌아가 정비한다"':''}>${label}</button>`;};
 const meter=(label,n,max)=>`<div><div class="statline"><span>${esc(label)}</span><span>${n} / ${max}</span></div><progress aria-label="${esc(label)}" value="${Math.max(0,n)}" max="${max}"></progress></div>`;
 const art=(category,id,label,cls='scene-art')=>{const src=asset(category,id);return `<figure class="${cls}">${src?`<img src="${esc(src)}" alt="${esc(label)}" loading="lazy" decoding="async" width="400" height="600">`:''}<figcaption class="art-fallback" ${src?'hidden':''}>${esc(label)} · 기록의 여백</figcaption></figure>`;};
 const portrait=id=>art('classes',id,JOBS[id].name,'class-art');
