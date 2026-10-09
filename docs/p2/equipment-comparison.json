@@ -1,0 +1,276 @@
+{
+  "status": "PASS",
+  "pairs": 5760,
+  "battles": 11520,
+  "summary": [
+    {
+      "config": [
+        "set_armor_20"
+      ],
+      "n": 384,
+      "before": {
+        "winRate": 0.9791666666666666,
+        "turns": 4.0859375,
+        "hp": 0.707423003462239
+      },
+      "after": {
+        "winRate": 0.9791666666666666,
+        "turns": 4.013020833333333,
+        "hp": 0.6996716017403247
+      },
+      "winRateDelta": 0
+    },
+    {
+      "config": [
+        "set_armor_7"
+      ],
+      "n": 384,
+      "before": {
+        "winRate": 0.9817708333333334,
+        "turns": 3.9739583333333335,
+        "hp": 0.7036467918804886
+      },
+      "after": {
+        "winRate": 0.9817708333333334,
+        "turns": 3.8958333333333335,
+        "hp": 0.7013430644145565
+      },
+      "winRateDelta": 0
+    },
+    {
+      "config": [
+        "set_armor_13"
+      ],
+      "n": 384,
+      "before": {
+        "winRate": 0.9817708333333334,
+        "turns": 4.067708333333333,
+        "hp": 0.7142883991800814
+      },
+      "after": {
+        "winRate": 0.9791666666666666,
+        "turns": 4.0859375,
+        "hp": 0.707423003462239
+      },
+      "winRateDelta": -0.0026041666666666665
+    },
+    {
+      "config": [
+        "set_charm_1"
+      ],
+      "n": 384,
+      "before": {
+        "winRate": 0.96875,
+        "turns": 4.098958333333333,
+        "hp": 0.6821782071856589
+      },
+      "after": {
+        "winRate": 0.96875,
+        "turns": 4.098958333333333,
+        "hp": 0.6821782071856589
+      },
+      "winRateDelta": 0
+    },
+    {
+      "config": [
+        "set_charm_7"
+      ],
+      "n": 384,
+      "before": {
+        "winRate": 0.9713541666666666,
+        "turns": 3.9817708333333335,
+        "hp": 0.6845210185756616
+      },
+      "after": {
+        "winRate": 0.96875,
+        "turns": 4.09375,
+        "hp": 0.6935012477448496
+      },
+      "winRateDelta": -0.0026041666666666665
+    },
+    {
+      "config": [
+        "set_charm_13"
+      ],
+      "n": 384,
+      "before": {
+        "winRate": 0.96875,
+        "turns": 4.080729166666667,
+        "hp": 0.6947423982626645
+      },
+      "after": {
+        "winRate": 0.9765625,
+        "turns": 4.013020833333333,
+        "hp": 0.6898891871006895
+      },
+      "winRateDelta": 0.0078125
+    },
+    {
+      "config": [
+        "set_armor_20",
+        "set_charm_1"
+      ],
+      "n": 384,
+      "before": {
+        "winRate": 0.9791666666666666,
+        "turns": 4.0859375,
+        "hp": 0.707423003462239
+      },
+      "after": {
+        "winRate": 0.9791666666666666,
+        "turns": 4.013020833333333,
+        "hp": 0.6996716017403247
+      },
+      "winRateDelta": 0
+    },
+    {
+      "config": [
+        "set_armor_20",
+        "set_charm_7"
+      ],
+      "n": 384,
+      "before": {
+        "winRate": 0.9817708333333334,
+        "turns": 3.9739583333333335,
+        "hp": 0.7089973983041048
+      },
+      "after": {
+        "winRate": 0.9869791666666666,
+        "turns": 4.020833333333333,
+        "hp": 0.7114150396058952
+      },
+      "winRateDelta": 0.005208333333333333
+    },
+    {
+      "config": [
+        "set_armor_20",
+        "set_charm_13"
+      ],
+      "n": 384,
+      "before": {
+        "winRate": 0.9791666666666666,
+        "turns": 4.080729166666667,
+        "hp": 0.7150447879094891
+      },
+      "after": {
+        "winRate": 0.9791666666666666,
+        "turns": 4.013020833333333,
+        "hp": 0.703521470536698
+      },
+      "winRateDelta": 0
+    },
+    {
+      "config": [
+        "set_armor_7",
+        "set_charm_1"
+      ],
+      "n": 384,
+      "before": {
+        "winRate": 0.9817708333333334,
+        "turns": 3.9739583333333335,
+        "hp": 0.7036467918804886
+      },
+      "after": {
+        "winRate": 0.9817708333333334,
+        "turns": 3.8958333333333335,
+        "hp": 0.7013430644145565
+      },
+      "winRateDelta": 0
+    },
+    {
+      "config": [
+        "set_armor_7",
+        "set_charm_7"
+      ],
+      "n": 384,
+      "before": {
+        "winRate": 0.9817708333333334,
+        "turns": 3.8098958333333335,
+        "hp": 0.6996975380562795
+      },
+      "after": {
+        "winRate": 0.9817708333333334,
+        "turns": 3.8958333333333335,
+        "hp": 0.7054552307640839
+      },
+      "winRateDelta": 0
+    },
+    {
+      "config": [
+        "set_armor_7",
+        "set_charm_13"
+      ],
+      "n": 384,
+      "before": {
+        "winRate": 0.9817708333333334,
+        "turns": 3.9609375,
+        "hp": 0.7154442495712846
+      },
+      "after": {
+        "winRate": 0.9895833333333334,
+        "turns": 3.8515625,
+        "hp": 0.7081898162947621
+      },
+      "winRateDelta": 0.0078125
+    },
+    {
+      "config": [
+        "set_armor_13",
+        "set_charm_1"
+      ],
+      "n": 384,
+      "before": {
+        "winRate": 0.9817708333333334,
+        "turns": 4.067708333333333,
+        "hp": 0.7142883991800814
+      },
+      "after": {
+        "winRate": 0.9791666666666666,
+        "turns": 4.0859375,
+        "hp": 0.707423003462239
+      },
+      "winRateDelta": -0.0026041666666666665
+    },
+    {
+      "config": [
+        "set_armor_13",
+        "set_charm_7"
+      ],
+      "n": 384,
+      "before": {
+        "winRate": 0.9817708333333334,
+        "turns": 3.9609375,
+        "hp": 0.7154442495712846
+      },
+      "after": {
+        "winRate": 0.9791666666666666,
+        "turns": 4.072916666666667,
+        "hp": 0.7095900947134334
+      },
+      "winRateDelta": -0.0026041666666666665
+    },
+    {
+      "config": [
+        "set_armor_13",
+        "set_charm_13"
+      ],
+      "n": 384,
+      "before": {
+        "winRate": 0.9817708333333334,
+        "turns": 4.057291666666667,
+        "hp": 0.7163161689267413
+      },
+      "after": {
+        "winRate": 0.9869791666666666,
+        "turns": 4.010416666666667,
+        "hp": 0.7128012502368652
+      },
+      "winRateDelta": 0.005208333333333333
+    }
+  ],
+  "method": "15 single/pair loadouts × 8 careers × early/late × 3 seeds × full/35%HP × normal/boss × skill/tactical. Same generated grade1 gear budgets; no mastery/availability claims.",
+  "limitations": [
+    "Grade1 gear at late stages intentionally stress-tests weak gear, not an optimal build.",
+    "Aggregate guardrails do not prove every class/loadout condition."
+  ]
+}

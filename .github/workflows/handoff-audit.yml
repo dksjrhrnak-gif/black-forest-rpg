@@ -1,7 +1,7 @@
 name: Handoff audit and requested mobile sizes
 on:
   push:
-    branches: [qa/handoff-audit-20261008, qa/resume-checkpoint-20261008, qa/asset-quality-20261008, qa/p1-class-identity-20261008, main]
+    branches: [qa/handoff-audit-20261008, qa/resume-checkpoint-20261008, qa/asset-quality-20261008, qa/p1-class-identity-20261008, feature/p2-exploration-equipment, main]
   workflow_dispatch:
 permissions:
   contents: read
@@ -9,7 +9,7 @@ permissions:
 jobs:
   logic:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 25
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -17,16 +17,21 @@ jobs:
           node-version: '22'
       - run: npm ci --ignore-scripts
       - run: npm test
+      - run: node test-p2.cjs
+      - run: node test-p2-natural.cjs
+      - run: node test-p2-equipment.cjs
       - run: node test-p1-identity.cjs
+        env:
+          BF_P1_OUT: docs/p2/p1-effect-comparison.json
       - name: Fixed-seed gameplay audit and natural save continuity
         env:
-          BF_AUDIT_OUT: docs/p1/regression
+          BF_AUDIT_OUT: docs/p2/regression
         run: node audit-gameplay-quality.cjs all
       - uses: actions/upload-artifact@v4
         with:
           name: gameplay-data
           path: |
-            docs/p1/**/*.json
+            docs/p2/**/*.json
             docs/p1/comparison.json
       - run: python3 build.py && node export-data.cjs && python3 export-site.py && python3 verify-html.py
   browser:
@@ -73,6 +78,12 @@ jobs:
           BF_BROWSER: ${{ matrix.browser }}
           BF_QA_URL: http://127.0.0.1:4173/
         run: node test-p1-ui.cjs
+      - name: P2 regional choices, battle, equipment and saved reactions
+        if: matrix.interaction == 'touch'
+        env:
+          BF_BROWSER: ${{ matrix.browser }}
+          BF_QA_URL: http://127.0.0.1:4173/
+        run: node test-p2-ui.cjs
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -83,6 +94,7 @@ jobs:
             handoff-readiness-*.json
             docs/gameplay/mobile-quality-*.json
             docs/p1/ui-*.json
+            docs/p2/ui-*.json
             screenshots/
 
   live-pages:
@@ -109,6 +121,11 @@ jobs:
           BF_BROWSER: ${{ matrix.browser }}
           BF_QA_URL: https://dksjrhrnak-gif.github.io/black-forest-rpg/
         run: node test-p1-ui.cjs
+      - name: Public P2 regional choices and saved story reactions
+        env:
+          BF_BROWSER: ${{ matrix.browser }}
+          BF_QA_URL: https://dksjrhrnak-gif.github.io/black-forest-rpg/
+        run: node test-p2-ui.cjs
       - name: Match the deployed game and all mapped assets
         env:
           BF_HTTP_BASE: https://dksjrhrnak-gif.github.io/black-forest-rpg/
@@ -128,5 +145,6 @@ jobs:
           path: |
             pages-http-results.json
             docs/p1/ui-*.json
+            docs/p2/ui-*.json
             mobile-results*.txt
             screenshots/

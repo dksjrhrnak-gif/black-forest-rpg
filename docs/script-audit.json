@@ -1,8 +1,8 @@
 {
   "status": "PASS",
   "canonicalSynchronization": "checked thread/quest/NPC generated messages and choices",
-  "sourceStringCount": 1923,
-  "choiceCount": 261,
+  "sourceStringCount": 1986,
+  "choiceCount": 270,
   "over18": [
     {
       "key": "chapter.0.0.0",

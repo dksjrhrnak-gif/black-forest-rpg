@@ -1,0 +1,5079 @@
+{
+  "existingFiles": 149,
+  "missingClasses": [
+    "x_ranged_11",
+    "x_ranged_12",
+    "x_ranged_14",
+    "x_ranged_15",
+    "x_support_0",
+    "x_support_1",
+    "x_support_2",
+    "x_support_3",
+    "x_support_4",
+    "x_support_5",
+    "x_support_6",
+    "x_support_7",
+    "x_support_8",
+    "x_support_9",
+    "x_support_10",
+    "x_support_11",
+    "x_support_12",
+    "x_support_13",
+    "x_support_14",
+    "x_support_15",
+    "x_occult_0",
+    "x_occult_1",
+    "x_occult_2",
+    "x_occult_3",
+    "x_occult_4",
+    "x_occult_5",
+    "x_occult_6",
+    "x_occult_7",
+    "x_occult_8",
+    "x_occult_9",
+    "x_occult_10",
+    "x_occult_11",
+    "x_occult_12",
+    "x_occult_14",
+    "whale_slayer",
+    "alice_return",
+    "victor_heir",
+    "quixote_squire",
+    "sherwood_warden",
+    "oz_restorer",
+    "faust_release",
+    "margin_keeper"
+  ],
+  "missingEquipment": [
+    {
+      "id": "w1",
+      "name": "사냥꾼의 단검",
+      "slot": "weapon"
+    },
+    {
+      "id": "w2",
+      "name": "참나무 지팡이",
+      "slot": "weapon"
+    },
+    {
+      "id": "w3",
+      "name": "수호자의 창",
+      "slot": "weapon"
+    },
+    {
+      "id": "w4",
+      "name": "톱날 검",
+      "slot": "weapon"
+    },
+    {
+      "id": "w5",
+      "name": "쌍날 도끼",
+      "slot": "weapon"
+    },
+    {
+      "id": "w6",
+      "name": "은빛 레이피어",
+      "slot": "weapon"
+    },
+    {
+      "id": "w7",
+      "name": "가시 채찍",
+      "slot": "weapon"
+    },
+    {
+      "id": "w8",
+      "name": "번개 지팡이",
+      "slot": "weapon"
+    },
+    {
+      "id": "w9",
+      "name": "서리 대검",
+      "slot": "weapon"
+    },
+    {
+      "id": "w10",
+      "name": "흑요석 낫",
+      "slot": "weapon"
+    },
+    {
+      "id": "w11",
+      "name": "룬 장검",
+      "slot": "weapon"
+    },
+    {
+      "id": "w12",
+      "name": "사막의 곡도",
+      "slot": "weapon"
+    },
+    {
+      "id": "w13",
+      "name": "달빛 활",
+      "slot": "weapon"
+    },
+    {
+      "id": "w14",
+      "name": "금서의 마도서",
+      "slot": "weapon"
+    },
+    {
+      "id": "w15",
+      "name": "별철 해머",
+      "slot": "weapon"
+    },
+    {
+      "id": "w16",
+      "name": "황혼의 서약",
+      "slot": "weapon"
+    },
+    {
+      "id": "w17",
+      "name": "밤을 찢는 송곳니",
+      "slot": "weapon"
+    },
+    {
+      "id": "w18",
+      "name": "태양의 잿가루",
+      "slot": "weapon"
+    },
+    {
+      "id": "w19",
+      "name": "거짓말쟁이의 주사위",
+      "slot": "weapon"
+    },
+    {
+      "id": "w20",
+      "name": "시간을 베는 검",
+      "slot": "weapon"
+    },
+    {
+      "id": "w21",
+      "name": "왕의 마지막 명령",
+      "slot": "weapon"
+    },
+    {
+      "id": "w22",
+      "name": "공허의 심판",
+      "slot": "weapon"
+    },
+    {
+      "id": "w23",
+      "name": "첫 불씨",
+      "slot": "weapon"
+    },
+    {
+      "id": "a0",
+      "name": "가죽 외투",
+      "slot": "armor"
+    },
+    {
+      "id": "a1",
+      "name": "쇠사슬 갑옷",
+      "slot": "armor"
+    },
+    {
+      "id": "a2",
+      "name": "사냥꾼의 망토",
+      "slot": "armor"
+    },
+    {
+      "id": "a3",
+      "name": "수도사의 로브",
+      "slot": "armor"
+    },
+    {
+      "id": "a4",
+      "name": "은빛 흉갑",
+      "slot": "armor"
+    },
+    {
+      "id": "a5",
+      "name": "늪지의 가죽옷",
+      "slot": "armor"
+    },
+    {
+      "id": "a6",
+      "name": "그림자 외투",
+      "slot": "armor"
+    },
+    {
+      "id": "a7",
+      "name": "룬 갑옷",
+      "slot": "armor"
+    },
+    {
+      "id": "a8",
+      "name": "사막의 수의",
+      "slot": "armor"
+    },
+    {
+      "id": "a9",
+      "name": "달의 예복",
+      "slot": "armor"
+    },
+    {
+      "id": "a10",
+      "name": "별철 판금",
+      "slot": "armor"
+    },
+    {
+      "id": "a11",
+      "name": "새벽의 날개",
+      "slot": "armor"
+    },
+    {
+      "id": "t0",
+      "name": "낡은 부적",
+      "slot": "charm"
+    },
+    {
+      "id": "t1",
+      "name": "사냥꾼의 이빨",
+      "slot": "charm"
+    },
+    {
+      "id": "t2",
+      "name": "푸른 유리",
+      "slot": "charm"
+    },
+    {
+      "id": "t3",
+      "name": "구리 회중시계",
+      "slot": "charm"
+    },
+    {
+      "id": "t4",
+      "name": "은빛 묵주",
+      "slot": "charm"
+    },
+    {
+      "id": "t5",
+      "name": "마녀의 반지",
+      "slot": "charm"
+    },
+    {
+      "id": "t6",
+      "name": "피의 보석",
+      "slot": "charm"
+    },
+    {
+      "id": "t7",
+      "name": "행운의 동전",
+      "slot": "charm"
+    },
+    {
+      "id": "t8",
+      "name": "달의 조각",
+      "slot": "charm"
+    },
+    {
+      "id": "t9",
+      "name": "별의 나침반",
+      "slot": "charm"
+    },
+    {
+      "id": "t10",
+      "name": "멈춘 시계",
+      "slot": "charm"
+    },
+    {
+      "id": "t11",
+      "name": "잃어버린 왕관",
+      "slot": "charm"
+    },
+    {
+      "id": "lit_sword_0",
+      "name": "물먹은 갑판검",
+      "slot": "weapon"
+    },
+    {
+      "id": "lit_sword_1",
+      "name": "토끼굴의 녹슨 칼",
+      "slot": "weapon"
+    },
+    {
+      "id": "lit_sword_2",
+      "name": "종이 병사의 철편검",
+      "slot": "weapon"
+    },
+    {
+      "id": "lit_sword_3",
+      "name": "봉합사의 절개도",
+      "slot": "weapon"
+    },
+    {
+      "id": "lit_sword_4",
+      "name": "풍차 마을의 연습검",
+      "slot": "weapon"
+    },
+    {
+      "id": "lit_sword_5",
+      "name": "선실의 손잡이 짧은 칼",
+      "slot": "weapon"
+    },
+    {
+      "id": "lit_sword_6",
+      "name": "법정 경비의 직검",
+      "slot": "weapon"
+    },
+    {
+      "id": "lit_sword_7",
+      "name": "안개 여관의 낡은 도",
+      "slot": "weapon"
+    },
+    {
+      "id": "lit_sword_8",
+      "name": "유리공의 무딘 절단검",
+      "slot": "weapon"
+    },
+    {
+      "id": "lit_sword_9",
+      "name": "묘지기의 뼈자루 칼",
+      "slot": "weapon"
+    },
+    {
+      "id": "lit_sword_10",
+      "name": "모자 가게의 재단검",
+      "slot": "weapon"
+    },
+    {
+      "id": "lit_sword_11",
+      "name": "검댕 묻은 작업도",
+      "slot": "weapon"
+    },
+    {
+      "id": "lit_sword_12",
+      "name": "염분에 닳은 사브르",
+      "slot": "weapon"
+    },
+    {
+      "id": "lit_sword_13",
+      "name": "마차 호위의 장도",
+      "slot": "weapon"
+    },
+    {
+      "id": "lit_sword_14",
+      "name": "구빈원의 지급검",
+      "slot": "weapon"
+    },
+    {
+      "id": "lit_sword_15",
+      "name": "무너진 성벽의 군도",
+      "slot": "weapon"
+    },
+    {
+      "id": "lit_sword_16",
+      "name": "강변 나룻배의 곡검",
+      "slot": "weapon"
+    },
+    {
+      "id": "lit_sword_17",
+      "name": "헌책방의 종이칼",
+      "slot": "weapon"
+    },
+    {
+      "id": "lit_sword_18",
+      "name": "길 잃은 종자의 검",
+      "slot": "weapon"
+    },
+    {
+      "id": "lit_sword_19",
+      "name": "폐실험실의 톱날도",
+      "slot": "weapon"
+    },
+    {
+      "id": "lit_sword_20",
+      "name": "피쿼드의 파도갈이",
+      "slot": "weapon"
+    },
+    {
+      "id": "lit_sword_21",
+      "name": "앨리스의 문틈검",
+      "slot": "weapon"
+    },
+    {
+      "id": "lit_sword_22",
+      "name": "산초의 귀환도",
+      "slot": "weapon"
+    },
+    {
+      "id": "lit_sword_23",
+      "name": "피조물의 이름칼",
+      "slot": "weapon"
+    },
+    {
+      "id": "lit_sword_24",
+      "name": "하트 병사의 반역검",
+      "slot": "weapon"
+    },
+    {
+      "id": "lit_sword_25",
+      "name": "증기 봉합의 절단검",
+      "slot": "weapon"
+    },
+    {
+      "id": "lit_sword_26",
+      "name": "거울의 배면도",
+      "slot": "weapon"
+    },
+    {
+      "id": "lit_sword_27",
+      "name": "회중시계의 초침검",
+      "slot": "weapon"
+    },
+    {
+      "id": "lit_sword_28",
+      "name": "백경 뼈의 양날검",
+      "slot": "weapon"
+    },
+    {
+      "id": "lit_sword_29",
+      "name": "야간 우편의 암검",
+      "slot": "weapon"
+    },
+    {
+      "id": "lit_sword_30",
+      "name": "잊힌 법전의 집행도",
+      "slot": "weapon"
+    },
+    {
+      "id": "lit_sword_31",
+      "name": "황동 정맥의 장검",
+      "slot": "weapon"
+    },
+    {
+      "id": "lit_sword_32",
+      "name": "재판을 거부한 검",
+      "slot": "weapon"
+    },
+    {
+      "id": "lit_sword_33",
+      "name": "붉은 약병의 세검",
+      "slot": "weapon"
+    },
+    {
+      "id": "lit_sword_34",
+      "name": "등대의 그림자검",
+      "slot": "weapon"
+    },
+    {
+      "id": "lit_sword_35",
+      "name": "에이해브의 맹세도",
+      "slot": "weapon"
+    },
+    {
+      "id": "lit_sword_36",
+      "name": "돈키호테의 없는 거인",
+      "slot": "weapon"
+    },
+    {
+      "id": "lit_sword_37",
+      "name": "창조주의 후회",
+      "slot": "weapon"
+    },
+    {
+      "id": "lit_sword_38",
+      "name": "피조물의 첫 이름",
+      "slot": "weapon"
+    },
+    {
+      "id": "lit_sword_39",
+      "name": "하트 여왕의 공소검",
+      "slot": "weapon"
+    },
+    {
+      "id": "lit_sword_40",
+      "name": "흰 토끼의 지각검",
+      "slot": "weapon"
+    },
+    {
+      "id": "lit_sword_41",
+      "name": "지킬의 절제와 하이드",
+      "slot": "weapon"
+    },
+    {
+      "id": "lit_sword_42",
+      "name": "성채를 떠난 백기사",
+      "slot": "weapon"
+    },
+    {
+      "id": "lit_sword_43",
+      "name": "백지 연맹의 제본검",
+      "slot": "weapon"
+    },
+    {
+      "id": "lit_sword_44",
+      "name": "대홍수의 책갈피",
+      "slot": "weapon"
+    },
+    {
+      "id": "lit_sword_45",
+      "name": "백경의 마지막 수평선",
+      "slot": "weapon"
+    },
+    {
+      "id": "lit_sword_46",
+      "name": "라만차의 부서지지 않는 꿈",
+      "slot": "weapon"
+    },
+    {
+      "id": "lit_sword_47",
+      "name": "프로메테우스의 봉합선",
+      "slot": "weapon"
+    },
+    {
+      "id": "lit_sword_48",
+      "name": "하트 없는 왕관",
+      "slot": "weapon"
+    },
+    {
+      "id": "lit_sword_49",
+      "name": "첫 문장을 베는 자",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_0",
+      "name": "토끼굴의 창",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_1",
+      "name": "하트 법정의 창",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_2",
+      "name": "흰 토끼의 시계의 창",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_3",
+      "name": "거울 나라의 창",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_4",
+      "name": "피쿼드의 항해의 창",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_5",
+      "name": "백경의 상흔의 창",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_6",
+      "name": "라만차의 꿈의 창",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_7",
+      "name": "산초의 귀환길의 창",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_8",
+      "name": "봉합 실험실의 창",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_9",
+      "name": "피조물의 이름의 창",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_10",
+      "name": "노틸러스의 심해의 창",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_11",
+      "name": "오즈의 녹색 도시의 창",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_12",
+      "name": "셜우드의 숲의 창",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_13",
+      "name": "노트르담의 종의 창",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_14",
+      "name": "몽테크리스토의 장부의 창",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_15",
+      "name": "시간 기계의 잔광의 창",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_16",
+      "name": "드라큘라의 새벽의 창",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_17",
+      "name": "천일야화의 등불의 창",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_18",
+      "name": "성냥팔이의 불씨의 창",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_19",
+      "name": "파우스트의 서명의 창",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_20",
+      "name": "토끼굴의 작살",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_21",
+      "name": "하트 법정의 작살",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_22",
+      "name": "흰 토끼의 시계의 작살",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_23",
+      "name": "거울 나라의 작살",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_24",
+      "name": "피쿼드의 항해의 작살",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_25",
+      "name": "백경의 상흔의 작살",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_26",
+      "name": "라만차의 꿈의 작살",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_27",
+      "name": "산초의 귀환길의 작살",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_28",
+      "name": "봉합 실험실의 작살",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_29",
+      "name": "피조물의 이름의 작살",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_30",
+      "name": "노틸러스의 심해의 작살",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_31",
+      "name": "오즈의 녹색 도시의 작살",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_32",
+      "name": "셜우드의 숲의 작살",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_33",
+      "name": "노트르담의 종의 작살",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_34",
+      "name": "몽테크리스토의 장부의 작살",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_35",
+      "name": "시간 기계의 잔광의 작살",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_36",
+      "name": "드라큘라의 새벽의 작살",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_37",
+      "name": "천일야화의 등불의 작살",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_38",
+      "name": "성냥팔이의 불씨의 작살",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_39",
+      "name": "파우스트의 서명의 작살",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_40",
+      "name": "토끼굴의 활",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_41",
+      "name": "하트 법정의 활",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_42",
+      "name": "흰 토끼의 시계의 활",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_43",
+      "name": "거울 나라의 활",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_44",
+      "name": "피쿼드의 항해의 활",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_45",
+      "name": "백경의 상흔의 활",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_46",
+      "name": "라만차의 꿈의 활",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_47",
+      "name": "산초의 귀환길의 활",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_48",
+      "name": "봉합 실험실의 활",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_49",
+      "name": "피조물의 이름의 활",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_50",
+      "name": "노틸러스의 심해의 활",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_51",
+      "name": "오즈의 녹색 도시의 활",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_52",
+      "name": "셜우드의 숲의 활",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_53",
+      "name": "노트르담의 종의 활",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_54",
+      "name": "몽테크리스토의 장부의 활",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_55",
+      "name": "시간 기계의 잔광의 활",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_56",
+      "name": "드라큘라의 새벽의 활",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_57",
+      "name": "천일야화의 등불의 활",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_58",
+      "name": "성냥팔이의 불씨의 활",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_59",
+      "name": "파우스트의 서명의 활",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_60",
+      "name": "토끼굴의 쇠뇌",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_61",
+      "name": "하트 법정의 쇠뇌",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_62",
+      "name": "흰 토끼의 시계의 쇠뇌",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_63",
+      "name": "거울 나라의 쇠뇌",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_64",
+      "name": "피쿼드의 항해의 쇠뇌",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_65",
+      "name": "백경의 상흔의 쇠뇌",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_66",
+      "name": "라만차의 꿈의 쇠뇌",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_67",
+      "name": "산초의 귀환길의 쇠뇌",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_68",
+      "name": "봉합 실험실의 쇠뇌",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_69",
+      "name": "피조물의 이름의 쇠뇌",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_70",
+      "name": "노틸러스의 심해의 쇠뇌",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_71",
+      "name": "오즈의 녹색 도시의 쇠뇌",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_72",
+      "name": "셜우드의 숲의 쇠뇌",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_73",
+      "name": "노트르담의 종의 쇠뇌",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_74",
+      "name": "몽테크리스토의 장부의 쇠뇌",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_75",
+      "name": "시간 기계의 잔광의 쇠뇌",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_76",
+      "name": "드라큘라의 새벽의 쇠뇌",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_77",
+      "name": "천일야화의 등불의 쇠뇌",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_78",
+      "name": "성냥팔이의 불씨의 쇠뇌",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_79",
+      "name": "파우스트의 서명의 쇠뇌",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_80",
+      "name": "토끼굴의 도끼",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_81",
+      "name": "하트 법정의 도끼",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_82",
+      "name": "흰 토끼의 시계의 도끼",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_83",
+      "name": "거울 나라의 도끼",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_84",
+      "name": "피쿼드의 항해의 도끼",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_85",
+      "name": "백경의 상흔의 도끼",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_86",
+      "name": "라만차의 꿈의 도끼",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_87",
+      "name": "산초의 귀환길의 도끼",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_88",
+      "name": "봉합 실험실의 도끼",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_89",
+      "name": "피조물의 이름의 도끼",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_90",
+      "name": "노틸러스의 심해의 도끼",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_91",
+      "name": "오즈의 녹색 도시의 도끼",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_92",
+      "name": "셜우드의 숲의 도끼",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_93",
+      "name": "노트르담의 종의 도끼",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_94",
+      "name": "몽테크리스토의 장부의 도끼",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_95",
+      "name": "시간 기계의 잔광의 도끼",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_96",
+      "name": "드라큘라의 새벽의 도끼",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_97",
+      "name": "천일야화의 등불의 도끼",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_98",
+      "name": "성냥팔이의 불씨의 도끼",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_99",
+      "name": "파우스트의 서명의 도끼",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_100",
+      "name": "토끼굴의 해머",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_101",
+      "name": "하트 법정의 해머",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_102",
+      "name": "흰 토끼의 시계의 해머",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_103",
+      "name": "거울 나라의 해머",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_104",
+      "name": "피쿼드의 항해의 해머",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_105",
+      "name": "백경의 상흔의 해머",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_106",
+      "name": "라만차의 꿈의 해머",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_107",
+      "name": "산초의 귀환길의 해머",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_108",
+      "name": "봉합 실험실의 해머",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_109",
+      "name": "피조물의 이름의 해머",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_110",
+      "name": "노틸러스의 심해의 해머",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_111",
+      "name": "오즈의 녹색 도시의 해머",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_112",
+      "name": "셜우드의 숲의 해머",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_113",
+      "name": "노트르담의 종의 해머",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_114",
+      "name": "몽테크리스토의 장부의 해머",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_115",
+      "name": "시간 기계의 잔광의 해머",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_116",
+      "name": "드라큘라의 새벽의 해머",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_117",
+      "name": "천일야화의 등불의 해머",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_118",
+      "name": "성냥팔이의 불씨의 해머",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_119",
+      "name": "파우스트의 서명의 해머",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_120",
+      "name": "토끼굴의 지팡이",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_121",
+      "name": "하트 법정의 지팡이",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_122",
+      "name": "흰 토끼의 시계의 지팡이",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_123",
+      "name": "거울 나라의 지팡이",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_124",
+      "name": "피쿼드의 항해의 지팡이",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_125",
+      "name": "백경의 상흔의 지팡이",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_126",
+      "name": "라만차의 꿈의 지팡이",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_127",
+      "name": "산초의 귀환길의 지팡이",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_128",
+      "name": "봉합 실험실의 지팡이",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_129",
+      "name": "피조물의 이름의 지팡이",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_130",
+      "name": "노틸러스의 심해의 지팡이",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_131",
+      "name": "오즈의 녹색 도시의 지팡이",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_132",
+      "name": "셜우드의 숲의 지팡이",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_133",
+      "name": "노트르담의 종의 지팡이",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_134",
+      "name": "몽테크리스토의 장부의 지팡이",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_135",
+      "name": "시간 기계의 잔광의 지팡이",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_136",
+      "name": "드라큘라의 새벽의 지팡이",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_137",
+      "name": "천일야화의 등불의 지팡이",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_138",
+      "name": "성냥팔이의 불씨의 지팡이",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_139",
+      "name": "파우스트의 서명의 지팡이",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_140",
+      "name": "토끼굴의 마도서",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_141",
+      "name": "하트 법정의 마도서",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_142",
+      "name": "흰 토끼의 시계의 마도서",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_143",
+      "name": "거울 나라의 마도서",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_144",
+      "name": "피쿼드의 항해의 마도서",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_145",
+      "name": "백경의 상흔의 마도서",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_146",
+      "name": "라만차의 꿈의 마도서",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_147",
+      "name": "산초의 귀환길의 마도서",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_148",
+      "name": "봉합 실험실의 마도서",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_149",
+      "name": "피조물의 이름의 마도서",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_150",
+      "name": "노틸러스의 심해의 마도서",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_151",
+      "name": "오즈의 녹색 도시의 마도서",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_152",
+      "name": "셜우드의 숲의 마도서",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_153",
+      "name": "노트르담의 종의 마도서",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_154",
+      "name": "몽테크리스토의 장부의 마도서",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_155",
+      "name": "시간 기계의 잔광의 마도서",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_156",
+      "name": "드라큘라의 새벽의 마도서",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_157",
+      "name": "천일야화의 등불의 마도서",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_158",
+      "name": "성냥팔이의 불씨의 마도서",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_159",
+      "name": "파우스트의 서명의 마도서",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_160",
+      "name": "토끼굴의 낫",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_161",
+      "name": "하트 법정의 낫",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_162",
+      "name": "흰 토끼의 시계의 낫",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_163",
+      "name": "거울 나라의 낫",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_164",
+      "name": "피쿼드의 항해의 낫",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_165",
+      "name": "백경의 상흔의 낫",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_166",
+      "name": "라만차의 꿈의 낫",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_167",
+      "name": "산초의 귀환길의 낫",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_168",
+      "name": "봉합 실험실의 낫",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_169",
+      "name": "피조물의 이름의 낫",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_170",
+      "name": "노틸러스의 심해의 낫",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_171",
+      "name": "오즈의 녹색 도시의 낫",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_172",
+      "name": "셜우드의 숲의 낫",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_173",
+      "name": "노트르담의 종의 낫",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_174",
+      "name": "몽테크리스토의 장부의 낫",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_175",
+      "name": "시간 기계의 잔광의 낫",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_176",
+      "name": "드라큘라의 새벽의 낫",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_177",
+      "name": "천일야화의 등불의 낫",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_178",
+      "name": "성냥팔이의 불씨의 낫",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_179",
+      "name": "파우스트의 서명의 낫",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_180",
+      "name": "토끼굴의 채찍",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_181",
+      "name": "하트 법정의 채찍",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_182",
+      "name": "흰 토끼의 시계의 채찍",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_183",
+      "name": "거울 나라의 채찍",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_184",
+      "name": "피쿼드의 항해의 채찍",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_185",
+      "name": "백경의 상흔의 채찍",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_186",
+      "name": "라만차의 꿈의 채찍",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_187",
+      "name": "산초의 귀환길의 채찍",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_188",
+      "name": "봉합 실험실의 채찍",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_189",
+      "name": "피조물의 이름의 채찍",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_190",
+      "name": "노틸러스의 심해의 채찍",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_191",
+      "name": "오즈의 녹색 도시의 채찍",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_192",
+      "name": "셜우드의 숲의 채찍",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_193",
+      "name": "노트르담의 종의 채찍",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_194",
+      "name": "몽테크리스토의 장부의 채찍",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_195",
+      "name": "시간 기계의 잔광의 채찍",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_196",
+      "name": "드라큘라의 새벽의 채찍",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_197",
+      "name": "천일야화의 등불의 채찍",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_198",
+      "name": "성냥팔이의 불씨의 채찍",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_199",
+      "name": "파우스트의 서명의 채찍",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_200",
+      "name": "토끼굴의 투창",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_201",
+      "name": "하트 법정의 투창",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_202",
+      "name": "흰 토끼의 시계의 투창",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_203",
+      "name": "거울 나라의 투창",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_204",
+      "name": "피쿼드의 항해의 투창",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_205",
+      "name": "백경의 상흔의 투창",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_206",
+      "name": "라만차의 꿈의 투창",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_207",
+      "name": "산초의 귀환길의 투창",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_208",
+      "name": "봉합 실험실의 투창",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_209",
+      "name": "피조물의 이름의 투창",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_210",
+      "name": "노틸러스의 심해의 투창",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_211",
+      "name": "오즈의 녹색 도시의 투창",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_212",
+      "name": "셜우드의 숲의 투창",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_213",
+      "name": "노트르담의 종의 투창",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_214",
+      "name": "몽테크리스토의 장부의 투창",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_215",
+      "name": "시간 기계의 잔광의 투창",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_216",
+      "name": "드라큘라의 새벽의 투창",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_217",
+      "name": "천일야화의 등불의 투창",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_218",
+      "name": "성냥팔이의 불씨의 투창",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_219",
+      "name": "파우스트의 서명의 투창",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_220",
+      "name": "토끼굴의 권갑",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_221",
+      "name": "하트 법정의 권갑",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_222",
+      "name": "흰 토끼의 시계의 권갑",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_223",
+      "name": "거울 나라의 권갑",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_224",
+      "name": "피쿼드의 항해의 권갑",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_225",
+      "name": "백경의 상흔의 권갑",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_226",
+      "name": "라만차의 꿈의 권갑",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_227",
+      "name": "산초의 귀환길의 권갑",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_228",
+      "name": "봉합 실험실의 권갑",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_229",
+      "name": "피조물의 이름의 권갑",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_230",
+      "name": "노틸러스의 심해의 권갑",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_231",
+      "name": "오즈의 녹색 도시의 권갑",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_232",
+      "name": "셜우드의 숲의 권갑",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_233",
+      "name": "노트르담의 종의 권갑",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_234",
+      "name": "몽테크리스토의 장부의 권갑",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_235",
+      "name": "시간 기계의 잔광의 권갑",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_236",
+      "name": "드라큘라의 새벽의 권갑",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_237",
+      "name": "천일야화의 등불의 권갑",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_238",
+      "name": "성냥팔이의 불씨의 권갑",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_239",
+      "name": "파우스트의 서명의 권갑",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_240",
+      "name": "토끼굴의 화승총",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_241",
+      "name": "하트 법정의 화승총",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_242",
+      "name": "흰 토끼의 시계의 화승총",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_243",
+      "name": "거울 나라의 화승총",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_244",
+      "name": "피쿼드의 항해의 화승총",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_245",
+      "name": "백경의 상흔의 화승총",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_246",
+      "name": "라만차의 꿈의 화승총",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_247",
+      "name": "산초의 귀환길의 화승총",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_248",
+      "name": "봉합 실험실의 화승총",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_249",
+      "name": "피조물의 이름의 화승총",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_250",
+      "name": "노틸러스의 심해의 화승총",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_251",
+      "name": "오즈의 녹색 도시의 화승총",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_252",
+      "name": "셜우드의 숲의 화승총",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_253",
+      "name": "노트르담의 종의 화승총",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_254",
+      "name": "몽테크리스토의 장부의 화승총",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_255",
+      "name": "시간 기계의 잔광의 화승총",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_256",
+      "name": "드라큘라의 새벽의 화승총",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_257",
+      "name": "천일야화의 등불의 화승총",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_258",
+      "name": "성냥팔이의 불씨의 화승총",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_259",
+      "name": "파우스트의 서명의 화승총",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_260",
+      "name": "토끼굴의 철퇴",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_261",
+      "name": "하트 법정의 철퇴",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_262",
+      "name": "흰 토끼의 시계의 철퇴",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_263",
+      "name": "거울 나라의 철퇴",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_264",
+      "name": "피쿼드의 항해의 철퇴",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_265",
+      "name": "백경의 상흔의 철퇴",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_266",
+      "name": "라만차의 꿈의 철퇴",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_267",
+      "name": "산초의 귀환길의 철퇴",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_268",
+      "name": "봉합 실험실의 철퇴",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_269",
+      "name": "피조물의 이름의 철퇴",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_270",
+      "name": "노틸러스의 심해의 철퇴",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_271",
+      "name": "오즈의 녹색 도시의 철퇴",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_272",
+      "name": "셜우드의 숲의 철퇴",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_273",
+      "name": "노트르담의 종의 철퇴",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_274",
+      "name": "몽테크리스토의 장부의 철퇴",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_275",
+      "name": "시간 기계의 잔광의 철퇴",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_276",
+      "name": "드라큘라의 새벽의 철퇴",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_277",
+      "name": "천일야화의 등불의 철퇴",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_278",
+      "name": "성냥팔이의 불씨의 철퇴",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_279",
+      "name": "파우스트의 서명의 철퇴",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_280",
+      "name": "토끼굴의 지휘봉",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_281",
+      "name": "하트 법정의 지휘봉",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_282",
+      "name": "흰 토끼의 시계의 지휘봉",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_283",
+      "name": "거울 나라의 지휘봉",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_284",
+      "name": "피쿼드의 항해의 지휘봉",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_285",
+      "name": "백경의 상흔의 지휘봉",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_286",
+      "name": "라만차의 꿈의 지휘봉",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_287",
+      "name": "산초의 귀환길의 지휘봉",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_288",
+      "name": "봉합 실험실의 지휘봉",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_289",
+      "name": "피조물의 이름의 지휘봉",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_290",
+      "name": "노틸러스의 심해의 지휘봉",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_291",
+      "name": "오즈의 녹색 도시의 지휘봉",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_292",
+      "name": "셜우드의 숲의 지휘봉",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_293",
+      "name": "노트르담의 종의 지휘봉",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_294",
+      "name": "몽테크리스토의 장부의 지휘봉",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_295",
+      "name": "시간 기계의 잔광의 지휘봉",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_296",
+      "name": "드라큘라의 새벽의 지휘봉",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_297",
+      "name": "천일야화의 등불의 지휘봉",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_298",
+      "name": "성냥팔이의 불씨의 지휘봉",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_299",
+      "name": "파우스트의 서명의 지휘봉",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_300",
+      "name": "토끼굴의 차크람",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_301",
+      "name": "하트 법정의 차크람",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_302",
+      "name": "흰 토끼의 시계의 차크람",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_303",
+      "name": "거울 나라의 차크람",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_304",
+      "name": "피쿼드의 항해의 차크람",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_305",
+      "name": "백경의 상흔의 차크람",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_306",
+      "name": "라만차의 꿈의 차크람",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_307",
+      "name": "산초의 귀환길의 차크람",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_308",
+      "name": "봉합 실험실의 차크람",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_309",
+      "name": "피조물의 이름의 차크람",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_310",
+      "name": "노틸러스의 심해의 차크람",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_311",
+      "name": "오즈의 녹색 도시의 차크람",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_312",
+      "name": "셜우드의 숲의 차크람",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_313",
+      "name": "노트르담의 종의 차크람",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_314",
+      "name": "몽테크리스토의 장부의 차크람",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_315",
+      "name": "시간 기계의 잔광의 차크람",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_316",
+      "name": "드라큘라의 새벽의 차크람",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_317",
+      "name": "천일야화의 등불의 차크람",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_318",
+      "name": "성냥팔이의 불씨의 차크람",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_319",
+      "name": "파우스트의 서명의 차크람",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_320",
+      "name": "토끼굴의 항해유산 해도",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_321",
+      "name": "하트 법정의 항해유산 신호창",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_322",
+      "name": "흰 토끼의 시계의 항해유산 선상종",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_323",
+      "name": "거울 나라의 항해유산 돛대활",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_324",
+      "name": "피쿼드의 항해의 항해유산 비상닻",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_weapon_325",
+      "name": "백경의 상흔의 항해유산 귀환검",
+      "slot": "weapon"
+    },
+    {
+      "id": "set_armor_0",
+      "name": "토끼굴의 흉갑",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_1",
+      "name": "하트 법정의 흉갑",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_2",
+      "name": "흰 토끼의 시계의 흉갑",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_3",
+      "name": "거울 나라의 흉갑",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_4",
+      "name": "피쿼드의 항해의 흉갑",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_5",
+      "name": "백경의 상흔의 흉갑",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_6",
+      "name": "라만차의 꿈의 흉갑",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_7",
+      "name": "산초의 귀환길의 흉갑",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_8",
+      "name": "봉합 실험실의 흉갑",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_9",
+      "name": "피조물의 이름의 흉갑",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_10",
+      "name": "노틸러스의 심해의 흉갑",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_11",
+      "name": "오즈의 녹색 도시의 흉갑",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_12",
+      "name": "셜우드의 숲의 흉갑",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_13",
+      "name": "노트르담의 종의 흉갑",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_14",
+      "name": "몽테크리스토의 장부의 흉갑",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_15",
+      "name": "시간 기계의 잔광의 흉갑",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_16",
+      "name": "드라큘라의 새벽의 흉갑",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_17",
+      "name": "천일야화의 등불의 흉갑",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_18",
+      "name": "성냥팔이의 불씨의 흉갑",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_19",
+      "name": "파우스트의 서명의 흉갑",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_20",
+      "name": "토끼굴의 로브",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_21",
+      "name": "하트 법정의 로브",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_22",
+      "name": "흰 토끼의 시계의 로브",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_23",
+      "name": "거울 나라의 로브",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_24",
+      "name": "피쿼드의 항해의 로브",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_25",
+      "name": "백경의 상흔의 로브",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_26",
+      "name": "라만차의 꿈의 로브",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_27",
+      "name": "산초의 귀환길의 로브",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_28",
+      "name": "봉합 실험실의 로브",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_29",
+      "name": "피조물의 이름의 로브",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_30",
+      "name": "노틸러스의 심해의 로브",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_31",
+      "name": "오즈의 녹색 도시의 로브",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_32",
+      "name": "셜우드의 숲의 로브",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_33",
+      "name": "노트르담의 종의 로브",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_34",
+      "name": "몽테크리스토의 장부의 로브",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_35",
+      "name": "시간 기계의 잔광의 로브",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_36",
+      "name": "드라큘라의 새벽의 로브",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_37",
+      "name": "천일야화의 등불의 로브",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_38",
+      "name": "성냥팔이의 불씨의 로브",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_39",
+      "name": "파우스트의 서명의 로브",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_40",
+      "name": "토끼굴의 외투",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_41",
+      "name": "하트 법정의 외투",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_42",
+      "name": "흰 토끼의 시계의 외투",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_43",
+      "name": "거울 나라의 외투",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_44",
+      "name": "피쿼드의 항해의 외투",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_45",
+      "name": "백경의 상흔의 외투",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_46",
+      "name": "라만차의 꿈의 외투",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_47",
+      "name": "산초의 귀환길의 외투",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_48",
+      "name": "봉합 실험실의 외투",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_49",
+      "name": "피조물의 이름의 외투",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_50",
+      "name": "노틸러스의 심해의 외투",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_51",
+      "name": "오즈의 녹색 도시의 외투",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_52",
+      "name": "셜우드의 숲의 외투",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_53",
+      "name": "노트르담의 종의 외투",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_54",
+      "name": "몽테크리스토의 장부의 외투",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_55",
+      "name": "시간 기계의 잔광의 외투",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_56",
+      "name": "드라큘라의 새벽의 외투",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_57",
+      "name": "천일야화의 등불의 외투",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_58",
+      "name": "성냥팔이의 불씨의 외투",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_59",
+      "name": "파우스트의 서명의 외투",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_60",
+      "name": "토끼굴의 사슬옷",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_61",
+      "name": "하트 법정의 사슬옷",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_62",
+      "name": "흰 토끼의 시계의 사슬옷",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_63",
+      "name": "거울 나라의 사슬옷",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_64",
+      "name": "피쿼드의 항해의 사슬옷",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_65",
+      "name": "백경의 상흔의 사슬옷",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_66",
+      "name": "라만차의 꿈의 사슬옷",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_67",
+      "name": "산초의 귀환길의 사슬옷",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_68",
+      "name": "봉합 실험실의 사슬옷",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_69",
+      "name": "피조물의 이름의 사슬옷",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_70",
+      "name": "노틸러스의 심해의 사슬옷",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_71",
+      "name": "오즈의 녹색 도시의 사슬옷",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_72",
+      "name": "셜우드의 숲의 사슬옷",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_73",
+      "name": "노트르담의 종의 사슬옷",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_74",
+      "name": "몽테크리스토의 장부의 사슬옷",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_75",
+      "name": "시간 기계의 잔광의 사슬옷",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_76",
+      "name": "드라큘라의 새벽의 사슬옷",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_77",
+      "name": "천일야화의 등불의 사슬옷",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_78",
+      "name": "성냥팔이의 불씨의 사슬옷",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_79",
+      "name": "파우스트의 서명의 사슬옷",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_80",
+      "name": "토끼굴의 망토",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_81",
+      "name": "하트 법정의 망토",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_82",
+      "name": "흰 토끼의 시계의 망토",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_83",
+      "name": "거울 나라의 망토",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_84",
+      "name": "피쿼드의 항해의 망토",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_85",
+      "name": "백경의 상흔의 망토",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_86",
+      "name": "라만차의 꿈의 망토",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_87",
+      "name": "산초의 귀환길의 망토",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_88",
+      "name": "봉합 실험실의 망토",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_89",
+      "name": "피조물의 이름의 망토",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_90",
+      "name": "노틸러스의 심해의 망토",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_91",
+      "name": "오즈의 녹색 도시의 망토",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_92",
+      "name": "셜우드의 숲의 망토",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_93",
+      "name": "노트르담의 종의 망토",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_94",
+      "name": "몽테크리스토의 장부의 망토",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_95",
+      "name": "시간 기계의 잔광의 망토",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_96",
+      "name": "드라큘라의 새벽의 망토",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_97",
+      "name": "천일야화의 등불의 망토",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_98",
+      "name": "성냥팔이의 불씨의 망토",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_99",
+      "name": "파우스트의 서명의 망토",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_100",
+      "name": "토끼굴의 판금",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_101",
+      "name": "하트 법정의 판금",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_102",
+      "name": "흰 토끼의 시계의 판금",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_103",
+      "name": "거울 나라의 판금",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_104",
+      "name": "피쿼드의 항해의 판금",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_105",
+      "name": "백경의 상흔의 판금",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_106",
+      "name": "라만차의 꿈의 판금",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_107",
+      "name": "산초의 귀환길의 판금",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_108",
+      "name": "봉합 실험실의 판금",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_109",
+      "name": "피조물의 이름의 판금",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_110",
+      "name": "노틸러스의 심해의 판금",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_111",
+      "name": "오즈의 녹색 도시의 판금",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_112",
+      "name": "셜우드의 숲의 판금",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_113",
+      "name": "노트르담의 종의 판금",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_114",
+      "name": "몽테크리스토의 장부의 판금",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_115",
+      "name": "시간 기계의 잔광의 판금",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_116",
+      "name": "드라큘라의 새벽의 판금",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_117",
+      "name": "천일야화의 등불의 판금",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_118",
+      "name": "성냥팔이의 불씨의 판금",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_119",
+      "name": "파우스트의 서명의 판금",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_120",
+      "name": "토끼굴의 전투복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_121",
+      "name": "하트 법정의 전투복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_122",
+      "name": "흰 토끼의 시계의 전투복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_123",
+      "name": "거울 나라의 전투복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_124",
+      "name": "피쿼드의 항해의 전투복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_125",
+      "name": "백경의 상흔의 전투복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_126",
+      "name": "라만차의 꿈의 전투복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_127",
+      "name": "산초의 귀환길의 전투복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_128",
+      "name": "봉합 실험실의 전투복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_129",
+      "name": "피조물의 이름의 전투복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_130",
+      "name": "노틸러스의 심해의 전투복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_131",
+      "name": "오즈의 녹색 도시의 전투복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_132",
+      "name": "셜우드의 숲의 전투복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_133",
+      "name": "노트르담의 종의 전투복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_134",
+      "name": "몽테크리스토의 장부의 전투복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_135",
+      "name": "시간 기계의 잔광의 전투복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_136",
+      "name": "드라큘라의 새벽의 전투복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_137",
+      "name": "천일야화의 등불의 전투복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_138",
+      "name": "성냥팔이의 불씨의 전투복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_139",
+      "name": "파우스트의 서명의 전투복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_140",
+      "name": "토끼굴의 잠수복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_141",
+      "name": "하트 법정의 잠수복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_142",
+      "name": "흰 토끼의 시계의 잠수복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_143",
+      "name": "거울 나라의 잠수복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_144",
+      "name": "피쿼드의 항해의 잠수복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_145",
+      "name": "백경의 상흔의 잠수복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_146",
+      "name": "라만차의 꿈의 잠수복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_147",
+      "name": "산초의 귀환길의 잠수복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_148",
+      "name": "봉합 실험실의 잠수복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_149",
+      "name": "피조물의 이름의 잠수복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_150",
+      "name": "노틸러스의 심해의 잠수복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_151",
+      "name": "오즈의 녹색 도시의 잠수복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_152",
+      "name": "셜우드의 숲의 잠수복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_153",
+      "name": "노트르담의 종의 잠수복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_154",
+      "name": "몽테크리스토의 장부의 잠수복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_155",
+      "name": "시간 기계의 잔광의 잠수복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_156",
+      "name": "드라큘라의 새벽의 잠수복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_157",
+      "name": "천일야화의 등불의 잠수복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_158",
+      "name": "성냥팔이의 불씨의 잠수복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_159",
+      "name": "파우스트의 서명의 잠수복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_160",
+      "name": "토끼굴의 수도복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_161",
+      "name": "하트 법정의 수도복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_162",
+      "name": "흰 토끼의 시계의 수도복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_163",
+      "name": "거울 나라의 수도복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_164",
+      "name": "피쿼드의 항해의 수도복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_165",
+      "name": "백경의 상흔의 수도복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_166",
+      "name": "라만차의 꿈의 수도복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_167",
+      "name": "산초의 귀환길의 수도복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_168",
+      "name": "봉합 실험실의 수도복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_169",
+      "name": "피조물의 이름의 수도복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_170",
+      "name": "노틸러스의 심해의 수도복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_171",
+      "name": "오즈의 녹색 도시의 수도복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_172",
+      "name": "셜우드의 숲의 수도복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_173",
+      "name": "노트르담의 종의 수도복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_174",
+      "name": "몽테크리스토의 장부의 수도복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_175",
+      "name": "시간 기계의 잔광의 수도복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_176",
+      "name": "드라큘라의 새벽의 수도복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_177",
+      "name": "천일야화의 등불의 수도복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_178",
+      "name": "성냥팔이의 불씨의 수도복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_179",
+      "name": "파우스트의 서명의 수도복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_180",
+      "name": "토끼굴의 사냥복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_181",
+      "name": "하트 법정의 사냥복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_182",
+      "name": "흰 토끼의 시계의 사냥복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_183",
+      "name": "거울 나라의 사냥복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_184",
+      "name": "피쿼드의 항해의 사냥복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_185",
+      "name": "백경의 상흔의 사냥복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_186",
+      "name": "라만차의 꿈의 사냥복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_187",
+      "name": "산초의 귀환길의 사냥복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_188",
+      "name": "봉합 실험실의 사냥복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_189",
+      "name": "피조물의 이름의 사냥복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_190",
+      "name": "노틸러스의 심해의 사냥복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_191",
+      "name": "오즈의 녹색 도시의 사냥복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_192",
+      "name": "셜우드의 숲의 사냥복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_193",
+      "name": "노트르담의 종의 사냥복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_194",
+      "name": "몽테크리스토의 장부의 사냥복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_195",
+      "name": "시간 기계의 잔광의 사냥복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_196",
+      "name": "드라큘라의 새벽의 사냥복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_197",
+      "name": "천일야화의 등불의 사냥복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_198",
+      "name": "성냥팔이의 불씨의 사냥복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_199",
+      "name": "파우스트의 서명의 사냥복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_200",
+      "name": "토끼굴의 방열복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_201",
+      "name": "하트 법정의 방열복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_202",
+      "name": "흰 토끼의 시계의 방열복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_203",
+      "name": "거울 나라의 방열복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_204",
+      "name": "피쿼드의 항해의 방열복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_205",
+      "name": "백경의 상흔의 방열복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_206",
+      "name": "라만차의 꿈의 방열복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_207",
+      "name": "산초의 귀환길의 방열복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_208",
+      "name": "봉합 실험실의 방열복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_209",
+      "name": "피조물의 이름의 방열복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_210",
+      "name": "노틸러스의 심해의 방열복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_211",
+      "name": "오즈의 녹색 도시의 방열복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_212",
+      "name": "셜우드의 숲의 방열복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_213",
+      "name": "노트르담의 종의 방열복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_214",
+      "name": "몽테크리스토의 장부의 방열복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_215",
+      "name": "시간 기계의 잔광의 방열복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_216",
+      "name": "드라큘라의 새벽의 방열복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_217",
+      "name": "천일야화의 등불의 방열복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_218",
+      "name": "성냥팔이의 불씨의 방열복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_219",
+      "name": "파우스트의 서명의 방열복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_220",
+      "name": "토끼굴의 봉합옷",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_221",
+      "name": "하트 법정의 봉합옷",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_222",
+      "name": "흰 토끼의 시계의 봉합옷",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_223",
+      "name": "거울 나라의 봉합옷",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_224",
+      "name": "피쿼드의 항해의 봉합옷",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_225",
+      "name": "백경의 상흔의 봉합옷",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_226",
+      "name": "라만차의 꿈의 봉합옷",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_227",
+      "name": "산초의 귀환길의 봉합옷",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_228",
+      "name": "봉합 실험실의 봉합옷",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_229",
+      "name": "피조물의 이름의 봉합옷",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_230",
+      "name": "노틸러스의 심해의 봉합옷",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_231",
+      "name": "오즈의 녹색 도시의 봉합옷",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_232",
+      "name": "셜우드의 숲의 봉합옷",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_233",
+      "name": "노트르담의 종의 봉합옷",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_234",
+      "name": "몽테크리스토의 장부의 봉합옷",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_235",
+      "name": "시간 기계의 잔광의 봉합옷",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_236",
+      "name": "드라큘라의 새벽의 봉합옷",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_237",
+      "name": "천일야화의 등불의 봉합옷",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_238",
+      "name": "성냥팔이의 불씨의 봉합옷",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_239",
+      "name": "파우스트의 서명의 봉합옷",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_240",
+      "name": "토끼굴의 비늘갑",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_241",
+      "name": "하트 법정의 비늘갑",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_242",
+      "name": "흰 토끼의 시계의 비늘갑",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_243",
+      "name": "거울 나라의 비늘갑",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_244",
+      "name": "피쿼드의 항해의 비늘갑",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_245",
+      "name": "백경의 상흔의 비늘갑",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_246",
+      "name": "라만차의 꿈의 비늘갑",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_247",
+      "name": "산초의 귀환길의 비늘갑",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_248",
+      "name": "봉합 실험실의 비늘갑",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_249",
+      "name": "피조물의 이름의 비늘갑",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_250",
+      "name": "노틸러스의 심해의 비늘갑",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_251",
+      "name": "오즈의 녹색 도시의 비늘갑",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_252",
+      "name": "셜우드의 숲의 비늘갑",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_253",
+      "name": "노트르담의 종의 비늘갑",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_254",
+      "name": "몽테크리스토의 장부의 비늘갑",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_255",
+      "name": "시간 기계의 잔광의 비늘갑",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_256",
+      "name": "드라큘라의 새벽의 비늘갑",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_257",
+      "name": "천일야화의 등불의 비늘갑",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_258",
+      "name": "성냥팔이의 불씨의 비늘갑",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_259",
+      "name": "파우스트의 서명의 비늘갑",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_260",
+      "name": "토끼굴의 경갑",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_261",
+      "name": "하트 법정의 경갑",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_262",
+      "name": "흰 토끼의 시계의 경갑",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_263",
+      "name": "거울 나라의 경갑",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_264",
+      "name": "피쿼드의 항해의 경갑",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_265",
+      "name": "백경의 상흔의 경갑",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_266",
+      "name": "라만차의 꿈의 경갑",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_267",
+      "name": "산초의 귀환길의 경갑",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_268",
+      "name": "봉합 실험실의 경갑",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_269",
+      "name": "피조물의 이름의 경갑",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_270",
+      "name": "노틸러스의 심해의 경갑",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_271",
+      "name": "오즈의 녹색 도시의 경갑",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_272",
+      "name": "셜우드의 숲의 경갑",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_273",
+      "name": "노트르담의 종의 경갑",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_274",
+      "name": "몽테크리스토의 장부의 경갑",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_275",
+      "name": "시간 기계의 잔광의 경갑",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_276",
+      "name": "드라큘라의 새벽의 경갑",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_277",
+      "name": "천일야화의 등불의 경갑",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_278",
+      "name": "성냥팔이의 불씨의 경갑",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_279",
+      "name": "파우스트의 서명의 경갑",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_280",
+      "name": "토끼굴의 법복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_281",
+      "name": "하트 법정의 법복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_282",
+      "name": "흰 토끼의 시계의 법복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_283",
+      "name": "거울 나라의 법복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_284",
+      "name": "피쿼드의 항해의 법복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_285",
+      "name": "백경의 상흔의 법복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_286",
+      "name": "라만차의 꿈의 법복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_287",
+      "name": "산초의 귀환길의 법복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_288",
+      "name": "봉합 실험실의 법복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_289",
+      "name": "피조물의 이름의 법복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_290",
+      "name": "노틸러스의 심해의 법복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_291",
+      "name": "오즈의 녹색 도시의 법복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_292",
+      "name": "셜우드의 숲의 법복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_293",
+      "name": "노트르담의 종의 법복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_294",
+      "name": "몽테크리스토의 장부의 법복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_295",
+      "name": "시간 기계의 잔광의 법복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_296",
+      "name": "드라큘라의 새벽의 법복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_297",
+      "name": "천일야화의 등불의 법복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_298",
+      "name": "성냥팔이의 불씨의 법복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_299",
+      "name": "파우스트의 서명의 법복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_300",
+      "name": "토끼굴의 군복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_301",
+      "name": "하트 법정의 군복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_302",
+      "name": "흰 토끼의 시계의 군복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_303",
+      "name": "거울 나라의 군복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_304",
+      "name": "피쿼드의 항해의 군복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_305",
+      "name": "백경의 상흔의 군복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_306",
+      "name": "라만차의 꿈의 군복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_307",
+      "name": "산초의 귀환길의 군복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_308",
+      "name": "봉합 실험실의 군복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_309",
+      "name": "피조물의 이름의 군복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_310",
+      "name": "노틸러스의 심해의 군복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_311",
+      "name": "오즈의 녹색 도시의 군복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_312",
+      "name": "셜우드의 숲의 군복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_313",
+      "name": "노트르담의 종의 군복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_314",
+      "name": "몽테크리스토의 장부의 군복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_315",
+      "name": "시간 기계의 잔광의 군복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_316",
+      "name": "드라큘라의 새벽의 군복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_317",
+      "name": "천일야화의 등불의 군복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_318",
+      "name": "성냥팔이의 불씨의 군복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_319",
+      "name": "파우스트의 서명의 군복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_320",
+      "name": "토끼굴의 항해복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_321",
+      "name": "하트 법정의 항해복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_322",
+      "name": "흰 토끼의 시계의 항해복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_323",
+      "name": "거울 나라의 항해복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_324",
+      "name": "피쿼드의 항해의 항해복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_325",
+      "name": "백경의 상흔의 항해복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_326",
+      "name": "라만차의 꿈의 항해복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_327",
+      "name": "산초의 귀환길의 항해복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_328",
+      "name": "봉합 실험실의 항해복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_329",
+      "name": "피조물의 이름의 항해복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_330",
+      "name": "노틸러스의 심해의 항해복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_331",
+      "name": "오즈의 녹색 도시의 항해복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_332",
+      "name": "셜우드의 숲의 항해복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_333",
+      "name": "노트르담의 종의 항해복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_334",
+      "name": "몽테크리스토의 장부의 항해복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_335",
+      "name": "시간 기계의 잔광의 항해복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_336",
+      "name": "드라큘라의 새벽의 항해복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_armor_337",
+      "name": "천일야화의 등불의 항해복",
+      "slot": "armor"
+    },
+    {
+      "id": "set_charm_0",
+      "name": "토끼굴의 반지",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_1",
+      "name": "하트 법정의 반지",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_2",
+      "name": "흰 토끼의 시계의 반지",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_3",
+      "name": "거울 나라의 반지",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_4",
+      "name": "피쿼드의 항해의 반지",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_5",
+      "name": "백경의 상흔의 반지",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_6",
+      "name": "라만차의 꿈의 반지",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_7",
+      "name": "산초의 귀환길의 반지",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_8",
+      "name": "봉합 실험실의 반지",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_9",
+      "name": "피조물의 이름의 반지",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_10",
+      "name": "노틸러스의 심해의 반지",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_11",
+      "name": "오즈의 녹색 도시의 반지",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_12",
+      "name": "셜우드의 숲의 반지",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_13",
+      "name": "노트르담의 종의 반지",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_14",
+      "name": "몽테크리스토의 장부의 반지",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_15",
+      "name": "시간 기계의 잔광의 반지",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_16",
+      "name": "드라큘라의 새벽의 반지",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_17",
+      "name": "천일야화의 등불의 반지",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_18",
+      "name": "성냥팔이의 불씨의 반지",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_19",
+      "name": "파우스트의 서명의 반지",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_20",
+      "name": "토끼굴의 목걸이",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_21",
+      "name": "하트 법정의 목걸이",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_22",
+      "name": "흰 토끼의 시계의 목걸이",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_23",
+      "name": "거울 나라의 목걸이",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_24",
+      "name": "피쿼드의 항해의 목걸이",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_25",
+      "name": "백경의 상흔의 목걸이",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_26",
+      "name": "라만차의 꿈의 목걸이",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_27",
+      "name": "산초의 귀환길의 목걸이",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_28",
+      "name": "봉합 실험실의 목걸이",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_29",
+      "name": "피조물의 이름의 목걸이",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_30",
+      "name": "노틸러스의 심해의 목걸이",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_31",
+      "name": "오즈의 녹색 도시의 목걸이",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_32",
+      "name": "셜우드의 숲의 목걸이",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_33",
+      "name": "노트르담의 종의 목걸이",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_34",
+      "name": "몽테크리스토의 장부의 목걸이",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_35",
+      "name": "시간 기계의 잔광의 목걸이",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_36",
+      "name": "드라큘라의 새벽의 목걸이",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_37",
+      "name": "천일야화의 등불의 목걸이",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_38",
+      "name": "성냥팔이의 불씨의 목걸이",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_39",
+      "name": "파우스트의 서명의 목걸이",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_40",
+      "name": "토끼굴의 부적",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_41",
+      "name": "하트 법정의 부적",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_42",
+      "name": "흰 토끼의 시계의 부적",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_43",
+      "name": "거울 나라의 부적",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_44",
+      "name": "피쿼드의 항해의 부적",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_45",
+      "name": "백경의 상흔의 부적",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_46",
+      "name": "라만차의 꿈의 부적",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_47",
+      "name": "산초의 귀환길의 부적",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_48",
+      "name": "봉합 실험실의 부적",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_49",
+      "name": "피조물의 이름의 부적",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_50",
+      "name": "노틸러스의 심해의 부적",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_51",
+      "name": "오즈의 녹색 도시의 부적",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_52",
+      "name": "셜우드의 숲의 부적",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_53",
+      "name": "노트르담의 종의 부적",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_54",
+      "name": "몽테크리스토의 장부의 부적",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_55",
+      "name": "시간 기계의 잔광의 부적",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_56",
+      "name": "드라큘라의 새벽의 부적",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_57",
+      "name": "천일야화의 등불의 부적",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_58",
+      "name": "성냥팔이의 불씨의 부적",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_59",
+      "name": "파우스트의 서명의 부적",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_60",
+      "name": "토끼굴의 회중시계",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_61",
+      "name": "하트 법정의 회중시계",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_62",
+      "name": "흰 토끼의 시계의 회중시계",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_63",
+      "name": "거울 나라의 회중시계",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_64",
+      "name": "피쿼드의 항해의 회중시계",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_65",
+      "name": "백경의 상흔의 회중시계",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_66",
+      "name": "라만차의 꿈의 회중시계",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_67",
+      "name": "산초의 귀환길의 회중시계",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_68",
+      "name": "봉합 실험실의 회중시계",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_69",
+      "name": "피조물의 이름의 회중시계",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_70",
+      "name": "노틸러스의 심해의 회중시계",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_71",
+      "name": "오즈의 녹색 도시의 회중시계",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_72",
+      "name": "셜우드의 숲의 회중시계",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_73",
+      "name": "노트르담의 종의 회중시계",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_74",
+      "name": "몽테크리스토의 장부의 회중시계",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_75",
+      "name": "시간 기계의 잔광의 회중시계",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_76",
+      "name": "드라큘라의 새벽의 회중시계",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_77",
+      "name": "천일야화의 등불의 회중시계",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_78",
+      "name": "성냥팔이의 불씨의 회중시계",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_79",
+      "name": "파우스트의 서명의 회중시계",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_80",
+      "name": "토끼굴의 동전",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_81",
+      "name": "하트 법정의 동전",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_82",
+      "name": "흰 토끼의 시계의 동전",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_83",
+      "name": "거울 나라의 동전",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_84",
+      "name": "피쿼드의 항해의 동전",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_85",
+      "name": "백경의 상흔의 동전",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_86",
+      "name": "라만차의 꿈의 동전",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_87",
+      "name": "산초의 귀환길의 동전",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_88",
+      "name": "봉합 실험실의 동전",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_89",
+      "name": "피조물의 이름의 동전",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_90",
+      "name": "노틸러스의 심해의 동전",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_91",
+      "name": "오즈의 녹색 도시의 동전",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_92",
+      "name": "셜우드의 숲의 동전",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_93",
+      "name": "노트르담의 종의 동전",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_94",
+      "name": "몽테크리스토의 장부의 동전",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_95",
+      "name": "시간 기계의 잔광의 동전",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_96",
+      "name": "드라큘라의 새벽의 동전",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_97",
+      "name": "천일야화의 등불의 동전",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_98",
+      "name": "성냥팔이의 불씨의 동전",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_99",
+      "name": "파우스트의 서명의 동전",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_100",
+      "name": "토끼굴의 책갈피",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_101",
+      "name": "하트 법정의 책갈피",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_102",
+      "name": "흰 토끼의 시계의 책갈피",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_103",
+      "name": "거울 나라의 책갈피",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_104",
+      "name": "피쿼드의 항해의 책갈피",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_105",
+      "name": "백경의 상흔의 책갈피",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_106",
+      "name": "라만차의 꿈의 책갈피",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_107",
+      "name": "산초의 귀환길의 책갈피",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_108",
+      "name": "봉합 실험실의 책갈피",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_109",
+      "name": "피조물의 이름의 책갈피",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_110",
+      "name": "노틸러스의 심해의 책갈피",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_111",
+      "name": "오즈의 녹색 도시의 책갈피",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_112",
+      "name": "셜우드의 숲의 책갈피",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_113",
+      "name": "노트르담의 종의 책갈피",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_114",
+      "name": "몽테크리스토의 장부의 책갈피",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_115",
+      "name": "시간 기계의 잔광의 책갈피",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_116",
+      "name": "드라큘라의 새벽의 책갈피",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_117",
+      "name": "천일야화의 등불의 책갈피",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_118",
+      "name": "성냥팔이의 불씨의 책갈피",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_119",
+      "name": "파우스트의 서명의 책갈피",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_120",
+      "name": "토끼굴의 나침반",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_121",
+      "name": "하트 법정의 나침반",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_122",
+      "name": "흰 토끼의 시계의 나침반",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_123",
+      "name": "거울 나라의 나침반",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_124",
+      "name": "피쿼드의 항해의 나침반",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_125",
+      "name": "백경의 상흔의 나침반",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_126",
+      "name": "라만차의 꿈의 나침반",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_127",
+      "name": "산초의 귀환길의 나침반",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_128",
+      "name": "봉합 실험실의 나침반",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_129",
+      "name": "피조물의 이름의 나침반",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_130",
+      "name": "노틸러스의 심해의 나침반",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_131",
+      "name": "오즈의 녹색 도시의 나침반",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_132",
+      "name": "셜우드의 숲의 나침반",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_133",
+      "name": "노트르담의 종의 나침반",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_134",
+      "name": "몽테크리스토의 장부의 나침반",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_135",
+      "name": "시간 기계의 잔광의 나침반",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_136",
+      "name": "드라큘라의 새벽의 나침반",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_137",
+      "name": "천일야화의 등불의 나침반",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_138",
+      "name": "성냥팔이의 불씨의 나침반",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_139",
+      "name": "파우스트의 서명의 나침반",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_140",
+      "name": "토끼굴의 인장",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_141",
+      "name": "하트 법정의 인장",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_142",
+      "name": "흰 토끼의 시계의 인장",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_143",
+      "name": "거울 나라의 인장",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_144",
+      "name": "피쿼드의 항해의 인장",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_145",
+      "name": "백경의 상흔의 인장",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_146",
+      "name": "라만차의 꿈의 인장",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_147",
+      "name": "산초의 귀환길의 인장",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_148",
+      "name": "봉합 실험실의 인장",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_149",
+      "name": "피조물의 이름의 인장",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_150",
+      "name": "노틸러스의 심해의 인장",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_151",
+      "name": "오즈의 녹색 도시의 인장",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_152",
+      "name": "셜우드의 숲의 인장",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_153",
+      "name": "노트르담의 종의 인장",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_154",
+      "name": "몽테크리스토의 장부의 인장",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_155",
+      "name": "시간 기계의 잔광의 인장",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_156",
+      "name": "드라큘라의 새벽의 인장",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_157",
+      "name": "천일야화의 등불의 인장",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_158",
+      "name": "성냥팔이의 불씨의 인장",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_159",
+      "name": "파우스트의 서명의 인장",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_160",
+      "name": "토끼굴의 유리구슬",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_161",
+      "name": "하트 법정의 유리구슬",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_162",
+      "name": "흰 토끼의 시계의 유리구슬",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_163",
+      "name": "거울 나라의 유리구슬",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_164",
+      "name": "피쿼드의 항해의 유리구슬",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_165",
+      "name": "백경의 상흔의 유리구슬",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_166",
+      "name": "라만차의 꿈의 유리구슬",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_167",
+      "name": "산초의 귀환길의 유리구슬",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_168",
+      "name": "봉합 실험실의 유리구슬",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_169",
+      "name": "피조물의 이름의 유리구슬",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_170",
+      "name": "노틸러스의 심해의 유리구슬",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_171",
+      "name": "오즈의 녹색 도시의 유리구슬",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_172",
+      "name": "셜우드의 숲의 유리구슬",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_173",
+      "name": "노트르담의 종의 유리구슬",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_174",
+      "name": "몽테크리스토의 장부의 유리구슬",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_175",
+      "name": "시간 기계의 잔광의 유리구슬",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_176",
+      "name": "드라큘라의 새벽의 유리구슬",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_177",
+      "name": "천일야화의 등불의 유리구슬",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_178",
+      "name": "성냥팔이의 불씨의 유리구슬",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_179",
+      "name": "파우스트의 서명의 유리구슬",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_180",
+      "name": "토끼굴의 종",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_181",
+      "name": "하트 법정의 종",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_182",
+      "name": "흰 토끼의 시계의 종",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_183",
+      "name": "거울 나라의 종",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_184",
+      "name": "피쿼드의 항해의 종",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_185",
+      "name": "백경의 상흔의 종",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_186",
+      "name": "라만차의 꿈의 종",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_187",
+      "name": "산초의 귀환길의 종",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_188",
+      "name": "봉합 실험실의 종",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_189",
+      "name": "피조물의 이름의 종",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_190",
+      "name": "노틸러스의 심해의 종",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_191",
+      "name": "오즈의 녹색 도시의 종",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_192",
+      "name": "셜우드의 숲의 종",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_193",
+      "name": "노트르담의 종의 종",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_194",
+      "name": "몽테크리스토의 장부의 종",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_195",
+      "name": "시간 기계의 잔광의 종",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_196",
+      "name": "드라큘라의 새벽의 종",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_197",
+      "name": "천일야화의 등불의 종",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_198",
+      "name": "성냥팔이의 불씨의 종",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_199",
+      "name": "파우스트의 서명의 종",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_200",
+      "name": "토끼굴의 브로치",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_201",
+      "name": "하트 법정의 브로치",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_202",
+      "name": "흰 토끼의 시계의 브로치",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_203",
+      "name": "거울 나라의 브로치",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_204",
+      "name": "피쿼드의 항해의 브로치",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_205",
+      "name": "백경의 상흔의 브로치",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_206",
+      "name": "라만차의 꿈의 브로치",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_207",
+      "name": "산초의 귀환길의 브로치",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_208",
+      "name": "봉합 실험실의 브로치",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_209",
+      "name": "피조물의 이름의 브로치",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_210",
+      "name": "노틸러스의 심해의 브로치",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_211",
+      "name": "오즈의 녹색 도시의 브로치",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_212",
+      "name": "셜우드의 숲의 브로치",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_213",
+      "name": "노트르담의 종의 브로치",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_214",
+      "name": "몽테크리스토의 장부의 브로치",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_215",
+      "name": "시간 기계의 잔광의 브로치",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_216",
+      "name": "드라큘라의 새벽의 브로치",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_217",
+      "name": "천일야화의 등불의 브로치",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_218",
+      "name": "성냥팔이의 불씨의 브로치",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_219",
+      "name": "파우스트의 서명의 브로치",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_220",
+      "name": "토끼굴의 열쇠",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_221",
+      "name": "하트 법정의 열쇠",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_222",
+      "name": "흰 토끼의 시계의 열쇠",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_223",
+      "name": "거울 나라의 열쇠",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_224",
+      "name": "피쿼드의 항해의 열쇠",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_225",
+      "name": "백경의 상흔의 열쇠",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_226",
+      "name": "라만차의 꿈의 열쇠",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_227",
+      "name": "산초의 귀환길의 열쇠",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_228",
+      "name": "봉합 실험실의 열쇠",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_229",
+      "name": "피조물의 이름의 열쇠",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_230",
+      "name": "노틸러스의 심해의 열쇠",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_231",
+      "name": "오즈의 녹색 도시의 열쇠",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_232",
+      "name": "셜우드의 숲의 열쇠",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_233",
+      "name": "노트르담의 종의 열쇠",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_234",
+      "name": "몽테크리스토의 장부의 열쇠",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_235",
+      "name": "시간 기계의 잔광의 열쇠",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_236",
+      "name": "드라큘라의 새벽의 열쇠",
+      "slot": "charm"
+    },
+    {
+      "id": "set_charm_237",
+      "name": "천일야화의 등불의 열쇠",
+      "slot": "charm"
+    }
+  ],
+  "missingNPC": [
+    "alice",
+    "queen",
+    "creature",
+    "victor",
+    "ahab",
+    "quixote"
+  ],
+  "missingStory": [
+    "queen",
+    "quixote"
+  ],
+  "missingEvents": [
+    {
+      "id": 18,
+      "title": "종 아래 남은 증언",
+      "region": 1,
+      "file": "assets/event_18.webp",
+      "purpose": "종탑 아래 명부·등불·종 뒤 좁은 통로; 기록/추적 선택 장면"
+    },
+    {
+      "id": 19,
+      "title": "모래에 묻힌 물통",
+      "region": 4,
+      "file": "assets/event_19.webp",
+      "purpose": "붉은 모래·이름 있는 물통·지친 일행·전갈 굴의 발자국"
+    },
+    {
+      "id": 20,
+      "title": "여백의 빌린 이름",
+      "region": 5,
+      "file": "assets/event_20.webp",
+      "purpose": "달빛 서가·이름이 번지는 여백·봉합된 문장·장비를 감싼 종이"
+    }
+  ]
+}

@@ -2467,7 +2467,7 @@ class Game{
  if(type==='shrine'){const heal=Math.min(this.maxHp()-s.hp,Math.ceil(this.maxHp()*.5));s.hp+=heal;s.mp=this.maxMp();s.scene='reward';this.note(`푸른 샘의 온기. HP +${heal}, MP 완전 회복.`)}
  if(type==='merchant'){s.scene='merchant';this.note('“이번엔 물건이 좀 특별해. 운이 좋으면 전설도 만날 거야.”')}
  if(type==='secret'){s.secrets++;s.secretPity=0;s.sigils++;s.loot=this.makeGear('secret');s.pending='reward';s.scene='loot';this.note('벽 너머에 이름 없는 성소가 숨겨져 있었다. 각성 인장 +1. 비밀 보관함을 열었다.')}
- if(type==='event'){const ids=EVENTS.map(e=>e.id).filter(i=>!s.recentEvents.includes(i));s.eventId=this.pick(ids);s.recentEvents.push(s.eventId);s.recentEvents=s.recentEvents.slice(-6);s.scene='event';this.note(EVENTS[s.eventId].text)}
+ if(type==='event'){const ids=EVENTS.filter(e=>e.region===undefined).map(e=>e.id).filter(i=>!s.recentEvents.includes(i));s.eventId=this.pick(ids);s.recentEvents.push(s.eventId);s.recentEvents=s.recentEvents.slice(-6);s.scene='event';this.note(EVENTS[s.eventId].text)}
  }
  advance(){if(!['reward','merchant'].includes(this.s.scene))return;this.s.scene='map';this.routes()}
  nextEncounter(){if(!['reward','merchant'].includes(this.s.scene))return;this.advance();if(this.s.scene==='map'&&this.s.routes.length)this.choose(0)}
@@ -2491,7 +2491,7 @@ class Game{
  if(e.boss||e.elite||this.chance(.55+this.luck())){s.loot=this.makeGear(e.boss?'boss':e.elite?'elite':'normal');s.pending=pending;s.scene='loot'}else s.scene=pending;this.note(msg)
  }
  rollGrade(source='normal'){let weights=(WEIGHTS[source]||WEIGHTS.normal).slice();const boost=this.luck();weights=weights.map((w,i)=>w*(i>=3?1+boost*5:1));let grade=this.weighted(weights.map((w,i)=>[i,w]));if(this.s.pity>=29&&grade<4)grade=4;this.s.pity=grade>=4?0:this.s.pity+1;return grade}
- makeGear(source='normal'){const grade=this.rollGrade(source),slot=this.weighted([['weapon',45],['armor',35],['charm',20]]);const pool=ITEMS.filter(d=>d.slot===slot&&(d.minArea||0)<=this.s.area&&(d.fixedGrade!==undefined?d.fixedGrade===grade:(grade>=4?d.unique:!d.unique)));const base=this.pick(pool);const count=grade<1?0:grade<3?1:grade===3?2:3;let ids=(base.fixedAffixes||[]).map(a=>a.id);if(base.fixed&&!ids.includes(base.fixed))ids.push(base.fixed);while(ids.length<count){const id=this.pick(AFFIXES).id;if(!ids.includes(id))ids.push(id)}const affixes=ids.map(id=>{const a=AFFIXES.find(a=>a.id===id);const fixed=base.fixedAffixes?.find(x=>x.id===id);return{id,value:fixed?fixed.value:base.fixedValue&&id===base.fixed?base.fixedValue:this.rand(a.min,a.max)+Math.floor(grade/2)}});const power=base.basePower!==undefined?base.basePower:slot==='weapon'?2+this.s.area*2+grade*2:slot==='armor'?1+this.s.area+grade:1+Math.floor(grade/2);const scaledPower=power+Math.floor((base.areaScale||0)*this.s.area);const d={...base,power:scaledPower,grade,plus:0,affixes,fails:0};if(!this.s.collection.includes(base.id))this.s.collection.push(base.id);if(grade>=2)this.s.rareFinds++;return d}
+ makeGear(source='normal',selectedSlot=null){if(selectedSlot!==null&&!['weapon','armor','charm'].includes(selectedSlot))throw Error('알 수 없는 보상 슬롯');const grade=this.rollGrade(source),slot=selectedSlot||this.weighted([['weapon',45],['armor',35],['charm',20]]);const pool=ITEMS.filter(d=>d.slot===slot&&(d.minArea||0)<=this.s.area&&(d.fixedGrade!==undefined?d.fixedGrade===grade:(grade>=4?d.unique:!d.unique)));const base=this.pick(pool);const count=grade<1?0:grade<3?1:grade===3?2:3;let ids=(base.fixedAffixes||[]).map(a=>a.id);if(base.fixed&&!ids.includes(base.fixed))ids.push(base.fixed);while(ids.length<count){const id=this.pick(AFFIXES).id;if(!ids.includes(id))ids.push(id)}const affixes=ids.map(id=>{const a=AFFIXES.find(a=>a.id===id);const fixed=base.fixedAffixes?.find(x=>x.id===id);return{id,value:fixed?fixed.value:base.fixedValue&&id===base.fixed?base.fixedValue:this.rand(a.min,a.max)+Math.floor(grade/2)}});const power=base.basePower!==undefined?base.basePower:slot==='weapon'?2+this.s.area*2+grade*2:slot==='armor'?1+this.s.area+grade:1+Math.floor(grade/2);const scaledPower=power+Math.floor((base.areaScale||0)*this.s.area);const d={...base,power:scaledPower,grade,plus:0,affixes,fails:0};if(!this.s.collection.includes(base.id))this.s.collection.push(base.id);if(grade>=2)this.s.rareFinds++;return d}
  price(d){return 10+d.grade*10+d.plus*5}
  storeBag(d){if(this.s.bag.length>=40){const old=this.s.bag.shift();this.s.ore+=2+old.grade}this.s.bag.push(d)}
  takeLoot(mode){const s=this.s;if(s.scene!=='loot'||!s.loot)return;const d=s.loot;if(mode==='equip'||mode===true){this.storeBag(s[d.slot]);s[d.slot]=d;s.hp=Math.min(s.hp,this.maxHp());s.mp=Math.min(s.mp,this.maxMp());this.note(`${RARITIES[d.grade]} ${d.name} 장착. 기존 장비를 가방으로 옮겼다.`)}else if(mode==='bag'){this.storeBag(d);this.note(d.name+'을 가방에 보관했다.')}else{s.gold+=this.price(d);this.note(`${d.name}을 ${this.price(d)}G에 판매했다.`)}s.loot=null;s.scene=s.pending;s.pending='reward';if(s.scene==='camp'){s.hp=this.maxHp();s.mp=this.maxMp()}if(s.scene==='final')this.note('여덟 인장이 모였다. 첫 불씨 안에는 사라진 사람들의 기억이 갇혀 있다. 이제 숲의 운명을 결정하자.')}
@@ -2789,6 +2789,77 @@ const load=G.load;G.load=function(input){const g=load.call(this,input),s=g.s,bad
  return g;};
 })(globalThis);
 
+/* Regional side stories reuse BF3 decisions, existing affixes and reward flow. */
+(function(root){'use strict';
+const C=root.BFContent,G=root.BlackForest.Game,P=G.prototype,copy=x=>JSON.parse(JSON.stringify(x));
+const choice=(label,cost,reward,chance=1,failure={})=>({label,cost,reward,chance,failure});
+C.P2_EVENTS=[
+ {id:18,region:1,key:'p2_bell',title:'종 아래 남은 증언',text:'멈춘 종 아래에서 등불 수리에 쓰이던 명부가 발견된다. 지워진 이름을 읽으면 종이 다시 울리지만, 어둠 속의 무언가도 그 소리를 듣는다.',choices:[
+  choice('등불을 빌려 이름을 읽는다',{gold:8},{herb:3,mana:4},.65,{ore:2}),
+  {...choice('종 뒤의 흔적을 따라간다',{hp:6},{gear:'elite'},.6,{wood:3}),slot:'armor'},
+  choice('명부의 사본을 남긴다',{}, {ore:2})]},
+ {id:19,region:4,key:'p2_water',title:'모래에 묻힌 물통',text:'모래 속 물통에 앞서 지나간 여행자의 이름이 남아 있다. 그늘 아래의 일행은 물을 나눌지 묻는다. 물통을 끌고 간 발자국은 전갈의 굴로 이어진다.',choices:[
+  choice('물약을 나누고 일행과 걷는다',{potions:1},{wood:3,herb:2}),
+  {...choice('발자국을 좇아 물통을 되찾는다',{hp:6},{},1),battle:true},
+  choice('그늘에서 물통의 이름을 적는다',{}, {mana:3,ore:2})]},
+ {id:20,region:5,key:'p2_margin',title:'여백의 빌린 이름',text:'서가의 여백이 종 아래의 명부와 사막의 물통에 남은 이름을 되돌려 준다. 책은 무엇을 남길지 묻고, 장비를 감싼 문장에서는 희미한 열기가 새어 나온다.',choices:[
+  {...choice('마력으로 빌린 이름을 읽는다',{mp:4},{gear:'elite'},.7,{herb:3}),slot:'charm'},
+  choice('약초로 찢어진 문장을 봉합한다',{herb:2},{heal:20,mana:6}),
+  choice('앞선 증언의 사본을 만든다',{}, {xp:12,wood:2})]}
+];
+for(const ev of C.P2_EVENTS){C.EVENTS.push(ev);C.ASSETS.events[ev.id]=null;}
+// Same IDs, rarity and area gates. Lower defense/luck buys a different purpose.
+C.P2_ITEMS={
+ set_armor_20:{basePower:1,fixedAffixes:[{id:'mana',value:3}],flavor:'가벼운 천은 칼을 덜 막지만, 접힌 문장에 다음 주문을 담는다.'},
+ set_armor_7:{basePower:2,fixedAffixes:[{id:'thorns',value:3}],flavor:'얇아진 흉갑의 돌멩이는 맞은 상처를 되돌린다.'},
+ set_armor_13:{basePower:2,fixedAffixes:[{id:'dodge',value:4}],flavor:'종소리에 맞춰 비켜선다. 버티는 대신 피할 자리를 남겼다.'},
+ set_charm_1:{basePower:0,fixedAffixes:[{id:'critical',value:4}],flavor:'행운을 묻지 않고 한 번의 정확한 증언에 힘을 싣는다.'},
+ set_charm_7:{basePower:0,fixedAffixes:[{id:'leech',value:3}],flavor:'돌아갈 길의 온기를 빌린다. 맞받아치는 대신 상처를 조금 되찾는다.'},
+ set_charm_13:{basePower:0,fixedAffixes:[{id:'mana',value:3}],flavor:'방패 대신 다음 주문을 위한 여백을 종 안에 남겼다.'}
+};
+for(const [id,changes] of Object.entries(C.P2_ITEMS))Object.assign(C.ITEMS.find(d=>d.id===id),copy(changes));
+P.p2EventAvailable=function(ev){const s=this.s;return !!ev&&s.kind==='story'&&s.area===ev.region&&!!s.storyFlags['chapter_'+ev.region+'_seen']&&!s.decisions[ev.key];};
+P.eventChoices=function(){const ev=C.EVENTS[this.s.eventId];if(!ev)return [];const rows=copy(ev.choices),s=this.s;
+ if(ev.id===18){if(s.decisions.chapter_1_0===C.CHAPTER_DECISIONS[1][0].choices[0].short)rows[0].chance=.85;if(this.bonus('thorns')||this.bonus('dodge'))rows[1].chance=.8;}
+ if(ev.id===19&&s.decisions.chapter_4_1===C.CHAPTER_DECISIONS[4][1].choices[0].short)rows[0].reward.herb=3;
+ if(ev.id===20){if(s.decisions.p2_bell==='read:success'||s.decisions.p2_water==='share:success')rows[0].chance=.9;
+  if(s.hp===this.maxHp()&&s.mp===this.maxMp())rows[1].reward={ore:this.bonus('mana')?5:4};else if(this.bonus('mana'))rows[1].reward.heal=28;
+  if(s.decisions.p2_bell==='copy:success')rows[2].reward.mana=4;}
+ return rows;};
+P.p2Reaction=function(){const s=this.s,d=s.decisions;
+ const lines={
+  1:d.p2_bell?(d.p2_bell==='read:success'?'당신이 등불을 빌려 읽은 이름을 주민들도 다시 부른다.':d.p2_bell==='read:failure'?'등불 아래에서 읽지 못한 이름을 피조물이 명부에 옮긴다.':d.p2_bell==='trail:success'?'종 뒤를 살핀 발자국을 주민들이 피난길의 표식으로 삼는다.':d.p2_bell==='trail:failure'?'종 뒤의 헛길에서 건진 나무로 피조물이 무너진 발판을 고친다.':'당신이 남긴 명부 사본에 주민들이 새 이름을 덧쓴다.'):'',
+  4:d.p2_water?(d.p2_water.startsWith('share:')?'당신이 물약을 나눈 일행이 뒤따라와 다음 그늘을 알려 준다.':d.p2_water.startsWith('trail:')?'일행은 당신이 전갈의 굴로 들어간 일을 기억하며 발자국을 피한다.':'물통에 적은 이름을 보고 뒤따르던 여행자가 주인을 찾아간다.'):'',
+  5:d.p2_margin?(d.p2_margin==='read:success'?'당신이 마력을 빌려 읽은 이름이 서가의 여백에서 대답한다.':d.p2_margin==='read:failure'?'마력이 닿지 못한 이름을 앨리스가 다른 증언의 여백에 옮긴다.':d.p2_margin.startsWith('mend:')?'약초로 봉합한 문장 덕분에 사서가 찢어진 쪽을 다시 넘긴다.':'증언의 사본을 남긴 자리에는 다른 독자의 기록이 이어진다.'):
+    d.p2_bell&&d.p2_water?'앨리스가 당신이 남긴 종 아래 명부와 물통의 기록을 여백에 나란히 펼친다.':d.p2_bell?'앨리스가 당신이 남긴 종 아래 명부를 여백에 펼친다.':d.p2_water?'앨리스가 당신이 남긴 물통의 기록을 여백에 펼친다.':''
+ };return lines[s.area]||'';};
+const routes=P.routes;P.routes=function(){routes.call(this);const ev=C.P2_EVENTS.find(e=>e.region===this.s.area);if(this.s.step===9&&this.p2EventAvailable(ev))this.s.routes=['event'];};
+const choose=P.choose;P.choose=function(i){const s=this.s;if(s.scene!=='map'||!s.routes[i])return;
+ if(s.routes[i]!=='event'){const type=s.routes[i];choose.call(this,i);if((s.scene==='chapter'||type==='checkpoint'&&s.scene==='reward')&&this.p2Reaction())this.note(s.message+'\n\n'+this.p2Reaction());return;}
+ const ev=C.P2_EVENTS.find(e=>e.region===s.area),regional=s.step===9&&this.p2EventAvailable(ev);
+ const ids=C.EVENTS.filter(e=>e.id<18&&!s.recentEvents.includes(e.id)).map(e=>e.id);
+ s.turns++;s.step++;s.secretPity++;s.eventId=regional?ev.id:this.pick(ids);s.recentEvents.push(s.eventId);s.recentEvents=s.recentEvents.slice(-6);s.scene='event';s.resultKind='event';
+ s.resultVisual={category:'events',id:String(s.eventId),label:C.EVENTS[s.eventId].title};
+ this.note(C.EVENTS[s.eventId].text+(regional&&this.p2Reaction()?'\n\n'+this.p2Reaction():''));};
+const event=P.event;P.event=function(i){const s=this.s,ev=C.P2_EVENTS.find(e=>e.id===s.eventId);if(!ev)return event.call(this,i);if(s.scene!=='event')return;
+ if(!this.p2EventAvailable(ev)){s.scene='reward';this.note('이 사건은 이미 기록했거나 이 지역에서 이어 갈 수 없다. 같은 보상은 다시 받지 않는다.');return;}
+ const c=this.eventChoices()[i];if(!c||!Number.isInteger(i)||!this.canPay(c.cost))return;
+ for(const [k,v]of Object.entries(c.cost))s[k]-=v;
+ const success=this.chance(c.chance),tokens={18:['read','trail','copy'],19:['share','trail','record'],20:['read','mend','copy']};
+ s.decisions[ev.key]=tokens[ev.id][i]+':'+(success?'success':'failure');s.scene='reward';
+ if(c.battle){this.fight(false,false,C.AREAS[4].enemies[0]);if(s.career.actions.defend>=3||this.bonus('dodge'))s.enemy.weak=1;
+  s.resultVisual=null;this.note('물통을 끌고 간 전갈이 굴 입구를 막았다. '+(s.enemy.weak?'쌓아 온 방어 경험으로 첫 공격의 방향을 흩뜨렸다.':'물통을 되찾으려면 길을 열어야 한다.')+'\n'+s.message);return;}
+ const reward=copy(success?c.reward:c.failure);let gear=null;if(reward.gear){gear=this.makeGear(reward.gear,c.slot);delete reward.gear;}
+ const awarded=this.grant(reward);this.note(c.label+'. '+(success?'남긴 선택이 길을 바꾼다.':'읽지 못한 흔적도 기록으로 남는다.')+'\n'+awarded+this.xp(12));
+ if(gear){s.loot=gear;s.pending='reward';s.scene='loot';this.note(s.message+'\n'+{weapon:'무기',armor:'방어구',charm:'장신구'}[c.slot]+'를 골라 가져간다.');}
+ s.resultVisual={category:'events',id:String(ev.id),label:ev.title};};
+const buy=P.buy;P.buy=function(kind){const slots={'gear-weapon':'weapon','gear-armor':'armor','gear-charm':'charm'},slot=slots[kind];if(!slot)return buy.call(this,kind);
+ const s=this.s;if(!['camp','merchant'].includes(s.scene)||s.gold<55)return;s.gold-=55;s.pending=s.scene;s.loot=this.makeGear('elite',slot);s.scene='loot';this.note('55G로 '+{weapon:'무기',armor:'방어구',charm:'장신구'}[slot]+' 상자를 골랐다. 희귀도 확률은 기존 정예 상자와 같다.');};
+const load=G.load;G.load=function(input){const g=load.call(this,input),allowed={p2_bell:['read','trail','copy'],p2_water:['share','trail','record'],p2_margin:['read','mend','copy']};
+ for(const [key,tokens]of Object.entries(allowed)){const v=g.s.decisions[key];if(v!==undefined&&!tokens.flatMap(t=>[t+':success',t+':failure']).includes(v))throw Error('지역 선택 기록 검증 실패');}return g;};
+root.BlackForest.P2_EVENTS=C.P2_EVENTS;root.BlackForest.P2_ITEMS=C.P2_ITEMS;
+})(globalThis);
+
 </script>
 <script>
 document.getElementById("black-forest-game").dataset.license="Copyright (c) 2012-now(), Ondrej Zara\nAll rights reserved.\n\nRedistribution and use in source and binary forms, with or without modification, \nare permitted provided that the following conditions are met:\n\n\t* Redistributions of source code must retain the above copyright notice, \n\t  this list of conditions and the following disclaimer.\n\t* Redistributions in binary form must reproduce the above copyright notice, \n\t  this list of conditions and the following disclaimer in the documentation \n\t  and/or other materials provided with the distribution.\n\t* Neither the name of Ondrej Zara nor the names of its contributors may be used \n\t  to endorse or promote products derived from this software without specific \n\t  prior written permission.\n\t\t\t\nTHIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\" AND \nANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED \nWARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. \nIN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, \nINDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, \nBUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, \nDATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY \nOF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING \nNEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, \nEVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n\n\nThe MIT License (MIT)\n\nCopyright (c) 2015 John Watson\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n\n\n\nMIT License\n\nCopyright (c) 2013 pieroxy\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n";
@@ -2807,7 +2878,7 @@ const conversationScenes=new Set(['dialogue','npc','bond']);
 const conversationSpeaker=s=>s.scene==='npc'?(NPCS[s.thread]?.name||'낯선 인물'):(COMPANIONS[s.thread]?.name||'동행자');
 function conversationLines(s){
  if(s.scene==='dialogue')return [game.relationGreeting(s.thread),...NOVEL_COPY.dialogue[s.thread][s.threads[s.thread]]]||String(s.message||'').split(/\n+/);
- if(s.scene==='npc')return [...NOVEL_COPY.npc[s.thread],game.relationGreeting(s.thread)]||String(s.message||'').split(/\n+/);
+ if(s.scene==='npc')return [...NOVEL_COPY.npc[s.thread],game.relationGreeting(s.thread),game.p2Reaction()]||String(s.message||'').split(/\n+/);
  if(s.scene==='bond')return [game.relationGreeting(s.thread),...NOVEL_COPY.bond[s.thread][s.bondQuests[s.thread]]]||String(s.message||'').split(/\n+/);
  return String(s.message||'').split(/\n+/);
 }
@@ -2844,7 +2915,7 @@ function lockPanel(){if(oldBodyStyle)return;scrollBefore=window.scrollY;oldBodyS
 function unlockPanel(){if(!oldBodyStyle)return;Object.assign(document.body.style,oldBodyStyle);oldBodyStyle=null;overlay.hidden=true;for(const child of root.children)child.inert=false;window.scrollTo(0,scrollBefore);}
 const gearName=d=>`${d.name}${d.plus?' +'+d.plus:''}`;
 const slotLabel={weapon:'무기',armor:'갑옷',charm:'장신구'};
-const labels={gold:'G',ore:'광석',wood:'목재',herb:'약초',hp:'HP',potions:'물약',mercy:'자비',heal:'HP 회복',mana:'MP 회복',xp:'EXP',sigils:'각성 인장',secrets:'비밀 발견',caches:'보급함',crafts:'제작'};
+const labels={gold:'G',ore:'광석',wood:'목재',herb:'약초',hp:'HP',mp:'MP',potions:'물약',mercy:'자비',heal:'HP 회복',mana:'MP 회복',xp:'EXP',sigils:'각성 인장',secrets:'비밀 발견',caches:'보급함',crafts:'제작'};
 const resources=o=>Object.entries(o).map(([k,v])=>k==='gear'?'장비':`${labels[k]||k} ${v}`).join(' · ')||'없음';
 const affixText=d=>d.affixes.map(a=>`${AFFIXES.find(x=>x.id===a.id).label} +${a.value}`).join(' / ')||'추가 옵션 없음';
 const gearInfo=d=>`${slotLabel[d.slot]} · ${d.slot==='weapon'?'공격':d.slot==='armor'?'방어':'행운 %'} +${d.power+d.plus*(d.slot==='weapon'?2:1)}`;
@@ -2889,8 +2960,8 @@ if(s.scene==='reward'){const checkpoint=s.kind==='story'&&!s.checkpoint&&!s.retu
  const label=pending?(r.destination==='reward'?'전리품을 챙기고 나아간다':r.destination==='final'?'인장을 챙긴다':'전리품을 챙기고 캠프로 돌아간다'):s.returnAfterResult==='camp'?'대화를 마치고 모닥불로 돌아간다':s.resultKind==='npc'?'작별하고 길을 나선다':s.resultKind==='shrine'?'성소를 뒤로한다':s.resultKind==='secret'?'비밀을 뒤로하고 나아간다':s.resultKind==='cache'?'쓸 만한 물건을 챙기고 나아간다':'계속 나아간다';
  actions=b(label,'nextEncounter','','',false,'primary wide')+(checkpoint&&!pending?b('잠시 쉬어간다','pauseChapter','','여기까지의 여정이 기록됩니다.'):'');}
 if(s.scene==='midboss'){title='샛길과 발소리';kicker='JOURNEY / 기둥 너머';actions=b('수문장과 마주한다','faceMidboss','','',false,'primary')+b('샛길로 몸을 숨긴다','skipMidboss');}
-if(s.scene==='merchant'){title='떠돌이 상인';kicker='TRADER / 확률을 파는 가게';actions=b('회복 물약을 산다 · 16G','buy','potion','',s.gold<16)+b('맑은 영약을 산다 · 12G','buy','tonic','MP 완전 회복',s.gold<12||s.mp===game.maxMp())+b('봉인된 장비를 산다 · 55G','buy','gear','정예 장비 확률표 적용',s.gold<55)+b('상점을 떠난다','nextEncounter','','다시 길을 나선다',false,'primary')}
-if(s.scene==='event'){const ev=EVENTS[s.eventId];title=ev.title;kicker='STORY / 선택과 대가';actions=ev.choices.map((c,i)=>b(c.label,'event',i,`비용: ${resources(c.cost)} · 성공 ${Math.round(c.chance*100)}% · 성공 보상 ${resources(c.reward)}`,!game.canPay(c.cost))).join('');extra=''}
+if(s.scene==='merchant'){title='떠돌이 상인';kicker='TRADER / 확률을 파는 가게';actions=b('회복 물약을 산다 · 16G','buy','potion','',s.gold<16)+b('맑은 영약을 산다 · 12G','buy','tonic','MP 완전 회복',s.gold<12||s.mp===game.maxMp())+b('봉인된 장비를 산다 · 55G','buy','gear','기존 무작위 슬롯 · 정예 확률',s.gold<55)+['weapon','armor','charm'].map(slot=>b({weapon:'무기',armor:'방어구',charm:'장신구'}[slot]+' 상자를 고른다 · 55G','buy','gear-'+slot,'슬롯 지정 · 희귀도는 같은 정예 확률',s.gold<55)).join('')+b('상점을 떠난다','nextEncounter','','다시 길을 나선다',false,'primary')}
+if(s.scene==='event'){const ev=EVENTS[s.eventId];title=ev.title;kicker='STORY / 선택과 대가';actions=game.eventChoices().map((c,i)=>b(c.label,'event',i,`비용: ${resources(c.cost)} · ${c.battle?'전투 후 기존 보상':`성공 ${Math.round(c.chance*100)}% · 보상 ${resources(c.reward)}${c.slot?' · '+{weapon:'무기',armor:'방어구',charm:'장신구'}[c.slot]:''} · 실패 ${resources(c.failure)}`}`,!game.canPay(c.cost))).join('');extra=''}
 if(s.scene==='loot'){const d=s.loot;title=gearName(d);kicker='DISCOVERY / 운명이 남긴 물건';extra=(s.rewardState&&!s.rewardState.claimed?`<p class="reward-summary">경험치 +${s.rewardState.rewards.xp} · 골드 +${s.rewardState.rewards.gold} · 목재 +3 · 약초 +2 · 광석 +${s.rewardState.rewards.ore}</p>`:'')+gearCard(d)+`<p class="comparison">장착 시: ${esc(differences(d))}</p><p class="muted compare">현재 장비</p>`+gearCard(s[d.slot]);actions=b('장비를 걸치고 나아간다','collectLoot','equip','기존 장비는 가방으로',false,'primary')+b(s.rewardState&&!s.rewardState.claimed?'전리품을 챙기고 나아간다':'장비를 챙기고 나아간다','collectLoot','bag','캠프에서 장착 가능')+b(`장비를 판다 · ${game.price(d)}G`,'collectLoot','sell','',false,'wide')}
 if(s.scene==='dead'){title='아직 꺼지지 않은 불씨';kicker='FALLEN / 다시 일어서는 자';actions=b('상처를 추스르고 일어난다','revive','','골드 20% 손실 · 장비·직업 유지',false,'primary wide')}
 if(s.scene==='final'){title='첫 불씨의 기억';kicker='EPILOGUE / 마지막 선택';actions=b('불씨를 놓아준다','finish',0,'저주를 끝내고 기억을 보내 준다')+b('왕관을 쓴다','finish',1,'왕의 힘과 책임을 이어받는다')+b('불씨를 모두에게 나눈다','finish',2,`자비 5 필요 · 현재 ${s.mercy}`,s.mercy<5,'wide primary')}
