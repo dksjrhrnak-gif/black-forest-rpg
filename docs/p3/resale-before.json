@@ -1,0 +1,15 @@
+{
+  "method": "P2-complete actual targeted boxes at area7, seed17, 900 cycles alternating slots; controlled wallet30000 for abuse probe only.",
+  "cycles": 900,
+  "profitable": 3,
+  "net": -24740,
+  "maxSale": 60,
+  "grades": {
+    "0": 81,
+    "1": 304,
+    "2": 328,
+    "3": 135,
+    "4": 49,
+    "5": 3
+  }
+}

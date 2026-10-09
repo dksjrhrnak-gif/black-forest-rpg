@@ -1,0 +1,79 @@
+{
+  "method": "Actual rift scaling at floors 0/10/20 in fixed level15/12-drop fixtures, not naturally reached floor distribution. Floors stay zero-indexed as engine data. 120-action cap.",
+  "summary": {
+    "0/attack": {
+      "n": 36,
+      "winRate": 1,
+      "meanTurns": 5.277777777777778,
+      "meanHpRatio": 0.7328734196476172,
+      "potions": 0,
+      "mp": 0
+    },
+    "0/skill": {
+      "n": 36,
+      "winRate": 1,
+      "meanTurns": 3.5833333333333335,
+      "meanHpRatio": 0.8469844607670047,
+      "potions": 0,
+      "mp": 14.222222222222221
+    },
+    "0/tactical": {
+      "n": 36,
+      "winRate": 1,
+      "meanTurns": 5.194444444444445,
+      "meanHpRatio": 0.9269446735429783,
+      "potions": 0,
+      "mp": 14
+    },
+    "10/attack": {
+      "n": 36,
+      "winRate": 0,
+      "meanTurns": 5.083333333333333,
+      "meanHpRatio": 0,
+      "potions": 0,
+      "mp": 0
+    },
+    "10/skill": {
+      "n": 36,
+      "winRate": 0.3888888888888889,
+      "meanTurns": 5.972222222222222,
+      "meanHpRatio": 0.08213347519571791,
+      "potions": 0,
+      "mp": 17.555555555555557
+    },
+    "10/tactical": {
+      "n": 36,
+      "winRate": 0.8611111111111112,
+      "meanTurns": 11.694444444444445,
+      "meanHpRatio": 0.41364299409409944,
+      "potions": 2.111111111111111,
+      "mp": 21.666666666666668
+    },
+    "20/attack": {
+      "n": 36,
+      "winRate": 0,
+      "meanTurns": 1.0833333333333333,
+      "meanHpRatio": 0,
+      "potions": 0,
+      "mp": 0
+    },
+    "20/skill": {
+      "n": 36,
+      "winRate": 0,
+      "meanTurns": 1.8888888888888888,
+      "meanHpRatio": 0,
+      "potions": 0,
+      "mp": 6.222222222222222
+    },
+    "20/tactical": {
+      "n": 36,
+      "winRate": 0,
+      "meanTurns": 5.5,
+      "meanHpRatio": 0,
+      "potions": 1.8888888888888888,
+      "mp": 9.555555555555555
+    }
+  },
+  "recordCount": 324,
+  "rawRecords": "Reproduced by audit-gameplay-quality.cjs; full records in GitHub Actions gameplay-data artifact."
+}

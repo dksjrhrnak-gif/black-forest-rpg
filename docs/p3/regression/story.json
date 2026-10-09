@@ -1,0 +1,1977 @@
+{
+  "chapterBranches": [
+    {
+      "area": 0,
+      "sector": 0,
+      "choice": 0,
+      "label": "증언을 숨겨 생존자의 이름을 지킨다",
+      "factions": {
+        "lantern": 1,
+        "ink": 0,
+        "hunt": 0
+      },
+      "affinity": {
+        "alice": 35,
+        "queen": 0,
+        "creature": 30,
+        "victor": 0,
+        "ahab": 30,
+        "quixote": 0
+      },
+      "executed": true,
+      "duplicateRewardBlocked": true
+    },
+    {
+      "area": 0,
+      "sector": 0,
+      "choice": 1,
+      "label": "증언을 법정 기록고에 봉인한다",
+      "factions": {
+        "lantern": 0,
+        "ink": 1,
+        "hunt": 0
+      },
+      "affinity": {
+        "alice": 28,
+        "queen": 0,
+        "creature": 30,
+        "victor": 0,
+        "ahab": 30,
+        "quixote": 0
+      },
+      "executed": true,
+      "duplicateRewardBlocked": true
+    },
+    {
+      "area": 0,
+      "sector": 0,
+      "choice": 2,
+      "label": "증언을 미끼로 명령의 출처를 추적한다",
+      "factions": {
+        "lantern": 0,
+        "ink": 0,
+        "hunt": 1
+      },
+      "affinity": {
+        "alice": 32,
+        "queen": 0,
+        "creature": 30,
+        "victor": 0,
+        "ahab": 30,
+        "quixote": 0
+      },
+      "executed": true,
+      "duplicateRewardBlocked": true
+    },
+    {
+      "area": 0,
+      "sector": 1,
+      "choice": 0,
+      "label": "뿌리를 풀어 이름을 가족에게 돌려준다",
+      "factions": {
+        "lantern": 1,
+        "ink": 0,
+        "hunt": 0
+      },
+      "affinity": {
+        "alice": 35,
+        "queen": 0,
+        "creature": 30,
+        "victor": 0,
+        "ahab": 30,
+        "quixote": 0
+      },
+      "executed": true,
+      "duplicateRewardBlocked": true
+    },
+    {
+      "area": 0,
+      "sector": 1,
+      "choice": 1,
+      "label": "이름을 복사한 뒤 뿌리를 다시 봉인한다",
+      "factions": {
+        "lantern": 0,
+        "ink": 1,
+        "hunt": 0
+      },
+      "affinity": {
+        "alice": 28,
+        "queen": 0,
+        "creature": 30,
+        "victor": 0,
+        "ahab": 30,
+        "quixote": 0
+      },
+      "executed": true,
+      "duplicateRewardBlocked": true
+    },
+    {
+      "area": 0,
+      "sector": 1,
+      "choice": 2,
+      "label": "이름을 묶은 자의 흔적부터 추적한다",
+      "factions": {
+        "lantern": 0,
+        "ink": 0,
+        "hunt": 1
+      },
+      "affinity": {
+        "alice": 32,
+        "queen": 0,
+        "creature": 30,
+        "victor": 0,
+        "ahab": 30,
+        "quixote": 0
+      },
+      "executed": true,
+      "duplicateRewardBlocked": true
+    },
+    {
+      "area": 0,
+      "sector": 2,
+      "choice": 0,
+      "label": "명령 각인을 부숴 파수꾼을 해방한다",
+      "factions": {
+        "lantern": 1,
+        "ink": 0,
+        "hunt": 0
+      },
+      "affinity": {
+        "alice": 35,
+        "queen": 0,
+        "creature": 30,
+        "victor": 0,
+        "ahab": 30,
+        "quixote": 0
+      },
+      "executed": true,
+      "duplicateRewardBlocked": true
+    },
+    {
+      "area": 0,
+      "sector": 2,
+      "choice": 1,
+      "label": "명령권을 법정의 관리 체계로 넘긴다",
+      "factions": {
+        "lantern": 0,
+        "ink": 1,
+        "hunt": 0
+      },
+      "affinity": {
+        "alice": 28,
+        "queen": 0,
+        "creature": 30,
+        "victor": 0,
+        "ahab": 30,
+        "quixote": 0
+      },
+      "executed": true,
+      "duplicateRewardBlocked": true
+    },
+    {
+      "area": 0,
+      "sector": 2,
+      "choice": 2,
+      "label": "명령 신호를 따라 배후의 근원을 추적한다",
+      "factions": {
+        "lantern": 0,
+        "ink": 0,
+        "hunt": 1
+      },
+      "affinity": {
+        "alice": 32,
+        "queen": 0,
+        "creature": 30,
+        "victor": 0,
+        "ahab": 30,
+        "quixote": 0
+      },
+      "executed": true,
+      "duplicateRewardBlocked": true
+    },
+    {
+      "area": 1,
+      "sector": 0,
+      "choice": 0,
+      "label": "피조물에게 등불 수리를 맡기고 주민과 함께 쓴다",
+      "factions": {
+        "lantern": 1,
+        "ink": 0,
+        "hunt": 0
+      },
+      "affinity": {
+        "alice": 30,
+        "queen": 0,
+        "creature": 35,
+        "victor": 0,
+        "ahab": 30,
+        "quixote": 0
+      },
+      "executed": true,
+      "duplicateRewardBlocked": true
+    },
+    {
+      "area": 1,
+      "sector": 0,
+      "choice": 1,
+      "label": "수리 과정을 등록하고 사용 규칙을 만든다",
+      "factions": {
+        "lantern": 0,
+        "ink": 1,
+        "hunt": 0
+      },
+      "affinity": {
+        "alice": 30,
+        "queen": 0,
+        "creature": 28,
+        "victor": 0,
+        "ahab": 30,
+        "quixote": 0
+      },
+      "executed": true,
+      "duplicateRewardBlocked": true
+    },
+    {
+      "area": 1,
+      "sector": 0,
+      "choice": 2,
+      "label": "등불의 힘이 어디서 오는지 추적한다",
+      "factions": {
+        "lantern": 0,
+        "ink": 0,
+        "hunt": 1
+      },
+      "affinity": {
+        "alice": 30,
+        "queen": 0,
+        "creature": 32,
+        "victor": 0,
+        "ahab": 30,
+        "quixote": 0
+      },
+      "executed": true,
+      "duplicateRewardBlocked": true
+    },
+    {
+      "area": 1,
+      "sector": 1,
+      "choice": 0,
+      "label": "재료 목록을 지우고 사람의 이름으로 되돌린다",
+      "factions": {
+        "lantern": 1,
+        "ink": 0,
+        "hunt": 0
+      },
+      "affinity": {
+        "alice": 30,
+        "queen": 0,
+        "creature": 35,
+        "victor": 0,
+        "ahab": 30,
+        "quixote": 0
+      },
+      "executed": true,
+      "duplicateRewardBlocked": true
+    },
+    {
+      "area": 1,
+      "sector": 1,
+      "choice": 1,
+      "label": "기록을 증거로 보존하고 이름을 공식 등록한다",
+      "factions": {
+        "lantern": 0,
+        "ink": 1,
+        "hunt": 0
+      },
+      "affinity": {
+        "alice": 30,
+        "queen": 0,
+        "creature": 28,
+        "victor": 0,
+        "ahab": 30,
+        "quixote": 0
+      },
+      "executed": true,
+      "duplicateRewardBlocked": true
+    },
+    {
+      "area": 1,
+      "sector": 1,
+      "choice": 2,
+      "label": "목록을 따라 사라진 사람들의 행방을 추적한다",
+      "factions": {
+        "lantern": 0,
+        "ink": 0,
+        "hunt": 1
+      },
+      "affinity": {
+        "alice": 30,
+        "queen": 0,
+        "creature": 32,
+        "victor": 0,
+        "ahab": 30,
+        "quixote": 0
+      },
+      "executed": true,
+      "duplicateRewardBlocked": true
+    },
+    {
+      "area": 1,
+      "sector": 2,
+      "choice": 0,
+      "label": "기억 삭제 기능을 멈추고 다른 동력을 찾는다",
+      "factions": {
+        "lantern": 1,
+        "ink": 0,
+        "hunt": 0
+      },
+      "affinity": {
+        "alice": 30,
+        "queen": 0,
+        "creature": 35,
+        "victor": 0,
+        "ahab": 30,
+        "quixote": 0
+      },
+      "executed": true,
+      "duplicateRewardBlocked": true
+    },
+    {
+      "area": 1,
+      "sector": 2,
+      "choice": 1,
+      "label": "삭제 범위를 제한해 종을 계속 가동한다",
+      "factions": {
+        "lantern": 0,
+        "ink": 1,
+        "hunt": 0
+      },
+      "affinity": {
+        "alice": 30,
+        "queen": 0,
+        "creature": 28,
+        "victor": 0,
+        "ahab": 30,
+        "quixote": 0
+      },
+      "executed": true,
+      "duplicateRewardBlocked": true
+    },
+    {
+      "area": 1,
+      "sector": 2,
+      "choice": 2,
+      "label": "종의 동력선을 따라 원천을 추적한다",
+      "factions": {
+        "lantern": 0,
+        "ink": 0,
+        "hunt": 1
+      },
+      "affinity": {
+        "alice": 30,
+        "queen": 0,
+        "creature": 32,
+        "victor": 0,
+        "ahab": 30,
+        "quixote": 0
+      },
+      "executed": true,
+      "duplicateRewardBlocked": true
+    },
+    {
+      "area": 2,
+      "sector": 0,
+      "choice": 0,
+      "label": "공격을 멈추고 백경의 상처부터 살핀다",
+      "factions": {
+        "lantern": 1,
+        "ink": 0,
+        "hunt": 0
+      },
+      "affinity": {
+        "alice": 30,
+        "queen": 0,
+        "creature": 30,
+        "victor": 0,
+        "ahab": 35,
+        "quixote": 0
+      },
+      "executed": true,
+      "duplicateRewardBlocked": true
+    },
+    {
+      "area": 2,
+      "sector": 0,
+      "choice": 1,
+      "label": "포획 구역을 정하고 접근을 통제한다",
+      "factions": {
+        "lantern": 0,
+        "ink": 1,
+        "hunt": 0
+      },
+      "affinity": {
+        "alice": 30,
+        "queen": 0,
+        "creature": 30,
+        "victor": 0,
+        "ahab": 28,
+        "quixote": 0
+      },
+      "executed": true,
+      "duplicateRewardBlocked": true
+    },
+    {
+      "area": 2,
+      "sector": 0,
+      "choice": 2,
+      "label": "에이해브와 즉시 흔적을 추적한다",
+      "factions": {
+        "lantern": 0,
+        "ink": 0,
+        "hunt": 1
+      },
+      "affinity": {
+        "alice": 30,
+        "queen": 0,
+        "creature": 30,
+        "victor": 0,
+        "ahab": 32,
+        "quixote": 0
+      },
+      "executed": true,
+      "duplicateRewardBlocked": true
+    },
+    {
+      "area": 2,
+      "sector": 1,
+      "choice": 0,
+      "label": "거울을 깨고 정해진 결말을 거부한다",
+      "factions": {
+        "lantern": 1,
+        "ink": 0,
+        "hunt": 0
+      },
+      "affinity": {
+        "alice": 30,
+        "queen": 0,
+        "creature": 30,
+        "victor": 0,
+        "ahab": 35,
+        "quixote": 0
+      },
+      "executed": true,
+      "duplicateRewardBlocked": true
+    },
+    {
+      "area": 2,
+      "sector": 1,
+      "choice": 1,
+      "label": "예언을 기록하고 위험에 대비한다",
+      "factions": {
+        "lantern": 0,
+        "ink": 1,
+        "hunt": 0
+      },
+      "affinity": {
+        "alice": 30,
+        "queen": 0,
+        "creature": 30,
+        "victor": 0,
+        "ahab": 28,
+        "quixote": 0
+      },
+      "executed": true,
+      "duplicateRewardBlocked": true
+    },
+    {
+      "area": 2,
+      "sector": 1,
+      "choice": 2,
+      "label": "거울 속 흔적으로 백경의 위치를 추적한다",
+      "factions": {
+        "lantern": 0,
+        "ink": 0,
+        "hunt": 1
+      },
+      "affinity": {
+        "alice": 30,
+        "queen": 0,
+        "creature": 30,
+        "victor": 0,
+        "ahab": 32,
+        "quixote": 0
+      },
+      "executed": true,
+      "duplicateRewardBlocked": true
+    },
+    {
+      "area": 2,
+      "sector": 2,
+      "choice": 0,
+      "label": "상처를 치료하고 백경을 풀어 준다",
+      "factions": {
+        "lantern": 1,
+        "ink": 0,
+        "hunt": 0
+      },
+      "affinity": {
+        "alice": 30,
+        "queen": 0,
+        "creature": 30,
+        "victor": 0,
+        "ahab": 35,
+        "quixote": 0
+      },
+      "executed": true,
+      "duplicateRewardBlocked": true
+    },
+    {
+      "area": 2,
+      "sector": 2,
+      "choice": 1,
+      "label": "상처를 보존한 채 백경을 봉인한다",
+      "factions": {
+        "lantern": 0,
+        "ink": 1,
+        "hunt": 0
+      },
+      "affinity": {
+        "alice": 30,
+        "queen": 0,
+        "creature": 30,
+        "victor": 0,
+        "ahab": 28,
+        "quixote": 0
+      },
+      "executed": true,
+      "duplicateRewardBlocked": true
+    },
+    {
+      "area": 2,
+      "sector": 2,
+      "choice": 2,
+      "label": "상처를 만든 사슬의 주인을 추적한다",
+      "factions": {
+        "lantern": 0,
+        "ink": 0,
+        "hunt": 1
+      },
+      "affinity": {
+        "alice": 30,
+        "queen": 0,
+        "creature": 30,
+        "victor": 0,
+        "ahab": 32,
+        "quixote": 0
+      },
+      "executed": true,
+      "duplicateRewardBlocked": true
+    },
+    {
+      "area": 3,
+      "sector": 0,
+      "choice": 0,
+      "label": "죄목에 이의를 제기하고 억울한 이를 보호한다",
+      "factions": {
+        "lantern": 1,
+        "ink": 0,
+        "hunt": 0
+      },
+      "affinity": {
+        "alice": 30,
+        "queen": 5,
+        "creature": 30,
+        "victor": 0,
+        "ahab": 30,
+        "quixote": 0
+      },
+      "executed": true,
+      "duplicateRewardBlocked": true
+    },
+    {
+      "area": 3,
+      "sector": 0,
+      "choice": 1,
+      "label": "임시 죄목을 받아들이고 절차대로 입성한다",
+      "factions": {
+        "lantern": 0,
+        "ink": 1,
+        "hunt": 0
+      },
+      "affinity": {
+        "alice": 30,
+        "queen": 0,
+        "creature": 30,
+        "victor": 0,
+        "ahab": 30,
+        "quixote": 0
+      },
+      "executed": true,
+      "duplicateRewardBlocked": true
+    },
+    {
+      "area": 3,
+      "sector": 0,
+      "choice": 2,
+      "label": "도장을 훔쳐 누가 죄목을 고쳐 쓰는지 추적한다",
+      "factions": {
+        "lantern": 0,
+        "ink": 0,
+        "hunt": 1
+      },
+      "affinity": {
+        "alice": 30,
+        "queen": 2,
+        "creature": 30,
+        "victor": 0,
+        "ahab": 30,
+        "quixote": 0
+      },
+      "executed": true,
+      "duplicateRewardBlocked": true
+    },
+    {
+      "area": 3,
+      "sector": 1,
+      "choice": 0,
+      "label": "법 밖에서도 증언을 공개해 누구나 듣게 한다",
+      "factions": {
+        "lantern": 1,
+        "ink": 0,
+        "hunt": 0
+      },
+      "affinity": {
+        "alice": 30,
+        "queen": 5,
+        "creature": 30,
+        "victor": 0,
+        "ahab": 30,
+        "quixote": 0
+      },
+      "executed": true,
+      "duplicateRewardBlocked": true
+    },
+    {
+      "area": 3,
+      "sector": 1,
+      "choice": 1,
+      "label": "법을 고쳐 증언을 공식 기록으로 인정한다",
+      "factions": {
+        "lantern": 0,
+        "ink": 1,
+        "hunt": 0
+      },
+      "affinity": {
+        "alice": 30,
+        "queen": 0,
+        "creature": 30,
+        "victor": 0,
+        "ahab": 30,
+        "quixote": 0
+      },
+      "executed": true,
+      "duplicateRewardBlocked": true
+    },
+    {
+      "area": 3,
+      "sector": 1,
+      "choice": 2,
+      "label": "지워진 예외 기록에서 조작의 흔적을 추적한다",
+      "factions": {
+        "lantern": 0,
+        "ink": 0,
+        "hunt": 1
+      },
+      "affinity": {
+        "alice": 30,
+        "queen": 2,
+        "creature": 30,
+        "victor": 0,
+        "ahab": 30,
+        "quixote": 0
+      },
+      "executed": true,
+      "duplicateRewardBlocked": true
+    },
+    {
+      "area": 3,
+      "sector": 2,
+      "choice": 0,
+      "label": "집행을 막고 증인들의 말을 먼저 듣는다",
+      "factions": {
+        "lantern": 1,
+        "ink": 0,
+        "hunt": 0
+      },
+      "affinity": {
+        "alice": 30,
+        "queen": 5,
+        "creature": 30,
+        "victor": 0,
+        "ahab": 30,
+        "quixote": 0
+      },
+      "executed": true,
+      "duplicateRewardBlocked": true
+    },
+    {
+      "area": 3,
+      "sector": 2,
+      "choice": 1,
+      "label": "재심 절차를 열어 판결을 다시 검토한다",
+      "factions": {
+        "lantern": 0,
+        "ink": 1,
+        "hunt": 0
+      },
+      "affinity": {
+        "alice": 30,
+        "queen": 0,
+        "creature": 30,
+        "victor": 0,
+        "ahab": 30,
+        "quixote": 0
+      },
+      "executed": true,
+      "duplicateRewardBlocked": true
+    },
+    {
+      "area": 3,
+      "sector": 2,
+      "choice": 2,
+      "label": "거짓 판결을 내린 권한의 출처를 추적한다",
+      "factions": {
+        "lantern": 0,
+        "ink": 0,
+        "hunt": 1
+      },
+      "affinity": {
+        "alice": 30,
+        "queen": 2,
+        "creature": 30,
+        "victor": 0,
+        "ahab": 30,
+        "quixote": 0
+      },
+      "executed": true,
+      "duplicateRewardBlocked": true
+    },
+    {
+      "area": 4,
+      "sector": 0,
+      "choice": 0,
+      "label": "여행자부터 보호하고 그림자의 정체를 살핀다",
+      "factions": {
+        "lantern": 1,
+        "ink": 0,
+        "hunt": 0
+      },
+      "affinity": {
+        "alice": 30,
+        "queen": 0,
+        "creature": 30,
+        "victor": 0,
+        "ahab": 30,
+        "quixote": 5
+      },
+      "executed": true,
+      "duplicateRewardBlocked": true
+    },
+    {
+      "area": 4,
+      "sector": 0,
+      "choice": 1,
+      "label": "안전 구역을 정하고 추적을 금지한다",
+      "factions": {
+        "lantern": 0,
+        "ink": 1,
+        "hunt": 0
+      },
+      "affinity": {
+        "alice": 30,
+        "queen": 0,
+        "creature": 30,
+        "victor": 0,
+        "ahab": 30,
+        "quixote": 0
+      },
+      "executed": true,
+      "duplicateRewardBlocked": true
+    },
+    {
+      "area": 4,
+      "sector": 0,
+      "choice": 2,
+      "label": "에이해브와 함께 그림자를 즉시 추적한다",
+      "factions": {
+        "lantern": 0,
+        "ink": 0,
+        "hunt": 1
+      },
+      "affinity": {
+        "alice": 30,
+        "queen": 0,
+        "creature": 30,
+        "victor": 0,
+        "ahab": 30,
+        "quixote": 2
+      },
+      "executed": true,
+      "duplicateRewardBlocked": true
+    },
+    {
+      "area": 4,
+      "sector": 1,
+      "choice": 0,
+      "label": "물을 나누고 원정대를 끝까지 함께 데려간다",
+      "factions": {
+        "lantern": 1,
+        "ink": 0,
+        "hunt": 0
+      },
+      "affinity": {
+        "alice": 30,
+        "queen": 0,
+        "creature": 30,
+        "victor": 0,
+        "ahab": 30,
+        "quixote": 5
+      },
+      "executed": true,
+      "duplicateRewardBlocked": true
+    },
+    {
+      "area": 4,
+      "sector": 1,
+      "choice": 1,
+      "label": "배급 규칙을 정해 생존 가능성을 높인다",
+      "factions": {
+        "lantern": 0,
+        "ink": 1,
+        "hunt": 0
+      },
+      "affinity": {
+        "alice": 30,
+        "queen": 0,
+        "creature": 30,
+        "victor": 0,
+        "ahab": 30,
+        "quixote": 0
+      },
+      "executed": true,
+      "duplicateRewardBlocked": true
+    },
+    {
+      "area": 4,
+      "sector": 1,
+      "choice": 2,
+      "label": "정찰대에 자원을 몰아 오아시스를 찾게 한다",
+      "factions": {
+        "lantern": 0,
+        "ink": 0,
+        "hunt": 1
+      },
+      "affinity": {
+        "alice": 30,
+        "queen": 0,
+        "creature": 30,
+        "victor": 0,
+        "ahab": 30,
+        "quixote": 2
+      },
+      "executed": true,
+      "duplicateRewardBlocked": true
+    },
+    {
+      "area": 4,
+      "sector": 2,
+      "choice": 0,
+      "label": "귀환할 사람의 이름부터 적어 결말을 바꾼다",
+      "factions": {
+        "lantern": 1,
+        "ink": 0,
+        "hunt": 0
+      },
+      "affinity": {
+        "alice": 30,
+        "queen": 0,
+        "creature": 30,
+        "victor": 0,
+        "ahab": 30,
+        "quixote": 5
+      },
+      "executed": true,
+      "duplicateRewardBlocked": true
+    },
+    {
+      "area": 4,
+      "sector": 2,
+      "choice": 1,
+      "label": "승선 명단을 확정해 예언을 관리한다",
+      "factions": {
+        "lantern": 0,
+        "ink": 1,
+        "hunt": 0
+      },
+      "affinity": {
+        "alice": 30,
+        "queen": 0,
+        "creature": 30,
+        "victor": 0,
+        "ahab": 30,
+        "quixote": 0
+      },
+      "executed": true,
+      "duplicateRewardBlocked": true
+    },
+    {
+      "area": 4,
+      "sector": 2,
+      "choice": 2,
+      "label": "예언서를 찢고 그것을 쓴 자를 추적한다",
+      "factions": {
+        "lantern": 0,
+        "ink": 0,
+        "hunt": 1
+      },
+      "affinity": {
+        "alice": 30,
+        "queen": 0,
+        "creature": 30,
+        "victor": 0,
+        "ahab": 30,
+        "quixote": 2
+      },
+      "executed": true,
+      "duplicateRewardBlocked": true
+    },
+    {
+      "area": 5,
+      "sector": 0,
+      "choice": 0,
+      "label": "두 기록을 모두 보존해 당사자들이 판단하게 한다",
+      "factions": {
+        "lantern": 1,
+        "ink": 0,
+        "hunt": 0
+      },
+      "affinity": {
+        "alice": 35,
+        "queen": 0,
+        "creature": 30,
+        "victor": 0,
+        "ahab": 30,
+        "quixote": 0
+      },
+      "executed": true,
+      "duplicateRewardBlocked": true
+    },
+    {
+      "area": 5,
+      "sector": 0,
+      "choice": 1,
+      "label": "증거를 비교해 하나의 공식 기록을 만든다",
+      "factions": {
+        "lantern": 0,
+        "ink": 1,
+        "hunt": 0
+      },
+      "affinity": {
+        "alice": 28,
+        "queen": 0,
+        "creature": 30,
+        "victor": 0,
+        "ahab": 30,
+        "quixote": 0
+      },
+      "executed": true,
+      "duplicateRewardBlocked": true
+    },
+    {
+      "area": 5,
+      "sector": 0,
+      "choice": 2,
+      "label": "두 기록을 충돌시킨 편집자의 흔적을 추적한다",
+      "factions": {
+        "lantern": 0,
+        "ink": 0,
+        "hunt": 1
+      },
+      "affinity": {
+        "alice": 32,
+        "queen": 0,
+        "creature": 30,
+        "victor": 0,
+        "ahab": 30,
+        "quixote": 0
+      },
+      "executed": true,
+      "duplicateRewardBlocked": true
+    },
+    {
+      "area": 5,
+      "sector": 1,
+      "choice": 0,
+      "label": "이름이 계속 바뀔 자유를 지킨다",
+      "factions": {
+        "lantern": 1,
+        "ink": 0,
+        "hunt": 0
+      },
+      "affinity": {
+        "alice": 35,
+        "queen": 0,
+        "creature": 30,
+        "victor": 0,
+        "ahab": 30,
+        "quixote": 0
+      },
+      "executed": true,
+      "duplicateRewardBlocked": true
+    },
+    {
+      "area": 5,
+      "sector": 1,
+      "choice": 1,
+      "label": "동의한 사람만 이름을 고정해 보호한다",
+      "factions": {
+        "lantern": 0,
+        "ink": 1,
+        "hunt": 0
+      },
+      "affinity": {
+        "alice": 28,
+        "queen": 0,
+        "creature": 30,
+        "victor": 0,
+        "ahab": 30,
+        "quixote": 0
+      },
+      "executed": true,
+      "duplicateRewardBlocked": true
+    },
+    {
+      "area": 5,
+      "sector": 1,
+      "choice": 2,
+      "label": "이름 고정의 저주에 틈이 있는지 추적한다",
+      "factions": {
+        "lantern": 0,
+        "ink": 0,
+        "hunt": 1
+      },
+      "affinity": {
+        "alice": 32,
+        "queen": 0,
+        "creature": 30,
+        "victor": 0,
+        "ahab": 30,
+        "quixote": 0
+      },
+      "executed": true,
+      "duplicateRewardBlocked": true
+    },
+    {
+      "area": 5,
+      "sector": 2,
+      "choice": 0,
+      "label": "누구나 자신의 문장을 덧쓸 수 있게 남긴다",
+      "factions": {
+        "lantern": 1,
+        "ink": 0,
+        "hunt": 0
+      },
+      "affinity": {
+        "alice": 35,
+        "queen": 0,
+        "creature": 30,
+        "victor": 0,
+        "ahab": 30,
+        "quixote": 0
+      },
+      "executed": true,
+      "duplicateRewardBlocked": true
+    },
+    {
+      "area": 5,
+      "sector": 2,
+      "choice": 1,
+      "label": "자유와 질서를 함께 지킬 규칙을 적는다",
+      "factions": {
+        "lantern": 0,
+        "ink": 1,
+        "hunt": 0
+      },
+      "affinity": {
+        "alice": 28,
+        "queen": 0,
+        "creature": 30,
+        "victor": 0,
+        "ahab": 30,
+        "quixote": 0
+      },
+      "executed": true,
+      "duplicateRewardBlocked": true
+    },
+    {
+      "area": 5,
+      "sector": 2,
+      "choice": 2,
+      "label": "여백을 비우고 편집자를 추적한다",
+      "factions": {
+        "lantern": 0,
+        "ink": 0,
+        "hunt": 1
+      },
+      "affinity": {
+        "alice": 32,
+        "queen": 0,
+        "creature": 30,
+        "victor": 0,
+        "ahab": 30,
+        "quixote": 0
+      },
+      "executed": true,
+      "duplicateRewardBlocked": true
+    },
+    {
+      "area": 6,
+      "sector": 0,
+      "choice": 0,
+      "label": "거인에게 자신의 이름과 선택을 가르친다",
+      "factions": {
+        "lantern": 1,
+        "ink": 0,
+        "hunt": 0
+      },
+      "affinity": {
+        "alice": 30,
+        "queen": 0,
+        "creature": 30,
+        "victor": 5,
+        "ahab": 30,
+        "quixote": 0
+      },
+      "executed": true,
+      "duplicateRewardBlocked": true
+    },
+    {
+      "area": 6,
+      "sector": 0,
+      "choice": 1,
+      "label": "명령 체계를 점검하고 책임자를 지정한다",
+      "factions": {
+        "lantern": 0,
+        "ink": 1,
+        "hunt": 0
+      },
+      "affinity": {
+        "alice": 30,
+        "queen": 0,
+        "creature": 30,
+        "victor": 0,
+        "ahab": 30,
+        "quixote": 0
+      },
+      "executed": true,
+      "duplicateRewardBlocked": true
+    },
+    {
+      "area": 6,
+      "sector": 0,
+      "choice": 2,
+      "label": "명령이 내려오는 중심 장치를 추적한다",
+      "factions": {
+        "lantern": 0,
+        "ink": 0,
+        "hunt": 1
+      },
+      "affinity": {
+        "alice": 30,
+        "queen": 0,
+        "creature": 30,
+        "victor": 2,
+        "ahab": 30,
+        "quixote": 0
+      },
+      "executed": true,
+      "duplicateRewardBlocked": true
+    },
+    {
+      "area": 6,
+      "sector": 1,
+      "choice": 0,
+      "label": "자발적으로 나눈 불씨만 사용하게 바꾼다",
+      "factions": {
+        "lantern": 1,
+        "ink": 0,
+        "hunt": 0
+      },
+      "affinity": {
+        "alice": 30,
+        "queen": 0,
+        "creature": 30,
+        "victor": 5,
+        "ahab": 30,
+        "quixote": 0
+      },
+      "executed": true,
+      "duplicateRewardBlocked": true
+    },
+    {
+      "area": 6,
+      "sector": 1,
+      "choice": 1,
+      "label": "공식 규칙 아래 불씨 사용량을 제한한다",
+      "factions": {
+        "lantern": 0,
+        "ink": 1,
+        "hunt": 0
+      },
+      "affinity": {
+        "alice": 30,
+        "queen": 0,
+        "creature": 30,
+        "victor": 0,
+        "ahab": 30,
+        "quixote": 0
+      },
+      "executed": true,
+      "duplicateRewardBlocked": true
+    },
+    {
+      "area": 6,
+      "sector": 1,
+      "choice": 2,
+      "label": "회로를 끊고 최초 동력원을 추적한다",
+      "factions": {
+        "lantern": 0,
+        "ink": 0,
+        "hunt": 1
+      },
+      "affinity": {
+        "alice": 30,
+        "queen": 0,
+        "creature": 30,
+        "victor": 2,
+        "ahab": 30,
+        "quixote": 0
+      },
+      "executed": true,
+      "duplicateRewardBlocked": true
+    },
+    {
+      "area": 6,
+      "sector": 2,
+      "choice": 0,
+      "label": "명령을 해제하고 거인의 선택을 따른다",
+      "factions": {
+        "lantern": 1,
+        "ink": 0,
+        "hunt": 0
+      },
+      "affinity": {
+        "alice": 30,
+        "queen": 0,
+        "creature": 30,
+        "victor": 5,
+        "ahab": 30,
+        "quixote": 0
+      },
+      "executed": true,
+      "duplicateRewardBlocked": true
+    },
+    {
+      "area": 6,
+      "sector": 2,
+      "choice": 1,
+      "label": "거인의 동의를 받아 필요한 명령만 남긴다",
+      "factions": {
+        "lantern": 0,
+        "ink": 1,
+        "hunt": 0
+      },
+      "affinity": {
+        "alice": 30,
+        "queen": 0,
+        "creature": 30,
+        "victor": 0,
+        "ahab": 30,
+        "quixote": 0
+      },
+      "executed": true,
+      "duplicateRewardBlocked": true
+    },
+    {
+      "area": 6,
+      "sector": 2,
+      "choice": 2,
+      "label": "통제 장치를 파괴하고 창조주의 흔적을 추적한다",
+      "factions": {
+        "lantern": 0,
+        "ink": 0,
+        "hunt": 1
+      },
+      "affinity": {
+        "alice": 30,
+        "queen": 0,
+        "creature": 30,
+        "victor": 2,
+        "ahab": 30,
+        "quixote": 0
+      },
+      "executed": true,
+      "duplicateRewardBlocked": true
+    },
+    {
+      "area": 7,
+      "sector": 0,
+      "choice": 0,
+      "label": "각자의 증언을 그대로 말하게 한다",
+      "factions": {
+        "lantern": 1,
+        "ink": 0,
+        "hunt": 0
+      },
+      "affinity": {
+        "alice": 30,
+        "queen": 0,
+        "creature": 35,
+        "victor": 0,
+        "ahab": 30,
+        "quixote": 0
+      },
+      "executed": true,
+      "duplicateRewardBlocked": true
+    },
+    {
+      "area": 7,
+      "sector": 0,
+      "choice": 1,
+      "label": "증언을 정리해 하나의 공적 기록으로 만든다",
+      "factions": {
+        "lantern": 0,
+        "ink": 1,
+        "hunt": 0
+      },
+      "affinity": {
+        "alice": 30,
+        "queen": 0,
+        "creature": 28,
+        "victor": 0,
+        "ahab": 30,
+        "quixote": 0
+      },
+      "executed": true,
+      "duplicateRewardBlocked": true
+    },
+    {
+      "area": 7,
+      "sector": 0,
+      "choice": 2,
+      "label": "기억의 모순을 만든 조작자를 추적한다",
+      "factions": {
+        "lantern": 0,
+        "ink": 0,
+        "hunt": 1
+      },
+      "affinity": {
+        "alice": 30,
+        "queen": 0,
+        "creature": 32,
+        "victor": 0,
+        "ahab": 30,
+        "quixote": 0
+      },
+      "executed": true,
+      "duplicateRewardBlocked": true
+    },
+    {
+      "area": 7,
+      "sector": 1,
+      "choice": 0,
+      "label": "여러 결말이 동시에 존재하도록 지킨다",
+      "factions": {
+        "lantern": 1,
+        "ink": 0,
+        "hunt": 0
+      },
+      "affinity": {
+        "alice": 30,
+        "queen": 0,
+        "creature": 35,
+        "victor": 0,
+        "ahab": 30,
+        "quixote": 0
+      },
+      "executed": true,
+      "duplicateRewardBlocked": true
+    },
+    {
+      "area": 7,
+      "sector": 1,
+      "choice": 1,
+      "label": "모두가 동의할 최소한의 결말을 협상한다",
+      "factions": {
+        "lantern": 0,
+        "ink": 1,
+        "hunt": 0
+      },
+      "affinity": {
+        "alice": 30,
+        "queen": 0,
+        "creature": 28,
+        "victor": 0,
+        "ahab": 30,
+        "quixote": 0
+      },
+      "executed": true,
+      "duplicateRewardBlocked": true
+    },
+    {
+      "area": 7,
+      "sector": 1,
+      "choice": 2,
+      "label": "편집자를 쓰러뜨려 결말 강제를 끝낸다",
+      "factions": {
+        "lantern": 0,
+        "ink": 0,
+        "hunt": 1
+      },
+      "affinity": {
+        "alice": 30,
+        "queen": 0,
+        "creature": 32,
+        "victor": 0,
+        "ahab": 30,
+        "quixote": 0
+      },
+      "executed": true,
+      "duplicateRewardBlocked": true
+    },
+    {
+      "area": 7,
+      "sector": 2,
+      "choice": 0,
+      "label": "각자의 이야기를 지키는 편에 선다",
+      "factions": {
+        "lantern": 1,
+        "ink": 0,
+        "hunt": 0
+      },
+      "affinity": {
+        "alice": 30,
+        "queen": 0,
+        "creature": 35,
+        "victor": 0,
+        "ahab": 30,
+        "quixote": 0
+      },
+      "executed": true,
+      "duplicateRewardBlocked": true
+    },
+    {
+      "area": 7,
+      "sector": 2,
+      "choice": 1,
+      "label": "규칙과 책임을 지키는 편에 선다",
+      "factions": {
+        "lantern": 0,
+        "ink": 1,
+        "hunt": 0
+      },
+      "affinity": {
+        "alice": 30,
+        "queen": 0,
+        "creature": 28,
+        "victor": 0,
+        "ahab": 30,
+        "quixote": 0
+      },
+      "executed": true,
+      "duplicateRewardBlocked": true
+    },
+    {
+      "area": 7,
+      "sector": 2,
+      "choice": 2,
+      "label": "사슬을 끊고 근원을 끝까지 추적한다",
+      "factions": {
+        "lantern": 0,
+        "ink": 0,
+        "hunt": 1
+      },
+      "affinity": {
+        "alice": 30,
+        "queen": 0,
+        "creature": 32,
+        "victor": 0,
+        "ahab": 30,
+        "quixote": 0
+      },
+      "executed": true,
+      "duplicateRewardBlocked": true
+    }
+  ],
+  "endings": [
+    {
+      "choice": 0,
+      "mercy": 0,
+      "allowed": true,
+      "name": "불씨를 놓아준 자"
+    },
+    {
+      "choice": 0,
+      "mercy": 5,
+      "allowed": true,
+      "name": "불씨를 놓아준 자"
+    },
+    {
+      "choice": 1,
+      "mercy": 0,
+      "allowed": true,
+      "name": "검은 왕관의 계승자"
+    },
+    {
+      "choice": 1,
+      "mercy": 5,
+      "allowed": true,
+      "name": "검은 왕관의 계승자"
+    },
+    {
+      "choice": 2,
+      "mercy": 0,
+      "allowed": false,
+      "name": ""
+    },
+    {
+      "choice": 2,
+      "mercy": 5,
+      "allowed": true,
+      "name": "새벽을 돌려준 자"
+    }
+  ],
+  "hiddenReachabilityFixtures": [
+    {
+      "id": "paladin",
+      "name": "성기사",
+      "conditions": {
+        "mercy": 3,
+        "bosses": 1
+      },
+      "fixtureUnlockPassed": true
+    },
+    {
+      "id": "blood",
+      "name": "혈기사",
+      "conditions": {
+        "lowhpWins": 2,
+        "kills": 10
+      },
+      "fixtureUnlockPassed": true
+    },
+    {
+      "id": "rune",
+      "name": "룬검사",
+      "conditions": {
+        "weaponPlus": 3,
+        "crafts": 3
+      },
+      "fixtureUnlockPassed": true
+    },
+    {
+      "id": "shadow",
+      "name": "그림자 군주",
+      "conditions": {
+        "elites": 3,
+        "kills": 15
+      },
+      "fixtureUnlockPassed": true
+    },
+    {
+      "id": "gambler",
+      "name": "운명의 도박사",
+      "conditions": {
+        "caches": 4,
+        "rareFinds": 2
+      },
+      "fixtureUnlockPassed": true
+    },
+    {
+      "id": "chrono",
+      "name": "시간술사",
+      "conditions": {
+        "bosses": 4,
+        "secrets": 2
+      },
+      "fixtureUnlockPassed": true
+    },
+    {
+      "id": "x_magic_16",
+      "name": "파우스트의 계약해독자",
+      "conditions": {
+        "bosses": 3,
+        "secrets": 2,
+        "crafts": 3,
+        "affinity": {
+          "id": "victor",
+          "value": 40
+        },
+        "storyFlag": "victor_seen"
+      },
+      "fixtureUnlockPassed": true
+    },
+    {
+      "id": "x_magic_17",
+      "name": "금서의 마지막 독자",
+      "conditions": {
+        "bosses": 3,
+        "secrets": 2,
+        "crafts": 3,
+        "affinity": {
+          "id": "alice",
+          "value": 40
+        },
+        "storyFlag": "alice_seen"
+      },
+      "fixtureUnlockPassed": true
+    },
+    {
+      "id": "x_ranged_16",
+      "name": "아르고호의 황금 사수",
+      "conditions": {
+        "bosses": 3,
+        "secrets": 2,
+        "elites": 3,
+        "affinity": {
+          "id": "quixote",
+          "value": 40
+        },
+        "storyFlag": "quixote_seen"
+      },
+      "fixtureUnlockPassed": true
+    },
+    {
+      "id": "x_ranged_17",
+      "name": "수평선 너머의 명사수",
+      "conditions": {
+        "bosses": 3,
+        "secrets": 2,
+        "elites": 3,
+        "affinity": {
+          "id": "ahab",
+          "value": 40
+        },
+        "storyFlag": "ahab_seen"
+      },
+      "fixtureUnlockPassed": true
+    },
+    {
+      "id": "x_support_16",
+      "name": "돌아온 성냥불의 성녀",
+      "conditions": {
+        "bosses": 3,
+        "secrets": 2,
+        "mercy": 3,
+        "affinity": {
+          "id": "alice",
+          "value": 40
+        },
+        "storyFlag": "alice_seen"
+      },
+      "fixtureUnlockPassed": true
+    },
+    {
+      "id": "x_support_17",
+      "name": "유리 심장의 재봉사",
+      "conditions": {
+        "bosses": 3,
+        "secrets": 2,
+        "mercy": 3,
+        "affinity": {
+          "id": "creature",
+          "value": 40
+        },
+        "storyFlag": "creature_seen"
+      },
+      "fixtureUnlockPassed": true
+    },
+    {
+      "id": "x_occult_15",
+      "name": "지옥문 앞의 길동무",
+      "conditions": {
+        "bosses": 3,
+        "secrets": 2,
+        "caches": 4,
+        "endings": 1
+      },
+      "fixtureUnlockPassed": true
+    },
+    {
+      "id": "x_occult_16",
+      "name": "찢어진 장의 경계인",
+      "conditions": {
+        "bosses": 3,
+        "secrets": 2,
+        "caches": 4,
+        "collection": 150,
+        "endings": 1
+      },
+      "fixtureUnlockPassed": true
+    }
+  ],
+  "chapters": [
+    {
+      "npc": "alice",
+      "midboss": false,
+      "text": [
+        "검은 숲에서 흰 토끼와 주민들의 이름이 하나둘 사라진다. 법정 기록에서 이름이 지워지면 사람들의 기억에서도 그 존재가 흐려진다. 앨리스는 사라진 이들이 실제로 존재한다는 증언을 모아 하트 여왕의 법정으로 향한다. 공식 기록에 이름을 되돌리면 사람들을 되찾을 수 있다고 믿기 때문이다. 하지만 법정은 서로 다른 세계의 기억이 섞인 증언을 ‘질서를 흔드는 모순’이라 판정하고 소각을 명령한다. 앨리스는 남은 증언서를 빼돌려 검은 숲으로 돌아온다.",
+        "뿌리에 묶인 기억은 거짓 증언이 아니라 돌아갈 집을 잃은 사람의 이름이다. 나무껍질 틈으로 가족을 부르는 목소리가 희미하게 새어 나온다.",
+        "파수꾼의 몸에 새겨진 명령 각인이 희미하게 빛난다. 숲 밖에서 내려온 명령이 파수꾼의 가시를 한 겹씩 더 키운다."
+      ],
+      "candidates": [
+        "outer-story",
+        "outer-battle",
+        "outer-event",
+        "outer-cache",
+        "depth-battle",
+        "depth-elite",
+        "depth-npc",
+        "depth-secret",
+        "depth-merchant",
+        "depth-mystery",
+        "core-story",
+        "core-elite",
+        "core-battle",
+        "core-shrine",
+        "core-checkpoint",
+        "core-boss"
+      ]
+    },
+    {
+      "npc": "creature",
+      "midboss": false,
+      "text": [
+        "멈춘 종탑 아래에서 피조물이 망가진 등불을 고친다. 주민은 그의 손을 두려워하지만 밤이 오면 그 불빛을 찾는다.",
+        "빅터의 기록에는 주민이 재료 목록으로 남아 있다. 피조물은 목록 한 줄을 자기 이름으로 바꾸겠다고 한다.",
+        "종지기의 종은 마을을 살리는 장치인 동시에 기억을 지우는 장치다. 마을의 불빛을 이어 갈 다른 동력을 찾아야 한다."
+      ],
+      "candidates": [
+        "outer-story",
+        "outer-battle",
+        "outer-event",
+        "outer-cache",
+        "depth-battle",
+        "depth-elite",
+        "depth-npc",
+        "depth-secret",
+        "depth-merchant",
+        "depth-mystery",
+        "core-story",
+        "core-elite",
+        "core-battle",
+        "core-shrine",
+        "core-checkpoint",
+        "core-boss"
+      ]
+    },
+    {
+      "npc": "ahab",
+      "midboss": true,
+      "text": [
+        "바다를 잃은 백경의 그림자가 유리 수면을 지난다. 에이해브의 작살은 물 아래보다 당신의 결심을 겨눈다.",
+        "거울은 살아남은 사람에게 사냥의 결말을 보여 준다. 백경을 죽인 뒤에도 사냥꾼의 빈자리는 채워지지 않는다.",
+        "거울의 마녀가 백경의 상처를 증거로 내민다. 상처에는 사슬 자국이 선명하다."
+      ],
+      "candidates": [
+        "outer-story",
+        "outer-battle",
+        "outer-event",
+        "outer-cache",
+        "depth-battle",
+        "depth-elite",
+        "depth-npc",
+        "depth-secret",
+        "depth-merchant",
+        "depth-mystery",
+        "core-story",
+        "core-elite",
+        "core-midboss",
+        "core-shrine",
+        "core-checkpoint",
+        "core-boss"
+      ]
+    },
+    {
+      "npc": "queen",
+      "midboss": false,
+      "text": [
+        "왕성의 문은 모든 손님에게 죄목을 붙인다. 여왕의 도장은 질서를 약속하며 지나간 선택까지 고쳐 쓴다.",
+        "여왕은 끝없는 예외가 세계를 찢는다고 믿는다. 앨리스의 증언서는 법정의 인장 없이 여왕의 책상에 놓여 있다.",
+        "집행관은 내려진 판결만 읽을 뿐 증언을 듣지 않는다. 닫힌 법정 문밖으로 당신이 모은 목소리가 겹쳐 울린다."
+      ],
+      "candidates": [
+        "outer-story",
+        "outer-battle",
+        "outer-event",
+        "outer-cache",
+        "depth-battle",
+        "depth-elite",
+        "depth-npc",
+        "depth-secret",
+        "depth-merchant",
+        "depth-mystery",
+        "core-story",
+        "core-elite",
+        "core-battle",
+        "core-shrine",
+        "core-checkpoint",
+        "core-boss"
+      ]
+    },
+    {
+      "npc": "quixote",
+      "midboss": false,
+      "text": [
+        "모래를 건너는 배 옆에서 돈키호테가 풍차 그림자에 방패를 든다. 에이해브는 그것이 백경의 길이라고 말한다. 배 곁에 모인 여행자들이 그늘을 찾아 몸을 웅크린다.",
+        "원정대의 물통이 바닥을 드러내고 정찰대는 마른 지도를 펼친다. 산초는 물통을 나누며 꿈이 사람을 먹여 살릴 수 있느냐고 묻는다. 일행은 꿈을 버리지 않고도 오늘을 버틸 길을 찾는다.",
+        "예언자는 이미 쓰인 마지막 항해를 내민다. 승선 명단의 빈칸에는 아직 잉크가 마르지 않는다."
+      ],
+      "candidates": [
+        "outer-story",
+        "outer-battle",
+        "outer-event",
+        "outer-cache",
+        "depth-battle",
+        "depth-elite",
+        "depth-npc",
+        "depth-secret",
+        "depth-merchant",
+        "depth-mystery",
+        "core-story",
+        "core-elite",
+        "core-battle",
+        "core-shrine",
+        "core-checkpoint",
+        "core-boss"
+      ]
+    },
+    {
+      "npc": "alice",
+      "midboss": true,
+      "text": [
+        "달빛이 비추는 서가에 앨리스의 증언과 빅터의 실험 기록이 나란히 놓여 있다. 두 책은 서로를 오류라 부른다.",
+        "사서는 이름을 한 문장으로 고정하면 죽음을 막을 수 있다고 말한다. 고정된 사람은 새로운 선택을 할 수 없다. 이름을 고정하는 일은 사서가 말하는 저주와 맞닿아 있다.",
+        "마지막 서가에는 아직 쓰지 않은 여백이 남았다. 지워진 법조문 사이로 새 문장을 적을 자리가 드러난다."
+      ],
+      "candidates": [
+        "outer-story",
+        "outer-battle",
+        "outer-event",
+        "outer-cache",
+        "depth-battle",
+        "depth-elite",
+        "depth-npc",
+        "depth-secret",
+        "depth-merchant",
+        "depth-mystery",
+        "core-story",
+        "core-elite",
+        "core-midboss",
+        "core-shrine",
+        "core-checkpoint",
+        "core-boss"
+      ]
+    },
+    {
+      "npc": "victor",
+      "midboss": false,
+      "text": [
+        "식지 않는 용광로 앞에서 빅터는 실패한 창조물의 이름을 센다. 거인은 이름보다 명령에 먼저 반응한다.",
+        "피조물의 심장과 사람들의 불씨를 잇는 회로가 드러난다. 생명을 재료로 쓰지 않으려면 책임을 나누어야 한다.",
+        "봉합 거인의 손이 창조주의 명령서를 쥔 채 떨린다. 가슴의 봉합선 아래로 스스로 살아가려는 심장이 요동친다."
+      ],
+      "candidates": [
+        "outer-story",
+        "outer-battle",
+        "outer-event",
+        "outer-cache",
+        "depth-battle",
+        "depth-elite",
+        "depth-npc",
+        "depth-secret",
+        "depth-merchant",
+        "depth-mystery",
+        "core-story",
+        "core-elite",
+        "core-battle",
+        "core-shrine",
+        "core-checkpoint",
+        "core-boss"
+      ]
+    },
+    {
+      "npc": "creature",
+      "midboss": false,
+      "text": [
+        "새벽 없는 왕좌로 가는 길에 되찾은 이름들이 모인다. 당신의 동료들은 어떤 선택이 자신들을 여기로 데려왔는지 기억한다.",
+        "편집자의 펜이 서로 다른 이름 위에 하나의 마침표를 긋는다. 지난 선택이 지워질 이름을 지키는 가장 단단한 방패가 된다.",
+        "첫 불씨 안에서 왕관과 여백이 함께 빛난다. 되찾은 이름들이 마지막 싸움의 불빛 속에서 저마다의 목소리를 낸다."
+      ],
+      "candidates": [
+        "outer-story",
+        "outer-battle",
+        "outer-event",
+        "outer-cache",
+        "depth-battle",
+        "depth-elite",
+        "depth-npc",
+        "depth-secret",
+        "depth-merchant",
+        "depth-mystery",
+        "core-story",
+        "core-elite",
+        "core-battle",
+        "core-shrine",
+        "core-checkpoint",
+        "core-boss"
+      ]
+    }
+  ],
+  "npcs": {
+    "alice": {
+      "name": "앨리스",
+      "faction": "lantern",
+      "text": "앨리스가 접힌 증언서를 내민다.\n“이름이 지워지기 전에, 네가 먼저 읽어 줘.”"
+    },
+    "queen": {
+      "name": "하트 여왕",
+      "faction": "ink",
+      "text": "하트 여왕은 판결문에서 시선을 떼지 않는다.\n“질서가 사람을 삼키기 시작했다면, 무엇을 고쳐야 하지?”"
+    },
+    "creature": {
+      "name": "피조물",
+      "faction": "lantern",
+      "text": "피조물이 가슴의 봉합선을 손끝으로 짚는다.\n“만들어진 이름 말고, 내가 고른 이름으로 불리고 싶다.”"
+    },
+    "victor": {
+      "name": "빅터",
+      "faction": "ink",
+      "text": "빅터가 실험 기록을 덮는다.\n“다시 시작할 자격이 있다면… 책임부터 져야겠지.”"
+    },
+    "ahab": {
+      "name": "에이해브",
+      "faction": "hunt",
+      "text": "에이해브가 작살을 바닥에 세운다.\n“사냥을 끝낸 뒤에도 내가 남을지는 모르겠군.”"
+    },
+    "quixote": {
+      "name": "돈키호테",
+      "faction": "hunt",
+      "text": "돈키호테가 낡은 방패를 고쳐 쥔다.\n“세상이 비웃어도, 누군가의 방패가 되는 꿈까지 버릴 수는 없소.”"
+    }
+  },
+  "limitations": [
+    "Hidden fixtures prove condition consistency, not natural reachability frequency.",
+    "Literary consistency also requires editorial judgment; automated branching tests are not a full literary review."
+  ]
+}

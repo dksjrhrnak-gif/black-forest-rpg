@@ -1,6 +1,6 @@
 /* Independent pre-P1 effect implementation + archived saves, not a regenerated oracle. */
 const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict');
-const modules=['vendor/rot.js','vendor/loot-table.js','vendor/lz-string.js','legacy-v1.js','content.js','literature.js','expansion.js','supplemental.js','class-tree.js','effects.js','relationships.js','narrative.js','assets.js','equipment-migration.js','engine.js','qa-relationships.js','career.js','chapters.js','journey.js','p2-exploration.js'];
+const modules=['vendor/rot.js','vendor/loot-table.js','vendor/lz-string.js','legacy-v1.js','content.js','literature.js','expansion.js','supplemental.js','class-tree.js','effects.js','relationships.js','narrative.js','assets.js','equipment-migration.js','engine.js','qa-relationships.js','career.js','chapters.js','journey.js','p2-exploration.js','p3-systems.js'];
 function world(before){const c={console,Date,Math};c.globalThis=c;vm.createContext(c);for(const f of modules)vm.runInContext(fs.readFileSync(__dirname+'/'+(before&&f==='effects.js'?'fixtures/p1-pre-effects.js':f),'utf8'),c,{filename:f});return c;}
 const old=world(true),now=world(false),targets=['x_magic_0','x_magic_15','x_ranged_2','x_occult_13','x_support_16','x_support_17'];
 const controls=['x_magic_3','x_magic_14','x_ranged_3','x_occult_14','x_support_15','paladin'];

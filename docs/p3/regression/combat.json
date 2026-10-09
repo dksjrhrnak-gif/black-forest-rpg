@@ -1,0 +1,1155 @@
+{
+  "method": "114 jobs directly assigned in controlled fixtures × 3 stages × 6 seeds × 5 policies. Unlock conditions are bypassed in these fixtures; they are not natural campaigns. Same boss-drop budget; one battle only. Remaining HP measured before claiming pending rewards/level-up heal.",
+  "summary": {
+    "early/attack": {
+      "n": 684,
+      "winRate": 1,
+      "meanTurns": 2.1330409356725144,
+      "meanHpRatio": 0.9715435361627228,
+      "meanMpSpent": 0,
+      "meanPotionsUsed": 0
+    },
+    "early/skill": {
+      "n": 684,
+      "winRate": 1,
+      "meanTurns": 1.1798245614035088,
+      "meanHpRatio": 0.9979622205428403,
+      "meanMpSpent": 4.559941520467836,
+      "meanPotionsUsed": 0
+    },
+    "early/tactical": {
+      "n": 684,
+      "winRate": 1,
+      "meanTurns": 1.182748538011696,
+      "meanHpRatio": 0.9978445081190003,
+      "meanMpSpent": 4.565789473684211,
+      "meanPotionsUsed": 0
+    },
+    "early/no-resources": {
+      "n": 684,
+      "winRate": 1,
+      "meanTurns": 2.293859649122807,
+      "meanHpRatio": 0.9667961689934957,
+      "meanMpSpent": 0.6476608187134503,
+      "meanPotionsUsed": 0
+    },
+    "early/synergy": {
+      "n": 684,
+      "winRate": 1,
+      "meanTurns": 1.2558479532163742,
+      "meanHpRatio": 0.9992923468640426,
+      "meanMpSpent": 4.755847953216374,
+      "meanPotionsUsed": 0
+    },
+    "mid/attack": {
+      "n": 684,
+      "winRate": 1,
+      "meanTurns": 4.0394736842105265,
+      "meanHpRatio": 0.7892423993911497,
+      "meanMpSpent": 0,
+      "meanPotionsUsed": 0
+    },
+    "mid/skill": {
+      "n": 684,
+      "winRate": 1,
+      "meanTurns": 2.5701754385964914,
+      "meanHpRatio": 0.8487468211893121,
+      "meanMpSpent": 9.923976608187134,
+      "meanPotionsUsed": 0
+    },
+    "mid/tactical": {
+      "n": 684,
+      "winRate": 1,
+      "meanTurns": 3.804093567251462,
+      "meanHpRatio": 0.958550288006148,
+      "meanMpSpent": 10.714912280701755,
+      "meanPotionsUsed": 0
+    },
+    "mid/no-resources": {
+      "n": 684,
+      "winRate": 1,
+      "meanTurns": 5.067251461988304,
+      "meanHpRatio": 0.933816053171341,
+      "meanMpSpent": 6.1535087719298245,
+      "meanPotionsUsed": 0
+    },
+    "mid/synergy": {
+      "n": 684,
+      "winRate": 1,
+      "meanTurns": 3.9985380116959064,
+      "meanHpRatio": 0.992594411492897,
+      "meanMpSpent": 11.18421052631579,
+      "meanPotionsUsed": 0
+    },
+    "late/attack": {
+      "n": 684,
+      "winRate": 1,
+      "meanTurns": 5.233918128654971,
+      "meanHpRatio": 0.7433132900733685,
+      "meanMpSpent": 0,
+      "meanPotionsUsed": 0
+    },
+    "late/skill": {
+      "n": 684,
+      "winRate": 1,
+      "meanTurns": 3.5453216374269005,
+      "meanHpRatio": 0.8533682659409236,
+      "meanMpSpent": 13.698830409356725,
+      "meanPotionsUsed": 0
+    },
+    "late/tactical": {
+      "n": 684,
+      "winRate": 1,
+      "meanTurns": 5.0701754385964914,
+      "meanHpRatio": 0.9448453453450939,
+      "meanMpSpent": 13.536549707602338,
+      "meanPotionsUsed": 0
+    },
+    "late/no-resources": {
+      "n": 684,
+      "winRate": 1,
+      "meanTurns": 6.131578947368421,
+      "meanHpRatio": 0.9214257568139199,
+      "meanMpSpent": 7.742690058479532,
+      "meanPotionsUsed": 0
+    },
+    "late/synergy": {
+      "n": 684,
+      "winRate": 1,
+      "meanTurns": 5.406432748538012,
+      "meanHpRatio": 0.9718050312517893,
+      "meanMpSpent": 14.304093567251462,
+      "meanPotionsUsed": 0
+    }
+  },
+  "byJob": [
+    {
+      "id": "mage",
+      "name": "마도사",
+      "hidden": false,
+      "tier": 0,
+      "winRate": 1,
+      "meanTurns": 2.4444444444444446,
+      "meanHpRatio": 0.943169521910849
+    },
+    {
+      "id": "x_magic_2",
+      "name": "네버랜드 별읽기",
+      "hidden": false,
+      "tier": 1,
+      "winRate": 1,
+      "meanTurns": 2.6666666666666665,
+      "meanHpRatio": 0.9519085858940931
+    },
+    {
+      "id": "x_magic_8",
+      "name": "프랑켄슈타인의 생체술사",
+      "hidden": false,
+      "tier": 2,
+      "winRate": 1,
+      "meanTurns": 2.7222222222222223,
+      "meanHpRatio": 0.9852792402105904
+    },
+    {
+      "id": "rune",
+      "name": "룬검사",
+      "hidden": true,
+      "tier": null,
+      "winRate": 1,
+      "meanTurns": 2.7777777777777777,
+      "meanHpRatio": 0.9728368535432195
+    },
+    {
+      "id": "x_magic_3",
+      "name": "우물의 이름술사",
+      "hidden": false,
+      "tier": 1,
+      "winRate": 1,
+      "meanTurns": 2.8333333333333335,
+      "meanHpRatio": 0.9556041167826064
+    },
+    {
+      "id": "x_magic_4",
+      "name": "해저 전류술사",
+      "hidden": false,
+      "tier": 1,
+      "winRate": 1,
+      "meanTurns": 2.8333333333333335,
+      "meanHpRatio": 0.9606091217876115
+    },
+    {
+      "id": "x_magic_5",
+      "name": "장미 정원의 환술사",
+      "hidden": false,
+      "tier": 1,
+      "winRate": 1,
+      "meanTurns": 2.8333333333333335,
+      "meanHpRatio": 0.956104617283107
+    },
+    {
+      "id": "x_magic_7",
+      "name": "번개 실험실의 도전술사",
+      "hidden": false,
+      "tier": 2,
+      "winRate": 1,
+      "meanTurns": 2.8333333333333335,
+      "meanHpRatio": 0.9569612431397326
+    },
+    {
+      "id": "x_magic_17",
+      "name": "금서의 마지막 독자",
+      "hidden": true,
+      "tier": null,
+      "winRate": 1,
+      "meanTurns": 2.8333333333333335,
+      "meanHpRatio": 0.9564607426392323
+    },
+    {
+      "id": "x_magic_6",
+      "name": "녹색 안경의 주술사",
+      "hidden": false,
+      "tier": 1,
+      "winRate": 1,
+      "meanTurns": 2.888888888888889,
+      "meanHpRatio": 0.9556041167826064
+    },
+    {
+      "id": "x_occult_8",
+      "name": "셜록의 흔적 수집가",
+      "hidden": false,
+      "tier": 2,
+      "winRate": 1,
+      "meanTurns": 2.888888888888889,
+      "meanHpRatio": 0.9697134210573469
+    },
+    {
+      "id": "dream_guard",
+      "name": "라만차의 꿈 수호자",
+      "hidden": false,
+      "tier": 3,
+      "winRate": 1,
+      "meanTurns": 2.888888888888889,
+      "meanHpRatio": 0.9615357422800255
+    },
+    {
+      "id": "chrono",
+      "name": "시간술사",
+      "hidden": true,
+      "tier": null,
+      "winRate": 1,
+      "meanTurns": 2.9444444444444446,
+      "meanHpRatio": 0.9847532148787038
+    },
+    {
+      "id": "ahab_harpoon",
+      "name": "광기에 찬 포경선 작살잡이",
+      "hidden": false,
+      "tier": 2,
+      "winRate": 1,
+      "meanTurns": 2.9444444444444446,
+      "meanHpRatio": 0.9631043981785814
+    },
+    {
+      "id": "x_magic_1",
+      "name": "오즈의 허수아비 학자",
+      "hidden": false,
+      "tier": 1,
+      "winRate": 1,
+      "meanTurns": 2.9444444444444446,
+      "meanHpRatio": 0.9622757884542783
+    },
+    {
+      "id": "x_magic_9",
+      "name": "그림 동화의 잠술사",
+      "hidden": false,
+      "tier": 2,
+      "winRate": 1,
+      "meanTurns": 2.9444444444444446,
+      "meanHpRatio": 0.9572707834492731
+    },
+    {
+      "id": "x_magic_10",
+      "name": "거울 뒷면의 연금술사",
+      "hidden": false,
+      "tier": 2,
+      "winRate": 1,
+      "meanTurns": 2.9444444444444446,
+      "meanHpRatio": 0.9586829648614545
+    },
+    {
+      "id": "x_magic_11",
+      "name": "빅토리아의 안개술사",
+      "hidden": false,
+      "tier": 2,
+      "winRate": 1,
+      "meanTurns": 2.9444444444444446,
+      "meanHpRatio": 0.9898295369348001
+    },
+    {
+      "id": "x_magic_12",
+      "name": "노틸러스의 폭풍학자",
+      "hidden": false,
+      "tier": 2,
+      "winRate": 1,
+      "meanTurns": 2.9444444444444446,
+      "meanHpRatio": 0.9572707834492731
+    },
+    {
+      "id": "x_magic_13",
+      "name": "오즈의 가짜 대마법사",
+      "hidden": false,
+      "tier": 3,
+      "winRate": 1,
+      "meanTurns": 2.9444444444444446,
+      "meanHpRatio": 0.9572707834492731
+    },
+    {
+      "id": "x_magic_14",
+      "name": "별을 읽는 어린 왕자",
+      "hidden": false,
+      "tier": 3,
+      "winRate": 1,
+      "meanTurns": 2.9444444444444446,
+      "meanHpRatio": 0.9572707834492731
+    },
+    {
+      "id": "x_magic_16",
+      "name": "파우스트의 계약해독자",
+      "hidden": true,
+      "tier": null,
+      "winRate": 1,
+      "meanTurns": 2.9444444444444446,
+      "meanHpRatio": 0.9572707834492731
+    },
+    {
+      "id": "faust_release",
+      "name": "파우스트의 계약 파기자",
+      "hidden": false,
+      "tier": 3,
+      "winRate": 1,
+      "meanTurns": 2.9444444444444446,
+      "meanHpRatio": 0.963353255867784
+    },
+    {
+      "id": "blood",
+      "name": "혈기사",
+      "hidden": true,
+      "tier": null,
+      "winRate": 1,
+      "meanTurns": 3,
+      "meanHpRatio": 1
+    },
+    {
+      "id": "twin_duel",
+      "name": "지킬의 이중 결투자",
+      "hidden": false,
+      "tier": 2,
+      "winRate": 1,
+      "meanTurns": 3,
+      "meanHpRatio": 0.9609393440298315
+    },
+    {
+      "id": "x_ranged_8",
+      "name": "로빈후드의 망명 궁수",
+      "hidden": false,
+      "tier": 2,
+      "winRate": 1,
+      "meanTurns": 3,
+      "meanHpRatio": 0.9626213063911417
+    },
+    {
+      "id": "whale_slayer",
+      "name": "백경 살해자",
+      "hidden": false,
+      "tier": 3,
+      "winRate": 1,
+      "meanTurns": 3,
+      "meanHpRatio": 0.9631914938262176
+    },
+    {
+      "id": "gambler",
+      "name": "운명의 도박사",
+      "hidden": true,
+      "tier": null,
+      "winRate": 1,
+      "meanTurns": 3.0555555555555554,
+      "meanHpRatio": 0.9693157339561426
+    },
+    {
+      "id": "windmill",
+      "name": "풍차의 결투자",
+      "hidden": false,
+      "tier": 1,
+      "winRate": 1,
+      "meanTurns": 3.0555555555555554,
+      "meanHpRatio": 0.9538325886057684
+    },
+    {
+      "id": "x_magic_0",
+      "name": "잉크 견습생",
+      "hidden": false,
+      "tier": 1,
+      "winRate": 1,
+      "meanTurns": 3.0555555555555554,
+      "meanHpRatio": 0.9526408025912221
+    },
+    {
+      "id": "x_ranged_7",
+      "name": "붉은 머리의 표적꾼",
+      "hidden": false,
+      "tier": 2,
+      "winRate": 1,
+      "meanTurns": 3.1666666666666665,
+      "meanHpRatio": 0.9545270330502128
+    },
+    {
+      "id": "x_ranged_14",
+      "name": "포그의 일주 저격수",
+      "hidden": false,
+      "tier": 3,
+      "winRate": 1,
+      "meanTurns": 3.1666666666666665,
+      "meanHpRatio": 0.9545270330502128
+    },
+    {
+      "id": "sherwood_warden",
+      "name": "셜우드의 숲 파수장",
+      "hidden": false,
+      "tier": 3,
+      "winRate": 1,
+      "meanTurns": 3.1666666666666665,
+      "meanHpRatio": 0.9548865864337243
+    },
+    {
+      "id": "mirror_fist",
+      "name": "거울 복도의 권투사",
+      "hidden": false,
+      "tier": 1,
+      "winRate": 1,
+      "meanTurns": 3.2777777777777777,
+      "meanHpRatio": 0.9506274604006401
+    },
+    {
+      "id": "x_ranged_1",
+      "name": "피쿼드호 투창수",
+      "hidden": false,
+      "tier": 1,
+      "winRate": 1,
+      "meanTurns": 3.3333333333333335,
+      "meanHpRatio": 0.9541798108279905
+    },
+    {
+      "id": "x_ranged_2",
+      "name": "이상한 정원의 새총잡이",
+      "hidden": false,
+      "tier": 1,
+      "winRate": 1,
+      "meanTurns": 3.3333333333333335,
+      "meanHpRatio": 0.9646931616918033
+    },
+    {
+      "id": "pequod",
+      "name": "피쿼드호 갑판검사",
+      "hidden": false,
+      "tier": 1,
+      "winRate": 1,
+      "meanTurns": 3.4444444444444446,
+      "meanHpRatio": 0.9500970548158869
+    },
+    {
+      "id": "coffin",
+      "name": "빈 관의 파수꾼",
+      "hidden": false,
+      "tier": 1,
+      "winRate": 1,
+      "meanTurns": 3.4444444444444446,
+      "meanHpRatio": 0.9500970548158869
+    },
+    {
+      "id": "queen_exec",
+      "name": "하트 법정의 참수인",
+      "hidden": false,
+      "tier": 2,
+      "winRate": 1,
+      "meanTurns": 3.4444444444444446,
+      "meanHpRatio": 0.951512653106485
+    },
+    {
+      "id": "pagebreaker",
+      "name": "끝장을 찢는 검성",
+      "hidden": false,
+      "tier": 3,
+      "winRate": 1,
+      "meanTurns": 3.4444444444444446,
+      "meanHpRatio": 0.9500970548158869
+    },
+    {
+      "id": "thorn_crown",
+      "name": "가시 왕관의 반역자",
+      "hidden": false,
+      "tier": 3,
+      "winRate": 1,
+      "meanTurns": 3.4444444444444446,
+      "meanHpRatio": 0.9469382439298032
+    },
+    {
+      "id": "last_margin",
+      "name": "마지막 여백의 용병왕",
+      "hidden": false,
+      "tier": 3,
+      "winRate": 1,
+      "meanTurns": 3.4444444444444446,
+      "meanHpRatio": 0.9500970548158869
+    },
+    {
+      "id": "x_ranged_0",
+      "name": "셜우드의 견습 궁수",
+      "hidden": false,
+      "tier": 1,
+      "winRate": 1,
+      "meanTurns": 3.4444444444444446,
+      "meanHpRatio": 0.9509487031675352
+    },
+    {
+      "id": "x_ranged_3",
+      "name": "해적섬의 화승총수",
+      "hidden": false,
+      "tier": 1,
+      "winRate": 1,
+      "meanTurns": 3.4444444444444446,
+      "meanHpRatio": 0.9509487031675352
+    },
+    {
+      "id": "x_ranged_4",
+      "name": "황야의 우편 저격수",
+      "hidden": false,
+      "tier": 1,
+      "winRate": 1,
+      "meanTurns": 3.4444444444444446,
+      "meanHpRatio": 0.9569487297110398
+    },
+    {
+      "id": "x_ranged_5",
+      "name": "종탑의 까마귀 사수",
+      "hidden": false,
+      "tier": 1,
+      "winRate": 1,
+      "meanTurns": 3.4444444444444446,
+      "meanHpRatio": 0.9828983884182002
+    },
+    {
+      "id": "x_ranged_6",
+      "name": "오즈의 양철 포수",
+      "hidden": false,
+      "tier": 1,
+      "winRate": 1,
+      "meanTurns": 3.4444444444444446,
+      "meanHpRatio": 0.9509487031675352
+    },
+    {
+      "id": "x_ranged_9",
+      "name": "노틸러스의 수압포수",
+      "hidden": false,
+      "tier": 2,
+      "winRate": 1,
+      "meanTurns": 3.4444444444444446,
+      "meanHpRatio": 0.9509487031675352
+    },
+    {
+      "id": "x_ranged_10",
+      "name": "퀴퀘그의 문신 투창수",
+      "hidden": false,
+      "tier": 2,
+      "winRate": 1,
+      "meanTurns": 3.4444444444444446,
+      "meanHpRatio": 0.9514828912017231
+    },
+    {
+      "id": "x_ranged_11",
+      "name": "지옥 항로의 쇠뇌수",
+      "hidden": false,
+      "tier": 2,
+      "winRate": 1,
+      "meanTurns": 3.4444444444444446,
+      "meanHpRatio": 0.9834542849383987
+    },
+    {
+      "id": "x_ranged_12",
+      "name": "하멜른의 음표 사수",
+      "hidden": false,
+      "tier": 2,
+      "winRate": 1,
+      "meanTurns": 3.4444444444444446,
+      "meanHpRatio": 0.9509487031675352
+    },
+    {
+      "id": "x_ranged_13",
+      "name": "성벽의 불씨 투석수",
+      "hidden": false,
+      "tier": 3,
+      "winRate": 1,
+      "meanTurns": 3.4444444444444446,
+      "meanHpRatio": 0.9509487031675352
+    },
+    {
+      "id": "x_ranged_15",
+      "name": "백경의 망루 사냥꾼",
+      "hidden": false,
+      "tier": 3,
+      "winRate": 1,
+      "meanTurns": 3.4444444444444446,
+      "meanHpRatio": 0.9509487031675352
+    },
+    {
+      "id": "x_ranged_16",
+      "name": "아르고호의 황금 사수",
+      "hidden": true,
+      "tier": null,
+      "winRate": 1,
+      "meanTurns": 3.4444444444444446,
+      "meanHpRatio": 0.956414541676852
+    },
+    {
+      "id": "x_ranged_17",
+      "name": "수평선 너머의 명사수",
+      "hidden": true,
+      "tier": null,
+      "winRate": 1,
+      "meanTurns": 3.4444444444444446,
+      "meanHpRatio": 0.9550414053371603
+    },
+    {
+      "id": "x_support_2",
+      "name": "산초의 야전 취사병",
+      "hidden": false,
+      "tier": 1,
+      "winRate": 1,
+      "meanTurns": 3.4444444444444446,
+      "meanHpRatio": 1
+    },
+    {
+      "id": "x_support_7",
+      "name": "토끼굴 길안내자",
+      "hidden": false,
+      "tier": 2,
+      "winRate": 1,
+      "meanTurns": 3.4444444444444446,
+      "meanHpRatio": 1
+    },
+    {
+      "id": "x_support_8",
+      "name": "피조물의 상처봉합사",
+      "hidden": false,
+      "tier": 2,
+      "winRate": 1,
+      "meanTurns": 3.4444444444444446,
+      "meanHpRatio": 1
+    },
+    {
+      "id": "x_support_11",
+      "name": "캔터베리의 순례의사",
+      "hidden": false,
+      "tier": 2,
+      "winRate": 1,
+      "meanTurns": 3.4444444444444446,
+      "meanHpRatio": 1
+    },
+    {
+      "id": "x_occult_2",
+      "name": "몽테크리스토의 장부지기",
+      "hidden": false,
+      "tier": 1,
+      "winRate": 1,
+      "meanTurns": 3.4444444444444446,
+      "meanHpRatio": 0.9635051641778626
+    },
+    {
+      "id": "x_occult_6",
+      "name": "보물섬의 암호해독자",
+      "hidden": false,
+      "tier": 1,
+      "winRate": 1,
+      "meanTurns": 3.4444444444444446,
+      "meanHpRatio": 0.9610548059201715
+    },
+    {
+      "id": "x_occult_7",
+      "name": "시간 여행의 관측자",
+      "hidden": false,
+      "tier": 2,
+      "winRate": 1,
+      "meanTurns": 3.4444444444444446,
+      "meanHpRatio": 0.9626873948415748
+    },
+    {
+      "id": "x_occult_12",
+      "name": "해저 이만리의 유물잠수사",
+      "hidden": false,
+      "tier": 2,
+      "winRate": 1,
+      "meanTurns": 3.4444444444444446,
+      "meanHpRatio": 0.9610548059201715
+    },
+    {
+      "id": "x_occult_14",
+      "name": "세헤라자드의 결말 협상가",
+      "hidden": false,
+      "tier": 3,
+      "winRate": 1,
+      "meanTurns": 3.4444444444444446,
+      "meanHpRatio": 0.9647644194552871
+    },
+    {
+      "id": "hunter",
+      "name": "사냥꾼",
+      "hidden": false,
+      "tier": 0,
+      "winRate": 1,
+      "meanTurns": 3.4444444444444446,
+      "meanHpRatio": 0.9513543952053622
+    },
+    {
+      "id": "victor_heir",
+      "name": "빅터의 속죄 봉합사",
+      "hidden": false,
+      "tier": 2,
+      "winRate": 1,
+      "meanTurns": 3.4444444444444446,
+      "meanHpRatio": 1
+    },
+    {
+      "id": "quixote_squire",
+      "name": "라만차의 맹세 종자",
+      "hidden": false,
+      "tier": 1,
+      "winRate": 1,
+      "meanTurns": 3.4444444444444446,
+      "meanHpRatio": 0.9500066171462964
+    },
+    {
+      "id": "rogue",
+      "name": "도적",
+      "hidden": false,
+      "tier": 0,
+      "winRate": 1,
+      "meanTurns": 3.5,
+      "meanHpRatio": 0.9343300274370221
+    },
+    {
+      "id": "rabbit_guard",
+      "name": "토끼굴 문지기",
+      "hidden": false,
+      "tier": 1,
+      "winRate": 1,
+      "meanTurns": 3.5,
+      "meanHpRatio": 0.9531313154833493
+    },
+    {
+      "id": "stitch",
+      "name": "봉합된 검투사",
+      "hidden": false,
+      "tier": 1,
+      "winRate": 1,
+      "meanTurns": 3.5,
+      "meanHpRatio": 0.9531313154833493
+    },
+    {
+      "id": "sancho",
+      "name": "산초의 방패지기",
+      "hidden": false,
+      "tier": 1,
+      "winRate": 1,
+      "meanTurns": 3.5,
+      "meanHpRatio": 0.9601894087392737
+    },
+    {
+      "id": "fallen_dreamer",
+      "name": "기사도를 잃은 몽상가",
+      "hidden": false,
+      "tier": 2,
+      "winRate": 1,
+      "meanTurns": 3.5,
+      "meanHpRatio": 0.9431187994853586
+    },
+    {
+      "id": "adam_sword",
+      "name": "피조물의 자유검사",
+      "hidden": false,
+      "tier": 2,
+      "winRate": 1,
+      "meanTurns": 3.5,
+      "meanHpRatio": 0.9923617236760429
+    },
+    {
+      "id": "white_knight",
+      "name": "백기사의 균형검",
+      "hidden": false,
+      "tier": 2,
+      "winRate": 1,
+      "meanTurns": 3.5,
+      "meanHpRatio": 0.9431187994853586
+    },
+    {
+      "id": "grave_hunter",
+      "name": "성당 지하의 사냥꾼",
+      "hidden": false,
+      "tier": 2,
+      "winRate": 1,
+      "meanTurns": 3.5,
+      "meanHpRatio": 0.9431187994853586
+    },
+    {
+      "id": "abyss_anchor",
+      "name": "심연을 고정하는 닻기사",
+      "hidden": false,
+      "tier": 3,
+      "winRate": 1,
+      "meanTurns": 3.5,
+      "meanHpRatio": 0.9531313154833493
+    },
+    {
+      "id": "clock_reaver",
+      "name": "멈춘 시계의 결투왕",
+      "hidden": false,
+      "tier": 3,
+      "winRate": 1,
+      "meanTurns": 3.5,
+      "meanHpRatio": 0.9431187994853586
+    },
+    {
+      "id": "x_support_6",
+      "name": "노틸러스의 선의",
+      "hidden": false,
+      "tier": 1,
+      "winRate": 1,
+      "meanTurns": 3.5,
+      "meanHpRatio": 0.9963186077643909
+    },
+    {
+      "id": "x_support_15",
+      "name": "천일야화의 생명 이야기꾼",
+      "hidden": false,
+      "tier": 3,
+      "winRate": 1,
+      "meanTurns": 3.5,
+      "meanHpRatio": 0.9963186077643909
+    },
+    {
+      "id": "x_occult_0",
+      "name": "거울 장터의 골동품상",
+      "hidden": false,
+      "tier": 1,
+      "winRate": 1,
+      "meanTurns": 3.5,
+      "meanHpRatio": 0.9586542572233265
+    },
+    {
+      "id": "x_occult_1",
+      "name": "허클베리의 강길잡이",
+      "hidden": false,
+      "tier": 1,
+      "winRate": 1,
+      "meanTurns": 3.5,
+      "meanHpRatio": 0.9586542572233265
+    },
+    {
+      "id": "x_occult_3",
+      "name": "드라큘라의 주간 문지기",
+      "hidden": false,
+      "tier": 1,
+      "winRate": 1,
+      "meanTurns": 3.5,
+      "meanHpRatio": 0.9586542572233265
+    },
+    {
+      "id": "x_occult_5",
+      "name": "도리언의 초상 관리인",
+      "hidden": false,
+      "tier": 1,
+      "winRate": 1,
+      "meanTurns": 3.5,
+      "meanHpRatio": 0.9637080439535265
+    },
+    {
+      "id": "x_occult_9",
+      "name": "오디세우스의 매듭꾼",
+      "hidden": false,
+      "tier": 2,
+      "winRate": 1,
+      "meanTurns": 3.5,
+      "meanHpRatio": 0.9586542572233265
+    },
+    {
+      "id": "x_occult_11",
+      "name": "체셔의 미소 밀수꾼",
+      "hidden": false,
+      "tier": 2,
+      "winRate": 1,
+      "meanTurns": 3.5,
+      "meanHpRatio": 0.9907547033590655
+    },
+    {
+      "id": "x_occult_15",
+      "name": "지옥문 앞의 길동무",
+      "hidden": true,
+      "tier": null,
+      "winRate": 1,
+      "meanTurns": 3.5,
+      "meanHpRatio": 0.9586542572233265
+    },
+    {
+      "id": "x_occult_16",
+      "name": "찢어진 장의 경계인",
+      "hidden": true,
+      "tier": null,
+      "winRate": 1,
+      "meanTurns": 3.5,
+      "meanHpRatio": 0.9589971927514473
+    },
+    {
+      "id": "adventurer",
+      "name": "모험가",
+      "hidden": false,
+      "tier": 0,
+      "winRate": 1,
+      "meanTurns": 3.5,
+      "meanHpRatio": 0.9439449286922152
+    },
+    {
+      "id": "guardian",
+      "name": "수호자",
+      "hidden": false,
+      "tier": 0,
+      "winRate": 1,
+      "meanTurns": 3.5,
+      "meanHpRatio": 0.9963186077643909
+    },
+    {
+      "id": "self_named",
+      "name": "스스로 이름 붙인 검왕",
+      "hidden": false,
+      "tier": 3,
+      "winRate": 1,
+      "meanTurns": 3.5,
+      "meanHpRatio": 0.9933391499557964
+    },
+    {
+      "id": "court_witness",
+      "name": "하트 법정의 증언기사",
+      "hidden": false,
+      "tier": 3,
+      "winRate": 1,
+      "meanTurns": 3.5,
+      "meanHpRatio": 0.944287864220336
+    },
+    {
+      "id": "oz_restorer",
+      "name": "오즈의 심장 복원사",
+      "hidden": false,
+      "tier": 3,
+      "winRate": 1,
+      "meanTurns": 3.5,
+      "meanHpRatio": 0.9963186077643909
+    },
+    {
+      "id": "x_occult_4",
+      "name": "걸리버의 축척기사",
+      "hidden": false,
+      "tier": 1,
+      "winRate": 1,
+      "meanTurns": 3.5555555555555554,
+      "meanHpRatio": 0.9600948547091218
+    },
+    {
+      "id": "x_occult_10",
+      "name": "카르밀라의 야간 감시자",
+      "hidden": false,
+      "tier": 2,
+      "winRate": 1,
+      "meanTurns": 3.5555555555555554,
+      "meanHpRatio": 0.9604377902372424
+    },
+    {
+      "id": "x_occult_13",
+      "name": "동물 재판의 증언 도둑",
+      "hidden": false,
+      "tier": 3,
+      "winRate": 1,
+      "meanTurns": 3.5555555555555554,
+      "meanHpRatio": 0.9996570644718794
+    },
+    {
+      "id": "alice_return",
+      "name": "앨리스의 귀환 안내자",
+      "hidden": false,
+      "tier": 2,
+      "winRate": 1,
+      "meanTurns": 3.5555555555555554,
+      "meanHpRatio": 0.9600948547091218
+    },
+    {
+      "id": "margin_keeper",
+      "name": "경계의 여백 수호자",
+      "hidden": false,
+      "tier": 3,
+      "winRate": 1,
+      "meanTurns": 3.5555555555555554,
+      "meanHpRatio": 0.9600948547091218
+    },
+    {
+      "id": "card_spear",
+      "name": "찢긴 카드 창병",
+      "hidden": false,
+      "tier": 1,
+      "winRate": 1,
+      "meanTurns": 3.611111111111111,
+      "meanHpRatio": 0.9492195586295961
+    },
+    {
+      "id": "shadow",
+      "name": "그림자 군주",
+      "hidden": true,
+      "tier": null,
+      "winRate": 1,
+      "meanTurns": 3.6666666666666665,
+      "meanHpRatio": 0.9569578448053918
+    },
+    {
+      "id": "x_support_0",
+      "name": "구빈원 붕대지기",
+      "hidden": false,
+      "tier": 1,
+      "winRate": 1,
+      "meanTurns": 3.6666666666666665,
+      "meanHpRatio": 1
+    },
+    {
+      "id": "x_support_1",
+      "name": "촛불 성당의 견습수도사",
+      "hidden": false,
+      "tier": 1,
+      "winRate": 1,
+      "meanTurns": 3.6666666666666665,
+      "meanHpRatio": 1
+    },
+    {
+      "id": "x_support_3",
+      "name": "작은 아씨들의 간호사",
+      "hidden": false,
+      "tier": 1,
+      "winRate": 1,
+      "meanTurns": 3.6666666666666665,
+      "meanHpRatio": 1
+    },
+    {
+      "id": "x_support_5",
+      "name": "성냥의 온기지기",
+      "hidden": false,
+      "tier": 1,
+      "winRate": 1,
+      "meanTurns": 3.6666666666666665,
+      "meanHpRatio": 1
+    },
+    {
+      "id": "x_support_9",
+      "name": "노트르담의 종치유사",
+      "hidden": false,
+      "tier": 2,
+      "winRate": 1,
+      "meanTurns": 3.6666666666666665,
+      "meanHpRatio": 1
+    },
+    {
+      "id": "x_support_10",
+      "name": "레미제라블의 은촛대지기",
+      "hidden": false,
+      "tier": 2,
+      "winRate": 1,
+      "meanTurns": 3.6666666666666665,
+      "meanHpRatio": 1
+    },
+    {
+      "id": "x_support_12",
+      "name": "셜우드의 구호대장",
+      "hidden": false,
+      "tier": 2,
+      "winRate": 1,
+      "meanTurns": 3.6666666666666665,
+      "meanHpRatio": 1
+    },
+    {
+      "id": "x_support_14",
+      "name": "스쿠루지의 새벽 구호가",
+      "hidden": false,
+      "tier": 3,
+      "winRate": 1,
+      "meanTurns": 3.6666666666666665,
+      "meanHpRatio": 1
+    },
+    {
+      "id": "x_support_17",
+      "name": "유리 심장의 재봉사",
+      "hidden": true,
+      "tier": null,
+      "winRate": 1,
+      "meanTurns": 3.6666666666666665,
+      "meanHpRatio": 1
+    },
+    {
+      "id": "x_support_4",
+      "name": "오즈의 마음 수선공",
+      "hidden": false,
+      "tier": 1,
+      "winRate": 1,
+      "meanTurns": 3.7222222222222223,
+      "meanHpRatio": 0.9969306322897482
+    },
+    {
+      "id": "x_support_13",
+      "name": "백지 연맹의 기록보호자",
+      "hidden": false,
+      "tier": 3,
+      "winRate": 1,
+      "meanTurns": 3.7222222222222223,
+      "meanHpRatio": 0.9969306322897482
+    },
+    {
+      "id": "x_magic_15",
+      "name": "시간 기계의 역행술사",
+      "hidden": false,
+      "tier": 3,
+      "winRate": 1,
+      "meanTurns": 3.7777777777777777,
+      "meanHpRatio": 0.9697075141722232
+    },
+    {
+      "id": "paladin",
+      "name": "성기사",
+      "hidden": true,
+      "tier": null,
+      "winRate": 1,
+      "meanTurns": 3.8333333333333335,
+      "meanHpRatio": 0.9979724249797243
+    },
+    {
+      "id": "x_support_16",
+      "name": "돌아온 성냥불의 성녀",
+      "hidden": true,
+      "tier": null,
+      "winRate": 1,
+      "meanTurns": 3.9444444444444446,
+      "meanHpRatio": 0.9964646464646465
+    },
+    {
+      "id": "warrior",
+      "name": "전사",
+      "hidden": false,
+      "tier": 0,
+      "winRate": 1,
+      "meanTurns": 4.388888888888889,
+      "meanHpRatio": 0.9639641620406159
+    }
+  ],
+  "recordCount": 10260,
+  "rawRecords": "Reproduced by audit-gameplay-quality.cjs; full records in GitHub Actions gameplay-data artifact."
+}
