@@ -22,6 +22,7 @@ const entries=[];const keys=new Set();for(const ev of C.P2_EVENTS){assert(!keys.
   g.routes();assert.deepEqual(plain(g.s.routes),['event']);g.choose(0);assert.equal(g.s.eventId,ev.id);const options=g.eventChoices(),can=g.canPay(options[choice].cost),before=g.export();assert(options.some(c=>g.canPay(c.cost)),'free fallback');
   for(const invalid of [-1,3,1.5,null,'1']){g.event(invalid);assert.equal(g.export(),before,'invalid choice is inert');}
   g.event(choice);if(!can){assert.equal(g.export(),before,'cannot silently pay unavailable resources');continue;}
+  if(ev.id===19&&choice===1)assert(!g.s.message.includes('보급함'),'regional enemy is not a mimic');
   const recorded=g.s.decisions[ev.key];assert(recorded);assert.equal(Game.load(g.export()).export(),g.export());restores++;
   const done=g.export();g.event(choice);assert.equal(g.export(),done,'double click inert after transition');
   const account=ledger(g),rng=plain(g.rng.getState());g.s.scene='event';g.event(choice);assert.deepEqual(ledger(g),account,'replayed event gives zero currency/items/xp');assert.deepEqual(plain(g.rng.getState()),rng,'replay cannot reroll');
