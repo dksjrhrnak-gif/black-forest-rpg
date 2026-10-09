@@ -44,7 +44,17 @@ P1의 직업 정의 114개, effects.js, 계보·해금·숙련·전투 공식은
 
 ## 원격 반영과 공개 검증
 
-PR 번호·검증 커밋·CI·main 병합 SHA·Pages 배포·공개 HTML/149자산/CSV3개와 두 브라우저 결과는 작업 완료 후 이 절에 기록한다. CI에는 P2 자동/자연/장비·P1 회귀, 두 브라우저의 지역 UI, 해당 main SHA의 Pages 성공을 기다린 뒤 공개 P2 UI 검사를 연결했다. 이미 성공한 코드를 불필요하게 재설계하지 않고 필요한 검증을 끝내면 병합한다.
+[PR #3](https://github.com/dksjrhrnak-gif/black-forest-rpg/pull/3)은 검증 HEAD `372ef335b189db07e4f83b402d23e17d4b4990bd`에서 16검사 통과 후 2026-10-09 01:29 UTC에 병합했다. main 런타임 병합 SHA는 `5eba231f6038a4aa525ac8e0c0b279f0bbfdc186`이다. PR/main 사이의 런타임 트리도 일치한다.
+
+- PR CI: [Handoff 37868928316](https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/37868928316) 5개, [통합 37868932067](https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/37868932067) 11개 성공. 이전 HEAD의 두 CI는 최신 커밋으로 대체하며 취소했으며 실패한 결과로 병합하지 않았다.
+- main CI: [Handoff 37869987766](https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/37869987766) 7개, [통합 37869987645](https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/37869987645) 11개 성공. 18검사는 자동/자연/장비/P1 회귀·지역 UI·공개 두 브라우저를 포함한다.
+- [Pages 37869987424](https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/37869987424) 성공, deployment 6950709530은 병합 SHA와 일치하며 01:29:28 UTC success다. source는 main `/`다.
+- [공개 게임](https://dksjrhrnak-gif.github.io/black-forest-rpg/)에서 HTML SHA256 `16f9f7d15ccc98b58dfaf96672d64de0468a5951420bd876687e9b2f8f7f510d`, 149이미지/CSV3개 모두 HTTP200·바이트 일치. p2/public-http-assets.json.
+- 공개 Chromium/WebKit main CI의 각각 P1 18검사·P2 36검사·일반 모바일360/390/430 검사 통과. P2 경로는 새 게임→실제 자연 진행에서 만든 저장 가져오기→지역 사건/9선택→전투→보상→장비 비교/획득→저장/재접속→후속 반응이다. 저장 및 이벤트 기록 일치, 터치·스크롤·이미지·텍스트 잘림·중복 지급·콘솔/런타임 오류0을 검사한다.
+- 이 클라우드에서도 공개 WebKit P2 36검사를 독립 실행해 통과했다. p2/public-ui-webkit.json. 공개 Chromium은 CI runner에서 검증했다. 클라우드의 Chromium TLS 신뢰 설정을 우회하지 않았다.
+- p2/remote-qa.json에 실제 GitHub run/job/step 상태와 배포 증거를 남겼다. Actions의 gameplay-data, resumed-live-chromium/webkit 등 artifact는 raw QA와 스크린샷을 보관한다. 이 클라우드의 artifact 다운로드403 때문에 raw 공개 Chromium 파일을 내려받았다고 보고하지 않는다.
+
+마지막 main 커밋은 이 결과/공개 증거만 기록하는 `[skip ci]` 문서 커밋이다. 위18검사가 검증한 런타임과 파일 내용이 동일함을 확인하고, 문서 커밋의 Pages 성공 및 공개 HTML/자산 일치도 다시 확인한다. 최종 GitHub tip SHA와 최종 Pages run/deployment는 완료 보고에 별도로 남긴다. 이미 통과한 런타임 검사를 문서만 바뀐 이유로 중복 실행하지 않는다.
 
 ## 이미지와 잔여 위험
 
@@ -56,7 +66,7 @@ P3 이관: 가치 기반 판매가·경제, 장비 제작·세트/강화 시스�
 
 ## 변경 파일
 
-현재 P2 변경은 55파일이다. 최종 완료 문서/공개 증거 추가 시 전수 목록을 갱신한다.
+최종 P2 변경은 58파일(런타임·테스트·빌드/데이터·문서/QA 증거 포함)이다.
 
 - .github/workflows/handoff-audit.yml
 - analyze-p2.cjs
@@ -83,7 +93,10 @@ P3 이관: 가치 기반 판매가·경제, 장비 제작·세트/강화 시스�
 - docs/p2/mobile-regression-webkit.txt
 - docs/p2/natural-progression.json
 - docs/p2/p1-effect-comparison.json
+- docs/p2/public-http-assets.json
+- docs/p2/public-ui-webkit.json
 - docs/p2/regression/long-play.json
+- docs/p2/remote-qa.json
 - docs/p2/ui-chromium.json
 - docs/p2/ui-webkit.json
 - docs/script-audit.json
