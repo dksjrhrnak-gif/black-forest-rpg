@@ -13,7 +13,7 @@ const conversationScenes=new Set(['dialogue','npc','bond']);
 const conversationSpeaker=s=>s.scene==='npc'?(NPCS[s.thread]?.name||'낯선 인물'):(COMPANIONS[s.thread]?.name||'동행자');
 function conversationLines(s){
  if(s.scene==='dialogue')return [game.relationGreeting(s.thread),...NOVEL_COPY.dialogue[s.thread][s.threads[s.thread]]]||String(s.message||'').split(/\n+/);
- if(s.scene==='npc')return [...NOVEL_COPY.npc[s.thread],game.relationGreeting(s.thread)]||String(s.message||'').split(/\n+/);
+ if(s.scene==='npc')return [...NOVEL_COPY.npc[s.thread],game.relationGreeting(s.thread),game.p2Reaction()]||String(s.message||'').split(/\n+/);
  if(s.scene==='bond')return [game.relationGreeting(s.thread),...NOVEL_COPY.bond[s.thread][s.bondQuests[s.thread]]]||String(s.message||'').split(/\n+/);
  return String(s.message||'').split(/\n+/);
 }
@@ -50,7 +50,7 @@ function lockPanel(){if(oldBodyStyle)return;scrollBefore=window.scrollY;oldBodyS
 function unlockPanel(){if(!oldBodyStyle)return;Object.assign(document.body.style,oldBodyStyle);oldBodyStyle=null;overlay.hidden=true;for(const child of root.children)child.inert=false;window.scrollTo(0,scrollBefore);}
 const gearName=d=>`${d.name}${d.plus?' +'+d.plus:''}`;
 const slotLabel={weapon:'무기',armor:'갑옷',charm:'장신구'};
-const labels={gold:'G',ore:'광석',wood:'목재',herb:'약초',hp:'HP',potions:'물약',mercy:'자비',heal:'HP 회복',mana:'MP 회복',xp:'EXP',sigils:'각성 인장',secrets:'비밀 발견',caches:'보급함',crafts:'제작'};
+const labels={gold:'G',ore:'광석',wood:'목재',herb:'약초',hp:'HP',mp:'MP',potions:'물약',mercy:'자비',heal:'HP 회복',mana:'MP 회복',xp:'EXP',sigils:'각성 인장',secrets:'비밀 발견',caches:'보급함',crafts:'제작'};
 const resources=o=>Object.entries(o).map(([k,v])=>k==='gear'?'장비':`${labels[k]||k} ${v}`).join(' · ')||'없음';
 const affixText=d=>d.affixes.map(a=>`${AFFIXES.find(x=>x.id===a.id).label} +${a.value}`).join(' / ')||'추가 옵션 없음';
 const gearInfo=d=>`${slotLabel[d.slot]} · ${d.slot==='weapon'?'공격':d.slot==='armor'?'방어':'행운 %'} +${d.power+d.plus*(d.slot==='weapon'?2:1)}`;
@@ -95,8 +95,8 @@ if(s.scene==='reward'){const checkpoint=s.kind==='story'&&!s.checkpoint&&!s.retu
  const label=pending?(r.destination==='reward'?'전리품을 챙기고 나아간다':r.destination==='final'?'인장을 챙긴다':'전리품을 챙기고 캠프로 돌아간다'):s.returnAfterResult==='camp'?'대화를 마치고 모닥불로 돌아간다':s.resultKind==='npc'?'작별하고 길을 나선다':s.resultKind==='shrine'?'성소를 뒤로한다':s.resultKind==='secret'?'비밀을 뒤로하고 나아간다':s.resultKind==='cache'?'쓸 만한 물건을 챙기고 나아간다':'계속 나아간다';
  actions=b(label,'nextEncounter','','',false,'primary wide')+(checkpoint&&!pending?b('잠시 쉬어간다','pauseChapter','','여기까지의 여정이 기록됩니다.'):'');}
 if(s.scene==='midboss'){title='샛길과 발소리';kicker='JOURNEY / 기둥 너머';actions=b('수문장과 마주한다','faceMidboss','','',false,'primary')+b('샛길로 몸을 숨긴다','skipMidboss');}
-if(s.scene==='merchant'){title='떠돌이 상인';kicker='TRADER / 확률을 파는 가게';actions=b('회복 물약을 산다 · 16G','buy','potion','',s.gold<16)+b('맑은 영약을 산다 · 12G','buy','tonic','MP 완전 회복',s.gold<12||s.mp===game.maxMp())+b('봉인된 장비를 산다 · 55G','buy','gear','정예 장비 확률표 적용',s.gold<55)+b('상점을 떠난다','nextEncounter','','다시 길을 나선다',false,'primary')}
-if(s.scene==='event'){const ev=EVENTS[s.eventId];title=ev.title;kicker='STORY / 선택과 대가';actions=ev.choices.map((c,i)=>b(c.label,'event',i,`비용: ${resources(c.cost)} · 성공 ${Math.round(c.chance*100)}% · 성공 보상 ${resources(c.reward)}`,!game.canPay(c.cost))).join('');extra=''}
+if(s.scene==='merchant'){title='떠돌이 상인';kicker='TRADER / 확률을 파는 가게';actions=b('회복 물약을 산다 · 16G','buy','potion','',s.gold<16)+b('맑은 영약을 산다 · 12G','buy','tonic','MP 완전 회복',s.gold<12||s.mp===game.maxMp())+b('봉인된 장비를 산다 · 55G','buy','gear','기존 무작위 슬롯 · 정예 확률',s.gold<55)+['weapon','armor','charm'].map(slot=>b({weapon:'무기',armor:'방어구',charm:'장신구'}[slot]+' 상자를 고른다 · 55G','buy','gear-'+slot,'슬롯 지정 · 희귀도는 같은 정예 확률',s.gold<55)).join('')+b('상점을 떠난다','nextEncounter','','다시 길을 나선다',false,'primary')}
+if(s.scene==='event'){const ev=EVENTS[s.eventId];title=ev.title;kicker='STORY / 선택과 대가';actions=game.eventChoices().map((c,i)=>b(c.label,'event',i,`비용: ${resources(c.cost)} · ${c.battle?'전투 후 기존 보상':`성공 ${Math.round(c.chance*100)}% · 보상 ${resources(c.reward)}${c.slot?' · '+{weapon:'무기',armor:'방어구',charm:'장신구'}[c.slot]:''} · 실패 ${resources(c.failure)}`}`,!game.canPay(c.cost))).join('');extra=''}
 if(s.scene==='loot'){const d=s.loot;title=gearName(d);kicker='DISCOVERY / 운명이 남긴 물건';extra=(s.rewardState&&!s.rewardState.claimed?`<p class="reward-summary">경험치 +${s.rewardState.rewards.xp} · 골드 +${s.rewardState.rewards.gold} · 목재 +3 · 약초 +2 · 광석 +${s.rewardState.rewards.ore}</p>`:'')+gearCard(d)+`<p class="comparison">장착 시: ${esc(differences(d))}</p><p class="muted compare">현재 장비</p>`+gearCard(s[d.slot]);actions=b('장비를 걸치고 나아간다','collectLoot','equip','기존 장비는 가방으로',false,'primary')+b(s.rewardState&&!s.rewardState.claimed?'전리품을 챙기고 나아간다':'장비를 챙기고 나아간다','collectLoot','bag','캠프에서 장착 가능')+b(`장비를 판다 · ${game.price(d)}G`,'collectLoot','sell','',false,'wide')}
 if(s.scene==='dead'){title='아직 꺼지지 않은 불씨';kicker='FALLEN / 다시 일어서는 자';actions=b('상처를 추스르고 일어난다','revive','','골드 20% 손실 · 장비·직업 유지',false,'primary wide')}
 if(s.scene==='final'){title='첫 불씨의 기억';kicker='EPILOGUE / 마지막 선택';actions=b('불씨를 놓아준다','finish',0,'저주를 끝내고 기억을 보내 준다')+b('왕관을 쓴다','finish',1,'왕의 힘과 책임을 이어받는다')+b('불씨를 모두에게 나눈다','finish',2,`자비 5 필요 · 현재 ${s.mercy}`,s.mercy<5,'wide primary')}

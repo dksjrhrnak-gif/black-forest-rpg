@@ -1,0 +1,363 @@
+{
+  "status": "PASS",
+  "engine": "chromium",
+  "base": "http://127.0.0.1:4182/",
+  "checks": [
+    {
+      "width": 360,
+      "event": 18,
+      "choice": 0,
+      "recorded": "read:success",
+      "battle": true,
+      "gear": true,
+      "reaction": true,
+      "saveExact": true,
+      "fixtureCommands": 48
+    },
+    {
+      "width": 360,
+      "event": 18,
+      "choice": 1,
+      "recorded": "trail:success",
+      "battle": true,
+      "gear": true,
+      "reaction": true,
+      "saveExact": true,
+      "fixtureCommands": 48
+    },
+    {
+      "width": 360,
+      "event": 18,
+      "choice": 2,
+      "recorded": "copy:success",
+      "battle": true,
+      "gear": true,
+      "reaction": true,
+      "saveExact": true,
+      "fixtureCommands": 48
+    },
+    {
+      "width": 360,
+      "event": 19,
+      "choice": 0,
+      "recorded": "share:success",
+      "battle": true,
+      "gear": true,
+      "reaction": true,
+      "saveExact": true,
+      "fixtureCommands": 136
+    },
+    {
+      "width": 360,
+      "event": 19,
+      "choice": 1,
+      "recorded": "trail:success",
+      "battle": true,
+      "gear": true,
+      "reaction": true,
+      "saveExact": true,
+      "fixtureCommands": 136
+    },
+    {
+      "width": 360,
+      "event": 19,
+      "choice": 2,
+      "recorded": "record:success",
+      "battle": true,
+      "gear": true,
+      "reaction": true,
+      "saveExact": true,
+      "fixtureCommands": 136
+    },
+    {
+      "width": 360,
+      "event": 20,
+      "choice": 0,
+      "recorded": "read:success",
+      "battle": true,
+      "gear": true,
+      "reaction": true,
+      "saveExact": true,
+      "fixtureCommands": 161
+    },
+    {
+      "width": 360,
+      "event": 20,
+      "choice": 1,
+      "recorded": "mend:success",
+      "battle": true,
+      "gear": true,
+      "reaction": true,
+      "saveExact": true,
+      "fixtureCommands": 161
+    },
+    {
+      "width": 360,
+      "event": 20,
+      "choice": 2,
+      "recorded": "copy:success",
+      "battle": true,
+      "gear": true,
+      "reaction": true,
+      "saveExact": true,
+      "fixtureCommands": 161
+    },
+    {
+      "width": 360,
+      "slot": "weapon",
+      "price": 55,
+      "saveExact": true
+    },
+    {
+      "width": 360,
+      "slot": "armor",
+      "price": 55,
+      "saveExact": true
+    },
+    {
+      "width": 360,
+      "slot": "charm",
+      "price": 55,
+      "saveExact": true
+    },
+    {
+      "width": 390,
+      "event": 18,
+      "choice": 0,
+      "recorded": "read:success",
+      "battle": true,
+      "gear": true,
+      "reaction": true,
+      "saveExact": true,
+      "fixtureCommands": 48
+    },
+    {
+      "width": 390,
+      "event": 18,
+      "choice": 1,
+      "recorded": "trail:success",
+      "battle": true,
+      "gear": true,
+      "reaction": true,
+      "saveExact": true,
+      "fixtureCommands": 48
+    },
+    {
+      "width": 390,
+      "event": 18,
+      "choice": 2,
+      "recorded": "copy:success",
+      "battle": true,
+      "gear": true,
+      "reaction": true,
+      "saveExact": true,
+      "fixtureCommands": 48
+    },
+    {
+      "width": 390,
+      "event": 19,
+      "choice": 0,
+      "recorded": "share:success",
+      "battle": true,
+      "gear": true,
+      "reaction": true,
+      "saveExact": true,
+      "fixtureCommands": 136
+    },
+    {
+      "width": 390,
+      "event": 19,
+      "choice": 1,
+      "recorded": "trail:success",
+      "battle": true,
+      "gear": true,
+      "reaction": true,
+      "saveExact": true,
+      "fixtureCommands": 136
+    },
+    {
+      "width": 390,
+      "event": 19,
+      "choice": 2,
+      "recorded": "record:success",
+      "battle": true,
+      "gear": true,
+      "reaction": true,
+      "saveExact": true,
+      "fixtureCommands": 136
+    },
+    {
+      "width": 390,
+      "event": 20,
+      "choice": 0,
+      "recorded": "read:success",
+      "battle": true,
+      "gear": true,
+      "reaction": true,
+      "saveExact": true,
+      "fixtureCommands": 161
+    },
+    {
+      "width": 390,
+      "event": 20,
+      "choice": 1,
+      "recorded": "mend:success",
+      "battle": true,
+      "gear": true,
+      "reaction": true,
+      "saveExact": true,
+      "fixtureCommands": 161
+    },
+    {
+      "width": 390,
+      "event": 20,
+      "choice": 2,
+      "recorded": "copy:success",
+      "battle": true,
+      "gear": true,
+      "reaction": true,
+      "saveExact": true,
+      "fixtureCommands": 161
+    },
+    {
+      "width": 390,
+      "slot": "weapon",
+      "price": 55,
+      "saveExact": true
+    },
+    {
+      "width": 390,
+      "slot": "armor",
+      "price": 55,
+      "saveExact": true
+    },
+    {
+      "width": 390,
+      "slot": "charm",
+      "price": 55,
+      "saveExact": true
+    },
+    {
+      "width": 430,
+      "event": 18,
+      "choice": 0,
+      "recorded": "read:success",
+      "battle": true,
+      "gear": true,
+      "reaction": true,
+      "saveExact": true,
+      "fixtureCommands": 48
+    },
+    {
+      "width": 430,
+      "event": 18,
+      "choice": 1,
+      "recorded": "trail:success",
+      "battle": true,
+      "gear": true,
+      "reaction": true,
+      "saveExact": true,
+      "fixtureCommands": 48
+    },
+    {
+      "width": 430,
+      "event": 18,
+      "choice": 2,
+      "recorded": "copy:success",
+      "battle": true,
+      "gear": true,
+      "reaction": true,
+      "saveExact": true,
+      "fixtureCommands": 48
+    },
+    {
+      "width": 430,
+      "event": 19,
+      "choice": 0,
+      "recorded": "share:success",
+      "battle": true,
+      "gear": true,
+      "reaction": true,
+      "saveExact": true,
+      "fixtureCommands": 136
+    },
+    {
+      "width": 430,
+      "event": 19,
+      "choice": 1,
+      "recorded": "trail:success",
+      "battle": true,
+      "gear": true,
+      "reaction": true,
+      "saveExact": true,
+      "fixtureCommands": 136
+    },
+    {
+      "width": 430,
+      "event": 19,
+      "choice": 2,
+      "recorded": "record:success",
+      "battle": true,
+      "gear": true,
+      "reaction": true,
+      "saveExact": true,
+      "fixtureCommands": 136
+    },
+    {
+      "width": 430,
+      "event": 20,
+      "choice": 0,
+      "recorded": "read:success",
+      "battle": true,
+      "gear": true,
+      "reaction": true,
+      "saveExact": true,
+      "fixtureCommands": 161
+    },
+    {
+      "width": 430,
+      "event": 20,
+      "choice": 1,
+      "recorded": "mend:success",
+      "battle": true,
+      "gear": true,
+      "reaction": true,
+      "saveExact": true,
+      "fixtureCommands": 161
+    },
+    {
+      "width": 430,
+      "event": 20,
+      "choice": 2,
+      "recorded": "copy:success",
+      "battle": true,
+      "gear": true,
+      "reaction": true,
+      "saveExact": true,
+      "fixtureCommands": 161
+    },
+    {
+      "width": 430,
+      "slot": "weapon",
+      "price": 55,
+      "saveExact": true
+    },
+    {
+      "width": 430,
+      "slot": "armor",
+      "price": 55,
+      "saveExact": true
+    },
+    {
+      "width": 430,
+      "slot": "charm",
+      "price": 55,
+      "saveExact": true
+    }
+  ],
+  "errors": 0,
+  "limitations": [
+    "Mobile emulation, not physical devices.",
+    "Regional imports were reached by a real campaign; only merchant scene uses a UI fixture."
+  ]
+}

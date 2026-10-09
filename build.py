@@ -7,7 +7,7 @@ subprocess.run(['node',str(p/'validate-assets.cjs')],check=True,cwd=p)
 subprocess.run(['node',str(p/'validate-script.cjs')],check=True,cwd=p)
 subprocess.run(['node',str(p/'test-script.cjs')],check=True,cwd=p)
 license='\n\n'.join((p/'vendor'/f).read_text(encoding='utf-8') for f in ['ROT-LICENSE.txt','LOOT-LICENSE.txt','LZ-LICENSE.txt'])
-modules=['vendor/rot.js','vendor/loot-table.js','vendor/lz-string.js','legacy-v1.js','content.js','literature.js','expansion.js','supplemental.js','class-tree.js','effects.js','relationships.js','narrative.js','assets.js','equipment-migration.js','engine.js','qa-relationships.js','career.js','chapters.js','journey.js']
+modules=['vendor/rot.js','vendor/loot-table.js','vendor/lz-string.js','legacy-v1.js','content.js','literature.js','expansion.js','supplemental.js','class-tree.js','effects.js','relationships.js','narrative.js','assets.js','equipment-migration.js','engine.js','qa-relationships.js','career.js','chapters.js','journey.js','p2-exploration.js']
 fragment='<style>\n'+(p/'style.css').read_text(encoding='utf-8')+'\n</style>\n'+(p/'shell.html').read_text(encoding='utf-8')
 fragment+='\n<script>\n/*\n'+license+'\n*/\n'+'\n'.join((p/f).read_text(encoding='utf-8') for f in modules)+'\n</script>\n<script>\ndocument.getElementById("black-forest-game").dataset.license='+json.dumps(license)+';\n'+(p/'ui.js').read_text(encoding='utf-8')+'\n</script>\n'
 parser=argparse.ArgumentParser();parser.add_argument('--inline-output');args=parser.parse_args()

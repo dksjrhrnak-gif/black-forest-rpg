@@ -189,7 +189,10 @@
     "14": "assets/event_14.webp",
     "15": "assets/event_15.webp",
     "16": "assets/event_16.webp",
-    "17": "assets/event_17.webp"
+    "17": "assets/event_17.webp",
+    "18": null,
+    "19": null,
+    "20": null
   },
   "npcs": {
     "alice": null,

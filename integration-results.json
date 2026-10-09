@@ -11,7 +11,7 @@
     {
       "starter": "warrior",
       "seed": 2,
-      "actions": 359,
+      "actions": 336,
       "history": [
         "warrior",
         "rabbit_guard",
@@ -32,7 +32,7 @@
     {
       "starter": "warrior",
       "seed": 17,
-      "actions": 340,
+      "actions": 338,
       "history": [
         "warrior",
         "rabbit_guard",
@@ -53,7 +53,7 @@
     {
       "starter": "warrior",
       "seed": 91,
-      "actions": 350,
+      "actions": 358,
       "history": [
         "warrior",
         "rabbit_guard",
@@ -74,7 +74,7 @@
     {
       "starter": "rogue",
       "seed": 2,
-      "actions": 349,
+      "actions": 351,
       "history": [
         "rogue",
         "card_spear",
@@ -95,54 +95,12 @@
     {
       "starter": "rogue",
       "seed": 17,
-      "actions": 359,
-      "history": [
-        "rogue",
-        "card_spear",
-        "queen_exec",
-        "pagebreaker"
-      ],
-      "visits": [
-        12,
-        12,
-        12,
-        12,
-        12,
-        12,
-        12,
-        12
-      ]
-    },
-    {
-      "starter": "rogue",
-      "seed": 91,
-      "actions": 348,
-      "history": [
-        "rogue",
-        "card_spear",
-        "queen_exec",
-        "pagebreaker"
-      ],
-      "visits": [
-        12,
-        12,
-        12,
-        12,
-        12,
-        12,
-        12,
-        12
-      ]
-    },
-    {
-      "starter": "mage",
-      "seed": 2,
       "actions": 355,
       "history": [
-        "mage",
-        "x_magic_0",
-        "x_magic_7",
-        "x_magic_15"
+        "rogue",
+        "card_spear",
+        "queen_exec",
+        "pagebreaker"
       ],
       "visits": [
         12,
@@ -156,136 +114,178 @@
       ]
     },
     {
-      "starter": "mage",
-      "seed": 17,
-      "actions": 333,
-      "history": [
-        "mage",
-        "x_magic_0",
-        "x_magic_7",
-        "x_magic_15"
-      ],
-      "visits": [
-        12,
-        12,
-        12,
-        12,
-        12,
-        12,
-        12,
-        12
-      ]
-    },
-    {
-      "starter": "mage",
+      "starter": "rogue",
       "seed": 91,
-      "actions": 334,
-      "history": [
-        "mage",
-        "x_magic_0",
-        "x_magic_7",
-        "x_magic_15"
-      ],
-      "visits": [
-        12,
-        12,
-        12,
-        12,
-        12,
-        12,
-        12,
-        12
-      ]
-    },
-    {
-      "starter": "adventurer",
-      "seed": 2,
-      "actions": 365,
-      "history": [
-        "adventurer",
-        "rabbit_guard",
-        "queen_exec",
-        "pagebreaker"
-      ],
-      "visits": [
-        12,
-        12,
-        12,
-        12,
-        12,
-        12,
-        12,
-        12
-      ]
-    },
-    {
-      "starter": "adventurer",
-      "seed": 17,
-      "actions": 352,
-      "history": [
-        "adventurer",
-        "rabbit_guard",
-        "queen_exec",
-        "pagebreaker"
-      ],
-      "visits": [
-        12,
-        12,
-        12,
-        12,
-        12,
-        12,
-        12,
-        12
-      ]
-    },
-    {
-      "starter": "adventurer",
-      "seed": 91,
-      "actions": 349,
-      "history": [
-        "adventurer",
-        "rabbit_guard",
-        "queen_exec",
-        "pagebreaker"
-      ],
-      "visits": [
-        12,
-        12,
-        12,
-        12,
-        12,
-        12,
-        12,
-        12
-      ]
-    },
-    {
-      "starter": "hunter",
-      "seed": 2,
-      "actions": 356,
-      "history": [
-        "hunter",
-        "pequod",
-        "ahab_harpoon",
-        "abyss_anchor"
-      ],
-      "visits": [
-        12,
-        12,
-        12,
-        12,
-        12,
-        12,
-        12,
-        12
-      ]
-    },
-    {
-      "starter": "hunter",
-      "seed": 17,
       "actions": 347,
       "history": [
+        "rogue",
+        "card_spear",
+        "queen_exec",
+        "pagebreaker"
+      ],
+      "visits": [
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12
+      ]
+    },
+    {
+      "starter": "mage",
+      "seed": 2,
+      "actions": 343,
+      "history": [
+        "mage",
+        "x_magic_0",
+        "x_magic_7",
+        "x_magic_15"
+      ],
+      "visits": [
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12
+      ]
+    },
+    {
+      "starter": "mage",
+      "seed": 17,
+      "actions": 335,
+      "history": [
+        "mage",
+        "x_magic_0",
+        "x_magic_7",
+        "x_magic_15"
+      ],
+      "visits": [
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12
+      ]
+    },
+    {
+      "starter": "mage",
+      "seed": 91,
+      "actions": 330,
+      "history": [
+        "mage",
+        "x_magic_0",
+        "x_magic_7",
+        "x_magic_15"
+      ],
+      "visits": [
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12
+      ]
+    },
+    {
+      "starter": "adventurer",
+      "seed": 2,
+      "actions": 363,
+      "history": [
+        "adventurer",
+        "rabbit_guard",
+        "queen_exec",
+        "pagebreaker"
+      ],
+      "visits": [
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12
+      ]
+    },
+    {
+      "starter": "adventurer",
+      "seed": 17,
+      "actions": 337,
+      "history": [
+        "adventurer",
+        "rabbit_guard",
+        "queen_exec",
+        "pagebreaker"
+      ],
+      "visits": [
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12
+      ]
+    },
+    {
+      "starter": "adventurer",
+      "seed": 91,
+      "actions": 353,
+      "history": [
+        "adventurer",
+        "rabbit_guard",
+        "queen_exec",
+        "pagebreaker"
+      ],
+      "visits": [
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12
+      ]
+    },
+    {
+      "starter": "hunter",
+      "seed": 2,
+      "actions": 346,
+      "history": [
+        "hunter",
+        "pequod",
+        "ahab_harpoon",
+        "abyss_anchor"
+      ],
+      "visits": [
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12
+      ]
+    },
+    {
+      "starter": "hunter",
+      "seed": 17,
+      "actions": 329,
+      "history": [
         "hunter",
         "pequod",
         "ahab_harpoon",
@@ -305,7 +305,7 @@
     {
       "starter": "hunter",
       "seed": 91,
-      "actions": 354,
+      "actions": 338,
       "history": [
         "hunter",
         "pequod",
@@ -326,7 +326,7 @@
     {
       "starter": "guardian",
       "seed": 2,
-      "actions": 365,
+      "actions": 363,
       "history": [
         "guardian",
         "rabbit_guard",
@@ -347,7 +347,7 @@
     {
       "starter": "guardian",
       "seed": 17,
-      "actions": 352,
+      "actions": 337,
       "history": [
         "guardian",
         "rabbit_guard",
@@ -368,7 +368,7 @@
     {
       "starter": "guardian",
       "seed": 91,
-      "actions": 349,
+      "actions": 353,
       "history": [
         "guardian",
         "rabbit_guard",

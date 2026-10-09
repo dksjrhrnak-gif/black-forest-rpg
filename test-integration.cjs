@@ -23,7 +23,7 @@ for(const starter of STARTERS)for(const seed of [2,17,91]){g=fresh(starter,seed)
  else if(s.scene==='midboss')g.faceMidboss();else if(s.scene==='chapter')g.chapterChoice(0);else if(s.scene==='npc')g.npcChoice(g.getAffinity(s.thread)>=40?3:0);
  else if(s.scene==='battle'){if(s.hp<Math.max(g.damagePreview()+8,g.maxHp()*.27)&&s.potions)g.act('potion');else if(s.enemy.intent==='heavy')g.act('defend');else if(s.mp>=g.skillCost())g.act('skill');else g.act('attack');}
  else if(s.scene==='loot'){const delta=g.compareGear(s.loot);g.takeLoot(delta.ATK+delta.DEF+delta.HP*.1+delta.CRIT*.2>0?'equip':'sell');}
- else if(['reward','merchant'].includes(s.scene))g.advance();else if(s.scene==='event')g.event(g.canPay(BFContent.EVENTS[s.eventId].choices[0].cost)?0:1);else if(s.scene==='final')g.finish(0);else if(s.scene==='dead')throw Error('Natural campaign died '+starter+' '+seed+' area '+s.area);else throw Error('Unhandled '+s.scene);
+ else if(['reward','merchant'].includes(s.scene))g.advance();else if(s.scene==='event')g.event(g.eventChoices().findIndex(c=>g.canPay(c.cost)));else if(s.scene==='final')g.finish(0);else if(s.scene==='dead')throw Error('Natural campaign died '+starter+' '+seed+' area '+s.area);else throw Error('Unhandled '+s.scene);
  if(actions%20===0)assert.equal(Game.load(g.export()).export(),g.export());}
  assert.equal(g.s.scene,'ending');assert.equal(JOBS[g.s.job].tier,3,starter+' did not reach Tier3');assert(visits.every(n=>n===12));assert.equal(seenSectors.size,3);assert.equal(g.s.career.history.length,4);runs.push({starter,seed,actions,history:g.s.career.history,visits});}
 results.push('PASS Gameplay: 6 starters × 3 seeds = 18 natural campaigns; all reach T3 and ending; 12 visits in each of 8 chapters; periodic save/reload exact');

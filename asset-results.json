@@ -1,7 +1,7 @@
 {
   "uniqueImageFiles": 149,
   "registryLinks": 151,
-  "nullMappings": 1049,
+  "nullMappings": 1052,
   "categories": {
     "classes": {
       "linked": 72,
@@ -21,7 +21,7 @@
     },
     "events": {
       "linked": 18,
-      "fallback": 0
+      "fallback": 3
     },
     "npcs": {
       "linked": 0,
