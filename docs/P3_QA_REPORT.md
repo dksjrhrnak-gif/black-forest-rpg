@@ -57,7 +57,7 @@ P3 검사는360/390/430/768/1280px에서 터치 이벤트로 새게임→실제 
 
 가져오는 저장은 실제 명령으로 도달한 P2 수집형 중간캠프, P3 상인/최종, P2 지역 진입 상태다. 골드·재료·장비·진행을 합성 지급하지 않는다. 구간별로 정상 저장 가져오기를 사용하므로 하나의 중단 없는 캠페인이라고 보고하지 않는다. 자연 진행은 별도 자동 명령 시뮬레이션으로 검증한다.
 
-로컬 결과는 p3/ui-*.json, 공개 결과는 p3/public/ui-*.json, 원격 CI/배포 증거는 p3/remote-qa.json이다. 3브라우저의 실제 통과 여부는 완료 후 아래 기록한다. 클라우드 Firefox는 실행 제한으로180초 후 launch 실패(/proc/self/uid_map EROFS, SWGL 오류)했고 이를 통과로 보고하지 않는다. GitHub CI Firefox는 실제 실행하며 Playwright의 isMobile 미지원 때문에 일반 컨텍스트+화면폭+hasTouch로 검증한다. 공개 Chromium/Firefox는 CI에서, WebKit은 CI와 클라우드에서 검사한다.
+로컬 결과는 p3/ui-*.json, 공개 결과는 p3/public/ui-*.json, 원격 CI/배포 증거는 p3/remote-qa.json이다. 3브라우저의 로컬·공개 경로는 실제 실행해 모두 통과했다. 클라우드 Firefox는 실행 제한으로180초 후 launch 실패(/proc/self/uid_map EROFS, SWGL 오류)했고 이를 통과로 보고하지 않는다. GitHub CI Firefox는 실제 실행하며 Playwright의 isMobile 미지원 때문에 일반 컨텍스트+화면폭+hasTouch로 검증한다. 공개 Chromium/Firefox는 CI에서, WebKit은 CI와 클라우드에서 검사한다.
 
 ## 실측과 사람 평가의 구분
 
@@ -65,4 +65,12 @@ P3 검사는360/390/430/768/1280px에서 터치 이벤트로 새게임→실제 
 
 ## 로컬 브라우저 완료
 
-Chromium과 WebKit 모두360/390/430/768/1280px의 위 경로 통과, 각5검사 결과와 스크린샷 저장. 콘솔/런타임 오류0. 360px 엔딩 스크린샷을 직접 검토했고 지역 미래·성장 기록·버튼이 읽히고 줄바꿈되는 것을 확인했다. 클라우드 Firefox는 위 실행 제한으로 미검증이며 CI 결과를 기다린다.
+Chromium과 WebKit 모두360/390/430/768/1280px의 위 경로 통과, 각5검사 결과와 스크린샷 저장. 콘솔/런타임 오류0. 360px 엔딩 스크린샷을 직접 검토했고 지역 미래·성장 기록·버튼이 읽히고 줄바꿈되는 것을 확인했다. 클라우드 Firefox의 UI는 위 실행 제한으로 미검증이며, 별도의 정상 CI runner에서는 실제 Firefox 로컬·공개 모두 통과했다.
+
+## 최종 CI·공개 완료
+
+PR19/main21 필수 job 모두 SUCCESS, 위 P3 세 브라우저와 P1/P2/기존 문안·모바일·저장 회귀 포함. 정확한SHA/실행링크/job·step·Pages 증거는 P3_HANDOFF.md, p3/remote-qa.json이다. 공개HTML·149이미지·3CSV를 바이트까지 대조했다. 클라우드공개WebKit의5폭 결과도p3/public에 보관했다. 실제검사경로의콘솔·런타임오류0. 필수QA범위에미해결기능오류는발견하지않았다.
+
+동일시드/동일900슬롯상자/동일장비·RNG의거래추가비교는기준−24,740G→현재−28,767G, 현재수익품목0이다(p3/resale-paired.json). 10만G는악용검사용초기지갑이며자연경제시뮬레이션과구분한다. P3착용비교의최대생존HP비율절대차.00496, 최대평균턴상대차2.21%, 승률차0. 제작390px미리보기에서공격/방어하락과MP상승이함께표시되는것을직접확인했다(p3/manual-review.json).
+
+클라우드에서CI artifact 다운로드는Forbidden으로막혀raw Firefox/Chromium파일을받지않았다. 실제CI job/step SUCCESS와정확히검증한소스에근거하며원시증거는링크된Actions artifact에있다. 이는게임검사실패가아니다. 최종증거문서커밋은검증된런타임을바꾸지않으며별도Pages반영/동일HTML 확인으로마무리한다.

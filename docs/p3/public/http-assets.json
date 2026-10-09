@@ -1,0 +1,13 @@
+{
+  "base": "https://dksjrhrnak-gif.github.io/black-forest-rpg/",
+  "htmlSha256": "d6c03bd1d48c7999c0c1dbc8706f6021d76d4b61c1b0c8d1824ddb5e582a7eca",
+  "assetFiles": 149,
+  "downloads": [
+    "jobs-114.csv",
+    "jobs-100.csv",
+    "items-1000.csv"
+  ],
+  "http200": true,
+  "exactAssetBytes": true,
+  "status": "PASS"
+}

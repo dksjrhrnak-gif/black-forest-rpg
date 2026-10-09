@@ -1,0 +1,3519 @@
+{
+  "startingMain": "b24007be4030f484c6867fb50f040fd55edd2edb",
+  "branch": "feature/p3-economy-crafting-endings",
+  "pr": {
+    "number": 4,
+    "url": "https://github.com/dksjrhrnak-gif/black-forest-rpg/pull/4",
+    "merged": true,
+    "head": "7a7cd095cd17695920a1745009c6e0c0cc3bc21f",
+    "mergeSha": "caef7c8732159ea0ac2c9e1413ba9c5555a415bc",
+    "changedFiles": 52
+  },
+  "main": "caef7c8732159ea0ac2c9e1413ba9c5555a415bc",
+  "prRuns": [
+    {
+      "id": 37878367060,
+      "headSha": "7a7cd095cd17695920a1745009c6e0c0cc3bc21f",
+      "workflow": "Journey and artwork regression and mobile preview QA",
+      "event": "pull_request",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/37878367060",
+      "jobs": [
+        {
+          "id": 113652055855,
+          "name": "verify",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/37878367060/job/113652055855",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npm install --ignore-scripts",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npm test",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python3 build.py && node export-data.cjs && python3 export-site.py && python3 verify-html.py",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npx playwright install --with-deps chromium webkit",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Start isolated preview",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Preview HTTP assets",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Chromium viewport and click QA",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Chromium mobile touch QA",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "WebKit mobile touch QA",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Published Pages HTML and every mapped asset",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 113652056136,
+          "name": "Script chromium 360",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/37878367060/job/113652056136",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npm ci --ignore-scripts",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python3 build.py && node export-data.cjs && python3 export-site.py && python3 verify-html.py",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npx playwright install --with-deps chromium",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Start isolated preview",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Early story portrait screenshot",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Every scripted scene, choice and result",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 113652056267,
+          "name": "Script webkit 375",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/37878367060/job/113652056267",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npm ci --ignore-scripts",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python3 build.py && node export-data.cjs && python3 export-site.py && python3 verify-html.py",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npx playwright install --with-deps webkit",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Start isolated preview",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Early story portrait screenshot",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Every scripted scene, choice and result",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 113652056270,
+          "name": "Script webkit 390",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/37878367060/job/113652056270",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npm ci --ignore-scripts",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python3 build.py && node export-data.cjs && python3 export-site.py && python3 verify-html.py",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npx playwright install --with-deps webkit",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Start isolated preview",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Early story portrait screenshot",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Every scripted scene, choice and result",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 113652056278,
+          "name": "Script webkit 320",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/37878367060/job/113652056278",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npm ci --ignore-scripts",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python3 build.py && node export-data.cjs && python3 export-site.py && python3 verify-html.py",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npx playwright install --with-deps webkit",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Start isolated preview",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Early story portrait screenshot",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Every scripted scene, choice and result",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 113652056282,
+          "name": "Script webkit 360",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/37878367060/job/113652056282",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npm ci --ignore-scripts",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python3 build.py && node export-data.cjs && python3 export-site.py && python3 verify-html.py",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npx playwright install --with-deps webkit",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Start isolated preview",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Early story portrait screenshot",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Every scripted scene, choice and result",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 113652056283,
+          "name": "Script chromium 430",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/37878367060/job/113652056283",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npm ci --ignore-scripts",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python3 build.py && node export-data.cjs && python3 export-site.py && python3 verify-html.py",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npx playwright install --with-deps chromium",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Start isolated preview",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Early story portrait screenshot",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Every scripted scene, choice and result",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 113652056306,
+          "name": "Script chromium 320",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/37878367060/job/113652056306",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npm ci --ignore-scripts",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python3 build.py && node export-data.cjs && python3 export-site.py && python3 verify-html.py",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npx playwright install --with-deps chromium",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Start isolated preview",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Early story portrait screenshot",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Every scripted scene, choice and result",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 113652056327,
+          "name": "Script webkit 430",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/37878367060/job/113652056327",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npm ci --ignore-scripts",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python3 build.py && node export-data.cjs && python3 export-site.py && python3 verify-html.py",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npx playwright install --with-deps webkit",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Start isolated preview",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Early story portrait screenshot",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Every scripted scene, choice and result",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 113652056379,
+          "name": "Script chromium 375",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/37878367060/job/113652056379",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npm ci --ignore-scripts",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python3 build.py && node export-data.cjs && python3 export-site.py && python3 verify-html.py",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npx playwright install --with-deps chromium",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Start isolated preview",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Early story portrait screenshot",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Every scripted scene, choice and result",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 113652056548,
+          "name": "Script chromium 390",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/37878367060/job/113652056548",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npm ci --ignore-scripts",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python3 build.py && node export-data.cjs && python3 export-site.py && python3 verify-html.py",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npx playwright install --with-deps chromium",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Start isolated preview",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Early story portrait screenshot",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Every scripted scene, choice and result",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 37878333439,
+      "headSha": "7a7cd095cd17695920a1745009c6e0c0cc3bc21f",
+      "workflow": "Handoff audit and requested mobile sizes",
+      "event": "push",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/37878333439",
+      "jobs": [
+        {
+          "id": 113651947096,
+          "name": "logic",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/37878333439/job/113651947096",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npm ci --ignore-scripts",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npm test",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run node test-p3.cjs",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run node test-p3-combat.cjs",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run node simulate-p3-economy.cjs",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run node test-p2.cjs",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run node test-p2-natural.cjs",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run node test-p2-equipment.cjs",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run node test-p1-identity.cjs",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Fixed-seed gameplay audit and natural save continuity",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python3 build.py && node export-data.cjs && python3 export-site.py && python3 verify-html.py",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 113651947296,
+          "name": "browser (chromium, touch)",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/37878333439/job/113651947296",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npm ci --ignore-scripts",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npx playwright install --with-deps chromium",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python3 build.py && node export-data.cjs && python3 export-site.py && python3 verify-html.py",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python3 -m http.server 4173 > /tmp/bf-audit.log 2>&1 &",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Exact requested sizes, controls and journey regressions",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Starter, panel, file import and image fallback handoff checks",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Dedicated portraits and reward comparison visual checks",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "P1 old battle saves, career skills and status reload",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "P2 regional choices, battle, equipment and saved reactions",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 113651947342,
+          "name": "p3-browser (webkit)",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/37878333439/job/113651947342",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npm ci --ignore-scripts",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npx playwright install --with-deps webkit",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python3 build.py && node export-data.cjs && python3 export-site.py && python3 verify-html.py",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python3 -m http.server 4174 --directory dist > /tmp/bf-p3-preview.log 2>&1 &",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "P3 real-campaign imports, economy, sets, save and endings at five widths",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Wait for this commit to finish Pages deployment",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "P3 public game at five widths",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 113651947356,
+          "name": "p3-browser (firefox)",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/37878333439/job/113651947356",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npm ci --ignore-scripts",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npx playwright install --with-deps firefox",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python3 build.py && node export-data.cjs && python3 export-site.py && python3 verify-html.py",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python3 -m http.server 4174 --directory dist > /tmp/bf-p3-preview.log 2>&1 &",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "P3 real-campaign imports, economy, sets, save and endings at five widths",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Wait for this commit to finish Pages deployment",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "P3 public game at five widths",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 113651947391,
+          "name": "browser (webkit, touch)",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/37878333439/job/113651947391",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npm ci --ignore-scripts",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npx playwright install --with-deps webkit",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python3 build.py && node export-data.cjs && python3 export-site.py && python3 verify-html.py",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python3 -m http.server 4173 > /tmp/bf-audit.log 2>&1 &",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Exact requested sizes, controls and journey regressions",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Starter, panel, file import and image fallback handoff checks",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Dedicated portraits and reward comparison visual checks",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "P1 old battle saves, career skills and status reload",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "P2 regional choices, battle, equipment and saved reactions",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 113651947424,
+          "name": "browser (webkit, click)",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/37878333439/job/113651947424",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npm ci --ignore-scripts",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npx playwright install --with-deps webkit",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python3 build.py && node export-data.cjs && python3 export-site.py && python3 verify-html.py",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python3 -m http.server 4173 > /tmp/bf-audit.log 2>&1 &",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Exact requested sizes, controls and journey regressions",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Starter, panel, file import and image fallback handoff checks",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Dedicated portraits and reward comparison visual checks",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "P1 old battle saves, career skills and status reload",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "P2 regional choices, battle, equipment and saved reactions",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 113651947442,
+          "name": "p3-browser (chromium)",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/37878333439/job/113651947442",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npm ci --ignore-scripts",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npx playwright install --with-deps chromium",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python3 build.py && node export-data.cjs && python3 export-site.py && python3 verify-html.py",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python3 -m http.server 4174 --directory dist > /tmp/bf-p3-preview.log 2>&1 &",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "P3 real-campaign imports, economy, sets, save and endings at five widths",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Wait for this commit to finish Pages deployment",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "P3 public game at five widths",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 113651947598,
+          "name": "browser (chromium, click)",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/37878333439/job/113651947598",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npm ci --ignore-scripts",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npx playwright install --with-deps chromium",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python3 build.py && node export-data.cjs && python3 export-site.py && python3 verify-html.py",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python3 -m http.server 4173 > /tmp/bf-audit.log 2>&1 &",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Exact requested sizes, controls and journey regressions",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Starter, panel, file import and image fallback handoff checks",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Dedicated portraits and reward comparison visual checks",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "P1 old battle saves, career skills and status reload",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "P2 regional choices, battle, equipment and saved reactions",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 113651948592,
+          "name": "live-pages",
+          "status": "completed",
+          "conclusion": "skipped",
+          "url": "https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/37878333439/job/113651948592",
+          "steps": []
+        }
+      ]
+    }
+  ],
+  "mainRuns": [
+    {
+      "id": 37879307797,
+      "headSha": "caef7c8732159ea0ac2c9e1413ba9c5555a415bc",
+      "workflow": "pages build and deployment",
+      "event": "dynamic",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/37879307797",
+      "jobs": [
+        {
+          "id": 113655062735,
+          "name": "build",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/37879307797/job/113655062735",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Checkout",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Upload artifact",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Checkout",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 113656029559,
+          "name": "deploy",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/37879307797/job/113656029559",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Deploy to GitHub Pages",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 113656029614,
+          "name": "report-build-status",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/37879307797/job/113656029614",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Report Build Status",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 37879308436,
+      "headSha": "caef7c8732159ea0ac2c9e1413ba9c5555a415bc",
+      "workflow": "Handoff audit and requested mobile sizes",
+      "event": "push",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/37879308436",
+      "jobs": [
+        {
+          "id": 113655060545,
+          "name": "live-pages (chromium)",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/37879308436/job/113655060545",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npm ci --ignore-scripts",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npx playwright install --with-deps chromium",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Wait for this commit to finish Pages deployment",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Public P1 old-save and skill QA",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Public P2 regional choices and saved story reactions",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Match the deployed game and all mapped assets",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Play the published game at the requested mobile sizes",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 113655060668,
+          "name": "live-pages (webkit)",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/37879308436/job/113655060668",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npm ci --ignore-scripts",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npx playwright install --with-deps webkit",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Wait for this commit to finish Pages deployment",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Public P1 old-save and skill QA",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Public P2 regional choices and saved story reactions",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Match the deployed game and all mapped assets",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Play the published game at the requested mobile sizes",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 113655060693,
+          "name": "p3-browser (firefox)",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/37879308436/job/113655060693",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npm ci --ignore-scripts",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npx playwright install --with-deps firefox",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python3 build.py && node export-data.cjs && python3 export-site.py && python3 verify-html.py",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python3 -m http.server 4174 --directory dist > /tmp/bf-p3-preview.log 2>&1 &",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "P3 real-campaign imports, economy, sets, save and endings at five widths",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Wait for this commit to finish Pages deployment",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "P3 public game at five widths",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 113655060703,
+          "name": "browser (chromium, click)",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/37879308436/job/113655060703",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npm ci --ignore-scripts",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npx playwright install --with-deps chromium",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python3 build.py && node export-data.cjs && python3 export-site.py && python3 verify-html.py",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python3 -m http.server 4173 > /tmp/bf-audit.log 2>&1 &",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Exact requested sizes, controls and journey regressions",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Starter, panel, file import and image fallback handoff checks",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Dedicated portraits and reward comparison visual checks",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "P1 old battle saves, career skills and status reload",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "P2 regional choices, battle, equipment and saved reactions",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 113655060705,
+          "name": "browser (chromium, touch)",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/37879308436/job/113655060705",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npm ci --ignore-scripts",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npx playwright install --with-deps chromium",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python3 build.py && node export-data.cjs && python3 export-site.py && python3 verify-html.py",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python3 -m http.server 4173 > /tmp/bf-audit.log 2>&1 &",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Exact requested sizes, controls and journey regressions",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Starter, panel, file import and image fallback handoff checks",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Dedicated portraits and reward comparison visual checks",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "P1 old battle saves, career skills and status reload",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "P2 regional choices, battle, equipment and saved reactions",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 113655060709,
+          "name": "p3-browser (chromium)",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/37879308436/job/113655060709",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npm ci --ignore-scripts",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npx playwright install --with-deps chromium",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python3 build.py && node export-data.cjs && python3 export-site.py && python3 verify-html.py",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python3 -m http.server 4174 --directory dist > /tmp/bf-p3-preview.log 2>&1 &",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "P3 real-campaign imports, economy, sets, save and endings at five widths",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Wait for this commit to finish Pages deployment",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "P3 public game at five widths",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 113655060754,
+          "name": "browser (webkit, touch)",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/37879308436/job/113655060754",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npm ci --ignore-scripts",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npx playwright install --with-deps webkit",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python3 build.py && node export-data.cjs && python3 export-site.py && python3 verify-html.py",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python3 -m http.server 4173 > /tmp/bf-audit.log 2>&1 &",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Exact requested sizes, controls and journey regressions",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Starter, panel, file import and image fallback handoff checks",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Dedicated portraits and reward comparison visual checks",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "P1 old battle saves, career skills and status reload",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "P2 regional choices, battle, equipment and saved reactions",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 113655060792,
+          "name": "logic",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/37879308436/job/113655060792",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npm ci --ignore-scripts",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npm test",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run node test-p3.cjs",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run node test-p3-combat.cjs",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run node simulate-p3-economy.cjs",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run node test-p2.cjs",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run node test-p2-natural.cjs",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run node test-p2-equipment.cjs",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run node test-p1-identity.cjs",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Fixed-seed gameplay audit and natural save continuity",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python3 build.py && node export-data.cjs && python3 export-site.py && python3 verify-html.py",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 113655060809,
+          "name": "p3-browser (webkit)",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/37879308436/job/113655060809",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npm ci --ignore-scripts",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npx playwright install --with-deps webkit",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python3 build.py && node export-data.cjs && python3 export-site.py && python3 verify-html.py",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python3 -m http.server 4174 --directory dist > /tmp/bf-p3-preview.log 2>&1 &",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "P3 real-campaign imports, economy, sets, save and endings at five widths",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Wait for this commit to finish Pages deployment",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "P3 public game at five widths",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 113655060811,
+          "name": "browser (webkit, click)",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/37879308436/job/113655060811",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npm ci --ignore-scripts",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npx playwright install --with-deps webkit",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python3 build.py && node export-data.cjs && python3 export-site.py && python3 verify-html.py",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python3 -m http.server 4173 > /tmp/bf-audit.log 2>&1 &",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Exact requested sizes, controls and journey regressions",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Starter, panel, file import and image fallback handoff checks",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Dedicated portraits and reward comparison visual checks",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "P1 old battle saves, career skills and status reload",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "P2 regional choices, battle, equipment and saved reactions",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 37879308456,
+      "headSha": "caef7c8732159ea0ac2c9e1413ba9c5555a415bc",
+      "workflow": "Journey and artwork regression and mobile preview QA",
+      "event": "push",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/37879308456",
+      "jobs": [
+        {
+          "id": 113655061129,
+          "name": "verify",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/37879308456/job/113655061129",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npm install --ignore-scripts",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npm test",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python3 build.py && node export-data.cjs && python3 export-site.py && python3 verify-html.py",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npx playwright install --with-deps chromium webkit",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Start isolated preview",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Preview HTTP assets",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Chromium viewport and click QA",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Chromium mobile touch QA",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "WebKit mobile touch QA",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Published Pages HTML and every mapped asset",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 113655061308,
+          "name": "Script chromium 390",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/37879308456/job/113655061308",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npm ci --ignore-scripts",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python3 build.py && node export-data.cjs && python3 export-site.py && python3 verify-html.py",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npx playwright install --with-deps chromium",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Start isolated preview",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Early story portrait screenshot",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Every scripted scene, choice and result",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 113655061336,
+          "name": "Script webkit 320",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/37879308456/job/113655061336",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npm ci --ignore-scripts",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python3 build.py && node export-data.cjs && python3 export-site.py && python3 verify-html.py",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npx playwright install --with-deps webkit",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Start isolated preview",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Early story portrait screenshot",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Every scripted scene, choice and result",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 113655061371,
+          "name": "Script webkit 390",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/37879308456/job/113655061371",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npm ci --ignore-scripts",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python3 build.py && node export-data.cjs && python3 export-site.py && python3 verify-html.py",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npx playwright install --with-deps webkit",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Start isolated preview",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Early story portrait screenshot",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Every scripted scene, choice and result",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 113655061382,
+          "name": "Script chromium 360",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/37879308456/job/113655061382",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npm ci --ignore-scripts",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python3 build.py && node export-data.cjs && python3 export-site.py && python3 verify-html.py",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npx playwright install --with-deps chromium",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Start isolated preview",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Early story portrait screenshot",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Every scripted scene, choice and result",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 113655061390,
+          "name": "Script webkit 360",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/37879308456/job/113655061390",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npm ci --ignore-scripts",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python3 build.py && node export-data.cjs && python3 export-site.py && python3 verify-html.py",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npx playwright install --with-deps webkit",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Start isolated preview",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Early story portrait screenshot",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Every scripted scene, choice and result",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 113655061393,
+          "name": "Script chromium 375",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/37879308456/job/113655061393",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npm ci --ignore-scripts",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python3 build.py && node export-data.cjs && python3 export-site.py && python3 verify-html.py",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npx playwright install --with-deps chromium",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Start isolated preview",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Early story portrait screenshot",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Every scripted scene, choice and result",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 113655061394,
+          "name": "Script webkit 375",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/37879308456/job/113655061394",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npm ci --ignore-scripts",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python3 build.py && node export-data.cjs && python3 export-site.py && python3 verify-html.py",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npx playwright install --with-deps webkit",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Start isolated preview",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Early story portrait screenshot",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Every scripted scene, choice and result",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 113655061414,
+          "name": "Script chromium 430",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/37879308456/job/113655061414",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npm ci --ignore-scripts",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python3 build.py && node export-data.cjs && python3 export-site.py && python3 verify-html.py",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npx playwright install --with-deps chromium",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Start isolated preview",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Early story portrait screenshot",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Every scripted scene, choice and result",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 113655061433,
+          "name": "Script webkit 430",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/37879308456/job/113655061433",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npm ci --ignore-scripts",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python3 build.py && node export-data.cjs && python3 export-site.py && python3 verify-html.py",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npx playwright install --with-deps webkit",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Start isolated preview",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Early story portrait screenshot",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Every scripted scene, choice and result",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 113655061451,
+          "name": "Script chromium 320",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/37879308456/job/113655061451",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npm ci --ignore-scripts",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python3 build.py && node export-data.cjs && python3 export-site.py && python3 verify-html.py",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npx playwright install --with-deps chromium",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Start isolated preview",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Early story portrait screenshot",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Every scripted scene, choice and result",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "deployments": [
+    {
+      "id": 6952254996,
+      "sha": "caef7c8732159ea0ac2c9e1413ba9c5555a415bc",
+      "environment": "github-pages",
+      "statuses": [
+        {
+          "state": "success",
+          "createdAt": "2026-10-09T03:31:06Z",
+          "environmentUrl": "https://dksjrhrnak-gif.github.io/black-forest-rpg/"
+        },
+        {
+          "state": "in_progress",
+          "createdAt": "2026-10-09T03:30:49Z",
+          "environmentUrl": ""
+        },
+        {
+          "state": "queued",
+          "createdAt": "2026-10-09T03:30:47Z",
+          "environmentUrl": ""
+        },
+        {
+          "state": "queued",
+          "createdAt": "2026-10-09T03:30:47Z",
+          "environmentUrl": ""
+        },
+        {
+          "state": "waiting",
+          "createdAt": "2026-10-09T03:30:46Z",
+          "environmentUrl": ""
+        }
+      ]
+    }
+  ],
+  "artifactLimit": "Authenticated gh run download of p3-firefox returned Forbidden at redirected artifact storage. Raw artifacts were not downloaded. Actual run/job/step statuses and tested source are recorded; artifacts remain linked in Actions.",
+  "capturedAt": "2026-10-09T03:41:47.950677+00:00",
+  "testedRuntimeMain": "caef7c8732159ea0ac2c9e1413ba9c5555a415bc"
+}

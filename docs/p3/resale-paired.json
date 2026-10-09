@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "method": "Actual baseline/current independent worlds; area7 seed17, same900 alternating slot boxes. Controlled100000G wallet only for abuse test; every generated gear and final RNG identical.",
+  "cycles": 900,
+  "beforeNet": -24740,
+  "afterNet": -28767,
+  "afterProfitable": 0
+}

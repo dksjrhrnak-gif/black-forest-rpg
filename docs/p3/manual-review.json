@@ -1,0 +1,18 @@
+{
+  "method": "Visual inspection of actual browser screenshots plus implementation/rule review. No physical devices or long-duration human play.",
+  "screenshots": [
+    "screenshots/p3/chromium-360-ending.png",
+    "screenshots/p3/manual-390-craft.png"
+  ],
+  "observations": [
+    "360px ending region futures/growth/buttons wrap and remain readable.",
+    "390px recipe preview displays full material cost and actual negative ATK/DEF versus positive MP tradeoff for Rabbit armor.",
+    "Craft/tuning are optional alternatives sharing ore with upgrades; fixed low rolls preserve random-drop value."
+  ],
+  "notVerified": [
+    "Human fun",
+    "Long-term purchase willingness",
+    "Physical touch/OS behavior",
+    "Extreme multi-cycle economy"
+  ]
+}
