@@ -1,0 +1,1288 @@
+{
+  "status": "PASS",
+  "baseline": "b24007be4030f484c6867fb50f040fd55edd2edb",
+  "goldMutations": [
+    {
+      "file": "legacy-v1.js",
+      "line": 20,
+      "operation": "+=",
+      "expression": "this.s.gold+=g"
+    },
+    {
+      "file": "legacy-v1.js",
+      "line": 38,
+      "operation": "+=",
+      "expression": "s.gold+=g"
+    },
+    {
+      "file": "legacy-v1.js",
+      "line": 43,
+      "operation": "+=",
+      "expression": "this.s.gold+=g"
+    },
+    {
+      "file": "legacy-v1.js",
+      "line": 44,
+      "operation": "+=",
+      "expression": "s.gold+=18"
+    },
+    {
+      "file": "legacy-v1.js",
+      "line": 44,
+      "operation": "+=",
+      "expression": "s.gold+=28"
+    },
+    {
+      "file": "legacy-v1.js",
+      "line": 44,
+      "operation": "+=",
+      "expression": "s.gold+=20"
+    },
+    {
+      "file": "legacy-v1.js",
+      "line": 46,
+      "operation": "-=",
+      "expression": "this.s.gold-=cost"
+    },
+    {
+      "file": "legacy-v1.js",
+      "line": 46,
+      "operation": "-=",
+      "expression": "this.s.gold-=cost"
+    },
+    {
+      "file": "legacy-v1.js",
+      "line": 46,
+      "operation": "-=",
+      "expression": "this.s.gold-=cost"
+    },
+    {
+      "file": "legacy-v1.js",
+      "line": 48,
+      "operation": "-=",
+      "expression": "this.s.gold-=g"
+    },
+    {
+      "file": "legacy-v1.js",
+      "line": 49,
+      "operation": "-=",
+      "expression": "s.gold-=15*s.camp"
+    },
+    {
+      "file": "legacy-v1.js",
+      "line": 51,
+      "operation": "+=",
+      "expression": "this.s.gold+=8+d.grade*8"
+    },
+    {
+      "file": "legacy-v1.js",
+      "line": 53,
+      "operation": "+=",
+      "expression": "this.s.gold+=q.gold"
+    },
+    {
+      "file": "legacy-v1.js",
+      "line": 54,
+      "operation": "-=",
+      "expression": "this.s.gold-=lost"
+    },
+    {
+      "file": "engine.js",
+      "line": 41,
+      "operation": "+=",
+      "expression": "s.gold+=g"
+    },
+    {
+      "file": "engine.js",
+      "line": 64,
+      "operation": "+=",
+      "expression": "s.gold+=gold"
+    },
+    {
+      "file": "engine.js",
+      "line": 72,
+      "operation": "+=",
+      "expression": "s.gold+=this.price(d)"
+    },
+    {
+      "file": "engine.js",
+      "line": 77,
+      "operation": "-=",
+      "expression": "s.gold-=price"
+    },
+    {
+      "file": "engine.js",
+      "line": 80,
+      "operation": "-=",
+      "expression": "s.gold-=g"
+    },
+    {
+      "file": "engine.js",
+      "line": 81,
+      "operation": "-=",
+      "expression": "s.gold-=40"
+    },
+    {
+      "file": "engine.js",
+      "line": 82,
+      "operation": "-=",
+      "expression": "s.gold-=15*s.camp"
+    },
+    {
+      "file": "engine.js",
+      "line": 84,
+      "operation": "+=",
+      "expression": "s.gold+=this.price(d)"
+    },
+    {
+      "file": "engine.js",
+      "line": 94,
+      "operation": "+=",
+      "expression": "s.gold+=35"
+    },
+    {
+      "file": "engine.js",
+      "line": 95,
+      "operation": "-=",
+      "expression": "s.gold-=15"
+    },
+    {
+      "file": "engine.js",
+      "line": 98,
+      "operation": "+=",
+      "expression": "s.gold+=25"
+    },
+    {
+      "file": "engine.js",
+      "line": 98,
+      "operation": "+=",
+      "expression": "s.gold+=50"
+    },
+    {
+      "file": "engine.js",
+      "line": 107,
+      "operation": "+=",
+      "expression": "s.gold+=q.gold"
+    },
+    {
+      "file": "engine.js",
+      "line": 108,
+      "operation": "-=",
+      "expression": "s.gold-=loss"
+    },
+    {
+      "file": "qa-relationships.js",
+      "line": 9,
+      "operation": "+=",
+      "expression": "s.gold+=20"
+    },
+    {
+      "file": "p2-exploration.js",
+      "line": 66,
+      "operation": "-=",
+      "expression": "s.gold-=55"
+    },
+    {
+      "file": "p3-systems.js",
+      "line": 28,
+      "operation": "=",
+      "expression": "r.after.gold=1e9"
+    },
+    {
+      "file": "p3-systems.js",
+      "line": 28,
+      "operation": "=",
+      "expression": "r.rewards.gold=Math.max(0,1e9-this.s.gold)"
+    },
+    {
+      "file": "p3-systems.js",
+      "line": 30,
+      "operation": "=",
+      "expression": "this.s.gold=1e9"
+    },
+    {
+      "file": "p3-systems.js",
+      "line": 35,
+      "operation": "-=",
+      "expression": "s.gold-=cost.gold"
+    },
+    {
+      "file": "p3-systems.js",
+      "line": 49,
+      "operation": "-=",
+      "expression": "this.s.gold-=option.cost.gold"
+    }
+  ],
+  "eventCostsAndRewards": [
+    {
+      "id": 0,
+      "title": "부상당한 사냥꾼",
+      "text": "수레 아래 갇힌 사냥꾼이 도움을 청한다.",
+      "choices": [
+        {
+          "label": "물약을 건넨다",
+          "cost": {
+            "potions": 1
+          },
+          "reward": {
+            "mercy": 1,
+            "gold": 22
+          },
+          "chance": 1,
+          "failure": {}
+        },
+        {
+          "label": "지름길을 물어본다",
+          "cost": {},
+          "reward": {
+            "ore": 3
+          },
+          "chance": 1,
+          "failure": {}
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "title": "검은 제단",
+      "text": "제단은 생명의 온기를 탐낸다. 제단 위에는 시든 약초 다발이 놓여 있다.",
+      "choices": [
+        {
+          "label": "피를 바친다",
+          "cost": {
+            "hp": 10
+          },
+          "reward": {
+            "gold": 40,
+            "ore": 4
+          },
+          "chance": 0.8,
+          "failure": {
+            "herb": 2
+          }
+        },
+        {
+          "label": "약초만 챙긴다",
+          "cost": {},
+          "reward": {
+            "herb": 3
+          },
+          "chance": 1,
+          "failure": {}
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "돌아갈 곳",
+      "text": "아이의 모습을 한 망령이 빈 집터를 가리킨다. 망령은 손에 낡은 동전을 쥐고 있다.",
+      "choices": [
+        {
+          "label": "함께 집을 찾는다",
+          "cost": {},
+          "reward": {
+            "mercy": 1,
+            "heal": 14
+          },
+          "chance": 1,
+          "failure": {}
+        },
+        {
+          "label": "동전을 받는다",
+          "cost": {},
+          "reward": {
+            "gold": 24
+          },
+          "chance": 1,
+          "failure": {}
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "무너진 광산",
+      "text": "갱도 깊은 곳에서 광석이 빛난다.",
+      "choices": [
+        {
+          "label": "깊이 내려간다",
+          "cost": {
+            "hp": 6
+          },
+          "reward": {
+            "ore": 9
+          },
+          "chance": 0.65,
+          "failure": {
+            "ore": 2
+          }
+        },
+        {
+          "label": "입구에서 채굴한다",
+          "cost": {},
+          "reward": {
+            "ore": 3
+          },
+          "chance": 1,
+          "failure": {}
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "수상한 지도",
+      "text": "상인은 비밀 방의 위치라며 지도를 내민다.",
+      "choices": [
+        {
+          "label": "지도를 산다",
+          "cost": {
+            "gold": 18
+          },
+          "reward": {
+            "sigils": 1,
+            "secrets": 1
+          },
+          "chance": 0.4,
+          "failure": {
+            "wood": 4
+          }
+        },
+        {
+          "label": "지도를 외우고 떠난다",
+          "cost": {},
+          "reward": {
+            "xp": 10
+          },
+          "chance": 1,
+          "failure": {}
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "까마귀의 거래",
+      "text": "반짝이는 물건을 좋아하는 까마귀 떼가 모였다.",
+      "choices": [
+        {
+          "label": "동전을 던진다",
+          "cost": {
+            "gold": 12
+          },
+          "reward": {
+            "gear": "elite"
+          },
+          "chance": 0.55,
+          "failure": {
+            "herb": 3
+          }
+        },
+        {
+          "label": "먹이를 찾아 준다",
+          "cost": {},
+          "reward": {
+            "mercy": 1,
+            "wood": 2
+          },
+          "chance": 1,
+          "failure": {}
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "부서진 대장간",
+      "text": "아직 온기가 남은 모루와 화로가 보인다.",
+      "choices": [
+        {
+          "label": "화로에 광석을 넣는다",
+          "cost": {
+            "ore": 3
+          },
+          "reward": {
+            "gear": "elite",
+            "crafts": 1
+          },
+          "chance": 0.75,
+          "failure": {
+            "ore": 2
+          }
+        },
+        {
+          "label": "도구를 회수한다",
+          "cost": {},
+          "reward": {
+            "ore": 3,
+            "wood": 3
+          },
+          "chance": 1,
+          "failure": {}
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "달빛 우물",
+      "text": "물속에서 당신의 목소리가 도움을 청한다.",
+      "choices": [
+        {
+          "label": "목소리에 답한다",
+          "cost": {},
+          "reward": {
+            "mana": 99,
+            "mercy": 1
+          },
+          "chance": 0.7,
+          "failure": {
+            "heal": 10
+          }
+        },
+        {
+          "label": "동전을 던진다",
+          "cost": {
+            "gold": 5
+          },
+          "reward": {
+            "sigils": 1
+          },
+          "chance": 0.25,
+          "failure": {
+            "heal": 20
+          }
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "이름 없는 묘지",
+      "text": "꽃 한 송이 놓이지 않은 묘들이 이어진다. 그중 한 무덤에서는 봉인된 관이 드러나 있다.",
+      "choices": [
+        {
+          "label": "망자를 위해 기도한다",
+          "cost": {},
+          "reward": {
+            "mercy": 1,
+            "herb": 3
+          },
+          "chance": 1,
+          "failure": {}
+        },
+        {
+          "label": "봉인된 관을 조사한다",
+          "cost": {
+            "hp": 8
+          },
+          "reward": {
+            "gear": "secret"
+          },
+          "chance": 0.5,
+          "failure": {
+            "gold": 20
+          }
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "운명의 탁자",
+      "text": "딜러 없는 탁자 위에 주사위가 놓여 있다.",
+      "choices": [
+        {
+          "label": "주사위를 굴린다",
+          "cost": {
+            "gold": 15
+          },
+          "reward": {
+            "gold": 55,
+            "caches": 1
+          },
+          "chance": 0.4,
+          "failure": {
+            "ore": 2
+          }
+        },
+        {
+          "label": "탁자를 지나친다",
+          "cost": {},
+          "reward": {
+            "xp": 12
+          },
+          "chance": 1,
+          "failure": {}
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "도망친 견습생",
+      "text": "금서를 훔친 견습생이 떨고 있다.",
+      "choices": [
+        {
+          "label": "추격자를 따돌려 준다",
+          "cost": {
+            "hp": 5
+          },
+          "reward": {
+            "mercy": 1,
+            "sigils": 1
+          },
+          "chance": 0.6,
+          "failure": {
+            "mercy": 1,
+            "herb": 4
+          }
+        },
+        {
+          "label": "책을 돌려보낸다",
+          "cost": {},
+          "reward": {
+            "gold": 20,
+            "xp": 12
+          },
+          "chance": 1,
+          "failure": {}
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "title": "잠든 용의 둥지",
+      "text": "알 사이로 오래된 무기가 보인다. 알 사이로 비늘이 흩어져 있다.",
+      "choices": [
+        {
+          "label": "무기에 손을 뻗는다",
+          "cost": {
+            "hp": 12
+          },
+          "reward": {
+            "gear": "boss"
+          },
+          "chance": 0.5,
+          "failure": {
+            "ore": 5
+          }
+        },
+        {
+          "label": "비늘만 줍는다",
+          "cost": {},
+          "reward": {
+            "ore": 4
+          },
+          "chance": 1,
+          "failure": {}
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "title": "유리 다리",
+      "text": "다리 아래에서 금속이 부딪히는 소리가 난다.",
+      "choices": [
+        {
+          "label": "아래로 내려간다",
+          "cost": {
+            "hp": 7
+          },
+          "reward": {
+            "gold": 40,
+            "caches": 1
+          },
+          "chance": 0.7,
+          "failure": {
+            "wood": 5
+          }
+        },
+        {
+          "label": "다리를 수리한다",
+          "cost": {
+            "wood": 3
+          },
+          "reward": {
+            "mercy": 1,
+            "xp": 18
+          },
+          "chance": 1,
+          "failure": {}
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "title": "얼어붙은 시간",
+      "text": "같은 빗방울이 허공에서 멈춰 있다. 빗방울 사이로 얇은 틈이 벌어져 있다.",
+      "choices": [
+        {
+          "label": "틈을 만져 본다",
+          "cost": {},
+          "reward": {
+            "sigils": 1,
+            "secrets": 1
+          },
+          "chance": 0.35,
+          "failure": {
+            "mana": 8,
+            "xp": 15
+          }
+        },
+        {
+          "label": "순간을 기록한다",
+          "cost": {},
+          "reward": {
+            "xp": 20,
+            "herb": 2
+          },
+          "chance": 1,
+          "failure": {}
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "title": "별의 낙하",
+      "text": "방금 떨어진 별의 파편이 아직 뜨겁다.",
+      "choices": [
+        {
+          "label": "맨손으로 꺼낸다",
+          "cost": {
+            "hp": 10
+          },
+          "reward": {
+            "gear": "secret"
+          },
+          "chance": 0.65,
+          "failure": {
+            "ore": 5
+          }
+        },
+        {
+          "label": "식을 때까지 기다린다",
+          "cost": {},
+          "reward": {
+            "ore": 5
+          },
+          "chance": 1,
+          "failure": {}
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "title": "마지막 장사",
+      "text": "등불을 잃은 상인이 짐을 버리고 있다.",
+      "choices": [
+        {
+          "label": "등불을 나눠 준다",
+          "cost": {
+            "wood": 3
+          },
+          "reward": {
+            "mercy": 1,
+            "potions": 2
+          },
+          "chance": 1,
+          "failure": {}
+        },
+        {
+          "label": "짐을 산다",
+          "cost": {
+            "gold": 20
+          },
+          "reward": {
+            "gear": "elite"
+          },
+          "chance": 1,
+          "failure": {}
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "title": "숲의 연회",
+      "text": "가면 쓴 손님들이 빈 의자를 권한다.",
+      "choices": [
+        {
+          "label": "잔을 든다",
+          "cost": {},
+          "reward": {
+            "heal": 99,
+            "mana": 99
+          },
+          "chance": 0.6,
+          "failure": {
+            "gold": 18
+          }
+        },
+        {
+          "label": "이야기를 듣는다",
+          "cost": {},
+          "reward": {
+            "xp": 20,
+            "mercy": 1
+          },
+          "chance": 1,
+          "failure": {}
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "title": "닫히는 균열",
+      "text": "별 없는 회랑가 눈앞에서 사라지고 있다.",
+      "choices": [
+        {
+          "label": "몸을 던진다",
+          "cost": {
+            "hp": 8
+          },
+          "reward": {
+            "sigils": 1,
+            "secrets": 1,
+            "ore": 5
+          },
+          "chance": 0.7,
+          "failure": {
+            "herb": 4
+          }
+        },
+        {
+          "label": "흔적을 모은다",
+          "cost": {},
+          "reward": {
+            "ore": 4,
+            "xp": 12
+          },
+          "chance": 1,
+          "failure": {}
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "region": 1,
+      "key": "p2_bell",
+      "title": "종 아래 남은 증언",
+      "text": "멈춘 종 아래에서 등불 수리에 쓰이던 명부가 발견된다. 지워진 이름을 읽으면 종이 다시 울리지만, 어둠 속의 무언가도 그 소리를 듣는다.",
+      "choices": [
+        {
+          "label": "등불을 빌려 이름을 읽는다",
+          "cost": {
+            "gold": 8
+          },
+          "reward": {
+            "herb": 3,
+            "mana": 4
+          },
+          "chance": 0.65,
+          "failure": {
+            "ore": 2
+          }
+        },
+        {
+          "label": "종 뒤의 흔적을 따라간다",
+          "cost": {
+            "hp": 6
+          },
+          "reward": {
+            "gear": "elite"
+          },
+          "chance": 0.6,
+          "failure": {
+            "wood": 3
+          },
+          "slot": "armor"
+        },
+        {
+          "label": "명부의 사본을 남긴다",
+          "cost": {},
+          "reward": {
+            "ore": 2
+          },
+          "chance": 1,
+          "failure": {}
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "region": 4,
+      "key": "p2_water",
+      "title": "모래에 묻힌 물통",
+      "text": "모래 속 물통에 앞서 지나간 여행자의 이름이 남아 있다. 그늘 아래의 일행은 물을 나눌지 묻는다. 물통을 끌고 간 발자국은 전갈의 굴로 이어진다.",
+      "choices": [
+        {
+          "label": "물약을 나누고 일행과 걷는다",
+          "cost": {
+            "potions": 1
+          },
+          "reward": {
+            "wood": 3,
+            "herb": 2
+          },
+          "chance": 1,
+          "failure": {}
+        },
+        {
+          "label": "발자국을 좇아 물통을 되찾는다",
+          "cost": {
+            "hp": 6
+          },
+          "reward": {},
+          "chance": 1,
+          "failure": {},
+          "battle": true
+        },
+        {
+          "label": "그늘에서 물통의 이름을 적는다",
+          "cost": {},
+          "reward": {
+            "mana": 3,
+            "ore": 2
+          },
+          "chance": 1,
+          "failure": {}
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "region": 5,
+      "key": "p2_margin",
+      "title": "여백의 빌린 이름",
+      "text": "서가의 여백이 종 아래의 명부와 사막의 물통에 남은 이름을 되돌려 준다. 책은 무엇을 남길지 묻고, 장비를 감싼 문장에서는 희미한 열기가 새어 나온다.",
+      "choices": [
+        {
+          "label": "마력으로 빌린 이름을 읽는다",
+          "cost": {
+            "mp": 4
+          },
+          "reward": {
+            "gear": "elite"
+          },
+          "chance": 0.7,
+          "failure": {
+            "herb": 3
+          },
+          "slot": "charm"
+        },
+        {
+          "label": "약초로 찢어진 문장을 봉합한다",
+          "cost": {
+            "herb": 2
+          },
+          "reward": {
+            "heal": 20,
+            "mana": 6
+          },
+          "chance": 1,
+          "failure": {}
+        },
+        {
+          "label": "앞선 증언의 사본을 만든다",
+          "cost": {},
+          "reward": {
+            "xp": 12,
+            "wood": 2
+          },
+          "chance": 1,
+          "failure": {}
+        }
+      ]
+    }
+  ],
+  "quests": [
+    {
+      "id": "hunter",
+      "name": "숲의 사냥꾼",
+      "text": "적 5명 처치",
+      "now": 0,
+      "max": 5,
+      "gold": 40
+    },
+    {
+      "id": "builder",
+      "name": "다시 피는 불씨",
+      "text": "캠프 Lv.2",
+      "now": 1,
+      "max": 2,
+      "gold": 30
+    },
+    {
+      "id": "warden",
+      "name": "첫 번째 인장",
+      "text": "지역 보스 1명",
+      "now": 0,
+      "max": 1,
+      "gold": 50
+    },
+    {
+      "id": "mercy",
+      "name": "남아 있는 온기",
+      "text": "자비 3",
+      "now": 0,
+      "max": 3,
+      "gold": 50
+    },
+    {
+      "id": "elite",
+      "name": "강자의 흔적",
+      "text": "정예 3명",
+      "now": 0,
+      "max": 3,
+      "gold": 80
+    },
+    {
+      "id": "artisan",
+      "name": "불씨의 손길",
+      "text": "물약·장비·대장간 제작 기록 5회",
+      "now": 0,
+      "max": 5,
+      "gold": 50
+    },
+    {
+      "id": "collector",
+      "name": "빛의 수집가",
+      "text": "장비 10종 발견",
+      "now": 0,
+      "max": 10,
+      "gold": 100
+    },
+    {
+      "id": "secret",
+      "name": "닫힌 문 너머",
+      "text": "비밀 발견 2회",
+      "now": 0,
+      "max": 2,
+      "gold": 80
+    },
+    {
+      "id": "awakening",
+      "name": "잊힌 이름",
+      "text": "히든 직업 1종 해금",
+      "now": 0,
+      "max": 1,
+      "gold": 100
+    },
+    {
+      "id": "midway",
+      "name": "네 개의 기억",
+      "text": "지역 보스 4명",
+      "now": 0,
+      "max": 4,
+      "gold": 120
+    },
+    {
+      "id": "rift",
+      "name": "별 없는 귀환",
+      "text": "회랑 1층 정복",
+      "now": 0,
+      "max": 1,
+      "gold": 120
+    },
+    {
+      "id": "master",
+      "name": "마지막 인장",
+      "text": "지역 보스 8명",
+      "now": 0,
+      "max": 8,
+      "gold": 200
+    },
+    {
+      "id": "collect25",
+      "name": "도서계 수집 25",
+      "text": "장비 25종 발견",
+      "now": 0,
+      "max": 25,
+      "gold": 120
+    },
+    {
+      "id": "collect75",
+      "name": "도서계 수집 75",
+      "text": "장비 75종 발견",
+      "now": 0,
+      "max": 75,
+      "gold": 200
+    },
+    {
+      "id": "collect150",
+      "name": "도서계 수집 150",
+      "text": "장비 150종 발견",
+      "now": 0,
+      "max": 150,
+      "gold": 300
+    },
+    {
+      "id": "collect300",
+      "name": "도서계 수집 300",
+      "text": "장비 300종 발견",
+      "now": 0,
+      "max": 300,
+      "gold": 450
+    },
+    {
+      "id": "collect600",
+      "name": "도서계 수집 600",
+      "text": "장비 600종 발견",
+      "now": 0,
+      "max": 600,
+      "gold": 700
+    },
+    {
+      "id": "collect1000",
+      "name": "도서계 수집 1000",
+      "text": "장비 1000종 발견",
+      "now": 0,
+      "max": 1000,
+      "gold": 1000
+    }
+  ],
+  "shopPrices": {
+    "potion": 16,
+    "tonic": 12,
+    "randomGear": 55,
+    "weaponBox": 55,
+    "armorBox": 55,
+    "charmBox": 55
+  },
+  "unchangedCombatGold": "round((boss?65:elite?32:16 + area*12)*(1+existing job goldBonus))",
+  "cacheGold": "uniformInt(12,24)+area*10; 10% mimic instead of cache",
+  "oldSale": "10+grade*10+plus*5",
+  "newSale": "min(50,8+grade*6+min(8,floor(power/3))+min(8,sum normalized valid affixes capped3 each))+plus*2",
+  "recipes": [
+    {
+      "id": "set_weapon_20",
+      "gate": 1,
+      "cost": {
+        "gold": 90,
+        "ore": 10,
+        "wood": 4,
+        "herb": 1
+      },
+      "name": "토끼굴의 작살",
+      "slot": "weapon",
+      "grade": 1
+    },
+    {
+      "id": "set_armor_20",
+      "gate": 1,
+      "cost": {
+        "gold": 75,
+        "ore": 9,
+        "wood": 2,
+        "herb": 1
+      },
+      "name": "토끼굴의 로브",
+      "slot": "armor",
+      "grade": 1
+    },
+    {
+      "id": "set_charm_20",
+      "gate": 1,
+      "cost": {
+        "gold": 65,
+        "ore": 8,
+        "wood": 2,
+        "herb": 3
+      },
+      "name": "토끼굴의 목걸이",
+      "slot": "charm",
+      "grade": 1
+    },
+    {
+      "id": "set_weapon_7",
+      "gate": 2,
+      "cost": {
+        "gold": 90,
+        "ore": 10,
+        "wood": 4,
+        "herb": 1
+      },
+      "name": "산초의 귀환길의 창",
+      "slot": "weapon",
+      "grade": 1
+    },
+    {
+      "id": "set_armor_7",
+      "gate": 2,
+      "cost": {
+        "gold": 75,
+        "ore": 9,
+        "wood": 2,
+        "herb": 1
+      },
+      "name": "산초의 귀환길의 흉갑",
+      "slot": "armor",
+      "grade": 1
+    },
+    {
+      "id": "set_charm_7",
+      "gate": 2,
+      "cost": {
+        "gold": 65,
+        "ore": 8,
+        "wood": 2,
+        "herb": 3
+      },
+      "name": "산초의 귀환길의 반지",
+      "slot": "charm",
+      "grade": 1
+    },
+    {
+      "id": "set_weapon_13",
+      "gate": 3,
+      "cost": {
+        "gold": 90,
+        "ore": 10,
+        "wood": 4,
+        "herb": 1
+      },
+      "name": "노트르담의 종의 창",
+      "slot": "weapon",
+      "grade": 1
+    },
+    {
+      "id": "set_armor_13",
+      "gate": 3,
+      "cost": {
+        "gold": 75,
+        "ore": 9,
+        "wood": 2,
+        "herb": 1
+      },
+      "name": "노트르담의 종의 흉갑",
+      "slot": "armor",
+      "grade": 1
+    },
+    {
+      "id": "set_charm_13",
+      "gate": 3,
+      "cost": {
+        "gold": 65,
+        "ore": 8,
+        "wood": 2,
+        "herb": 3
+      },
+      "name": "노트르담의 종의 반지",
+      "slot": "charm",
+      "grade": 1
+    },
+    {
+      "id": "set_weapon_1",
+      "gate": 4,
+      "cost": {
+        "gold": 90,
+        "ore": 10,
+        "wood": 4,
+        "herb": 1
+      },
+      "name": "하트 법정의 창",
+      "slot": "weapon",
+      "grade": 1
+    },
+    {
+      "id": "set_armor_1",
+      "gate": 4,
+      "cost": {
+        "gold": 75,
+        "ore": 9,
+        "wood": 2,
+        "herb": 1
+      },
+      "name": "하트 법정의 흉갑",
+      "slot": "armor",
+      "grade": 1
+    },
+    {
+      "id": "set_charm_1",
+      "gate": 4,
+      "cost": {
+        "gold": 65,
+        "ore": 8,
+        "wood": 2,
+        "herb": 3
+      },
+      "name": "하트 법정의 반지",
+      "slot": "charm",
+      "grade": 1
+    },
+    {
+      "id": "lit_sword_22",
+      "gate": 4,
+      "cost": {
+        "gold": 180,
+        "ore": 16,
+        "wood": 8,
+        "herb": 2
+      },
+      "name": "산초의 귀환도",
+      "slot": "weapon",
+      "grade": 2
+    },
+    {
+      "id": "set_armor_8",
+      "gate": 4,
+      "cost": {
+        "gold": 160,
+        "ore": 15,
+        "wood": 6,
+        "herb": 3
+      },
+      "name": "봉합 실험실의 흉갑",
+      "slot": "armor",
+      "grade": 2
+    },
+    {
+      "id": "set_charm_2",
+      "gate": 4,
+      "cost": {
+        "gold": 150,
+        "ore": 14,
+        "wood": 4,
+        "herb": 4
+      },
+      "name": "흰 토끼의 시계의 반지",
+      "slot": "charm",
+      "grade": 2
+    }
+  ],
+  "sets": [
+    {
+      "name": "토끼굴",
+      "two": "최대 MP +2",
+      "three": "적의 첫 행동 동안 회피 +3%",
+      "effects": {
+        "mana": 2
+      }
+    },
+    {
+      "name": "산초의 귀환길",
+      "two": "반사 피해 +1",
+      "three": "HP가 절반 이하일 때 흡혈 +2%",
+      "effects": {
+        "thorns": 1
+      }
+    },
+    {
+      "name": "노트르담의 종",
+      "two": "HP가 절반 이하일 때 방어 +1",
+      "three": "회피 +2%",
+      "effects": {}
+    },
+    {
+      "name": "하트 법정",
+      "two": "치명타 +2%",
+      "three": "기절 확률 +2%",
+      "effects": {
+        "critical": 2
+      }
+    }
+  ],
+  "endingTitles": [
+    "불씨를 놓아준 자",
+    "검은 왕관의 계승자",
+    "새벽을 돌려준 자"
+  ],
+  "endingConditionCases": 6,
+  "endingDiscrepancy": "Actual baseline has 3 core endings. Prior six-case audit was 3 choices × mercy0/5, not six named endings.",
+  "limitations": [
+    "Static mutation enumeration supplements dynamic complete wallet ledgers; rewards through keyed grant loops are enumerated by event data and tested.",
+    "Controlled utility and scripted purchase policies do not measure human fun or optimal choice."
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "method": "Controlled durable enemy and probability threshold probes validate combat execution; not natural RNG frequency or unlock claims.",
+  "probes": [
+    {
+      "set": "토끼굴",
+      "beforeHp": 55,
+      "afterHp": 56,
+      "firstTurn": true
+    },
+    {
+      "set": "산초의 귀환길",
+      "beforeEnemyHp": 495,
+      "afterEnemyHp": 494
+    }
+  ]
+}

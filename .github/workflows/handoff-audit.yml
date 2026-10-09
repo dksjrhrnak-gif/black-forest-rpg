@@ -1,7 +1,7 @@
 name: Handoff audit and requested mobile sizes
 on:
   push:
-    branches: [qa/handoff-audit-20261008, qa/resume-checkpoint-20261008, qa/asset-quality-20261008, qa/p1-class-identity-20261008, feature/p2-exploration-equipment, main]
+    branches: [qa/handoff-audit-20261008, qa/resume-checkpoint-20261008, qa/asset-quality-20261008, qa/p1-class-identity-20261008, feature/p2-exploration-equipment, feature/p3-economy-crafting-endings, main]
   workflow_dispatch:
 permissions:
   contents: read
@@ -12,11 +12,16 @@ jobs:
     timeout-minutes: 25
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
       - run: npm ci --ignore-scripts
       - run: npm test
+      - run: node test-p3.cjs
+      - run: node test-p3-combat.cjs
+      - run: node simulate-p3-economy.cjs
       - run: node test-p2.cjs
       - run: node test-p2-natural.cjs
       - run: node test-p2-equipment.cjs
@@ -33,6 +38,7 @@ jobs:
           path: |
             docs/p2/**/*.json
             docs/p1/comparison.json
+            docs/p3/**/*.json
       - run: python3 build.py && node export-data.cjs && python3 export-site.py && python3 verify-html.py
   browser:
     runs-on: ubuntu-latest
@@ -148,3 +154,47 @@ jobs:
             docs/p2/ui-*.json
             mobile-results*.txt
             screenshots/
+
+  p3-browser:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        browser: [chromium, webkit, firefox]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm ci --ignore-scripts
+      - run: npx playwright install --with-deps ${{ matrix.browser }}
+      - run: python3 build.py && node export-data.cjs && python3 export-site.py && python3 verify-html.py
+      - run: python3 -m http.server 4174 --directory dist > /tmp/bf-p3-preview.log 2>&1 &
+      - name: P3 real-campaign imports, economy, sets, save and endings at five widths
+        env:
+          BF_BROWSER: ${{ matrix.browser }}
+          BF_QA_URL: http://127.0.0.1:4174/
+        run: node test-p3-ui.cjs
+      - name: Wait for this commit to finish Pages deployment
+        if: github.ref == 'refs/heads/main'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: node wait-pages-deployment.cjs
+      - name: P3 public game at five widths
+        if: github.ref == 'refs/heads/main'
+        env:
+          BF_BROWSER: ${{ matrix.browser }}
+          BF_QA_URL: https://dksjrhrnak-gif.github.io/black-forest-rpg/
+          BF_P3_OUT: docs/p3/public
+        run: node test-p3-ui.cjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: p3-${{ matrix.browser }}
+          path: |
+            docs/p3/ui-*.json
+            docs/p3/public/ui-*.json
+            screenshots/p3/

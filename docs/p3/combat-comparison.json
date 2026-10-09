@@ -1,0 +1,472 @@
+{
+  "status": "PASS",
+  "pairs": 8832,
+  "battles": 17664,
+  "identicalTrajectories": 4992,
+  "baseline": "b24007be4030f484c6867fb50f040fd55edd2edb",
+  "summary": [
+    {
+      "config": [
+        "set_armor_20"
+      ],
+      "n": 384,
+      "before": {
+        "winRate": 0.9791666666666666,
+        "turns": 4.013020833333333,
+        "hp": 0.6996716017403247,
+        "potions": 0.08854166666666667
+      },
+      "after": {
+        "winRate": 0.9791666666666666,
+        "turns": 4.013020833333333,
+        "hp": 0.6996716017403247,
+        "potions": 0.08854166666666667
+      },
+      "winRateDelta": 0
+    },
+    {
+      "config": [
+        "set_armor_7"
+      ],
+      "n": 384,
+      "before": {
+        "winRate": 0.9817708333333334,
+        "turns": 3.8958333333333335,
+        "hp": 0.7013430644145565,
+        "potions": 0.0859375
+      },
+      "after": {
+        "winRate": 0.9817708333333334,
+        "turns": 3.8958333333333335,
+        "hp": 0.7013430644145565,
+        "potions": 0.0859375
+      },
+      "winRateDelta": 0
+    },
+    {
+      "config": [
+        "set_armor_13"
+      ],
+      "n": 384,
+      "before": {
+        "winRate": 0.9791666666666666,
+        "turns": 4.0859375,
+        "hp": 0.707423003462239,
+        "potions": 0.078125
+      },
+      "after": {
+        "winRate": 0.9791666666666666,
+        "turns": 4.0859375,
+        "hp": 0.707423003462239,
+        "potions": 0.078125
+      },
+      "winRateDelta": 0
+    },
+    {
+      "config": [
+        "set_charm_1"
+      ],
+      "n": 384,
+      "before": {
+        "winRate": 0.96875,
+        "turns": 4.098958333333333,
+        "hp": 0.6821782071856589,
+        "potions": 0.11979166666666667
+      },
+      "after": {
+        "winRate": 0.96875,
+        "turns": 4.098958333333333,
+        "hp": 0.6821782071856589,
+        "potions": 0.11979166666666667
+      },
+      "winRateDelta": 0
+    },
+    {
+      "config": [
+        "set_charm_7"
+      ],
+      "n": 384,
+      "before": {
+        "winRate": 0.96875,
+        "turns": 4.09375,
+        "hp": 0.6935012477448496,
+        "potions": 0.11979166666666667
+      },
+      "after": {
+        "winRate": 0.96875,
+        "turns": 4.09375,
+        "hp": 0.6935012477448496,
+        "potions": 0.11979166666666667
+      },
+      "winRateDelta": 0
+    },
+    {
+      "config": [
+        "set_charm_13"
+      ],
+      "n": 384,
+      "before": {
+        "winRate": 0.9765625,
+        "turns": 4.013020833333333,
+        "hp": 0.6898891871006895,
+        "potions": 0.11979166666666667
+      },
+      "after": {
+        "winRate": 0.9765625,
+        "turns": 4.013020833333333,
+        "hp": 0.6898891871006895,
+        "potions": 0.11979166666666667
+      },
+      "winRateDelta": 0
+    },
+    {
+      "config": [
+        "set_armor_20",
+        "set_charm_1"
+      ],
+      "n": 384,
+      "before": {
+        "winRate": 0.9791666666666666,
+        "turns": 4.013020833333333,
+        "hp": 0.6996716017403247,
+        "potions": 0.08854166666666667
+      },
+      "after": {
+        "winRate": 0.9791666666666666,
+        "turns": 4.013020833333333,
+        "hp": 0.6996716017403247,
+        "potions": 0.08854166666666667
+      },
+      "winRateDelta": 0
+    },
+    {
+      "config": [
+        "set_armor_20",
+        "set_charm_7"
+      ],
+      "n": 384,
+      "before": {
+        "winRate": 0.9869791666666666,
+        "turns": 4.020833333333333,
+        "hp": 0.7114150396058952,
+        "potions": 0.08854166666666667
+      },
+      "after": {
+        "winRate": 0.9869791666666666,
+        "turns": 4.020833333333333,
+        "hp": 0.7114150396058952,
+        "potions": 0.08854166666666667
+      },
+      "winRateDelta": 0
+    },
+    {
+      "config": [
+        "set_armor_20",
+        "set_charm_13"
+      ],
+      "n": 384,
+      "before": {
+        "winRate": 0.9791666666666666,
+        "turns": 4.013020833333333,
+        "hp": 0.703521470536698,
+        "potions": 0.08854166666666667
+      },
+      "after": {
+        "winRate": 0.9791666666666666,
+        "turns": 4.013020833333333,
+        "hp": 0.703521470536698,
+        "potions": 0.08854166666666667
+      },
+      "winRateDelta": 0
+    },
+    {
+      "config": [
+        "set_armor_7",
+        "set_charm_1"
+      ],
+      "n": 384,
+      "before": {
+        "winRate": 0.9817708333333334,
+        "turns": 3.8958333333333335,
+        "hp": 0.7013430644145565,
+        "potions": 0.0859375
+      },
+      "after": {
+        "winRate": 0.9817708333333334,
+        "turns": 3.8958333333333335,
+        "hp": 0.7013430644145565,
+        "potions": 0.0859375
+      },
+      "winRateDelta": 0
+    },
+    {
+      "config": [
+        "set_armor_7",
+        "set_charm_7"
+      ],
+      "n": 384,
+      "before": {
+        "winRate": 0.9817708333333334,
+        "turns": 3.8958333333333335,
+        "hp": 0.7054552307640839,
+        "potions": 0.0703125
+      },
+      "after": {
+        "winRate": 0.9817708333333334,
+        "turns": 3.8098958333333335,
+        "hp": 0.702983599383784,
+        "potions": 0.0703125
+      },
+      "winRateDelta": 0
+    },
+    {
+      "config": [
+        "set_armor_7",
+        "set_charm_13"
+      ],
+      "n": 384,
+      "before": {
+        "winRate": 0.9895833333333334,
+        "turns": 3.8515625,
+        "hp": 0.7081898162947621,
+        "potions": 0.0859375
+      },
+      "after": {
+        "winRate": 0.9895833333333334,
+        "turns": 3.8515625,
+        "hp": 0.7081898162947621,
+        "potions": 0.0859375
+      },
+      "winRateDelta": 0
+    },
+    {
+      "config": [
+        "set_armor_13",
+        "set_charm_1"
+      ],
+      "n": 384,
+      "before": {
+        "winRate": 0.9791666666666666,
+        "turns": 4.0859375,
+        "hp": 0.707423003462239,
+        "potions": 0.078125
+      },
+      "after": {
+        "winRate": 0.9791666666666666,
+        "turns": 4.0859375,
+        "hp": 0.707423003462239,
+        "potions": 0.078125
+      },
+      "winRateDelta": 0
+    },
+    {
+      "config": [
+        "set_armor_13",
+        "set_charm_7"
+      ],
+      "n": 384,
+      "before": {
+        "winRate": 0.9791666666666666,
+        "turns": 4.072916666666667,
+        "hp": 0.7095900947134334,
+        "potions": 0.059895833333333336
+      },
+      "after": {
+        "winRate": 0.9791666666666666,
+        "turns": 4.072916666666667,
+        "hp": 0.7095900947134334,
+        "potions": 0.059895833333333336
+      },
+      "winRateDelta": 0
+    },
+    {
+      "config": [
+        "set_armor_13",
+        "set_charm_13"
+      ],
+      "n": 384,
+      "before": {
+        "winRate": 0.9869791666666666,
+        "turns": 4.010416666666667,
+        "hp": 0.7128012502368652,
+        "potions": 0.07552083333333333
+      },
+      "after": {
+        "winRate": 0.9869791666666666,
+        "turns": 4.002604166666667,
+        "hp": 0.7118282040108345,
+        "potions": 0.06770833333333333
+      },
+      "winRateDelta": 0
+    },
+    {
+      "config": [
+        "set_weapon_20",
+        "set_armor_20"
+      ],
+      "n": 384,
+      "before": {
+        "winRate": 0.9921875,
+        "turns": 2.9765625,
+        "hp": 0.7178280659001066,
+        "potions": 0.0546875
+      },
+      "after": {
+        "winRate": 0.9921875,
+        "turns": 2.9765625,
+        "hp": 0.7178280659001066,
+        "potions": 0.0546875
+      },
+      "winRateDelta": 0
+    },
+    {
+      "config": [
+        "set_weapon_20",
+        "set_armor_20",
+        "set_charm_20"
+      ],
+      "n": 384,
+      "before": {
+        "winRate": 0.9921875,
+        "turns": 2.9739583333333335,
+        "hp": 0.7181280446525018,
+        "potions": 0.049479166666666664
+      },
+      "after": {
+        "winRate": 0.9921875,
+        "turns": 2.9739583333333335,
+        "hp": 0.7181280446525018,
+        "potions": 0.049479166666666664
+      },
+      "winRateDelta": 0
+    },
+    {
+      "config": [
+        "set_weapon_7",
+        "set_armor_7"
+      ],
+      "n": 384,
+      "before": {
+        "winRate": 0.9921875,
+        "turns": 2.8958333333333335,
+        "hp": 0.713725597766775,
+        "potions": 0.06510416666666667
+      },
+      "after": {
+        "winRate": 0.9921875,
+        "turns": 2.8463541666666665,
+        "hp": 0.7128141394334419,
+        "potions": 0.06510416666666667
+      },
+      "winRateDelta": 0
+    },
+    {
+      "config": [
+        "set_weapon_7",
+        "set_armor_7",
+        "set_charm_7"
+      ],
+      "n": 384,
+      "before": {
+        "winRate": 0.9921875,
+        "turns": 2.8828125,
+        "hp": 0.7263612868957753,
+        "potions": 0.0546875
+      },
+      "after": {
+        "winRate": 0.9921875,
+        "turns": 2.8333333333333335,
+        "hp": 0.7313169084123348,
+        "potions": 0.0546875
+      },
+      "winRateDelta": 0
+    },
+    {
+      "config": [
+        "set_weapon_13",
+        "set_armor_13"
+      ],
+      "n": 384,
+      "before": {
+        "winRate": 0.9921875,
+        "turns": 3.0520833333333335,
+        "hp": 0.7304277897761859,
+        "potions": 0.052083333333333336
+      },
+      "after": {
+        "winRate": 0.9921875,
+        "turns": 3.0442708333333335,
+        "hp": 0.7293871865991398,
+        "potions": 0.046875
+      },
+      "winRateDelta": 0
+    },
+    {
+      "config": [
+        "set_weapon_13",
+        "set_armor_13",
+        "set_charm_13"
+      ],
+      "n": 384,
+      "before": {
+        "winRate": 0.9921875,
+        "turns": 3.0520833333333335,
+        "hp": 0.7316262982989131,
+        "potions": 0.052083333333333336
+      },
+      "after": {
+        "winRate": 0.9921875,
+        "turns": 3.0416666666666665,
+        "hp": 0.7299684506513451,
+        "potions": 0.041666666666666664
+      },
+      "winRateDelta": 0
+    },
+    {
+      "config": [
+        "set_weapon_1",
+        "set_armor_1"
+      ],
+      "n": 384,
+      "before": {
+        "winRate": 0.9921875,
+        "turns": 3.0651041666666665,
+        "hp": 0.7205563093407106,
+        "potions": 0.057291666666666664
+      },
+      "after": {
+        "winRate": 0.9921875,
+        "turns": 3.0651041666666665,
+        "hp": 0.7205563093407106,
+        "potions": 0.057291666666666664
+      },
+      "winRateDelta": 0
+    },
+    {
+      "config": [
+        "set_weapon_1",
+        "set_armor_1",
+        "set_charm_1"
+      ],
+      "n": 384,
+      "before": {
+        "winRate": 0.9921875,
+        "turns": 3.0651041666666665,
+        "hp": 0.7205563093407106,
+        "potions": 0.057291666666666664
+      },
+      "after": {
+        "winRate": 0.9921875,
+        "turns": 3.1015625,
+        "hp": 0.7163726116239294,
+        "potions": 0.06510416666666667
+      },
+      "winRateDelta": 0
+    }
+  ],
+  "method": "23 single/pair/triple loadouts × 8 careers × early/late × 3 seeds × full/35%HP × normal/boss × skill/tactical. Same generated grade1 gear budgets; no mastery/availability claims.",
+  "limitations": [
+    "Grade1 gear at late stages intentionally stress-tests weak gear, not an optimal build.",
+    "Aggregate guardrails do not prove every class/loadout condition."
+  ]
+}

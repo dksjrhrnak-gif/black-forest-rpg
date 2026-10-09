@@ -1,0 +1,8127 @@
+{
+  "status": "PASS",
+  "baseline": "fa059638b48a38e4f0c10dcb7f9699ab5234c2be",
+  "originalEvents": 18,
+  "regionalEvents": 3,
+  "regionalChoices": 9,
+  "successfulAffordableCases": 864,
+  "saveRestores": 1326,
+  "p1JobsUnchanged": 114,
+  "itemsUnchanged": 994,
+  "changedItems": [
+    {
+      "id": "set_armor_7",
+      "before": {
+        "id": "set_armor_7",
+        "name": "산초의 귀환길의 흉갑",
+        "slot": "armor",
+        "category": "방어구-흉갑",
+        "fixedGrade": 1,
+        "unique": false,
+        "minArea": 0,
+        "basePower": 3,
+        "areaScale": 0.5,
+        "fixedAffixes": [
+          {
+            "id": "thorns",
+            "value": 2
+          }
+        ],
+        "flavor": "돌아갈 길의 돌멩이도 위험을 향하면 무기가 된다.",
+        "set": "산초의 귀환길"
+      },
+      "after": {
+        "id": "set_armor_7",
+        "name": "산초의 귀환길의 흉갑",
+        "slot": "armor",
+        "category": "방어구-흉갑",
+        "fixedGrade": 1,
+        "unique": false,
+        "minArea": 0,
+        "basePower": 2,
+        "areaScale": 0.5,
+        "fixedAffixes": [
+          {
+            "id": "thorns",
+            "value": 3
+          }
+        ],
+        "flavor": "얇아진 흉갑의 돌멩이는 맞은 상처를 되돌린다.",
+        "set": "산초의 귀환길"
+      }
+    },
+    {
+      "id": "set_armor_13",
+      "before": {
+        "id": "set_armor_13",
+        "name": "노트르담의 종의 흉갑",
+        "slot": "armor",
+        "category": "방어구-흉갑",
+        "fixedGrade": 1,
+        "unique": false,
+        "minArea": 0,
+        "basePower": 3,
+        "areaScale": 0.5,
+        "fixedAffixes": [
+          {
+            "id": "defense",
+            "value": 2
+          }
+        ],
+        "flavor": "쫓겨난 사람이 돌아오는 날 종이 다시 울린다.",
+        "set": "노트르담의 종"
+      },
+      "after": {
+        "id": "set_armor_13",
+        "name": "노트르담의 종의 흉갑",
+        "slot": "armor",
+        "category": "방어구-흉갑",
+        "fixedGrade": 1,
+        "unique": false,
+        "minArea": 0,
+        "basePower": 2,
+        "areaScale": 0.5,
+        "fixedAffixes": [
+          {
+            "id": "dodge",
+            "value": 4
+          }
+        ],
+        "flavor": "종소리에 맞춰 비켜선다. 버티는 대신 피할 자리를 남겼다.",
+        "set": "노트르담의 종"
+      }
+    },
+    {
+      "id": "set_armor_20",
+      "before": {
+        "id": "set_armor_20",
+        "name": "토끼굴의 로브",
+        "slot": "armor",
+        "category": "방어구-로브",
+        "fixedGrade": 1,
+        "unique": false,
+        "minArea": 0,
+        "basePower": 2,
+        "areaScale": 0.5,
+        "fixedAffixes": [
+          {
+            "id": "dodge",
+            "value": 3
+          }
+        ],
+        "flavor": "갑자기 달라진 크기에도 돌아갈 문을 기억한다.",
+        "set": "토끼굴"
+      },
+      "after": {
+        "id": "set_armor_20",
+        "name": "토끼굴의 로브",
+        "slot": "armor",
+        "category": "방어구-로브",
+        "fixedGrade": 1,
+        "unique": false,
+        "minArea": 0,
+        "basePower": 1,
+        "areaScale": 0.5,
+        "fixedAffixes": [
+          {
+            "id": "mana",
+            "value": 3
+          }
+        ],
+        "flavor": "가벼운 천은 칼을 덜 막지만, 접힌 문장에 다음 주문을 담는다.",
+        "set": "토끼굴"
+      }
+    },
+    {
+      "id": "set_charm_1",
+      "before": {
+        "id": "set_charm_1",
+        "name": "하트 법정의 반지",
+        "slot": "charm",
+        "category": "장신구-반지",
+        "fixedGrade": 1,
+        "unique": false,
+        "minArea": 0,
+        "basePower": 1,
+        "areaScale": 0,
+        "fixedAffixes": [
+          {
+            "id": "critical",
+            "value": 3
+          }
+        ],
+        "flavor": "재판의 결론보다 먼저 사람의 목소리를 묻는다.",
+        "set": "하트 법정"
+      },
+      "after": {
+        "id": "set_charm_1",
+        "name": "하트 법정의 반지",
+        "slot": "charm",
+        "category": "장신구-반지",
+        "fixedGrade": 1,
+        "unique": false,
+        "minArea": 0,
+        "basePower": 0,
+        "areaScale": 0,
+        "fixedAffixes": [
+          {
+            "id": "critical",
+            "value": 4
+          }
+        ],
+        "flavor": "행운을 묻지 않고 한 번의 정확한 증언에 힘을 싣는다.",
+        "set": "하트 법정"
+      }
+    },
+    {
+      "id": "set_charm_7",
+      "before": {
+        "id": "set_charm_7",
+        "name": "산초의 귀환길의 반지",
+        "slot": "charm",
+        "category": "장신구-반지",
+        "fixedGrade": 1,
+        "unique": false,
+        "minArea": 0,
+        "basePower": 1,
+        "areaScale": 0,
+        "fixedAffixes": [
+          {
+            "id": "thorns",
+            "value": 2
+          }
+        ],
+        "flavor": "돌아갈 길의 돌멩이도 위험을 향하면 무기가 된다.",
+        "set": "산초의 귀환길"
+      },
+      "after": {
+        "id": "set_charm_7",
+        "name": "산초의 귀환길의 반지",
+        "slot": "charm",
+        "category": "장신구-반지",
+        "fixedGrade": 1,
+        "unique": false,
+        "minArea": 0,
+        "basePower": 0,
+        "areaScale": 0,
+        "fixedAffixes": [
+          {
+            "id": "leech",
+            "value": 3
+          }
+        ],
+        "flavor": "돌아갈 길의 온기를 빌린다. 맞받아치는 대신 상처를 조금 되찾는다.",
+        "set": "산초의 귀환길"
+      }
+    },
+    {
+      "id": "set_charm_13",
+      "before": {
+        "id": "set_charm_13",
+        "name": "노트르담의 종의 반지",
+        "slot": "charm",
+        "category": "장신구-반지",
+        "fixedGrade": 1,
+        "unique": false,
+        "minArea": 0,
+        "basePower": 1,
+        "areaScale": 0,
+        "fixedAffixes": [
+          {
+            "id": "defense",
+            "value": 2
+          }
+        ],
+        "flavor": "쫓겨난 사람이 돌아오는 날 종이 다시 울린다.",
+        "set": "노트르담의 종"
+      },
+      "after": {
+        "id": "set_charm_13",
+        "name": "노트르담의 종의 반지",
+        "slot": "charm",
+        "category": "장신구-반지",
+        "fixedGrade": 1,
+        "unique": false,
+        "minArea": 0,
+        "basePower": 0,
+        "areaScale": 0,
+        "fixedAffixes": [
+          {
+            "id": "mana",
+            "value": 3
+          }
+        ],
+        "flavor": "방패 대신 다음 주문을 위한 여백을 종 안에 남겼다.",
+        "set": "노트르담의 종"
+      }
+    }
+  ],
+  "combatPairs": 2052,
+  "combatBattles": 4104,
+  "p1Careers": [
+    "x_magic_0",
+    "x_magic_15",
+    "x_ranged_2",
+    "x_occult_13",
+    "x_support_16",
+    "x_support_17"
+  ],
+  "targetedDrops": 27000,
+  "mysteryChecks": 800,
+  "grades": {
+    "weapon/0": [
+      302,
+      1005,
+      1012,
+      522,
+      149,
+      10
+    ],
+    "weapon/4": [
+      290,
+      997,
+      1057,
+      518,
+      130,
+      8
+    ],
+    "weapon/7": [
+      295,
+      984,
+      1061,
+      519,
+      132,
+      9
+    ],
+    "armor/0": [
+      299,
+      941,
+      1074,
+      523,
+      149,
+      14
+    ],
+    "armor/4": [
+      299,
+      992,
+      1052,
+      504,
+      141,
+      12
+    ],
+    "armor/7": [
+      300,
+      997,
+      1039,
+      511,
+      143,
+      10
+    ],
+    "charm/0": [
+      306,
+      951,
+      1089,
+      494,
+      148,
+      12
+    ],
+    "charm/4": [
+      298,
+      985,
+      1069,
+      502,
+      133,
+      13
+    ],
+    "charm/7": [
+      303,
+      961,
+      1076,
+      518,
+      128,
+      14
+    ]
+  },
+  "entries": [
+    {
+      "event": 18,
+      "seed": 1,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 1,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:failure",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 1,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 1,
+      "context": "neutral",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 1,
+      "context": "helped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 1,
+      "context": "helped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:failure",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 1,
+      "context": "helped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 1,
+      "context": "helped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 1,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 1,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "loot"
+    },
+    {
+      "event": 18,
+      "seed": 1,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 1,
+      "context": "equipped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 2,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 2,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "loot"
+    },
+    {
+      "event": 18,
+      "seed": 2,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 2,
+      "context": "neutral",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 2,
+      "context": "helped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 2,
+      "context": "helped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "loot"
+    },
+    {
+      "event": 18,
+      "seed": 2,
+      "context": "helped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 2,
+      "context": "helped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 2,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 2,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "loot"
+    },
+    {
+      "event": 18,
+      "seed": 2,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 2,
+      "context": "equipped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 3,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:failure",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 3,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:failure",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 3,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 3,
+      "context": "neutral",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 3,
+      "context": "helped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:failure",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 3,
+      "context": "helped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:failure",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 3,
+      "context": "helped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 3,
+      "context": "helped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 3,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:failure",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 3,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:failure",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 3,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 3,
+      "context": "equipped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 4,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 4,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "loot"
+    },
+    {
+      "event": 18,
+      "seed": 4,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 4,
+      "context": "neutral",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 4,
+      "context": "helped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 4,
+      "context": "helped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "loot"
+    },
+    {
+      "event": 18,
+      "seed": 4,
+      "context": "helped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 4,
+      "context": "helped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 4,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 4,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "loot"
+    },
+    {
+      "event": 18,
+      "seed": 4,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 4,
+      "context": "equipped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 5,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 5,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "loot"
+    },
+    {
+      "event": 18,
+      "seed": 5,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 5,
+      "context": "neutral",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 5,
+      "context": "helped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 5,
+      "context": "helped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "loot"
+    },
+    {
+      "event": 18,
+      "seed": 5,
+      "context": "helped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 5,
+      "context": "helped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 5,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 5,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "loot"
+    },
+    {
+      "event": 18,
+      "seed": 5,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 5,
+      "context": "equipped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 6,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:failure",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 6,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:failure",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 6,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 6,
+      "context": "neutral",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 6,
+      "context": "helped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 6,
+      "context": "helped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:failure",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 6,
+      "context": "helped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 6,
+      "context": "helped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 6,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:failure",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 6,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:failure",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 6,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 6,
+      "context": "equipped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 7,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 7,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "loot"
+    },
+    {
+      "event": 18,
+      "seed": 7,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 7,
+      "context": "neutral",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 7,
+      "context": "helped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 7,
+      "context": "helped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "loot"
+    },
+    {
+      "event": 18,
+      "seed": 7,
+      "context": "helped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 7,
+      "context": "helped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 7,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 7,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "loot"
+    },
+    {
+      "event": 18,
+      "seed": 7,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 7,
+      "context": "equipped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 8,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 8,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "loot"
+    },
+    {
+      "event": 18,
+      "seed": 8,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 8,
+      "context": "neutral",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 8,
+      "context": "helped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 8,
+      "context": "helped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "loot"
+    },
+    {
+      "event": 18,
+      "seed": 8,
+      "context": "helped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 8,
+      "context": "helped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 8,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 8,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "loot"
+    },
+    {
+      "event": 18,
+      "seed": 8,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 8,
+      "context": "equipped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 9,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:failure",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 9,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:failure",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 9,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 9,
+      "context": "neutral",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 9,
+      "context": "helped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 9,
+      "context": "helped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:failure",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 9,
+      "context": "helped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 9,
+      "context": "helped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 9,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:failure",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 9,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "loot"
+    },
+    {
+      "event": 18,
+      "seed": 9,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 9,
+      "context": "equipped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 10,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 10,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "loot"
+    },
+    {
+      "event": 18,
+      "seed": 10,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 10,
+      "context": "neutral",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 10,
+      "context": "helped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 10,
+      "context": "helped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "loot"
+    },
+    {
+      "event": 18,
+      "seed": 10,
+      "context": "helped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 10,
+      "context": "helped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 10,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 10,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "loot"
+    },
+    {
+      "event": 18,
+      "seed": 10,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 10,
+      "context": "equipped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 11,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 11,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "loot"
+    },
+    {
+      "event": 18,
+      "seed": 11,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 11,
+      "context": "neutral",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 11,
+      "context": "helped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 11,
+      "context": "helped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "loot"
+    },
+    {
+      "event": 18,
+      "seed": 11,
+      "context": "helped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 11,
+      "context": "helped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 11,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 11,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "loot"
+    },
+    {
+      "event": 18,
+      "seed": 11,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 11,
+      "context": "equipped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 12,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 12,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:failure",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 12,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 12,
+      "context": "neutral",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 12,
+      "context": "helped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 12,
+      "context": "helped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:failure",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 12,
+      "context": "helped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 12,
+      "context": "helped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 12,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 12,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "loot"
+    },
+    {
+      "event": 18,
+      "seed": 12,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 12,
+      "context": "equipped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 13,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 13,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "loot"
+    },
+    {
+      "event": 18,
+      "seed": 13,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 13,
+      "context": "neutral",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 13,
+      "context": "helped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 13,
+      "context": "helped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "loot"
+    },
+    {
+      "event": 18,
+      "seed": 13,
+      "context": "helped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 13,
+      "context": "helped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 13,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 13,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "loot"
+    },
+    {
+      "event": 18,
+      "seed": 13,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 13,
+      "context": "equipped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 14,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:failure",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 14,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:failure",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 14,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 14,
+      "context": "neutral",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 14,
+      "context": "helped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:failure",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 14,
+      "context": "helped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:failure",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 14,
+      "context": "helped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 14,
+      "context": "helped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 14,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:failure",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 14,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:failure",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 14,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 14,
+      "context": "equipped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 15,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 15,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "loot"
+    },
+    {
+      "event": 18,
+      "seed": 15,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 15,
+      "context": "neutral",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 15,
+      "context": "helped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 15,
+      "context": "helped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "loot"
+    },
+    {
+      "event": 18,
+      "seed": 15,
+      "context": "helped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 15,
+      "context": "helped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 15,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 15,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "loot"
+    },
+    {
+      "event": 18,
+      "seed": 15,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 15,
+      "context": "equipped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 16,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 16,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "loot"
+    },
+    {
+      "event": 18,
+      "seed": 16,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 16,
+      "context": "neutral",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 16,
+      "context": "helped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 16,
+      "context": "helped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "loot"
+    },
+    {
+      "event": 18,
+      "seed": 16,
+      "context": "helped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 16,
+      "context": "helped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 16,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 16,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "loot"
+    },
+    {
+      "event": 18,
+      "seed": 16,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 16,
+      "context": "equipped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 17,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:failure",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 17,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:failure",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 17,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 17,
+      "context": "neutral",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 17,
+      "context": "helped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 17,
+      "context": "helped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:failure",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 17,
+      "context": "helped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 17,
+      "context": "helped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 17,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:failure",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 17,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:failure",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 17,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 17,
+      "context": "equipped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 18,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 18,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "loot"
+    },
+    {
+      "event": 18,
+      "seed": 18,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 18,
+      "context": "neutral",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 18,
+      "context": "helped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 18,
+      "context": "helped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "loot"
+    },
+    {
+      "event": 18,
+      "seed": 18,
+      "context": "helped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 18,
+      "context": "helped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 18,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 18,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "loot"
+    },
+    {
+      "event": 18,
+      "seed": 18,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 18,
+      "context": "equipped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 19,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 19,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "loot"
+    },
+    {
+      "event": 18,
+      "seed": 19,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 19,
+      "context": "neutral",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 19,
+      "context": "helped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 19,
+      "context": "helped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "loot"
+    },
+    {
+      "event": 18,
+      "seed": 19,
+      "context": "helped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 19,
+      "context": "helped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 19,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 19,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "loot"
+    },
+    {
+      "event": 18,
+      "seed": 19,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 19,
+      "context": "equipped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 20,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:failure",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 20,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:failure",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 20,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 20,
+      "context": "neutral",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 20,
+      "context": "helped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 20,
+      "context": "helped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:failure",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 20,
+      "context": "helped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 20,
+      "context": "helped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 20,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:failure",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 20,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "loot"
+    },
+    {
+      "event": 18,
+      "seed": 20,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 20,
+      "context": "equipped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 21,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 21,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "loot"
+    },
+    {
+      "event": 18,
+      "seed": 21,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 21,
+      "context": "neutral",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 21,
+      "context": "helped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 21,
+      "context": "helped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "loot"
+    },
+    {
+      "event": 18,
+      "seed": 21,
+      "context": "helped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 21,
+      "context": "helped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 21,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 21,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "loot"
+    },
+    {
+      "event": 18,
+      "seed": 21,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 21,
+      "context": "equipped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 22,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 22,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "loot"
+    },
+    {
+      "event": 18,
+      "seed": 22,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 22,
+      "context": "neutral",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 22,
+      "context": "helped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 22,
+      "context": "helped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "loot"
+    },
+    {
+      "event": 18,
+      "seed": 22,
+      "context": "helped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 22,
+      "context": "helped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 22,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 22,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "loot"
+    },
+    {
+      "event": 18,
+      "seed": 22,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 22,
+      "context": "equipped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 23,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 23,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:failure",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 23,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 23,
+      "context": "neutral",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 23,
+      "context": "helped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 23,
+      "context": "helped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:failure",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 23,
+      "context": "helped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 23,
+      "context": "helped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 23,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 23,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "loot"
+    },
+    {
+      "event": 18,
+      "seed": 23,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 23,
+      "context": "equipped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 24,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 24,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "loot"
+    },
+    {
+      "event": 18,
+      "seed": 24,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 24,
+      "context": "neutral",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 24,
+      "context": "helped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 24,
+      "context": "helped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "loot"
+    },
+    {
+      "event": 18,
+      "seed": 24,
+      "context": "helped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 24,
+      "context": "helped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 24,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 24,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "loot"
+    },
+    {
+      "event": 18,
+      "seed": 24,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 18,
+      "seed": 24,
+      "context": "equipped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 1,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "share:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 1,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "battle"
+    },
+    {
+      "event": 19,
+      "seed": 1,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 1,
+      "context": "neutral",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 1,
+      "context": "helped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "share:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 1,
+      "context": "helped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "battle"
+    },
+    {
+      "event": 19,
+      "seed": 1,
+      "context": "helped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 1,
+      "context": "helped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 1,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "share:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 1,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "battle"
+    },
+    {
+      "event": 19,
+      "seed": 1,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 1,
+      "context": "equipped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 2,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "share:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 2,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "battle"
+    },
+    {
+      "event": 19,
+      "seed": 2,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 2,
+      "context": "neutral",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 2,
+      "context": "helped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "share:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 2,
+      "context": "helped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "battle"
+    },
+    {
+      "event": 19,
+      "seed": 2,
+      "context": "helped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 2,
+      "context": "helped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 2,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "share:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 2,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "battle"
+    },
+    {
+      "event": 19,
+      "seed": 2,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 2,
+      "context": "equipped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 3,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "share:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 3,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "battle"
+    },
+    {
+      "event": 19,
+      "seed": 3,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 3,
+      "context": "neutral",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 3,
+      "context": "helped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "share:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 3,
+      "context": "helped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "battle"
+    },
+    {
+      "event": 19,
+      "seed": 3,
+      "context": "helped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 3,
+      "context": "helped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 3,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "share:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 3,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "battle"
+    },
+    {
+      "event": 19,
+      "seed": 3,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 3,
+      "context": "equipped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 4,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "share:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 4,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "battle"
+    },
+    {
+      "event": 19,
+      "seed": 4,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 4,
+      "context": "neutral",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 4,
+      "context": "helped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "share:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 4,
+      "context": "helped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "battle"
+    },
+    {
+      "event": 19,
+      "seed": 4,
+      "context": "helped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 4,
+      "context": "helped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 4,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "share:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 4,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "battle"
+    },
+    {
+      "event": 19,
+      "seed": 4,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 4,
+      "context": "equipped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 5,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "share:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 5,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "battle"
+    },
+    {
+      "event": 19,
+      "seed": 5,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 5,
+      "context": "neutral",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 5,
+      "context": "helped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "share:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 5,
+      "context": "helped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "battle"
+    },
+    {
+      "event": 19,
+      "seed": 5,
+      "context": "helped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 5,
+      "context": "helped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 5,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "share:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 5,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "battle"
+    },
+    {
+      "event": 19,
+      "seed": 5,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 5,
+      "context": "equipped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 6,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "share:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 6,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "battle"
+    },
+    {
+      "event": 19,
+      "seed": 6,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 6,
+      "context": "neutral",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 6,
+      "context": "helped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "share:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 6,
+      "context": "helped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "battle"
+    },
+    {
+      "event": 19,
+      "seed": 6,
+      "context": "helped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 6,
+      "context": "helped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 6,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "share:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 6,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "battle"
+    },
+    {
+      "event": 19,
+      "seed": 6,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 6,
+      "context": "equipped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 7,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "share:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 7,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "battle"
+    },
+    {
+      "event": 19,
+      "seed": 7,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 7,
+      "context": "neutral",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 7,
+      "context": "helped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "share:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 7,
+      "context": "helped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "battle"
+    },
+    {
+      "event": 19,
+      "seed": 7,
+      "context": "helped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 7,
+      "context": "helped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 7,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "share:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 7,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "battle"
+    },
+    {
+      "event": 19,
+      "seed": 7,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 7,
+      "context": "equipped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 8,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "share:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 8,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "battle"
+    },
+    {
+      "event": 19,
+      "seed": 8,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 8,
+      "context": "neutral",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 8,
+      "context": "helped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "share:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 8,
+      "context": "helped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "battle"
+    },
+    {
+      "event": 19,
+      "seed": 8,
+      "context": "helped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 8,
+      "context": "helped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 8,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "share:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 8,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "battle"
+    },
+    {
+      "event": 19,
+      "seed": 8,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 8,
+      "context": "equipped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 9,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "share:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 9,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "battle"
+    },
+    {
+      "event": 19,
+      "seed": 9,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 9,
+      "context": "neutral",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 9,
+      "context": "helped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "share:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 9,
+      "context": "helped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "battle"
+    },
+    {
+      "event": 19,
+      "seed": 9,
+      "context": "helped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 9,
+      "context": "helped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 9,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "share:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 9,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "battle"
+    },
+    {
+      "event": 19,
+      "seed": 9,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 9,
+      "context": "equipped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 10,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "share:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 10,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "battle"
+    },
+    {
+      "event": 19,
+      "seed": 10,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 10,
+      "context": "neutral",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 10,
+      "context": "helped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "share:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 10,
+      "context": "helped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "battle"
+    },
+    {
+      "event": 19,
+      "seed": 10,
+      "context": "helped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 10,
+      "context": "helped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 10,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "share:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 10,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "battle"
+    },
+    {
+      "event": 19,
+      "seed": 10,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 10,
+      "context": "equipped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 11,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "share:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 11,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "battle"
+    },
+    {
+      "event": 19,
+      "seed": 11,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 11,
+      "context": "neutral",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 11,
+      "context": "helped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "share:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 11,
+      "context": "helped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "battle"
+    },
+    {
+      "event": 19,
+      "seed": 11,
+      "context": "helped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 11,
+      "context": "helped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 11,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "share:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 11,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "battle"
+    },
+    {
+      "event": 19,
+      "seed": 11,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 11,
+      "context": "equipped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 12,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "share:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 12,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "battle"
+    },
+    {
+      "event": 19,
+      "seed": 12,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 12,
+      "context": "neutral",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 12,
+      "context": "helped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "share:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 12,
+      "context": "helped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "battle"
+    },
+    {
+      "event": 19,
+      "seed": 12,
+      "context": "helped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 12,
+      "context": "helped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 12,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "share:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 12,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "battle"
+    },
+    {
+      "event": 19,
+      "seed": 12,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 12,
+      "context": "equipped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 13,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "share:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 13,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "battle"
+    },
+    {
+      "event": 19,
+      "seed": 13,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 13,
+      "context": "neutral",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 13,
+      "context": "helped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "share:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 13,
+      "context": "helped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "battle"
+    },
+    {
+      "event": 19,
+      "seed": 13,
+      "context": "helped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 13,
+      "context": "helped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 13,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "share:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 13,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "battle"
+    },
+    {
+      "event": 19,
+      "seed": 13,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 13,
+      "context": "equipped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 14,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "share:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 14,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "battle"
+    },
+    {
+      "event": 19,
+      "seed": 14,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 14,
+      "context": "neutral",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 14,
+      "context": "helped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "share:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 14,
+      "context": "helped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "battle"
+    },
+    {
+      "event": 19,
+      "seed": 14,
+      "context": "helped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 14,
+      "context": "helped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 14,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "share:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 14,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "battle"
+    },
+    {
+      "event": 19,
+      "seed": 14,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 14,
+      "context": "equipped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 15,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "share:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 15,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "battle"
+    },
+    {
+      "event": 19,
+      "seed": 15,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 15,
+      "context": "neutral",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 15,
+      "context": "helped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "share:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 15,
+      "context": "helped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "battle"
+    },
+    {
+      "event": 19,
+      "seed": 15,
+      "context": "helped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 15,
+      "context": "helped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 15,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "share:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 15,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "battle"
+    },
+    {
+      "event": 19,
+      "seed": 15,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 15,
+      "context": "equipped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 16,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "share:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 16,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "battle"
+    },
+    {
+      "event": 19,
+      "seed": 16,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 16,
+      "context": "neutral",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 16,
+      "context": "helped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "share:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 16,
+      "context": "helped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "battle"
+    },
+    {
+      "event": 19,
+      "seed": 16,
+      "context": "helped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 16,
+      "context": "helped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 16,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "share:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 16,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "battle"
+    },
+    {
+      "event": 19,
+      "seed": 16,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 16,
+      "context": "equipped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 17,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "share:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 17,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "battle"
+    },
+    {
+      "event": 19,
+      "seed": 17,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 17,
+      "context": "neutral",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 17,
+      "context": "helped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "share:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 17,
+      "context": "helped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "battle"
+    },
+    {
+      "event": 19,
+      "seed": 17,
+      "context": "helped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 17,
+      "context": "helped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 17,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "share:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 17,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "battle"
+    },
+    {
+      "event": 19,
+      "seed": 17,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 17,
+      "context": "equipped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 18,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "share:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 18,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "battle"
+    },
+    {
+      "event": 19,
+      "seed": 18,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 18,
+      "context": "neutral",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 18,
+      "context": "helped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "share:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 18,
+      "context": "helped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "battle"
+    },
+    {
+      "event": 19,
+      "seed": 18,
+      "context": "helped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 18,
+      "context": "helped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 18,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "share:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 18,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "battle"
+    },
+    {
+      "event": 19,
+      "seed": 18,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 18,
+      "context": "equipped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 19,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "share:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 19,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "battle"
+    },
+    {
+      "event": 19,
+      "seed": 19,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 19,
+      "context": "neutral",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 19,
+      "context": "helped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "share:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 19,
+      "context": "helped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "battle"
+    },
+    {
+      "event": 19,
+      "seed": 19,
+      "context": "helped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 19,
+      "context": "helped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 19,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "share:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 19,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "battle"
+    },
+    {
+      "event": 19,
+      "seed": 19,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 19,
+      "context": "equipped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 20,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "share:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 20,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "battle"
+    },
+    {
+      "event": 19,
+      "seed": 20,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 20,
+      "context": "neutral",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 20,
+      "context": "helped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "share:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 20,
+      "context": "helped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "battle"
+    },
+    {
+      "event": 19,
+      "seed": 20,
+      "context": "helped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 20,
+      "context": "helped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 20,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "share:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 20,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "battle"
+    },
+    {
+      "event": 19,
+      "seed": 20,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 20,
+      "context": "equipped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 21,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "share:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 21,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "battle"
+    },
+    {
+      "event": 19,
+      "seed": 21,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 21,
+      "context": "neutral",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 21,
+      "context": "helped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "share:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 21,
+      "context": "helped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "battle"
+    },
+    {
+      "event": 19,
+      "seed": 21,
+      "context": "helped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 21,
+      "context": "helped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 21,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "share:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 21,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "battle"
+    },
+    {
+      "event": 19,
+      "seed": 21,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 21,
+      "context": "equipped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 22,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "share:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 22,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "battle"
+    },
+    {
+      "event": 19,
+      "seed": 22,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 22,
+      "context": "neutral",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 22,
+      "context": "helped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "share:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 22,
+      "context": "helped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "battle"
+    },
+    {
+      "event": 19,
+      "seed": 22,
+      "context": "helped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 22,
+      "context": "helped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 22,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "share:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 22,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "battle"
+    },
+    {
+      "event": 19,
+      "seed": 22,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 22,
+      "context": "equipped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 23,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "share:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 23,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "battle"
+    },
+    {
+      "event": 19,
+      "seed": 23,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 23,
+      "context": "neutral",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 23,
+      "context": "helped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "share:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 23,
+      "context": "helped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "battle"
+    },
+    {
+      "event": 19,
+      "seed": 23,
+      "context": "helped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 23,
+      "context": "helped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 23,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "share:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 23,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "battle"
+    },
+    {
+      "event": 19,
+      "seed": 23,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 23,
+      "context": "equipped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 24,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "share:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 24,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "battle"
+    },
+    {
+      "event": 19,
+      "seed": 24,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 24,
+      "context": "neutral",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 24,
+      "context": "helped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "share:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 24,
+      "context": "helped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "battle"
+    },
+    {
+      "event": 19,
+      "seed": 24,
+      "context": "helped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 24,
+      "context": "helped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 24,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "share:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 24,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "trail:success",
+      "scene": "battle"
+    },
+    {
+      "event": 19,
+      "seed": 24,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 19,
+      "seed": 24,
+      "context": "equipped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "record:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 1,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "loot"
+    },
+    {
+      "event": 20,
+      "seed": 1,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "mend:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 1,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 1,
+      "context": "neutral",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 1,
+      "context": "helped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "loot"
+    },
+    {
+      "event": 20,
+      "seed": 1,
+      "context": "helped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "mend:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 1,
+      "context": "helped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 1,
+      "context": "helped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 1,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "loot"
+    },
+    {
+      "event": 20,
+      "seed": 1,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "mend:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 1,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 1,
+      "context": "equipped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 2,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "loot"
+    },
+    {
+      "event": 20,
+      "seed": 2,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "mend:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 2,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 2,
+      "context": "neutral",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 2,
+      "context": "helped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "loot"
+    },
+    {
+      "event": 20,
+      "seed": 2,
+      "context": "helped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "mend:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 2,
+      "context": "helped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 2,
+      "context": "helped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 2,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "loot"
+    },
+    {
+      "event": 20,
+      "seed": 2,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "mend:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 2,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 2,
+      "context": "equipped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 3,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:failure",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 3,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "mend:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 3,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 3,
+      "context": "neutral",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 3,
+      "context": "helped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:failure",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 3,
+      "context": "helped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "mend:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 3,
+      "context": "helped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 3,
+      "context": "helped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 3,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:failure",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 3,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "mend:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 3,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 3,
+      "context": "equipped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 4,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "loot"
+    },
+    {
+      "event": 20,
+      "seed": 4,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "mend:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 4,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 4,
+      "context": "neutral",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 4,
+      "context": "helped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "loot"
+    },
+    {
+      "event": 20,
+      "seed": 4,
+      "context": "helped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "mend:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 4,
+      "context": "helped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 4,
+      "context": "helped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 4,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "loot"
+    },
+    {
+      "event": 20,
+      "seed": 4,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "mend:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 4,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 4,
+      "context": "equipped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 5,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "loot"
+    },
+    {
+      "event": 20,
+      "seed": 5,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "mend:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 5,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 5,
+      "context": "neutral",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 5,
+      "context": "helped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "loot"
+    },
+    {
+      "event": 20,
+      "seed": 5,
+      "context": "helped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "mend:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 5,
+      "context": "helped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 5,
+      "context": "helped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 5,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "loot"
+    },
+    {
+      "event": 20,
+      "seed": 5,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "mend:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 5,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 5,
+      "context": "equipped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 6,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:failure",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 6,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "mend:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 6,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 6,
+      "context": "neutral",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 6,
+      "context": "helped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "loot"
+    },
+    {
+      "event": 20,
+      "seed": 6,
+      "context": "helped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "mend:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 6,
+      "context": "helped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 6,
+      "context": "helped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 6,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:failure",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 6,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "mend:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 6,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 6,
+      "context": "equipped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 7,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "loot"
+    },
+    {
+      "event": 20,
+      "seed": 7,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "mend:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 7,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 7,
+      "context": "neutral",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 7,
+      "context": "helped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "loot"
+    },
+    {
+      "event": 20,
+      "seed": 7,
+      "context": "helped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "mend:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 7,
+      "context": "helped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 7,
+      "context": "helped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 7,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "loot"
+    },
+    {
+      "event": 20,
+      "seed": 7,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "mend:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 7,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 7,
+      "context": "equipped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 8,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "loot"
+    },
+    {
+      "event": 20,
+      "seed": 8,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "mend:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 8,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 8,
+      "context": "neutral",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 8,
+      "context": "helped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "loot"
+    },
+    {
+      "event": 20,
+      "seed": 8,
+      "context": "helped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "mend:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 8,
+      "context": "helped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 8,
+      "context": "helped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 8,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "loot"
+    },
+    {
+      "event": 20,
+      "seed": 8,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "mend:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 8,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 8,
+      "context": "equipped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 9,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:failure",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 9,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "mend:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 9,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 9,
+      "context": "neutral",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 9,
+      "context": "helped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "loot"
+    },
+    {
+      "event": 20,
+      "seed": 9,
+      "context": "helped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "mend:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 9,
+      "context": "helped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 9,
+      "context": "helped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 9,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:failure",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 9,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "mend:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 9,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 9,
+      "context": "equipped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 10,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "loot"
+    },
+    {
+      "event": 20,
+      "seed": 10,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "mend:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 10,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 10,
+      "context": "neutral",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 10,
+      "context": "helped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "loot"
+    },
+    {
+      "event": 20,
+      "seed": 10,
+      "context": "helped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "mend:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 10,
+      "context": "helped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 10,
+      "context": "helped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 10,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "loot"
+    },
+    {
+      "event": 20,
+      "seed": 10,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "mend:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 10,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 10,
+      "context": "equipped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 11,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "loot"
+    },
+    {
+      "event": 20,
+      "seed": 11,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "mend:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 11,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 11,
+      "context": "neutral",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 11,
+      "context": "helped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "loot"
+    },
+    {
+      "event": 20,
+      "seed": 11,
+      "context": "helped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "mend:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 11,
+      "context": "helped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 11,
+      "context": "helped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 11,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "loot"
+    },
+    {
+      "event": 20,
+      "seed": 11,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "mend:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 11,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 11,
+      "context": "equipped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 12,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "loot"
+    },
+    {
+      "event": 20,
+      "seed": 12,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "mend:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 12,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 12,
+      "context": "neutral",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 12,
+      "context": "helped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "loot"
+    },
+    {
+      "event": 20,
+      "seed": 12,
+      "context": "helped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "mend:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 12,
+      "context": "helped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 12,
+      "context": "helped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 12,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "loot"
+    },
+    {
+      "event": 20,
+      "seed": 12,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "mend:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 12,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 12,
+      "context": "equipped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 13,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "loot"
+    },
+    {
+      "event": 20,
+      "seed": 13,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "mend:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 13,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 13,
+      "context": "neutral",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 13,
+      "context": "helped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "loot"
+    },
+    {
+      "event": 20,
+      "seed": 13,
+      "context": "helped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "mend:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 13,
+      "context": "helped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 13,
+      "context": "helped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 13,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "loot"
+    },
+    {
+      "event": 20,
+      "seed": 13,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "mend:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 13,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 13,
+      "context": "equipped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 14,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:failure",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 14,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "mend:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 14,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 14,
+      "context": "neutral",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 14,
+      "context": "helped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:failure",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 14,
+      "context": "helped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "mend:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 14,
+      "context": "helped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 14,
+      "context": "helped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 14,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:failure",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 14,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "mend:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 14,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 14,
+      "context": "equipped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 15,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "loot"
+    },
+    {
+      "event": 20,
+      "seed": 15,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "mend:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 15,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 15,
+      "context": "neutral",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 15,
+      "context": "helped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "loot"
+    },
+    {
+      "event": 20,
+      "seed": 15,
+      "context": "helped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "mend:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 15,
+      "context": "helped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 15,
+      "context": "helped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 15,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "loot"
+    },
+    {
+      "event": 20,
+      "seed": 15,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "mend:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 15,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 15,
+      "context": "equipped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 16,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "loot"
+    },
+    {
+      "event": 20,
+      "seed": 16,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "mend:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 16,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 16,
+      "context": "neutral",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 16,
+      "context": "helped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "loot"
+    },
+    {
+      "event": 20,
+      "seed": 16,
+      "context": "helped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "mend:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 16,
+      "context": "helped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 16,
+      "context": "helped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 16,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "loot"
+    },
+    {
+      "event": 20,
+      "seed": 16,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "mend:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 16,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 16,
+      "context": "equipped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 17,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:failure",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 17,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "mend:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 17,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 17,
+      "context": "neutral",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 17,
+      "context": "helped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "loot"
+    },
+    {
+      "event": 20,
+      "seed": 17,
+      "context": "helped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "mend:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 17,
+      "context": "helped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 17,
+      "context": "helped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 17,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:failure",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 17,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "mend:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 17,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 17,
+      "context": "equipped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 18,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "loot"
+    },
+    {
+      "event": 20,
+      "seed": 18,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "mend:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 18,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 18,
+      "context": "neutral",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 18,
+      "context": "helped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "loot"
+    },
+    {
+      "event": 20,
+      "seed": 18,
+      "context": "helped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "mend:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 18,
+      "context": "helped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 18,
+      "context": "helped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 18,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "loot"
+    },
+    {
+      "event": 20,
+      "seed": 18,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "mend:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 18,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 18,
+      "context": "equipped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 19,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "loot"
+    },
+    {
+      "event": 20,
+      "seed": 19,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "mend:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 19,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 19,
+      "context": "neutral",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 19,
+      "context": "helped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "loot"
+    },
+    {
+      "event": 20,
+      "seed": 19,
+      "context": "helped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "mend:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 19,
+      "context": "helped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 19,
+      "context": "helped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 19,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "loot"
+    },
+    {
+      "event": 20,
+      "seed": 19,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "mend:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 19,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 19,
+      "context": "equipped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 20,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:failure",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 20,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "mend:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 20,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 20,
+      "context": "neutral",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 20,
+      "context": "helped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "loot"
+    },
+    {
+      "event": 20,
+      "seed": 20,
+      "context": "helped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "mend:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 20,
+      "context": "helped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 20,
+      "context": "helped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 20,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:failure",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 20,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "mend:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 20,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 20,
+      "context": "equipped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 21,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "loot"
+    },
+    {
+      "event": 20,
+      "seed": 21,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "mend:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 21,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 21,
+      "context": "neutral",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 21,
+      "context": "helped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "loot"
+    },
+    {
+      "event": 20,
+      "seed": 21,
+      "context": "helped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "mend:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 21,
+      "context": "helped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 21,
+      "context": "helped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 21,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "loot"
+    },
+    {
+      "event": 20,
+      "seed": 21,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "mend:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 21,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 21,
+      "context": "equipped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 22,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "loot"
+    },
+    {
+      "event": 20,
+      "seed": 22,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "mend:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 22,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 22,
+      "context": "neutral",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 22,
+      "context": "helped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "loot"
+    },
+    {
+      "event": 20,
+      "seed": 22,
+      "context": "helped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "mend:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 22,
+      "context": "helped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 22,
+      "context": "helped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 22,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "loot"
+    },
+    {
+      "event": 20,
+      "seed": 22,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "mend:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 22,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 22,
+      "context": "equipped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 23,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "loot"
+    },
+    {
+      "event": 20,
+      "seed": 23,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "mend:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 23,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 23,
+      "context": "neutral",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 23,
+      "context": "helped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "loot"
+    },
+    {
+      "event": 20,
+      "seed": 23,
+      "context": "helped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "mend:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 23,
+      "context": "helped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 23,
+      "context": "helped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 23,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "loot"
+    },
+    {
+      "event": 20,
+      "seed": 23,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "mend:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 23,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 23,
+      "context": "equipped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 24,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "loot"
+    },
+    {
+      "event": 20,
+      "seed": 24,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "mend:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 24,
+      "context": "neutral",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 24,
+      "context": "neutral",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 24,
+      "context": "helped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "loot"
+    },
+    {
+      "event": 20,
+      "seed": 24,
+      "context": "helped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "mend:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 24,
+      "context": "helped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 24,
+      "context": "helped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 24,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 0,
+      "recorded": "read:success",
+      "scene": "loot"
+    },
+    {
+      "event": 20,
+      "seed": 24,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 1,
+      "recorded": "mend:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 24,
+      "context": "equipped",
+      "budget": "full",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    },
+    {
+      "event": 20,
+      "seed": 24,
+      "context": "equipped",
+      "budget": "empty",
+      "choice": 2,
+      "recorded": "copy:success",
+      "scene": "reward"
+    }
+  ],
+  "limitations": [
+    "Controlled fixtures complement natural progression.",
+    "Rarity sampling is bounded, not a proof of all build balance."
+  ]
+}

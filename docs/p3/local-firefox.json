@@ -1,0 +1,9 @@
+{
+  "status": "BLOCKED",
+  "attempted": true,
+  "browser": "firefox",
+  "launchTimeoutMs": 180000,
+  "reason": "Cloud sandbox EROFS /proc/self/uid_map and SWGL framebuffer error; launch did not complete.",
+  "workaround": "Run real Firefox on normal GitHub CI runner without sandbox/TLS bypass.",
+  "uiResult": "Not run in this cloud"
+}
