@@ -1,7 +1,7 @@
 name: Handoff audit and requested mobile sizes
 on:
   push:
-    branches: [qa/handoff-audit-20261008, qa/resume-checkpoint-20261008, qa/asset-quality-20261008, qa/p1-class-identity-20261008, feature/p2-exploration-equipment, feature/p3-economy-crafting-endings, main]
+    branches: [qa/handoff-audit-20261008, qa/resume-checkpoint-20261008, qa/asset-quality-20261008, qa/p1-class-identity-20261008, feature/p2-exploration-equipment, feature/p3-economy-crafting-endings, qa/gameplay-handoff-20261012, main]
   workflow_dispatch:
 permissions:
   contents: read
@@ -19,6 +19,7 @@ jobs:
           node-version: '22'
       - run: npm ci --ignore-scripts
       - run: npm test
+      - run: node test-audit-data.cjs
       - run: node test-p3.cjs
       - run: node test-p3-combat.cjs
       - run: node simulate-p3-economy.cjs

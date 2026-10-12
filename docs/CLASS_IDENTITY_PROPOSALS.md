@@ -1,5 +1,8 @@
 # 직업 개성 검토·승인 제안 — Phase O
 
+> 2026-10-12 현재 상태: 아래는 해당 Phase 당시의 기록입니다. N–T와 후속 P1·P2·P3는 이미 병합·배포됐습니다. 완료한 작업을 다시 구현하지 마십시오. 최신 구현, 이번 감사가격 오류 수정, 새 검증과 남은 과제는 [GAMEPLAY_CURRENT_REVIEW.md](GAMEPLAY_CURRENT_REVIEW.md), 상세 실행 증거는 [P3_HANDOFF.md](P3_HANDOFF.md)를 따릅니다. 현재 데이터는 [최신 감사](gameplay/current-20261012/data-audit.json)이며 아래 옛 수치·미구현 제안은 과거 기준입니다.
+
+
 **제안 문서이며 실행 데이터는 변경하지 않았다.** 전수 정의는 BALANCE_AUDIT.md와 gameplay/data-audit.json, 직업별 실제 시험은 gameplay/combat.json의 byJob/records에 있다. 114종의 이름 수와 독립 전투 방식 수는 다르다.
 
 현재 확장 직업은 같은 계열의 스킬 템플릿과 두 패시브 조합을 많이 공유한다. support의 HP6% 회복, ranged의 관통, occult의 약화, magic의 마법 피해는 차이를 만들지만 계열 안에서 문학 모티프가 행동 선택으로 이어지는 정도는 약하다. 기본 스탯·티어·역할을 통제하지 않은 전투 순위로 너프 대상을 정하지 않는다. 실제 성장 경로의 선택 가능한 경쟁 직업끼리 비교하는 추가 시험이 필요하다.

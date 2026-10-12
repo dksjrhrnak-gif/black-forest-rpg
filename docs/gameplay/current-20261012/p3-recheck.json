@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "baseline": "b24007be4030f484c6867fb50f040fd55edd2edb",
+  "checks": 9465,
+  "appraisals": 9000,
+  "craftCases": 45,
+  "purchases": 900,
+  "upgradeCases": 96,
+  "tuningCases": 33,
+  "setCases": 12,
+  "endingConditions": 6,
+  "conditionalEndingCombinations": 180,
+  "restores": 1024,
+  "existingDefinitions": {
+    "jobs": 114,
+    "items": 1000,
+    "events": 21
+  },
+  "recipes": 15,
+  "sets": 4,
+  "saveSchema": "BF3 unchanged; no required crafting/set cache",
+  "limitations": [
+    "Controlled fixtures do not prove human demand or every build balance."
+  ]
+}

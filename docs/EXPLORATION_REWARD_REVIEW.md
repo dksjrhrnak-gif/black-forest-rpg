@@ -1,5 +1,8 @@
 # 탐험·이벤트·장비 성장 검토 — Phase Q/R
 
+> 2026-10-12 현재 상태: 아래는 해당 Phase 당시의 기록입니다. N–T와 후속 P1·P2·P3는 이미 병합·배포됐습니다. 완료한 작업을 다시 구현하지 마십시오. 최신 구현, 이번 감사가격 오류 수정, 새 검증과 남은 과제는 [GAMEPLAY_CURRENT_REVIEW.md](GAMEPLAY_CURRENT_REVIEW.md), 상세 실행 증거는 [P3_HANDOFF.md](P3_HANDOFF.md)를 따릅니다. 현재 데이터는 [최신 감사](gameplay/current-20261012/data-audit.json)이며 아래 옛 수치·미구현 제안은 과거 기준입니다.
+
+
 현재 코드 분석과 54회 자연 진행을 근거로 하며 아래 추가 이벤트·경제 변경은 **미적용 승인 제안**이다. 이벤트 원문/선택/비용/성공률/보상 전체18종은 gameplay/exploration.json에 보존했다.
 
 ## 실제 흐름과 반복

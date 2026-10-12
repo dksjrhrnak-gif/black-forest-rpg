@@ -1,5 +1,8 @@
 # 게임성 개발 인수인계 — Phase N–T
 
+> 2026-10-12 현재 상태: 아래는 해당 Phase 당시의 기록입니다. N–T와 후속 P1·P2·P3는 이미 병합·배포됐습니다. 완료한 작업을 다시 구현하지 마십시오. 최신 구현, 이번 감사가격 오류 수정, 새 검증과 남은 과제는 [GAMEPLAY_CURRENT_REVIEW.md](GAMEPLAY_CURRENT_REVIEW.md), 상세 실행 증거는 [P3_HANDOFF.md](P3_HANDOFF.md)를 따릅니다. 현재 데이터는 [최신 감사](gameplay/current-20261012/data-audit.json)이며 아래 옛 수치·미구현 제안은 과거 기준입니다.
+
+
 - 기준 main: `5f879371660038d516f71aab8d718fa3cb20b57e`. 이전 A–G는 main에 반영됐으며 H는 `9a0e821454d7f7cd7907b07155c6bd7701463209`에서 감사/계획 완료.
 - 같은 브랜치 `qa/asset-quality-20261008`를 유지했다. 중복 브랜치 생성/자동 main 병합/Pages 신규 배포 없음.
 - H–M 이월: 기존 정확 ID 미연결 B=0, ID 불명 C2개 유지. 소규모 J2장 제작·검수/연결. 클래스72/114, 장비 전용1/1000. 미제작42/999/NPC6/story2는 그대로 미완성으로 기록한다. K30화면×Chromium/WebKit, L실측 분석, M회귀+PR로 마무리한다.
@@ -39,3 +42,7 @@ PR: https://github.com/dksjrhrnak-gif/black-forest-rpg/pull/1 . CI의 최신 커
 ## 2026-10-08 P1 후속 인수인계
 
 위 N–T 체크포인트는 당시 결과로 보존한다. 사용자의 후속 지시에 따라 PR #1은 main에 병합됐고 공개 QA를 통과했다. 114직업 분석에 이어 6개 확장 직업의 기존 효과를 차별화한 P1도 PR #2로 병합했다. 최신 실행 SHA·검증 증거·공개 배포와 잔여 P2/P3는 [P1_HANDOFF.md](P1_HANDOFF.md)를 따른다. 이번 범위의 병합·배포에 별도 사용자 확인을 요구하지 않았다.
+
+## 2026-10-12 재개 체크포인트
+
+기준 main `4b43482812e91241e340291078baf4d06b1da715`, 열린PR0. H–M의검수범위와N–T완료를확인했고P1/P2/P3는PR#2/#3/#4로완료됐다. 이번브랜치는 `qa/gameplay-handoff-20261012`. 완료Phase를다시분석/구현하지않고옛감사가격고정출력오류를재현·수정했으며원본그림/게임수치/공식/직업/스토리/세이브는보존했다. 새검사/자료/남은범위는 GAMEPLAY_CURRENT_REVIEW.md와 gameplay/current-20261012/checkpoint.json. CI/PR/Pages 결과는최종검증뒤추가한다. 새C등급변경은구현하지않는다.

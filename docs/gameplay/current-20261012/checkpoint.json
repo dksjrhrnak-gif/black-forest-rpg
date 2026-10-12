@@ -1,0 +1,93 @@
+{
+  "checkedAt": "2026-10-12T10:19:06.780558+09:00",
+  "startingMain": "4b43482812e91241e340291078baf4d06b1da715",
+  "branch": "qa/gameplay-handoff-20261012",
+  "openPrsAtStart": 0,
+  "phaseStatus": {
+    "A-G": "Completed",
+    "H-M": "Scoped audit, 2 dedicated assets and QA completed; mass image production incomplete",
+    "N-T": "Completed in PR1; not restarted",
+    "P1": "Merged PR2",
+    "P2": "Merged PR3",
+    "P3": "Merged PR4"
+  },
+  "runtimeCounts": {
+    "jobs": 114,
+    "regular": 100,
+    "hidden": 14,
+    "items": 1000,
+    "regions": 8,
+    "events": 21,
+    "regionalEvents": [
+      18,
+      19,
+      20
+    ],
+    "normalEnemyNames": 32,
+    "enemyStatTemplates": 24,
+    "regionBosses": 8,
+    "recipes": 15,
+    "sets": 4,
+    "coreEndings": 3,
+    "endingConditionCases": 6
+  },
+  "newFix": "Audit export used old hardcoded grade prices. Now generates eligible item/grade samples with actual makeGear and Game.price, stating seed/area/power/affixes; no game price or balance changes.",
+  "priceSamples": 1120,
+  "tests": {
+    "npm": "PASS",
+    "p3Checks": 9465,
+    "p3Restores": 1024,
+    "auditPriceExport": "PASS",
+    "chromiumLocalMobileScreens": 30,
+    "webkitPublicMobileScreens": 30,
+    "widths": [
+      360,
+      390,
+      430
+    ],
+    "consoleRuntimeErrors": 0,
+    "publicAssets": 149,
+    "csvFiles": 3
+  },
+  "firstHttpAttempt": {
+    "result": "FAIL",
+    "path": "assets/enemy_32.webp",
+    "http": 503,
+    "followup": "Single URL returned HTTP200/exact bytes, then full unchanged HTTP test passed. No assertion or TLS bypass."
+  },
+  "provenance": {
+    "newExecution": "npm, P3, audit export regression, quality mobile, HTTP byte match",
+    "existingEvidence": "P1/P2/P3 battle/natural progression and Firefox CI results are preserved historical runs, not claimed newly executed."
+  },
+  "ciReferences": [
+    {
+      "id": 37879307797,
+      "headSha": "caef7c8732159ea0ac2c9e1413ba9c5555a415bc",
+      "workflow": "pages build and deployment",
+      "conclusion": "success",
+      "url": "https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/37879307797"
+    },
+    {
+      "id": 37879308436,
+      "headSha": "caef7c8732159ea0ac2c9e1413ba9c5555a415bc",
+      "workflow": "Handoff audit and requested mobile sizes",
+      "conclusion": "success",
+      "url": "https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/37879308436"
+    },
+    {
+      "id": 37879308456,
+      "headSha": "caef7c8732159ea0ac2c9e1413ba9c5555a415bc",
+      "workflow": "Journey and artwork regression and mobile preview QA",
+      "conclusion": "success",
+      "url": "https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/37879308456"
+    }
+  ],
+  "limits": [
+    "Physical devices",
+    "Long-duration human fun/readability",
+    "All hidden classes naturally unlocked in one campaign",
+    "All build combinations",
+    "Natural battles longer than30 turns",
+    "Extreme multi-cycle economy"
+  ]
+}
