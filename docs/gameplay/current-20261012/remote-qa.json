@@ -1,0 +1,3473 @@
+{
+  "checkedAt": "2026-10-12T10:49:59.508458+09:00",
+  "startingMain": "4b43482812e91241e340291078baf4d06b1da715",
+  "branch": "qa/gameplay-handoff-20261012",
+  "pr": {
+    "number": 5,
+    "url": "https://github.com/dksjrhrnak-gif/black-forest-rpg/pull/5",
+    "head": "8ec7cdaa2d1998241f9317e1f022aa2cb9911db7",
+    "merged": true,
+    "mergeSha": "53f67f567aae71aee7a97dc93b5cd921e89ac2c7",
+    "changedFiles": 22
+  },
+  "prRuns": [
+    {
+      "id": 38191528645,
+      "sha": "8ec7cdaa2d1998241f9317e1f022aa2cb9911db7",
+      "name": "Journey and artwork regression and mobile preview QA",
+      "event": "pull_request",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/38191528645",
+      "jobs": [
+        {
+          "id": 114625111594,
+          "name": "verify",
+          "status": "completed",
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npm install --ignore-scripts",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npm test",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python3 build.py && node export-data.cjs && python3 export-site.py && python3 verify-html.py",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npx playwright install --with-deps chromium webkit",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Start isolated preview",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Preview HTTP assets",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Chromium viewport and click QA",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Chromium mobile touch QA",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "WebKit mobile touch QA",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Published Pages HTML and every mapped asset",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 114625111712,
+          "name": "Script chromium 390",
+          "status": "completed",
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npm ci --ignore-scripts",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python3 build.py && node export-data.cjs && python3 export-site.py && python3 verify-html.py",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npx playwright install --with-deps chromium",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Start isolated preview",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Early story portrait screenshot",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Every scripted scene, choice and result",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 114625111740,
+          "name": "Script webkit 430",
+          "status": "completed",
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npm ci --ignore-scripts",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python3 build.py && node export-data.cjs && python3 export-site.py && python3 verify-html.py",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npx playwright install --with-deps webkit",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Start isolated preview",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Early story portrait screenshot",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Every scripted scene, choice and result",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 114625111746,
+          "name": "Script chromium 375",
+          "status": "completed",
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npm ci --ignore-scripts",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python3 build.py && node export-data.cjs && python3 export-site.py && python3 verify-html.py",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npx playwright install --with-deps chromium",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Start isolated preview",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Early story portrait screenshot",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Every scripted scene, choice and result",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 114625111780,
+          "name": "Script chromium 320",
+          "status": "completed",
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npm ci --ignore-scripts",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python3 build.py && node export-data.cjs && python3 export-site.py && python3 verify-html.py",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npx playwright install --with-deps chromium",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Start isolated preview",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Early story portrait screenshot",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Every scripted scene, choice and result",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 114625111785,
+          "name": "Script webkit 320",
+          "status": "completed",
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npm ci --ignore-scripts",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python3 build.py && node export-data.cjs && python3 export-site.py && python3 verify-html.py",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npx playwright install --with-deps webkit",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Start isolated preview",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Early story portrait screenshot",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Every scripted scene, choice and result",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 114625111811,
+          "name": "Script webkit 390",
+          "status": "completed",
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npm ci --ignore-scripts",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python3 build.py && node export-data.cjs && python3 export-site.py && python3 verify-html.py",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npx playwright install --with-deps webkit",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Start isolated preview",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Early story portrait screenshot",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Every scripted scene, choice and result",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 114625111816,
+          "name": "Script chromium 360",
+          "status": "completed",
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npm ci --ignore-scripts",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python3 build.py && node export-data.cjs && python3 export-site.py && python3 verify-html.py",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npx playwright install --with-deps chromium",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Start isolated preview",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Early story portrait screenshot",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Every scripted scene, choice and result",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 114625111820,
+          "name": "Script webkit 360",
+          "status": "completed",
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npm ci --ignore-scripts",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python3 build.py && node export-data.cjs && python3 export-site.py && python3 verify-html.py",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npx playwright install --with-deps webkit",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Start isolated preview",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Early story portrait screenshot",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Every scripted scene, choice and result",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 114625111848,
+          "name": "Script chromium 430",
+          "status": "completed",
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npm ci --ignore-scripts",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python3 build.py && node export-data.cjs && python3 export-site.py && python3 verify-html.py",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npx playwright install --with-deps chromium",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Start isolated preview",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Early story portrait screenshot",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Every scripted scene, choice and result",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 114625111878,
+          "name": "Script webkit 375",
+          "status": "completed",
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npm ci --ignore-scripts",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python3 build.py && node export-data.cjs && python3 export-site.py && python3 verify-html.py",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npx playwright install --with-deps webkit",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Start isolated preview",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Early story portrait screenshot",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Every scripted scene, choice and result",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 38191463463,
+      "sha": "8ec7cdaa2d1998241f9317e1f022aa2cb9911db7",
+      "name": "Handoff audit and requested mobile sizes",
+      "event": "push",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/38191463463",
+      "jobs": [
+        {
+          "id": 114624925938,
+          "name": "logic",
+          "status": "completed",
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npm ci --ignore-scripts",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npm test",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run node test-audit-data.cjs",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run node test-p3.cjs",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run node test-p3-combat.cjs",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run node simulate-p3-economy.cjs",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run node test-p2.cjs",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run node test-p2-natural.cjs",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run node test-p2-equipment.cjs",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run node test-p1-identity.cjs",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Fixed-seed gameplay audit and natural save continuity",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python3 build.py && node export-data.cjs && python3 export-site.py && python3 verify-html.py",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 114624926045,
+          "name": "p3-browser (chromium)",
+          "status": "completed",
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npm ci --ignore-scripts",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npx playwright install --with-deps chromium",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python3 build.py && node export-data.cjs && python3 export-site.py && python3 verify-html.py",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python3 -m http.server 4174 --directory dist > /tmp/bf-p3-preview.log 2>&1 &",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "P3 real-campaign imports, economy, sets, save and endings at five widths",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Wait for this commit to finish Pages deployment",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "P3 public game at five widths",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 114624926084,
+          "name": "p3-browser (webkit)",
+          "status": "completed",
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npm ci --ignore-scripts",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npx playwright install --with-deps webkit",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python3 build.py && node export-data.cjs && python3 export-site.py && python3 verify-html.py",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python3 -m http.server 4174 --directory dist > /tmp/bf-p3-preview.log 2>&1 &",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "P3 real-campaign imports, economy, sets, save and endings at five widths",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Wait for this commit to finish Pages deployment",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "P3 public game at five widths",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 114624926089,
+          "name": "browser (webkit, touch)",
+          "status": "completed",
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npm ci --ignore-scripts",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npx playwright install --with-deps webkit",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python3 build.py && node export-data.cjs && python3 export-site.py && python3 verify-html.py",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python3 -m http.server 4173 > /tmp/bf-audit.log 2>&1 &",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Exact requested sizes, controls and journey regressions",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Starter, panel, file import and image fallback handoff checks",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Dedicated portraits and reward comparison visual checks",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "P1 old battle saves, career skills and status reload",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "P2 regional choices, battle, equipment and saved reactions",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 114624926093,
+          "name": "browser (webkit, click)",
+          "status": "completed",
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npm ci --ignore-scripts",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npx playwright install --with-deps webkit",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python3 build.py && node export-data.cjs && python3 export-site.py && python3 verify-html.py",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python3 -m http.server 4173 > /tmp/bf-audit.log 2>&1 &",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Exact requested sizes, controls and journey regressions",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Starter, panel, file import and image fallback handoff checks",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Dedicated portraits and reward comparison visual checks",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "P1 old battle saves, career skills and status reload",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "P2 regional choices, battle, equipment and saved reactions",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 114624926105,
+          "name": "browser (chromium, click)",
+          "status": "completed",
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npm ci --ignore-scripts",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npx playwright install --with-deps chromium",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python3 build.py && node export-data.cjs && python3 export-site.py && python3 verify-html.py",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python3 -m http.server 4173 > /tmp/bf-audit.log 2>&1 &",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Exact requested sizes, controls and journey regressions",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Starter, panel, file import and image fallback handoff checks",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Dedicated portraits and reward comparison visual checks",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "P1 old battle saves, career skills and status reload",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "P2 regional choices, battle, equipment and saved reactions",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 114624926170,
+          "name": "p3-browser (firefox)",
+          "status": "completed",
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npm ci --ignore-scripts",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npx playwright install --with-deps firefox",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python3 build.py && node export-data.cjs && python3 export-site.py && python3 verify-html.py",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python3 -m http.server 4174 --directory dist > /tmp/bf-p3-preview.log 2>&1 &",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "P3 real-campaign imports, economy, sets, save and endings at five widths",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Wait for this commit to finish Pages deployment",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "P3 public game at five widths",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 114624926184,
+          "name": "browser (chromium, touch)",
+          "status": "completed",
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npm ci --ignore-scripts",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npx playwright install --with-deps chromium",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python3 build.py && node export-data.cjs && python3 export-site.py && python3 verify-html.py",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python3 -m http.server 4173 > /tmp/bf-audit.log 2>&1 &",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Exact requested sizes, controls and journey regressions",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Starter, panel, file import and image fallback handoff checks",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Dedicated portraits and reward comparison visual checks",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "P1 old battle saves, career skills and status reload",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "P2 regional choices, battle, equipment and saved reactions",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 114624926868,
+          "name": "live-pages",
+          "status": "completed",
+          "conclusion": "skipped",
+          "steps": []
+        }
+      ]
+    }
+  ],
+  "mainRuns": [
+    {
+      "id": 38192485801,
+      "sha": "53f67f567aae71aee7a97dc93b5cd921e89ac2c7",
+      "name": "pages build and deployment",
+      "event": "dynamic",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/38192485801",
+      "jobs": [
+        {
+          "id": 114628017739,
+          "name": "build",
+          "status": "completed",
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Checkout",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Upload artifact",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Checkout",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 114628577705,
+          "name": "report-build-status",
+          "status": "completed",
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Report Build Status",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 114628577748,
+          "name": "deploy",
+          "status": "completed",
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Deploy to GitHub Pages",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 38192486136,
+      "sha": "53f67f567aae71aee7a97dc93b5cd921e89ac2c7",
+      "name": "Handoff audit and requested mobile sizes",
+      "event": "push",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/38192486136",
+      "jobs": [
+        {
+          "id": 114628015871,
+          "name": "logic",
+          "status": "completed",
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npm ci --ignore-scripts",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npm test",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run node test-audit-data.cjs",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run node test-p3.cjs",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run node test-p3-combat.cjs",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run node simulate-p3-economy.cjs",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run node test-p2.cjs",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run node test-p2-natural.cjs",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run node test-p2-equipment.cjs",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run node test-p1-identity.cjs",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Fixed-seed gameplay audit and natural save continuity",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python3 build.py && node export-data.cjs && python3 export-site.py && python3 verify-html.py",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 114628015987,
+          "name": "p3-browser (chromium)",
+          "status": "completed",
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npm ci --ignore-scripts",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npx playwright install --with-deps chromium",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python3 build.py && node export-data.cjs && python3 export-site.py && python3 verify-html.py",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python3 -m http.server 4174 --directory dist > /tmp/bf-p3-preview.log 2>&1 &",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "P3 real-campaign imports, economy, sets, save and endings at five widths",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Wait for this commit to finish Pages deployment",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "P3 public game at five widths",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 114628015999,
+          "name": "browser (webkit, touch)",
+          "status": "completed",
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npm ci --ignore-scripts",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npx playwright install --with-deps webkit",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python3 build.py && node export-data.cjs && python3 export-site.py && python3 verify-html.py",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python3 -m http.server 4173 > /tmp/bf-audit.log 2>&1 &",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Exact requested sizes, controls and journey regressions",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Starter, panel, file import and image fallback handoff checks",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Dedicated portraits and reward comparison visual checks",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "P1 old battle saves, career skills and status reload",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "P2 regional choices, battle, equipment and saved reactions",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 114628016006,
+          "name": "browser (chromium, click)",
+          "status": "completed",
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npm ci --ignore-scripts",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npx playwright install --with-deps chromium",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python3 build.py && node export-data.cjs && python3 export-site.py && python3 verify-html.py",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python3 -m http.server 4173 > /tmp/bf-audit.log 2>&1 &",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Exact requested sizes, controls and journey regressions",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Starter, panel, file import and image fallback handoff checks",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Dedicated portraits and reward comparison visual checks",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "P1 old battle saves, career skills and status reload",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "P2 regional choices, battle, equipment and saved reactions",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 114628016023,
+          "name": "browser (webkit, click)",
+          "status": "completed",
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npm ci --ignore-scripts",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npx playwright install --with-deps webkit",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python3 build.py && node export-data.cjs && python3 export-site.py && python3 verify-html.py",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python3 -m http.server 4173 > /tmp/bf-audit.log 2>&1 &",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Exact requested sizes, controls and journey regressions",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Starter, panel, file import and image fallback handoff checks",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Dedicated portraits and reward comparison visual checks",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "P1 old battle saves, career skills and status reload",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "P2 regional choices, battle, equipment and saved reactions",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 114628016049,
+          "name": "live-pages (chromium)",
+          "status": "completed",
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npm ci --ignore-scripts",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npx playwright install --with-deps chromium",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Wait for this commit to finish Pages deployment",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Public P1 old-save and skill QA",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Public P2 regional choices and saved story reactions",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Match the deployed game and all mapped assets",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Play the published game at the requested mobile sizes",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 114628016050,
+          "name": "p3-browser (firefox)",
+          "status": "completed",
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npm ci --ignore-scripts",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npx playwright install --with-deps firefox",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python3 build.py && node export-data.cjs && python3 export-site.py && python3 verify-html.py",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python3 -m http.server 4174 --directory dist > /tmp/bf-p3-preview.log 2>&1 &",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "P3 real-campaign imports, economy, sets, save and endings at five widths",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Wait for this commit to finish Pages deployment",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "P3 public game at five widths",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 114628016052,
+          "name": "live-pages (webkit)",
+          "status": "completed",
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npm ci --ignore-scripts",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npx playwright install --with-deps webkit",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Wait for this commit to finish Pages deployment",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Public P1 old-save and skill QA",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Public P2 regional choices and saved story reactions",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Match the deployed game and all mapped assets",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Play the published game at the requested mobile sizes",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 114628016096,
+          "name": "browser (chromium, touch)",
+          "status": "completed",
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npm ci --ignore-scripts",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npx playwright install --with-deps chromium",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python3 build.py && node export-data.cjs && python3 export-site.py && python3 verify-html.py",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python3 -m http.server 4173 > /tmp/bf-audit.log 2>&1 &",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Exact requested sizes, controls and journey regressions",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Starter, panel, file import and image fallback handoff checks",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Dedicated portraits and reward comparison visual checks",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "P1 old battle saves, career skills and status reload",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "P2 regional choices, battle, equipment and saved reactions",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 114628016127,
+          "name": "p3-browser (webkit)",
+          "status": "completed",
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npm ci --ignore-scripts",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npx playwright install --with-deps webkit",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python3 build.py && node export-data.cjs && python3 export-site.py && python3 verify-html.py",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python3 -m http.server 4174 --directory dist > /tmp/bf-p3-preview.log 2>&1 &",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "P3 real-campaign imports, economy, sets, save and endings at five widths",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Wait for this commit to finish Pages deployment",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "P3 public game at five widths",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 38192486204,
+      "sha": "53f67f567aae71aee7a97dc93b5cd921e89ac2c7",
+      "name": "Journey and artwork regression and mobile preview QA",
+      "event": "push",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/38192486204",
+      "jobs": [
+        {
+          "id": 114628016381,
+          "name": "verify",
+          "status": "completed",
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npm install --ignore-scripts",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npm test",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python3 build.py && node export-data.cjs && python3 export-site.py && python3 verify-html.py",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npx playwright install --with-deps chromium webkit",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Start isolated preview",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Preview HTTP assets",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Chromium viewport and click QA",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Chromium mobile touch QA",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "WebKit mobile touch QA",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Published Pages HTML and every mapped asset",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 114628016514,
+          "name": "Script chromium 430",
+          "status": "completed",
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npm ci --ignore-scripts",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python3 build.py && node export-data.cjs && python3 export-site.py && python3 verify-html.py",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npx playwright install --with-deps chromium",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Start isolated preview",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Early story portrait screenshot",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Every scripted scene, choice and result",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 114628016565,
+          "name": "Script webkit 360",
+          "status": "completed",
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npm ci --ignore-scripts",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python3 build.py && node export-data.cjs && python3 export-site.py && python3 verify-html.py",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npx playwright install --with-deps webkit",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Start isolated preview",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Early story portrait screenshot",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Every scripted scene, choice and result",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 114628016570,
+          "name": "Script chromium 320",
+          "status": "completed",
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npm ci --ignore-scripts",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python3 build.py && node export-data.cjs && python3 export-site.py && python3 verify-html.py",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npx playwright install --with-deps chromium",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Start isolated preview",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Early story portrait screenshot",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Every scripted scene, choice and result",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 114628016571,
+          "name": "Script webkit 390",
+          "status": "completed",
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npm ci --ignore-scripts",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python3 build.py && node export-data.cjs && python3 export-site.py && python3 verify-html.py",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npx playwright install --with-deps webkit",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Start isolated preview",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Early story portrait screenshot",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Every scripted scene, choice and result",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 114628016595,
+          "name": "Script chromium 390",
+          "status": "completed",
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npm ci --ignore-scripts",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python3 build.py && node export-data.cjs && python3 export-site.py && python3 verify-html.py",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npx playwright install --with-deps chromium",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Start isolated preview",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Early story portrait screenshot",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Every scripted scene, choice and result",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 114628016629,
+          "name": "Script webkit 430",
+          "status": "completed",
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npm ci --ignore-scripts",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python3 build.py && node export-data.cjs && python3 export-site.py && python3 verify-html.py",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npx playwright install --with-deps webkit",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Start isolated preview",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Early story portrait screenshot",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Every scripted scene, choice and result",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 114628016630,
+          "name": "Script webkit 375",
+          "status": "completed",
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npm ci --ignore-scripts",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python3 build.py && node export-data.cjs && python3 export-site.py && python3 verify-html.py",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npx playwright install --with-deps webkit",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Start isolated preview",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Early story portrait screenshot",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Every scripted scene, choice and result",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 114628016688,
+          "name": "Script chromium 360",
+          "status": "completed",
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npm ci --ignore-scripts",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python3 build.py && node export-data.cjs && python3 export-site.py && python3 verify-html.py",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npx playwright install --with-deps chromium",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Start isolated preview",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Early story portrait screenshot",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Every scripted scene, choice and result",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 114628016703,
+          "name": "Script chromium 375",
+          "status": "completed",
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npm ci --ignore-scripts",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python3 build.py && node export-data.cjs && python3 export-site.py && python3 verify-html.py",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npx playwright install --with-deps chromium",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Start isolated preview",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Early story portrait screenshot",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Every scripted scene, choice and result",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 114628016737,
+          "name": "Script webkit 320",
+          "status": "completed",
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npm ci --ignore-scripts",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python3 build.py && node export-data.cjs && python3 export-site.py && python3 verify-html.py",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npx playwright install --with-deps webkit",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Start isolated preview",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Early story portrait screenshot",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Every scripted scene, choice and result",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "deployments": [
+    {
+      "id": 7004660588,
+      "sha": "53f67f567aae71aee7a97dc93b5cd921e89ac2c7",
+      "statuses": [
+        {
+          "state": "success",
+          "at": "2026-10-12T01:38:47Z"
+        },
+        {
+          "state": "in_progress",
+          "at": "2026-10-12T01:38:37Z"
+        },
+        {
+          "state": "queued",
+          "at": "2026-10-12T01:38:31Z"
+        },
+        {
+          "state": "waiting",
+          "at": "2026-10-12T01:38:30Z"
+        }
+      ]
+    }
+  ],
+  "artifactScope": "Run/job/step status proof; raw redirected artifact download was previously Forbidden and is not claimed."
+}

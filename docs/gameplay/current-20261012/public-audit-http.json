@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "http": 200,
+  "path": "docs/gameplay/current-20261012/data-audit.json",
+  "items": 1000,
+  "priceSamples": 1120,
+  "exactBytes": true
+}

@@ -46,3 +46,16 @@ PR: https://github.com/dksjrhrnak-gif/black-forest-rpg/pull/1 . CI의 최신 커
 ## 2026-10-12 재개 체크포인트
 
 기준 main `4b43482812e91241e340291078baf4d06b1da715`, 열린PR0. H–M의검수범위와N–T완료를확인했고P1/P2/P3는PR#2/#3/#4로완료됐다. 이번브랜치는 `qa/gameplay-handoff-20261012`. 완료Phase를다시분석/구현하지않고옛감사가격고정출력오류를재현·수정했으며원본그림/게임수치/공식/직업/스토리/세이브는보존했다. 새검사/자료/남은범위는 GAMEPLAY_CURRENT_REVIEW.md와 gameplay/current-20261012/checkpoint.json. CI/PR/Pages 결과는최종검증뒤추가한다. 새C등급변경은구현하지않는다.
+
+## 최종 GitHub·배포 체크포인트
+
+[PR #5](https://github.com/dksjrhrnak-gif/black-forest-rpg/pull/5)를 HEAD `8ec7cdaa2d1998241f9317e1f022aa2cb9911db7`의 필수 CI 19개 통과 후 병합했다. 병합 main은 `53f67f567aae71aee7a97dc93b5cd921e89ac2c7`다.
+
+- PR CI: [Handoff 38191463463](https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/38191463463), [통합 38191528645](https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/38191528645), 총19개 SUCCESS.
+- main CI: [Handoff 38192486136](https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/38192486136), [통합 38192486204](https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/38192486204), 총21개 SUCCESS. 새 가격 내보내기 회귀와 기존 전투/경제/자연진행/히든/엔딩/저장·브라우저 검사를 실제 재실행했다. 실행이 검증된 Source에 근거하며 raw artifact를 내려받았다고 보고하지 않는다.
+- [Pages 38192485801](https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/38192485801) 성공, deployment7004660588이 병합 SHA와 일치한다.
+- 공개 HTML SHA256 `d6c03bd1d48c7999c0c1dbc8706f6021d76d4b61c1b0c8d1824ddb5e582a7eca` 및149이미지·CSV3개가 원본과 일치한다. 수정한 공개 감사 JSON도1000개장비/1120개가격샘플의 바이트까지 일치한다. 게임 실행 파일은 시작 main과 같다.
+- 공개 Chromium/WebKit/Firefox P3, 기존 P1/P2 공개 회귀와 요청 모바일 검사는 성공했다. 정상 UI 경로의 콘솔/런타임 오류0, 실제기기·장시간 재미는 미검증이다.
+- 실제 run/job/step/deployment 증거는 [remote-qa.json](gameplay/current-20261012/remote-qa.json), 공개 감사 자료는 [public-audit-http.json](gameplay/current-20261012/public-audit-http.json).
+
+최종 증거 커밋은 문서/QA 기록만 변경하며 `[skip ci]`를 사용한다. 감사 도구·회귀 검사·CI·게임 소스/HTML/자산은 위 검증 커밋과 같다. 최종 문서 SHA의 Pages 반영과 공개 파일 일치를 다시 확인하고 최종 SHA는 완료 보고에 남긴다.

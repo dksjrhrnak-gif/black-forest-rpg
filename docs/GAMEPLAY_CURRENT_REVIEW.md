@@ -49,3 +49,16 @@ A등급의감사보고오류: `audit-gameplay-quality.cjs`가아이템마다옛 
 | 미검증 | 실제기기·장시간재미·자연히든빈도·모든빌드·30턴초과자연전투·극단다회차경제 | 사람플레이와별도조건측정필요. 자동완주로재미를단정하지않음 |
 
 후반소비/직업선택이게임에얼마나의미있게느껴지는지는아직사람평가가필요하다. 새로운C등급기능을임의로구현하지않고, 사용자에게중간승인질문을하지않은채안전한감사오류와기록정정까지진행한다.
+
+## 최종 GitHub·배포 체크포인트
+
+[PR #5](https://github.com/dksjrhrnak-gif/black-forest-rpg/pull/5)를 HEAD `8ec7cdaa2d1998241f9317e1f022aa2cb9911db7`의 필수 CI 19개 통과 후 병합했다. 병합 main은 `53f67f567aae71aee7a97dc93b5cd921e89ac2c7`다.
+
+- PR CI: [Handoff 38191463463](https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/38191463463), [통합 38191528645](https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/38191528645), 총19개 SUCCESS.
+- main CI: [Handoff 38192486136](https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/38192486136), [통합 38192486204](https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/38192486204), 총21개 SUCCESS. 새 가격 내보내기 회귀와 기존 전투/경제/자연진행/히든/엔딩/저장·브라우저 검사를 실제 재실행했다. 실행이 검증된 Source에 근거하며 raw artifact를 내려받았다고 보고하지 않는다.
+- [Pages 38192485801](https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/38192485801) 성공, deployment7004660588이 병합 SHA와 일치한다.
+- 공개 HTML SHA256 `d6c03bd1d48c7999c0c1dbc8706f6021d76d4b61c1b0c8d1824ddb5e582a7eca` 및149이미지·CSV3개가 원본과 일치한다. 수정한 공개 감사 JSON도1000개장비/1120개가격샘플의 바이트까지 일치한다. 게임 실행 파일은 시작 main과 같다.
+- 공개 Chromium/WebKit/Firefox P3, 기존 P1/P2 공개 회귀와 요청 모바일 검사는 성공했다. 정상 UI 경로의 콘솔/런타임 오류0, 실제기기·장시간 재미는 미검증이다.
+- 실제 run/job/step/deployment 증거는 [remote-qa.json](gameplay/current-20261012/remote-qa.json), 공개 감사 자료는 [public-audit-http.json](gameplay/current-20261012/public-audit-http.json).
+
+최종 증거 커밋은 문서/QA 기록만 변경하며 `[skip ci]`를 사용한다. 감사 도구·회귀 검사·CI·게임 소스/HTML/자산은 위 검증 커밋과 같다. 최종 문서 SHA의 Pages 반영과 공개 파일 일치를 다시 확인하고 최종 SHA는 완료 보고에 남긴다.

@@ -89,5 +89,17 @@
     "All build combinations",
     "Natural battles longer than30 turns",
     "Extreme multi-cycle economy"
-  ]
+  ],
+  "completion": {
+    "pr": 5,
+    "mergeSha": "53f67f567aae71aee7a97dc93b5cd921e89ac2c7",
+    "prChecks": 19,
+    "mainChecks": 21,
+    "pagesRun": 38192485801,
+    "deployment": 7004660588,
+    "priceSamplesPublished": 1120,
+    "runtimeUnchanged": true,
+    "remainingFunctionalFailures": 0,
+    "limitsUnchanged": true
+  }
 }
