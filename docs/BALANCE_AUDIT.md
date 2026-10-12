@@ -1,5 +1,8 @@
 # 밸런스 데이터 감사 — Phase N
 
+> 2026-10-12 현재 상태: 아래는 해당 Phase 당시의 기록입니다. N–T와 후속 P1·P2·P3는 이미 병합·배포됐습니다. 완료한 작업을 다시 구현하지 마십시오. 최신 구현, 이번 감사가격 오류 수정, 새 검증과 남은 과제는 [GAMEPLAY_CURRENT_REVIEW.md](GAMEPLAY_CURRENT_REVIEW.md), 상세 실행 증거는 [P3_HANDOFF.md](P3_HANDOFF.md)를 따릅니다. 현재 데이터는 [최신 감사](gameplay/current-20261012/data-audit.json)이며 아래 옛 수치·미구현 제안은 과거 기준입니다.
+
+
 기준 main `5f879371660038d516f71aab8d718fa3cb20b57e`, 작업 `qa/asset-quality-20261008`. 수치·공식·해금·스토리·저장 스키마는 변경하지 않았다.
 
 ## 재현과 원본
