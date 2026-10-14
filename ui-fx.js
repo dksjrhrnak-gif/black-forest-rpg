@@ -1,6 +1,6 @@
 /* Presentation only: snapshots never write game state or consume RNG. */
 (function(root){'use strict';
-function capture(game){const s=game.s;return {scene:s.scene,turns:s.turns,hp:s.hp,maxHp:game.maxHp(),mp:s.mp,loot:s.loot?{id:s.loot.id,grade:s.loot.grade,name:s.loot.name}:null,reward:s.rewardState?{id:s.rewardState.id,claimed:s.rewardState.claimed}:null,message:s.message,skillWeak:!!root.BFContent?.JOBS[s.job]?.effects.some(x=>x.type==='skillWeak'),enemy:s.enemy?{...s.enemy,pattern:undefined}:null};}
+function capture(game){const s=game.s;return {scene:s.scene,area:s.area,step:s.step,checkpoint:!!s.checkpoint,turns:s.turns,hp:s.hp,maxHp:game.maxHp(),mp:s.mp,loot:s.loot?{id:s.loot.id,grade:s.loot.grade,name:s.loot.name}:null,reward:s.rewardState?{id:s.rewardState.id,claimed:s.rewardState.claimed}:null,message:s.message,skillWeak:!!root.BFContent?.JOBS[s.job]?.effects.some(x=>x.type==='skillWeak'),enemy:s.enemy?{...s.enemy,pattern:undefined}:null};}
 function combatEffects(a,b,cmd,arg){const out=[];const add=(target,type,text)=>out.push({target,type,text});
  if(cmd!=='act'||a.scene!=='battle'||a.turns===b.turns)return out;
  const msg=b.message||'',damage=msg.match(/! (\d+) 피해\./),hit=msg.match(/적의 (?:강공격|공격): (\d+) 피해\./);
@@ -22,12 +22,15 @@ function combatEffects(a,b,cmd,arg){const out=[];const add=(target,type,text)=>o
  for(const type of statuses)add('enemy',type,{poison:'중독',burn:'화상',bleed:'출혈',stun:'기절',weak:'약화',dot:'지속 피해'}[type]||'지속 피해');
  return out;
 }
-function describe(a,b,cmd,arg){const out=combatEffects(a,b,cmd,arg);
+function describe(a,b,cmd,arg){if(['load','render'].includes(cmd))return [];const out=combatEffects(a,b,cmd,arg);
  const freshLoot=b.scene==='loot'&&(a.scene!=='loot'||a.loot?.id!==b.loot?.id);
  const freshReward=b.reward&&!b.reward.claimed&&a.reward?.id!==b.reward.id;
  if(freshLoot||freshReward)out.push({target:'reward',type:'reveal'});
  if(a.reward&&!a.reward.claimed&&b.reward?.id===a.reward.id&&b.reward.claimed)out.push({target:'player',type:'receipt',text:'전리품 확보'});
  else if(['collectLoot','takeLoot'].includes(cmd)&&a.scene==='loot'&&b.scene!=='loot')out.push({target:'player',type:'receipt',text:arg==='sell'?'장비 판매':arg==='equip'?'장비 착용':'장비 확보'});
+ if(a.scene!==b.scene||a.area!==b.area||a.step!==b.step)out.push({target:'scene',type:'transition'});
+ if(!a.checkpoint&&b.checkpoint&&b.scene==='camp')out.push({target:'player',type:'guard',text:'여정을 기록했습니다'});
+ if(cmd==='rest'&&a.scene==='camp'){const hp=b.hp-a.hp,mp=b.mp-a.mp;if(hp>0)out.push({target:'player',type:'heal',text:'휴식 +'+hp});else if(mp>0)out.push({target:'player',type:'guard',text:'MP +'+mp});if(hp>0||mp>0)out.push({target:'scene',type:'transition'});}
  return out;
 }
 function create(host){let timer=null;const marked=[];
@@ -39,6 +42,7 @@ function create(host){let timer=null;const marked=[];
    for(const [i,e] of list.slice(0,6).entries()){const token=document.createElement('span');token.className='fx-token fx-'+e.type;token.dataset.fxEvent=e.type;token.style.setProperty('--fx-order',i);token.textContent=e.text;layer.append(token);}anchor.append(layer);
    if(list.some(e=>['damage','critical'].includes(e.type))){const node=target==='player'?anchor:anchor.querySelector('.scene-art')||anchor;const cls=target==='player'?'fx-player-hit':list.some(e=>e.type==='critical')?'fx-critical':'fx-hit';mark(node,cls);}
   }
+  if(events.some(e=>e.target==='scene')){const n=host.querySelector('#bf-play .scene-hero,#bf-play .main>.story');if(n)mark(n,'fx-scene-enter');}
   if(events.some(e=>e.target==='reward'))host.querySelectorAll('#bf-play .reward-summary,#bf-play .fx-loot-card').forEach(n=>mark(n,'fx-reward-enter'));
   if(events.length)timer=setTimeout(clear,650);
  }
