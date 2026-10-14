@@ -1165,7 +1165,7 @@
 #black-forest-game .scene-hero,#black-forest-game .scene-hero.scene-chapter,
 #black-forest-game .scene-hero.scene-dialogue,#black-forest-game .scene-hero.scene-npc,
 #black-forest-game .scene-hero.scene-bond{display:block;min-height:0;border-color:var(--bf-line);border-radius:var(--bf-card-r);background:var(--bf-bg);margin:0 0 12px}
-#black-forest-game .scene-visual{position:relative;height:320px;isolation:isolate;overflow:hidden}
+#black-forest-game .scene-visual{position:relative;width:100%;height:320px;isolation:isolate;overflow:hidden}
 #black-forest-game .scene-hero .scene-art{position:absolute;inset:0;height:100%;width:100%;max-height:none;aspect-ratio:auto;margin:0;background:var(--bf-bg)}
 #black-forest-game .scene-hero .scene-art img{height:100%;min-height:0;width:100%;max-height:none;aspect-ratio:auto;object-fit:cover;object-position:center 30%}
 #black-forest-game .scene-hero-shade{inset:0;max-height:none;aspect-ratio:auto;background:linear-gradient(180deg,#0d0b0a12 25%,#0d0b0a22 55%,#0d0b0af2 100%)}
