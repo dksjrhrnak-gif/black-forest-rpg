@@ -1093,6 +1093,20 @@
 @keyframes bf-scene-enter{from{opacity:.65}to{opacity:1}}
 @media(prefers-reduced-motion:reduce){#black-forest-game .fx-scene-enter{animation:none}}
 
+/* Special moments use one small, noninteractive banner, never a full-screen overlay. */
+#black-forest-game .main{position:relative}
+#black-forest-game .fx-banner{position:absolute;top:12px;left:12px;right:12px;z-index:6;padding:12px 14px;border:1px solid #937951;border-left-width:3px;border-radius:7px;background:#1b1713f5;color:#e4d2ac;line-height:1.45;text-align:center;pointer-events:none;animation:bf-banner .6s ease-out both;contain:layout paint style}
+#black-forest-game .fx-banner strong{display:block;overflow-wrap:anywhere;font-size:16px}
+#black-forest-game .fx-banner-boss{background:#221112f5;border-color:#9b565b;color:#efb6b0}
+#black-forest-game .fx-banner-hidden,#black-forest-game .fx-banner-mythic{background:#112021f5;border-color:#6c9995;color:#c3dfd5}
+#black-forest-game .fx-banner-legend{border-color:#bd9e58;color:#f1dc9e}
+#black-forest-game .fx-banner-ending{background:#191727f5;border-color:#8b7a9a;color:#ded2e6}
+#black-forest-game .fx-banner-victory{padding:8px 12px;font-size:14px}
+@keyframes bf-banner{0%{opacity:0;transform:translateY(-4px)}15%,70%{opacity:1;transform:translateY(0)}100%{opacity:0;transform:translateY(0)}}
+@media(prefers-reduced-motion:reduce){#black-forest-game .fx-banner{animation:none;transform:none}}
+
+#black-forest-game #bf-panel>.fx-banner{position:fixed;top:max(68px,env(safe-area-inset-top));left:24px;right:24px;max-width:700px;margin-inline:auto}
+
 </style>
 <div id="black-forest-game">
 <header class="top"><div><p class="eyebrow">THE LAST EMBER · TEXT RPG</p><h1>검은 숲의 방랑자</h1><p class="muted">마지막 불씨 · 통합판 5.6 · 여정과 이미지 연결</p></div><button type="button" data-ui="save" class="small cursor-interaction">저장 / 불러오기</button></header>
@@ -2997,7 +3011,7 @@ root.BlackForest.P3_RECIPES=C.P3_RECIPES;root.BlackForest.P3_SETS=C.P3_SETS;
 document.getElementById("black-forest-game").dataset.license="Copyright (c) 2012-now(), Ondrej Zara\nAll rights reserved.\n\nRedistribution and use in source and binary forms, with or without modification, \nare permitted provided that the following conditions are met:\n\n\t* Redistributions of source code must retain the above copyright notice, \n\t  this list of conditions and the following disclaimer.\n\t* Redistributions in binary form must reproduce the above copyright notice, \n\t  this list of conditions and the following disclaimer in the documentation \n\t  and/or other materials provided with the distribution.\n\t* Neither the name of Ondrej Zara nor the names of its contributors may be used \n\t  to endorse or promote products derived from this software without specific \n\t  prior written permission.\n\t\t\t\nTHIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\" AND \nANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED \nWARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. \nIN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, \nINDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, \nBUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, \nDATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY \nOF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING \nNEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, \nEVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n\n\nThe MIT License (MIT)\n\nCopyright (c) 2015 John Watson\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n\n\n\nMIT License\n\nCopyright (c) 2013 pieroxy\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n";
 /* Presentation only: snapshots never write game state or consume RNG. */
 (function(root){'use strict';
-function capture(game){const s=game.s;return {scene:s.scene,area:s.area,step:s.step,checkpoint:!!s.checkpoint,turns:s.turns,hp:s.hp,maxHp:game.maxHp(),mp:s.mp,loot:s.loot?{id:s.loot.id,grade:s.loot.grade,name:s.loot.name}:null,reward:s.rewardState?{id:s.rewardState.id,claimed:s.rewardState.claimed}:null,message:s.message,skillWeak:!!root.BFContent?.JOBS[s.job]?.effects.some(x=>x.type==='skillWeak'),enemy:s.enemy?{...s.enemy,pattern:undefined}:null};}
+function capture(game){const s=game.s;return {scene:s.scene,area:s.area,step:s.step,checkpoint:!!s.checkpoint,unlocked:[...s.unlocked],ending:s.ending,turns:s.turns,hp:s.hp,maxHp:game.maxHp(),mp:s.mp,loot:s.loot?{id:s.loot.id,grade:s.loot.grade,name:s.loot.name}:null,reward:s.rewardState?{id:s.rewardState.id,claimed:s.rewardState.claimed}:null,message:s.message,skillWeak:!!root.BFContent?.JOBS[s.job]?.effects.some(x=>x.type==='skillWeak'),enemy:s.enemy?{...s.enemy,pattern:undefined}:null};}
 function combatEffects(a,b,cmd,arg){const out=[];const add=(target,type,text)=>out.push({target,type,text});
  if(cmd!=='act'||a.scene!=='battle'||a.turns===b.turns)return out;
  const msg=b.message||'',damage=msg.match(/! (\d+) 피해\./),hit=msg.match(/적의 (?:강공격|공격): (\d+) 피해\./);
@@ -3025,9 +3039,15 @@ function describe(a,b,cmd,arg){if(['load','render'].includes(cmd))return [];cons
  if(freshLoot||freshReward)out.push({target:'reward',type:'reveal'});
  if(a.reward&&!a.reward.claimed&&b.reward?.id===a.reward.id&&b.reward.claimed)out.push({target:'player',type:'receipt',text:'전리품 확보'});
  else if(['collectLoot','takeLoot'].includes(cmd)&&a.scene==='loot'&&b.scene!=='loot')out.push({target:'player',type:'receipt',text:arg==='sell'?'장비 판매':arg==='equip'?'장비 착용':'장비 확보'});
+ if(b.scene==='battle'&&a.scene!=='battle'&&b.enemy?.boss)out.push({target:'banner',type:'boss',text:(b.enemy.midboss?'중간 수문장':'인장의 수호자')+' · '+b.enemy.name});
  if(a.scene!==b.scene||a.area!==b.area||a.step!==b.step)out.push({target:'scene',type:'transition'});
  if(!a.checkpoint&&b.checkpoint&&b.scene==='camp')out.push({target:'player',type:'guard',text:'여정을 기록했습니다'});
  if(cmd==='rest'&&a.scene==='camp'){const hp=b.hp-a.hp,mp=b.mp-a.mp;if(hp>0)out.push({target:'player',type:'heal',text:'휴식 +'+hp});else if(mp>0)out.push({target:'player',type:'guard',text:'MP +'+mp});if(hp>0||mp>0)out.push({target:'scene',type:'transition'});}
+ if(cmd==='awaken'){const id=b.unlocked.find(id=>!a.unlocked.includes(id));if(id)out.push({target:'banner',type:'hidden',text:'숨겨진 비전 · '+root.BFContent.JOBS[id].name});}
+ if(b.scene==='final'&&a.scene!=='final')out.push({target:'banner',type:'ending',text:'첫 불씨의 운명을 결정할 때'});
+ if(b.scene==='ending'&&a.scene!=='ending')out.push({target:'banner',type:'ending',text:b.ending});
+ if(freshLoot&&b.loot?.grade>=4)out.push({target:'banner',type:b.loot.grade===5?'mythic':'legend',text:root.BFContent.RARITIES[b.loot.grade]+' 발견 · '+b.loot.name});
+ if(a.scene==='battle'&&b.reward&&!b.reward.claimed&&a.reward?.id!==b.reward.id)out.push({target:'banner',type:'victory',text:'전투 승리 · 전리품을 확인하세요'});
  return out;
 }
 function create(host){let timer=null;const marked=[];
@@ -3041,6 +3061,9 @@ function create(host){let timer=null;const marked=[];
   }
   if(events.some(e=>e.target==='scene')){const n=host.querySelector('#bf-play .scene-hero,#bf-play .main>.story');if(n)mark(n,'fx-scene-enter');}
   if(events.some(e=>e.target==='reward'))host.querySelectorAll('#bf-play .reward-summary,#bf-play .fx-loot-card').forEach(n=>mark(n,'fx-reward-enter'));
+  // One compact banner: a rare find takes priority over the ordinary victory notice.
+  const banner=events.filter(e=>e.target==='banner').sort((a,b)=>({hidden:5,mythic:4,legend:3,boss:2,ending:2,victory:1}[b.type]||0)-({hidden:5,mythic:4,legend:3,boss:2,ending:2,victory:1}[a.type]||0))[0];
+  if(banner){const panel=host.querySelector('#bf-panel'),anchor=panel&&!panel.hidden?panel:host.querySelector('#bf-play .main');if(anchor){const layer=document.createElement('div');layer.className='fx-banner fx-banner-'+banner.type;layer.dataset.fxLayer='banner';layer.dataset.fxEvent=banner.type;layer.setAttribute('aria-hidden','true');const text=document.createElement('strong');text.textContent=banner.text;layer.append(text);anchor.append(layer);}}
   if(events.length)timer=setTimeout(clear,650);
  }
  return {show,clear};

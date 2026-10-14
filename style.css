@@ -1089,3 +1089,17 @@
 #black-forest-game .fx-scene-enter{animation:bf-scene-enter .28s ease-out}
 @keyframes bf-scene-enter{from{opacity:.65}to{opacity:1}}
 @media(prefers-reduced-motion:reduce){#black-forest-game .fx-scene-enter{animation:none}}
+
+/* Special moments use one small, noninteractive banner, never a full-screen overlay. */
+#black-forest-game .main{position:relative}
+#black-forest-game .fx-banner{position:absolute;top:12px;left:12px;right:12px;z-index:6;padding:12px 14px;border:1px solid #937951;border-left-width:3px;border-radius:7px;background:#1b1713f5;color:#e4d2ac;line-height:1.45;text-align:center;pointer-events:none;animation:bf-banner .6s ease-out both;contain:layout paint style}
+#black-forest-game .fx-banner strong{display:block;overflow-wrap:anywhere;font-size:16px}
+#black-forest-game .fx-banner-boss{background:#221112f5;border-color:#9b565b;color:#efb6b0}
+#black-forest-game .fx-banner-hidden,#black-forest-game .fx-banner-mythic{background:#112021f5;border-color:#6c9995;color:#c3dfd5}
+#black-forest-game .fx-banner-legend{border-color:#bd9e58;color:#f1dc9e}
+#black-forest-game .fx-banner-ending{background:#191727f5;border-color:#8b7a9a;color:#ded2e6}
+#black-forest-game .fx-banner-victory{padding:8px 12px;font-size:14px}
+@keyframes bf-banner{0%{opacity:0;transform:translateY(-4px)}15%,70%{opacity:1;transform:translateY(0)}100%{opacity:0;transform:translateY(0)}}
+@media(prefers-reduced-motion:reduce){#black-forest-game .fx-banner{animation:none;transform:none}}
+
+#black-forest-game #bf-panel>.fx-banner{position:fixed;top:max(68px,env(safe-area-inset-top));left:24px;right:24px;max-width:700px;margin-inline:auto}

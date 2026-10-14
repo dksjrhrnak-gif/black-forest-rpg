@@ -1,6 +1,6 @@
 /* Presentation only: snapshots never write game state or consume RNG. */
 (function(root){'use strict';
-function capture(game){const s=game.s;return {scene:s.scene,area:s.area,step:s.step,checkpoint:!!s.checkpoint,turns:s.turns,hp:s.hp,maxHp:game.maxHp(),mp:s.mp,loot:s.loot?{id:s.loot.id,grade:s.loot.grade,name:s.loot.name}:null,reward:s.rewardState?{id:s.rewardState.id,claimed:s.rewardState.claimed}:null,message:s.message,skillWeak:!!root.BFContent?.JOBS[s.job]?.effects.some(x=>x.type==='skillWeak'),enemy:s.enemy?{...s.enemy,pattern:undefined}:null};}
+function capture(game){const s=game.s;return {scene:s.scene,area:s.area,step:s.step,checkpoint:!!s.checkpoint,unlocked:[...s.unlocked],ending:s.ending,turns:s.turns,hp:s.hp,maxHp:game.maxHp(),mp:s.mp,loot:s.loot?{id:s.loot.id,grade:s.loot.grade,name:s.loot.name}:null,reward:s.rewardState?{id:s.rewardState.id,claimed:s.rewardState.claimed}:null,message:s.message,skillWeak:!!root.BFContent?.JOBS[s.job]?.effects.some(x=>x.type==='skillWeak'),enemy:s.enemy?{...s.enemy,pattern:undefined}:null};}
 function combatEffects(a,b,cmd,arg){const out=[];const add=(target,type,text)=>out.push({target,type,text});
  if(cmd!=='act'||a.scene!=='battle'||a.turns===b.turns)return out;
  const msg=b.message||'',damage=msg.match(/! (\d+) 피해\./),hit=msg.match(/적의 (?:강공격|공격): (\d+) 피해\./);
@@ -28,9 +28,15 @@ function describe(a,b,cmd,arg){if(['load','render'].includes(cmd))return [];cons
  if(freshLoot||freshReward)out.push({target:'reward',type:'reveal'});
  if(a.reward&&!a.reward.claimed&&b.reward?.id===a.reward.id&&b.reward.claimed)out.push({target:'player',type:'receipt',text:'전리품 확보'});
  else if(['collectLoot','takeLoot'].includes(cmd)&&a.scene==='loot'&&b.scene!=='loot')out.push({target:'player',type:'receipt',text:arg==='sell'?'장비 판매':arg==='equip'?'장비 착용':'장비 확보'});
+ if(b.scene==='battle'&&a.scene!=='battle'&&b.enemy?.boss)out.push({target:'banner',type:'boss',text:(b.enemy.midboss?'중간 수문장':'인장의 수호자')+' · '+b.enemy.name});
  if(a.scene!==b.scene||a.area!==b.area||a.step!==b.step)out.push({target:'scene',type:'transition'});
  if(!a.checkpoint&&b.checkpoint&&b.scene==='camp')out.push({target:'player',type:'guard',text:'여정을 기록했습니다'});
  if(cmd==='rest'&&a.scene==='camp'){const hp=b.hp-a.hp,mp=b.mp-a.mp;if(hp>0)out.push({target:'player',type:'heal',text:'휴식 +'+hp});else if(mp>0)out.push({target:'player',type:'guard',text:'MP +'+mp});if(hp>0||mp>0)out.push({target:'scene',type:'transition'});}
+ if(cmd==='awaken'){const id=b.unlocked.find(id=>!a.unlocked.includes(id));if(id)out.push({target:'banner',type:'hidden',text:'숨겨진 비전 · '+root.BFContent.JOBS[id].name});}
+ if(b.scene==='final'&&a.scene!=='final')out.push({target:'banner',type:'ending',text:'첫 불씨의 운명을 결정할 때'});
+ if(b.scene==='ending'&&a.scene!=='ending')out.push({target:'banner',type:'ending',text:b.ending});
+ if(freshLoot&&b.loot?.grade>=4)out.push({target:'banner',type:b.loot.grade===5?'mythic':'legend',text:root.BFContent.RARITIES[b.loot.grade]+' 발견 · '+b.loot.name});
+ if(a.scene==='battle'&&b.reward&&!b.reward.claimed&&a.reward?.id!==b.reward.id)out.push({target:'banner',type:'victory',text:'전투 승리 · 전리품을 확인하세요'});
  return out;
 }
 function create(host){let timer=null;const marked=[];
@@ -44,6 +50,9 @@ function create(host){let timer=null;const marked=[];
   }
   if(events.some(e=>e.target==='scene')){const n=host.querySelector('#bf-play .scene-hero,#bf-play .main>.story');if(n)mark(n,'fx-scene-enter');}
   if(events.some(e=>e.target==='reward'))host.querySelectorAll('#bf-play .reward-summary,#bf-play .fx-loot-card').forEach(n=>mark(n,'fx-reward-enter'));
+  // One compact banner: a rare find takes priority over the ordinary victory notice.
+  const banner=events.filter(e=>e.target==='banner').sort((a,b)=>({hidden:5,mythic:4,legend:3,boss:2,ending:2,victory:1}[b.type]||0)-({hidden:5,mythic:4,legend:3,boss:2,ending:2,victory:1}[a.type]||0))[0];
+  if(banner){const panel=host.querySelector('#bf-panel'),anchor=panel&&!panel.hidden?panel:host.querySelector('#bf-play .main');if(anchor){const layer=document.createElement('div');layer.className='fx-banner fx-banner-'+banner.type;layer.dataset.fxLayer='banner';layer.dataset.fxEvent=banner.type;layer.setAttribute('aria-hidden','true');const text=document.createElement('strong');text.textContent=banner.text;layer.append(text);anchor.append(layer);}}
   if(events.length)timer=setTimeout(clear,650);
  }
  return {show,clear};
