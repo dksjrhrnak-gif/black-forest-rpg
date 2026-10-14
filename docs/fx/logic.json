@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "jobs": 114,
+  "seededTurns": 3648,
+  "exactSaveRestores": 3648,
+  "types": [
+    "bleed",
+    "burn",
+    "critical",
+    "damage",
+    "dodge",
+    "dot",
+    "guard",
+    "heal",
+    "poison",
+    "reflect",
+    "stun",
+    "weak"
+  ],
+  "rejectedInput": true,
+  "fullHpNoFalseHeal": true,
+  "healingBeforeHit": true,
+  "enemyHealing": true,
+  "saveAndRngUnchanged": true
+}

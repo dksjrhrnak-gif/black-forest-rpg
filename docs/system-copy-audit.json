@@ -16,15 +16,16 @@
     "journey.js",
     "p2-exploration.js",
     "p3-systems.js",
+    "ui-fx.js",
     "ui.js",
     "shell.html",
     "style.css"
   ],
-  "candidateStrings": 2111,
-  "visibleCandidates": 2326,
+  "candidateStrings": 2132,
+  "visibleCandidates": 2347,
   "accessibilityAttributes": true,
   "englishDisplayArguments": true,
-  "cssGeneratedLabels": 3,
+  "cssGeneratedLabels": 5,
   "failures": [],
   "exceptions": [
     {

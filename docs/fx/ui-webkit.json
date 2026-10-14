@@ -1,0 +1,71 @@
+{
+  "status": "PASS",
+  "engine": "webkit",
+  "base": "http://127.0.0.1:4183/",
+  "checks": [
+    {
+      "width": 360,
+      "motion": "no-preference",
+      "combatFixtures": 7,
+      "exactTransactions": true,
+      "rapidClick": true,
+      "cleanup": true,
+      "reloadNoReplay": true,
+      "errors": 0
+    },
+    {
+      "width": 360,
+      "motion": "reduce",
+      "combatFixtures": 7,
+      "exactTransactions": true,
+      "rapidClick": true,
+      "cleanup": true,
+      "reloadNoReplay": true,
+      "errors": 0
+    },
+    {
+      "width": 390,
+      "motion": "no-preference",
+      "combatFixtures": 7,
+      "exactTransactions": true,
+      "rapidClick": true,
+      "cleanup": true,
+      "reloadNoReplay": true,
+      "errors": 0
+    },
+    {
+      "width": 390,
+      "motion": "reduce",
+      "combatFixtures": 7,
+      "exactTransactions": true,
+      "rapidClick": true,
+      "cleanup": true,
+      "reloadNoReplay": true,
+      "errors": 0
+    },
+    {
+      "width": 430,
+      "motion": "no-preference",
+      "combatFixtures": 7,
+      "exactTransactions": true,
+      "rapidClick": true,
+      "cleanup": true,
+      "reloadNoReplay": true,
+      "errors": 0
+    },
+    {
+      "width": 430,
+      "motion": "reduce",
+      "combatFixtures": 7,
+      "exactTransactions": true,
+      "rapidClick": true,
+      "cleanup": true,
+      "reloadNoReplay": true,
+      "errors": 0
+    }
+  ],
+  "fixtureMethod": "Focused synthetic combat saves, valid engine transactions and seeded RNG; not a natural full campaign.",
+  "limitations": [
+    "Responsive touch emulation, not a physical device."
+  ]
+}
