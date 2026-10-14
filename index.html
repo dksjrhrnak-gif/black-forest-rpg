@@ -1210,6 +1210,44 @@
 #black-forest-game .in-battle .main>.actions{padding-top:8px}
 @media(min-width:701px){#black-forest-game .stats{grid-template-columns:repeat(4,minmax(0,1fr))}#black-forest-game .scene-visual{height:360px}}
 
+/* B UI-4: readable action labels and image-led collection cards. */
+#black-forest-game .actions button.game-action .action-label,
+#black-forest-game .campnav button.game-action .action-label,
+#black-forest-game .classcards button.game-action .action-label,
+#black-forest-game button.game-action .action-label{font-size:var(--bf-btn-fs);font-weight:var(--bf-btn-fw);line-height:18px;opacity:1}
+#black-forest-game .stats>div{min-height:0}
+#black-forest-game .stats .statline{font-size:12px}
+#black-forest-game .stats .statline span:last-child{font-size:12px;font-weight:500}
+#black-forest-game .classcards{gap:12px;align-items:stretch}
+#black-forest-game .class-choice{display:flex;flex-direction:column;gap:6px;background:var(--bf-card);border-color:var(--bf-line);padding:12px}
+#black-forest-game .class-choice>.action-option{margin-top:auto;padding-top:8px}
+#black-forest-game .class-choice h3{color:var(--bf-text);font-family:Georgia,'Noto Serif KR',serif;font-size:20px}
+#black-forest-game .class-choice p{font-size:13px;line-height:1.65}
+#black-forest-game .class-choice .class-art{width:100%;max-width:240px;margin:0 auto 8px;background:var(--bf-bg);border:1px solid var(--bf-line);border-radius:var(--bf-card-r)}
+#black-forest-game .class-choice .class-art img{aspect-ratio:2/3;height:auto;object-fit:contain}
+#black-forest-game .joblist>.item,#black-forest-game .panel>.item:has(.class-art){padding:14px;border:1px solid var(--bf-line);border-radius:var(--bf-card-r);background:var(--bf-card);margin-bottom:12px}
+#black-forest-game .joblist .class-art{max-width:240px;background:var(--bf-bg);border-radius:var(--bf-card-r)}
+#black-forest-game .joblist h3{font:600 22px/1.4 Georgia,'Noto Serif KR',serif;color:var(--bf-text)}
+#black-forest-game .joblist .action-option{margin-top:12px}
+#black-forest-game .gear{padding:12px;border:1px solid var(--fx-rarity,var(--bf-line));border-radius:var(--bf-card-r);background:var(--bf-bg);margin:8px 0}
+#black-forest-game .fx-loot-card{display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center;padding:22px 12px;border-width:2px;background:radial-gradient(ellipse at top,color-mix(in srgb,var(--fx-rarity) 13%,transparent),transparent 75%),var(--bf-card)}
+#black-forest-game .fx-loot-card .gear-icon{float:none;width:72px;height:72px;margin:0;background:var(--bf-bg);border:1px solid var(--bf-line);border-radius:10px;object-fit:contain}
+#black-forest-game .fx-loot-card .gear-icon.item-art{width:96px;height:144px;aspect-ratio:2/3}
+#black-forest-game .fx-loot-card>p:first-of-type{font:600 22px/1.5 Georgia,'Noto Serif KR',serif;color:var(--bf-text)}
+#black-forest-game .fx-loot-card .rarity{display:block;width:fit-content;margin:0 auto 8px;padding:3px 10px;border:1px solid var(--fx-rarity);color:var(--fx-rarity);background:var(--bf-bg);border-radius:999px;font:600 12px/1.5 system-ui,sans-serif}
+#black-forest-game .fx-loot-card p.muted{font-size:13px;line-height:1.65}
+#black-forest-game .comparison{padding:12px;margin:12px 0;background:var(--bf-bg);border:1px solid var(--bf-line);border-radius:var(--bf-card-r);font-size:14px;line-height:1.75}
+#black-forest-game .reward-summary{padding:12px;margin:12px 0;border:1px solid var(--bf-line);border-radius:var(--bf-card-r);color:var(--bf-gold);background:var(--bf-bg);font-size:14px;line-height:1.7}
+#black-forest-game .armory-hub{background:radial-gradient(ellipse at 25% 50%,#56342344,transparent 70%),var(--bf-bg)}
+#black-forest-game .armory-sheet{background:var(--bf-card);border-color:var(--bf-line);border-radius:var(--bf-card-r) var(--bf-card-r) 0 0}
+#black-forest-game .armory .gear-slot{background:var(--bf-card);border-radius:var(--bf-btn-r)}
+#black-forest-game .armory-portrait .class-art{background:var(--bf-bg);border-color:var(--bf-line);border-radius:var(--bf-card-r)}
+#black-forest-game .armory-portrait figcaption{background:linear-gradient(transparent,#0d0b0af5);color:var(--bf-text)}
+#black-forest-game .armory-portrait figcaption span{color:var(--bf-muted)}
+#black-forest-game .armory-icon,#black-forest-game .armory-icon .gear-icon{background:var(--bf-bg);border-color:var(--bf-line)}
+#black-forest-game .armory-bag-item{border-color:var(--bf-line);border-left-color:var(--gear-color);border-radius:var(--bf-card-r);background:var(--bf-bg);padding:12px}
+#black-forest-game .armory-sheet .gear{padding:12px}
+
 </style>
 <div id="black-forest-game">
 <header class="top"><div><p class="eyebrow">THE LAST EMBER · TEXT RPG</p><h1>검은 숲의 방랑자</h1><p class="muted">마지막 불씨 · 통합판 5.6 · 여정과 이미지 연결</p></div><button type="button" data-ui="save" class="small cursor-interaction">저장 / 불러오기</button></header>
@@ -3187,7 +3225,8 @@ window.addEventListener('pagehide',()=>fx.clear());document.addEventListener('vi
 const visibleText=t=>String(t).replace(/보상 받고 다음 조우|다음 조우|계속 진행|자동 이동 중…/g,'계속 나아간다').replace(/보상 수령/g,'전리품을 챙긴다').replace(/체크포인트/g,'쉼터').replace(/경로 선택/g,'길을 살핀다').replace(/랜덤 인카운트/g,'길 위의 사건').replace(/다음 지역/g,'새로운 땅').replace(/불씨의 수호자/g,'불씨를 놓아준 자');
 const esc=t=>visibleText(t).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 let actionDescription=0;
-const b=(label,cmd,arg='',sub='',disabled=false,cls='')=>{const description=sub?'bf-action-help-'+(++actionDescription):'';return `<div class="action-option ${cls.includes('wide')?'wide':''}"><button type="button" class="cursor-interaction game-action ${cls}" data-cmd="${cmd}" data-arg="${esc(arg)}" ${description?`aria-describedby="${description}"`:''} ${disabled?'disabled':''}><span class="action-label">${esc(label)}</span></button>${sub?`<small class="action-help" id="${description}">${esc(sub)}</small>`:''}</div>`;};
+const actionLabel=(label,cmd,arg)=>cmd==='collectLoot'?arg==='equip'?'장착하고 나아간다':arg==='bag'?'챙기고 나아간다':label.replace('장비를 판다','판매'):cmd==='buy'?label.replace('회복 물약을 산다','물약 구매').replace('맑은 영약을 산다','영약 구매').replace('봉인된 장비를 산다','봉인 장비').replace(' 상자를 고른다',' 상자'):label;
+const b=(label,cmd,arg='',sub='',disabled=false,cls='')=>{const description=sub?'bf-action-help-'+(++actionDescription):'';return `<div class="action-option ${cls.includes('wide')?'wide':''}"><button type="button" class="cursor-interaction game-action ${cls}" data-cmd="${cmd}" data-arg="${esc(arg)}" ${description?`aria-describedby="${description}"`:''} ${disabled?'disabled':''}><span class="action-label">${esc(actionLabel(label,cmd,arg))}</span></button>${sub?`<small class="action-help" id="${description}">${esc(sub)}</small>`:''}</div>`;};
 const menu=(label,type,cls='')=>{const campOnly=['workshop','bag','equipment','quests','jobs','story'].includes(type)&&game.s.scene!=='camp',major=['workshop','bag','equipment','quests','jobs','story','restart','confirm-restart'].includes(type)||type.startsWith('gear-bag-');return `<button class="cursor-interaction ${major?'game-action':'aux-action'} ${cls}" type="button" data-ui="${type}" ${campOnly?'disabled title="모닥불로 돌아가 정비한다"':''}>${label}</button>`;};
 const meter=(label,n,max)=>`<div><div class="statline"><span>${esc(label)}</span><span>${n} / ${max}</span></div><progress aria-label="${esc(label)}" value="${Math.max(0,n)}" max="${max}"></progress></div>`;
 const art=(category,id,label,cls='scene-art')=>{const src=asset(category,id);return `<figure class="${cls}">${src?`<img src="${esc(src)}" alt="${esc(label)}" loading="lazy" decoding="async" width="400" height="600">`:''}<figcaption class="art-fallback" ${src?'hidden':''}>${esc(label)} · 기록의 여백</figcaption></figure>`;};
