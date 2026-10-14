@@ -1066,3 +1066,21 @@
 }
 #black-forest-game .scene-art.fx-hit:after,#black-forest-game .scene-art.fx-critical:after{content:"";position:absolute;inset:0;background:#a92f38;opacity:0;pointer-events:none;animation:bf-wound .3s ease-out}
 @media(prefers-reduced-motion:reduce){#black-forest-game .scene-art.fx-hit:after,#black-forest-game .scene-art.fx-critical:after{display:none;animation:none}}
+
+/* The six existing grades keep their names and probabilities. */
+#black-forest-game .gear.grade-0{--fx-rarity:#818c88}
+#black-forest-game .gear.grade-1{--fx-rarity:#9bad7a}
+#black-forest-game .gear.grade-2{--fx-rarity:#7ba4cb}
+#black-forest-game .gear.grade-3{--fx-rarity:#ad90c6}
+#black-forest-game .gear.grade-4{--fx-rarity:#c6aa68}
+#black-forest-game .gear.grade-5{--fx-rarity:#b57a82}
+#black-forest-game .gear{border-color:var(--fx-rarity,#818c88)}
+#black-forest-game .fx-loot-card{position:relative;isolation:isolate;box-shadow:inset 3px 0 var(--fx-rarity)}
+#black-forest-game .fx-loot-card .rarity{color:var(--fx-rarity)}
+#black-forest-game .fx-loot-card.grade-4,#black-forest-game .fx-loot-card.grade-5{box-shadow:inset 3px 0 var(--fx-rarity),0 0 12px #9b775522}
+#black-forest-game .fx-delta-up{color:#bddea5;font-weight:700}
+#black-forest-game .fx-delta-down{color:#efb0b4;font-weight:700}
+#black-forest-game .fx-receipt{color:#e9d7a2;border-color:#a08b57}
+#black-forest-game .fx-reward-enter{animation:bf-reward-enter .32s ease-out}
+@keyframes bf-reward-enter{from{opacity:.4;transform:translateY(4px)}to{opacity:1;transform:translateY(0)}}
+@media(prefers-reduced-motion:reduce){#black-forest-game .fx-reward-enter{animation:none;transform:none}}
