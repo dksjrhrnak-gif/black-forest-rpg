@@ -1,0 +1,149 @@
+{
+  "status": "PASS",
+  "engine": "chromium",
+  "base": "http://127.0.0.1:4194/",
+  "checks": [
+    {
+      "width": 360,
+      "motion": "no-preference",
+      "combatFixtures": 7,
+      "exactTransactions": true,
+      "rarityGrades": 6,
+      "actualRarePurchaseSeeds": [
+        1,
+        219
+      ],
+      "pendingAndClaimedReward": true,
+      "signedComparison": true,
+      "restAndCheckpoint": true,
+      "transitions": true,
+      "boss": true,
+      "hidden": true,
+      "endings": 3,
+      "scrolledViewportFeedback": true,
+      "rapidClick": true,
+      "cleanup": true,
+      "reloadNoReplay": true,
+      "errors": 0
+    },
+    {
+      "width": 360,
+      "motion": "reduce",
+      "combatFixtures": 7,
+      "exactTransactions": true,
+      "rarityGrades": 6,
+      "actualRarePurchaseSeeds": [
+        1,
+        219
+      ],
+      "pendingAndClaimedReward": true,
+      "signedComparison": true,
+      "restAndCheckpoint": true,
+      "transitions": true,
+      "boss": true,
+      "hidden": true,
+      "endings": 3,
+      "scrolledViewportFeedback": true,
+      "rapidClick": true,
+      "cleanup": true,
+      "reloadNoReplay": true,
+      "errors": 0
+    },
+    {
+      "width": 390,
+      "motion": "no-preference",
+      "combatFixtures": 7,
+      "exactTransactions": true,
+      "rarityGrades": 6,
+      "actualRarePurchaseSeeds": [
+        1,
+        219
+      ],
+      "pendingAndClaimedReward": true,
+      "signedComparison": true,
+      "restAndCheckpoint": true,
+      "transitions": true,
+      "boss": true,
+      "hidden": true,
+      "endings": 3,
+      "scrolledViewportFeedback": true,
+      "rapidClick": true,
+      "cleanup": true,
+      "reloadNoReplay": true,
+      "errors": 0
+    },
+    {
+      "width": 390,
+      "motion": "reduce",
+      "combatFixtures": 7,
+      "exactTransactions": true,
+      "rarityGrades": 6,
+      "actualRarePurchaseSeeds": [
+        1,
+        219
+      ],
+      "pendingAndClaimedReward": true,
+      "signedComparison": true,
+      "restAndCheckpoint": true,
+      "transitions": true,
+      "boss": true,
+      "hidden": true,
+      "endings": 3,
+      "scrolledViewportFeedback": true,
+      "rapidClick": true,
+      "cleanup": true,
+      "reloadNoReplay": true,
+      "errors": 0
+    },
+    {
+      "width": 430,
+      "motion": "no-preference",
+      "combatFixtures": 7,
+      "exactTransactions": true,
+      "rarityGrades": 6,
+      "actualRarePurchaseSeeds": [
+        1,
+        219
+      ],
+      "pendingAndClaimedReward": true,
+      "signedComparison": true,
+      "restAndCheckpoint": true,
+      "transitions": true,
+      "boss": true,
+      "hidden": true,
+      "endings": 3,
+      "scrolledViewportFeedback": true,
+      "rapidClick": true,
+      "cleanup": true,
+      "reloadNoReplay": true,
+      "errors": 0
+    },
+    {
+      "width": 430,
+      "motion": "reduce",
+      "combatFixtures": 7,
+      "exactTransactions": true,
+      "rarityGrades": 6,
+      "actualRarePurchaseSeeds": [
+        1,
+        219
+      ],
+      "pendingAndClaimedReward": true,
+      "signedComparison": true,
+      "restAndCheckpoint": true,
+      "transitions": true,
+      "boss": true,
+      "hidden": true,
+      "endings": 3,
+      "scrolledViewportFeedback": true,
+      "rapidClick": true,
+      "cleanup": true,
+      "reloadNoReplay": true,
+      "errors": 0
+    }
+  ],
+  "fixtureMethod": "Focused synthetic combat saves, valid engine transactions and seeded RNG; not a natural full campaign.",
+  "limitations": [
+    "Responsive touch emulation, not a physical device."
+  ]
+}

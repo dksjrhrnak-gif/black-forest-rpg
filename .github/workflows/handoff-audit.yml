@@ -122,6 +122,21 @@ jobs:
           node-version: '22'
       - run: npm ci --ignore-scripts
       - run: npx playwright install --with-deps ${{ matrix.browser }}
+      - name: Mobile single-screen baseline at four real viewport sizes
+        env:
+          BF_BROWSER: ${{ matrix.browser }}
+          BF_QA_URL: http://127.0.0.1:4174/single-before.html
+          BF_SINGLE_BEFORE: '1'
+        run: |
+          git show d01469cd157dd76798673641e4128370a99e036d:index.html > dist/single-before.html
+          node test-single-screen.cjs
+      - name: Mobile single-screen bounds, story access and unchanged saves
+        env:
+          BF_BROWSER: ${{ matrix.browser }}
+          BF_QA_URL: http://127.0.0.1:4174/
+        run: |
+          node test-single-screen.cjs
+          node test-single-screen-layout.cjs
       - name: Wait for this commit to finish Pages deployment
         env:
           GH_TOKEN: ${{ github.token }}
@@ -210,6 +225,21 @@ jobs:
           BF_BROWSER: ${{ matrix.browser }}
           BF_QA_URL: http://127.0.0.1:4174/
         run: node test-ui-review.cjs
+      - name: Mobile single-screen baseline at four real viewport sizes
+        env:
+          BF_BROWSER: ${{ matrix.browser }}
+          BF_QA_URL: http://127.0.0.1:4174/single-before.html
+          BF_SINGLE_BEFORE: '1'
+        run: |
+          git show d01469cd157dd76798673641e4128370a99e036d:index.html > dist/single-before.html
+          node test-single-screen.cjs
+      - name: Mobile single-screen bounds, story access and unchanged saves
+        env:
+          BF_BROWSER: ${{ matrix.browser }}
+          BF_QA_URL: http://127.0.0.1:4174/
+        run: |
+          node test-single-screen.cjs
+          node test-single-screen-layout.cjs
       - name: Wait for this commit to finish Pages deployment
         if: github.ref == 'refs/heads/main'
         env:
@@ -243,6 +273,7 @@ jobs:
         with:
           name: p3-${{ matrix.browser }}
           path: |
+            docs/single-screen/
             docs/p3/ui-*.json
             docs/p3/public/ui-*.json
             screenshots/p3/
