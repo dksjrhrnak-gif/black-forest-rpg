@@ -1047,11 +1047,11 @@
 #black-forest-game #bf-stats .stats>div:first-child{position:relative;isolation:isolate}
 #black-forest-game .fx-floats{position:absolute;inset:0;pointer-events:none;z-index:4;overflow:hidden;contain:layout paint style;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px}
 #black-forest-game .fx-enemy{justify-content:flex-start;padding-top:76px}
-#black-forest-game .fx-token{max-width:95%;font-size:16px;line-height:1.35;font-weight:800;color:#ffe7df;text-shadow:0 2px 3px #000,0 0 6px #000;background:#120a09db;border:1px solid #663b36;border-radius:5px;padding:2px 8px;animation:bf-float .56s ease-out both;animation-delay:calc(var(--fx-order)*12ms)}
+#black-forest-game .fx-token{max-width:95%;font-size:16px;line-height:1.35;font-weight:800;color:#ffe7df;text-shadow:0 2px 3px #000,0 0 6px #000;background:#120a09db;border:1px solid #663b36;border-radius:5px;padding:2px 8px;animation:bf-float var(--bf-fx-float) var(--bf-fx-ease) both;animation-delay:calc(var(--fx-order)*12ms)}
 #black-forest-game .fx-critical{color:#ffda96;font-size:20px;border-color:#ae7250}
-#black-forest-game .scene-art.fx-hit{animation:bf-impact .24s ease-out}
-#black-forest-game .scene-art.fx-critical{animation:bf-impact-critical .32s ease-out}
-#black-forest-game .fx-player-hit:after{content:"";position:absolute;inset:0;background:#b02d36;border-radius:inherit;opacity:0;pointer-events:none;z-index:-1;animation:bf-wound .3s ease-out}
+#black-forest-game .scene-art.fx-hit{animation:bf-impact var(--bf-fx-impact) var(--bf-fx-ease)}
+#black-forest-game .scene-art.fx-critical{animation:bf-impact-critical var(--bf-fx-critical) var(--bf-fx-ease)}
+#black-forest-game .fx-player-hit:after{content:"";position:absolute;inset:0;background:#b02d36;border-radius:inherit;opacity:0;pointer-events:none;z-index:-1;animation:bf-wound var(--bf-fx-wound) var(--bf-fx-ease)}
 #black-forest-game .fx-heal{color:#c3f1c9;border-color:#5b9868}
 #black-forest-game .fx-dodge,#black-forest-game .fx-guard,#black-forest-game .fx-weak{color:#badbed;border-color:#52768b}
 #black-forest-game .fx-poison{color:#c9dd94;border-color:#758454}
@@ -1067,7 +1067,7 @@
  #black-forest-game .fx-token,#black-forest-game .scene-art.fx-hit,#black-forest-game .scene-art.fx-critical,#black-forest-game .fx-player-hit:after{animation:none;transform:none}
  #black-forest-game .fx-player-hit:after{display:none}
 }
-#black-forest-game .scene-art.fx-hit:after,#black-forest-game .scene-art.fx-critical:after{content:"";position:absolute;inset:0;background:#a92f38;opacity:0;pointer-events:none;animation:bf-wound .3s ease-out}
+#black-forest-game .scene-art.fx-hit:after,#black-forest-game .scene-art.fx-critical:after{content:"";position:absolute;inset:0;background:#a92f38;opacity:0;pointer-events:none;animation:bf-wound var(--bf-fx-wound) var(--bf-fx-ease)}
 @media(prefers-reduced-motion:reduce){#black-forest-game .scene-art.fx-hit:after,#black-forest-game .scene-art.fx-critical:after{display:none;animation:none}}
 
 /* The six existing grades keep their names and probabilities. */
@@ -1084,17 +1084,17 @@
 #black-forest-game .fx-delta-up{color:#bddea5;font-weight:700}
 #black-forest-game .fx-delta-down{color:#efb0b4;font-weight:700}
 #black-forest-game .fx-receipt{color:#e9d7a2;border-color:#a08b57}
-#black-forest-game .fx-reward-enter{animation:bf-reward-enter .32s ease-out}
+#black-forest-game .fx-reward-enter{animation:bf-reward-enter var(--bf-fx-reward) var(--bf-fx-ease)}
 @keyframes bf-reward-enter{from{opacity:.4;transform:translateY(4px)}to{opacity:1;transform:translateY(0)}}
 @media(prefers-reduced-motion:reduce){#black-forest-game .fx-reward-enter{animation:none;transform:none}}
 
 /* Opacity leaves sticky combat controls and hit targets in their original positions. */
-#black-forest-game .fx-scene-enter{animation:bf-scene-enter .28s ease-out}
+#black-forest-game .fx-scene-enter{animation:bf-scene-enter var(--bf-fx-scene) var(--bf-fx-ease)}
 @keyframes bf-scene-enter{from{opacity:.65}to{opacity:1}}
 @media(prefers-reduced-motion:reduce){#black-forest-game .fx-scene-enter{animation:none}}
 
 /* Special moments use one small, noninteractive banner, never a full-screen overlay. */
-#black-forest-game .fx-banner{position:fixed;top:max(12px,env(safe-area-inset-top));left:24px;right:24px;max-width:700px;margin-inline:auto;z-index:30;padding:12px 14px;border:1px solid #937951;border-left-width:3px;border-radius:7px;background:#1b1713f5;color:#e4d2ac;line-height:1.45;text-align:center;pointer-events:none;animation:bf-banner .6s ease-out both;contain:layout paint style}
+#black-forest-game .fx-banner{position:fixed;top:max(12px,env(safe-area-inset-top));left:24px;right:24px;max-width:700px;margin-inline:auto;z-index:30;padding:12px 14px;border:1px solid #937951;border-left-width:3px;border-radius:7px;background:#1b1713f5;color:#e4d2ac;line-height:1.45;text-align:center;pointer-events:none;animation:bf-banner var(--bf-fx-banner) var(--bf-fx-ease) both;contain:layout paint style}
 #black-forest-game .fx-banner strong{display:block;overflow-wrap:anywhere;font-size:16px}
 #black-forest-game .fx-banner-boss{background:#221112f5;border-color:#9b565b;color:#efb6b0}
 #black-forest-game .fx-banner-hidden,#black-forest-game .fx-banner-mythic{background:#112021f5;border-color:#6c9995;color:#c3dfd5}
@@ -1110,10 +1110,250 @@
 #black-forest-game .fx-floats.fx-compact{position:fixed;inset:76px 12px auto auto;width:min(170px,calc((100vw - 36px)/2));max-height:240px;z-index:30;padding:0;justify-content:flex-start}
 #black-forest-game .fx-player.fx-compact{left:12px;right:auto}
 #black-forest-game .fx-target{font-size:11px;line-height:1.5;color:#ded4bd;background:#101513e8;border-radius:4px;padding:0 5px}
-#black-forest-game .enemy.fx-hit,#black-forest-game .enemy.fx-critical{position:relative;isolation:isolate;animation:bf-impact .24s ease-out}
-#black-forest-game .enemy.fx-critical{animation-name:bf-impact-critical;animation-duration:.32s}
-#black-forest-game .enemy.fx-hit:after,#black-forest-game .enemy.fx-critical:after{content:"";position:absolute;inset:0;background:#a92f38;opacity:0;pointer-events:none;animation:bf-wound .3s ease-out}
+#black-forest-game .enemy.fx-hit,#black-forest-game .enemy.fx-critical{position:relative;isolation:isolate;animation:bf-impact var(--bf-fx-impact) var(--bf-fx-ease)}
+#black-forest-game .enemy.fx-critical{animation-name:bf-impact-critical;animation-duration:var(--bf-fx-critical)}
+#black-forest-game .enemy.fx-hit:after,#black-forest-game .enemy.fx-critical:after{content:"";position:absolute;inset:0;background:#a92f38;opacity:0;pointer-events:none;animation:bf-wound var(--bf-fx-wound) var(--bf-fx-ease)}
 @media(prefers-reduced-motion:reduce){#black-forest-game .enemy.fx-hit,#black-forest-game .enemy.fx-critical,#black-forest-game .enemy.fx-hit:after,#black-forest-game .enemy.fx-critical:after{animation:none;transform:none}#black-forest-game .enemy.fx-hit:after,#black-forest-game .enemy.fx-critical:after{display:none}}
+
+/* B UI-2: shared action contract. Explanations remain outside the 52px target. */
+#black-forest-game{
+  --bf-btn-h:52px;--bf-btn-gap:8px;--bf-btn-r:10px;--bf-btn-fs:15px;--bf-btn-fw:600;
+  --bf-btn-px:8px;--bf-pad:14px;--bf-card-pad:12px;--bf-card-r:12px;
+  --bf-fx-impact:.24s;--bf-fx-critical:.32s;--bf-fx-wound:.3s;--bf-fx-reward:.32s;
+  --bf-fx-scene:.28s;--bf-fx-float:.56s;--bf-fx-banner:.6s;--bf-fx-ease:ease-out;
+}
+#black-forest-game button.game-action,
+#black-forest-game .armory button.game-action{
+  display:flex;align-items:center;justify-content:center;flex-direction:row;
+  width:100%;height:var(--bf-btn-h);min-height:var(--bf-btn-h);max-height:var(--bf-btn-h);
+  padding:6px var(--bf-btn-px);border-radius:var(--bf-btn-r);gap:0;
+  font-size:var(--bf-btn-fs);font-weight:var(--bf-btn-fw);line-height:18px;text-align:center;
+  white-space:normal;overflow-wrap:anywhere;text-overflow:clip;flex-shrink:0;margin:0;
+}
+#black-forest-game button.game-action .action-label{font:inherit;opacity:1;white-space:normal}
+#black-forest-game .action-option{display:flex;flex-direction:column;gap:5px;min-width:0}
+#black-forest-game .action-help{display:block;position:static;font-size:11px;line-height:1.55;color:var(--bf-dim);padding:0 3px;overflow-wrap:anywhere;text-align:left}
+#black-forest-game .actions,
+#black-forest-game .armory .actions,
+#black-forest-game .campnav,
+#black-forest-game .row:has(>.action-option){display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--bf-btn-gap);align-items:start}
+#black-forest-game .actions>.wide,
+#black-forest-game .actions>.action-option:only-child,
+#black-forest-game .actions>.game-action:only-child,
+#black-forest-game .row>.action-option:only-child{grid-column:1/-1}
+#black-forest-game .actions:not(:has(>.wide))>:last-child:nth-child(odd),
+#black-forest-game .campnav>:last-child:nth-child(odd){grid-column:1/-1}
+#black-forest-game .actions:has([data-cmd="chapterChoice"]),
+#black-forest-game .actions:has([data-cmd="event"]),
+#black-forest-game .actions:has([data-cmd="dialogue"]),
+#black-forest-game .actions:has([data-cmd="npcChoice"]),
+#black-forest-game .actions:has([data-cmd="bondChoice"]),
+#black-forest-game .actions:has([data-cmd="finish"]){grid-template-columns:1fr}
+#black-forest-game .class-choice{min-width:0;padding:12px;border:1px solid var(--bf-line);border-radius:var(--bf-card-r);background:var(--bf-panel)}
+#black-forest-game .class-choice>.action-option{margin-top:12px}
+#black-forest-game .class-choice h3{font-size:18px}
+#black-forest-game .aux-action,#black-forest-game button.small:not(.game-action){min-height:44px;font-size:12px;text-align:center}
+
+/* B UI-3: semantic palette; keep existing responsive/FX overrides intact. */
+#black-forest-game{
+  --bf-bg:#0d0b0a;--bf-card:#17120f;--bf-card-2:#201913;--bf-line:#3a2c20;
+  --bf-text:#e8dfd2;--bf-muted:#b5a795;--bf-ember:#e8944a;--bf-gold:#ffd36a;
+  --bf-hp:#d04a3c;--bf-mp:#4f8fd8;--bf-shell:var(--bf-bg);--bf-panel:var(--bf-card);
+  --bf-surface:var(--bf-card-2);--bf-ink:var(--bf-text);--bf-dim:var(--bf-muted);
+  --bf-edge:var(--bf-line);--bf-accent:var(--bf-ember);--bf-accent-soft:#865a34;
+  --bf-gold-hi:var(--bf-gold);--bf-on:#fff6e8;--bf-tint:#281e17;--bf-danger:#eb9b8b;
+  background:var(--bf-bg);border-color:var(--bf-line);
+}
+#black-forest-game .main,#black-forest-game .is-conversation .main{background:var(--bf-card);border-color:var(--bf-line);border-radius:var(--bf-card-r);padding:var(--bf-card-pad)}
+#black-forest-game .scene-hero,#black-forest-game .scene-hero.scene-chapter,
+#black-forest-game .scene-hero.scene-dialogue,#black-forest-game .scene-hero.scene-npc,
+#black-forest-game .scene-hero.scene-bond{display:block;min-height:0;border-color:var(--bf-line);border-radius:var(--bf-card-r);background:var(--bf-bg);margin:0 0 12px}
+#black-forest-game .scene-visual{position:relative;width:100%;height:320px;isolation:isolate;overflow:hidden}
+#black-forest-game .scene-hero .scene-art{position:absolute;inset:0;height:100%;width:100%;max-height:none;aspect-ratio:auto;margin:0;background:var(--bf-bg)}
+#black-forest-game .scene-hero .scene-art img{height:100%;min-height:0;width:100%;max-height:none;aspect-ratio:auto;object-fit:cover;object-position:center 30%}
+#black-forest-game .scene-hero-shade{inset:0;max-height:none;aspect-ratio:auto;background:linear-gradient(180deg,#0d0b0a12 25%,#0d0b0a22 55%,#0d0b0af2 100%)}
+#black-forest-game .scene-hero .scene-hero-head{position:absolute;top:auto;bottom:0;left:0;right:0;padding:22px 14px 14px}
+#black-forest-game .scene-hero-head .eyebrow{color:#e9c59f;font-size:10px;letter-spacing:1px}
+#black-forest-game .scene-hero-head h2{font:600 24px/1.35 Georgia,'Noto Serif KR',serif;color:var(--bf-text)}
+#black-forest-game .scene-hero .scene-hero-body{position:relative;margin:0;padding:var(--bf-card-pad);background:var(--bf-card);color:var(--bf-text);text-shadow:none;border-top:1px solid var(--bf-line)}
+#black-forest-game .scene-hero-text{font-size:15px;line-height:1.75;margin:0 0 8px}
+#black-forest-game .scene-hero-text:last-child{margin-bottom:0}
+#black-forest-game .scene-hero-quote{color:var(--bf-text);background:transparent;border-color:var(--bf-ember);font-size:15px;line-height:1.75}
+#black-forest-game .scene-hero-question{border-color:var(--bf-line)}
+#black-forest-game .scene-hero-question strong{color:var(--bf-text);font-size:15px}
+#black-forest-game .scene-hero-question span,#black-forest-game .scene-hero-question small{color:var(--bf-muted);letter-spacing:0;font-size:11px}
+/* Story portraits retain full 2:3 art rather than cropping the characters. */
+#black-forest-game .scene-story-art .scene-visual{height:auto;aspect-ratio:2/3;max-height:640px}
+#black-forest-game .scene-story-art .scene-art img{object-fit:contain;object-position:center}
+#black-forest-game #bf-stats{position:static;padding:0;z-index:auto;background:var(--bf-card)}
+#black-forest-game .stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;padding:12px;margin:0 0 12px;border:1px solid var(--bf-line);border-radius:var(--bf-card-r)}
+#black-forest-game .scene-hero .stats{margin:0;border:0;border-top:1px solid var(--bf-line);border-radius:0}
+#black-forest-game .stats>div{background:transparent;border:0;box-shadow:none;padding:0;min-width:0}
+#black-forest-game .statline{font-size:12px;gap:6px;line-height:1.5}
+#black-forest-game .stats>div:nth-child(3),#black-forest-game .stats>div:nth-child(4){font-size:11px}
+#black-forest-game .stats>div:nth-child(3) progress{height:5px}
+#black-forest-game .stats .muted{font-size:11px}
+#black-forest-game .stats .small{margin-top:4px;width:100%;min-height:44px}
+#black-forest-game progress{height:8px;background:var(--bf-tint)}
+#black-forest-game progress::-webkit-progress-bar{background:var(--bf-tint)}
+#black-forest-game .stats>div:first-child progress,#black-forest-game .enemy progress{accent-color:var(--bf-hp)}
+#black-forest-game .stats>div:first-child progress::-webkit-progress-value,#black-forest-game .enemy progress::-webkit-progress-value{background:var(--bf-hp)}
+#black-forest-game .stats>div:first-child progress::-moz-progress-bar,#black-forest-game .enemy progress::-moz-progress-bar{background:var(--bf-hp)}
+#black-forest-game .stats>div:nth-child(2) progress{accent-color:var(--bf-mp)}
+#black-forest-game .stats>div:nth-child(2) progress::-webkit-progress-value{background:var(--bf-mp)}
+#black-forest-game .stats>div:nth-child(2) progress::-moz-progress-bar{background:var(--bf-mp)}
+#black-forest-game .enemy{background:var(--bf-bg);border:1px solid var(--bf-line);border-radius:var(--bf-card-r);margin:0 0 12px;padding:12px}
+#black-forest-game .enemy .intent{color:var(--bf-danger);margin-top:4px;font-size:12px}
+#black-forest-game button.game-action{background:#211913;border-color:#715b43;color:var(--bf-text)}
+#black-forest-game button.game-action.primary{background:linear-gradient(180deg,#b95321,#833715);border-color:var(--bf-ember);color:#fff4e7}
+#black-forest-game button.game-action:hover:not(:disabled){background:#352619}
+#black-forest-game button.game-action.primary:hover:not(:disabled){background:#a94b20}
+#black-forest-game .main>.actions{background:var(--bf-card);border-color:var(--bf-line);backdrop-filter:none}
+#black-forest-game .in-battle .main>.actions{padding-top:8px}
+@media(min-width:701px){#black-forest-game .stats{grid-template-columns:repeat(4,minmax(0,1fr))}#black-forest-game .scene-visual{height:360px}}
+
+/* B UI-4: readable action labels and image-led collection cards. */
+#black-forest-game .actions button.game-action .action-label,
+#black-forest-game .campnav button.game-action .action-label,
+#black-forest-game .classcards button.game-action .action-label,
+#black-forest-game button.game-action .action-label{font-size:var(--bf-btn-fs);font-weight:var(--bf-btn-fw);line-height:18px;opacity:1}
+#black-forest-game .stats>div{min-height:0}
+#black-forest-game .stats .statline{font-size:12px}
+#black-forest-game .stats .statline span:last-child{font-size:12px;font-weight:500}
+#black-forest-game .classcards{gap:12px;align-items:stretch}
+#black-forest-game .class-choice{display:flex;flex-direction:column;gap:6px;background:var(--bf-card);border-color:var(--bf-line);padding:12px}
+#black-forest-game .class-choice>.action-option{margin-top:auto;padding-top:8px}
+#black-forest-game .class-choice h3{color:var(--bf-text);font-family:Georgia,'Noto Serif KR',serif;font-size:20px}
+#black-forest-game .class-choice p{font-size:13px;line-height:1.65}
+#black-forest-game .class-choice .class-art{width:100%;max-width:240px;margin:0 auto 8px;background:var(--bf-bg);border:1px solid var(--bf-line);border-radius:var(--bf-card-r)}
+#black-forest-game .class-choice .class-art img{aspect-ratio:2/3;height:auto;object-fit:contain}
+#black-forest-game .joblist>.item,#black-forest-game .panel>.item:has(.class-art){padding:14px;border:1px solid var(--bf-line);border-radius:var(--bf-card-r);background:var(--bf-card);margin-bottom:12px}
+#black-forest-game .joblist .class-art{max-width:240px;background:var(--bf-bg);border-radius:var(--bf-card-r)}
+#black-forest-game .joblist h3{font:600 22px/1.4 Georgia,'Noto Serif KR',serif;color:var(--bf-text)}
+#black-forest-game .joblist .action-option{margin-top:12px}
+#black-forest-game .gear{padding:12px;border:1px solid var(--fx-rarity,var(--bf-line));border-radius:var(--bf-card-r);background:var(--bf-bg);margin:8px 0}
+#black-forest-game .fx-loot-card{display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center;padding:22px 12px;border-width:2px;background:radial-gradient(ellipse at top,color-mix(in srgb,var(--fx-rarity) 13%,transparent),transparent 75%),var(--bf-card)}
+#black-forest-game .fx-loot-card .gear-icon{float:none;width:72px;height:72px;margin:0;background:var(--bf-bg);border:1px solid var(--bf-line);border-radius:10px;object-fit:contain}
+#black-forest-game .fx-loot-card .gear-icon.item-art{width:96px;height:144px;aspect-ratio:2/3}
+#black-forest-game .fx-loot-card>p:first-of-type{font:600 22px/1.5 Georgia,'Noto Serif KR',serif;color:var(--bf-text)}
+#black-forest-game .fx-loot-card .rarity{display:block;width:fit-content;margin:0 auto 8px;padding:3px 10px;border:1px solid var(--fx-rarity);color:var(--fx-rarity);background:var(--bf-bg);border-radius:999px;font:600 12px/1.5 system-ui,sans-serif}
+#black-forest-game .fx-loot-card p.muted{font-size:13px;line-height:1.65}
+#black-forest-game .comparison{padding:12px;margin:12px 0;background:var(--bf-bg);border:1px solid var(--bf-line);border-radius:var(--bf-card-r);font-size:14px;line-height:1.75}
+#black-forest-game .reward-summary{padding:12px;margin:12px 0;border:1px solid var(--bf-line);border-radius:var(--bf-card-r);color:var(--bf-gold);background:var(--bf-bg);font-size:14px;line-height:1.7}
+#black-forest-game .armory-hub{background:radial-gradient(ellipse at 25% 50%,#56342344,transparent 70%),var(--bf-bg)}
+#black-forest-game .armory-sheet{background:var(--bf-card);border-color:var(--bf-line);border-radius:var(--bf-card-r) var(--bf-card-r) 0 0}
+#black-forest-game .armory .gear-slot{background:var(--bf-card);border-radius:var(--bf-btn-r)}
+#black-forest-game .armory-portrait .class-art{background:var(--bf-bg);border-color:var(--bf-line);border-radius:var(--bf-card-r)}
+#black-forest-game .armory-portrait figcaption{background:linear-gradient(transparent,#0d0b0af5);color:var(--bf-text)}
+#black-forest-game .armory-portrait figcaption span{color:var(--bf-muted)}
+#black-forest-game .armory-icon,#black-forest-game .armory-icon .gear-icon{background:var(--bf-bg);border-color:var(--bf-line)}
+#black-forest-game .armory-bag-item{border-color:var(--bf-line);border-left-color:var(--gear-color);border-radius:var(--bf-card-r);background:var(--bf-bg);padding:12px}
+#black-forest-game .armory-sheet .gear{padding:12px}
+
+/* B UI-5: apply the same surfaces to existing utility and story screens. */
+#black-forest-game .top:after{background:linear-gradient(90deg,transparent,var(--bf-line) 18%,var(--bf-line) 82%,transparent)}
+#black-forest-game .top .muted{color:var(--bf-muted)}
+#black-forest-game .sideblock,#black-forest-game .panel,#black-forest-game .panelbar{background:var(--bf-card);border-color:var(--bf-line);color:var(--bf-text)}
+#black-forest-game .panelbar{gap:8px;padding:10px 0}
+#black-forest-game .armory-panel>.panelbar{padding:10px 14px}
+#black-forest-game .panelbar>span{font:600 18px/1.4 Georgia,'Noto Serif KR',serif}
+#black-forest-game .panel:before{background:#715b43}
+#black-forest-game .panel h3{color:var(--bf-text)}
+#black-forest-game .panel>.item{border-color:var(--bf-line)}
+#black-forest-game .panel .actions{padding:0;margin:12px 0;border:0}
+#black-forest-game .panel details,#black-forest-game .p3-ending-region{background:var(--bf-bg);border-color:var(--bf-line);border-radius:var(--bf-card-r)}
+#black-forest-game .p3-craft-preview,#black-forest-game .p3-tuning{margin:12px 0;padding:12px;border:1px solid var(--bf-line)}
+#black-forest-game summary{min-height:44px;padding:10px 0;color:var(--bf-text);line-height:1.6}
+#black-forest-game .p3-craft-preview>summary,#black-forest-game .p3-tuning>summary{font-size:15px}
+#black-forest-game .p3-set-summary .item{padding:12px;border-color:var(--bf-line)}
+#black-forest-game .filters input,#black-forest-game .filters select,
+#black-forest-game textarea,#black-forest-game .commandrow input{background:var(--bf-bg);border-color:#715b43;color:var(--bf-text);border-radius:var(--bf-btn-r)}
+#black-forest-game .aux-action,#black-forest-game button.small:not(.game-action),#black-forest-game .commandrow button{background:var(--bf-bg);border-color:#715b43;color:var(--bf-text);border-radius:var(--bf-btn-r);min-height:44px;font-size:12px;font-weight:600;text-align:center}
+#black-forest-game .aux-action:hover:not(:disabled){background:var(--bf-tint)}
+#black-forest-game .footer,#black-forest-game .commandrow{border-color:var(--bf-line)}
+#black-forest-game .campnav{background:transparent;border-color:var(--bf-line);padding-top:12px;margin-top:16px}
+#black-forest-game .story{color:var(--bf-text);font-size:15px;line-height:1.8}
+#black-forest-game .opening-story{background:var(--bf-bg);border:1px solid var(--bf-line);border-radius:var(--bf-card-r);padding:12px}
+#black-forest-game .badge{background:var(--bf-tint);border:1px solid var(--bf-line);color:var(--bf-text);border-radius:999px}
+#black-forest-game .p3-ending{margin-top:18px;font-size:15px;line-height:1.8}
+#black-forest-game .p3-ending-region{padding:14px;margin:12px 0;border:1px solid var(--bf-line)}
+#black-forest-game .p3-ending-region h3{color:var(--bf-gold);font:600 20px/1.4 Georgia,'Noto Serif KR',serif}
+#black-forest-game .p3-ending-region .muted{font-size:13px}
+#black-forest-game .route{border-color:var(--bf-line)}
+#black-forest-game .step.current{outline-color:var(--bf-ember)}
+#black-forest-game .collectionitem,#black-forest-game .logitem{background:var(--bf-bg);border-color:var(--bf-line);border-radius:var(--bf-card-r)}
+#black-forest-game .is-conversation .actions{background:var(--bf-card)}
+/* HP card remains the original FX anchor; preserve its unclipped overlay. */
+#black-forest-game .stats>div{overflow:visible}
+#black-forest-game .scene-hero-head .enemy{background:transparent;border:0;padding:0;margin:8px 0 0;gap:2px}
+#black-forest-game .scene-hero-head .enemy .statline>span:first-child{display:none}
+#black-forest-game .scene-hero-head .enemy .statline{justify-content:flex-end;color:var(--bf-text)}
+#black-forest-game .scene-hero-head .enemy .intent{font-size:12px;color:#f3c5b6;text-shadow:0 1px 4px #000}
+#black-forest-game .scene-hero-head .enemy progress{height:10px;margin-top:4px}
+@media(max-width:700px){
+ #black-forest-game .top h1{font-size:24px}
+ #black-forest-game .main>.actions{margin:12px -12px -12px;padding:8px 12px calc(8px + env(safe-area-inset-bottom));border-radius:0 0 var(--bf-card-r) var(--bf-card-r)}
+ #black-forest-game .is-conversation .main>.actions{position:static;margin:12px 0 0;padding:8px 0 0;border-radius:0;box-shadow:none}
+}
+#black-forest-game .actions button.game-action .action-label,
+#black-forest-game .campnav button.game-action .action-label,
+#black-forest-game .classcards button.game-action .action-label{color:inherit}
+
+/* PR #7 P1-1: routine approaches are shorter; full art and key scenes survive. */
+#black-forest-game .scene-hero.scene-compact .scene-visual{height:auto;max-height:none;aspect-ratio:auto;background:var(--bf-bg)}
+#black-forest-game .scene-hero.scene-compact .scene-art{position:relative;inset:auto;height:220px;aspect-ratio:auto;max-height:none}
+#black-forest-game .scene-hero.scene-compact .scene-art img{height:100%;min-height:0;max-height:none;object-fit:contain;object-position:center}
+#black-forest-game .scene-hero.scene-compact.scene-chapter .scene-art{height:350px}
+#black-forest-game .scene-hero.scene-compact .scene-hero-head{position:relative;inset:auto;padding:10px 14px;background:var(--bf-bg)}
+#black-forest-game .scene-hero.scene-compact .scene-hero-shade{display:none}
+#black-forest-game .scene-hero.scene-compact .scene-hero-head h2{font-size:22px}
+
+/* PR #7 P1-2: vitals keep their original first/second FX anchors. */
+#black-forest-game .stats.combat-hud{grid-template-columns:minmax(0,1fr) 96px;gap:6px 8px;padding:8px 10px}
+#black-forest-game .stats.combat-hud>div:first-child,#black-forest-game .stats.combat-hud>div:nth-child(2){grid-column:1/-1;display:grid;grid-template-columns:minmax(100px,1fr) minmax(0,1fr);gap:10px;align-items:center}
+#black-forest-game .stats.combat-hud>div:nth-child(-n+2) progress{height:8px;margin:0}
+#black-forest-game .stats.combat-hud .combat-growth{min-width:0}
+#black-forest-game .combat-growth .statline{font-size:11px;overflow-wrap:anywhere}
+#black-forest-game .combat-growth progress{height:4px;margin-top:3px}
+#black-forest-game .combat-meta{margin-top:4px;font-size:11px;line-height:1.5}
+#black-forest-game .stats.combat-hud .combat-detail{display:flex;align-items:center;justify-content:flex-end}
+#black-forest-game .stats.combat-hud .combat-detail button{width:96px;margin:0;padding:6px 8px;min-height:44px}
+#black-forest-game .combat-effects{display:flex;flex-wrap:wrap;gap:4px;padding:0 10px 8px;border-bottom:1px solid var(--bf-line)}
+#black-forest-game .combat-effects span{font-size:12px;line-height:1.55;color:var(--bf-text);border:1px solid #715b43;border-radius:6px;padding:2px 6px;background:var(--bf-bg)}
+
+/* PR #7 P2-1: locked is a state, not unreadable text. */
+#black-forest-game .career-conditions{list-style:none;padding:0;margin:12px 0;display:grid;gap:4px}
+#black-forest-game .career-condition{display:grid;grid-template-columns:18px minmax(0,1fr) auto;gap:6px;align-items:center;padding:4px 6px;border:1px solid var(--bf-line);border-radius:8px;font-size:13px;line-height:1.5;background:var(--bf-bg)}
+#black-forest-game .career-condition.is-met{border-color:#49624a;color:#c3dfc6}
+#black-forest-game .career-condition.is-unmet{border-color:#72523a;color:#f0d0af}
+#black-forest-game .condition-mark{font-weight:700;text-align:center}
+#black-forest-game .condition-value{font-size:11px;white-space:nowrap;font-variant-numeric:tabular-nums}
+#black-forest-game .career-intro{display:grid;grid-template-columns:minmax(0,1fr) 96px;gap:12px;align-items:start}
+#black-forest-game .career-intro .class-art{width:96px;max-width:100%;margin:0}
+#black-forest-game .career-intro .class-art img{width:100%;height:auto;aspect-ratio:2/3;object-fit:contain}
+#black-forest-game button.game-action[data-cmd="changeJob"]:disabled,
+#black-forest-game button.game-action[data-cmd="awaken"]:disabled{opacity:1;background:#211b16;border:1px dashed #88715a;color:#cbbfb0;cursor:not-allowed;box-shadow:none}
+#black-forest-game .career-candidate .action-option{margin-top:12px}
+
+/* PR #7 P2-2: acquisition leads; selling remains a full-size secondary choice. */
+#black-forest-game button.game-action.reward-keep{background:#302317;border-color:var(--bf-gold);color:var(--bf-text)}
+#black-forest-game button.game-action.reward-keep:hover:not(:disabled){background:#3c2b1c}
+#black-forest-game button.game-action.reward-sell{background:transparent;border-color:#655545;color:#c8bcad;box-shadow:none}
+#black-forest-game button.game-action.reward-sell:hover:not(:disabled){background:var(--bf-bg);border-color:#88715a}
+#black-forest-game .fx-loot-card.grade-4,#black-forest-game .fx-loot-card.grade-5{border-width:2px;box-shadow:inset 0 1px 0 color-mix(in srgb,var(--fx-rarity) 40%,transparent),0 0 12px color-mix(in srgb,var(--fx-rarity) 12%,transparent)}
+#black-forest-game .fx-loot-card.grade-4 .gear-icon:not(.item-art),#black-forest-game .fx-loot-card.grade-5 .gear-icon:not(.item-art){width:84px;height:84px;border-color:var(--fx-rarity)}
+
+/* PR #7 P2-3: distinct type/name/core stats; full options stay in the sheet. */
+#black-forest-game .armory-hub{grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:10px}
+#black-forest-game .armory .gear-slot{grid-template-columns:24px minmax(0,1fr);gap:6px;padding:6px 8px}
+#black-forest-game .gear-slot .armory-icon{width:24px;height:24px;font-size:18px}
+#black-forest-game .gear-slot .armory-icon:has(.item-art){width:24px;height:36px}
+#black-forest-game .slot-copy{min-width:0}
+#black-forest-game .slot-kind{display:block;font-size:11px;line-height:1.4;color:var(--bf-muted)}
+#black-forest-game .armory .gear-slot strong{font-size:13px;font-weight:600;line-height:1.5;color:var(--bf-text);white-space:normal;text-overflow:clip;overflow:visible}
+#black-forest-game .armory .gear-slot small{font-size:11px;line-height:1.5;color:var(--bf-muted)}
+#black-forest-game .slot-rarity{color:var(--gear-color);font-weight:600}
+@media(max-height:500px){#black-forest-game .armory .gear-slot{grid-template-columns:20px minmax(0,1fr);padding:3px 5px}#black-forest-game .gear-slot .armory-icon{width:20px;height:20px}#black-forest-game .slot-kind{font-size:10px}}
 
 </style>
 <div id="black-forest-game">
@@ -3066,10 +3306,10 @@ function create(host){let timer=null;const marked=[];
   const anchors={player:host.querySelector('#bf-stats .stats>div:first-child'),enemy:host.querySelector('#bf-play .scene-hero')},card=host.querySelector('#bf-play .enemy'),frames={};
   // Batch geometry reads before adding nodes. Offscreen feedback uses a small viewport rail.
   for(const target of Object.keys(grouped))if(grouped[target].length&&anchors[target])frames[target]=anchors[target].getBoundingClientRect();
-  for(const [target,list] of Object.entries(grouped)){if(!list.length)continue;const anchor=anchors[target];if(!anchor)continue;const rect=frames[target],compact=target==='player'?rect.top<0||rect.bottom>root.innerHeight:rect.top+76<0||rect.top+240>root.innerHeight;
+  for(const [target,list] of Object.entries(grouped)){if(!list.length)continue;const anchor=anchors[target];if(!anchor)continue;const rect=frames[target],compact=target==='player'?rect.top<0||rect.bottom>root.innerHeight||rect.height<Math.min(6,list.length)*28+16:rect.top+76<0||rect.top+240>root.innerHeight;
    const layer=document.createElement('div');layer.className='fx-floats fx-'+target+(compact?' fx-compact':'');layer.dataset.fxLayer=target;layer.setAttribute('aria-hidden','true');if(compact){const label=document.createElement('small');label.className='fx-target';label.textContent=target==='player'?'방랑자':'적';layer.append(label);}
    for(const [i,e] of list.slice(0,6).entries()){const token=document.createElement('span');token.className='fx-token fx-'+e.type;token.dataset.fxEvent=e.type;token.style.setProperty('--fx-order',i);token.textContent=e.text;layer.append(token);}(compact?host:anchor).append(layer);
-   if(list.some(e=>['damage','critical'].includes(e.type))){const node=target==='player'?(compact?layer:anchor):(compact&&card?card:anchor.querySelector('.scene-art')||anchor);const cls=target==='player'?'fx-player-hit':list.some(e=>e.type==='critical')?'fx-critical':'fx-hit';mark(node,cls);}
+   if(list.some(e=>['damage','critical'].includes(e.type))){const node=target==='player'?(rect.top>=0&&rect.bottom<=root.innerHeight?anchor:layer):(compact&&card?card:anchor.querySelector('.scene-art')||anchor);const cls=target==='player'?'fx-player-hit':list.some(e=>e.type==='critical')?'fx-critical':'fx-hit';mark(node,cls);}
   }
   if(events.some(e=>e.target==='scene')){const n=host.querySelector('#bf-play .scene-hero,#bf-play .main>.story');if(n)mark(n,'fx-scene-enter');}
   if(events.some(e=>e.target==='reward'))host.querySelectorAll('#bf-play .reward-summary,#bf-play .fx-loot-card').forEach(n=>mark(n,'fx-reward-enter'));
@@ -3091,8 +3331,10 @@ const fx=BFUIFX.create(root);
 window.addEventListener('pagehide',()=>fx.clear());document.addEventListener('visibilitychange',()=>{if(document.hidden)fx.clear()});const hiddenCount=Object.values(JOBS).filter(j=>j.hidden).length;const views={jobs:{query:'',family:'',page:0},codex:{query:'',slot:'',grade:'',found:false,page:0}};
 const visibleText=t=>String(t).replace(/보상 받고 다음 조우|다음 조우|계속 진행|자동 이동 중…/g,'계속 나아간다').replace(/보상 수령/g,'전리품을 챙긴다').replace(/체크포인트/g,'쉼터').replace(/경로 선택/g,'길을 살핀다').replace(/랜덤 인카운트/g,'길 위의 사건').replace(/다음 지역/g,'새로운 땅').replace(/불씨의 수호자/g,'불씨를 놓아준 자');
 const esc=t=>visibleText(t).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const b=(label,cmd,arg='',sub='',disabled=false,cls='')=>`<button type="button" class="cursor-interaction ${cls}" data-cmd="${cmd}" data-arg="${esc(arg)}" ${disabled?'disabled':''}>${esc(label)}${sub?`<span>${esc(sub)}</span>`:''}</button>`;
-const menu=(label,type,cls='')=>{const campOnly=['workshop','bag','equipment','quests','jobs','story'].includes(type)&&game.s.scene!=='camp';return `<button class="cursor-interaction ${cls}" type="button" data-ui="${type}" ${campOnly?'disabled title="모닥불로 돌아가 정비한다"':''}>${label}</button>`;};
+let actionDescription=0;
+const actionLabel=(label,cmd,arg)=>cmd==='collectLoot'?arg==='equip'?'장착하고 나아간다':arg==='bag'?'챙기고 나아간다':label.replace('장비를 판다','판매'):cmd==='buy'?label.replace('회복 물약을 산다','물약 구매').replace('맑은 영약을 산다','영약 구매').replace('봉인된 장비를 산다','봉인 장비').replace(' 상자를 고른다',' 상자'):label;
+const b=(label,cmd,arg='',sub='',disabled=false,cls='')=>{const description=sub?'bf-action-help-'+(++actionDescription):'';return `<div class="action-option ${cls.includes('wide')?'wide':''}"><button type="button" class="cursor-interaction game-action ${cls}" data-cmd="${cmd}" data-arg="${esc(arg)}" ${description?`aria-describedby="${description}"`:''} ${disabled?'disabled':''}><span class="action-label">${esc(actionLabel(label,cmd,arg))}</span></button>${sub?`<small class="action-help" id="${description}">${esc(sub)}</small>`:''}</div>`;};
+const menu=(label,type,cls='')=>{const campOnly=['workshop','bag','equipment','quests','jobs','story'].includes(type)&&game.s.scene!=='camp',major=['workshop','bag','equipment','quests','jobs','story','restart','confirm-restart'].includes(type)||type.startsWith('gear-bag-');return `<button class="cursor-interaction ${major?'game-action':'aux-action'} ${cls}" type="button" data-ui="${type}" ${campOnly?'disabled title="모닥불로 돌아가 정비한다"':''}>${label}</button>`;};
 const meter=(label,n,max)=>`<div><div class="statline"><span>${esc(label)}</span><span>${n} / ${max}</span></div><progress aria-label="${esc(label)}" value="${Math.max(0,n)}" max="${max}"></progress></div>`;
 const art=(category,id,label,cls='scene-art')=>{const src=asset(category,id);return `<figure class="${cls}">${src?`<img src="${esc(src)}" alt="${esc(label)}" loading="lazy" decoding="async" width="400" height="600">`:''}<figcaption class="art-fallback" ${src?'hidden':''}>${esc(label)} · 기록의 여백</figcaption></figure>`;};
 const portrait=id=>art('classes',id,JOBS[id].name,'class-art');
@@ -3128,7 +3370,8 @@ function sceneHero(s,kicker,title){
  const visual=sceneArt(s);
  if(!visual)return '';
  const decision=s.scene==='chapter'?CHAPTER_DECISIONS[s.area]?.[s.chapterSector]:null;
- return `<section class="scene-hero scene-${s.scene}${visual.includes('assets/story_')?' scene-story-art':''}">${visual}<div class="scene-hero-shade" aria-hidden="true"></div><header class="scene-hero-head"><p class="eyebrow">${esc(kicker)}</p><h2>${esc(title)}</h2></header><div class="scene-hero-body" aria-live="polite">${heroNarrative(s)}${decision?`<div class="scene-hero-question"><span>지금 결정할 것</span><strong>${esc(decision.question)}</strong><small>무엇을 지키고 무엇을 감수할지 선택한다.</small></div>`:''}</div></section>`;
+ const compact=['map','merchant'].includes(s.scene)||(s.scene==='chapter'&&s.chapterSector===0);
+ return `<section class="scene-hero scene-${s.scene}${compact?' scene-compact':''}${visual.includes('assets/story_')?' scene-story-art':''}"><div class="scene-visual">${visual}<div class="scene-hero-shade" aria-hidden="true"></div><header class="scene-hero-head"><p class="eyebrow">${esc(kicker)}</p><h2>${esc(title)}</h2></header></div><div class="scene-hero-body" aria-live="polite">${heroNarrative(s)}${decision?`<div class="scene-hero-question"><span>지금 결정할 것</span><strong>${esc(decision.question)}</strong><small>무엇을 지키고 무엇을 감수할지 선택한다.</small></div>`:''}</div></section>`;
 }
 root.addEventListener('error',ev=>{if(ev.target.tagName==='IMG'){ev.target.hidden=true;const caption=ev.target.parentElement.querySelector('.art-fallback');if(caption)caption.hidden=false;}},true);
 window.addEventListener('pageshow',ev=>{if(!ev.persisted)return;try{const code=localStorage.getItem(KEY);if(code)game=Game.load(code);render();}catch(e){warning='남긴 모험 기록을 다시 확인해 주세요.';}});
@@ -3159,7 +3402,7 @@ function equipmentPanel(){
  const s=game.s,j=JOBS[s.job],d=gearSelection.index===null?s[gearSelection.slot]:s.bag[gearSelection.index];
  if(!d){gearSelection={slot:'weapon',index:null};return equipmentPanel();}
  const equipped=gearSelection.index===null,upgradeCost=game.upgradeCost(d.slot);
- return `<div class="armory"><section class="armory-hub" aria-label="현재 직업과 장착 장비"><figure class="armory-portrait">${portrait(s.job)}<figcaption>${esc(j.name)}<span>Lv.${s.level} · ${j.hidden?'Hidden':'Tier '+j.tier} · 공격 ${game.atk()} / 방어 ${game.def()}</span></figcaption></figure><div class="armory-slots">${game.equipment().map(item=>`<button type="button" class="gear-slot rarity-${armoryRarity(item)} ${armoryPulse===item.slot?'gear-equipped':''}" data-ui="gear-slot-${item.slot}" aria-pressed="${equipped&&d.slot===item.slot}" aria-label="${slotLabel[item.slot]}: ${esc(gearName(item))}, ${RARITIES[item.grade]}">${armoryIcon(item)}<span><strong>${slotLabel[item.slot]} · ${esc(gearName(item))}</strong><small>${RARITIES[item.grade]} · ${esc(gearInfo(item))}</small></span></button>`).join('')}</div></section>
+ return `<div class="armory"><section class="armory-hub" aria-label="현재 직업과 장착 장비"><figure class="armory-portrait">${portrait(s.job)}<figcaption>${esc(j.name)}<span>Lv.${s.level} · ${j.hidden?'Hidden':'Tier '+j.tier} · 공격 ${game.atk()} / 방어 ${game.def()}</span></figcaption></figure><div class="armory-slots">${game.equipment().map(item=>`<button type="button" class="gear-slot rarity-${armoryRarity(item)} ${armoryPulse===item.slot?'gear-equipped':''}" data-ui="gear-slot-${item.slot}" aria-pressed="${equipped&&d.slot===item.slot}" aria-label="${slotLabel[item.slot]}: ${esc(gearName(item))}, ${RARITIES[item.grade]}">${armoryIcon(item)}<span class="slot-copy"><span class="slot-kind">${slotLabel[item.slot]}</span><strong>${esc(gearName(item))}</strong><small><span class="slot-rarity">${RARITIES[item.grade]}</span> · ${esc(gearInfo(item).replace(slotLabel[item.slot]+' · ',''))}</small></span></button>`).join('')}</div></section>
  <section class="armory-sheet" tabindex="0" aria-label="장비 비교와 보관 목록"><h3>${equipped?'장착 중':'비교 중'} · ${esc(gearName(d))}</h3>${gearCard(d)}${!equipped?`<p class="comparison" role="status">장착 시: ${differences(d)}</p>`:''}
  <div class="actions">${equipped?b('강화','upgrade',d.slot,`+${d.plus}/8 · ${upgradeCost.gold}G / 광석 ${upgradeCost.ore} · ${Math.round(game.upgradeChance(d.slot)*100)}%`,d.plus>=8||!game.canPay(upgradeCost))+b('옵션 재설정','reforge',d.slot,'40G / 광석 4',!d.affixes.length||s.gold<40||s.ore<4):b('착용','equipBag',gearSelection.index,'',false,'primary')+b('판매 '+game.price(d)+'G','sellBag',gearSelection.index)+b('분해','salvage',gearSelection.index,'광석 '+(2+d.grade))}</div>
  <details><summary>능력치와 강화 정보</summary><dl class="statgrid">${Object.entries(game.statSnapshot()).map(([k,v])=>`<div><dt>${statLabel(k)}</dt><dd>${Number(v.toFixed(1))}${['CRIT','DODGE','LEECH','LUCK'].includes(k)?'%':''}</dd></div>`).join('')}</dl><p>강화 실패 시 장비·강화 수치 유지 · 연속 실패 ${d.fails}/2</p>${s.legacyEquipment?.length?`<p>이전 확장 슬롯 장비 ${s.legacyEquipment.length}개 보존 · 능력치에는 3슬롯만 반영</p>`:''}</details>
@@ -3172,8 +3415,8 @@ try{const saved=localStorage.getItem(KEY)||localStorage.getItem(LEGACY);if(saved
 function save(){try{if(game.migrationSource){localStorage.setItem(KEY+'.before-v4',game.migrationSource);delete game.migrationSource;}localStorage.setItem(KEY,game.export());$('save-status').textContent='자동 저장됨 · 통합판 4.0'}catch(e){$('save-status').textContent='자동 저장 불가 · 저장 코드를 복사해 보관하세요.'}}
 const pct=n=>(n*100).toFixed(0)+'%';
 function statusDetails(){const st=game.combatStatus(),j=JOBS[game.s.job];return `<h3>상세 스테이터스</h3><section class="class-details">${portrait(game.s.job)}<h3>${esc(j.name)}</h3><p>Tier ${j.tier} · ${esc(j.lore||j.desc)}</p></section><dl class="statgrid">${[['공격력',game.atk()],['방어력',game.def()],['치명타율',pct(st.crit)],['치명타 배율','170%'],['회피율',pct(st.dodge)],['행운',pct(st.luck)],['기본 흡혈',pct(st.leech)],['피해 반사',st.reflect],['일반 공격 방어 관통',st.pierce],['스킬 MP 소모',st.skillCost],['방어 피해 감소','70%']].map(([k,v])=>`<div><dt>${statLabel(k)}</dt><dd>${v}</dd></div>`).join('')}</dl><p class="muted">흡혈은 직업별 스킬에서 추가될 수 있습니다. 행운은 장비 드롭과 등급 가중치에 적용됩니다.</p><div class="item"><p>${esc(j.skill)} · MP ${st.skillCost} · 숙련도 ${st.mastery}</p><p>${esc(j.passive||j.desc)}</p></div><h3>현재 전투 효과</h3><p>${esc(st.statuses.map(x=>({poison:'중독',burn:'화상',bleed:'출혈',damageOverTime:'지속 피해',stun:'기절',atkDown:'공격 약화',guard:'방어 후 집중'}[x.id]||x.id)+' · '+x.duration+'턴 · '+x.value).join(' / ')||'적용 중인 일시 효과 없음')}</p><h3>동료 지원</h3><p>${game.allies().map(id=>esc(COMPANIONS[id].aid)).join(' · ')||'개인 퀘스트 완료 + 호감도 80 이상에서 보스전 지원'}</p>`}
-function render(){fx.clear();const s=game.s;root.dataset.scene=s.scene;const job=JOBS[s.job];const opening=s.scene==='camp'&&s.cleared.length===0&&s.turns===0&&String(s.message||'').startsWith('프롤로그 — 마지막 불씨');$('stats').innerHTML=job?`<div class="stats">${meter('HP',s.hp,game.maxHp())}${meter('MP',s.mp,game.maxMp())}${meter('Lv.'+s.level+' '+job.name,s.xp,game.need())}<div><div class="statline"><span>골드</span><span>${s.gold} G</span></div><p class="muted">공격 ${game.atk()} · 방어 ${game.def()}</p>${menu('상세 스테이터스','status','small')}</div></div>`:'';
-if(!job){$('play').innerHTML=`${art('misc','banner','검은 숲으로 향하는 방랑자')}<p class="eyebrow">CAREER / 첫 불씨의 선택</p><div class="story">${esc(s.message)}\n\n8개 지역 · 일반 ${Object.keys(JOBS).length-hiddenCount}개 + 히든 ${hiddenCount}개 직업 · ${ITEMS.length}종의 장비 · 고전 문학이 뒤섞인 도서계\n당신의 싸움은 어떤 모습인가?</div><div class="classcards">${s.offers.map(id=>[id,JOBS[id]]).map(([id,j])=>`<button class="cursor-interaction" type="button" data-cmd="start" data-arg="${id}">${portrait(id)}<b>${j.name}</b><p class="muted">Tier ${j.tier}</p><p>${j.desc}</p><p class="muted">HP ${j.hp} · MP ${j.mp} · 공격 ${j.atk}</p></button>`).join('')}</div><p class="muted">히든 직업 해금 ${s.unlocked.length}/${hiddenCount} · 수집한 장비 ${s.collection.length}/${ITEMS.length}</p>`;return}
+function render(){fx.clear();$('play').before($('stats'));const s=game.s;root.dataset.scene=s.scene;const job=JOBS[s.job];const opening=s.scene==='camp'&&s.cleared.length===0&&s.turns===0&&String(s.message||'').startsWith('프롤로그 — 마지막 불씨');$('stats').innerHTML=job?`<div class="stats${s.scene==='battle'?' combat-hud':''}">${meter('HP',s.hp,game.maxHp())}${meter('MP',s.mp,game.maxMp())}${s.scene==='battle'?`<div class="combat-growth">${meter('Lv.'+s.level+' '+job.name,s.xp,game.need())}<p class="muted combat-meta">${s.gold} G · 공격 ${game.atk()} · 방어 ${game.def()}</p></div><div class="combat-detail">${menu('능력치 상세','status','small')}</div>`:`${meter('Lv.'+s.level+' '+job.name,s.xp,game.need())}<div><div class="statline"><span>골드</span><span>${s.gold} G</span></div><p class="muted">공격 ${game.atk()} · 방어 ${game.def()}</p>${menu('상세 스테이터스','status','small')}</div>`}</div>`:'';
+if(!job){$('play').innerHTML=`${art('misc','banner','검은 숲으로 향하는 방랑자')}<p class="eyebrow">CAREER / 첫 불씨의 선택</p><div class="story">${esc(s.message)}\n\n8개 지역 · 일반 ${Object.keys(JOBS).length-hiddenCount}개 + 히든 ${hiddenCount}개 직업 · ${ITEMS.length}종의 장비 · 고전 문학이 뒤섞인 도서계\n당신의 싸움은 어떤 모습인가?</div><div class="classcards">${s.offers.map(id=>[id,JOBS[id]]).map(([id,j])=>`<article class="class-choice">${portrait(id)}<h3>${j.name}</h3><p class="muted">Tier ${j.tier}</p><p>${j.desc}</p><p class="muted">HP ${j.hp} · MP ${j.mp} · 공격 ${j.atk}</p>${b(j.name+' 선택','start',id)}</article>`).join('')}</div><p class="muted">히든 직업 해금 ${s.unlocked.length}/${hiddenCount} · 수집한 장비 ${s.collection.length}/${ITEMS.length}</p>`;return}
 let title='',kicker='',actions='',extra='';
 if(s.scene==='chapter'){const decision=CHAPTER_DECISIONS[s.area][s.chapterSector],record='chapter_'+s.area+'_'+s.chapterSector;title=AREAS[s.area].name+' · '+['외곽','심부','중심부'][s.chapterSector];kicker='CHAPTER / 선택의 기록';extra='';actions=s.decisions[record]?b('남긴 기록을 다시 읽는다','chapterChoice',0,'이전 선택 유지'):decision.choices.map((c,i)=>b(c.label,'chapterChoice',i,c.result)).join('');}
 if(s.scene==='camp'){title=opening?'검은 숲에 눈을 뜨다':'방랑자의 캠프';kicker=opening?'PROLOGUE / 마지막 불씨':'SANCTUARY / 불씨가 머무는 곳';actions=AREAS.map((a,i)=>b(a.name,'enterArea',i,i>s.cleared.length?'이전 지역의 인장 필요':s.cleared.includes(i)?'정복 완료 · 재탐험':'외곽 → 심부 → 중심부 · 12노드',i>s.cleared.length,i===s.cleared.length?'primary':'')).join('')+b(`별 없는 회랑 ${s.rift+1}층`,'enterArea',8,'비밀 발견 1회 또는 보스 4명 처치 후 개방',s.secrets<1&&s.cleared.length<4,'wide');if(s.checkpoint)actions=b('길을 이어간다','resumeJourney','','노드 '+s.checkpoint.step+'/12',false,'primary')+b('돌아갈 길을 택한다','abandonChapter','','다른 지역으로 이동하려면 선택');extra=`<div class="campnav">${b('모닥불 곁에서 쉰다','rest','','HP·MP 완전 회복')}${b('물약 · 16G','buy','potion','',s.gold<16)}${menu('제작 / 강화','workshop')}${menu('장비 / 비교','equipment')}${menu('장비 가방','bag')}${menu('직업 비전서','jobs')}${menu('의뢰 게시판','quests')}${menu('인물 / 메인 퀘스트','story')}</div>`}
@@ -3190,7 +3433,7 @@ if(s.scene==='reward'){const checkpoint=s.kind==='story'&&!s.checkpoint&&!s.retu
 if(s.scene==='midboss'){title='샛길과 발소리';kicker='JOURNEY / 기둥 너머';actions=b('수문장과 마주한다','faceMidboss','','',false,'primary')+b('샛길로 몸을 숨긴다','skipMidboss');}
 if(s.scene==='merchant'){title='떠돌이 상인';kicker='TRADER / 확률을 파는 가게';actions=b('회복 물약을 산다 · 16G','buy','potion','',s.gold<16)+b('맑은 영약을 산다 · 12G','buy','tonic','MP 완전 회복',s.gold<12||s.mp===game.maxMp())+b('봉인된 장비를 산다 · 55G','buy','gear','기존 무작위 슬롯 · 정예 확률',s.gold<55)+['weapon','armor','charm'].map(slot=>b({weapon:'무기',armor:'방어구',charm:'장신구'}[slot]+' 상자를 고른다 · 55G','buy','gear-'+slot,'슬롯 지정 · 희귀도는 같은 정예 확률',s.gold<55)).join('')+b('상점을 떠난다','nextEncounter','','다시 길을 나선다',false,'primary')}
 if(s.scene==='event'){const ev=EVENTS[s.eventId];title=ev.title;kicker='STORY / 선택과 대가';actions=game.eventChoices().map((c,i)=>b(c.label,'event',i,`비용: ${resources(c.cost)} · ${c.battle?'전투 후 기존 보상':`성공 ${Math.round(c.chance*100)}% · 보상 ${resources(c.reward)}${c.slot?' · '+{weapon:'무기',armor:'방어구',charm:'장신구'}[c.slot]:''} · 실패 ${resources(c.failure)}`}`,!game.canPay(c.cost))).join('');extra=''}
-if(s.scene==='loot'){const d=s.loot;title=gearName(d);kicker='DISCOVERY / 운명이 남긴 물건';extra=(s.rewardState&&!s.rewardState.claimed?`<p class="reward-summary">경험치 +${s.rewardState.rewards.xp} · 골드 +${s.rewardState.rewards.gold} · 목재 +3 · 약초 +2 · 광석 +${s.rewardState.rewards.ore}</p>`:'')+gearCard(d,'fx-loot-card')+`<p class="comparison">장착 시: ${differences(d)}</p><p class="muted compare">현재 장비</p>`+gearCard(s[d.slot]);actions=b('장비를 걸치고 나아간다','collectLoot','equip','기존 장비는 가방으로',false,'primary')+b(s.rewardState&&!s.rewardState.claimed?'전리품을 챙기고 나아간다':'장비를 챙기고 나아간다','collectLoot','bag','캠프에서 장착 가능')+b(`장비를 판다 · ${game.price(d)}G`,'collectLoot','sell','',false,'wide')}
+if(s.scene==='loot'){const d=s.loot;title=gearName(d);kicker='DISCOVERY / 운명이 남긴 물건';extra=(s.rewardState&&!s.rewardState.claimed?`<p class="reward-summary">경험치 +${s.rewardState.rewards.xp} · 골드 +${s.rewardState.rewards.gold} · 목재 +3 · 약초 +2 · 광석 +${s.rewardState.rewards.ore}</p>`:'')+gearCard(d,'fx-loot-card')+`<p class="comparison">장착 시: ${differences(d)}</p><p class="muted compare">현재 장비</p>`+gearCard(s[d.slot]);actions=b('장비를 걸치고 나아간다','collectLoot','equip','기존 장비는 가방으로',false,'primary reward-equip')+b(s.rewardState&&!s.rewardState.claimed?'전리품을 챙기고 나아간다':'장비를 챙기고 나아간다','collectLoot','bag','캠프에서 장착 가능',false,'reward-keep')+b(`장비를 판다 · ${game.price(d)}G`,'collectLoot','sell','',false,'wide reward-sell')}
 if(s.scene==='dead'){title='아직 꺼지지 않은 불씨';kicker='FALLEN / 다시 일어서는 자';actions=b('상처를 추스르고 일어난다','revive','','골드 20% 손실 · 장비·직업 유지',false,'primary wide')}
 if(s.scene==='final'){title='첫 불씨의 기억';kicker='EPILOGUE / 마지막 선택';actions=b('불씨를 놓아준다','finish',0,'저주를 끝내고 기억을 보내 준다')+b('왕관을 쓴다','finish',1,'왕의 힘과 책임을 이어받는다')+b('불씨를 모두에게 나눈다','finish',2,`자비 5 필요 · 현재 ${s.mercy}`,s.mercy<5,'wide primary')}
 if(s.scene==='ending'){title=s.ending;kicker='THE END / 새벽 너머';extra=`<div class="row"><span class="badge">Lv.${s.level} ${job.name}</span><span class="badge">처치 ${s.kills}</span><span class="badge">수집 ${s.collection.length}/${ITEMS.length}</span></div>`+endingHTML();actions=b('불씨를 품고 캠프로 돌아간다','postgame','','회랑·장비·직업 수집',false,'primary')+menu('다음 여정을 시작한다','restart')}
@@ -3198,14 +3441,17 @@ const side=`<aside><details class="sideblock equipment-details"><summary>장착 
 const hero=heroScenes.has(s.scene)?sceneHero(s,kicker,title):'';
 const intro=hero||`<p class="eyebrow">${kicker}</p><h2>${esc(title)}</h2>${sceneArt(s)}${conversationScenes.has(s.scene)?conversationCopy(s):`<div class="story ${opening?'opening-story':''}" aria-live="polite">${esc(s.message)}</div>`}`;
 $('play').innerHTML=`<div class="layout ${s.scene==='battle'?'in-battle':''} ${conversationScenes.has(s.scene)?'is-conversation':''}"><main class="main">${intro}${s.scene!=='camp'?extra:''}${actions?`<div class="actions">${actions}</div>`:''}${s.scene==='camp'?extra:''}</main>${side}</div><form id="bf-command-form" class="commandrow"><label for="bf-command">직접 입력</label><input id="bf-command" type="text" maxlength="80" autocomplete="off" placeholder="예: 공격, 방어, 물약, 계속"><button type="submit" class="cursor-interaction">실행</button><p class="muted" id="bf-command-status" role="status">지원 명령: 공격 · 스킬 · 방어 · 물약 · 도주 · 휴식 · 귀환 · 계속 · 1/2/3/4</p></form>`;
-
+if(hero)$('play').querySelector('.scene-hero-body').before($('stats'));
+if(s.scene==='battle'){$('play').querySelector('.scene-hero-head').append($('play').querySelector('.enemy'));const st=game.combatStatus(),names={poison:'중독',burn:'화상',bleed:'출혈',damageOverTime:'지속 피해',stun:'기절',atkDown:'공격 약화',guard:'방어 후 집중'},lines=[...st.statuses.map(x=>(names[x.id]||'전투 효과')+' · '+x.duration+'턴 · '+x.value),...st.conditions];if(lines.length)$('stats').insertAdjacentHTML('beforeend',`<div class="combat-effects" aria-label="현재 전투 효과">${[...new Set(lines)].map(text=>`<span>${esc(text)}</span>`).join('')}</div>`);}
 }
+const careerConditionLabel=label=>label.replace(/^이야기 (.+)$/,(_,flag)=>{const chapter=flag.match(/^chapter_(\d)_seen$/);if(chapter&&AREAS[Number(chapter[1])])return AREAS[Number(chapter[1])].name+' 방문';const npc=NPCS[flag.replace(/_seen$/,'')];return npc?npc.name+' 만남':'이야기 경험';});
+const careerConditions=rows=>`<ul class="career-conditions" aria-label="전직 조건">${rows.map(r=>`<li class="career-condition ${r.now>=r.need?'is-met':'is-unmet'}"><span class="condition-mark" aria-hidden="true">${r.now>=r.need?'✓':'○'}</span><span class="condition-label">${esc(careerConditionLabel(r.label))}</span><span class="condition-value">${r.now>=r.need?'완료':'미완료'} · ${r.now}/${r.need}</span></li>`).join('')}</ul>`;
 function showPanel(type){fx.clear();if(panel!==type){panelOrigin=type; if(views[type])views[type].page=0;}panel=type;const el=$('panel'),s=game.s;el.hidden=false;el.classList.toggle('armory-panel',type==='equipment');lockPanel();const close=menu('닫기','close','small');let html='';
 if(type==='status')html=statusDetails()+close;
 if(type==='save')html=`<h3>저장 / 불러오기</h3><p class="muted">압축된 BF3 저장 코드를 보관해 다른 기기에서 이어 하세요. 이전 버전의 JSON 저장 코드도 읽을 수 있습니다. 불러오기는 현재 진행을 대체합니다.</p><label class="muted" for="bf-code">저장 코드</label><textarea id="bf-code" spellcheck="false"></textarea><div class="row">${menu('복사','copy')}${menu('저장 파일 받기','download')}${menu('코드 불러오기','load','primary')}<label class="file-label">저장 파일 불러오기<input id="bf-save-file" type="file" accept=".bfsave,.txt,.json"></label>${close}</div><p id="bf-code-status" role="status" class="muted"></p>`;
 if(type==='restart')html=`<h3>새로운 모험</h3><p class="muted">해금 직업·장비 도감·엔딩 기록은 유지됩니다. 레벨·장비·재화·탐험 진행은 초기화됩니다. 8개 지역 완주 후 새 모험은 적 능력치가 15%씩 증가합니다. 현재 기록은 저장 코드로 별도 보관할 수 있습니다.</p><div class="row">${menu('해금 유지 · 새 모험','confirm-restart','primary')}${close}</div>`;
 if(type==='journal')html=`<h3>모험 기록</h3>${s.log.length?s.log.map(t=>`<div class="logitem">${esc(t)}</div>`).join(''):'<p>아직 기록이 없습니다.</p>'}${close}`;
-if(type==='jobs')html=`<h3>직업 비전서</h3><p>현재 ${esc(JOBS[s.job].name)} · ${JOBS[s.job].hidden?'Hidden':'Tier '+JOBS[s.job].tier} · 숙련도 ${game.mastery()}</p><p class="muted">이번 모험의 성장: ${s.career.history.map(id=>esc(JOBS[id].name)).join(' → ')}. 다른 계열은 새로운 모험에서 선택합니다.</p><h3>다음 전직 후보</h3>${game.careerCandidates().map(c=>`<div class="item">${portrait(c.id)}<h3>${JOBS[c.id].name}</h3><p>${esc(JOBS[c.id].desc)}</p>${c.progress.map(r=>`<p class="muted">${r.now>=r.need?'✓':'○'} ${esc(r.label)} ${r.now}/${r.need}</p>`).join('')}${b('전직','changeJob',c.id,'',!c.available)}</div>`).join('')||'<p>일반 경로의 마지막 직업입니다. 히든 비전은 아래에서 확인합니다.</p>'}<h3>전체 직업 / 발견 비전</h3><p class="muted">조건 달성 후 각성 인장 1개로 비전을 해금합니다. 인장은 보스·비밀 방에서 확정, 일반 적 8%·정예 15%를 기본으로 드롭합니다.</p>${filterControls('jobs')}<div id="bf-job-list" class="joblist"></div>${pager('jobs')}<p class="muted">현재: 자비 ${s.mercy}, 보스 ${s.cleared.length}, 위기 후 승리 ${s.lowhpWins}, 처치 ${s.kills}, 정예 ${s.elites}, 제작 ${s.crafts}, 보급함 ${s.caches}, 희귀 이상 획득 ${s.rareFinds}, 비밀 ${s.secrets}</p>${close}`;
+if(type==='jobs')html=`<h3>직업 비전서</h3><p>현재 ${esc(JOBS[s.job].name)} · ${JOBS[s.job].hidden?'Hidden':'Tier '+JOBS[s.job].tier} · 숙련도 ${game.mastery()}</p><p class="muted">이번 모험의 성장: ${s.career.history.map(id=>esc(JOBS[id].name)).join(' → ')}. 다른 계열은 새로운 모험에서 선택합니다.</p><h3>다음 전직 후보</h3>${game.careerCandidates().map(c=>`<div class="item career-candidate"><div class="career-intro"><div><h3>${JOBS[c.id].name}</h3><p>${esc(JOBS[c.id].desc)}</p></div>${portrait(c.id)}</div>${careerConditions(c.progress)}${b(c.available?'전직':'전직 잠김','changeJob',c.id,'',!c.available)}</div>`).join('')||'<p>일반 경로의 마지막 직업입니다. 히든 비전은 아래에서 확인합니다.</p>'}<h3>전체 직업 / 발견 비전</h3><p class="muted">조건 달성 후 각성 인장 1개로 비전을 해금합니다. 인장은 보스·비밀 방에서 확정, 일반 적 8%·정예 15%를 기본으로 드롭합니다.</p>${filterControls('jobs')}<div id="bf-job-list" class="joblist"></div>${pager('jobs')}<p class="muted">현재: 자비 ${s.mercy}, 보스 ${s.cleared.length}, 위기 후 승리 ${s.lowhpWins}, 처치 ${s.kills}, 정예 ${s.elites}, 제작 ${s.crafts}, 보급함 ${s.caches}, 희귀 이상 획득 ${s.rareFinds}, 비밀 ${s.secrets}</p>${close}`;
 if(type==='workshop')html=workshopHTML()+close;
 if(type==='equipment'){if(gearSelection.index!==null&&!s.bag[gearSelection.index])gearSelection.index=null;html=equipmentPanel()+close;}
 if(type==='bag')html=`<h3>장비 가방 ${s.bag.length}/40</h3><p class="muted">가득 차면 가장 오래된 보관 장비를 자동 분해합니다.</p>${s.bag.map((d,i)=>`<div class="item">${gearCard(d)}<div class="row">${menu('상세 / 비교','gear-bag-'+i)}${b('장착','equipBag',i)}${b('판매 '+game.price(d)+'G','sellBag',i)}${b('분해 · 광석 '+(2+d.grade),'salvage',i)}</div></div>`).join('')||'<p class="empty">보관된 장비가 없습니다.</p>'}${close}`;
@@ -3221,7 +3467,7 @@ function closePanel(){fx.clear();$('panel').hidden=true;panel='';unlockPanel();r
 function filterControls(type){const v=views[type];return `<div class="filters"><label>검색<input data-filter="${type}:query" type="search" value="${esc(v.query)}" placeholder="직업명·발견한 장비명"></label>${type==='jobs'?`<label>계열<select data-filter="jobs:family"><option value="">전체 계열</option>${Object.entries(FAMILY_LABELS).map(([id,n])=>`<option value="${id}" ${v.family===id?'selected':''}>${n}</option>`).join('')}</select></label>`:`<label>종류<select data-filter="codex:slot"><option value="">전체 종류</option>${Object.entries(slotLabel).map(([id,n])=>`<option value="${id}" ${v.slot===id?'selected':''}>${n}</option>`).join('')}</select></label><label>등급<select data-filter="codex:grade"><option value="">전체 등급</option>${RARITIES.map((n,i)=>`<option value="${i}" ${v.grade===String(i)?'selected':''}>${n}</option>`).join('')}</select></label><label class="check"><input data-filter="codex:found" type="checkbox" ${v.found?'checked':''}>발견한 장비만</label>`}</div>`;}
 function pager(key){return `<div class="pager" id="bf-${key}-pager"></div>`;}
 function pageSlice(key,list,size){const v=views[key],last=Math.max(0,Math.ceil(list.length/size)-1);v.page=Math.max(0,Math.min(last,v.page));$(key+'-pager').innerHTML=menu('이전','page-'+key+'-prev','small')+`<span role="status">${list.length}개 · ${v.page+1}/${last+1}쪽</span>`+menu('다음','page-'+key+'-next','small');$(key+'-pager').querySelector('button:first-child').disabled=v.page===0;$(key+'-pager').querySelector('button:last-child').disabled=v.page===last;return list.slice(v.page*size,(v.page+1)*size);}
-function drawJobs(){const s=game.s,v=views.jobs,list=Object.entries(JOBS).filter(([id,j])=>{const unlocked=!j.hidden||s.unlocked.includes(id),family=j.family||(j.hidden?'hidden':'basic');return (!v.family||v.family===family||v.family==='hidden'&&j.hidden)&&(!v.query||(unlocked?j.name+' '+j.desc:j.hint+' '+j.requirement).includes(v.query));});$('job-list').innerHTML=pageSlice('jobs',list,20).map(([id,j])=>{const unlocked=!j.hidden||s.unlocked.includes(id),eligible=game.eligible(id),available=game.jobAvailable(id);return `<div class="item">${unlocked?portrait(id):''}<h3>${unlocked?j.name:eligible?'발견: '+j.name:'??? · '+j.hint}</h3><p class="muted">${unlocked?(j.tier!==null?'T'+j.tier+' · '+(FAMILY_LABELS[j.family]||'근접')+' · '+j.passive+' — ':'')+j.desc:j.requirement}</p>${unlocked?`<p class="muted">${esc(j.lore||'')}</p><p class="muted">${j.hidden?'정상 계보 밖의 발견형 직업':j.parents.length?'이전 직업: '+j.parents.map(id=>esc(JOBS[id].name)).join(' / '):'시작 직업'}</p>`:''}${unlocked?b(s.job===id?'현재 직업':'전직하기','changeJob',id,j.hidden?'선택하면 일반 전직 경로 종료':game.unlockProgress(id).filter(r=>r.now<r.need).map(r=>r.label+' '+r.now+'/'+r.need).join(' · '),s.job===id||!available):b('비전 해금 · 인장 1','awaken',id,eligible?'조건 충족':'조건 미충족',!eligible||s.sigils<1)}</div>`}).join('')||'<p class="empty">검색 결과가 없습니다.</p>';}
+function drawJobs(){const s=game.s,v=views.jobs,list=Object.entries(JOBS).filter(([id,j])=>{const unlocked=!j.hidden||s.unlocked.includes(id),family=j.family||(j.hidden?'hidden':'basic');return (!v.family||v.family===family||v.family==='hidden'&&j.hidden)&&(!v.query||(unlocked?j.name+' '+j.desc:j.hint+' '+j.requirement).includes(v.query));});$('job-list').innerHTML=pageSlice('jobs',list,20).map(([id,j])=>{const unlocked=!j.hidden||s.unlocked.includes(id),eligible=game.eligible(id),available=game.jobAvailable(id);return `<div class="item">${unlocked?portrait(id):''}<h3>${unlocked?j.name:eligible?'발견: '+j.name:'??? · '+j.hint}</h3><p class="muted">${unlocked?(j.tier!==null?'T'+j.tier+' · '+(FAMILY_LABELS[j.family]||'근접')+' · '+j.passive+' — ':'')+j.desc:j.requirement}</p>${unlocked?`<p class="muted">${esc(j.lore||'')}</p><p class="muted">${j.hidden?'정상 계보 밖의 발견형 직업':j.parents.length?'이전 직업: '+j.parents.map(id=>esc(JOBS[id].name)).join(' / '):'시작 직업'}</p>`:''}${unlocked?b(s.job===id?'현재 직업':'전직하기','changeJob',id,j.hidden?'선택하면 일반 전직 경로 종료':game.unlockProgress(id).filter(r=>r.now<r.need).map(r=>careerConditionLabel(r.label)+' '+r.now+'/'+r.need).join(' · '),s.job===id||!available):b('비전 해금 · 인장 1','awaken',id,eligible?'조건 충족':'조건 미충족',!eligible||s.sigils<1)}</div>`}).join('')||'<p class="empty">검색 결과가 없습니다.</p>';}
 function drawCollection(){const v=views.codex,found=new Set(game.s.collection),list=ITEMS.filter(d=>(!v.slot||d.slot===v.slot)&&(v.grade===''||d.fixedGrade===undefined||d.fixedGrade===Number(v.grade))&&(!v.found||found.has(d.id))&&(!v.query||found.has(d.id)&&(d.name+' '+d.category).includes(v.query)));$('collection').innerHTML=pageSlice('codex',list,48).map(d=>`<div class="collectionitem ${found.has(d.id)?'found':''}">${found.has(d.id)?esc(d.name):'??? · '+slotLabel[d.slot]}<p class="muted">${d.fixedGrade===undefined?'가변 등급':RARITIES[d.fixedGrade]} · ${AREAS[d.minArea||0].name}부터</p>${found.has(d.id)?`<p class="muted">${esc(d.flavor||'')}</p>`:''}</div>`).join('')||'<p class="empty">검색 결과가 없습니다.</p>';}
 root.addEventListener('input',ev=>{const key=ev.target.dataset.filter;if(!key)return;const [type,field]=key.split(':');views[type][field]=ev.target.type==='checkbox'?ev.target.checked:ev.target.value;views[type].page=0;type==='jobs'?drawJobs():drawCollection();});
 root.addEventListener('change',async ev=>{if(ev.target.id!=='bf-save-file')return;const file=ev.target.files[0];if(!file)return;try{if(file.size>300000)throw Error('oversize');const code=await file.text();const loaded=Game.load(code);game=loaded;render();save();closePanel();}catch(e){$('code-status').textContent='불러오기 실패. 올바른 저장 파일을 선택하세요. 현재 진행은 유지됩니다.';}});

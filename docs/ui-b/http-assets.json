@@ -1,0 +1,13 @@
+{
+  "base": "http://127.0.0.1:4188/",
+  "htmlSha256": "f4de0026226c70466430cfe6745d1d3de37a004af20b55c7170fbbf036c937b3",
+  "assetFiles": 149,
+  "downloads": [
+    "jobs-114.csv",
+    "jobs-100.csv",
+    "items-1000.csv"
+  ],
+  "http200": true,
+  "exactAssetBytes": true,
+  "status": "PASS"
+}

@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "commands": [
+    "npm test",
+    "node test-fx.cjs"
+  ],
+  "isolatedPath": "/tmp/bf-ui-b-unit",
+  "classes": 114,
+  "items": 1000,
+  "careerCombatCampaigns": 684,
+  "careerCombatActions": 41219,
+  "naturalCampaigns": 18,
+  "legacyCombatComparisons": 348,
+  "bf2JobSaves": 100,
+  "archivedJobSaves": 29,
+  "fxTransactions": 3648,
+  "fxExactSaveRngComparisons": 3648,
+  "hiddenUnlockCases": 67,
+  "copyRegressionCases": 156,
+  "caveat": "684 cases select each career directly; 18 campaigns use natural starter progression. Physical devices and long sessions not tested."
+}

@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "commands": [
+    "npm test",
+    "node test-fx.cjs"
+  ],
+  "classes": 114,
+  "equipment": 1000,
+  "combatCareerCampaigns": 684,
+  "combatActions": 41219,
+  "naturalCampaigns": 18,
+  "fxSaveRngCases": 3648,
+  "legacyBf2CareerSaves": 100,
+  "archivedCareerSaves": 29,
+  "hiddenCases": 67,
+  "copyRegressionCases": 156,
+  "method": "Existing tests run in an isolated copy of the final UI sources. 684 cases force each career; 18 campaigns progress from normal starters. No physical-device claim."
+}

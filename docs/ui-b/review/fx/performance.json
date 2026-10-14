@@ -1,0 +1,45 @@
+{
+  "status": "PASS",
+  "engine": "chromium",
+  "base": "http://127.0.0.1:4192/",
+  "width": 360,
+  "profiles": [
+    {
+      "mode": "control",
+      "cpuThrottle": 4,
+      "commands": 30,
+      "synchronousClickMedianMs": 11.800000011920929,
+      "synchronousClickP95Ms": 28.400000035762787,
+      "maxFeedbackNodes": 0,
+      "exactTransactions": true,
+      "idleAnimations": 0,
+      "errors": 0
+    },
+    {
+      "mode": "normal",
+      "cpuThrottle": 4,
+      "commands": 30,
+      "synchronousClickMedianMs": 34.59999996423721,
+      "synchronousClickP95Ms": 73.39999997615814,
+      "maxFeedbackNodes": 3,
+      "exactTransactions": true,
+      "idleAnimations": 0,
+      "errors": 0
+    },
+    {
+      "mode": "reduce",
+      "cpuThrottle": 4,
+      "commands": 30,
+      "synchronousClickMedianMs": 31.5,
+      "synchronousClickP95Ms": 70.59999996423721,
+      "maxFeedbackNodes": 3,
+      "exactTransactions": true,
+      "idleAnimations": 0,
+      "errors": 0
+    }
+  ],
+  "limitations": [
+    "4x DevTools CPU throttling and synchronous JS click timing only; no physical-device FPS, thermal or long-session claim.",
+    "Control suppresses descriptors; existing rendering, snapshot reads and game rules stay identical."
+  ]
+}
