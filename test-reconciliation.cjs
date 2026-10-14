@@ -27,6 +27,7 @@ for(const name of ['black-forest.html','index.html']){
  assert.equal((html.match(/<style\b/g)||[]).length,(html.match(/<\/style>/g)||[]).length,name+' style tags');
  assert(html.includes(bundleStyle),name+' must embed current style.css');
  assert(html.includes(bundleShell),name+' must embed current shell.html');
+ assert(html.includes(fs.readFileSync(__dirname+'/ui-fx.js','utf8')),name+' must embed current ui-fx.js');
  assert(html.includes(bundleUi),name+' must embed current ui.js');
 }
 assert.equal(fs.readFileSync(__dirname+'/black-forest.html','utf8'),fs.readFileSync(__dirname+'/index.html','utf8'));

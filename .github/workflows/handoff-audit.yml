@@ -1,7 +1,7 @@
 name: Handoff audit and requested mobile sizes
 on:
   push:
-    branches: [qa/handoff-audit-20261008, qa/resume-checkpoint-20261008, qa/asset-quality-20261008, qa/p1-class-identity-20261008, feature/p2-exploration-equipment, feature/p3-economy-crafting-endings, qa/gameplay-handoff-20261012, main]
+    branches: [qa/handoff-audit-20261008, qa/resume-checkpoint-20261008, qa/asset-quality-20261008, qa/p1-class-identity-20261008, feature/p2-exploration-equipment, feature/p3-economy-crafting-endings, qa/gameplay-handoff-20261012, qa/fx-feedback-pass, main]
   workflow_dispatch:
 permissions:
   contents: read
@@ -19,6 +19,7 @@ jobs:
           node-version: '22'
       - run: npm ci --ignore-scripts
       - run: npm test
+      - run: node test-fx.cjs
       - run: node test-audit-data.cjs
       - run: node test-p3.cjs
       - run: node test-p3-combat.cjs
@@ -40,6 +41,7 @@ jobs:
             docs/p2/**/*.json
             docs/p1/comparison.json
             docs/p3/**/*.json
+            docs/fx/**/*.json
       - run: python3 build.py && node export-data.cjs && python3 export-site.py && python3 verify-html.py
   browser:
     runs-on: ubuntu-latest
@@ -179,6 +181,16 @@ jobs:
           BF_BROWSER: ${{ matrix.browser }}
           BF_QA_URL: http://127.0.0.1:4174/
         run: node test-p3-ui.cjs
+      - name: FX mobile, reduced motion, rapid input, save and special moments
+        env:
+          BF_BROWSER: ${{ matrix.browser }}
+          BF_QA_URL: http://127.0.0.1:4174/
+        run: node test-fx-ui.cjs
+      - name: FX bounded feedback under CPU throttling
+        if: matrix.browser == 'chromium'
+        env:
+          BF_QA_URL: http://127.0.0.1:4174/
+        run: node test-fx-performance.cjs
       - name: Wait for this commit to finish Pages deployment
         if: github.ref == 'refs/heads/main'
         env:
@@ -191,6 +203,13 @@ jobs:
           BF_QA_URL: https://dksjrhrnak-gif.github.io/black-forest-rpg/
           BF_P3_OUT: docs/p3/public
         run: node test-p3-ui.cjs
+      - name: FX public game at three mobile widths and both motion modes
+        if: github.ref == 'refs/heads/main'
+        env:
+          BF_BROWSER: ${{ matrix.browser }}
+          BF_QA_URL: https://dksjrhrnak-gif.github.io/black-forest-rpg/
+          BF_FX_OUT: docs/fx/public
+        run: node test-fx-ui.cjs
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -199,3 +218,5 @@ jobs:
             docs/p3/ui-*.json
             docs/p3/public/ui-*.json
             screenshots/p3/
+            docs/fx/**/*.json
+            screenshots/fx/
