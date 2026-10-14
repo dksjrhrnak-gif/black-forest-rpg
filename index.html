@@ -3459,7 +3459,7 @@ function sceneHero(s,kicker,title){
 }
 // Layout-only sizing for embedded documents and mobile address-bar changes.
 function fitChoices(){const actions=$('play').querySelector('.actions:has([data-cmd=chapterChoice])');if(!actions)return;actions.classList.remove('choices-single');if([...actions.querySelectorAll('.action-label')].some(e=>e.getBoundingClientRect().height>36))actions.classList.add('choices-single');}
-function sizeViewport(){if(panel)return;const top=root.getBoundingClientRect().top,height=window.visualViewport?.height||window.innerHeight;root.style.setProperty('--bf-scene-height',Math.max(240,height-Math.max(0,top))+'px');fitChoices();}
+function sizeViewport(){if(panel)return;root.dataset.viewport=window.matchMedia('(max-width:700px) and (min-height:520px)').matches&&($('play').querySelector('.scene-hero')||root.dataset.scene==='loot')?'scene':'';const top=root.getBoundingClientRect().top,height=window.visualViewport?.height||window.innerHeight;root.style.setProperty('--bf-scene-height',Math.max(240,height-Math.max(0,top))+'px');fitChoices();}
 window.addEventListener('resize',sizeViewport);window.visualViewport?.addEventListener('resize',sizeViewport);
 root.addEventListener('error',ev=>{if(ev.target.tagName==='IMG'){ev.target.hidden=true;const caption=ev.target.parentElement.querySelector('.art-fallback');if(caption)caption.hidden=false;}},true);
 window.addEventListener('pageshow',ev=>{if(!ev.persisted)return;try{const code=localStorage.getItem(KEY);if(code)game=Game.load(code);render();}catch(e){warning='남긴 모험 기록을 다시 확인해 주세요.';}});
