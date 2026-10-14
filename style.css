@@ -1351,3 +1351,47 @@
 #black-forest-game .armory .gear-slot small{font-size:11px;line-height:1.5;color:var(--bf-muted)}
 #black-forest-game .slot-rarity{color:var(--gear-color);font-weight:600}
 @media(max-height:500px){#black-forest-game .armory .gear-slot{grid-template-columns:20px minmax(0,1fr);padding:3px 5px}#black-forest-game .gear-slot .armory-icon{width:20px;height:20px}#black-forest-game .slot-kind{font-size:10px}}
+
+/* V-2: bounded mobile scene, measured against the actual dynamic viewport. */
+@media(max-width:700px){
+ #black-forest-game[data-viewport=scene]{height:100dvh;max-height:100dvh;min-height:0;width:100%;margin:0;padding:env(safe-area-inset-top) 8px env(safe-area-inset-bottom);box-sizing:border-box;display:flex;flex-direction:column;gap:4px;border-radius:0}
+ #black-forest-game[data-viewport=scene]>.top{flex:0 0 44px;min-height:44px;padding:0;margin:0;align-items:center}
+ #black-forest-game[data-viewport=scene]>.top h1{font-size:15px;line-height:1.4;margin:0}
+ #black-forest-game[data-viewport=scene]>.top .eyebrow,#black-forest-game[data-viewport=scene]>.top p.muted{display:none}
+ #black-forest-game[data-viewport=scene]>#bf-play{flex:1;min-height:0;display:flex;flex-direction:column}
+ #black-forest-game[data-viewport=scene] .layout{display:flex;flex:1;min-height:0;margin:0}
+ #black-forest-game[data-viewport=scene] .layout>.main{display:flex;flex-direction:column;flex:1;min-width:0;min-height:0;padding:6px;gap:4px;margin:0}
+ #black-forest-game[data-viewport=scene] .layout>aside,#black-forest-game[data-viewport=scene] #bf-play>.commandrow,#black-forest-game[data-viewport=scene]>.footer,#black-forest-game[data-viewport=scene]>#bf-downloads{display:none}
+ #black-forest-game[data-viewport=scene] .scene-hero{display:flex;flex-direction:column;flex:1;min-height:0;margin:0;overflow:visible}
+ #black-forest-game[data-viewport=scene] .scene-hero .scene-visual{display:flex;flex-direction:column;flex:1;min-height:64px;height:auto;max-height:none;aspect-ratio:auto;overflow:hidden}
+ #black-forest-game[data-viewport=scene] .scene-hero .scene-art{position:relative;inset:auto;flex:1;min-height:32px;width:100%;height:auto;max-height:none;aspect-ratio:auto;overflow:hidden}
+ #black-forest-game[data-viewport=scene] .scene-hero .scene-art img{height:100%;width:100%;position:absolute;inset:0;object-fit:contain;object-position:center;min-height:0;max-height:none}
+ #black-forest-game[data-viewport=scene] .scene-hero .scene-hero-head{position:relative;inset:auto;flex-shrink:0;padding:4px 8px;background:var(--bf-bg)}
+ #black-forest-game[data-viewport=scene] .scene-hero-head h2{font-size:17px;line-height:1.4;margin:0}
+ #black-forest-game[data-viewport=scene] .scene-hero-head>.eyebrow,#black-forest-game[data-viewport=scene] .scene-hero-shade{display:none}
+ #black-forest-game[data-viewport=scene] .scene-hero .scene-hero-body{flex:0 1 112px;min-height:48px;max-height:112px;overflow:auto;overscroll-behavior:contain;padding:6px 8px;scroll-padding:8px}
+ #black-forest-game[data-viewport=scene] .scene-hero-text,#black-forest-game[data-viewport=scene] .scene-hero-quote{font-size:14px;line-height:1.65}
+ #black-forest-game[data-viewport=scene] .scene-hero-question{flex-shrink:0;margin:0;padding:4px 8px;font-size:12px;line-height:1.4}
+ #black-forest-game[data-viewport=scene] .scene-hero-question small{display:none}
+ #black-forest-game[data-viewport=scene] .main>.actions{position:static;flex-shrink:0;max-height:44dvh;overflow:auto;overscroll-behavior:contain;margin:0;padding:4px 0 0;border-radius:0;box-shadow:none;scroll-padding:4px}
+ #black-forest-game[data-viewport=scene] .action-help{font-size:11px;line-height:1.4}
+ #black-forest-game[data-viewport=scene] .viewport-reading{display:flex;justify-content:flex-end;flex-shrink:0;height:44px}
+ #black-forest-game[data-viewport=scene] .viewport-reading button{margin:0;min-height:44px;padding:4px 10px}
+}
+.viewport-identity{display:none}
+@media(max-width:700px){
+ #black-forest-game[data-viewport=scene] #bf-stats{flex-shrink:0;position:relative;margin:0}
+ #black-forest-game[data-viewport=scene] .viewport-identity{display:flex;align-items:center;gap:6px;min-height:44px}
+ #black-forest-game[data-viewport=scene] .viewport-identity>div{flex:1;min-width:0}
+ #black-forest-game[data-viewport=scene] .viewport-identity strong,#black-forest-game[data-viewport=scene] .viewport-identity span{display:block;font-size:12px;line-height:1.4;overflow-wrap:anywhere}
+ #black-forest-game[data-viewport=scene] .viewport-identity span{color:var(--bf-muted);font-size:11px}
+ #black-forest-game[data-viewport=scene] .stats,#black-forest-game[data-viewport=scene] .stats.combat-hud{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));padding:2px 4px;gap:8px;margin:0;border:0}
+ #black-forest-game[data-viewport=scene] .stats>div:nth-child(-n+2){display:block;grid-column:auto}
+ #black-forest-game[data-viewport=scene] .stats>div:nth-child(n+3){display:none}
+ #black-forest-game[data-viewport=scene] .stats .statline{font-size:12px}
+ #black-forest-game[data-viewport=scene] .stats progress{height:5px;margin:2px 0 0}
+}
+@media(max-width:700px){
+ #black-forest-game[data-viewport=scene] .layout{align-items:stretch;width:100%;height:100%}
+ #black-forest-game[data-viewport=scene] .layout>.main{box-sizing:border-box;height:100%}
+}
