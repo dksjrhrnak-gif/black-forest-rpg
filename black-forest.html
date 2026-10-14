@@ -1248,6 +1248,55 @@
 #black-forest-game .armory-bag-item{border-color:var(--bf-line);border-left-color:var(--gear-color);border-radius:var(--bf-card-r);background:var(--bf-bg);padding:12px}
 #black-forest-game .armory-sheet .gear{padding:12px}
 
+/* B UI-5: apply the same surfaces to existing utility and story screens. */
+#black-forest-game .top:after{background:linear-gradient(90deg,transparent,var(--bf-line) 18%,var(--bf-line) 82%,transparent)}
+#black-forest-game .top .muted{color:var(--bf-muted)}
+#black-forest-game .sideblock,#black-forest-game .panel,#black-forest-game .panelbar{background:var(--bf-card);border-color:var(--bf-line);color:var(--bf-text)}
+#black-forest-game .panelbar{gap:8px;padding:10px 0}
+#black-forest-game .armory-panel>.panelbar{padding:10px 14px}
+#black-forest-game .panelbar>span{font:600 18px/1.4 Georgia,'Noto Serif KR',serif}
+#black-forest-game .panel:before{background:#715b43}
+#black-forest-game .panel h3{color:var(--bf-text)}
+#black-forest-game .panel>.item{border-color:var(--bf-line)}
+#black-forest-game .panel .actions{padding:0;margin:12px 0;border:0}
+#black-forest-game .panel details,#black-forest-game .p3-ending-region{background:var(--bf-bg);border-color:var(--bf-line);border-radius:var(--bf-card-r)}
+#black-forest-game .p3-craft-preview,#black-forest-game .p3-tuning{margin:12px 0;padding:12px;border:1px solid var(--bf-line)}
+#black-forest-game summary{min-height:44px;padding:10px 0;color:var(--bf-text);line-height:1.6}
+#black-forest-game .p3-craft-preview>summary,#black-forest-game .p3-tuning>summary{font-size:15px}
+#black-forest-game .p3-set-summary .item{padding:12px;border-color:var(--bf-line)}
+#black-forest-game .filters input,#black-forest-game .filters select,
+#black-forest-game textarea,#black-forest-game .commandrow input{background:var(--bf-bg);border-color:#715b43;color:var(--bf-text);border-radius:var(--bf-btn-r)}
+#black-forest-game .aux-action,#black-forest-game button.small:not(.game-action),#black-forest-game .commandrow button{background:var(--bf-bg);border-color:#715b43;color:var(--bf-text);border-radius:var(--bf-btn-r);min-height:44px;font-size:12px;font-weight:600;text-align:center}
+#black-forest-game .aux-action:hover:not(:disabled){background:var(--bf-tint)}
+#black-forest-game .footer,#black-forest-game .commandrow{border-color:var(--bf-line)}
+#black-forest-game .campnav{background:transparent;border-color:var(--bf-line);padding-top:12px;margin-top:16px}
+#black-forest-game .story{color:var(--bf-text);font-size:15px;line-height:1.8}
+#black-forest-game .opening-story{background:var(--bf-bg);border:1px solid var(--bf-line);border-radius:var(--bf-card-r);padding:12px}
+#black-forest-game .badge{background:var(--bf-tint);border:1px solid var(--bf-line);color:var(--bf-text);border-radius:999px}
+#black-forest-game .p3-ending{margin-top:18px;font-size:15px;line-height:1.8}
+#black-forest-game .p3-ending-region{padding:14px;margin:12px 0;border:1px solid var(--bf-line)}
+#black-forest-game .p3-ending-region h3{color:var(--bf-gold);font:600 20px/1.4 Georgia,'Noto Serif KR',serif}
+#black-forest-game .p3-ending-region .muted{font-size:13px}
+#black-forest-game .route{border-color:var(--bf-line)}
+#black-forest-game .step.current{outline-color:var(--bf-ember)}
+#black-forest-game .collectionitem,#black-forest-game .logitem{background:var(--bf-bg);border-color:var(--bf-line);border-radius:var(--bf-card-r)}
+#black-forest-game .is-conversation .actions{background:var(--bf-card)}
+/* HP card remains the original FX anchor; preserve its unclipped overlay. */
+#black-forest-game .stats>div{overflow:visible}
+#black-forest-game .scene-hero-head .enemy{background:transparent;border:0;padding:0;margin:8px 0 0;gap:2px}
+#black-forest-game .scene-hero-head .enemy .statline>span:first-child{display:none}
+#black-forest-game .scene-hero-head .enemy .statline{justify-content:flex-end;color:var(--bf-text)}
+#black-forest-game .scene-hero-head .enemy .intent{font-size:12px;color:#f3c5b6;text-shadow:0 1px 4px #000}
+#black-forest-game .scene-hero-head .enemy progress{height:10px;margin-top:4px}
+@media(max-width:700px){
+ #black-forest-game .top h1{font-size:24px}
+ #black-forest-game .main>.actions{margin:12px -12px -12px;padding:8px 12px calc(8px + env(safe-area-inset-bottom));border-radius:0 0 var(--bf-card-r) var(--bf-card-r)}
+ #black-forest-game .is-conversation .main>.actions{position:static;margin:12px 0 0;padding:8px 0 0;border-radius:0;box-shadow:none}
+}
+#black-forest-game .actions button.game-action .action-label,
+#black-forest-game .campnav button.game-action .action-label,
+#black-forest-game .classcards button.game-action .action-label{color:inherit}
+
 </style>
 <div id="black-forest-game">
 <header class="top"><div><p class="eyebrow">THE LAST EMBER · TEXT RPG</p><h1>검은 숲의 방랑자</h1><p class="muted">마지막 불씨 · 통합판 5.6 · 여정과 이미지 연결</p></div><button type="button" data-ui="save" class="small cursor-interaction">저장 / 불러오기</button></header>
@@ -3334,6 +3383,7 @@ const hero=heroScenes.has(s.scene)?sceneHero(s,kicker,title):'';
 const intro=hero||`<p class="eyebrow">${kicker}</p><h2>${esc(title)}</h2>${sceneArt(s)}${conversationScenes.has(s.scene)?conversationCopy(s):`<div class="story ${opening?'opening-story':''}" aria-live="polite">${esc(s.message)}</div>`}`;
 $('play').innerHTML=`<div class="layout ${s.scene==='battle'?'in-battle':''} ${conversationScenes.has(s.scene)?'is-conversation':''}"><main class="main">${intro}${s.scene!=='camp'?extra:''}${actions?`<div class="actions">${actions}</div>`:''}${s.scene==='camp'?extra:''}</main>${side}</div><form id="bf-command-form" class="commandrow"><label for="bf-command">직접 입력</label><input id="bf-command" type="text" maxlength="80" autocomplete="off" placeholder="예: 공격, 방어, 물약, 계속"><button type="submit" class="cursor-interaction">실행</button><p class="muted" id="bf-command-status" role="status">지원 명령: 공격 · 스킬 · 방어 · 물약 · 도주 · 휴식 · 귀환 · 계속 · 1/2/3/4</p></form>`;
 if(hero)$('play').querySelector('.scene-hero-body').before($('stats'));
+if(s.scene==='battle')$('play').querySelector('.scene-hero-head').append($('play').querySelector('.enemy'));
 }
 function showPanel(type){fx.clear();if(panel!==type){panelOrigin=type; if(views[type])views[type].page=0;}panel=type;const el=$('panel'),s=game.s;el.hidden=false;el.classList.toggle('armory-panel',type==='equipment');lockPanel();const close=menu('닫기','close','small');let html='';
 if(type==='status')html=statusDetails()+close;

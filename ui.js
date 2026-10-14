@@ -116,6 +116,7 @@ const hero=heroScenes.has(s.scene)?sceneHero(s,kicker,title):'';
 const intro=hero||`<p class="eyebrow">${kicker}</p><h2>${esc(title)}</h2>${sceneArt(s)}${conversationScenes.has(s.scene)?conversationCopy(s):`<div class="story ${opening?'opening-story':''}" aria-live="polite">${esc(s.message)}</div>`}`;
 $('play').innerHTML=`<div class="layout ${s.scene==='battle'?'in-battle':''} ${conversationScenes.has(s.scene)?'is-conversation':''}"><main class="main">${intro}${s.scene!=='camp'?extra:''}${actions?`<div class="actions">${actions}</div>`:''}${s.scene==='camp'?extra:''}</main>${side}</div><form id="bf-command-form" class="commandrow"><label for="bf-command">직접 입력</label><input id="bf-command" type="text" maxlength="80" autocomplete="off" placeholder="예: 공격, 방어, 물약, 계속"><button type="submit" class="cursor-interaction">실행</button><p class="muted" id="bf-command-status" role="status">지원 명령: 공격 · 스킬 · 방어 · 물약 · 도주 · 휴식 · 귀환 · 계속 · 1/2/3/4</p></form>`;
 if(hero)$('play').querySelector('.scene-hero-body').before($('stats'));
+if(s.scene==='battle')$('play').querySelector('.scene-hero-head').append($('play').querySelector('.enemy'));
 }
 function showPanel(type){fx.clear();if(panel!==type){panelOrigin=type; if(views[type])views[type].page=0;}panel=type;const el=$('panel'),s=game.s;el.hidden=false;el.classList.toggle('armory-panel',type==='equipment');lockPanel();const close=menu('닫기','close','small');let html='';
 if(type==='status')html=statusDetails()+close;
