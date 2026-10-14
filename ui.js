@@ -49,7 +49,8 @@ function sceneHero(s,kicker,title){
  return `<section class="scene-hero scene-${s.scene}${compact?' scene-compact':''}${visual.includes('assets/story_')?' scene-story-art':''}"><div class="scene-visual">${visual}<div class="scene-hero-shade" aria-hidden="true"></div><header class="scene-hero-head"><p class="eyebrow">${esc(kicker)}</p><h2>${esc(title)}</h2></header></div><div class="scene-hero-body" aria-live="polite">${heroNarrative(s)}${decision?`<div class="scene-hero-question"><span>지금 결정할 것</span><strong>${esc(decision.question)}</strong><small>무엇을 지키고 무엇을 감수할지 선택한다.</small></div>`:''}</div></section>`;
 }
 // Layout-only sizing for embedded documents and mobile address-bar changes.
-function sizeViewport(){if(panel)return;const top=root.getBoundingClientRect().top,height=window.visualViewport?.height||window.innerHeight;root.style.setProperty('--bf-scene-height',Math.max(240,height-Math.max(0,top))+'px');}
+function fitChoices(){const actions=$('play').querySelector('.actions:has([data-cmd=chapterChoice])');if(!actions)return;actions.classList.remove('choices-single');if([...actions.querySelectorAll('.action-label')].some(e=>e.getBoundingClientRect().height>36))actions.classList.add('choices-single');}
+function sizeViewport(){if(panel)return;const top=root.getBoundingClientRect().top,height=window.visualViewport?.height||window.innerHeight;root.style.setProperty('--bf-scene-height',Math.max(240,height-Math.max(0,top))+'px');fitChoices();}
 window.addEventListener('resize',sizeViewport);window.visualViewport?.addEventListener('resize',sizeViewport);
 root.addEventListener('error',ev=>{if(ev.target.tagName==='IMG'){ev.target.hidden=true;const caption=ev.target.parentElement.querySelector('.art-fallback');if(caption)caption.hidden=false;}},true);
 window.addEventListener('pageshow',ev=>{if(!ev.persisted)return;try{const code=localStorage.getItem(KEY);if(code)game=Game.load(code);render();}catch(e){warning='남긴 모험 기록을 다시 확인해 주세요.';}});
@@ -136,6 +137,7 @@ function prepareViewport(s,active){
  if(body){body.tabIndex=0;body.setAttribute('role','region');body.setAttribute('aria-label','장면 이야기 · 스크롤하여 전체 읽기');
  const question=body.querySelector('.scene-hero-question');if(question)body.after(question);
  }
+ fitChoices();
 }
 const careerConditionLabel=label=>label.replace(/^이야기 (.+)$/,(_,flag)=>{const chapter=flag.match(/^chapter_(\d)_seen$/);if(chapter&&AREAS[Number(chapter[1])])return AREAS[Number(chapter[1])].name+' 방문';const npc=NPCS[flag.replace(/_seen$/,'')];return npc?npc.name+' 만남':'이야기 경험';});
 const careerConditions=rows=>`<ul class="career-conditions" aria-label="전직 조건">${rows.map(r=>`<li class="career-condition ${r.now>=r.need?'is-met':'is-unmet'}"><span class="condition-mark" aria-hidden="true">${r.now>=r.need?'✓':'○'}</span><span class="condition-label">${esc(careerConditionLabel(r.label))}</span><span class="condition-value">${r.now>=r.need?'완료':'미완료'} · ${r.now}/${r.need}</span></li>`).join('')}</ul>`;
