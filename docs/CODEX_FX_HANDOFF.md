@@ -81,4 +81,13 @@ BF_QA_URL=http://127.0.0.1:4183/ node test-fx-performance.cjs
 
 ## 배포 기록
 
-검증을 마친 실제 PR, main SHA, CI, Pages 및 공개 QA 결과를 이 절에 추가한다.
+- [PR #6](https://github.com/dksjrhrnak-gif/black-forest-rpg/pull/6) 최종 코드 `69d547e82f1d3d305709064dbf8863fe54781123` 검수 후 병합. PR 변경 25파일; 핵심 엔진/콘텐츠/데이터/이미지 diff 없음.
+- PR CI: [Handoff 38497101241](https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/38497101241) 8개 + [통합 38497103265](https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/38497103265) 11개 = 19개 성공. main 전용 공개 job 1개는 QA 브랜치에서 의도적으로 건너뜀.
+- 병합 main `5f76a55feaa8661f33aa9ce6e90e45d1a68bb103`, 2026-10-14 01:57:32 UTC. 병합 tree는 검증한 작업 브랜치와 동일하다.
+- main CI: [Handoff 38498492714](https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/38498492714) 10개 + [통합 38498492744](https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/38498492744) 11개 = 21개 모두 성공.
+- [Pages 38498492273](https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/38498492273), deployment `7054866917` 성공(2026-10-14 02:01:18 UTC).
+- 공개 Chromium/WebKit/Firefox: 기존 P3 5화면폭 경로와 FX 360/390/430px × 일반/reduced motion 모두 실제 실행 성공. 기존 Chromium/WebKit P1/P2 및 전체 모바일 공개 회귀도 성공. 새 게임·전투·보상·제작/강화/세트·히든·엔딩·저장과 FX 연속 클릭/스크롤/정리에서 콘솔·런타임 오류 0을 assert했다.
+- 클라우드 공개 WebKit도 독립 실행하여 6개 모바일/모션 조합 모두 통과(`fx/public/ui-webkit.json`). 공개 HTML 및 149 이미지/CSV 3개는 로컬과 바이트 일치(`fx/public/http-assets.json`). HTML SHA-256 `08c5f1f388f0e900c1e53c53e28b52ae1137ad77c7842888a1a1b82bd9326349`.
+- API에서 확인한 실행 SHA·job 결론·공개 FX step은 `fx/ci-verification.json`에 기록했다. 중간 후보의 취소/완료된 실행을 최종 CI 숫자에 합산하지 않았다. CPU 감속 step은 Chromium 전용이며 다른 브라우저의 해당 step은 의도적으로 건너뜀.
+- 이 완료 기록과 공개 증거만 문서 커밋으로 추가한다. 런타임/HTML/CSV/이미지는 동일하며 코드 CI 21검사를 다시 실행하지 않는다. 최종 문서 main SHA의 Pages 배포/공개 바이트를 한 번 더 확인하고 최종 제출 보고서에 남긴다.
+- 기능 오류는 이번 검증 범위에서 남아 있지 않다. 실제 기기와 장시간/주관적 플레이 평가의 한계는 위 절을 유지한다.
