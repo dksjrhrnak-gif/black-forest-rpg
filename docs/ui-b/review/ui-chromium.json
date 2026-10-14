@@ -3,7 +3,7 @@
   "engine": "chromium",
   "baseline": false,
   "base": "http://127.0.0.1:4192/",
-  "phase": 1,
+  "phase": 2,
   "checks": [
     {
       "width": 360,
@@ -53,6 +53,87 @@
           "command": "equipment",
           "x": 21,
           "y": 1572.171875,
+          "w": 318,
+          "h": 52,
+          "font": "15px",
+          "weight": "600",
+          "radius": "10px",
+          "clipped": false
+        }
+      ],
+      "overflow": false,
+      "errors": 0
+    },
+    {
+      "width": 360,
+      "height": 800,
+      "screen": "battle",
+      "imageFrameHeight": 320,
+      "hudHeight": 106.0625,
+      "scrollY": 67,
+      "firstActionScroll": 0,
+      "firstActionPageScroll": 0,
+      "visibleActionButtons": 5,
+      "actions": [
+        {
+          "command": "act",
+          "x": 23,
+          "y": 510.3125,
+          "w": 141,
+          "h": 52,
+          "font": "15px",
+          "weight": "600",
+          "radius": "10px",
+          "clipped": false
+        },
+        {
+          "command": "act",
+          "x": 172,
+          "y": 510.3125,
+          "w": 141,
+          "h": 52,
+          "font": "15px",
+          "weight": "600",
+          "radius": "10px",
+          "clipped": false
+        },
+        {
+          "command": "act",
+          "x": 23,
+          "y": 609.40625,
+          "w": 141,
+          "h": 52,
+          "font": "15px",
+          "weight": "600",
+          "radius": "10px",
+          "clipped": false
+        },
+        {
+          "command": "act",
+          "x": 172,
+          "y": 609.40625,
+          "w": 141,
+          "h": 52,
+          "font": "15px",
+          "weight": "600",
+          "radius": "10px",
+          "clipped": false
+        },
+        {
+          "command": "act",
+          "x": 23,
+          "y": 691.453125,
+          "w": 290,
+          "h": 52,
+          "font": "15px",
+          "weight": "600",
+          "radius": "10px",
+          "clipped": false
+        },
+        {
+          "command": "equipment",
+          "x": 21,
+          "y": 1059,
           "w": 318,
           "h": 52,
           "font": "15px",
@@ -124,6 +205,87 @@
       "errors": 0
     },
     {
+      "width": 390,
+      "height": 844,
+      "screen": "battle",
+      "imageFrameHeight": 320,
+      "hudHeight": 106.0625,
+      "scrollY": 67,
+      "firstActionScroll": 0,
+      "firstActionPageScroll": 0,
+      "visibleActionButtons": 5,
+      "actions": [
+        {
+          "command": "act",
+          "x": 23,
+          "y": 510.3125,
+          "w": 156,
+          "h": 52,
+          "font": "15px",
+          "weight": "600",
+          "radius": "10px",
+          "clipped": false
+        },
+        {
+          "command": "act",
+          "x": 187,
+          "y": 510.3125,
+          "w": 156,
+          "h": 52,
+          "font": "15px",
+          "weight": "600",
+          "radius": "10px",
+          "clipped": false
+        },
+        {
+          "command": "act",
+          "x": 23,
+          "y": 609.40625,
+          "w": 156,
+          "h": 52,
+          "font": "15px",
+          "weight": "600",
+          "radius": "10px",
+          "clipped": false
+        },
+        {
+          "command": "act",
+          "x": 187,
+          "y": 609.40625,
+          "w": 156,
+          "h": 52,
+          "font": "15px",
+          "weight": "600",
+          "radius": "10px",
+          "clipped": false
+        },
+        {
+          "command": "act",
+          "x": 23,
+          "y": 691.453125,
+          "w": 320,
+          "h": 52,
+          "font": "15px",
+          "weight": "600",
+          "radius": "10px",
+          "clipped": false
+        },
+        {
+          "command": "equipment",
+          "x": 21,
+          "y": 1059,
+          "w": 348,
+          "h": 52,
+          "font": "15px",
+          "weight": "600",
+          "radius": "10px",
+          "clipped": false
+        }
+      ],
+      "overflow": false,
+      "errors": 0
+    },
+    {
       "width": 430,
       "height": 932,
       "screen": "exploration",
@@ -171,6 +333,87 @@
           "command": "equipment",
           "x": 21,
           "y": 1519.671875,
+          "w": 388,
+          "h": 52,
+          "font": "15px",
+          "weight": "600",
+          "radius": "10px",
+          "clipped": false
+        }
+      ],
+      "overflow": false,
+      "errors": 0
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "screen": "battle",
+      "imageFrameHeight": 320,
+      "hudHeight": 106.0625,
+      "scrollY": 67,
+      "firstActionScroll": 0,
+      "firstActionPageScroll": 0,
+      "visibleActionButtons": 5,
+      "actions": [
+        {
+          "command": "act",
+          "x": 23,
+          "y": 510.3125,
+          "w": 176,
+          "h": 52,
+          "font": "15px",
+          "weight": "600",
+          "radius": "10px",
+          "clipped": false
+        },
+        {
+          "command": "act",
+          "x": 207,
+          "y": 510.3125,
+          "w": 176,
+          "h": 52,
+          "font": "15px",
+          "weight": "600",
+          "radius": "10px",
+          "clipped": false
+        },
+        {
+          "command": "act",
+          "x": 23,
+          "y": 609.40625,
+          "w": 176,
+          "h": 52,
+          "font": "15px",
+          "weight": "600",
+          "radius": "10px",
+          "clipped": false
+        },
+        {
+          "command": "act",
+          "x": 207,
+          "y": 609.40625,
+          "w": 176,
+          "h": 52,
+          "font": "15px",
+          "weight": "600",
+          "radius": "10px",
+          "clipped": false
+        },
+        {
+          "command": "act",
+          "x": 23,
+          "y": 691.453125,
+          "w": 360,
+          "h": 52,
+          "font": "15px",
+          "weight": "600",
+          "radius": "10px",
+          "clipped": false
+        },
+        {
+          "command": "equipment",
+          "x": 21,
+          "y": 1059,
           "w": 388,
           "h": 52,
           "font": "15px",

@@ -1304,3 +1304,16 @@
 #black-forest-game .scene-hero.scene-compact .scene-hero-head{position:relative;inset:auto;padding:10px 14px;background:var(--bf-bg)}
 #black-forest-game .scene-hero.scene-compact .scene-hero-shade{display:none}
 #black-forest-game .scene-hero.scene-compact .scene-hero-head h2{font-size:22px}
+
+/* PR #7 P1-2: vitals keep their original first/second FX anchors. */
+#black-forest-game .stats.combat-hud{grid-template-columns:minmax(0,1fr) 96px;gap:6px 8px;padding:8px 10px}
+#black-forest-game .stats.combat-hud>div:first-child,#black-forest-game .stats.combat-hud>div:nth-child(2){grid-column:1/-1;display:grid;grid-template-columns:minmax(100px,1fr) minmax(0,1fr);gap:10px;align-items:center}
+#black-forest-game .stats.combat-hud>div:nth-child(-n+2) progress{height:8px;margin:0}
+#black-forest-game .stats.combat-hud .combat-growth{min-width:0}
+#black-forest-game .combat-growth .statline{font-size:11px;overflow-wrap:anywhere}
+#black-forest-game .combat-growth progress{height:4px;margin-top:3px}
+#black-forest-game .combat-meta{margin-top:4px;font-size:11px;line-height:1.5}
+#black-forest-game .stats.combat-hud .combat-detail{display:flex;align-items:center;justify-content:flex-end}
+#black-forest-game .stats.combat-hud .combat-detail button{width:96px;margin:0;padding:6px 8px;min-height:44px}
+#black-forest-game .combat-effects{display:flex;flex-wrap:wrap;gap:4px;padding:0 10px 8px;border-bottom:1px solid var(--bf-line)}
+#black-forest-game .combat-effects span{font-size:12px;line-height:1.55;color:var(--bf-text);border:1px solid #715b43;border-radius:6px;padding:2px 6px;background:var(--bf-bg)}
