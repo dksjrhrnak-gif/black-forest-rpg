@@ -1343,6 +1343,18 @@
 #black-forest-game .fx-loot-card.grade-4,#black-forest-game .fx-loot-card.grade-5{border-width:2px;box-shadow:inset 0 1px 0 color-mix(in srgb,var(--fx-rarity) 40%,transparent),0 0 12px color-mix(in srgb,var(--fx-rarity) 12%,transparent)}
 #black-forest-game .fx-loot-card.grade-4 .gear-icon:not(.item-art),#black-forest-game .fx-loot-card.grade-5 .gear-icon:not(.item-art){width:84px;height:84px;border-color:var(--fx-rarity)}
 
+/* PR #7 P2-3: distinct type/name/core stats; full options stay in the sheet. */
+#black-forest-game .armory-hub{grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:10px}
+#black-forest-game .armory .gear-slot{grid-template-columns:24px minmax(0,1fr);gap:6px;padding:6px 8px}
+#black-forest-game .gear-slot .armory-icon{width:24px;height:24px;font-size:18px}
+#black-forest-game .gear-slot .armory-icon:has(.item-art){width:24px;height:36px}
+#black-forest-game .slot-copy{min-width:0}
+#black-forest-game .slot-kind{display:block;font-size:11px;line-height:1.4;color:var(--bf-muted)}
+#black-forest-game .armory .gear-slot strong{font-size:13px;font-weight:600;line-height:1.5;color:var(--bf-text);white-space:normal;text-overflow:clip;overflow:visible}
+#black-forest-game .armory .gear-slot small{font-size:11px;line-height:1.5;color:var(--bf-muted)}
+#black-forest-game .slot-rarity{color:var(--gear-color);font-weight:600}
+@media(max-height:500px){#black-forest-game .armory .gear-slot{grid-template-columns:20px minmax(0,1fr);padding:3px 5px}#black-forest-game .gear-slot .armory-icon{width:20px;height:20px}#black-forest-game .slot-kind{font-size:10px}}
+
 </style>
 <div id="black-forest-game">
 <header class="top"><div><p class="eyebrow">THE LAST EMBER · TEXT RPG</p><h1>검은 숲의 방랑자</h1><p class="muted">마지막 불씨 · 통합판 5.6 · 여정과 이미지 연결</p></div><button type="button" data-ui="save" class="small cursor-interaction">저장 / 불러오기</button></header>
@@ -3390,7 +3402,7 @@ function equipmentPanel(){
  const s=game.s,j=JOBS[s.job],d=gearSelection.index===null?s[gearSelection.slot]:s.bag[gearSelection.index];
  if(!d){gearSelection={slot:'weapon',index:null};return equipmentPanel();}
  const equipped=gearSelection.index===null,upgradeCost=game.upgradeCost(d.slot);
- return `<div class="armory"><section class="armory-hub" aria-label="현재 직업과 장착 장비"><figure class="armory-portrait">${portrait(s.job)}<figcaption>${esc(j.name)}<span>Lv.${s.level} · ${j.hidden?'Hidden':'Tier '+j.tier} · 공격 ${game.atk()} / 방어 ${game.def()}</span></figcaption></figure><div class="armory-slots">${game.equipment().map(item=>`<button type="button" class="gear-slot rarity-${armoryRarity(item)} ${armoryPulse===item.slot?'gear-equipped':''}" data-ui="gear-slot-${item.slot}" aria-pressed="${equipped&&d.slot===item.slot}" aria-label="${slotLabel[item.slot]}: ${esc(gearName(item))}, ${RARITIES[item.grade]}">${armoryIcon(item)}<span><strong>${slotLabel[item.slot]} · ${esc(gearName(item))}</strong><small>${RARITIES[item.grade]} · ${esc(gearInfo(item))}</small></span></button>`).join('')}</div></section>
+ return `<div class="armory"><section class="armory-hub" aria-label="현재 직업과 장착 장비"><figure class="armory-portrait">${portrait(s.job)}<figcaption>${esc(j.name)}<span>Lv.${s.level} · ${j.hidden?'Hidden':'Tier '+j.tier} · 공격 ${game.atk()} / 방어 ${game.def()}</span></figcaption></figure><div class="armory-slots">${game.equipment().map(item=>`<button type="button" class="gear-slot rarity-${armoryRarity(item)} ${armoryPulse===item.slot?'gear-equipped':''}" data-ui="gear-slot-${item.slot}" aria-pressed="${equipped&&d.slot===item.slot}" aria-label="${slotLabel[item.slot]}: ${esc(gearName(item))}, ${RARITIES[item.grade]}">${armoryIcon(item)}<span class="slot-copy"><span class="slot-kind">${slotLabel[item.slot]}</span><strong>${esc(gearName(item))}</strong><small><span class="slot-rarity">${RARITIES[item.grade]}</span> · ${esc(gearInfo(item).replace(slotLabel[item.slot]+' · ',''))}</small></span></button>`).join('')}</div></section>
  <section class="armory-sheet" tabindex="0" aria-label="장비 비교와 보관 목록"><h3>${equipped?'장착 중':'비교 중'} · ${esc(gearName(d))}</h3>${gearCard(d)}${!equipped?`<p class="comparison" role="status">장착 시: ${differences(d)}</p>`:''}
  <div class="actions">${equipped?b('강화','upgrade',d.slot,`+${d.plus}/8 · ${upgradeCost.gold}G / 광석 ${upgradeCost.ore} · ${Math.round(game.upgradeChance(d.slot)*100)}%`,d.plus>=8||!game.canPay(upgradeCost))+b('옵션 재설정','reforge',d.slot,'40G / 광석 4',!d.affixes.length||s.gold<40||s.ore<4):b('착용','equipBag',gearSelection.index,'',false,'primary')+b('판매 '+game.price(d)+'G','sellBag',gearSelection.index)+b('분해','salvage',gearSelection.index,'광석 '+(2+d.grade))}</div>
  <details><summary>능력치와 강화 정보</summary><dl class="statgrid">${Object.entries(game.statSnapshot()).map(([k,v])=>`<div><dt>${statLabel(k)}</dt><dd>${Number(v.toFixed(1))}${['CRIT','DODGE','LEECH','LUCK'].includes(k)?'%':''}</dd></div>`).join('')}</dl><p>강화 실패 시 장비·강화 수치 유지 · 연속 실패 ${d.fails}/2</p>${s.legacyEquipment?.length?`<p>이전 확장 슬롯 장비 ${s.legacyEquipment.length}개 보존 · 능력치에는 3슬롯만 반영</p>`:''}</details>
