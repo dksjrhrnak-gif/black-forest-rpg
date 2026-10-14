@@ -127,10 +127,9 @@ function prepareViewport(s,active){
  const main=$('play').querySelector('.main'),body=main.querySelector('.scene-hero-body');
  main.prepend($('stats'));
  const identity=document.createElement('div');identity.className='viewport-identity';
- identity.innerHTML=`<div><strong>Lv.${s.level} ${esc(JOBS[s.job].name)}</strong><span>${esc(AREAS[s.area].name)}</span></div>${menu('능력치','status','small')}${menu('메뉴','scene-menu','small')}`;
+ identity.innerHTML=`<div><strong>Lv.${s.level} ${esc(JOBS[s.job].name)}</strong><span>${esc(AREAS[s.area].name)}</span></div>${menu('이야기','scene-reading','small')}${menu('능력치','status','small')}${menu('메뉴','scene-menu','small')}`;
  $('stats').prepend(identity);
  if(body){body.tabIndex=0;body.setAttribute('role','region');body.setAttribute('aria-label','장면 이야기 · 스크롤하여 전체 읽기');
- const reading=document.createElement('div');reading.className='viewport-reading';reading.innerHTML=menu('이야기 전체 보기','scene-reading','small');body.before(reading);
  const question=body.querySelector('.scene-hero-question');if(question)body.after(question);
  }
 }

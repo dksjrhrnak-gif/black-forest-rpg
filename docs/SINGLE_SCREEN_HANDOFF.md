@@ -13,3 +13,7 @@ Claude 링크는 이 환경에서 CONNECT 403으로 읽지 못했다. 확인하�
 ## V-2 探험
 
 dynamic viewport에 맞춘 모바일 flex frame과 동일 HP/MP 앵커, 실제 직업/레벨/지역을 배치했다. 원본 그림은 contain, 이야기 전체 원문은 focus 가능한 내부 region과 전체 보기 모달로 유지했다. 중요한 선택 질문은 원문 영역 밖에서 계속 표시한다. menu/status/save 및 직접 입력은 기존 기능을 접근 가능한 메뉴로 보존한다. Chromium 4개 크기에서 탐험 3개 선택이 모두 화면 안에 있고 52px이며 원문 모달과 Escape 포커스 복원·저장 불변을 검증했다. 짧은 높이에서 발견한 flex stretch 문제를 수정 후 재검증했다.
+
+## V-3 전투
+
+전투 HP/MP 첫 두 앵커와 enemy/scene hero를 그대로 사용한다. 실제 적 HP/예고·실제 5행동과 MP 비용/효과 설명을 유지했다. 전체 읽기 버튼은 HUD에 통합해 이미지 공간을 확보했다. 중요 상태는 실제 combatStatus 결과를 표시하고 다수 상태만 제한된 내부 스크롤을 허용한다. 4개 크기의 Chromium에서 HUD·그림·5행동 모두 viewport 안이며 전체 페이지 높이가 viewport와 같음을 검증했다. HUD 목표 56px에 억지로 맞추지 않고 실제 직업/지역 및 접근 가능한 44px 보조 버튼을 보존했다.
