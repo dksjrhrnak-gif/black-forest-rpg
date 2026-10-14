@@ -1152,6 +1152,64 @@
 #black-forest-game .class-choice h3{font-size:18px}
 #black-forest-game .aux-action,#black-forest-game button.small:not(.game-action){min-height:44px;font-size:12px;text-align:center}
 
+/* B UI-3: semantic palette; keep existing responsive/FX overrides intact. */
+#black-forest-game{
+  --bf-bg:#0d0b0a;--bf-card:#17120f;--bf-card-2:#201913;--bf-line:#3a2c20;
+  --bf-text:#e8dfd2;--bf-muted:#b5a795;--bf-ember:#e8944a;--bf-gold:#ffd36a;
+  --bf-hp:#d04a3c;--bf-mp:#4f8fd8;--bf-shell:var(--bf-bg);--bf-panel:var(--bf-card);
+  --bf-surface:var(--bf-card-2);--bf-ink:var(--bf-text);--bf-dim:var(--bf-muted);
+  --bf-edge:var(--bf-line);--bf-accent:var(--bf-ember);--bf-accent-soft:#865a34;
+  --bf-gold-hi:var(--bf-gold);--bf-on:#fff6e8;--bf-tint:#281e17;--bf-danger:#eb9b8b;
+  background:var(--bf-bg);border-color:var(--bf-line);
+}
+#black-forest-game .main,#black-forest-game .is-conversation .main{background:var(--bf-card);border-color:var(--bf-line);border-radius:var(--bf-card-r);padding:var(--bf-card-pad)}
+#black-forest-game .scene-hero,#black-forest-game .scene-hero.scene-chapter,
+#black-forest-game .scene-hero.scene-dialogue,#black-forest-game .scene-hero.scene-npc,
+#black-forest-game .scene-hero.scene-bond{display:block;min-height:0;border-color:var(--bf-line);border-radius:var(--bf-card-r);background:var(--bf-bg);margin:0 0 12px}
+#black-forest-game .scene-visual{position:relative;height:320px;isolation:isolate;overflow:hidden}
+#black-forest-game .scene-hero .scene-art{position:absolute;inset:0;height:100%;width:100%;max-height:none;aspect-ratio:auto;margin:0;background:var(--bf-bg)}
+#black-forest-game .scene-hero .scene-art img{height:100%;min-height:0;width:100%;max-height:none;aspect-ratio:auto;object-fit:cover;object-position:center 30%}
+#black-forest-game .scene-hero-shade{inset:0;max-height:none;aspect-ratio:auto;background:linear-gradient(180deg,#0d0b0a12 25%,#0d0b0a22 55%,#0d0b0af2 100%)}
+#black-forest-game .scene-hero .scene-hero-head{position:absolute;top:auto;bottom:0;left:0;right:0;padding:22px 14px 14px}
+#black-forest-game .scene-hero-head .eyebrow{color:#e9c59f;font-size:10px;letter-spacing:1px}
+#black-forest-game .scene-hero-head h2{font:600 24px/1.35 Georgia,'Noto Serif KR',serif;color:var(--bf-text)}
+#black-forest-game .scene-hero .scene-hero-body{position:relative;margin:0;padding:var(--bf-card-pad);background:var(--bf-card);color:var(--bf-text);text-shadow:none;border-top:1px solid var(--bf-line)}
+#black-forest-game .scene-hero-text{font-size:15px;line-height:1.75;margin:0 0 8px}
+#black-forest-game .scene-hero-text:last-child{margin-bottom:0}
+#black-forest-game .scene-hero-quote{color:var(--bf-text);background:transparent;border-color:var(--bf-ember);font-size:15px;line-height:1.75}
+#black-forest-game .scene-hero-question{border-color:var(--bf-line)}
+#black-forest-game .scene-hero-question strong{color:var(--bf-text);font-size:15px}
+#black-forest-game .scene-hero-question span,#black-forest-game .scene-hero-question small{color:var(--bf-muted);letter-spacing:0;font-size:11px}
+/* Story portraits retain full 2:3 art rather than cropping the characters. */
+#black-forest-game .scene-story-art .scene-visual{height:auto;aspect-ratio:2/3;max-height:640px}
+#black-forest-game .scene-story-art .scene-art img{object-fit:contain;object-position:center}
+#black-forest-game #bf-stats{position:static;padding:0;z-index:auto;background:var(--bf-card)}
+#black-forest-game .stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;padding:12px;margin:0 0 12px;border:1px solid var(--bf-line);border-radius:var(--bf-card-r)}
+#black-forest-game .scene-hero .stats{margin:0;border:0;border-top:1px solid var(--bf-line);border-radius:0}
+#black-forest-game .stats>div{background:transparent;border:0;box-shadow:none;padding:0;min-width:0}
+#black-forest-game .statline{font-size:12px;gap:6px;line-height:1.5}
+#black-forest-game .stats>div:nth-child(3),#black-forest-game .stats>div:nth-child(4){font-size:11px}
+#black-forest-game .stats>div:nth-child(3) progress{height:5px}
+#black-forest-game .stats .muted{font-size:11px}
+#black-forest-game .stats .small{margin-top:4px;width:100%;min-height:44px}
+#black-forest-game progress{height:8px;background:var(--bf-tint)}
+#black-forest-game progress::-webkit-progress-bar{background:var(--bf-tint)}
+#black-forest-game .stats>div:first-child progress,#black-forest-game .enemy progress{accent-color:var(--bf-hp)}
+#black-forest-game .stats>div:first-child progress::-webkit-progress-value,#black-forest-game .enemy progress::-webkit-progress-value{background:var(--bf-hp)}
+#black-forest-game .stats>div:first-child progress::-moz-progress-bar,#black-forest-game .enemy progress::-moz-progress-bar{background:var(--bf-hp)}
+#black-forest-game .stats>div:nth-child(2) progress{accent-color:var(--bf-mp)}
+#black-forest-game .stats>div:nth-child(2) progress::-webkit-progress-value{background:var(--bf-mp)}
+#black-forest-game .stats>div:nth-child(2) progress::-moz-progress-bar{background:var(--bf-mp)}
+#black-forest-game .enemy{background:var(--bf-bg);border:1px solid var(--bf-line);border-radius:var(--bf-card-r);margin:0 0 12px;padding:12px}
+#black-forest-game .enemy .intent{color:var(--bf-danger);margin-top:4px;font-size:12px}
+#black-forest-game button.game-action{background:#211913;border-color:#715b43;color:var(--bf-text)}
+#black-forest-game button.game-action.primary{background:linear-gradient(180deg,#b95321,#833715);border-color:var(--bf-ember);color:#fff4e7}
+#black-forest-game button.game-action:hover:not(:disabled){background:#352619}
+#black-forest-game button.game-action.primary:hover:not(:disabled){background:#a94b20}
+#black-forest-game .main>.actions{background:var(--bf-card);border-color:var(--bf-line);backdrop-filter:none}
+#black-forest-game .in-battle .main>.actions{padding-top:8px}
+@media(min-width:701px){#black-forest-game .stats{grid-template-columns:repeat(4,minmax(0,1fr))}#black-forest-game .scene-visual{height:360px}}
+
 </style>
 <div id="black-forest-game">
 <header class="top"><div><p class="eyebrow">THE LAST EMBER · TEXT RPG</p><h1>검은 숲의 방랑자</h1><p class="muted">마지막 불씨 · 통합판 5.6 · 여정과 이미지 연결</p></div><button type="button" data-ui="save" class="small cursor-interaction">저장 / 불러오기</button></header>
@@ -3166,7 +3224,7 @@ function sceneHero(s,kicker,title){
  const visual=sceneArt(s);
  if(!visual)return '';
  const decision=s.scene==='chapter'?CHAPTER_DECISIONS[s.area]?.[s.chapterSector]:null;
- return `<section class="scene-hero scene-${s.scene}${visual.includes('assets/story_')?' scene-story-art':''}">${visual}<div class="scene-hero-shade" aria-hidden="true"></div><header class="scene-hero-head"><p class="eyebrow">${esc(kicker)}</p><h2>${esc(title)}</h2></header><div class="scene-hero-body" aria-live="polite">${heroNarrative(s)}${decision?`<div class="scene-hero-question"><span>지금 결정할 것</span><strong>${esc(decision.question)}</strong><small>무엇을 지키고 무엇을 감수할지 선택한다.</small></div>`:''}</div></section>`;
+ return `<section class="scene-hero scene-${s.scene}${visual.includes('assets/story_')?' scene-story-art':''}"><div class="scene-visual">${visual}<div class="scene-hero-shade" aria-hidden="true"></div><header class="scene-hero-head"><p class="eyebrow">${esc(kicker)}</p><h2>${esc(title)}</h2></header></div><div class="scene-hero-body" aria-live="polite">${heroNarrative(s)}${decision?`<div class="scene-hero-question"><span>지금 결정할 것</span><strong>${esc(decision.question)}</strong><small>무엇을 지키고 무엇을 감수할지 선택한다.</small></div>`:''}</div></section>`;
 }
 root.addEventListener('error',ev=>{if(ev.target.tagName==='IMG'){ev.target.hidden=true;const caption=ev.target.parentElement.querySelector('.art-fallback');if(caption)caption.hidden=false;}},true);
 window.addEventListener('pageshow',ev=>{if(!ev.persisted)return;try{const code=localStorage.getItem(KEY);if(code)game=Game.load(code);render();}catch(e){warning='남긴 모험 기록을 다시 확인해 주세요.';}});
@@ -3210,7 +3268,7 @@ try{const saved=localStorage.getItem(KEY)||localStorage.getItem(LEGACY);if(saved
 function save(){try{if(game.migrationSource){localStorage.setItem(KEY+'.before-v4',game.migrationSource);delete game.migrationSource;}localStorage.setItem(KEY,game.export());$('save-status').textContent='자동 저장됨 · 통합판 4.0'}catch(e){$('save-status').textContent='자동 저장 불가 · 저장 코드를 복사해 보관하세요.'}}
 const pct=n=>(n*100).toFixed(0)+'%';
 function statusDetails(){const st=game.combatStatus(),j=JOBS[game.s.job];return `<h3>상세 스테이터스</h3><section class="class-details">${portrait(game.s.job)}<h3>${esc(j.name)}</h3><p>Tier ${j.tier} · ${esc(j.lore||j.desc)}</p></section><dl class="statgrid">${[['공격력',game.atk()],['방어력',game.def()],['치명타율',pct(st.crit)],['치명타 배율','170%'],['회피율',pct(st.dodge)],['행운',pct(st.luck)],['기본 흡혈',pct(st.leech)],['피해 반사',st.reflect],['일반 공격 방어 관통',st.pierce],['스킬 MP 소모',st.skillCost],['방어 피해 감소','70%']].map(([k,v])=>`<div><dt>${statLabel(k)}</dt><dd>${v}</dd></div>`).join('')}</dl><p class="muted">흡혈은 직업별 스킬에서 추가될 수 있습니다. 행운은 장비 드롭과 등급 가중치에 적용됩니다.</p><div class="item"><p>${esc(j.skill)} · MP ${st.skillCost} · 숙련도 ${st.mastery}</p><p>${esc(j.passive||j.desc)}</p></div><h3>현재 전투 효과</h3><p>${esc(st.statuses.map(x=>({poison:'중독',burn:'화상',bleed:'출혈',damageOverTime:'지속 피해',stun:'기절',atkDown:'공격 약화',guard:'방어 후 집중'}[x.id]||x.id)+' · '+x.duration+'턴 · '+x.value).join(' / ')||'적용 중인 일시 효과 없음')}</p><h3>동료 지원</h3><p>${game.allies().map(id=>esc(COMPANIONS[id].aid)).join(' · ')||'개인 퀘스트 완료 + 호감도 80 이상에서 보스전 지원'}</p>`}
-function render(){fx.clear();const s=game.s;root.dataset.scene=s.scene;const job=JOBS[s.job];const opening=s.scene==='camp'&&s.cleared.length===0&&s.turns===0&&String(s.message||'').startsWith('프롤로그 — 마지막 불씨');$('stats').innerHTML=job?`<div class="stats">${meter('HP',s.hp,game.maxHp())}${meter('MP',s.mp,game.maxMp())}${meter('Lv.'+s.level+' '+job.name,s.xp,game.need())}<div><div class="statline"><span>골드</span><span>${s.gold} G</span></div><p class="muted">공격 ${game.atk()} · 방어 ${game.def()}</p>${menu('상세 스테이터스','status','small')}</div></div>`:'';
+function render(){fx.clear();$('play').before($('stats'));const s=game.s;root.dataset.scene=s.scene;const job=JOBS[s.job];const opening=s.scene==='camp'&&s.cleared.length===0&&s.turns===0&&String(s.message||'').startsWith('프롤로그 — 마지막 불씨');$('stats').innerHTML=job?`<div class="stats">${meter('HP',s.hp,game.maxHp())}${meter('MP',s.mp,game.maxMp())}${meter('Lv.'+s.level+' '+job.name,s.xp,game.need())}<div><div class="statline"><span>골드</span><span>${s.gold} G</span></div><p class="muted">공격 ${game.atk()} · 방어 ${game.def()}</p>${menu('상세 스테이터스','status','small')}</div></div>`:'';
 if(!job){$('play').innerHTML=`${art('misc','banner','검은 숲으로 향하는 방랑자')}<p class="eyebrow">CAREER / 첫 불씨의 선택</p><div class="story">${esc(s.message)}\n\n8개 지역 · 일반 ${Object.keys(JOBS).length-hiddenCount}개 + 히든 ${hiddenCount}개 직업 · ${ITEMS.length}종의 장비 · 고전 문학이 뒤섞인 도서계\n당신의 싸움은 어떤 모습인가?</div><div class="classcards">${s.offers.map(id=>[id,JOBS[id]]).map(([id,j])=>`<article class="class-choice">${portrait(id)}<h3>${j.name}</h3><p class="muted">Tier ${j.tier}</p><p>${j.desc}</p><p class="muted">HP ${j.hp} · MP ${j.mp} · 공격 ${j.atk}</p>${b(j.name+' 선택','start',id)}</article>`).join('')}</div><p class="muted">히든 직업 해금 ${s.unlocked.length}/${hiddenCount} · 수집한 장비 ${s.collection.length}/${ITEMS.length}</p>`;return}
 let title='',kicker='',actions='',extra='';
 if(s.scene==='chapter'){const decision=CHAPTER_DECISIONS[s.area][s.chapterSector],record='chapter_'+s.area+'_'+s.chapterSector;title=AREAS[s.area].name+' · '+['외곽','심부','중심부'][s.chapterSector];kicker='CHAPTER / 선택의 기록';extra='';actions=s.decisions[record]?b('남긴 기록을 다시 읽는다','chapterChoice',0,'이전 선택 유지'):decision.choices.map((c,i)=>b(c.label,'chapterChoice',i,c.result)).join('');}
@@ -3236,7 +3294,7 @@ const side=`<aside><details class="sideblock equipment-details"><summary>장착 
 const hero=heroScenes.has(s.scene)?sceneHero(s,kicker,title):'';
 const intro=hero||`<p class="eyebrow">${kicker}</p><h2>${esc(title)}</h2>${sceneArt(s)}${conversationScenes.has(s.scene)?conversationCopy(s):`<div class="story ${opening?'opening-story':''}" aria-live="polite">${esc(s.message)}</div>`}`;
 $('play').innerHTML=`<div class="layout ${s.scene==='battle'?'in-battle':''} ${conversationScenes.has(s.scene)?'is-conversation':''}"><main class="main">${intro}${s.scene!=='camp'?extra:''}${actions?`<div class="actions">${actions}</div>`:''}${s.scene==='camp'?extra:''}</main>${side}</div><form id="bf-command-form" class="commandrow"><label for="bf-command">직접 입력</label><input id="bf-command" type="text" maxlength="80" autocomplete="off" placeholder="예: 공격, 방어, 물약, 계속"><button type="submit" class="cursor-interaction">실행</button><p class="muted" id="bf-command-status" role="status">지원 명령: 공격 · 스킬 · 방어 · 물약 · 도주 · 휴식 · 귀환 · 계속 · 1/2/3/4</p></form>`;
-
+if(hero)$('play').querySelector('.scene-hero-body').before($('stats'));
 }
 function showPanel(type){fx.clear();if(panel!==type){panelOrigin=type; if(views[type])views[type].page=0;}panel=type;const el=$('panel'),s=game.s;el.hidden=false;el.classList.toggle('armory-panel',type==='equipment');lockPanel();const close=menu('닫기','close','small');let html='';
 if(type==='status')html=statusDetails()+close;
