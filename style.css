@@ -1111,3 +1111,40 @@
 #black-forest-game .enemy.fx-critical{animation-name:bf-impact-critical;animation-duration:.32s}
 #black-forest-game .enemy.fx-hit:after,#black-forest-game .enemy.fx-critical:after{content:"";position:absolute;inset:0;background:#a92f38;opacity:0;pointer-events:none;animation:bf-wound .3s ease-out}
 @media(prefers-reduced-motion:reduce){#black-forest-game .enemy.fx-hit,#black-forest-game .enemy.fx-critical,#black-forest-game .enemy.fx-hit:after,#black-forest-game .enemy.fx-critical:after{animation:none;transform:none}#black-forest-game .enemy.fx-hit:after,#black-forest-game .enemy.fx-critical:after{display:none}}
+
+/* B UI-2: shared action contract. Explanations remain outside the 52px target. */
+#black-forest-game{
+  --bf-btn-h:52px;--bf-btn-gap:8px;--bf-btn-r:10px;--bf-btn-fs:15px;--bf-btn-fw:600;
+  --bf-btn-px:8px;--bf-pad:14px;--bf-card-pad:12px;--bf-card-r:12px;
+}
+#black-forest-game button.game-action,
+#black-forest-game .armory button.game-action{
+  display:flex;align-items:center;justify-content:center;flex-direction:row;
+  width:100%;height:var(--bf-btn-h);min-height:var(--bf-btn-h);max-height:var(--bf-btn-h);
+  padding:6px var(--bf-btn-px);border-radius:var(--bf-btn-r);gap:0;
+  font-size:var(--bf-btn-fs);font-weight:var(--bf-btn-fw);line-height:18px;text-align:center;
+  white-space:normal;overflow-wrap:anywhere;text-overflow:clip;flex-shrink:0;margin:0;
+}
+#black-forest-game button.game-action .action-label{font:inherit;opacity:1;white-space:normal}
+#black-forest-game .action-option{display:flex;flex-direction:column;gap:5px;min-width:0}
+#black-forest-game .action-help{display:block;position:static;font-size:11px;line-height:1.55;color:var(--bf-dim);padding:0 3px;overflow-wrap:anywhere;text-align:left}
+#black-forest-game .actions,
+#black-forest-game .armory .actions,
+#black-forest-game .campnav,
+#black-forest-game .row:has(>.action-option){display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--bf-btn-gap);align-items:start}
+#black-forest-game .actions>.wide,
+#black-forest-game .actions>.action-option:only-child,
+#black-forest-game .actions>.game-action:only-child,
+#black-forest-game .row>.action-option:only-child{grid-column:1/-1}
+#black-forest-game .actions:not(:has(>.wide))>:last-child:nth-child(odd),
+#black-forest-game .campnav>:last-child:nth-child(odd){grid-column:1/-1}
+#black-forest-game .actions:has([data-cmd="chapterChoice"]),
+#black-forest-game .actions:has([data-cmd="event"]),
+#black-forest-game .actions:has([data-cmd="dialogue"]),
+#black-forest-game .actions:has([data-cmd="npcChoice"]),
+#black-forest-game .actions:has([data-cmd="bondChoice"]),
+#black-forest-game .actions:has([data-cmd="finish"]){grid-template-columns:1fr}
+#black-forest-game .class-choice{min-width:0;padding:12px;border:1px solid var(--bf-line);border-radius:var(--bf-card-r);background:var(--bf-panel)}
+#black-forest-game .class-choice>.action-option{margin-top:12px}
+#black-forest-game .class-choice h3{font-size:18px}
+#black-forest-game .aux-action,#black-forest-game button.small:not(.game-action){min-height:44px;font-size:12px;text-align:center}

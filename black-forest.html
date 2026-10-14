@@ -1115,6 +1115,43 @@
 #black-forest-game .enemy.fx-hit:after,#black-forest-game .enemy.fx-critical:after{content:"";position:absolute;inset:0;background:#a92f38;opacity:0;pointer-events:none;animation:bf-wound .3s ease-out}
 @media(prefers-reduced-motion:reduce){#black-forest-game .enemy.fx-hit,#black-forest-game .enemy.fx-critical,#black-forest-game .enemy.fx-hit:after,#black-forest-game .enemy.fx-critical:after{animation:none;transform:none}#black-forest-game .enemy.fx-hit:after,#black-forest-game .enemy.fx-critical:after{display:none}}
 
+/* B UI-2: shared action contract. Explanations remain outside the 52px target. */
+#black-forest-game{
+  --bf-btn-h:52px;--bf-btn-gap:8px;--bf-btn-r:10px;--bf-btn-fs:15px;--bf-btn-fw:600;
+  --bf-btn-px:8px;--bf-pad:14px;--bf-card-pad:12px;--bf-card-r:12px;
+}
+#black-forest-game button.game-action,
+#black-forest-game .armory button.game-action{
+  display:flex;align-items:center;justify-content:center;flex-direction:row;
+  width:100%;height:var(--bf-btn-h);min-height:var(--bf-btn-h);max-height:var(--bf-btn-h);
+  padding:6px var(--bf-btn-px);border-radius:var(--bf-btn-r);gap:0;
+  font-size:var(--bf-btn-fs);font-weight:var(--bf-btn-fw);line-height:18px;text-align:center;
+  white-space:normal;overflow-wrap:anywhere;text-overflow:clip;flex-shrink:0;margin:0;
+}
+#black-forest-game button.game-action .action-label{font:inherit;opacity:1;white-space:normal}
+#black-forest-game .action-option{display:flex;flex-direction:column;gap:5px;min-width:0}
+#black-forest-game .action-help{display:block;position:static;font-size:11px;line-height:1.55;color:var(--bf-dim);padding:0 3px;overflow-wrap:anywhere;text-align:left}
+#black-forest-game .actions,
+#black-forest-game .armory .actions,
+#black-forest-game .campnav,
+#black-forest-game .row:has(>.action-option){display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--bf-btn-gap);align-items:start}
+#black-forest-game .actions>.wide,
+#black-forest-game .actions>.action-option:only-child,
+#black-forest-game .actions>.game-action:only-child,
+#black-forest-game .row>.action-option:only-child{grid-column:1/-1}
+#black-forest-game .actions:not(:has(>.wide))>:last-child:nth-child(odd),
+#black-forest-game .campnav>:last-child:nth-child(odd){grid-column:1/-1}
+#black-forest-game .actions:has([data-cmd="chapterChoice"]),
+#black-forest-game .actions:has([data-cmd="event"]),
+#black-forest-game .actions:has([data-cmd="dialogue"]),
+#black-forest-game .actions:has([data-cmd="npcChoice"]),
+#black-forest-game .actions:has([data-cmd="bondChoice"]),
+#black-forest-game .actions:has([data-cmd="finish"]){grid-template-columns:1fr}
+#black-forest-game .class-choice{min-width:0;padding:12px;border:1px solid var(--bf-line);border-radius:var(--bf-card-r);background:var(--bf-panel)}
+#black-forest-game .class-choice>.action-option{margin-top:12px}
+#black-forest-game .class-choice h3{font-size:18px}
+#black-forest-game .aux-action,#black-forest-game button.small:not(.game-action){min-height:44px;font-size:12px;text-align:center}
+
 </style>
 <div id="black-forest-game">
 <header class="top"><div><p class="eyebrow">THE LAST EMBER · TEXT RPG</p><h1>검은 숲의 방랑자</h1><p class="muted">마지막 불씨 · 통합판 5.6 · 여정과 이미지 연결</p></div><button type="button" data-ui="save" class="small cursor-interaction">저장 / 불러오기</button></header>
@@ -3091,8 +3128,9 @@ const fx=BFUIFX.create(root);
 window.addEventListener('pagehide',()=>fx.clear());document.addEventListener('visibilitychange',()=>{if(document.hidden)fx.clear()});const hiddenCount=Object.values(JOBS).filter(j=>j.hidden).length;const views={jobs:{query:'',family:'',page:0},codex:{query:'',slot:'',grade:'',found:false,page:0}};
 const visibleText=t=>String(t).replace(/보상 받고 다음 조우|다음 조우|계속 진행|자동 이동 중…/g,'계속 나아간다').replace(/보상 수령/g,'전리품을 챙긴다').replace(/체크포인트/g,'쉼터').replace(/경로 선택/g,'길을 살핀다').replace(/랜덤 인카운트/g,'길 위의 사건').replace(/다음 지역/g,'새로운 땅').replace(/불씨의 수호자/g,'불씨를 놓아준 자');
 const esc=t=>visibleText(t).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const b=(label,cmd,arg='',sub='',disabled=false,cls='')=>`<button type="button" class="cursor-interaction ${cls}" data-cmd="${cmd}" data-arg="${esc(arg)}" ${disabled?'disabled':''}>${esc(label)}${sub?`<span>${esc(sub)}</span>`:''}</button>`;
-const menu=(label,type,cls='')=>{const campOnly=['workshop','bag','equipment','quests','jobs','story'].includes(type)&&game.s.scene!=='camp';return `<button class="cursor-interaction ${cls}" type="button" data-ui="${type}" ${campOnly?'disabled title="모닥불로 돌아가 정비한다"':''}>${label}</button>`;};
+let actionDescription=0;
+const b=(label,cmd,arg='',sub='',disabled=false,cls='')=>{const description=sub?'bf-action-help-'+(++actionDescription):'';return `<div class="action-option ${cls.includes('wide')?'wide':''}"><button type="button" class="cursor-interaction game-action ${cls}" data-cmd="${cmd}" data-arg="${esc(arg)}" ${description?`aria-describedby="${description}"`:''} ${disabled?'disabled':''}><span class="action-label">${esc(label)}</span></button>${sub?`<small class="action-help" id="${description}">${esc(sub)}</small>`:''}</div>`;};
+const menu=(label,type,cls='')=>{const campOnly=['workshop','bag','equipment','quests','jobs','story'].includes(type)&&game.s.scene!=='camp',major=['workshop','bag','equipment','quests','jobs','story','restart','confirm-restart'].includes(type)||type.startsWith('gear-bag-');return `<button class="cursor-interaction ${major?'game-action':'aux-action'} ${cls}" type="button" data-ui="${type}" ${campOnly?'disabled title="모닥불로 돌아가 정비한다"':''}>${label}</button>`;};
 const meter=(label,n,max)=>`<div><div class="statline"><span>${esc(label)}</span><span>${n} / ${max}</span></div><progress aria-label="${esc(label)}" value="${Math.max(0,n)}" max="${max}"></progress></div>`;
 const art=(category,id,label,cls='scene-art')=>{const src=asset(category,id);return `<figure class="${cls}">${src?`<img src="${esc(src)}" alt="${esc(label)}" loading="lazy" decoding="async" width="400" height="600">`:''}<figcaption class="art-fallback" ${src?'hidden':''}>${esc(label)} · 기록의 여백</figcaption></figure>`;};
 const portrait=id=>art('classes',id,JOBS[id].name,'class-art');
@@ -3173,7 +3211,7 @@ function save(){try{if(game.migrationSource){localStorage.setItem(KEY+'.before-v
 const pct=n=>(n*100).toFixed(0)+'%';
 function statusDetails(){const st=game.combatStatus(),j=JOBS[game.s.job];return `<h3>상세 스테이터스</h3><section class="class-details">${portrait(game.s.job)}<h3>${esc(j.name)}</h3><p>Tier ${j.tier} · ${esc(j.lore||j.desc)}</p></section><dl class="statgrid">${[['공격력',game.atk()],['방어력',game.def()],['치명타율',pct(st.crit)],['치명타 배율','170%'],['회피율',pct(st.dodge)],['행운',pct(st.luck)],['기본 흡혈',pct(st.leech)],['피해 반사',st.reflect],['일반 공격 방어 관통',st.pierce],['스킬 MP 소모',st.skillCost],['방어 피해 감소','70%']].map(([k,v])=>`<div><dt>${statLabel(k)}</dt><dd>${v}</dd></div>`).join('')}</dl><p class="muted">흡혈은 직업별 스킬에서 추가될 수 있습니다. 행운은 장비 드롭과 등급 가중치에 적용됩니다.</p><div class="item"><p>${esc(j.skill)} · MP ${st.skillCost} · 숙련도 ${st.mastery}</p><p>${esc(j.passive||j.desc)}</p></div><h3>현재 전투 효과</h3><p>${esc(st.statuses.map(x=>({poison:'중독',burn:'화상',bleed:'출혈',damageOverTime:'지속 피해',stun:'기절',atkDown:'공격 약화',guard:'방어 후 집중'}[x.id]||x.id)+' · '+x.duration+'턴 · '+x.value).join(' / ')||'적용 중인 일시 효과 없음')}</p><h3>동료 지원</h3><p>${game.allies().map(id=>esc(COMPANIONS[id].aid)).join(' · ')||'개인 퀘스트 완료 + 호감도 80 이상에서 보스전 지원'}</p>`}
 function render(){fx.clear();const s=game.s;root.dataset.scene=s.scene;const job=JOBS[s.job];const opening=s.scene==='camp'&&s.cleared.length===0&&s.turns===0&&String(s.message||'').startsWith('프롤로그 — 마지막 불씨');$('stats').innerHTML=job?`<div class="stats">${meter('HP',s.hp,game.maxHp())}${meter('MP',s.mp,game.maxMp())}${meter('Lv.'+s.level+' '+job.name,s.xp,game.need())}<div><div class="statline"><span>골드</span><span>${s.gold} G</span></div><p class="muted">공격 ${game.atk()} · 방어 ${game.def()}</p>${menu('상세 스테이터스','status','small')}</div></div>`:'';
-if(!job){$('play').innerHTML=`${art('misc','banner','검은 숲으로 향하는 방랑자')}<p class="eyebrow">CAREER / 첫 불씨의 선택</p><div class="story">${esc(s.message)}\n\n8개 지역 · 일반 ${Object.keys(JOBS).length-hiddenCount}개 + 히든 ${hiddenCount}개 직업 · ${ITEMS.length}종의 장비 · 고전 문학이 뒤섞인 도서계\n당신의 싸움은 어떤 모습인가?</div><div class="classcards">${s.offers.map(id=>[id,JOBS[id]]).map(([id,j])=>`<button class="cursor-interaction" type="button" data-cmd="start" data-arg="${id}">${portrait(id)}<b>${j.name}</b><p class="muted">Tier ${j.tier}</p><p>${j.desc}</p><p class="muted">HP ${j.hp} · MP ${j.mp} · 공격 ${j.atk}</p></button>`).join('')}</div><p class="muted">히든 직업 해금 ${s.unlocked.length}/${hiddenCount} · 수집한 장비 ${s.collection.length}/${ITEMS.length}</p>`;return}
+if(!job){$('play').innerHTML=`${art('misc','banner','검은 숲으로 향하는 방랑자')}<p class="eyebrow">CAREER / 첫 불씨의 선택</p><div class="story">${esc(s.message)}\n\n8개 지역 · 일반 ${Object.keys(JOBS).length-hiddenCount}개 + 히든 ${hiddenCount}개 직업 · ${ITEMS.length}종의 장비 · 고전 문학이 뒤섞인 도서계\n당신의 싸움은 어떤 모습인가?</div><div class="classcards">${s.offers.map(id=>[id,JOBS[id]]).map(([id,j])=>`<article class="class-choice">${portrait(id)}<h3>${j.name}</h3><p class="muted">Tier ${j.tier}</p><p>${j.desc}</p><p class="muted">HP ${j.hp} · MP ${j.mp} · 공격 ${j.atk}</p>${b(j.name+' 선택','start',id)}</article>`).join('')}</div><p class="muted">히든 직업 해금 ${s.unlocked.length}/${hiddenCount} · 수집한 장비 ${s.collection.length}/${ITEMS.length}</p>`;return}
 let title='',kicker='',actions='',extra='';
 if(s.scene==='chapter'){const decision=CHAPTER_DECISIONS[s.area][s.chapterSector],record='chapter_'+s.area+'_'+s.chapterSector;title=AREAS[s.area].name+' · '+['외곽','심부','중심부'][s.chapterSector];kicker='CHAPTER / 선택의 기록';extra='';actions=s.decisions[record]?b('남긴 기록을 다시 읽는다','chapterChoice',0,'이전 선택 유지'):decision.choices.map((c,i)=>b(c.label,'chapterChoice',i,c.result)).join('');}
 if(s.scene==='camp'){title=opening?'검은 숲에 눈을 뜨다':'방랑자의 캠프';kicker=opening?'PROLOGUE / 마지막 불씨':'SANCTUARY / 불씨가 머무는 곳';actions=AREAS.map((a,i)=>b(a.name,'enterArea',i,i>s.cleared.length?'이전 지역의 인장 필요':s.cleared.includes(i)?'정복 완료 · 재탐험':'외곽 → 심부 → 중심부 · 12노드',i>s.cleared.length,i===s.cleared.length?'primary':'')).join('')+b(`별 없는 회랑 ${s.rift+1}층`,'enterArea',8,'비밀 발견 1회 또는 보스 4명 처치 후 개방',s.secrets<1&&s.cleared.length<4,'wide');if(s.checkpoint)actions=b('길을 이어간다','resumeJourney','','노드 '+s.checkpoint.step+'/12',false,'primary')+b('돌아갈 길을 택한다','abandonChapter','','다른 지역으로 이동하려면 선택');extra=`<div class="campnav">${b('모닥불 곁에서 쉰다','rest','','HP·MP 완전 회복')}${b('물약 · 16G','buy','potion','',s.gold<16)}${menu('제작 / 강화','workshop')}${menu('장비 / 비교','equipment')}${menu('장비 가방','bag')}${menu('직업 비전서','jobs')}${menu('의뢰 게시판','quests')}${menu('인물 / 메인 퀘스트','story')}</div>`}
