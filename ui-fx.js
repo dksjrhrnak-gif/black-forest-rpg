@@ -1,6 +1,6 @@
 /* Presentation only: snapshots never write game state or consume RNG. */
 (function(root){'use strict';
-function capture(game){const s=game.s;return {scene:s.scene,area:s.area,step:s.step,checkpoint:!!s.checkpoint,unlocked:[...s.unlocked],ending:s.ending,turns:s.turns,hp:s.hp,maxHp:game.maxHp(),mp:s.mp,loot:s.loot?{id:s.loot.id,grade:s.loot.grade,name:s.loot.name}:null,reward:s.rewardState?{id:s.rewardState.id,claimed:s.rewardState.claimed}:null,message:s.message,skillWeak:!!root.BFContent?.JOBS[s.job]?.effects.some(x=>x.type==='skillWeak'),enemy:s.enemy?{...s.enemy,pattern:undefined}:null};}
+function capture(game){const s=game.s;return {scene:s.scene,area:s.area,step:s.step,checkpoint:!!s.checkpoint,unlocked:[...s.unlocked],ending:s.ending,turns:s.turns,hp:s.hp,maxHp:game.maxHp(),mp:s.mp,loot:s.loot?{id:s.loot.id,grade:s.loot.grade,name:s.loot.name}:null,reward:s.rewardState?{id:s.rewardState.id,claimed:s.rewardState.claimed}:null,message:s.message,skillHeal:!!root.BFContent?.JOBS[s.job]?.effects.some(x=>x.type==='skillHeal'),skillWeak:!!root.BFContent?.JOBS[s.job]?.effects.some(x=>x.type==='skillWeak'),enemy:s.enemy?{...s.enemy,pattern:undefined}:null};}
 function combatEffects(a,b,cmd,arg){const out=[];const add=(target,type,text)=>out.push({target,type,text});
  if(cmd!=='act'||a.scene!=='battle'||a.turns===b.turns)return out;
  const msg=b.message||'',damage=msg.match(/! (\d+) 피해\./),hit=msg.match(/적의 (?:강공격|공격): (\d+) 피해\./);
@@ -12,6 +12,7 @@ function combatEffects(a,b,cmd,arg){const out=[];const add=(target,type,text)=>o
  const explicit=(heal?Math.min(Number(heal[1]),a.maxHp-a.hp):0)+(leech?Number(leech[1]):0);
  const restored=b.scene==='dead'?explicit:Math.max(0,b.hp-a.hp+(hit?Number(hit[1]):0));
  if(restored>0)add('player','heal','회복 +'+restored);
+ if(b.scene==='dead'&&arg==='skill'&&a.skillHeal&&a.hp<a.maxHp)add('player','heal','회복'); // A lethal response hides the numeric HP delta; do not invent an amount.
  if(arg==='defend')add('player','guard','방어 · 집중');
  const enemyHeal=msg.match(/적이 HP (\d+) 회복\./);if(enemyHeal&&Number(enemyHeal[1])>0)add('enemy','heal','회복 +'+enemyHeal[1]);
  const dot=msg.match(/지속 피해 (\d+)\./),reflect=msg.match(/반사 (\d+)\./);
