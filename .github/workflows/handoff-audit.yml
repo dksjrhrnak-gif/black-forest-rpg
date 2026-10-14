@@ -197,6 +197,19 @@ jobs:
           BF_BROWSER: ${{ matrix.browser }}
           BF_QA_URL: http://127.0.0.1:4174/
         run: node test-ui-b.cjs
+      - name: Capture the reviewed PR baseline in this browser
+        env:
+          BF_BROWSER: ${{ matrix.browser }}
+          BF_QA_URL: http://127.0.0.1:4174/ui-review-before.html
+          BF_REVIEW_BASELINE: '1'
+        run: |
+          git show 1881f2b1181ece2c8240365983710bbd6f4bc5ed:index.html > dist/ui-review-before.html
+          node test-ui-review.cjs
+      - name: PR 7 follow-up scroll, HUD, career, reward and equipment QA
+        env:
+          BF_BROWSER: ${{ matrix.browser }}
+          BF_QA_URL: http://127.0.0.1:4174/
+        run: node test-ui-review.cjs
       - name: Wait for this commit to finish Pages deployment
         if: github.ref == 'refs/heads/main'
         env:
@@ -237,3 +250,4 @@ jobs:
             screenshots/fx/
             docs/ui-b/**/*.json
             docs/ui-b/screenshots/
+            docs/ui-b/review/screenshots/

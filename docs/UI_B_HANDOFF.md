@@ -74,3 +74,7 @@ P2 검증은 기존에 버튼의 `textContent` 안에 MP 비용이 있다고 가
 ## 재현
 
 기존 환경에서 `npm ci --ignore-scripts`, `python3 build.py`, `node export-data.cjs`, `python3 export-site.py`, `python3 verify-html.py`. 내부 HTTP 서버의 URL을 `BF_QA_URL`로 지정하고 `node test-ui-b-invariants.cjs`, `node test-ui-b.cjs`, `node test-fx-ui.cjs`, 기존 UI/P3 검사를 실행한다. Chromium 실행 경로가 별도인 환경은 기존 `BF_CHROMIUM` 바인딩을 사용한다. Firefox는 이 클라우드의 사용자 namespace 제한 때문에 로컬 실행을 주장하지 않으며 일반 CI runner에서 실제 실행한다. 인증·TLS·브라우저 sandbox 설정을 바꾸지 않는다.
+
+## PR #7 후속 정밀 검수
+
+검토 HEAD `1881f2b`에서 지정한 탐험·전투 HUD·전직 조건·보상 위계·장비 카드만 후속 수정했다. [후속 인수인계](UI_B_REVIEW_HANDOFF.md)와 [동일 상태 전후 30장/실측](ui-b/review/COMPARISON.md)을 참고한다. 기존 UI-1~UI-6 보고는 당시 결과로 보존한다. 사용자 최종 승인 전 main 및 공개 Pages는 유지한다.

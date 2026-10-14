@@ -5,7 +5,8 @@ const baseline=process.env.BF_REVIEW_BASELINE==='1',engine=process.env.BF_BROWSE
 const base=process.env.BF_QA_URL||'http://127.0.0.1:4192/',out=process.env.BF_REVIEW_OUT||'docs/ui-b/review',phase=Number(process.env.BF_REVIEW_PHASE||5),key='black-forest-last-ember-v2';
 const widths=JSON.parse(process.env.BF_REVIEW_WIDTHS||'[360,390,430]');
 const screens=JSON.parse(process.env.BF_REVIEW_SCREENS||'["exploration","battle","jobs","reward","equipment"]');
-const beforePath=path.join(out,'baseline-chromium.json');const reference=!baseline&&fs.existsSync(beforePath)?JSON.parse(fs.readFileSync(beforePath)):null;
+const beforePath=path.join(out,`baseline-${engine}.json`);const reference=!baseline&&fs.existsSync(beforePath)?JSON.parse(fs.readFileSync(beforePath)):null;
+if(!baseline)assert(reference,'Capture the reviewed 1881f2b baseline in the same browser first.');
 const camp=Game.load(require('./fixtures/p3-pre-saves.json').saves.find(r=>r.starter==='warrior'&&r.seed===17&&r.style==='collector'&&r.scene==='middle-camp').code);
 function fresh(){const g=new Game(17);g.start('warrior');return g;}
 function state(screen){if(['jobs','equipment'].includes(screen))return Game.load(camp.export());if(screen==='battle')return fixtures.battle();if(screen==='reward'){const g=Game.load(fixtures.rarePurchase(4).code);g.buy('gear-weapon');return g;}const g=fresh();g.enterArea(0);return g;}
@@ -33,6 +34,14 @@ checks.push({width,height,...metrics,errors:0});console.log(`PASS review ${engin
 if(!baseline&&screen==='exploration'){g.chapterChoice(0);await tap(page.locator('[data-cmd="chapterChoice"][data-arg="0"]'));assert.equal((await current()).export(),g.export());}
 if(!baseline&&screen==='battle'){g.act('skill');await tap(page.locator('[data-cmd="act"][data-arg="skill"]'));assert.equal((await current()).export(),g.export());}
 if(!baseline&&screen==='reward'){g.collectLoot('sell');await tap(page.locator('[data-cmd="collectLoot"][data-arg="sell"]'));assert.equal((await current()).export(),g.export(),'sale matches engine and reward timing');}
+}
+if(!baseline&&phase>=5){
+ const g=fresh();g.s.level=3;g.s.cleared=[0];g.s.career.mastery.warrior=8;g.s.hp=g.maxHp();g.s.mp=g.maxMp();await restore(g);await tap(page.locator('[data-ui="jobs"]').first());assert(g.jobAvailable('rabbit_guard'));const career=page.locator('.career-candidate [data-cmd="changeJob"][data-arg="rabbit_guard"]');assert(await career.isEnabled());g.changeJob('rabbit_guard');await tap(career);assert.equal((await current()).export(),g.export(),'ready career matches engine');
+ const f=fixtures.entries().burn,combat=Game.load(f.code);await restore(combat);combat.act(f.action);await tap(page.locator('[data-cmd="act"][data-arg="'+f.action+'"]'));assert.equal((await current()).export(),combat.export());assert(combat.combatStatus().statuses.some(x=>x.id==='burn'));assert((await page.locator('.combat-effects').innerText()).includes('화상'),'important active status visible');
+ for(const choice of ['equip','bag','sell']){const reward=Game.load(fixtures.rarePurchase(5).code);reward.buy('gear-weapon');await restore(reward);assert.equal(await page.locator('.fx-loot-card').getAttribute('data-grade'),'5');reward.collectLoot(choice);await tap(page.locator(`[data-cmd="collectLoot"][data-arg="${choice}"]`));assert.equal((await current()).export(),reward.export(),'mythic '+choice+' exact once');await page.reload();assert.equal((await current()).export(),reward.export(),'reward reconnect exact');}
+ const boss=fresh();boss.fight(true);await restore(boss);assert.equal(await page.locator('.scene-compact').count(),0,'boss keeps large frame');
+ const story=require('./script-cases.cjs').chapter(0,1);await restore(story);assert.equal(await page.locator('.scene-compact').count(),0,'inner story keeps portrait presence');assert.equal(await page.locator('.scene-art img').evaluate(e=>getComputedStyle(e).objectFit),'contain');
+ checks.push({width,height,screen:'functional-regression',status:'PASS',readyAndLockedCareer:true,activeStatus:true,mythicChoices:3,exactSaveRng:true,bossAndInnerStoryPreserved:true});
 }
 assert.deepEqual(errors,[]);await context.close();}
 }finally{await browser.close();}

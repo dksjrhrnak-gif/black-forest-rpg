@@ -49,3 +49,7 @@
 ![이전 보상](screenshots/before-390-reward.jpg)
 
 ![B안 보상](screenshots/after-390-reward.jpg)
+
+## PR #7 정밀 검수 후속 수정
+
+기존 B안 검수 HEAD `1881f2b`와 후속 수정의 [전후 30장 및 HUD·스크롤 실측](review/COMPARISON.md)을 별도로 제공합니다. 기존 UI-1~UI-6 비교는 위에 보존합니다.

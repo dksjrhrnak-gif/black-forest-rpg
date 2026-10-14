@@ -45,7 +45,7 @@ function sceneHero(s,kicker,title){
  const visual=sceneArt(s);
  if(!visual)return '';
  const decision=s.scene==='chapter'?CHAPTER_DECISIONS[s.area]?.[s.chapterSector]:null;
- const compact=['map','merchant'].includes(s.scene)||(s.scene==='chapter'&&s.chapterSector===0)||(s.scene==='event'&&EVENTS[s.eventId].region===undefined);
+ const compact=['map','merchant'].includes(s.scene)||(s.scene==='chapter'&&s.chapterSector===0);
  return `<section class="scene-hero scene-${s.scene}${compact?' scene-compact':''}${visual.includes('assets/story_')?' scene-story-art':''}"><div class="scene-visual">${visual}<div class="scene-hero-shade" aria-hidden="true"></div><header class="scene-hero-head"><p class="eyebrow">${esc(kicker)}</p><h2>${esc(title)}</h2></header></div><div class="scene-hero-body" aria-live="polite">${heroNarrative(s)}${decision?`<div class="scene-hero-question"><span>지금 결정할 것</span><strong>${esc(decision.question)}</strong><small>무엇을 지키고 무엇을 감수할지 선택한다.</small></div>`:''}</div></section>`;
 }
 root.addEventListener('error',ev=>{if(ev.target.tagName==='IMG'){ev.target.hidden=true;const caption=ev.target.parentElement.querySelector('.art-fallback');if(caption)caption.hidden=false;}},true);
