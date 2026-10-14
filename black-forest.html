@@ -1427,6 +1427,16 @@
  #black-forest-game[data-viewport=scene] .scene-hero-question{gap:2px}
  #black-forest-game[data-viewport=scene] .main>.actions{position:sticky;bottom:0}
 }
+/* V-5: embedded documents use their real remaining viewport, not guessed bars. */
+@media(max-width:700px){
+ #black-forest-game[data-viewport=scene]{height:var(--bf-scene-height,100dvh);max-height:var(--bf-scene-height,100dvh)}
+ #black-forest-game[data-viewport=scene] .scene-hero-body:focus-visible,#black-forest-game[data-viewport=scene] .viewport-loot:focus-visible{outline:2px solid var(--bf-gold);outline-offset:-2px}
+}
+@media(max-width:700px) and (max-height:600px){
+ #black-forest-game[data-viewport=scene] .main>.actions{max-height:36dvh}
+ #black-forest-game[data-viewport=scene] .scene-hero-body{flex-basis:64px;min-height:32px}
+ #black-forest-game[data-viewport=scene] .scene-hero-question{font-size:11px}
+}
 
 </style>
 <div id="black-forest-game">
@@ -3446,6 +3456,9 @@ function sceneHero(s,kicker,title){
  const compact=['map','merchant'].includes(s.scene)||(s.scene==='chapter'&&s.chapterSector===0);
  return `<section class="scene-hero scene-${s.scene}${compact?' scene-compact':''}${visual.includes('assets/story_')?' scene-story-art':''}"><div class="scene-visual">${visual}<div class="scene-hero-shade" aria-hidden="true"></div><header class="scene-hero-head"><p class="eyebrow">${esc(kicker)}</p><h2>${esc(title)}</h2></header></div><div class="scene-hero-body" aria-live="polite">${heroNarrative(s)}${decision?`<div class="scene-hero-question"><span>지금 결정할 것</span><strong>${esc(decision.question)}</strong><small>무엇을 지키고 무엇을 감수할지 선택한다.</small></div>`:''}</div></section>`;
 }
+// Layout-only sizing for embedded documents and mobile address-bar changes.
+function sizeViewport(){if(panel)return;const top=root.getBoundingClientRect().top,height=window.visualViewport?.height||window.innerHeight;root.style.setProperty('--bf-scene-height',Math.max(240,height-Math.max(0,top))+'px');}
+window.addEventListener('resize',sizeViewport);window.visualViewport?.addEventListener('resize',sizeViewport);
 root.addEventListener('error',ev=>{if(ev.target.tagName==='IMG'){ev.target.hidden=true;const caption=ev.target.parentElement.querySelector('.art-fallback');if(caption)caption.hidden=false;}},true);
 window.addEventListener('pageshow',ev=>{if(!ev.persisted)return;try{const code=localStorage.getItem(KEY);if(code)game=Game.load(code);render();}catch(e){warning='남긴 모험 기록을 다시 확인해 주세요.';}});
 const overlay=document.createElement('div');overlay.className='modal-overlay';overlay.hidden=true;overlay.setAttribute('aria-hidden','true');root.append(overlay);overlay.addEventListener('click',()=>closePanel());let scrollBefore=0,oldBodyStyle=null;
@@ -3520,7 +3533,7 @@ if(s.scene==='battle'){$('play').querySelector('.scene-hero-head').append($('pla
 prepareViewport(s,!!hero||s.scene==='loot');
 }
 function prepareViewport(s,active){
- root.dataset.viewport=active?'scene':'';
+ root.dataset.viewport=active?'scene':'';sizeViewport();
  if(!active)return;
  const main=$('play').querySelector('.main'),body=main.querySelector('.scene-hero-body');
  main.prepend($('stats'));

@@ -1424,3 +1424,13 @@
  #black-forest-game[data-viewport=scene] .scene-hero-question{gap:2px}
  #black-forest-game[data-viewport=scene] .main>.actions{position:sticky;bottom:0}
 }
+/* V-5: embedded documents use their real remaining viewport, not guessed bars. */
+@media(max-width:700px){
+ #black-forest-game[data-viewport=scene]{height:var(--bf-scene-height,100dvh);max-height:var(--bf-scene-height,100dvh)}
+ #black-forest-game[data-viewport=scene] .scene-hero-body:focus-visible,#black-forest-game[data-viewport=scene] .viewport-loot:focus-visible{outline:2px solid var(--bf-gold);outline-offset:-2px}
+}
+@media(max-width:700px) and (max-height:600px){
+ #black-forest-game[data-viewport=scene] .main>.actions{max-height:36dvh}
+ #black-forest-game[data-viewport=scene] .scene-hero-body{flex-basis:64px;min-height:32px}
+ #black-forest-game[data-viewport=scene] .scene-hero-question{font-size:11px}
+}
