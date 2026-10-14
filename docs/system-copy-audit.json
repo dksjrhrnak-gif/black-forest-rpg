@@ -21,11 +21,11 @@
     "shell.html",
     "style.css"
   ],
-  "candidateStrings": 2145,
-  "visibleCandidates": 2364,
+  "candidateStrings": 2147,
+  "visibleCandidates": 2366,
   "accessibilityAttributes": true,
   "englishDisplayArguments": true,
-  "cssGeneratedLabels": 5,
+  "cssGeneratedLabels": 6,
   "failures": [],
   "exceptions": [
     {

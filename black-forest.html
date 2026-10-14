@@ -1094,8 +1094,7 @@
 @media(prefers-reduced-motion:reduce){#black-forest-game .fx-scene-enter{animation:none}}
 
 /* Special moments use one small, noninteractive banner, never a full-screen overlay. */
-#black-forest-game .main{position:relative}
-#black-forest-game .fx-banner{position:absolute;top:12px;left:12px;right:12px;z-index:6;padding:12px 14px;border:1px solid #937951;border-left-width:3px;border-radius:7px;background:#1b1713f5;color:#e4d2ac;line-height:1.45;text-align:center;pointer-events:none;animation:bf-banner .6s ease-out both;contain:layout paint style}
+#black-forest-game .fx-banner{position:fixed;top:max(12px,env(safe-area-inset-top));left:24px;right:24px;max-width:700px;margin-inline:auto;z-index:30;padding:12px 14px;border:1px solid #937951;border-left-width:3px;border-radius:7px;background:#1b1713f5;color:#e4d2ac;line-height:1.45;text-align:center;pointer-events:none;animation:bf-banner .6s ease-out both;contain:layout paint style}
 #black-forest-game .fx-banner strong{display:block;overflow-wrap:anywhere;font-size:16px}
 #black-forest-game .fx-banner-boss{background:#221112f5;border-color:#9b565b;color:#efb6b0}
 #black-forest-game .fx-banner-hidden,#black-forest-game .fx-banner-mythic{background:#112021f5;border-color:#6c9995;color:#c3dfd5}
@@ -1106,6 +1105,15 @@
 @media(prefers-reduced-motion:reduce){#black-forest-game .fx-banner{animation:none;transform:none}}
 
 #black-forest-game #bf-panel>.fx-banner{position:fixed;top:max(68px,env(safe-area-inset-top));left:24px;right:24px;max-width:700px;margin-inline:auto}
+
+/* Feedback stays readable when the portrait or HUD has scrolled outside the viewport. */
+#black-forest-game .fx-floats.fx-compact{position:fixed;inset:76px 12px auto auto;width:min(170px,calc((100vw - 36px)/2));max-height:240px;z-index:30;padding:0;justify-content:flex-start}
+#black-forest-game .fx-player.fx-compact{left:12px;right:auto}
+#black-forest-game .fx-target{font-size:11px;line-height:1.5;color:#ded4bd;background:#101513e8;border-radius:4px;padding:0 5px}
+#black-forest-game .enemy.fx-hit,#black-forest-game .enemy.fx-critical{position:relative;isolation:isolate;animation:bf-impact .24s ease-out}
+#black-forest-game .enemy.fx-critical{animation-name:bf-impact-critical;animation-duration:.32s}
+#black-forest-game .enemy.fx-hit:after,#black-forest-game .enemy.fx-critical:after{content:"";position:absolute;inset:0;background:#a92f38;opacity:0;pointer-events:none;animation:bf-wound .3s ease-out}
+@media(prefers-reduced-motion:reduce){#black-forest-game .enemy.fx-hit,#black-forest-game .enemy.fx-critical,#black-forest-game .enemy.fx-hit:after,#black-forest-game .enemy.fx-critical:after{animation:none;transform:none}#black-forest-game .enemy.fx-hit:after,#black-forest-game .enemy.fx-critical:after{display:none}}
 
 </style>
 <div id="black-forest-game">
@@ -3055,10 +3063,13 @@ function create(host){let timer=null;const marked=[];
  const mark=(node,cls)=>{node.classList.add(cls);marked.push([node,cls]);};
  function clear(){clearTimeout(timer);timer=null;host.querySelectorAll('[data-fx-layer]').forEach(n=>n.remove());for(const [n,cls] of marked)n.classList.remove(cls);marked.length=0;}
  function show(events){clear();const grouped={player:[],enemy:[]};for(const e of events)if(grouped[e.target])grouped[e.target].push(e);
-  for(const [target,list] of Object.entries(grouped)){if(!list.length)continue;const anchor=target==='player'?host.querySelector('#bf-stats .stats>div:first-child'):host.querySelector('#bf-play .scene-hero');if(!anchor)continue;
-   const layer=document.createElement('div');layer.className='fx-floats fx-'+target;layer.dataset.fxLayer=target;layer.setAttribute('aria-hidden','true');
-   for(const [i,e] of list.slice(0,6).entries()){const token=document.createElement('span');token.className='fx-token fx-'+e.type;token.dataset.fxEvent=e.type;token.style.setProperty('--fx-order',i);token.textContent=e.text;layer.append(token);}anchor.append(layer);
-   if(list.some(e=>['damage','critical'].includes(e.type))){const node=target==='player'?anchor:anchor.querySelector('.scene-art')||anchor;const cls=target==='player'?'fx-player-hit':list.some(e=>e.type==='critical')?'fx-critical':'fx-hit';mark(node,cls);}
+  const anchors={player:host.querySelector('#bf-stats .stats>div:first-child'),enemy:host.querySelector('#bf-play .scene-hero')},card=host.querySelector('#bf-play .enemy'),frames={};
+  // Batch geometry reads before adding nodes. Offscreen feedback uses a small viewport rail.
+  for(const target of Object.keys(grouped))if(grouped[target].length&&anchors[target])frames[target]=anchors[target].getBoundingClientRect();
+  for(const [target,list] of Object.entries(grouped)){if(!list.length)continue;const anchor=anchors[target];if(!anchor)continue;const rect=frames[target],compact=target==='player'?rect.top<0||rect.bottom>root.innerHeight:rect.top+76<0||rect.top+240>root.innerHeight;
+   const layer=document.createElement('div');layer.className='fx-floats fx-'+target+(compact?' fx-compact':'');layer.dataset.fxLayer=target;layer.setAttribute('aria-hidden','true');if(compact){const label=document.createElement('small');label.className='fx-target';label.textContent=target==='player'?'방랑자':'적';layer.append(label);}
+   for(const [i,e] of list.slice(0,6).entries()){const token=document.createElement('span');token.className='fx-token fx-'+e.type;token.dataset.fxEvent=e.type;token.style.setProperty('--fx-order',i);token.textContent=e.text;layer.append(token);}(compact?host:anchor).append(layer);
+   if(list.some(e=>['damage','critical'].includes(e.type))){const node=target==='player'?(compact?layer:anchor):(compact&&card?card:anchor.querySelector('.scene-art')||anchor);const cls=target==='player'?'fx-player-hit':list.some(e=>e.type==='critical')?'fx-critical':'fx-hit';mark(node,cls);}
   }
   if(events.some(e=>e.target==='scene')){const n=host.querySelector('#bf-play .scene-hero,#bf-play .main>.story');if(n)mark(n,'fx-scene-enter');}
   if(events.some(e=>e.target==='reward'))host.querySelectorAll('#bf-play .reward-summary,#bf-play .fx-loot-card').forEach(n=>mark(n,'fx-reward-enter'));

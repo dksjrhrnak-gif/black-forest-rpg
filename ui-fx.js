@@ -44,10 +44,13 @@ function create(host){let timer=null;const marked=[];
  const mark=(node,cls)=>{node.classList.add(cls);marked.push([node,cls]);};
  function clear(){clearTimeout(timer);timer=null;host.querySelectorAll('[data-fx-layer]').forEach(n=>n.remove());for(const [n,cls] of marked)n.classList.remove(cls);marked.length=0;}
  function show(events){clear();const grouped={player:[],enemy:[]};for(const e of events)if(grouped[e.target])grouped[e.target].push(e);
-  for(const [target,list] of Object.entries(grouped)){if(!list.length)continue;const anchor=target==='player'?host.querySelector('#bf-stats .stats>div:first-child'):host.querySelector('#bf-play .scene-hero');if(!anchor)continue;
-   const layer=document.createElement('div');layer.className='fx-floats fx-'+target;layer.dataset.fxLayer=target;layer.setAttribute('aria-hidden','true');
-   for(const [i,e] of list.slice(0,6).entries()){const token=document.createElement('span');token.className='fx-token fx-'+e.type;token.dataset.fxEvent=e.type;token.style.setProperty('--fx-order',i);token.textContent=e.text;layer.append(token);}anchor.append(layer);
-   if(list.some(e=>['damage','critical'].includes(e.type))){const node=target==='player'?anchor:anchor.querySelector('.scene-art')||anchor;const cls=target==='player'?'fx-player-hit':list.some(e=>e.type==='critical')?'fx-critical':'fx-hit';mark(node,cls);}
+  const anchors={player:host.querySelector('#bf-stats .stats>div:first-child'),enemy:host.querySelector('#bf-play .scene-hero')},card=host.querySelector('#bf-play .enemy'),frames={};
+  // Batch geometry reads before adding nodes. Offscreen feedback uses a small viewport rail.
+  for(const target of Object.keys(grouped))if(grouped[target].length&&anchors[target])frames[target]=anchors[target].getBoundingClientRect();
+  for(const [target,list] of Object.entries(grouped)){if(!list.length)continue;const anchor=anchors[target];if(!anchor)continue;const rect=frames[target],compact=target==='player'?rect.top<0||rect.bottom>root.innerHeight:rect.top+76<0||rect.top+240>root.innerHeight;
+   const layer=document.createElement('div');layer.className='fx-floats fx-'+target+(compact?' fx-compact':'');layer.dataset.fxLayer=target;layer.setAttribute('aria-hidden','true');if(compact){const label=document.createElement('small');label.className='fx-target';label.textContent=target==='player'?'방랑자':'적';layer.append(label);}
+   for(const [i,e] of list.slice(0,6).entries()){const token=document.createElement('span');token.className='fx-token fx-'+e.type;token.dataset.fxEvent=e.type;token.style.setProperty('--fx-order',i);token.textContent=e.text;layer.append(token);}(compact?host:anchor).append(layer);
+   if(list.some(e=>['damage','critical'].includes(e.type))){const node=target==='player'?(compact?layer:anchor):(compact&&card?card:anchor.querySelector('.scene-art')||anchor);const cls=target==='player'?'fx-player-hit':list.some(e=>e.type==='critical')?'fx-critical':'fx-hit';mark(node,cls);}
   }
   if(events.some(e=>e.target==='scene')){const n=host.querySelector('#bf-play .scene-hero,#bf-play .main>.story');if(n)mark(n,'fx-scene-enter');}
   if(events.some(e=>e.target==='reward'))host.querySelectorAll('#bf-play .reward-summary,#bf-play .fx-loot-card').forEach(n=>mark(n,'fx-reward-enter'));
