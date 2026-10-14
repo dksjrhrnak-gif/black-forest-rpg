@@ -1317,3 +1317,17 @@
 #black-forest-game .stats.combat-hud .combat-detail button{width:96px;margin:0;padding:6px 8px;min-height:44px}
 #black-forest-game .combat-effects{display:flex;flex-wrap:wrap;gap:4px;padding:0 10px 8px;border-bottom:1px solid var(--bf-line)}
 #black-forest-game .combat-effects span{font-size:12px;line-height:1.55;color:var(--bf-text);border:1px solid #715b43;border-radius:6px;padding:2px 6px;background:var(--bf-bg)}
+
+/* PR #7 P2-1: locked is a state, not unreadable text. */
+#black-forest-game .career-conditions{list-style:none;padding:0;margin:12px 0;display:grid;gap:4px}
+#black-forest-game .career-condition{display:grid;grid-template-columns:18px minmax(0,1fr) auto;gap:6px;align-items:center;padding:4px 6px;border:1px solid var(--bf-line);border-radius:8px;font-size:13px;line-height:1.5;background:var(--bf-bg)}
+#black-forest-game .career-condition.is-met{border-color:#49624a;color:#c3dfc6}
+#black-forest-game .career-condition.is-unmet{border-color:#72523a;color:#f0d0af}
+#black-forest-game .condition-mark{font-weight:700;text-align:center}
+#black-forest-game .condition-value{font-size:11px;white-space:nowrap;font-variant-numeric:tabular-nums}
+#black-forest-game .career-intro{display:grid;grid-template-columns:minmax(0,1fr) 96px;gap:12px;align-items:start}
+#black-forest-game .career-intro .class-art{width:96px;max-width:100%;margin:0}
+#black-forest-game .career-intro .class-art img{width:100%;height:auto;aspect-ratio:2/3;object-fit:contain}
+#black-forest-game button.game-action[data-cmd="changeJob"]:disabled,
+#black-forest-game button.game-action[data-cmd="awaken"]:disabled{opacity:1;background:#211b16;border:1px dashed #88715a;color:#cbbfb0;cursor:not-allowed;box-shadow:none}
+#black-forest-game .career-candidate .action-option{margin-top:12px}
