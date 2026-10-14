@@ -1403,3 +1403,24 @@
  #black-forest-game[data-viewport=scene] .combat-effects{max-height:64px;overflow:auto;overscroll-behavior:contain;padding:2px 4px}
  #black-forest-game[data-viewport=scene] .combat-effects span{font-size:12px;line-height:1.4}
 }
+/* V-4: reward details scroll separately; acquisition never follows a long card. */
+@media(max-width:700px){
+ #black-forest-game[data-viewport=scene][data-scene=loot] .scene-hero{flex:0 0 auto}
+ #black-forest-game[data-viewport=scene][data-scene=loot] .scene-visual{display:none}
+ #black-forest-game[data-viewport=scene][data-scene=loot] .scene-hero-body{max-height:48px;min-height:32px;flex-basis:auto}
+ #black-forest-game[data-viewport=scene] .viewport-loot{flex:1;min-height:0;overflow:auto;overscroll-behavior:contain}
+ #black-forest-game[data-viewport=scene] .viewport-loot .fx-loot-card{display:grid;grid-template-columns:72px minmax(0,1fr);gap:4px 8px;text-align:left;padding:8px;margin:0}
+ #black-forest-game[data-viewport=scene] .viewport-loot .fx-loot-card .gear-icon{grid-row:1/5;width:72px;height:72px;margin:0}
+ #black-forest-game[data-viewport=scene] .viewport-loot .fx-loot-card .gear-icon.item-art{height:108px}
+ #black-forest-game[data-viewport=scene] .viewport-loot .fx-loot-card>p{margin:0;min-width:0;overflow-wrap:anywhere}
+ #black-forest-game[data-viewport=scene] .viewport-loot .fx-loot-card>p:first-of-type{font-size:17px;line-height:1.4}
+ #black-forest-game[data-viewport=scene] .viewport-loot .fx-loot-card .rarity{margin:0 0 4px}
+ #black-forest-game[data-viewport=scene] .viewport-loot .comparison{padding:8px;margin:6px 0;font-size:13px;line-height:1.5}
+ #black-forest-game .career-candidate details>summary{color:var(--bf-gold);font-size:13px}
+ #black-forest-game .armory-sheet{overscroll-behavior:contain}
+}
+@media(max-width:700px){
+ #black-forest-game[data-viewport=scene] .actions:has([data-cmd=chapterChoice]){grid-template-columns:repeat(2,minmax(0,1fr))}
+ #black-forest-game[data-viewport=scene] .scene-hero-question{gap:2px}
+ #black-forest-game[data-viewport=scene] .main>.actions{position:sticky;bottom:0}
+}
