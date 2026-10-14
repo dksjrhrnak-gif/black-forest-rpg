@@ -21,5 +21,14 @@
   "fullHpNoFalseHeal": true,
   "healingBeforeHit": true,
   "enemyHealing": true,
-  "saveAndRngUnchanged": true
+  "saveAndRngUnchanged": true,
+  "pendingAndClaimedRewards": true,
+  "restAndCheckpoint": true,
+  "boss": true,
+  "hidden": true,
+  "endings": 3,
+  "rareGrades": [
+    4,
+    5
+  ]
 }

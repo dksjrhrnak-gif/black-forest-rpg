@@ -9,6 +9,10 @@
       "combatFixtures": 7,
       "exactTransactions": true,
       "rarityGrades": 6,
+      "actualRarePurchaseSeeds": [
+        1,
+        219
+      ],
       "pendingAndClaimedReward": true,
       "signedComparison": true,
       "restAndCheckpoint": true,
@@ -27,6 +31,10 @@
       "combatFixtures": 7,
       "exactTransactions": true,
       "rarityGrades": 6,
+      "actualRarePurchaseSeeds": [
+        1,
+        219
+      ],
       "pendingAndClaimedReward": true,
       "signedComparison": true,
       "restAndCheckpoint": true,
@@ -45,6 +53,10 @@
       "combatFixtures": 7,
       "exactTransactions": true,
       "rarityGrades": 6,
+      "actualRarePurchaseSeeds": [
+        1,
+        219
+      ],
       "pendingAndClaimedReward": true,
       "signedComparison": true,
       "restAndCheckpoint": true,
@@ -63,6 +75,10 @@
       "combatFixtures": 7,
       "exactTransactions": true,
       "rarityGrades": 6,
+      "actualRarePurchaseSeeds": [
+        1,
+        219
+      ],
       "pendingAndClaimedReward": true,
       "signedComparison": true,
       "restAndCheckpoint": true,
@@ -81,6 +97,10 @@
       "combatFixtures": 7,
       "exactTransactions": true,
       "rarityGrades": 6,
+      "actualRarePurchaseSeeds": [
+        1,
+        219
+      ],
       "pendingAndClaimedReward": true,
       "signedComparison": true,
       "restAndCheckpoint": true,
@@ -99,6 +119,10 @@
       "combatFixtures": 7,
       "exactTransactions": true,
       "rarityGrades": 6,
+      "actualRarePurchaseSeeds": [
+        1,
+        219
+      ],
       "pendingAndClaimedReward": true,
       "signedComparison": true,
       "restAndCheckpoint": true,

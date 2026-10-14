@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "baseline": "98603e976381759f54940e429e66216add6c7c8b",
+  "bundleSha256": "5482f5998615248cfde0585026377002e3743a0174058a17c8a0a02366ad4624",
+  "existingNpmTest": {
+    "exitCode": 0,
+    "naturalCampaigns": 18,
+    "endingsReached": 18,
+    "hiddenConditions": 67,
+    "hiddenCareers": 14,
+    "rewardCases": 36,
+    "checkpointConversationCases": 9,
+    "copyNumericalBranchRngCases": 156,
+    "connectedAssets": 149
+  },
+  "existingMobileSuite": {
+    "engine": "chromium",
+    "interaction": "touch",
+    "widths": [
+      360,
+      390,
+      430
+    ],
+    "status": "PASS",
+    "consoleErrors": 0,
+    "runtimeErrors": 0,
+    "exactJourneyRewardReload": true,
+    "duplicateClicks": true,
+    "corruptSavePreservation": true,
+    "modalBounds": true,
+    "imageBounds": true
+  },
+  "protectedEngineContentAndAssetsDiff": [],
+  "limitations": [
+    "Responsive browser touch emulation, not physical devices.",
+    "Focused FX UI imports are synthetic; existing integration runs provide 18 natural campaigns."
+  ]
+}
