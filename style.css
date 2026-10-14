@@ -1331,3 +1331,11 @@
 #black-forest-game button.game-action[data-cmd="changeJob"]:disabled,
 #black-forest-game button.game-action[data-cmd="awaken"]:disabled{opacity:1;background:#211b16;border:1px dashed #88715a;color:#cbbfb0;cursor:not-allowed;box-shadow:none}
 #black-forest-game .career-candidate .action-option{margin-top:12px}
+
+/* PR #7 P2-2: acquisition leads; selling remains a full-size secondary choice. */
+#black-forest-game button.game-action.reward-keep{background:#302317;border-color:var(--bf-gold);color:var(--bf-text)}
+#black-forest-game button.game-action.reward-keep:hover:not(:disabled){background:#3c2b1c}
+#black-forest-game button.game-action.reward-sell{background:transparent;border-color:#655545;color:#c8bcad;box-shadow:none}
+#black-forest-game button.game-action.reward-sell:hover:not(:disabled){background:var(--bf-bg);border-color:#88715a}
+#black-forest-game .fx-loot-card.grade-4,#black-forest-game .fx-loot-card.grade-5{border-width:2px;box-shadow:inset 0 1px 0 color-mix(in srgb,var(--fx-rarity) 40%,transparent),0 0 12px color-mix(in srgb,var(--fx-rarity) 12%,transparent)}
+#black-forest-game .fx-loot-card.grade-4 .gear-icon:not(.item-art),#black-forest-game .fx-loot-card.grade-5 .gear-icon:not(.item-art){width:84px;height:84px;border-color:var(--fx-rarity)}
