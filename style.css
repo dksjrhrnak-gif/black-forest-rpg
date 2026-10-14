@@ -1295,3 +1295,12 @@
 #black-forest-game .actions button.game-action .action-label,
 #black-forest-game .campnav button.game-action .action-label,
 #black-forest-game .classcards button.game-action .action-label{color:inherit}
+
+/* PR #7 P1-1: routine approaches are shorter; full art and key scenes survive. */
+#black-forest-game .scene-hero.scene-compact .scene-visual{height:auto;max-height:none;aspect-ratio:auto;background:var(--bf-bg)}
+#black-forest-game .scene-hero.scene-compact .scene-art{position:relative;inset:auto;height:220px;aspect-ratio:auto;max-height:none}
+#black-forest-game .scene-hero.scene-compact .scene-art img{height:100%;min-height:0;max-height:none;object-fit:contain;object-position:center}
+#black-forest-game .scene-hero.scene-compact.scene-chapter .scene-art{height:350px}
+#black-forest-game .scene-hero.scene-compact .scene-hero-head{position:relative;inset:auto;padding:10px 14px;background:var(--bf-bg)}
+#black-forest-game .scene-hero.scene-compact .scene-hero-shade{display:none}
+#black-forest-game .scene-hero.scene-compact .scene-hero-head h2{font-size:22px}

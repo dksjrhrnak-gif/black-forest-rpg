@@ -1,0 +1,40 @@
+/* Focused PR #7 follow-up: same saves/camera, real geometry and transactions. */
+const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),pw=require('playwright');
+const {Game,JOBS}=require('./test-support.cjs'),fixtures=require('./fx-test-fixtures.cjs');
+const baseline=process.env.BF_REVIEW_BASELINE==='1',engine=process.env.BF_BROWSER||'chromium';
+const base=process.env.BF_QA_URL||'http://127.0.0.1:4192/',out=process.env.BF_REVIEW_OUT||'docs/ui-b/review',phase=Number(process.env.BF_REVIEW_PHASE||5),key='black-forest-last-ember-v2';
+const widths=JSON.parse(process.env.BF_REVIEW_WIDTHS||'[360,390,430]');
+const screens=JSON.parse(process.env.BF_REVIEW_SCREENS||'["exploration","battle","jobs","reward","equipment"]');
+const beforePath=path.join(out,'baseline-chromium.json');const reference=!baseline&&fs.existsSync(beforePath)?JSON.parse(fs.readFileSync(beforePath)):null;
+const camp=Game.load(require('./fixtures/p3-pre-saves.json').saves.find(r=>r.starter==='warrior'&&r.seed===17&&r.style==='collector'&&r.scene==='middle-camp').code);
+function fresh(){const g=new Game(17);g.start('warrior');return g;}
+function state(screen){if(['jobs','equipment'].includes(screen))return Game.load(camp.export());if(screen==='battle')return fixtures.battle();if(screen==='reward'){const g=Game.load(fixtures.rarePurchase(4).code);g.buy('gear-weapon');return g;}const g=fresh();g.enterArea(0);return g;}
+(async()=>{const browser=await pw[engine].launch(require('./qa-browser.cjs')()),checks=[];
+try{for(const width of widths){const height=width===360?800:width===390?844:932,context=await browser.newContext({viewport:{width,height},hasTouch:true,isMobile:engine!=='firefox',colorScheme:'dark'}),page=await context.newPage(),errors=[];
+page.on('pageerror',e=>errors.push(e.message));page.on('console',m=>{if(m.type()==='error')errors.push(m.text());});
+const current=async()=>Game.load(await page.evaluate(k=>localStorage.getItem(k),key));
+const restore=async g=>{await page.evaluate(({key,code})=>localStorage.setItem(key,code),{key,code:g.export()});await page.reload();assert.equal((await current()).export(),g.export());};
+const tap=async l=>{await page.waitForTimeout(280);await l.scrollIntoViewIfNeeded();await l.tap();};
+await page.goto(base);
+for(const screen of screens){const g=state(screen);await restore(g);if(['jobs','equipment'].includes(screen))await tap(page.locator(`[data-ui="${screen}"]`).first());
+for(const img of await page.locator('#black-forest-game img:visible').all())await img.evaluate(e=>{e.loading='eager';return e.decode();});await page.waitForTimeout(720);
+const panel=await page.locator('#bf-panel').isVisible();await page.evaluate(panel=>{if(panel)document.querySelector('#bf-panel').scrollTop=0;else scrollTo(0,Math.max(0,document.querySelector('#bf-play').getBoundingClientRect().top+scrollY-8));},panel);
+const metrics=await page.evaluate(({screen,panel})=>{const host=document.querySelector(panel?'#bf-panel':'#bf-play'),buttons=[...host.querySelectorAll('button.game-action')].filter(e=>e.getClientRects().length),actions=buttons.map(e=>{const r=e.getBoundingClientRect(),s=getComputedStyle(e);return {command:e.dataset.cmd||e.dataset.ui,x:r.x,y:r.y,w:r.width,h:r.height,font:s.fontSize,weight:s.fontWeight,radius:s.borderRadius,clipped:e.scrollWidth>e.clientWidth+1||e.scrollHeight>e.clientHeight+1};}),first=actions[0],hud=document.querySelector('#bf-stats .stats'),visual=host.querySelector('.scene-visual');return {screen,imageFrameHeight:visual?.getBoundingClientRect().height||0,hudHeight:hud?.getBoundingClientRect().height||0,scrollY,firstActionScroll:first?Math.max(0,first.y+first.h-innerHeight+8):0,firstActionPageScroll:first?Math.max(0,first.y+scrollY+first.h-innerHeight+8):0,visibleActionButtons:actions.filter(e=>e.y>=0&&e.y+e.h<=innerHeight).length,actions,overflow:document.documentElement.scrollWidth>innerWidth};},{screen,panel});
+assert(!metrics.overflow,screen+' overflow');for(const b of metrics.actions){assert.equal(b.h,52);assert.equal(b.font,'15px');assert.equal(b.weight,'600');assert.equal(b.radius,'10px');assert(!b.clipped,screen+' clipped action');}
+const before=reference?.checks.find(c=>c.width===width&&c.screen===screen);
+if(!baseline&&before&&phase>=1&&screen==='exploration'){assert(metrics.imageFrameHeight<before.imageFrameHeight,'exploration image frame is shorter');assert(metrics.firstActionScroll<before.firstActionScroll,'exploration action is closer');assert.equal(await page.locator('.scene-art img').evaluate(e=>getComputedStyle(e).objectFit),'contain','entire story image preserved');}
+if(!baseline&&before&&phase>=2&&screen==='battle'){assert(metrics.hudHeight<before.hudHeight,'battle HUD shorter');assert(metrics.firstActionScroll<=before.firstActionScroll,'battle action scroll improves');const hp=page.locator('#bf-stats .stats>div:first-child'),mp=page.locator('#bf-stats .stats>div:nth-child(2)');assert((await hp.innerText()).includes(g.s.hp+' / '+g.maxHp()));assert((await mp.innerText()).includes(g.s.mp+' / '+g.maxMp()));assert((await page.locator('.enemy').innerText()).includes('다음 행동:'));const help=await page.locator('[data-cmd="act"][data-arg="skill"]').getAttribute('aria-describedby');assert((await page.locator('#'+help).innerText()).includes('MP '+g.skillCost()));}
+if(!baseline&&phase>=3&&screen==='jobs'){const locked=page.locator('#bf-panel [data-cmd="changeJob"]:disabled').first(),saved=g.export();await locked.evaluate(e=>e.click());assert.equal((await current()).export(),saved,'locked career does not change');assert(await page.locator('.career-condition.is-met').count());assert(await page.locator('.career-condition.is-unmet').count());assert.equal(await locked.evaluate(e=>getComputedStyle(e).opacity),'1','disabled career text remains readable');}
+if(!baseline&&phase>=4&&screen==='reward'){assert(await page.locator('[data-cmd="collectLoot"][data-arg="equip"]').evaluate(e=>e.classList.contains('primary')));assert(await page.locator('[data-cmd="collectLoot"][data-arg="bag"]').evaluate(e=>e.classList.contains('reward-keep')));assert(await page.locator('[data-cmd="collectLoot"][data-arg="sell"]').evaluate(e=>e.classList.contains('reward-sell')));}
+if(!baseline&&phase>=5&&screen==='equipment'){for(const slot of ['weapon','armor','charm']){const button=page.locator(`[data-ui="gear-slot-${slot}"]`);assert((await button.innerText()).includes(g.s[slot].name));assert.equal(await button.evaluate(e=>getComputedStyle(e.querySelector('strong')).textOverflow),'clip');}}
+assert.deepEqual(errors,[]);assert.equal((await current()).export(),g.export(),'inspection does not alter save/RNG');
+const dir=path.join(out,'screenshots');fs.mkdirSync(dir,{recursive:true});if(engine==='chromium')await page.screenshot({path:path.join(dir,`${baseline?'before':'after'}-${width}-${screen}.jpg`),type:'jpeg',quality:82});
+checks.push({width,height,...metrics,errors:0});console.log(`PASS review ${engine} ${width} ${screen}`);
+if(!baseline&&screen==='exploration'){g.chapterChoice(0);await tap(page.locator('[data-cmd="chapterChoice"][data-arg="0"]'));assert.equal((await current()).export(),g.export());}
+if(!baseline&&screen==='battle'){g.act('skill');await tap(page.locator('[data-cmd="act"][data-arg="skill"]'));assert.equal((await current()).export(),g.export());}
+if(!baseline&&screen==='reward'){g.collectLoot('sell');await tap(page.locator('[data-cmd="collectLoot"][data-arg="sell"]'));assert.equal((await current()).export(),g.export(),'sale matches engine and reward timing');}
+}
+assert.deepEqual(errors,[]);await context.close();}
+}finally{await browser.close();}
+fs.mkdirSync(out,{recursive:true});fs.writeFileSync(path.join(out,`${baseline?'baseline':'ui'}-${engine}.json`),JSON.stringify({status:'PASS',engine,baseline,base,phase,checks,method:'Same seed-17 chapter/combat and archived campaign camp; actual seeded legendary purchase. Measurements from #bf-play-aligned viewport, page distance recorded separately. Responsive touch emulation, not physical devices.'},null,2)+'\n');
+})().catch(e=>{console.error(e);process.exit(1);});
