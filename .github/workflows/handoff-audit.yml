@@ -1,7 +1,7 @@
 name: Handoff audit and requested mobile sizes
 on:
   push:
-    branches: [qa/handoff-audit-20261008, qa/resume-checkpoint-20261008, qa/asset-quality-20261008, qa/p1-class-identity-20261008, feature/p2-exploration-equipment, feature/p3-economy-crafting-endings, qa/gameplay-handoff-20261012, qa/fx-feedback-pass, qa/ui-b-mobile-pass, main]
+    branches: [qa/handoff-audit-20261008, qa/resume-checkpoint-20261008, qa/asset-quality-20261008, qa/p1-class-identity-20261008, feature/p2-exploration-equipment, feature/p3-economy-crafting-endings, qa/gameplay-handoff-20261012, qa/fx-feedback-pass, qa/ui-b-mobile-pass, qa/single-screen-mobile-ui, main]
   workflow_dispatch:
 permissions:
   contents: read

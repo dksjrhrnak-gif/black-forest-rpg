@@ -1397,7 +1397,7 @@
 }
 /* V-3: actual enemy intent/HP and active effects stay readable above actions. */
 @media(max-width:700px){
- #black-forest-game[data-viewport=scene] .viewport-identity button{padding:4px 8px;margin:0;flex-shrink:0}
+ #black-forest-game[data-viewport=scene] .viewport-identity button{min-width:44px;padding:4px 8px;margin:0;flex-shrink:0}
  #black-forest-game[data-viewport=scene] .scene-hero-head .enemy{margin:3px 0 0}
  #black-forest-game[data-viewport=scene] .scene-hero-head .enemy .intent{font-size:12px;line-height:1.5;margin:2px 0}
  #black-forest-game[data-viewport=scene] .combat-effects{max-height:64px;overflow:auto;overscroll-behavior:contain;padding:2px 4px}
