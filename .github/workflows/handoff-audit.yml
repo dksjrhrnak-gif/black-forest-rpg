@@ -20,6 +20,7 @@ jobs:
       - run: npm ci --ignore-scripts
       - run: npm test
       - run: node test-forced-career.cjs
+      - run: node test-pr8-pr9-integration.cjs
       - run: node test-fx.cjs
       - run: node test-ui-b-invariants.cjs
       - run: node test-audit-data.cjs
@@ -40,6 +41,7 @@ jobs:
         with:
           name: gameplay-data
           path: |
+            docs/pr8-pr9-integration/**/*.json
             docs/p2/**/*.json
             docs/p1/comparison.json
             docs/p3/**/*.json
@@ -131,7 +133,7 @@ jobs:
         env:
           BF_BROWSER: ${{ matrix.browser }}
           BF_QA_URL: https://dksjrhrnak-gif.github.io/black-forest-rpg/
-          BF_SINGLE_OUT: docs/single-screen/public
+          BF_SINGLE_OUT: docs/pr8-pr9-integration/single-screen-public
         run: |
           node test-single-screen.cjs
           node test-single-screen-layout.cjs
@@ -162,6 +164,7 @@ jobs:
         with:
           name: resumed-live-${{ matrix.browser }}
           path: |
+            docs/pr8-pr9-integration/
             pages-http-results.json
             docs/p1/ui-*.json
             docs/p2/ui-*.json
@@ -186,10 +189,13 @@ jobs:
       - run: npx playwright install --with-deps ${{ matrix.browser }}
       - run: python3 build.py && node export-data.cjs && python3 export-site.py && python3 verify-html.py
       - run: python3 -m http.server 4174 --directory dist > /tmp/bf-p3-preview.log 2>&1 &
+      - name: Wait for preview server readiness
+        run: node -e '(async()=>{for(let i=0;i<100;i++){try{if((await fetch("http://127.0.0.1:4174/")).ok)return}catch{}await new Promise(r=>setTimeout(r,100))}throw Error("Preview server unavailable")})().catch(e=>{console.error(e);process.exit(1)})'
       - name: Boss reward, forced career choice, saves and mobile FX compatibility
         env:
           BF_BROWSER: ${{ matrix.browser }}
           BF_QA_URL: http://127.0.0.1:4174/
+          BF_PROMO_OUT: docs/pr8-pr9-integration/forced
         run: node test-forced-career-ui.cjs
       - name: P3 real-campaign imports, economy, sets, save and endings at five widths
         env:
@@ -229,13 +235,15 @@ jobs:
           BF_BROWSER: ${{ matrix.browser }}
           BF_QA_URL: http://127.0.0.1:4174/single-before.html
           BF_SINGLE_BEFORE: '1'
+          BF_SINGLE_OUT: docs/pr8-pr9-integration/single-screen
         run: |
-          git show d01469cd157dd76798673641e4128370a99e036d:index.html > dist/single-before.html
+          git show 8869de4f651dc97e9b8cf8faec356cce31a913cd:index.html > dist/single-before.html
           node test-single-screen.cjs
       - name: Mobile single-screen bounds, story access and unchanged saves
         env:
           BF_BROWSER: ${{ matrix.browser }}
           BF_QA_URL: http://127.0.0.1:4174/
+          BF_SINGLE_OUT: docs/pr8-pr9-integration/single-screen
         run: |
           node test-single-screen.cjs
           node test-single-screen-layout.cjs
@@ -249,7 +257,7 @@ jobs:
         env:
           BF_BROWSER: ${{ matrix.browser }}
           BF_QA_URL: https://dksjrhrnak-gif.github.io/black-forest-rpg/
-          BF_PROMO_OUT: docs/forced-career/public
+          BF_PROMO_OUT: docs/pr8-pr9-integration/public
         run: node test-forced-career-ui.cjs
       - name: P3 public game at five widths
         if: github.ref == 'refs/heads/main'
@@ -281,6 +289,7 @@ jobs:
           path: |
             docs/single-screen/
             docs/forced-career/
+            docs/pr8-pr9-integration/
             docs/p3/ui-*.json
             docs/p3/public/ui-*.json
             screenshots/p3/

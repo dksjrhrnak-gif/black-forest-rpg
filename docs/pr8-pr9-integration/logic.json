@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "baseline": "8869de4f651dc97e9b8cf8faec356cce31a913cd",
+  "protectedFiles": 176,
+  "classes": 114,
+  "items": 1000,
+  "cases": 1026,
+  "claims": 1026,
+  "promotions": 540,
+  "restores": 3678,
+  "modes": [
+    "equip",
+    "bag",
+    "sell"
+  ],
+  "exactCompleteStateAndRng": true,
+  "duplicateClaimsRejected": true
+}

@@ -1,3 +1,5 @@
+> 후속 통합·병합 승인은 [PR8/PR9 통합 인수인계](PR8_PR9_INTEGRATION_HANDOFF.md)를 기준으로 한다. 아래는 해당 PR의 초기 검수 기록이다.
+
 # 모바일 한 화면 UI 인수인계
 
 기준 main: `d01469cd157dd76798673641e4128370a99e036d`. PR #7 및 FX가 병합된 실제 main에서 시작했다. 새 브랜치 `qa/single-screen-mobile-ui`; 사용자 화면 승인 전 main/Pages 반영 금지.

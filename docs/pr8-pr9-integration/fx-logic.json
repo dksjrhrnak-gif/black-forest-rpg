@@ -1,0 +1,35 @@
+{
+  "status": "PASS",
+  "jobs": 114,
+  "seededTurns": 3648,
+  "exactSaveRestores": 3648,
+  "types": [
+    "bleed",
+    "burn",
+    "critical",
+    "damage",
+    "dodge",
+    "dot",
+    "guard",
+    "heal",
+    "poison",
+    "reflect",
+    "stun",
+    "weak"
+  ],
+  "rejectedInput": true,
+  "fullHpNoFalseHeal": true,
+  "healingBeforeHit": true,
+  "fatalHealingNoInventedAmount": true,
+  "enemyHealing": true,
+  "saveAndRngUnchanged": true,
+  "pendingAndClaimedRewards": true,
+  "restAndCheckpoint": true,
+  "boss": true,
+  "hidden": true,
+  "endings": 3,
+  "rareGrades": [
+    4,
+    5
+  ]
+}
