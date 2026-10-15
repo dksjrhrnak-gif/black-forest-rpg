@@ -7,9 +7,9 @@ subprocess.run(['node',str(p/'validate-assets.cjs')],check=True,cwd=p)
 subprocess.run(['node',str(p/'validate-script.cjs')],check=True,cwd=p)
 subprocess.run(['node',str(p/'test-script.cjs')],check=True,cwd=p)
 license='\n\n'.join((p/'vendor'/f).read_text(encoding='utf-8') for f in ['ROT-LICENSE.txt','LOOT-LICENSE.txt','LZ-LICENSE.txt'])
-modules=['vendor/rot.js','vendor/loot-table.js','vendor/lz-string.js','legacy-v1.js','content.js','literature.js','expansion.js','supplemental.js','class-tree.js','effects.js','relationships.js','narrative.js','assets.js','equipment-migration.js','engine.js','qa-relationships.js','career.js','chapters.js','journey.js','p2-exploration.js','p3-systems.js']
-fragment='<style>\n'+(p/'style.css').read_text(encoding='utf-8')+'\n</style>\n'+(p/'shell.html').read_text(encoding='utf-8')
-fragment+='\n<script>\n/*\n'+license+'\n*/\n'+'\n'.join((p/f).read_text(encoding='utf-8') for f in modules)+'\n</script>\n<script>\ndocument.getElementById("black-forest-game").dataset.license='+json.dumps(license)+';\n'+(p/'ui-fx.js').read_text(encoding='utf-8')+'\n'+(p/'ui.js').read_text(encoding='utf-8')+'\n</script>\n'
+modules=['vendor/rot.js','vendor/loot-table.js','vendor/lz-string.js','legacy-v1.js','content.js','literature.js','expansion.js','supplemental.js','class-tree.js','effects.js','relationships.js','narrative.js','assets.js','equipment-migration.js','engine.js','qa-relationships.js','career.js','chapters.js','journey.js','p2-exploration.js','p3-systems.js','forced-career.js']
+fragment='<style>\n'+(p/'style.css').read_text(encoding='utf-8')+'\n'+(p/'promotion.css').read_text(encoding='utf-8')+'\n</style>\n'+(p/'shell.html').read_text(encoding='utf-8')
+fragment+='\n<script>\n/*\n'+license+'\n*/\n'+'\n'.join((p/f).read_text(encoding='utf-8') for f in modules)+'\n</script>\n<script>\ndocument.getElementById("black-forest-game").dataset.license='+json.dumps(license)+';\n'+(p/'ui-fx.js').read_text(encoding='utf-8')+'\n'+(p/'ui.js').read_text(encoding='utf-8')+'\n'+(p/'ui-promotion.js').read_text(encoding='utf-8')+'\n</script>\n'
 parser=argparse.ArgumentParser();parser.add_argument('--inline-output');args=parser.parse_args()
 if args.inline_output:Path(args.inline_output).write_text(fragment,encoding='utf-8')
 favicon='<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,'+quote('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="8" fill="#172418"/><path d="M17 4c2 8 8 10 8 17a9 9 0 0 1-18 0c0-5 4-7 5-12 1 4 3 6 4 7 2-4 2-8 1-12" fill="#b7d4a2"/></svg>')+'">'
