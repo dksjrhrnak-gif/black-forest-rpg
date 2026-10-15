@@ -4,6 +4,7 @@ const {Game,FAMILY_LABELS,JOBS,AREAS,TYPES,RARITIES,WEIGHTS,AFFIXES,ITEMS,EVENTS
 const $=id=>root.querySelector('#bf-'+id),KEY='black-forest-last-ember-v2',LEGACY='black-forest-last-ember-v1';let game=new Game(),panel='',warning='',panelOrigin='';
 Object.defineProperty(root,'bfGameSnapshot',{value:()=>game.export()});
 const fx=BFUIFX.create(root);
+Object.defineProperty(root,'bfPromotionFeedback',{value:name=>fx.show([{target:'banner',type:'promotion',text:'전직 완료 · '+name}])});
 window.addEventListener('pagehide',()=>fx.clear());document.addEventListener('visibilitychange',()=>{if(document.hidden)fx.clear()});const hiddenCount=Object.values(JOBS).filter(j=>j.hidden).length;const views={jobs:{query:'',family:'',page:0},codex:{query:'',slot:'',grade:'',found:false,page:0}};
 const visibleText=t=>String(t).replace(/보상 받고 다음 조우|다음 조우|계속 진행|자동 이동 중…/g,'계속 나아간다').replace(/보상 수령/g,'전리품을 챙긴다').replace(/체크포인트/g,'쉼터').replace(/경로 선택/g,'길을 살핀다').replace(/랜덤 인카운트/g,'길 위의 사건').replace(/다음 지역/g,'새로운 땅').replace(/불씨의 수호자/g,'불씨를 놓아준 자');
 const esc=t=>visibleText(t).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
