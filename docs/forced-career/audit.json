@@ -1,0 +1,1267 @@
+{
+  "status": "PASS",
+  "repairs": [
+    [
+      "x_magic_1",
+      "x_magic_9"
+    ],
+    [
+      "victor_heir",
+      "x_support_15"
+    ]
+  ],
+  "audit": [
+    {
+      "id": "warrior",
+      "tier": 0,
+      "parents": [],
+      "children": [
+        "rabbit_guard",
+        "pequod",
+        "windmill",
+        "stitch",
+        "card_spear",
+        "coffin",
+        "mirror_fist",
+        "quixote_squire"
+      ]
+    },
+    {
+      "id": "rogue",
+      "tier": 0,
+      "parents": [],
+      "children": [
+        "card_spear",
+        "mirror_fist",
+        "x_ranged_0",
+        "x_ranged_1",
+        "x_ranged_2",
+        "x_ranged_3",
+        "x_ranged_4",
+        "x_ranged_5",
+        "x_ranged_6",
+        "x_occult_0",
+        "x_occult_1",
+        "x_occult_2",
+        "x_occult_3",
+        "x_occult_4",
+        "x_occult_5",
+        "x_occult_6"
+      ]
+    },
+    {
+      "id": "mage",
+      "tier": 0,
+      "parents": [],
+      "children": [
+        "x_magic_0",
+        "x_magic_1",
+        "x_magic_2",
+        "x_magic_3",
+        "x_magic_4",
+        "x_magic_5",
+        "x_magic_6",
+        "x_occult_0",
+        "x_occult_1",
+        "x_occult_2",
+        "x_occult_3",
+        "x_occult_4",
+        "x_occult_5",
+        "x_occult_6"
+      ]
+    },
+    {
+      "id": "paladin",
+      "tier": null,
+      "exception": "existing hidden path, no forced normal progression"
+    },
+    {
+      "id": "blood",
+      "tier": null,
+      "exception": "existing hidden path, no forced normal progression"
+    },
+    {
+      "id": "rune",
+      "tier": null,
+      "exception": "existing hidden path, no forced normal progression"
+    },
+    {
+      "id": "shadow",
+      "tier": null,
+      "exception": "existing hidden path, no forced normal progression"
+    },
+    {
+      "id": "gambler",
+      "tier": null,
+      "exception": "existing hidden path, no forced normal progression"
+    },
+    {
+      "id": "chrono",
+      "tier": null,
+      "exception": "existing hidden path, no forced normal progression"
+    },
+    {
+      "id": "rabbit_guard",
+      "tier": 1,
+      "parents": [
+        "warrior",
+        "guardian",
+        "adventurer"
+      ],
+      "children": [
+        "queen_exec",
+        "alice_return"
+      ]
+    },
+    {
+      "id": "pequod",
+      "tier": 1,
+      "parents": [
+        "warrior",
+        "hunter",
+        "adventurer"
+      ],
+      "children": [
+        "ahab_harpoon"
+      ]
+    },
+    {
+      "id": "windmill",
+      "tier": 1,
+      "parents": [
+        "warrior",
+        "adventurer"
+      ],
+      "children": [
+        "fallen_dreamer"
+      ]
+    },
+    {
+      "id": "stitch",
+      "tier": 1,
+      "parents": [
+        "warrior",
+        "guardian"
+      ],
+      "children": [
+        "adam_sword",
+        "victor_heir"
+      ]
+    },
+    {
+      "id": "card_spear",
+      "tier": 1,
+      "parents": [
+        "rogue",
+        "warrior"
+      ],
+      "children": [
+        "queen_exec"
+      ]
+    },
+    {
+      "id": "sancho",
+      "tier": 1,
+      "parents": [
+        "guardian",
+        "adventurer"
+      ],
+      "children": [
+        "white_knight"
+      ]
+    },
+    {
+      "id": "coffin",
+      "tier": 1,
+      "parents": [
+        "guardian",
+        "warrior"
+      ],
+      "children": [
+        "grave_hunter"
+      ]
+    },
+    {
+      "id": "mirror_fist",
+      "tier": 1,
+      "parents": [
+        "rogue",
+        "warrior"
+      ],
+      "children": [
+        "twin_duel"
+      ]
+    },
+    {
+      "id": "ahab_harpoon",
+      "tier": 2,
+      "parents": [
+        "pequod"
+      ],
+      "children": [
+        "abyss_anchor",
+        "whale_slayer"
+      ]
+    },
+    {
+      "id": "fallen_dreamer",
+      "tier": 2,
+      "parents": [
+        "windmill",
+        "quixote_squire"
+      ],
+      "children": [
+        "dream_guard"
+      ]
+    },
+    {
+      "id": "queen_exec",
+      "tier": 2,
+      "parents": [
+        "card_spear",
+        "rabbit_guard"
+      ],
+      "children": [
+        "pagebreaker",
+        "thorn_crown",
+        "court_witness"
+      ]
+    },
+    {
+      "id": "adam_sword",
+      "tier": 2,
+      "parents": [
+        "stitch"
+      ],
+      "children": [
+        "self_named"
+      ]
+    },
+    {
+      "id": "twin_duel",
+      "tier": 2,
+      "parents": [
+        "mirror_fist"
+      ],
+      "children": [
+        "pagebreaker",
+        "clock_reaver"
+      ]
+    },
+    {
+      "id": "white_knight",
+      "tier": 2,
+      "parents": [
+        "sancho",
+        "quixote_squire"
+      ],
+      "children": [
+        "clock_reaver",
+        "last_margin",
+        "dream_guard"
+      ]
+    },
+    {
+      "id": "grave_hunter",
+      "tier": 2,
+      "parents": [
+        "coffin"
+      ],
+      "children": [
+        "last_margin"
+      ]
+    },
+    {
+      "id": "pagebreaker",
+      "tier": 3,
+      "parents": [
+        "queen_exec",
+        "twin_duel"
+      ],
+      "children": []
+    },
+    {
+      "id": "abyss_anchor",
+      "tier": 3,
+      "parents": [
+        "ahab_harpoon"
+      ],
+      "children": []
+    },
+    {
+      "id": "clock_reaver",
+      "tier": 3,
+      "parents": [
+        "twin_duel",
+        "white_knight"
+      ],
+      "children": []
+    },
+    {
+      "id": "thorn_crown",
+      "tier": 3,
+      "parents": [
+        "queen_exec"
+      ],
+      "children": []
+    },
+    {
+      "id": "last_margin",
+      "tier": 3,
+      "parents": [
+        "grave_hunter",
+        "white_knight"
+      ],
+      "children": []
+    },
+    {
+      "id": "x_magic_0",
+      "tier": 1,
+      "parents": [
+        "mage",
+        "adventurer"
+      ],
+      "children": [
+        "x_magic_7",
+        "x_magic_11",
+        "victor_heir"
+      ]
+    },
+    {
+      "id": "x_magic_1",
+      "tier": 1,
+      "parents": [
+        "mage",
+        "adventurer"
+      ],
+      "children": [
+        "x_magic_9"
+      ]
+    },
+    {
+      "id": "x_magic_2",
+      "tier": 1,
+      "parents": [
+        "mage",
+        "adventurer"
+      ],
+      "children": [
+        "x_magic_9"
+      ]
+    },
+    {
+      "id": "x_magic_3",
+      "tier": 1,
+      "parents": [
+        "mage",
+        "adventurer"
+      ],
+      "children": [
+        "x_magic_8",
+        "x_magic_11"
+      ]
+    },
+    {
+      "id": "x_magic_4",
+      "tier": 1,
+      "parents": [
+        "mage",
+        "adventurer"
+      ],
+      "children": [
+        "x_magic_7",
+        "x_magic_8",
+        "x_magic_12"
+      ]
+    },
+    {
+      "id": "x_magic_5",
+      "tier": 1,
+      "parents": [
+        "mage",
+        "adventurer"
+      ],
+      "children": [
+        "x_magic_9",
+        "x_magic_10"
+      ]
+    },
+    {
+      "id": "x_magic_6",
+      "tier": 1,
+      "parents": [
+        "mage",
+        "adventurer"
+      ],
+      "children": [
+        "x_magic_10",
+        "x_magic_12"
+      ]
+    },
+    {
+      "id": "x_magic_7",
+      "tier": 2,
+      "parents": [
+        "x_magic_4",
+        "x_magic_0"
+      ],
+      "children": [
+        "x_magic_15",
+        "faust_release"
+      ]
+    },
+    {
+      "id": "x_magic_8",
+      "tier": 2,
+      "parents": [
+        "x_magic_4",
+        "x_magic_3"
+      ],
+      "children": [
+        "self_named"
+      ]
+    },
+    {
+      "id": "x_magic_9",
+      "tier": 2,
+      "parents": [
+        "x_magic_5",
+        "x_magic_2",
+        "x_magic_1"
+      ],
+      "children": [
+        "x_magic_14"
+      ]
+    },
+    {
+      "id": "x_magic_10",
+      "tier": 2,
+      "parents": [
+        "x_magic_6",
+        "x_magic_5"
+      ],
+      "children": [
+        "x_magic_13",
+        "x_magic_14",
+        "faust_release"
+      ]
+    },
+    {
+      "id": "x_magic_11",
+      "tier": 2,
+      "parents": [
+        "x_magic_0",
+        "x_magic_3"
+      ],
+      "children": [
+        "x_magic_13"
+      ]
+    },
+    {
+      "id": "x_magic_12",
+      "tier": 2,
+      "parents": [
+        "x_magic_4",
+        "x_magic_6"
+      ],
+      "children": [
+        "x_magic_15"
+      ]
+    },
+    {
+      "id": "x_magic_13",
+      "tier": 3,
+      "parents": [
+        "x_magic_10",
+        "x_magic_11"
+      ],
+      "children": []
+    },
+    {
+      "id": "x_magic_14",
+      "tier": 3,
+      "parents": [
+        "x_magic_9",
+        "x_magic_10"
+      ],
+      "children": []
+    },
+    {
+      "id": "x_magic_15",
+      "tier": 3,
+      "parents": [
+        "x_magic_12",
+        "x_magic_7"
+      ],
+      "children": []
+    },
+    {
+      "id": "x_magic_16",
+      "tier": null,
+      "exception": "existing hidden path, no forced normal progression"
+    },
+    {
+      "id": "x_magic_17",
+      "tier": null,
+      "exception": "existing hidden path, no forced normal progression"
+    },
+    {
+      "id": "x_ranged_0",
+      "tier": 1,
+      "parents": [
+        "hunter",
+        "rogue",
+        "adventurer"
+      ],
+      "children": [
+        "x_ranged_8"
+      ]
+    },
+    {
+      "id": "x_ranged_1",
+      "tier": 1,
+      "parents": [
+        "hunter",
+        "rogue",
+        "adventurer"
+      ],
+      "children": [
+        "x_ranged_9",
+        "x_ranged_10"
+      ]
+    },
+    {
+      "id": "x_ranged_2",
+      "tier": 1,
+      "parents": [
+        "hunter",
+        "rogue",
+        "adventurer"
+      ],
+      "children": [
+        "x_ranged_7",
+        "x_ranged_12"
+      ]
+    },
+    {
+      "id": "x_ranged_3",
+      "tier": 1,
+      "parents": [
+        "hunter",
+        "rogue",
+        "adventurer"
+      ],
+      "children": [
+        "x_ranged_10",
+        "x_ranged_11"
+      ]
+    },
+    {
+      "id": "x_ranged_4",
+      "tier": 1,
+      "parents": [
+        "hunter",
+        "rogue",
+        "adventurer"
+      ],
+      "children": [
+        "x_ranged_7",
+        "x_ranged_8"
+      ]
+    },
+    {
+      "id": "x_ranged_5",
+      "tier": 1,
+      "parents": [
+        "hunter",
+        "rogue",
+        "adventurer"
+      ],
+      "children": [
+        "x_ranged_11",
+        "x_ranged_12"
+      ]
+    },
+    {
+      "id": "x_ranged_6",
+      "tier": 1,
+      "parents": [
+        "hunter",
+        "rogue",
+        "adventurer"
+      ],
+      "children": [
+        "x_ranged_9"
+      ]
+    },
+    {
+      "id": "x_ranged_7",
+      "tier": 2,
+      "parents": [
+        "x_ranged_4",
+        "x_ranged_2"
+      ],
+      "children": [
+        "x_ranged_14",
+        "sherwood_warden"
+      ]
+    },
+    {
+      "id": "x_ranged_8",
+      "tier": 2,
+      "parents": [
+        "x_ranged_0",
+        "x_ranged_4"
+      ],
+      "children": [
+        "x_ranged_14",
+        "sherwood_warden"
+      ]
+    },
+    {
+      "id": "x_ranged_9",
+      "tier": 2,
+      "parents": [
+        "x_ranged_1",
+        "x_ranged_6"
+      ],
+      "children": [
+        "x_ranged_13"
+      ]
+    },
+    {
+      "id": "x_ranged_10",
+      "tier": 2,
+      "parents": [
+        "x_ranged_1",
+        "x_ranged_3"
+      ],
+      "children": [
+        "x_ranged_15"
+      ]
+    },
+    {
+      "id": "x_ranged_11",
+      "tier": 2,
+      "parents": [
+        "x_ranged_3",
+        "x_ranged_5"
+      ],
+      "children": [
+        "x_ranged_15"
+      ]
+    },
+    {
+      "id": "x_ranged_12",
+      "tier": 2,
+      "parents": [
+        "x_ranged_2",
+        "x_ranged_5"
+      ],
+      "children": [
+        "x_ranged_13"
+      ]
+    },
+    {
+      "id": "x_ranged_13",
+      "tier": 3,
+      "parents": [
+        "x_ranged_9",
+        "x_ranged_12"
+      ],
+      "children": []
+    },
+    {
+      "id": "x_ranged_14",
+      "tier": 3,
+      "parents": [
+        "x_ranged_7",
+        "x_ranged_8"
+      ],
+      "children": []
+    },
+    {
+      "id": "x_ranged_15",
+      "tier": 3,
+      "parents": [
+        "x_ranged_10",
+        "x_ranged_11"
+      ],
+      "children": []
+    },
+    {
+      "id": "x_ranged_16",
+      "tier": null,
+      "exception": "existing hidden path, no forced normal progression"
+    },
+    {
+      "id": "x_ranged_17",
+      "tier": null,
+      "exception": "existing hidden path, no forced normal progression"
+    },
+    {
+      "id": "x_support_0",
+      "tier": 1,
+      "parents": [
+        "guardian",
+        "adventurer"
+      ],
+      "children": [
+        "x_support_7",
+        "x_support_12",
+        "alice_return",
+        "victor_heir"
+      ]
+    },
+    {
+      "id": "x_support_1",
+      "tier": 1,
+      "parents": [
+        "guardian",
+        "adventurer"
+      ],
+      "children": [
+        "x_support_9",
+        "x_support_10"
+      ]
+    },
+    {
+      "id": "x_support_2",
+      "tier": 1,
+      "parents": [
+        "guardian",
+        "adventurer"
+      ],
+      "children": [
+        "x_support_11",
+        "x_support_12"
+      ]
+    },
+    {
+      "id": "x_support_3",
+      "tier": 1,
+      "parents": [
+        "guardian",
+        "adventurer"
+      ],
+      "children": [
+        "x_support_7",
+        "x_support_9",
+        "x_support_11"
+      ]
+    },
+    {
+      "id": "x_support_4",
+      "tier": 1,
+      "parents": [
+        "guardian",
+        "adventurer"
+      ],
+      "children": [
+        "x_support_8"
+      ]
+    },
+    {
+      "id": "x_support_5",
+      "tier": 1,
+      "parents": [
+        "guardian",
+        "adventurer"
+      ],
+      "children": [
+        "x_support_10"
+      ]
+    },
+    {
+      "id": "x_support_6",
+      "tier": 1,
+      "parents": [
+        "guardian",
+        "adventurer"
+      ],
+      "children": [
+        "x_support_8"
+      ]
+    },
+    {
+      "id": "x_support_7",
+      "tier": 2,
+      "parents": [
+        "x_support_0",
+        "x_support_3"
+      ],
+      "children": [
+        "x_support_13"
+      ]
+    },
+    {
+      "id": "x_support_8",
+      "tier": 2,
+      "parents": [
+        "x_support_4",
+        "x_support_6"
+      ],
+      "children": [
+        "oz_restorer"
+      ]
+    },
+    {
+      "id": "x_support_9",
+      "tier": 2,
+      "parents": [
+        "x_support_1",
+        "x_support_3"
+      ],
+      "children": [
+        "x_support_15"
+      ]
+    },
+    {
+      "id": "x_support_10",
+      "tier": 2,
+      "parents": [
+        "x_support_1",
+        "x_support_5"
+      ],
+      "children": [
+        "x_support_14",
+        "oz_restorer"
+      ]
+    },
+    {
+      "id": "x_support_11",
+      "tier": 2,
+      "parents": [
+        "x_support_2",
+        "x_support_3"
+      ],
+      "children": [
+        "x_support_14",
+        "x_support_15"
+      ]
+    },
+    {
+      "id": "x_support_12",
+      "tier": 2,
+      "parents": [
+        "x_support_0",
+        "x_support_2"
+      ],
+      "children": [
+        "x_support_13"
+      ]
+    },
+    {
+      "id": "x_support_13",
+      "tier": 3,
+      "parents": [
+        "x_support_7",
+        "x_support_12"
+      ],
+      "children": []
+    },
+    {
+      "id": "x_support_14",
+      "tier": 3,
+      "parents": [
+        "x_support_10",
+        "x_support_11"
+      ],
+      "children": []
+    },
+    {
+      "id": "x_support_15",
+      "tier": 3,
+      "parents": [
+        "x_support_9",
+        "x_support_11",
+        "victor_heir"
+      ],
+      "children": []
+    },
+    {
+      "id": "x_support_16",
+      "tier": null,
+      "exception": "existing hidden path, no forced normal progression"
+    },
+    {
+      "id": "x_support_17",
+      "tier": null,
+      "exception": "existing hidden path, no forced normal progression"
+    },
+    {
+      "id": "x_occult_0",
+      "tier": 1,
+      "parents": [
+        "rogue",
+        "mage",
+        "adventurer"
+      ],
+      "children": [
+        "x_occult_8",
+        "x_occult_11",
+        "alice_return"
+      ]
+    },
+    {
+      "id": "x_occult_1",
+      "tier": 1,
+      "parents": [
+        "rogue",
+        "mage",
+        "adventurer"
+      ],
+      "children": [
+        "x_occult_9",
+        "x_occult_12"
+      ]
+    },
+    {
+      "id": "x_occult_2",
+      "tier": 1,
+      "parents": [
+        "rogue",
+        "mage",
+        "adventurer"
+      ],
+      "children": [
+        "x_occult_7"
+      ]
+    },
+    {
+      "id": "x_occult_3",
+      "tier": 1,
+      "parents": [
+        "rogue",
+        "mage",
+        "adventurer"
+      ],
+      "children": [
+        "x_occult_10"
+      ]
+    },
+    {
+      "id": "x_occult_4",
+      "tier": 1,
+      "parents": [
+        "rogue",
+        "mage",
+        "adventurer"
+      ],
+      "children": [
+        "x_occult_11",
+        "x_occult_12"
+      ]
+    },
+    {
+      "id": "x_occult_5",
+      "tier": 1,
+      "parents": [
+        "rogue",
+        "mage",
+        "adventurer"
+      ],
+      "children": [
+        "x_occult_8",
+        "x_occult_10"
+      ]
+    },
+    {
+      "id": "x_occult_6",
+      "tier": 1,
+      "parents": [
+        "rogue",
+        "mage",
+        "adventurer"
+      ],
+      "children": [
+        "x_occult_7",
+        "x_occult_9"
+      ]
+    },
+    {
+      "id": "x_occult_7",
+      "tier": 2,
+      "parents": [
+        "x_occult_6",
+        "x_occult_2"
+      ],
+      "children": [
+        "margin_keeper"
+      ]
+    },
+    {
+      "id": "x_occult_8",
+      "tier": 2,
+      "parents": [
+        "x_occult_0",
+        "x_occult_5"
+      ],
+      "children": [
+        "x_occult_14"
+      ]
+    },
+    {
+      "id": "x_occult_9",
+      "tier": 2,
+      "parents": [
+        "x_occult_1",
+        "x_occult_6"
+      ],
+      "children": [
+        "x_occult_13"
+      ]
+    },
+    {
+      "id": "x_occult_10",
+      "tier": 2,
+      "parents": [
+        "x_occult_3",
+        "x_occult_5"
+      ],
+      "children": [
+        "margin_keeper"
+      ]
+    },
+    {
+      "id": "x_occult_11",
+      "tier": 2,
+      "parents": [
+        "x_occult_0",
+        "x_occult_4"
+      ],
+      "children": [
+        "x_occult_14"
+      ]
+    },
+    {
+      "id": "x_occult_12",
+      "tier": 2,
+      "parents": [
+        "x_occult_1",
+        "x_occult_4"
+      ],
+      "children": [
+        "x_occult_13"
+      ]
+    },
+    {
+      "id": "x_occult_13",
+      "tier": 3,
+      "parents": [
+        "x_occult_9",
+        "x_occult_12"
+      ],
+      "children": []
+    },
+    {
+      "id": "x_occult_14",
+      "tier": 3,
+      "parents": [
+        "x_occult_8",
+        "x_occult_11"
+      ],
+      "children": []
+    },
+    {
+      "id": "x_occult_15",
+      "tier": null,
+      "exception": "existing hidden path, no forced normal progression"
+    },
+    {
+      "id": "x_occult_16",
+      "tier": null,
+      "exception": "existing hidden path, no forced normal progression"
+    },
+    {
+      "id": "adventurer",
+      "tier": 0,
+      "parents": [],
+      "children": [
+        "rabbit_guard",
+        "pequod",
+        "windmill",
+        "sancho",
+        "x_magic_0",
+        "x_magic_1",
+        "x_magic_2",
+        "x_magic_3",
+        "x_magic_4",
+        "x_magic_5",
+        "x_magic_6",
+        "x_ranged_0",
+        "x_ranged_1",
+        "x_ranged_2",
+        "x_ranged_3",
+        "x_ranged_4",
+        "x_ranged_5",
+        "x_ranged_6",
+        "x_support_0",
+        "x_support_1",
+        "x_support_2",
+        "x_support_3",
+        "x_support_4",
+        "x_support_5",
+        "x_support_6",
+        "x_occult_0",
+        "x_occult_1",
+        "x_occult_2",
+        "x_occult_3",
+        "x_occult_4",
+        "x_occult_5",
+        "x_occult_6",
+        "quixote_squire"
+      ]
+    },
+    {
+      "id": "hunter",
+      "tier": 0,
+      "parents": [],
+      "children": [
+        "pequod",
+        "x_ranged_0",
+        "x_ranged_1",
+        "x_ranged_2",
+        "x_ranged_3",
+        "x_ranged_4",
+        "x_ranged_5",
+        "x_ranged_6"
+      ]
+    },
+    {
+      "id": "guardian",
+      "tier": 0,
+      "parents": [],
+      "children": [
+        "rabbit_guard",
+        "stitch",
+        "sancho",
+        "coffin",
+        "x_support_0",
+        "x_support_1",
+        "x_support_2",
+        "x_support_3",
+        "x_support_4",
+        "x_support_5",
+        "x_support_6",
+        "quixote_squire"
+      ]
+    },
+    {
+      "id": "whale_slayer",
+      "tier": 3,
+      "parents": [
+        "ahab_harpoon"
+      ],
+      "children": []
+    },
+    {
+      "id": "self_named",
+      "tier": 3,
+      "parents": [
+        "adam_sword",
+        "x_magic_8"
+      ],
+      "children": []
+    },
+    {
+      "id": "dream_guard",
+      "tier": 3,
+      "parents": [
+        "fallen_dreamer",
+        "white_knight"
+      ],
+      "children": []
+    },
+    {
+      "id": "court_witness",
+      "tier": 3,
+      "parents": [
+        "queen_exec",
+        "alice_return"
+      ],
+      "children": []
+    },
+    {
+      "id": "alice_return",
+      "tier": 2,
+      "parents": [
+        "rabbit_guard",
+        "x_support_0",
+        "x_occult_0"
+      ],
+      "children": [
+        "court_witness"
+      ]
+    },
+    {
+      "id": "victor_heir",
+      "tier": 2,
+      "parents": [
+        "stitch",
+        "x_support_0",
+        "x_magic_0"
+      ],
+      "children": [
+        "x_support_15"
+      ]
+    },
+    {
+      "id": "quixote_squire",
+      "tier": 1,
+      "parents": [
+        "warrior",
+        "guardian",
+        "adventurer"
+      ],
+      "children": [
+        "fallen_dreamer",
+        "white_knight"
+      ]
+    },
+    {
+      "id": "sherwood_warden",
+      "tier": 3,
+      "parents": [
+        "x_ranged_8",
+        "x_ranged_7"
+      ],
+      "children": []
+    },
+    {
+      "id": "oz_restorer",
+      "tier": 3,
+      "parents": [
+        "x_support_8",
+        "x_support_10"
+      ],
+      "children": []
+    },
+    {
+      "id": "faust_release",
+      "tier": 3,
+      "parents": [
+        "x_magic_7",
+        "x_magic_10"
+      ],
+      "children": []
+    },
+    {
+      "id": "margin_keeper",
+      "tier": 3,
+      "parents": [
+        "x_occult_7",
+        "x_occult_10"
+      ],
+      "children": []
+    }
+  ],
+  "checks": {
+    "normal": 342,
+    "hidden": 42,
+    "rewards": 342,
+    "guards": 1500,
+    "restores": 1085,
+    "rescue": 11
+  }
+}

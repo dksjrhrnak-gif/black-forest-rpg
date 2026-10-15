@@ -20,7 +20,7 @@ const fixtures=entries(),engine=process.env.BF_BROWSER||'chromium',base=process.
    else if(s.scene==='map')g=await command(g,'choose',0);else if(['reward','merchant'].includes(s.scene))g=await command(g,'nextEncounter');else if(s.scene==='midboss')g=await command(g,'faceMidboss');
    else if(s.scene==='npc'){assert((await page.locator('#bf-play').innerText()).includes(g.p2Reaction())||!g.p2Reaction());g=await command(g,'npcChoice',g.getAffinity(s.thread)>=40?3:0);}
    else if(s.scene==='event')g=await command(g,'event',g.eventChoices().findIndex(c=>g.canPay(c.cost)));
-   else if(s.scene==='camp'){g=await command(g,'rest');g=await command(g,'enterArea',ev.region);}
+   else if(s.scene==='camp'){if(g.promotionStatus()?.ready){await require('./qa-promotions.cjs').choosePromotionUI(page);g=await current();}g=await command(g,'rest');g=await command(g,'enterArea',ev.region);}
    else throw Error('Unexpected P2 journey '+s.scene);
   }
   assert(battle&&gear&&reaction,'choice→battle→gear→reconnected story');assert.equal(g.s.decisions[ev.key],recorded);await inspect('subsequent reaction');fs.mkdirSync('screenshots/p2',{recursive:true});await page.screenshot({path:`screenshots/p2/${engine}-${width}-${ev.id}-${choice}.png`,fullPage:true});checks.push({width,event:ev.id,choice,recorded,battle,gear,reaction,saveExact:true,fixtureCommands:fixtures[ev.region].commands});

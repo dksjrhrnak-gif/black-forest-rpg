@@ -1439,6 +1439,29 @@
 }
 @media(max-width:700px){#black-forest-game[data-viewport=scene] .actions.choices-single:has([data-cmd=chapterChoice]){grid-template-columns:1fr}}
 
+/* Existing B UI/FX and 52px action tokens are reused, including PR #8. */
+#black-forest-game .promotion-notice{border-left:3px solid var(--bf-ember);padding:8px 10px;margin:8px 0;background:var(--bf-tint);color:var(--bf-text);font-size:14px;line-height:1.6}
+#black-forest-game .promotion-grid{display:grid;gap:12px;grid-template-columns:repeat(2,minmax(0,1fr))}
+#black-forest-game .promotion-card{padding:12px;min-width:0;border:1px solid var(--bf-line);border-radius:10px;background:var(--bf-bg)}
+#black-forest-game .promotion-intro{display:flex;gap:12px;align-items:start}
+#black-forest-game .promotion-intro>div{min-width:0;flex:1}
+#black-forest-game .promotion-intro img{width:80px;height:120px;object-fit:contain;flex-shrink:0}
+#black-forest-game .promotion-card p{font-size:13px;line-height:1.6;margin:6px 0;overflow-wrap:anywhere}
+#black-forest-game .promotion-card button{margin-top:8px}
+#black-forest-game .promotion-card [aria-pressed=true]{border-color:var(--bf-gold);background:var(--bf-tint);color:var(--bf-gold)}
+#black-forest-game .promotion-confirm{position:sticky;bottom:0;margin-top:12px;padding:8px 0 calc(8px + env(safe-area-inset-bottom));background:var(--bf-card);border-top:1px solid var(--bf-line);z-index:2}
+#black-forest-game .promotion-confirm p{font-size:13px;margin-bottom:8px}
+#black-forest-game[data-promotion=ready] #bf-play{overflow:visible}
+@media(max-width:700px){#black-forest-game .promotion-grid{grid-template-columns:1fr}#black-forest-game .promotion-intro img{width:72px;height:108px}}
+@media(prefers-reduced-motion:reduce){#black-forest-game .promotion-screen *{scroll-behavior:auto}}
+
+#black-forest-game .promotion-screen{display:flex;flex-direction:column;box-sizing:border-box;min-height:320px;gap:8px}
+#black-forest-game .promotion-screen>p{margin:0;flex-shrink:0;font-size:13px;line-height:1.5}
+#black-forest-game .promotion-heading{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-shrink:0}
+#black-forest-game .promotion-heading h2{font-size:20px;margin:0}
+#black-forest-game .promotion-grid{min-height:0;flex:1;overflow:auto;overscroll-behavior:contain;align-content:start}
+#black-forest-game .promotion-confirm{position:static;flex-shrink:0;margin:0}
+
 </style>
 <div id="black-forest-game">
 <header class="top"><div><p class="eyebrow">THE LAST EMBER · TEXT RPG</p><h1>검은 숲의 방랑자</h1><p class="muted">마지막 불씨 · 통합판 5.6 · 여정과 이미지 연결</p></div><button type="button" data-ui="save" class="small cursor-interaction">저장 / 불러오기</button></header>
@@ -3338,6 +3361,29 @@ const finish=P.finish;P.finish=function(i){if(this.s.scene!=='final')return;fini
 root.BlackForest.P3_RECIPES=C.P3_RECIPES;root.BlackForest.P3_SETS=C.P3_SETS;
 })(globalThis);
 
+/* Boss-earned advancement, layered after frozen rewards. No combat/RNG changes. */
+(function(root){'use strict';const C=root.BFContent,G=root.BlackForest.Game,P=G.prototype;
+const milestones={0:1,2:2,5:3};
+const repairs=[['x_magic_1','x_magic_9'],['victor_heir','x_support_15']];
+for(const [parent,child] of repairs){const a=C.JOBS[parent],b=C.JOBS[child];if(!a||!b||a.hidden||b.hidden||b.tier!==a.tier+1||a.family!==b.family)throw Error('전직 계보 연결 오류');if(!a.children.includes(child))a.children.push(child);if(!b.parents.includes(parent))b.parents.push(parent);}
+C.PROMOTION_REPAIRS=repairs;
+function prospective(g){const s=g.s,r=s.rewardState,j=C.JOBS[s.job];if(!j||j.hidden||s.career.hiddenPath||s.kind!=='story'||!r||r.claimed||!milestones[s.area]||j.tier>=milestones[s.area])return null;
+ if(s.cleared.includes(s.area)||r.after.cleared.length!==s.cleared.length+1||!r.after.cleared.includes(s.area)||s.resultVisual?.category!=='bosses')return null;
+ return {tier:milestones[s.area],area:s.area,rewardId:r.id};}
+P.promotionStatus=function(){const p=this.s.career.promotion||prospective(this);if(!p)return null;const j=C.JOBS[this.s.job];if(j.hidden||j.tier>=p.tier)return null;return {...p,ready:this.s.scene==='camp'&&this.s.rewardState?.claimed===true};};
+P.promotionCandidates=function(){const p=this.promotionStatus();if(!p?.ready)return [];const normal=C.JOBS[this.s.job].children.map(id=>({id,progress:this.unlockProgress(id).slice(5)}));const rescue=normal.every(c=>!c.progress.every(r=>r.now>=r.need));
+ return normal.map(c=>({...c,available:rescue||c.progress.every(r=>r.now>=r.need),rescue:rescue&&c.progress.some(r=>r.now<r.need)})).concat(this.s.unlocked.filter(id=>C.JOBS[id]?.hidden&&this.unlockProgress(id).every(r=>r.now>=r.need)).map(id=>({id,available:true,rescue:false,progress:this.unlockProgress(id)})));};
+const claim=P.claimVictory;P.claimVictory=function(){const pending=prospective(this),paid=claim.call(this);if(paid&&pending)this.s.career.promotion=pending;return paid;};
+const advance=P.advance;P.advance=function(){if(this.promotionStatus()?.ready)return;const s=this.s,r=s.rewardState;if(s.career.promotion&&r?.claimed&&s.scene==='reward'&&r.destination==='camp'){s.scene='camp';return;}return advance.call(this);};
+const available=P.jobAvailable;P.jobAvailable=function(id){id=C.HIDDEN_ALIASES[id]||id;if(this.promotionStatus()?.ready)return this.promotionCandidates().some(c=>c.id===id&&c.available);return available.call(this,id);};
+const candidates=P.careerCandidates;P.careerCandidates=function(){return this.promotionStatus()?.ready?this.promotionCandidates():candidates.call(this);};
+const change=P.changeJob;P.changeJob=function(id){const pending=this.promotionStatus();change.call(this,id);if(pending?.ready&&(C.JOBS[this.s.job].hidden||C.JOBS[this.s.job].tier>=pending.tier))delete this.s.career.promotion;};
+for(const name of ['travel','enterArea','nextEncounter','choose','fight','thread','bondQuest','meetNpc','resumeJourney','resumeChapter','pauseChapter','retreat','postgame','finish','abandonChapter']){const fn=P[name];if(!fn)continue;P[name]=function(...args){const p=this.promotionStatus();if(p&&(p.ready||name!=='nextEncounter'))return;return fn.apply(this,args);};}
+// Old saves without the optional field remain byte-identical. Validate new gates
+// against an already-paid regional boss receipt; never recompute or grant rewards.
+const load=G.load;G.load=function(input){const g=load.call(this,input),p=g.s.career.promotion;if(p!==undefined){const s=g.s,r=s.rewardState,bad=()=>{throw Error('전직 기록 검증 실패');};if(!p||Object.keys(p).sort().join(',')!=='area,rewardId,tier'||milestones[p.area]!==p.tier||!Number.isInteger(p.area)||!Number.isSafeInteger(p.rewardId)||p.rewardId<1||!r||r.id!==p.rewardId||!r.claimed||r.destination!=='camp'||s.kind!=='story'||!s.cleared.includes(p.area)||s.cleared.length!==p.area+1||s.area!==p.area||r.after.cleared.length!==p.area+1||!r.after.cleared.includes(p.area)||!['camp','loot','reward'].includes(s.scene)||s.checkpoint||C.JOBS[s.job]?.hidden||C.JOBS[s.job]?.tier>=p.tier)bad();}return g;};
+})(globalThis);
+
 </script>
 <script>
 document.getElementById("black-forest-game").dataset.license="Copyright (c) 2012-now(), Ondrej Zara\nAll rights reserved.\n\nRedistribution and use in source and binary forms, with or without modification, \nare permitted provided that the following conditions are met:\n\n\t* Redistributions of source code must retain the above copyright notice, \n\t  this list of conditions and the following disclaimer.\n\t* Redistributions in binary form must reproduce the above copyright notice, \n\t  this list of conditions and the following disclaimer in the documentation \n\t  and/or other materials provided with the distribution.\n\t* Neither the name of Ondrej Zara nor the names of its contributors may be used \n\t  to endorse or promote products derived from this software without specific \n\t  prior written permission.\n\t\t\t\nTHIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\" AND \nANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED \nWARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. \nIN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, \nINDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, \nBUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, \nDATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY \nOF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING \nNEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, \nEVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n\n\nThe MIT License (MIT)\n\nCopyright (c) 2015 John Watson\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n\n\n\nMIT License\n\nCopyright (c) 2013 pieroxy\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n";
@@ -3411,6 +3457,7 @@ const api={capture,describe,create};root.BFUIFX=api;if(typeof module==='object'&
 const root=document.getElementById('black-forest-game');document.getElementById('bf-downloads').hidden=!/^https?:$/.test(location.protocol);if(!root||root.dataset.ready)return;root.dataset.ready='1';
 const {Game,FAMILY_LABELS,JOBS,AREAS,TYPES,RARITIES,WEIGHTS,AFFIXES,ITEMS,EVENTS,FACTIONS,THREADS,COMPANIONS,NPCS,ASSETS,asset,gearAsset,CHAPTERS,CHAPTER_DECISIONS,NOVEL_COPY,DIALOGUE_CHOICES}=BlackForest;
 const $=id=>root.querySelector('#bf-'+id),KEY='black-forest-last-ember-v2',LEGACY='black-forest-last-ember-v1';let game=new Game(),panel='',warning='',panelOrigin='';
+Object.defineProperty(root,'bfGameSnapshot',{value:()=>game.export()});
 const fx=BFUIFX.create(root);
 window.addEventListener('pagehide',()=>fx.clear());document.addEventListener('visibilitychange',()=>{if(document.hidden)fx.clear()});const hiddenCount=Object.values(JOBS).filter(j=>j.hidden).length;const views={jobs:{query:'',family:'',page:0},codex:{query:'',slot:'',grade:'',found:false,page:0}};
 const visibleText=t=>String(t).replace(/보상 받고 다음 조우|다음 조우|계속 진행|자동 이동 중…/g,'계속 나아간다').replace(/보상 수령/g,'전리품을 챙긴다').replace(/체크포인트/g,'쉼터').replace(/경로 선택/g,'길을 살핀다').replace(/랜덤 인카운트/g,'길 위의 사건').replace(/다음 지역/g,'새로운 땅').replace(/불씨의 수호자/g,'불씨를 놓아준 자');
@@ -3592,6 +3639,26 @@ if(document.modelContext?.registerTool){const life=new AbortController();const s
  }catch(e){}window.addEventListener('pagehide',()=>life.abort(),{once:true});}
 })();
 
+
+/* Read-only view of the saved transaction; confirmations use the existing UI
+ * changeJob handler. Keeping this separate also permits PR #8's UI integration. */
+(function(){'use strict';const root=document.getElementById('black-forest-game'),play=root?.querySelector('#bf-play');if(!play)return;
+const C=BlackForest,key='black-forest-last-ember-v2',esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));let last='',selected='';
+const image=id=>{const src=C.asset('classes',id);return src?`<img src="${esc(src)}" alt="${esc(C.JOBS[id].name)}" width="400" height="600" loading="lazy">`:'';};
+function conditionLabel(label){return String(label).replace(/^이야기 (.+)$/,(_,flag)=>{const chapter=flag.match(/^chapter_(\d)_seen$/);if(chapter&&C.AREAS[Number(chapter[1])])return C.AREAS[Number(chapter[1])].name+' 방문';const npc=C.NPCS[flag.replace(/_seen$/,'')];return npc?npc.name+' 만남':'이야기 경험';}).replace(/\b(alice|queen|creature|victor|ahab|quixote)\b/g,id=>C.NPCS[id]?.name||'인연');}
+function fitScreen(){const screen=play.querySelector('.promotion-screen');if(!screen)return;screen.style.height=Math.max(320,(window.visualViewport?.height||innerHeight)-Math.max(0,screen.getBoundingClientRect().top)-8)+'px';}
+window.addEventListener('scroll',fitScreen,{passive:true});window.addEventListener('resize',fitScreen);window.visualViewport?.addEventListener('resize',fitScreen);
+function sync(){let code,g;try{code=root.bfGameSnapshot?root.bfGameSnapshot():localStorage.getItem(key);if(!code)return;g=C.Game.load(code);}catch{return;}const p=g.promotionStatus();
+ if(!p){root.dataset.promotion='';last='';return;}
+ if(!p.ready){root.dataset.promotion='reward';const body=play.querySelector('.scene-hero-body')||play.querySelector('.main');if(body&&!body.querySelector('.promotion-notice'))body.insertAdjacentHTML('beforeend',`<p class="promotion-notice" role="status">${p.tier}차 전직의 인장을 얻었습니다. 먼저 보스 보상을 챙긴 뒤 새 직업을 선택합니다.</p>`);return;}
+ root.dataset.promotion='ready';if(code===last&&play.querySelector('.promotion-screen'))return;last=code;selected='';const candidates=g.promotionCandidates();
+ const effects=[...play.querySelectorAll('[data-fx-layer]')];
+ play.innerHTML=`<main class="main promotion-screen" aria-label="보스 인장 전직 선택"><p class="eyebrow">수복한 인장 · ${p.tier}차 전직</p><div class="promotion-heading"><h2>다음 이름을 선택하십시오</h2><button type="button" class="aux-action" data-promotion-save>저장 / 불러오기</button></div><p>${esc(C.JOBS[g.s.job].name)} · 현재 ${C.JOBS[g.s.job].tier}티어 / 목표 ${p.tier}티어. 전직을 마쳐야 다음 여정을 시작할 수 있습니다.</p><p class="muted">보스 보상은 이미 수령했습니다. 인장이 기본 레벨·숙련 자격을 대신합니다.</p><div class="promotion-grid" tabindex="0" aria-label="전직 후보 · 스크롤하여 모두 읽기">${candidates.map(c=>{const j=C.JOBS[c.id];return `<article class="promotion-card"><div class="promotion-intro">${image(c.id)}<div><h3>${esc(j.name)}</h3><p>${esc(j.desc)}</p><p class="muted">기본 HP ${j.hp} · MP ${j.mp} · 공격 ${j.atk} · 방어 ${j.def}</p><p>${esc(j.skill)}</p></div></div>${c.rescue?'<p class="promotion-notice">열린 계보가 없어 수복한 인장으로 이 길을 열었습니다. 이전 선택 기록은 유지됩니다.</p>':''}${j.hidden?'<p>히든 길을 선택하면 일반 강제 전직에서 제외됩니다.</p>':''}${c.progress.length?`<details><summary>추가 조건</summary>${c.progress.map(r=>`<p>${r.now>=r.need?'✓':'○'} ${esc(conditionLabel(r.label))} · ${r.now}/${r.need}</p>`).join('')}</details>`:''}<button type="button" class="game-action" data-promotion-pick="${esc(c.id)}" aria-pressed="false" ${c.available?'':'disabled'}>${c.available?'이 직업 선택':'추가 조건 미충족'}</button></article>`;}).join('')}</div><div class="promotion-confirm"><p id="promotion-choice" role="status">후보를 선택한 뒤 전직을 확정하십시오.</p><button type="button" class="game-action primary" data-cmd="changeJob" disabled>선택한 직업으로 전직</button></div></main>`;
+ const screen=play.querySelector('.promotion-screen');for(const effect of effects)screen.append(effect);screen.tabIndex=-1;screen.scrollIntoView({block:'start'});fitScreen();screen.focus({preventScroll:true});
+}
+root.addEventListener('click',ev=>{if(ev.target.closest('[data-promotion-save]')){root.querySelector('.top [data-ui=save]').click();return;}const button=ev.target.closest('[data-promotion-pick]');if(!button||button.disabled)return;selected=button.dataset.promotionPick;for(const b of play.querySelectorAll('[data-promotion-pick]'))b.setAttribute('aria-pressed',String(b===button));const confirm=play.querySelector('.promotion-confirm [data-cmd]');confirm.dataset.arg=selected;confirm.disabled=false;play.querySelector('#promotion-choice').textContent=C.JOBS[selected].name+' · 이 이름으로 전직합니다.';fitScreen();});
+new MutationObserver(sync).observe(play,{childList:true,subtree:true});sync();
+})(globalThis);
 
 </script>
 
