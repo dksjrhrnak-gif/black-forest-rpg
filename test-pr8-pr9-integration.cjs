@@ -1,8 +1,11 @@
 /* Compare integrated UI's unchanged engine with the shipped PR 9 main. */
 const assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm'),cp=require('node:child_process');
 const base='8869de4f651dc97e9b8cf8faec356cce31a913cd',C=require('./test-support.cjs'),git=(...args)=>cp.execFileSync('git',args,{maxBuffer:16e6});
-const files=git('ls-tree','-r','--name-only',base).toString().trim().split('\n').filter(f=>(!f.includes('/')&&f.endsWith('.js')&&!['ui.js','ui-promotion.js'].includes(f))||f.startsWith('assets/')||f.endsWith('.csv'));
+const files=git('ls-tree','-r','--name-only',base).toString().trim().split('\n').filter(f=>(!f.includes('/')&&f.endsWith('.js')&&!['ui.js','ui-promotion.js','ui-fx.js'].includes(f))||f.startsWith('assets/')||f.endsWith('.csv'));
 for(const f of files)assert(fs.readFileSync(f).equals(git('show',base+':'+f)),f+' must preserve shipped PR 9');
+// UX refinement may reposition FX DOM; event extraction and all game modules remain exact.
+const fxSource=fs.readFileSync('ui-fx.js','utf8'),oldFx=git('show',base+':ui-fx.js').toString();
+assert.equal(fxSource.slice(0,fxSource.indexOf('function create(')),oldFx.slice(0,oldFx.indexOf('function create(')),'shipped FX capture/descriptors unchanged');
 const old={console,Date,Math};old.globalThis=old;vm.createContext(old);const build=git('show',base+':build.py').toString(),mods=build.match(/modules=\[(.*?)\]/)[1].match(/'([^']+)'/g).map(s=>s.slice(1,-1));for(const f of mods)vm.runInContext(git('show',base+':'+f).toString(),old);
 const same=(a,b)=>assert.equal(a.export(),b.export(),'UI integration preserves complete save/RNG');let cases=0,restores=0,claims=0,promotions=0;
 function setup(G,id,area){const g=new G(17);g.start('warrior');g.s.job=id;g.s.career=(G===C.Game?global.BFContent:old.BFContent).newCareer(id);if(C.JOBS[id].hidden){g.s.unlocked=[id];g.s.career.hiddenPath=true;}g.s.cleared=Array.from({length:area},(_,i)=>i);g.s.area=area;g.s.hp=g.maxHp();g.s.mp=g.maxMp();g.fight(true);g.s.enemy.hp=1;return g;}
