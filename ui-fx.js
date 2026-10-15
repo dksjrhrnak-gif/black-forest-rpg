@@ -59,7 +59,7 @@ function create(host){let timer=null,layoutFrame=null;const marked=[];
   if(banner){banner.style.left=left+'px';banner.style.right='auto';banner.style.width=width+'px';banner.style.maxWidth='700px';banner.style.marginInline='0';const bannerWidth=Math.min(width,700);banner.style.left=left+(width-bannerWidth)/2+'px';banner.style.top=top+'px';const height=banner.getBoundingClientRect().height;banner.style.top=Math.max(viewTop+8,Math.min(top,bottom-height))+'px';top=Math.max(top,banner.getBoundingClientRect().bottom+8);}
   const portrait=visible(host.querySelector('#bf-play .scene-art'));if(portrait&&portrait.top<bottom)top=Math.max(top,portrait.top+8);
   const railWidth=Math.min(170,Math.max(1,(width-8)/2)),railHeight=Math.max(1,bottom-top);
-  for(const layer of layers.filter(n=>n.dataset.fxLayer!=='banner')){layer.style.top=top+'px';layer.style.left=(layer.dataset.fxLayer==='player'?left:right-railWidth)+'px';layer.style.right='auto';layer.style.width=railWidth+'px';layer.style.maxHeight=railHeight+'px';}
+  for(const layer of layers.filter(n=>n.dataset.fxLayer!=='banner')){layer.style.top=top+'px';layer.style.left=(layer.dataset.fxLayer==='player'?left:right-railWidth)+'px';layer.style.right='auto';layer.style.width=railWidth+'px';layer.style.maxHeight=railHeight+'px';layer.classList.remove('fx-wrap');if(portrait&&portrait.bottom>top&&layer.scrollHeight>portrait.bottom-top)layer.classList.add('fx-wrap');}
  }
  function show(events){clear();const grouped={player:[],enemy:[]};for(const e of events)if(grouped[e.target])grouped[e.target].push(e);
   const anchors={player:host.querySelector('#bf-stats .stats>div:first-child'),enemy:host.querySelector('#bf-play .scene-hero')},card=host.querySelector('#bf-play .enemy'),frames={};

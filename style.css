@@ -1468,3 +1468,7 @@
 #black-forest-game .fx-floats.fx-dense{gap:1px}
 #black-forest-game .fx-floats.fx-dense .fx-token{font-size:14px;line-height:1.2;padding:1px 6px}
 #black-forest-game .fx-floats.fx-dense .fx-token.fx-critical{font-size:16px}
+
+/* Short portraits retain all result text by packing the same target's tokens. */
+#black-forest-game .fx-floats.fx-wrap{flex-flow:row wrap;align-items:flex-start;align-content:flex-start;justify-content:center}
+#black-forest-game .fx-floats.fx-wrap .fx-target{flex:0 0 100%;text-align:center}
