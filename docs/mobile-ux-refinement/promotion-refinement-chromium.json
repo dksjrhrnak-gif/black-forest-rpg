@@ -1,0 +1,167 @@
+{
+  "status": "PASS",
+  "engine": "chromium",
+  "checks": [
+    {
+      "width": 360,
+      "height": 800,
+      "motion": "no-preference",
+      "candidateCount": 9,
+      "statComparisons": 8,
+      "detailsIndependent": true,
+      "cardAndKeyboardSelection": true,
+      "hiddenWarning": true,
+      "exactSaveRng": true,
+      "confirm": {
+        "height": 52,
+        "top": 719,
+        "bottom": 771,
+        "radius": "10px",
+        "font": "15px",
+        "weight": "600"
+      },
+      "errors": 0
+    },
+    {
+      "width": 360,
+      "height": 800,
+      "motion": "reduce",
+      "candidateCount": 9,
+      "statComparisons": 8,
+      "detailsIndependent": true,
+      "cardAndKeyboardSelection": true,
+      "hiddenWarning": true,
+      "exactSaveRng": true,
+      "confirm": {
+        "height": 52,
+        "top": 719,
+        "bottom": 771,
+        "radius": "10px",
+        "font": "15px",
+        "weight": "600"
+      },
+      "errors": 0
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "motion": "no-preference",
+      "candidateCount": 9,
+      "statComparisons": 8,
+      "detailsIndependent": true,
+      "cardAndKeyboardSelection": true,
+      "hiddenWarning": true,
+      "exactSaveRng": true,
+      "confirm": {
+        "height": 52,
+        "top": 763,
+        "bottom": 815,
+        "radius": "10px",
+        "font": "15px",
+        "weight": "600"
+      },
+      "errors": 0
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "motion": "reduce",
+      "candidateCount": 9,
+      "statComparisons": 8,
+      "detailsIndependent": true,
+      "cardAndKeyboardSelection": true,
+      "hiddenWarning": true,
+      "exactSaveRng": true,
+      "confirm": {
+        "height": 52,
+        "top": 763,
+        "bottom": 815,
+        "radius": "10px",
+        "font": "15px",
+        "weight": "600"
+      },
+      "errors": 0
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "motion": "no-preference",
+      "candidateCount": 9,
+      "statComparisons": 8,
+      "detailsIndependent": true,
+      "cardAndKeyboardSelection": true,
+      "hiddenWarning": true,
+      "exactSaveRng": true,
+      "confirm": {
+        "height": 52,
+        "top": 851,
+        "bottom": 903,
+        "radius": "10px",
+        "font": "15px",
+        "weight": "600"
+      },
+      "errors": 0
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "motion": "reduce",
+      "candidateCount": 9,
+      "statComparisons": 8,
+      "detailsIndependent": true,
+      "cardAndKeyboardSelection": true,
+      "hiddenWarning": true,
+      "exactSaveRng": true,
+      "confirm": {
+        "height": 52,
+        "top": 851,
+        "bottom": 903,
+        "radius": "10px",
+        "font": "15px",
+        "weight": "600"
+      },
+      "errors": 0
+    },
+    {
+      "width": 390,
+      "height": 664,
+      "motion": "no-preference",
+      "candidateCount": 9,
+      "statComparisons": 8,
+      "detailsIndependent": true,
+      "cardAndKeyboardSelection": true,
+      "hiddenWarning": true,
+      "exactSaveRng": true,
+      "confirm": {
+        "height": 52,
+        "top": 583,
+        "bottom": 635,
+        "radius": "10px",
+        "font": "15px",
+        "weight": "600"
+      },
+      "errors": 0
+    },
+    {
+      "width": 390,
+      "height": 664,
+      "motion": "reduce",
+      "candidateCount": 9,
+      "statComparisons": 8,
+      "detailsIndependent": true,
+      "cardAndKeyboardSelection": true,
+      "hiddenWarning": true,
+      "exactSaveRng": true,
+      "confirm": {
+        "height": 52,
+        "top": 583,
+        "bottom": 635,
+        "radius": "10px",
+        "font": "15px",
+        "weight": "600"
+      },
+      "errors": 0
+    }
+  ],
+  "method": "actual candidate card/details/keyboard/save/confirm controls; deterministic saved boss fixture"
+}

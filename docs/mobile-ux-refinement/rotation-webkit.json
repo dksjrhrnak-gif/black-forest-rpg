@@ -1,0 +1,160 @@
+{
+  "status": "PASS",
+  "engine": "webkit",
+  "checks": [
+    {
+      "modal": "save",
+      "portrait": [
+        390,
+        664
+      ],
+      "rotatedTo": [
+        844,
+        390
+      ],
+      "singleVisibleSave": true,
+      "usableSaveLoad": true,
+      "focusRestored": true,
+      "fiveActionsOnReturn": true,
+      "saveRngPreserved": true,
+      "errors": 0
+    },
+    {
+      "modal": "save",
+      "portrait": [
+        390,
+        664
+      ],
+      "rotatedTo": [
+        667,
+        375
+      ],
+      "singleVisibleSave": true,
+      "usableSaveLoad": true,
+      "focusRestored": true,
+      "fiveActionsOnReturn": true,
+      "saveRngPreserved": true,
+      "errors": 0
+    },
+    {
+      "modal": "save",
+      "portrait": [
+        390,
+        664
+      ],
+      "rotatedTo": [
+        1024,
+        768
+      ],
+      "singleVisibleSave": true,
+      "usableSaveLoad": true,
+      "focusRestored": true,
+      "fiveActionsOnReturn": true,
+      "saveRngPreserved": true,
+      "errors": 0
+    },
+    {
+      "modal": "scene-reading",
+      "portrait": [
+        390,
+        664
+      ],
+      "rotatedTo": [
+        844,
+        390
+      ],
+      "singleVisibleSave": true,
+      "usableSaveLoad": true,
+      "focusRestored": true,
+      "fiveActionsOnReturn": true,
+      "saveRngPreserved": true,
+      "errors": 0
+    },
+    {
+      "modal": "scene-reading",
+      "portrait": [
+        390,
+        664
+      ],
+      "rotatedTo": [
+        667,
+        375
+      ],
+      "singleVisibleSave": true,
+      "usableSaveLoad": true,
+      "focusRestored": true,
+      "fiveActionsOnReturn": true,
+      "saveRngPreserved": true,
+      "errors": 0
+    },
+    {
+      "modal": "scene-reading",
+      "portrait": [
+        390,
+        664
+      ],
+      "rotatedTo": [
+        1024,
+        768
+      ],
+      "singleVisibleSave": true,
+      "usableSaveLoad": true,
+      "focusRestored": true,
+      "fiveActionsOnReturn": true,
+      "saveRngPreserved": true,
+      "errors": 0
+    },
+    {
+      "modal": "scene-menu",
+      "portrait": [
+        390,
+        664
+      ],
+      "rotatedTo": [
+        844,
+        390
+      ],
+      "singleVisibleSave": true,
+      "usableSaveLoad": true,
+      "focusRestored": true,
+      "fiveActionsOnReturn": true,
+      "saveRngPreserved": true,
+      "errors": 0
+    },
+    {
+      "modal": "scene-menu",
+      "portrait": [
+        390,
+        664
+      ],
+      "rotatedTo": [
+        667,
+        375
+      ],
+      "singleVisibleSave": true,
+      "usableSaveLoad": true,
+      "focusRestored": true,
+      "fiveActionsOnReturn": true,
+      "saveRngPreserved": true,
+      "errors": 0
+    },
+    {
+      "modal": "scene-menu",
+      "portrait": [
+        390,
+        664
+      ],
+      "rotatedTo": [
+        1024,
+        768
+      ],
+      "singleVisibleSave": true,
+      "usableSaveLoad": true,
+      "focusRestored": true,
+      "fiveActionsOnReturn": true,
+      "saveRngPreserved": true,
+      "errors": 0
+    }
+  ],
+  "method": "Real browser resize while a modal is open; then close, reopen save/load, and return to portrait. Responsive browser emulation, not a physical device."
+}

@@ -1,0 +1,6 @@
+PASS FX UI chromium 360 no-preference
+PASS FX UI chromium 360 reduce
+PASS FX UI chromium 390 no-preference
+PASS FX UI chromium 390 reduce
+PASS FX UI chromium 430 no-preference
+PASS FX UI chromium 430 reduce
