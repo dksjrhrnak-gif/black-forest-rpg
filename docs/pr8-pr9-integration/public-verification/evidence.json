@@ -1,0 +1,115 @@
+{
+  "featureCommit": "bfa0cc901502e5dc42e73974f5b35d532f81d652",
+  "PR": "https://github.com/dksjrhrnak-gif/black-forest-rpg/pull/8",
+  "PRHead": "f57948d5c41be64a6b6a325af2ed3dd8fb045008",
+  "PRChecks": [
+    {
+      "name": "logic",
+      "conclusion": "SUCCESS",
+      "url": "https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/38682072461/job/116248612096"
+    },
+    {
+      "name": "verify",
+      "conclusion": "SUCCESS",
+      "url": "https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/38682077616/job/116248627508"
+    },
+    {
+      "name": "browser (chromium, click)",
+      "conclusion": "SUCCESS",
+      "url": "https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/38682072461/job/116248612405"
+    },
+    {
+      "name": "Script chromium 320",
+      "conclusion": "SUCCESS",
+      "url": "https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/38682077616/job/116248627877"
+    },
+    {
+      "name": "browser (chromium, touch)",
+      "conclusion": "SUCCESS",
+      "url": "https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/38682072461/job/116248612326"
+    },
+    {
+      "name": "Script chromium 360",
+      "conclusion": "SUCCESS",
+      "url": "https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/38682077616/job/116248627782"
+    },
+    {
+      "name": "browser (webkit, click)",
+      "conclusion": "SUCCESS",
+      "url": "https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/38682072461/job/116248612217"
+    },
+    {
+      "name": "Script chromium 375",
+      "conclusion": "SUCCESS",
+      "url": "https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/38682077616/job/116248627699"
+    },
+    {
+      "name": "browser (webkit, touch)",
+      "conclusion": "SUCCESS",
+      "url": "https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/38682072461/job/116248612253"
+    },
+    {
+      "name": "Script chromium 390",
+      "conclusion": "SUCCESS",
+      "url": "https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/38682077616/job/116248627638"
+    },
+    {
+      "name": "Script chromium 430",
+      "conclusion": "SUCCESS",
+      "url": "https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/38682077616/job/116248627702"
+    },
+    {
+      "name": "Script webkit 320",
+      "conclusion": "SUCCESS",
+      "url": "https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/38682077616/job/116248627803"
+    },
+    {
+      "name": "Script webkit 360",
+      "conclusion": "SUCCESS",
+      "url": "https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/38682077616/job/116248627739"
+    },
+    {
+      "name": "Script webkit 375",
+      "conclusion": "SUCCESS",
+      "url": "https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/38682077616/job/116248627835"
+    },
+    {
+      "name": "Script webkit 390",
+      "conclusion": "SUCCESS",
+      "url": "https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/38682077616/job/116248627815"
+    },
+    {
+      "name": "Script webkit 430",
+      "conclusion": "SUCCESS",
+      "url": "https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/38682077616/job/116248627753"
+    },
+    {
+      "name": "live-pages",
+      "conclusion": "SKIPPED",
+      "url": "https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/38682072461/job/116248613911"
+    },
+    {
+      "name": "p3-browser (chromium)",
+      "conclusion": "SUCCESS",
+      "url": "https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/38682072461/job/116248612350"
+    },
+    {
+      "name": "p3-browser (webkit)",
+      "conclusion": "SUCCESS",
+      "url": "https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/38682072461/job/116248612239"
+    },
+    {
+      "name": "p3-browser (firefox)",
+      "conclusion": "SUCCESS",
+      "url": "https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/38682072461/job/116248612308"
+    }
+  ],
+  "pagesRun": "https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/38683332188",
+  "deployment": 7084165387,
+  "htmlSha256": "5196b632527f5bbdaa7c3225602d327e83bef15f8b18f5f48b4e6b590bbbce8d",
+  "publicUrl": "https://dksjrhrnak-gif.github.io/black-forest-rpg/",
+  "publicWebkitForcedChecks": 24,
+  "publicWebkitSingleStates": 20,
+  "consoleErrors": 0,
+  "method": "actual public URL; valid boss-before-save fixtures and actual controls; single screen original story and save comparisons"
+}

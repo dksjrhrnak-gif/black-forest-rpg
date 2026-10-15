@@ -5,7 +5,7 @@
 - 시작 main: `8869de4f651dc97e9b8cf8faec356cce31a913cd` (PR #9 병합/공개 완료).
 - 기존 PR #8 HEAD: `1dccf842777f9d7e25adfba7ca6d5fb8c78f928e`.
 - 기존 브랜치 유지: `qa/single-screen-mobile-ui`. 로컬 백업: `backup/pr8-pre-pr9-integration-20261015`.
-- main 통합 merge commit: `95e699a`; UI 통합 소스 HEAD: `8c9c3b6a35a90fccd38a04a31973779841f6efbf`. 이 문서/QA 자료의 후속 커밋까지 포함한 PR 최종 HEAD는 [PR #8](https://github.com/dksjrhrnak-gif/black-forest-rpg/pull/8)의 최신 커밋을 기준으로 한다.
+- PR #8 통합 최종 HEAD: `f57948d5c41be64a6b6a325af2ed3dd8fb045008` (필수 PR CI 19개 모두 성공). main을 합친 내부 merge commit은 `95e699a`이며 기존 PR #8 이력을 유지했다.
 - 사용자의 이번 통합 지시가 이전 UI 문서의 승인 대기 조건을 대체한다. 필수 검사 통과 후 PR #8 병합·Pages 배포·공개 QA까지 승인되었다.
 
 ## 충돌과 해결
@@ -35,7 +35,7 @@ workflow는 양쪽 실행 브랜치·강제 전직/한 화면 검사를 모두 �
 | 한 화면 | Chromium/WebKit 각20 화면 PASS; [C](pr8-pr9-integration/single-screen/ui-chromium.json), [W](pr8-pr9-integration/single-screen/ui-webkit.json) |
 | 원문/키보드/회전/iframe/호스트offset/중첩 메뉴 | Chromium/WebKit PASS. WebKit 초기 회전100ms 검사 실패는 실제 viewport 갱신 대기 후 동일 위치 assert로 안정화, 기준 삭제/완화 없음 |
 | 보존 검사 | 기존174 및 현재 main176 파일/직업114/장비1000/클릭 처리/FX descriptor PASS |
-| Firefox/CI | 로컬 Firefox는 이 환경의 sandbox 제한으로 미실행. 실제 3엔진 PR/main CI를 최종 기준으로 기록한다 |
+| Firefox/CI | 로컬 Firefox는 이 환경의 sandbox 제한으로 미실행. 실제 PR CI에서 Chromium/WebKit/Firefox 전직72·한 화면60상태와 layout3개 모두 PASS. 필수19개 성공 |
 
 브라우저 전직 검사는 유효한 보스 직전 저장을 쓰는 실제 버튼 조작 자동화다. 사람의 연속 자연 플레이를 의미하지 않는다. 기존 자연 진행·P1/P2/P3·히든·엔딩·BF1/BF2/BF3 호환성 검사는 기존 전체 CI를 유지하여 실행한다. 실패 검사 삭제는 없다.
 
@@ -72,7 +72,18 @@ workflow는 양쪽 실행 브랜치·강제 전직/한 화면 검사를 모두 �
 
 ## 병합·배포 및 공개 검증
 
-필수 PR CI 완료 후 실제 main 병합 커밋·main CI·Pages run·공개 검증 결과를 아래에 추기한다. 배포 SHA/API와 공개 HTML SHA-256·149개 이미지·3개 CSV의 바이트를 대조하며 단순 HTTP200으로 최신 버전을 판정하지 않는다. 최종 run 링크/HEAD는 PR #8 설명에도 남긴다.
+- PR #8: **MERGED**. main 기능 병합 커밋: `bfa0cc901502e5dc42e73974f5b35d532f81d652`.
+- [PR Handoff CI](https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/38682072461), [PR Journey CI](https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/38682077616): 필수19개 모두 성공, main 전용 live-pages만 PR에서 skip.
+- 기능 병합 main 검증 실행: [Handoff/공개](https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/38683332359), [Journey/모바일](https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/38683332375). 문서 결과 정리 후 최종 main CI/배포의 정확한 SHA·run·완료 판정은 [PR #8 최종 검증](https://github.com/dksjrhrnak-gif/black-forest-rpg/pull/8)에 기록한다.
+- [기능 최초 Pages 배포](https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/38683332188) **SUCCESS**, deployment `7084165387`이 위 main 기능 병합 SHA를 배포했음을 API로 확인.
+- 공개 HTML SHA-256: `5196b632527f5bbdaa7c3225602d327e83bef15f8b18f5f48b4e6b590bbbce8d`. 스크립트/스타일을 포함한 HTML·149개 이미지·CSV3개가 저장소와 byte-identical. [HTTP 결과](pr8-pr9-integration/public-verification/http.json).
+- 별도 실제 공개 WebKit: 네 크기×normal/reduced×세 단계 전직24 PASS, 한 화면20상태 PASS, 원문/키보드/회전/iframe PASS, 콘솔·런타임0. [전직](pr8-pr9-integration/public-verification/forced-webkit.json), [한 화면](pr8-pr9-integration/public-verification/single-webkit.json), [포함/회전](pr8-pr9-integration/public-verification/layout-webkit.json), [실행 증거](pr8-pr9-integration/public-verification/evidence.json).
+
+이 문서는 실제 기능 병합·배포 및 위 완료한 공개 실측 결과를 기록하는 문서 커밋이다. 게임 소스/HTML/CSV/이미지는 바꾸지 않는다. 이후 최종 문서 포함 main의 CI 및 Pages 재배포도 끝까지 확인하며, 최종 완료 후 PR 설명에 정확한 run과 상태를 남긴다.
+
+### 저장 상태 검증 연결
+
+일반 탐험·전투는 single-screen의 inspection/export 비교, 보스 전투·격파/미수령·수령·전직 대기·후보 선택·전직 완료는 forced UI/1,026쌍 상태 대조, 히든은 기존14종 검사와 3개 이정표×3수령방식 대조, 최종 보스·엔딩 직전/이후는 기존 P3/엔딩 브라우저 및 전체 테스트로 검증한다. 후보 선택 자체는 저장·RNG를 바꾸지 않고, 재접속 후에는 선택 확정 전 대기 상태를 유지한다. BF1/BF2/BF3 호환성 및 장비 보존은 기존 전체 suite를 그대로 유지했다. UI 열기/닫기로 보상 재추첨이나 중복 전직이 발생하지 않는다.
 
 ## 남은 미검증
 

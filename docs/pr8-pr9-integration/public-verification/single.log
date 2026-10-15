@@ -1,0 +1,23 @@
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+PASS webkit current 360 800 exploration 3
+PASS webkit current 360 800 battle 5
+PASS webkit current 360 800 reward 3
+PASS webkit current 360 800 jobs 1
+PASS webkit current 360 800 equipment 2
+PASS webkit current 390 844 exploration 3
+PASS webkit current 390 844 battle 5
+PASS webkit current 390 844 reward 3
+PASS webkit current 390 844 jobs 1
+PASS webkit current 390 844 equipment 2
+PASS webkit current 430 932 exploration 3
+PASS webkit current 430 932 battle 5
+PASS webkit current 430 932 reward 3
+PASS webkit current 430 932 jobs 1
+PASS webkit current 430 932 equipment 2
+PASS webkit current 390 664 exploration 3
+PASS webkit current 390 664 battle 5
+PASS webkit current 390 664 reward 3
+PASS webkit current 390 664 jobs 1
+PASS webkit current 390 664 equipment 2
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+PASS layout webkit
