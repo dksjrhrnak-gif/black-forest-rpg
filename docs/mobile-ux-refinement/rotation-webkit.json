@@ -1,6 +1,17 @@
 {
   "status": "PASS",
   "engine": "webkit",
+  "importerCheck": {
+    "successiveImports": [
+      "battle",
+      "chapter",
+      "promotion"
+    ],
+    "hudNoStaleInert": true,
+    "saveAndReadingClickable": true,
+    "exactSaveRng": true,
+    "errors": 0
+  },
   "checks": [
     {
       "modal": "save",
@@ -156,5 +167,5 @@
       "errors": 0
     }
   ],
-  "method": "Real browser resize while a modal is open; then close, reopen save/load, and return to portrait. Responsive browser emulation, not a physical device."
+  "method": "Real save import reparents HUD during a modal; resize while a modal is open; then close, reopen save/load, and return to portrait. Responsive browser emulation, not a physical device."
 }
