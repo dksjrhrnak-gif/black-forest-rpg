@@ -1,3 +1,5 @@
+> 후속 통합·병합 승인은 [PR8/PR9 통합 인수인계](PR8_PR9_INTEGRATION_HANDOFF.md)를 기준으로 한다. 아래는 해당 PR의 초기 검수 기록이다.
+
 # 보스 인장 강제 전직
 
 기준 main `d01469cd157dd76798673641e4128370a99e036d`. PR #8은 미병합이며 임의로 병합하지 않는다. 별도 `feature/forced-boss-career`에서 작업하며 이번 기능에 한해 테스트 통과 후 main/Pages까지 사용자가 승인했다.
