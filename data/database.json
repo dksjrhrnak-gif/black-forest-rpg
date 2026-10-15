@@ -1586,7 +1586,9 @@
         "mage",
         "adventurer"
       ],
-      "children": [],
+      "children": [
+        "x_magic_9"
+      ],
       "role": "주문과 집중",
       "literaryMotif": "없는 지혜를 찾다가 적의 빈틈을 읽게 됐다.",
       "stats": {
@@ -2083,7 +2085,8 @@
       "hidden": false,
       "parents": [
         "x_magic_5",
-        "x_magic_2"
+        "x_magic_2",
+        "x_magic_1"
       ],
       "children": [
         "x_magic_14"
@@ -4697,7 +4700,8 @@
       "hidden": false,
       "parents": [
         "x_support_9",
-        "x_support_11"
+        "x_support_11",
+        "victor_heir"
       ],
       "children": [],
       "role": "회복과 방어",
@@ -6453,7 +6457,9 @@
         "x_support_0",
         "x_magic_0"
       ],
-      "children": [],
+      "children": [
+        "x_support_15"
+      ],
       "role": "회복과 방어",
       "literaryMotif": "창조 뒤에 남겨진 생명의 책임을 짊어진다.",
       "stats": {

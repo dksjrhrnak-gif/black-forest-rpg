@@ -78,7 +78,7 @@ if(run('campaign')){
  const campaigns=[];for(const starter of STARTERS)for(const seed of [2,17,91])for(const policy of ['attack','skill','tactical']){
   let g=fresh(seed,starter),actions=0,lastScene='',restores=0,restorationFailures=0,revivals=0;const scenes={},events={},jobs=[{id:starter,action:0,level:1}],gear=[],regions=[],combat={turns:0,mpSpent:0,potions:0},stalls=[];
   while(g.s.scene!=='ending'&&actions<6000){const s=g.s,scene=s.scene;scenes[scene]=(scenes[scene]||0)+1;const beforeTurns=s.turns,beforeScene=s.scene;let progressed=true;
-   if(scene==='camp'){g.rest();for(const q of g.quests())g.claim(q.id);while(s.herb>=3)g.craft();while(s.potions<5&&s.gold>=16)g.buy('potion');g.upgrade('weapon');g.upgrade('armor');g.campUp();
+   if(scene==='camp'){require('./qa-promotions.cjs').resolvePromotion(g);g.rest();for(const q of g.quests())g.claim(q.id);while(s.herb>=3)g.craft();while(s.potions<5&&s.gold>=16)g.buy('potion');g.upgrade('weapon');g.upgrade('armor');g.campUp();
     if(s.cleared.length>=1)for(const id of ['alice','adam','ahab']){let guard=0;while(s.threads[id]<2&&guard++<3){g.thread(id);g.dialogue(0);if(g.s.returnAfterResult)g.nextEncounter();}}
     const next=g.careerCandidates().find(c=>c.available);if(next){g.changeJob(next.id);jobs.push({id:g.s.job,action:actions,level:g.s.level});}
     if(s.checkpoint)g.resumeJourney();else g.enterArea(Math.min(7,s.cleared.length));

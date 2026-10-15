@@ -20,7 +20,7 @@ function campaign(w,starter,seed,style,capture=false,observe=null){const G=w.Bla
  };
  let managed=-1;
  while(g.s.scene!=='ending'&&actions<6000){let s=g.s;
-  if(s.scene==='camp'){
+  if(s.scene==='camp'){require('./qa-promotions.cjs').resolvePromotion(g);
    cmd('rest');for(const q of g.quests())if(!s.claims.includes(q.id)&&q.now>=q.max)cmd('claim',q.id);
    if(managed!==s.cleared.length){managed=s.cleared.length;cmd('campUp');
     if(g.craftingRecipes&&s.cleared.length>=1){const list=g.craftingRecipes().filter(r=>r.available&&!crafted.has(r.id));const desired=style==='conservative'?list.filter(r=>r.gear.slot==='armor').slice(0,1):style==='aggressive'?list.filter(r=>r.gear.slot==='weapon').slice(0,1):list.slice(0,3);
