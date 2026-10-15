@@ -1472,3 +1472,7 @@
 /* Short portraits retain all result text by packing the same target's tokens. */
 #black-forest-game .fx-floats.fx-wrap{flex-flow:row wrap;align-items:flex-start;align-content:flex-start;justify-content:center}
 #black-forest-game .fx-floats.fx-wrap .fx-target{flex:0 0 100%;text-align:center}
+
+/* Six-result wrapping also fits a status-heavy short portrait at 14px text. */
+#black-forest-game .fx-floats.fx-dense{gap:0}
+#black-forest-game .fx-floats.fx-dense .fx-token{padding-block:0}
