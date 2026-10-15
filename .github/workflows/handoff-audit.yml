@@ -1,7 +1,7 @@
 name: Handoff audit and requested mobile sizes
 on:
   push:
-    branches: [qa/handoff-audit-20261008, qa/resume-checkpoint-20261008, qa/asset-quality-20261008, qa/p1-class-identity-20261008, feature/p2-exploration-equipment, feature/p3-economy-crafting-endings, qa/gameplay-handoff-20261012, qa/fx-feedback-pass, qa/ui-b-mobile-pass, main]
+    branches: [qa/handoff-audit-20261008, qa/resume-checkpoint-20261008, qa/asset-quality-20261008, qa/p1-class-identity-20261008, feature/p2-exploration-equipment, feature/p3-economy-crafting-endings, qa/gameplay-handoff-20261012, qa/fx-feedback-pass, qa/ui-b-mobile-pass, feature/forced-boss-career, main]
   workflow_dispatch:
 permissions:
   contents: read
@@ -19,6 +19,7 @@ jobs:
           node-version: '22'
       - run: npm ci --ignore-scripts
       - run: npm test
+      - run: node test-forced-career.cjs
       - run: node test-fx.cjs
       - run: node test-ui-b-invariants.cjs
       - run: node test-audit-data.cjs
@@ -177,6 +178,11 @@ jobs:
       - run: npx playwright install --with-deps ${{ matrix.browser }}
       - run: python3 build.py && node export-data.cjs && python3 export-site.py && python3 verify-html.py
       - run: python3 -m http.server 4174 --directory dist > /tmp/bf-p3-preview.log 2>&1 &
+      - name: Boss reward, forced career choice, saves and mobile FX compatibility
+        env:
+          BF_BROWSER: ${{ matrix.browser }}
+          BF_QA_URL: http://127.0.0.1:4174/
+        run: node test-forced-career-ui.cjs
       - name: P3 real-campaign imports, economy, sets, save and endings at five widths
         env:
           BF_BROWSER: ${{ matrix.browser }}
@@ -215,6 +221,13 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: node wait-pages-deployment.cjs
+      - name: Public first third sixth boss promotions and saves
+        if: github.ref == 'refs/heads/main'
+        env:
+          BF_BROWSER: ${{ matrix.browser }}
+          BF_QA_URL: https://dksjrhrnak-gif.github.io/black-forest-rpg/
+          BF_PROMO_OUT: docs/forced-career/public
+        run: node test-forced-career-ui.cjs
       - name: P3 public game at five widths
         if: github.ref == 'refs/heads/main'
         env:
@@ -243,6 +256,7 @@ jobs:
         with:
           name: p3-${{ matrix.browser }}
           path: |
+            docs/forced-career/
             docs/p3/ui-*.json
             docs/p3/public/ui-*.json
             screenshots/p3/

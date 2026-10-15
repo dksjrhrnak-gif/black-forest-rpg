@@ -4,7 +4,7 @@ const out=process.env.BF_P2_OUT||'docs/p2';fs.mkdirSync(out,{recursive:true});co
 for(const starter of STARTERS)for(const seed of [2,17,91,123,777,2026])for(const policy of ['aid','risk','record']){
  let g=new Game(seed),steps=0,restores=0,revivals=0;g.start(starter);const events={},choices={},reactions=[],regions={},jobs=[starter];
  while(g.s.scene!=='ending'&&steps<6000){const s=g.s;regions[s.area]=(regions[s.area]||0)+1;const before=g.export();if(s.scene==='reward'&&g.p2Reaction()&&s.message.includes(g.p2Reaction()))reactions.push({area:s.area,step:s.step,text:g.p2Reaction()});
-  if(s.scene==='camp'){g.rest();for(const q of g.quests())g.claim(q.id);while(s.herb>=3)g.craft();while(s.potions<5&&s.gold>=16)g.buy('potion');g.upgrade('weapon');g.upgrade('armor');g.campUp();
+  if(s.scene==='camp'){require('./qa-promotions.cjs').resolvePromotion(g);g.rest();for(const q of g.quests())g.claim(q.id);while(s.herb>=3)g.craft();while(s.potions<5&&s.gold>=16)g.buy('potion');g.upgrade('weapon');g.upgrade('armor');g.campUp();
    if(s.cleared.length>=1)for(const id of ['alice','adam','ahab']){let n=0;while(s.threads[id]<2&&n++<3){g.thread(id);g.dialogue(0);if(g.s.returnAfterResult)g.nextEncounter();}}
    const next=g.careerCandidates().find(x=>x.available);if(next){g.changeJob(next.id);jobs.push(g.s.job);}if(s.checkpoint)g.resumeJourney();else g.enterArea(Math.min(7,s.cleared.length));
   }else if(s.scene==='map')g.choose(0);
