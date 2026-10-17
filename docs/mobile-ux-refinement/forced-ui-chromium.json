@@ -1,0 +1,247 @@
+{
+  "status": "PASS",
+  "engine": "chromium",
+  "checks": [
+    {
+      "width": 360,
+      "height": 800,
+      "motion": "no-preference",
+      "tier": 1,
+      "job": "rabbit_guard",
+      "exactSaveRng": true,
+      "paidOnce": true,
+      "errors": 0
+    },
+    {
+      "width": 360,
+      "height": 800,
+      "motion": "no-preference",
+      "tier": 2,
+      "job": "queen_exec",
+      "exactSaveRng": true,
+      "paidOnce": true,
+      "errors": 0
+    },
+    {
+      "width": 360,
+      "height": 800,
+      "motion": "no-preference",
+      "tier": 3,
+      "job": "pagebreaker",
+      "exactSaveRng": true,
+      "paidOnce": true,
+      "errors": 0
+    },
+    {
+      "width": 360,
+      "height": 800,
+      "motion": "reduce",
+      "tier": 1,
+      "job": "rabbit_guard",
+      "exactSaveRng": true,
+      "paidOnce": true,
+      "errors": 0
+    },
+    {
+      "width": 360,
+      "height": 800,
+      "motion": "reduce",
+      "tier": 2,
+      "job": "queen_exec",
+      "exactSaveRng": true,
+      "paidOnce": true,
+      "errors": 0
+    },
+    {
+      "width": 360,
+      "height": 800,
+      "motion": "reduce",
+      "tier": 3,
+      "job": "pagebreaker",
+      "exactSaveRng": true,
+      "paidOnce": true,
+      "errors": 0
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "motion": "no-preference",
+      "tier": 1,
+      "job": "rabbit_guard",
+      "exactSaveRng": true,
+      "paidOnce": true,
+      "errors": 0
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "motion": "no-preference",
+      "tier": 2,
+      "job": "queen_exec",
+      "exactSaveRng": true,
+      "paidOnce": true,
+      "errors": 0
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "motion": "no-preference",
+      "tier": 3,
+      "job": "pagebreaker",
+      "exactSaveRng": true,
+      "paidOnce": true,
+      "errors": 0
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "motion": "reduce",
+      "tier": 1,
+      "job": "rabbit_guard",
+      "exactSaveRng": true,
+      "paidOnce": true,
+      "errors": 0
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "motion": "reduce",
+      "tier": 2,
+      "job": "queen_exec",
+      "exactSaveRng": true,
+      "paidOnce": true,
+      "errors": 0
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "motion": "reduce",
+      "tier": 3,
+      "job": "pagebreaker",
+      "exactSaveRng": true,
+      "paidOnce": true,
+      "errors": 0
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "motion": "no-preference",
+      "tier": 1,
+      "job": "rabbit_guard",
+      "exactSaveRng": true,
+      "paidOnce": true,
+      "errors": 0
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "motion": "no-preference",
+      "tier": 2,
+      "job": "queen_exec",
+      "exactSaveRng": true,
+      "paidOnce": true,
+      "errors": 0
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "motion": "no-preference",
+      "tier": 3,
+      "job": "pagebreaker",
+      "exactSaveRng": true,
+      "paidOnce": true,
+      "errors": 0
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "motion": "reduce",
+      "tier": 1,
+      "job": "rabbit_guard",
+      "exactSaveRng": true,
+      "paidOnce": true,
+      "errors": 0
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "motion": "reduce",
+      "tier": 2,
+      "job": "queen_exec",
+      "exactSaveRng": true,
+      "paidOnce": true,
+      "errors": 0
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "motion": "reduce",
+      "tier": 3,
+      "job": "pagebreaker",
+      "exactSaveRng": true,
+      "paidOnce": true,
+      "errors": 0
+    },
+    {
+      "width": 390,
+      "height": 664,
+      "motion": "no-preference",
+      "tier": 1,
+      "job": "rabbit_guard",
+      "exactSaveRng": true,
+      "paidOnce": true,
+      "errors": 0
+    },
+    {
+      "width": 390,
+      "height": 664,
+      "motion": "no-preference",
+      "tier": 2,
+      "job": "queen_exec",
+      "exactSaveRng": true,
+      "paidOnce": true,
+      "errors": 0
+    },
+    {
+      "width": 390,
+      "height": 664,
+      "motion": "no-preference",
+      "tier": 3,
+      "job": "pagebreaker",
+      "exactSaveRng": true,
+      "paidOnce": true,
+      "errors": 0
+    },
+    {
+      "width": 390,
+      "height": 664,
+      "motion": "reduce",
+      "tier": 1,
+      "job": "rabbit_guard",
+      "exactSaveRng": true,
+      "paidOnce": true,
+      "errors": 0
+    },
+    {
+      "width": 390,
+      "height": 664,
+      "motion": "reduce",
+      "tier": 2,
+      "job": "queen_exec",
+      "exactSaveRng": true,
+      "paidOnce": true,
+      "errors": 0
+    },
+    {
+      "width": 390,
+      "height": 664,
+      "motion": "reduce",
+      "tier": 3,
+      "job": "pagebreaker",
+      "exactSaveRng": true,
+      "paidOnce": true,
+      "errors": 0
+    }
+  ],
+  "method": "actual attack/claim/select/confirm/proceed controls; focused valid boss fixtures, not a human natural campaign"
+}

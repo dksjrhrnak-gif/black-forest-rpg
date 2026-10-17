@@ -40,24 +40,48 @@ function describe(a,b,cmd,arg){if(['load','render'].includes(cmd))return [];cons
  if(a.scene==='battle'&&b.reward&&!b.reward.claimed&&a.reward?.id!==b.reward.id)out.push({target:'banner',type:'victory',text:'전투 승리 · 전리품을 확인하세요'});
  return out;
 }
-function create(host){let timer=null;const marked=[];
+function create(host){let timer=null,layoutFrame=null;const marked=[];
  const mark=(node,cls)=>{node.classList.add(cls);marked.push([node,cls]);};
- function clear(){clearTimeout(timer);timer=null;host.querySelectorAll('[data-fx-layer]').forEach(n=>n.remove());for(const [n,cls] of marked)n.classList.remove(cls);marked.length=0;}
+ function clear(){clearTimeout(timer);timer=null;if(layoutFrame!==null)root.cancelAnimationFrame(layoutFrame);layoutFrame=null;host.querySelectorAll('[data-fx-layer]').forEach(n=>n.remove());for(const [n,cls] of marked)n.classList.remove(cls);marked.length=0;}
+ // Feedback occupies the visible space between controls, even in an embedded
+ // document. These reads never affect the game or create another FX controller.
+ function place(){const layers=[...host.querySelectorAll('[data-fx-layer]')];if(!layers.length)return;
+  const viewport=root.visualViewport,viewTop=viewport?.offsetTop||0,viewLeft=viewport?.offsetLeft||0,viewHeight=viewport?.height||root.innerHeight,viewWidth=viewport?.width||root.innerWidth;
+  const visible=node=>{if(!node||!node.getClientRects().length)return null;const r=node.getBoundingClientRect();return r.bottom>viewTop&&r.top<viewTop+viewHeight?r:null;};
+  const panel=host.querySelector('#bf-panel'),inPanel=panel&&!panel.hidden,box=host.getBoundingClientRect();
+  const headers=inPanel?[panel.querySelector('.panelbar')]:[host.querySelector(':scope>.top'),host.querySelector('#bf-stats'),host.querySelector('.promotion-heading')];
+  const controls=inPanel?[]:[host.querySelector('#bf-play .main>.actions'),host.querySelector('.promotion-confirm')];
+  let top=viewTop+8,bottom=viewTop+viewHeight-8;
+  for(const node of headers){const r=visible(node);if(r)top=Math.max(top,r.bottom+8);}
+  for(const node of controls){const r=visible(node);if(r&&r.top>top)bottom=Math.min(bottom,r.top-8);}
+  const portrait=visible(host.querySelector('#bf-play .scene-art')),enemyInfo=visible(host.querySelector('#bf-play .scene-hero-head:has(.enemy)'));
+  const sideBySide=portrait&&enemyInfo&&enemyInfo.left>portrait.left+portrait.width/2&&Math.min(portrait.bottom,enemyInfo.bottom)>Math.max(portrait.top,enemyInfo.top);
+  let left=Math.max(viewLeft+12,box.left+12),right=Math.min(viewLeft+viewWidth-12,box.right-12);
+  // Short cards place intent and HP beside the artwork. Keep the entry banner
+  // and both target rails within the portrait, with room before enemy text.
+  if(sideBySide){left=Math.max(left,portrait.left+4);right=Math.min(right,portrait.right-4,enemyInfo.left-4);top=Math.max(top,portrait.top+8);bottom=Math.min(bottom,portrait.bottom-4);}
+  const width=Math.max(1,right-left);
+  const banner=layers.find(n=>n.dataset.fxLayer==='banner');
+  if(banner){banner.style.left=left+'px';banner.style.right='auto';banner.style.width=width+'px';banner.style.maxWidth='700px';banner.style.marginInline='0';const bannerWidth=Math.min(width,700);banner.style.left=left+(width-bannerWidth)/2+'px';banner.style.top=top+'px';const height=banner.getBoundingClientRect().height;banner.style.top=Math.max(viewTop+8,Math.min(top,bottom-height))+'px';top=Math.max(top,banner.getBoundingClientRect().bottom+8);}
+  if(portrait&&portrait.top<bottom)top=Math.max(top,portrait.top+8);
+  const railWidth=Math.min(170,Math.max(1,(width-8)/2)),railHeight=Math.max(1,bottom-top);
+  for(const layer of layers.filter(n=>n.dataset.fxLayer!=='banner')){layer.style.top=top+'px';layer.style.left=(layer.dataset.fxLayer==='player'?left:right-railWidth)+'px';layer.style.right='auto';layer.style.width=railWidth+'px';layer.style.maxHeight=railHeight+'px';layer.classList.remove('fx-wrap');if(portrait&&portrait.bottom>top&&layer.scrollHeight>portrait.bottom-top)layer.classList.add('fx-wrap');}
+ }
  function show(events){clear();const grouped={player:[],enemy:[]};for(const e of events)if(grouped[e.target])grouped[e.target].push(e);
   const anchors={player:host.querySelector('#bf-stats .stats>div:first-child'),enemy:host.querySelector('#bf-play .scene-hero')},card=host.querySelector('#bf-play .enemy'),frames={};
   // Batch geometry reads before adding nodes. Offscreen feedback uses a small viewport rail.
   for(const target of Object.keys(grouped))if(grouped[target].length&&anchors[target])frames[target]=anchors[target].getBoundingClientRect();
-  for(const [target,list] of Object.entries(grouped)){if(!list.length)continue;const anchor=anchors[target];if(!anchor)continue;const rect=frames[target],compact=target==='player'?rect.top<0||rect.bottom>root.innerHeight||rect.height<Math.min(6,list.length)*28+16:rect.top+76<0||rect.top+240>root.innerHeight;
-   const layer=document.createElement('div');layer.className='fx-floats fx-'+target+(compact?' fx-compact':'');layer.dataset.fxLayer=target;layer.setAttribute('aria-hidden','true');if(compact){const label=document.createElement('small');label.className='fx-target';label.textContent=target==='player'?'방랑자':'적';layer.append(label);}
-   for(const [i,e] of list.slice(0,6).entries()){const token=document.createElement('span');token.className='fx-token fx-'+e.type;token.dataset.fxEvent=e.type;token.style.setProperty('--fx-order',i);token.textContent=e.text;layer.append(token);}(compact?host:anchor).append(layer);
-   if(list.some(e=>['damage','critical'].includes(e.type))){const node=target==='player'?(rect.top>=0&&rect.bottom<=root.innerHeight?anchor:layer):(compact&&card?card:anchor.querySelector('.scene-art')||anchor);const cls=target==='player'?'fx-player-hit':list.some(e=>e.type==='critical')?'fx-critical':'fx-hit';mark(node,cls);}
+  for(const [target,list] of Object.entries(grouped)){if(!list.length)continue;const anchor=anchors[target];if(!anchor)continue;const rect=frames[target];
+   const layer=document.createElement('div');layer.className='fx-floats fx-'+target+' fx-compact'+(list.length>4?' fx-dense':'');layer.dataset.fxLayer=target;layer.setAttribute('aria-hidden','true');const label=document.createElement('small');label.className='fx-target';label.textContent=target==='player'?'방랑자':'적';layer.append(label);
+   for(const [i,e] of list.slice(0,6).entries()){const token=document.createElement('span');token.className='fx-token fx-'+e.type;token.dataset.fxEvent=e.type;token.style.setProperty('--fx-order',i);token.textContent=e.text;layer.append(token);}host.append(layer);
+   if(list.some(e=>['damage','critical'].includes(e.type))){const node=target==='player'?(rect.top>=0&&rect.bottom<=root.innerHeight?anchor:layer):anchor.querySelector('.scene-art')||card||anchor;const cls=target==='player'?'fx-player-hit':list.some(e=>e.type==='critical')?'fx-critical':'fx-hit';mark(node,cls);}
   }
   if(events.some(e=>e.target==='scene')){const n=host.querySelector('#bf-play .scene-hero,#bf-play .main>.story');if(n)mark(n,'fx-scene-enter');}
   if(events.some(e=>e.target==='reward'))host.querySelectorAll('#bf-play .reward-summary,#bf-play .fx-loot-card').forEach(n=>mark(n,'fx-reward-enter'));
   // One compact banner: a rare find takes priority over the ordinary victory notice.
   const banner=events.filter(e=>e.target==='banner').sort((a,b)=>({hidden:5,mythic:4,legend:3,boss:2,ending:2,victory:1}[b.type]||0)-({hidden:5,mythic:4,legend:3,boss:2,ending:2,victory:1}[a.type]||0))[0];
   if(banner){const panel=host.querySelector('#bf-panel'),anchor=panel&&!panel.hidden?panel:host.querySelector('#bf-play .main');if(anchor){const layer=document.createElement('div');layer.className='fx-banner fx-banner-'+banner.type;layer.dataset.fxLayer='banner';layer.dataset.fxEvent=banner.type;layer.setAttribute('aria-hidden','true');const text=document.createElement('strong');text.textContent=banner.text;layer.append(text);anchor.append(layer);}}
-  if(events.length)timer=setTimeout(clear,650);
+  place();if(events.length){timer=setTimeout(clear,650);layoutFrame=root.requestAnimationFrame(()=>{layoutFrame=null;place();});} // Reposition the same receipt layer after the promotion view moves it.
  }
  return {show,clear};
 }

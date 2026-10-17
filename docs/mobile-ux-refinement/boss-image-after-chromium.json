@@ -1,0 +1,201 @@
+{
+  "status": "PASS",
+  "engine": "chromium",
+  "checks": [
+    {
+      "width": 390,
+      "height": 844,
+      "initial": {
+        "src": "assets/boss_00.webp",
+        "currentSrc": "",
+        "complete": false,
+        "naturalWidth": 0,
+        "naturalHeight": 0,
+        "loading": "eager",
+        "fetchPriority": "high",
+        "decoding": "async",
+        "image": {
+          "x": 16,
+          "y": 85.1875,
+          "width": 358,
+          "height": 364.859375,
+          "bottom": 450.046875
+        },
+        "container": {
+          "x": 16,
+          "y": 85.1875,
+          "width": 358,
+          "height": 364.859375,
+          "bottom": 450.046875
+        },
+        "computed": {
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "objectFit": "contain",
+          "objectPosition": "50% 50%",
+          "filter": "none",
+          "overflow": "clip",
+          "clipPath": "none"
+        },
+        "containerStyle": {
+          "overflow": "hidden",
+          "background": "rgb(13, 11, 10)",
+          "display": "block",
+          "opacity": "1"
+        },
+        "inside": true
+      },
+      "loaded": {
+        "src": "assets/boss_00.webp",
+        "currentSrc": "http://127.0.0.1:4199/assets/boss_00.webp",
+        "complete": true,
+        "naturalWidth": 600,
+        "naturalHeight": 900,
+        "loading": "eager",
+        "fetchPriority": "high",
+        "decoding": "async",
+        "image": {
+          "x": 16,
+          "y": 85.1875,
+          "width": 358,
+          "height": 364.859375,
+          "bottom": 450.046875
+        },
+        "container": {
+          "x": 16,
+          "y": 85.1875,
+          "width": 358,
+          "height": 364.859375,
+          "bottom": 450.046875
+        },
+        "computed": {
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "objectFit": "contain",
+          "objectPosition": "50% 50%",
+          "filter": "none",
+          "overflow": "clip",
+          "clipPath": "none"
+        },
+        "containerStyle": {
+          "overflow": "hidden",
+          "background": "rgb(13, 11, 10)",
+          "display": "block",
+          "opacity": "1"
+        },
+        "inside": true
+      },
+      "decodeCompleted": true,
+      "requested": true,
+      "responses": [
+        {
+          "url": "http://127.0.0.1:4199/assets/boss_00.webp",
+          "status": 200,
+          "contentType": "image/webp"
+        }
+      ],
+      "saveRngPreserved": true,
+      "errors": 0
+    },
+    {
+      "width": 390,
+      "height": 664,
+      "initial": {
+        "src": "assets/boss_00.webp",
+        "currentSrc": "",
+        "complete": false,
+        "naturalWidth": 0,
+        "naturalHeight": 0,
+        "loading": "eager",
+        "fetchPriority": "high",
+        "decoding": "async",
+        "image": {
+          "x": 16,
+          "y": 85.1875,
+          "width": 193.328125,
+          "height": 272.25,
+          "bottom": 357.4375
+        },
+        "container": {
+          "x": 16,
+          "y": 85.1875,
+          "width": 193.328125,
+          "height": 272.25,
+          "bottom": 357.4375
+        },
+        "computed": {
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "objectFit": "contain",
+          "objectPosition": "50% 50%",
+          "filter": "none",
+          "overflow": "clip",
+          "clipPath": "none"
+        },
+        "containerStyle": {
+          "overflow": "hidden",
+          "background": "rgb(13, 11, 10)",
+          "display": "block",
+          "opacity": "1"
+        },
+        "inside": true
+      },
+      "loaded": {
+        "src": "assets/boss_00.webp",
+        "currentSrc": "http://127.0.0.1:4199/assets/boss_00.webp",
+        "complete": true,
+        "naturalWidth": 600,
+        "naturalHeight": 900,
+        "loading": "eager",
+        "fetchPriority": "high",
+        "decoding": "async",
+        "image": {
+          "x": 16,
+          "y": 85.1875,
+          "width": 193.328125,
+          "height": 272.25,
+          "bottom": 357.4375
+        },
+        "container": {
+          "x": 16,
+          "y": 85.1875,
+          "width": 193.328125,
+          "height": 272.25,
+          "bottom": 357.4375
+        },
+        "computed": {
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "objectFit": "contain",
+          "objectPosition": "50% 50%",
+          "filter": "none",
+          "overflow": "clip",
+          "clipPath": "none"
+        },
+        "containerStyle": {
+          "overflow": "hidden",
+          "background": "rgb(13, 11, 10)",
+          "display": "block",
+          "opacity": "1"
+        },
+        "inside": true
+      },
+      "decodeCompleted": true,
+      "requested": true,
+      "responses": [
+        {
+          "url": "http://127.0.0.1:4199/assets/boss_00.webp",
+          "status": 200,
+          "contentType": "image/webp"
+        }
+      ],
+      "saveRngPreserved": true,
+      "errors": 0
+    }
+  ],
+  "method": "Real asset delayed via browser route; initial undecoded frame and post-decode frame; no change to image loading attributes or source. This establishes timing behavior, not an assertion that the historic uncaptured failure was reproduced."
+}

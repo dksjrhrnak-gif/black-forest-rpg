@@ -1,7 +1,7 @@
 name: Handoff audit and requested mobile sizes
 on:
   push:
-    branches: [qa/handoff-audit-20261008, qa/resume-checkpoint-20261008, qa/asset-quality-20261008, qa/p1-class-identity-20261008, feature/p2-exploration-equipment, feature/p3-economy-crafting-endings, qa/gameplay-handoff-20261012, qa/fx-feedback-pass, qa/ui-b-mobile-pass, qa/single-screen-mobile-ui, feature/forced-boss-career, main]
+    branches: [qa/handoff-audit-20261008, qa/resume-checkpoint-20261008, qa/asset-quality-20261008, qa/p1-class-identity-20261008, feature/p2-exploration-equipment, feature/p3-economy-crafting-endings, qa/gameplay-handoff-20261012, qa/fx-feedback-pass, qa/ui-b-mobile-pass, qa/single-screen-mobile-ui, feature/forced-boss-career, qa/mobile-ux-refinement, main]
   workflow_dispatch:
 permissions:
   contents: read
@@ -247,6 +247,21 @@ jobs:
         run: |
           node test-single-screen.cjs
           node test-single-screen-layout.cjs
+      - name: Mobile UX image decode, story, promotion comparisons and measured FX
+        env:
+          BF_BROWSER: ${{ matrix.browser }}
+          BF_QA_URL: http://127.0.0.1:4174/
+          BF_UX_OUT: docs/mobile-ux-refinement
+          BF_PROMO_REFINEMENT_OUT: docs/mobile-ux-refinement
+          BF_MOBILE_FX_OUT: docs/mobile-ux-refinement/fx
+        run: |
+          git show 4fe67d3310af9c3a22d2688305bafbef362d13eb:index.html > dist/ux-before.html
+          BF_UX_BEFORE=1 BF_QA_URL=http://127.0.0.1:4174/ux-before.html node test-mobile-ux.cjs
+          node test-mobile-ux.cjs
+          node test-mobile-ux-rotation.cjs
+          node test-boss-image.cjs
+          node test-promotion-refinement.cjs
+          node test-mobile-fx.cjs
       - name: Wait for this commit to finish Pages deployment
         if: github.ref == 'refs/heads/main'
         env:
@@ -259,6 +274,20 @@ jobs:
           BF_QA_URL: https://dksjrhrnak-gif.github.io/black-forest-rpg/
           BF_PROMO_OUT: docs/pr8-pr9-integration/public
         run: node test-forced-career-ui.cjs
+      - name: Public mobile UX refinement and boss decode
+        if: github.ref == 'refs/heads/main'
+        env:
+          BF_BROWSER: ${{ matrix.browser }}
+          BF_QA_URL: https://dksjrhrnak-gif.github.io/black-forest-rpg/
+          BF_UX_OUT: docs/mobile-ux-refinement/public
+          BF_PROMO_REFINEMENT_OUT: docs/mobile-ux-refinement/public
+          BF_MOBILE_FX_OUT: docs/mobile-ux-refinement/public/fx
+        run: |
+          node test-mobile-ux.cjs
+          node test-mobile-ux-rotation.cjs
+          node test-boss-image.cjs
+          node test-promotion-refinement.cjs
+          node test-mobile-fx.cjs
       - name: P3 public game at five widths
         if: github.ref == 'refs/heads/main'
         env:
@@ -287,6 +316,7 @@ jobs:
         with:
           name: p3-${{ matrix.browser }}
           path: |
+            docs/mobile-ux-refinement/
             docs/single-screen/
             docs/forced-career/
             docs/pr8-pr9-integration/

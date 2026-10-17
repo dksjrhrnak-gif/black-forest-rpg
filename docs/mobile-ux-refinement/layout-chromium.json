@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "engine": "chromium",
+  "keyboardStory": true,
+  "nestedMenuSingleForm": true,
+  "exactTextCommand": true,
+  "rotation": true,
+  "inlineOffset": 80,
+  "iframe": [
+    390,
+    664
+  ],
+  "errors": 0
+}
