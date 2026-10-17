@@ -24,7 +24,7 @@
 
 ## 높이와 실제 전후 캡처
 
-동일 시드·동일 저장을 실제 브라우저에 로드하고 같은 초기 UI 상태에서 촬영했다. [전체 전후 비교와20장](mobile-ux-refinement/COMPARISON.md), [Chromium 실측](mobile-ux-refinement/after-chromium.json), [WebKit 실측](mobile-ux-refinement/after-webkit.json).
+동일 시드·동일 저장을 실제 브라우저에 로드하고 같은 초기 UI 상태에서 촬영했다. [전체 전후 비교와20장](mobile-ux-refinement/COMPARISON.md), [최종 가로 배치 Chromium 실측](mobile-ux-refinement/after-chromium.json), [이전10/15 세로 배치 WebKit 실측](mobile-ux-refinement/after-webkit.json).
 
 | 크기 | 전투 이미지 전→후 | HUD | 로그 | 행동 영역 후 | 화면 안 행동 |
 |---|---:|---:|---:|---:|---:|
@@ -55,13 +55,28 @@
 
 첫 PR CI의 기존 importer 검사는 실제 회귀를 발견했다. 모달에서 저장을 불러올 때 root 직계였던 HUD가 main 안으로 이동해, 원래 root 직계만 복구하던 모달 코드가 그 HUD의 inert를 해제하지 못했다. 이제 잠글 때의 실제 노드 참조와 이전 inert 값을 저장하고 같은 노드에 복원한다. 전직 헤더도 별도 저장 프록시 대신 같은 원본 저장 버튼을 이동해 사용하므로 모든 장면에서 단일 저장/불러오기 경로를 보존한다. 실제 저장 UI에서 연속 두 번 불러오기→다시 저장→전체 기록 열기 경로를 새 회귀 검사에도 추가했다. 전직 헤더의 ‘보상 수령’ 표현도 기존 용어 검사에서 잡혀 ‘보스 전리품을 챙겼습니다’로 고쳤다. 실패한 HEAD는 병합하지 않고 전체 CI를 다시 실행한다.
 
-이전 세로 배치 개선 단계의 로컬 FX는 Chromium/WebKit 각128개 실측, 총256개 PASS였다.10/17 복원한 최종 가로 배치는 Chromium128개 실측을 다시 통과했으며, 최신 WebKit/Firefox는 해당 HEAD의 GitHub CI를 최종 근거로 사용한다. 마법사의 상태이상으로 이미지가 줄어든 상황과 대상별6개 동시 숫자까지 검사해 적 이름·HP·예고와의 겹침을 해결했다. [실측](mobile-ux-refinement/fx/chromium.json), [WebKit](mobile-ux-refinement/fx/webkit.json), [실제 FX 캡처](mobile-ux-refinement/fx/screenshots/). 짧은 화면의 최종 가로 배치에서는 배너/양쪽 대상 숫자를 원본 이미지의 실제 사각형 안에 배치하여 오른쪽 적 정보를 가리지 않는다. 겹침 검사는 가로/세로 모두 실제2축 교차로 판정하며 HUD/행동의 강한 화면 내 경계 검사는 그대로 유지한다.
+이전 세로 배치 개선 단계의 로컬 FX는 Chromium/WebKit 각128개 실측, 총256개 PASS였다.10/17 복원한 최종 가로 배치는 Chromium128개 실측을 다시 통과했으며, 최신 WebKit/Firefox는 해당 HEAD의 GitHub CI를 최종 근거로 사용한다. 마법사의 상태이상으로 이미지가 줄어든 상황과 대상별6개 동시 숫자까지 검사해 적 이름·HP·예고와의 겹침을 해결했다. [최종 가로 배치 실측](mobile-ux-refinement/fx/chromium.json), [이전10/15 세로 배치 WebKit 실측](mobile-ux-refinement/fx/webkit.json), [실제 FX 캡처](mobile-ux-refinement/fx/screenshots/). 짧은 화면의 최종 가로 배치에서는 배너/양쪽 대상 숫자를 원본 이미지의 실제 사각형 안에 배치하여 오른쪽 적 정보를 가리지 않는다. 겹침 검사는 가로/세로 모두 실제2축 교차로 판정하며 HUD/행동의 강한 화면 내 경계 검사는 그대로 유지한다.
 
 장식 FX는 기존650ms 정리 규칙을 유지한다. reduced motion에서는 흔들림 없이 결과를 표시하며, 장식 종료 뒤에도 실제 원문 aria-live와 기록·설명/실제 카드에 결과가 남는다. 진행 타이머는 추가하지 않았다.
 
+병합 후 첫 공개 Firefox 검사에서는 `class_pequod.webp`에 대해 `Image corrupt or truncated.` 콘솔 오류1건을 수집했다. 같은 실행의 로컬 Firefox 전직·새 UX는 통과했지만, 공개 검사는 이 오류로 실패하여 후속 공개 단계가 실행되지 않았다. 이 실패를 성공으로 계산하지 않는다. 원본은83,088바이트·600×500 WebP로 정상 디코딩했고, 공개 응답을 세 번 새로 받아 모두 원본과 byte 일치함을 확인했다(SHA-256 `1acfc3db75c97b02a85df4132a9c8bc1d5782e635e09ccb28dc194c3a181876e`). 요청 중단/전송/디코더 중 어느 원인이었는지는 당시 네트워크 기록이 없어 확정하지 않는다. 원본 자산과 콘솔 오류0건 기준을 보존하여 같은 코드로 재검증한다. [실패 주석](mobile-ux-refinement/public-verification/feature-firefox-first-attempt-annotations.json), [공개 이미지 재확인](mobile-ux-refinement/public-verification/feature-image-recheck.json).
+
 ## GitHub 및 배포 기록
 
-[PR #10](https://github.com/dksjrhrnak-gif/black-forest-rpg/pull/10). 검증된 HEAD, 필수 CI, main 병합 커밋, Pages 실행 및 공개 검사 결과는 병합 완료 후 이 절을 갱신한다. 실행되지 않은 단계는 성공으로 간주하지 않는다.
+[PR #10](https://github.com/dksjrhrnak-gif/black-forest-rpg/pull/10)은2026-10-17 06:04:49 UTC에 main에 병합했다. 병합 전 검토 HEAD는 `d588b73b45aa7f9b7cff8ab8e003b4883be9fa57`, 실제 병합 커밋은 **`88f1ccd4dded1437d959a795ee5108e2d4567d09`**다. 두 커밋의 제품 트리는 동일하다. [정확한 검토 HEAD·19개 성공 기록](mobile-ux-refinement/public-verification/reviewed-pr-checks.json), [병합 기록](mobile-ux-refinement/public-verification/feature-merge.json).
+
+| 대상 | 실제 결과와 고정 실행 링크 |
+|---|---|
+| PR 필수 CI | 19개 SUCCESS. main 전용 공개 검사는 PR에서만 SKIPPED. [Handoff](https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/39007750747), [Journey](https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/39007753590) |
+| 기능 main 첫 실행 | 21개 중20개 성공. [Journey 11/11 성공](https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/39008581308), [Handoff 9/10 성공](https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/39008581362). 위에 기록한 공개 Firefox 이미지 콘솔 오류1건으로 해당 작업은 실패. 성공으로 계산하지 않음 |
+| Pages | [39008580986](https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/39008580986) build/deploy/report 모두 SUCCESS. deployment `7135662228`은 병합 SHA `88f1ccd`와 일치하고06:08:16 UTC에 success |
+| 실제 공개 Chromium·WebKit | 각 엔진의 공개 강제 전직24사례, 새 UX20상태+4스트레스, 보스 decode2크기, 전직 비교8사례, 모달 회전9사례·연속 불러오기, FX128사례, P3 5개 폭, 기존 FX/B안 검사가 모두 SUCCESS. main 전용 공개 P1/P2·한 화면 검사도 양 엔진 성공 |
+| 실제 공개 Firefox 첫 실행 | 로컬 새 UX·전직·FX 등은 SUCCESS. 공개 강제 전직 검사에서 이미지 콘솔 오류로 실패하여 후속 공개 UX/P3/FX/B안은 SKIPPED. 실행하지 않은 단계를 성공이라고 보고하지 않음 |
+| 공개 HTTP 별도 검사 | HTML SHA-256 `b1b4ffb4aac10761a3b8551bc2c72da9cfb0726aae75d86137702f2c09ce43e0`, 이미지149개, CSV3개 모두 HTTP200·저장소 byte 완전 일치. [원본 결과](mobile-ux-refinement/public-verification/feature-http-assets.json) |
+
+이후 문서·증거만 갱신한 최종 main에서도 제품 HTML과 테스트 원문이 동일한지 확인하고, 필수21개와 공개3엔진을 전부 재실행한다. **최종 문서 커밋까지 포함한 main SHA, 전체 CI, Pages 및 공개 Firefox 재검증의 고정 실행 링크와 완료 결과는 [PR #10 배포 기록](https://github.com/dksjrhrnak-gif/black-forest-rpg/pull/10)에서 확인한다.** 이 절의 첫 실행 실패와 최종 실행 결과를 구분한다. [보관한 실제 GitHub 단계 기록](mobile-ux-refinement/public-verification/README.md)은 실행 여부와 결론을 확인할 수 있는 증거이며, 로컬 브라우저 결과를 공개 실행으로 대신하지 않는다.
+
+로컬 상태 보호 검사도 재실행했다. `npm test` 성공, 보상/전직1,026쌍·보상 확정1,026회·전직540회·저장 복원3,678회에서 전체 상태/RNG 일치, FX3,648개 시드 전투에서도 전체 저장/RNG 일치다. 최종 가로 배치의 Chromium FX8조건×16사례128개는 위치·토큰 수를 같은 DOM 평가에서 측정했고,8개 스트레스 조건 모두12개 숫자를 보존했다. 기존650ms 종료·콘솔 오류0건·장식 종료 후 실제 결과 접근 검사도 유지한다.
 
 ## 미검증 및 남은 한계
 

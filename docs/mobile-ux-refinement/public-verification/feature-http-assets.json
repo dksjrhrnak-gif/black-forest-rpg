@@ -1,0 +1,15 @@
+{
+  "base": "https://dksjrhrnak-gif.github.io/black-forest-rpg/",
+  "htmlSha256": "b1b4ffb4aac10761a3b8551bc2c72da9cfb0726aae75d86137702f2c09ce43e0",
+  "assetFiles": 149,
+  "downloads": [
+    "jobs-114.csv",
+    "jobs-100.csv",
+    "items-1000.csv"
+  ],
+  "http200": true,
+  "exactAssetBytes": true,
+  "status": "PASS",
+  "sourceCommit": "88f1ccd4dded1437d959a795ee5108e2d4567d09",
+  "verificationContext": "Actual public Pages HTTP responses compared with the merged repository files. This is a transport/byte check, separate from browser execution."
+}

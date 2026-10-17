@@ -11,164 +11,172 @@
         {
           "name": "attack",
           "tokenCount": 2,
+          "fxTokenCount": 2,
           "headerBottom": 80.1875,
           "actionTop": 546.4375,
           "tokens": [
             {
               "type": "damage",
               "text": "−3",
-              "y": 113.74363708496094,
-              "bottom": 138.63426208496094
+              "y": 113.74565887451172,
+              "bottom": 138.63629150390625
             },
             {
               "type": "damage",
               "text": "−23",
-              "y": 113.74363708496094,
-              "bottom": 138.63426208496094
+              "y": 113.74565887451172,
+              "bottom": 138.63629150390625
             }
           ]
         },
         {
           "name": "potion",
           "tokenCount": 2,
+          "fxTokenCount": 2,
           "headerBottom": 80.1875,
           "actionTop": 546.4375,
           "tokens": [
             {
               "type": "damage",
               "text": "−3",
-              "y": 113.74124145507812,
-              "bottom": 138.63186645507812
+              "y": 114.46942138671875,
+              "bottom": 139.36004638671875
             },
             {
               "type": "heal",
               "text": "회복 +44",
-              "y": 142.15098571777344,
-              "bottom": 167.04161071777344
+              "y": 142.89111328125,
+              "bottom": 167.78173828125
             }
           ]
         },
         {
           "name": "stun",
           "tokenCount": 2,
+          "fxTokenCount": 2,
           "headerBottom": 80.1875,
           "actionTop": 546.4375,
           "tokens": [
             {
               "type": "damage",
               "text": "−35",
-              "y": 115.20531463623047,
-              "bottom": 140.095947265625
+              "y": 113.74359893798828,
+              "bottom": 138.63421630859375
             },
             {
               "type": "stun",
               "text": "기절",
-              "y": 143.63900756835938,
-              "bottom": 168.52963256835938
+              "y": 142.15338134765625,
+              "bottom": 167.04400634765625
             }
           ]
         },
         {
           "name": "burn",
           "tokenCount": 4,
+          "fxTokenCount": 4,
           "headerBottom": 107.984375,
           "actionTop": 546.4375,
           "tokens": [
             {
               "type": "damage",
               "text": "−6",
-              "y": 141.54171752929688,
-              "bottom": 166.43234252929688
+              "y": 141.54124450683594,
+              "bottom": 166.43186950683594
             },
             {
               "type": "damage",
               "text": "−52",
-              "y": 141.54171752929688,
-              "bottom": 166.43234252929688
+              "y": 141.54124450683594,
+              "bottom": 166.43186950683594
             },
             {
               "type": "dot",
               "text": "지속 피해 −8",
-              "y": 169.95152282714844,
-              "bottom": 194.84214782714844
+              "y": 169.9510498046875,
+              "bottom": 194.8416748046875
             },
             {
               "type": "burn",
               "text": "화상",
-              "y": 198.36984252929688,
-              "bottom": 223.26046752929688
+              "y": 198.36936950683594,
+              "bottom": 223.25999450683594
             }
           ]
         },
         {
           "name": "skillHeal",
           "tokenCount": 3,
+          "fxTokenCount": 3,
           "headerBottom": 80.1875,
           "actionTop": 546.4375,
           "tokens": [
             {
               "type": "damage",
               "text": "−2",
-              "y": 113.74243927001953,
-              "bottom": 138.633056640625
+              "y": 114.46858978271484,
+              "bottom": 139.35922241210938
             },
             {
               "type": "heal",
               "text": "회복 +16",
-              "y": 142.15220642089844,
-              "bottom": 167.04283142089844
+              "y": 142.8902587890625,
+              "bottom": 167.7808837890625
             },
             {
               "type": "damage",
               "text": "−38",
-              "y": 113.74243927001953,
-              "bottom": 138.633056640625
+              "y": 114.46858978271484,
+              "bottom": 139.35922241210938
             }
           ]
         },
         {
           "name": "critical",
           "tokenCount": 2,
+          "fxTokenCount": 2,
           "headerBottom": 80.1875,
           "actionTop": 546.4375,
           "tokens": [
             {
               "type": "damage",
               "text": "−5",
-              "y": 114.46643829345703,
-              "bottom": 139.3570556640625
+              "y": 113.747802734375,
+              "bottom": 138.638427734375
             },
             {
               "type": "critical",
               "text": "치명타 39",
-              "y": 114.46643829345703,
-              "bottom": 144.7633056640625
+              "y": 113.747802734375,
+              "bottom": 144.044677734375
             }
           ]
         },
         {
           "name": "dodge",
           "tokenCount": 2,
+          "fxTokenCount": 2,
           "headerBottom": 80.1875,
           "actionTop": 546.4375,
           "tokens": [
             {
               "type": "dodge",
               "text": "회피",
-              "y": 113.74330139160156,
-              "bottom": 138.63392639160156
+              "y": 113.7435531616211,
+              "bottom": 138.63418579101562
             },
             {
               "type": "damage",
               "text": "−25",
-              "y": 113.74330139160156,
-              "bottom": 138.63392639160156
+              "y": 113.7435531616211,
+              "bottom": 138.63418579101562
             }
           ]
         },
         {
           "name": "boss",
           "tokenCount": 1,
+          "fxTokenCount": 0,
           "headerBottom": 80.1875,
           "actionTop": 546.4375,
           "tokens": [
@@ -183,6 +191,7 @@
         {
           "name": "victory",
           "tokenCount": 2,
+          "fxTokenCount": 1,
           "headerBottom": 91.1875,
           "actionTop": 736,
           "tokens": [
@@ -195,42 +204,45 @@
             {
               "type": "damage",
               "text": "−21",
-              "y": 164.93011474609375,
-              "bottom": 189.82073974609375
+              "y": 164.9322967529297,
+              "bottom": 189.8229217529297
             }
           ]
         },
         {
           "name": "receipt",
           "tokenCount": 1,
+          "fxTokenCount": 1,
           "headerBottom": 91.1875,
           "actionTop": 619.828125,
           "tokens": [
             {
               "type": "receipt",
               "text": "전리품 확보",
-              "y": 124.03651428222656,
-              "bottom": 148.92713928222656
+              "y": 124.74446105957031,
+              "bottom": 149.6350860595703
             }
           ]
         },
         {
           "name": "legend",
           "tokenCount": 1,
+          "fxTokenCount": 0,
           "headerBottom": 91.1875,
           "actionTop": 655.609375,
           "tokens": [
             {
               "type": "legend",
               "text": "전설 발견 · 백경의 마지막 수평선",
-              "y": 98.79002380371094,
-              "bottom": 147.97752380371094
+              "y": 99.1875,
+              "bottom": 148.375
             }
           ]
         },
         {
           "name": "mythic",
           "tokenCount": 1,
+          "fxTokenCount": 0,
           "headerBottom": 91.1875,
           "actionTop": 655.609375,
           "tokens": [
@@ -245,20 +257,22 @@
         {
           "name": "hidden",
           "tokenCount": 1,
+          "fxTokenCount": 0,
           "headerBottom": 178,
           "actionTop": 800,
           "tokens": [
             {
               "type": "hidden",
               "text": "숨겨진 비전 · 룬검사",
-              "y": 186,
-              "bottom": 235.1875
+              "y": 185.96217346191406,
+              "bottom": 235.14967346191406
             }
           ]
         },
         {
           "name": "ending",
           "tokenCount": 1,
+          "fxTokenCount": 0,
           "headerBottom": 236.21875,
           "actionTop": 702,
           "tokens": [
@@ -273,100 +287,102 @@
         {
           "name": "stress",
           "tokenCount": 12,
+          "fxTokenCount": 12,
           "headerBottom": 107.984375,
           "actionTop": 546.4375,
           "tokens": [
             {
               "type": "damage",
               "text": "−18",
-              "y": 137.14242553710938,
-              "bottom": 155.93930053710938
+              "y": 138.53956604003906,
+              "bottom": 157.33645629882812
             },
             {
               "type": "heal",
               "text": "회복 +8",
-              "y": 156.4348907470703,
-              "bottom": 175.2317657470703
+              "y": 157.8555908203125,
+              "bottom": 176.6524658203125
             },
             {
               "type": "dodge",
               "text": "회피",
-              "y": 175.73583984375,
-              "bottom": 194.53271484375
+              "y": 177.18014526367188,
+              "bottom": 195.97702026367188
             },
             {
               "type": "guard",
               "text": "방어 · 집중",
-              "y": 195.04527282714844,
-              "bottom": 213.84214782714844
+              "y": 196.5133056640625,
+              "bottom": 215.3101806640625
             },
             {
               "type": "poison",
               "text": "중독",
-              "y": 214.36318969726562,
-              "bottom": 233.16006469726562
+              "y": 215.855224609375,
+              "bottom": 234.652099609375
             },
             {
               "type": "critical",
               "text": "치명타 36",
-              "y": 233.68963623046875,
-              "bottom": 254.87713623046875
+              "y": 235.20614624023438,
+              "bottom": 256.3936462402344
             },
             {
               "type": "damage",
               "text": "−18",
-              "y": 137.14242553710938,
-              "bottom": 155.93930053710938
+              "y": 138.53956604003906,
+              "bottom": 157.33645629882812
             },
             {
               "type": "heal",
               "text": "회복 +8",
-              "y": 156.4348907470703,
-              "bottom": 175.2317657470703
+              "y": 157.8555908203125,
+              "bottom": 176.6524658203125
             },
             {
               "type": "dodge",
               "text": "회피",
-              "y": 175.73583984375,
-              "bottom": 194.53271484375
+              "y": 177.18014526367188,
+              "bottom": 195.97702026367188
             },
             {
               "type": "guard",
               "text": "방어 · 집중",
-              "y": 195.04527282714844,
-              "bottom": 213.84214782714844
+              "y": 196.5133056640625,
+              "bottom": 215.3101806640625
             },
             {
               "type": "poison",
               "text": "중독",
-              "y": 214.36318969726562,
-              "bottom": 233.16006469726562
+              "y": 215.855224609375,
+              "bottom": 234.652099609375
             },
             {
               "type": "critical",
               "text": "치명타 36",
-              "y": 233.68963623046875,
-              "bottom": 254.87713623046875
+              "y": 235.20614624023438,
+              "bottom": 256.3936462402344
             }
           ]
         },
         {
           "name": "rapid",
           "tokenCount": 2,
+          "fxTokenCount": 2,
           "headerBottom": 80.1875,
           "actionTop": 546.4375,
           "tokens": [
             {
               "type": "damage",
               "text": "−3",
-              "y": 114.46973419189453,
-              "bottom": 139.3603515625
+              "y": 113.74685668945312,
+              "bottom": 138.63748168945312
             },
             {
               "type": "damage",
               "text": "−21",
-              "y": 114.46973419189453,
-              "bottom": 139.3603515625
+              "y": 113.74685668945312,
+              "bottom": 138.63748168945312
             }
           ]
         }
@@ -385,6 +401,7 @@
         {
           "name": "attack",
           "tokenCount": 2,
+          "fxTokenCount": 2,
           "headerBottom": 80.1875,
           "actionTop": 546.4375,
           "tokens": [
@@ -405,6 +422,7 @@
         {
           "name": "potion",
           "tokenCount": 2,
+          "fxTokenCount": 2,
           "headerBottom": 80.1875,
           "actionTop": 546.4375,
           "tokens": [
@@ -425,6 +443,7 @@
         {
           "name": "stun",
           "tokenCount": 2,
+          "fxTokenCount": 2,
           "headerBottom": 80.1875,
           "actionTop": 546.4375,
           "tokens": [
@@ -445,6 +464,7 @@
         {
           "name": "burn",
           "tokenCount": 4,
+          "fxTokenCount": 4,
           "headerBottom": 107.984375,
           "actionTop": 546.4375,
           "tokens": [
@@ -477,6 +497,7 @@
         {
           "name": "skillHeal",
           "tokenCount": 3,
+          "fxTokenCount": 3,
           "headerBottom": 80.1875,
           "actionTop": 546.4375,
           "tokens": [
@@ -503,6 +524,7 @@
         {
           "name": "critical",
           "tokenCount": 2,
+          "fxTokenCount": 2,
           "headerBottom": 80.1875,
           "actionTop": 546.4375,
           "tokens": [
@@ -523,6 +545,7 @@
         {
           "name": "dodge",
           "tokenCount": 2,
+          "fxTokenCount": 2,
           "headerBottom": 80.1875,
           "actionTop": 546.4375,
           "tokens": [
@@ -543,6 +566,7 @@
         {
           "name": "boss",
           "tokenCount": 1,
+          "fxTokenCount": 0,
           "headerBottom": 80.1875,
           "actionTop": 546.4375,
           "tokens": [
@@ -557,6 +581,7 @@
         {
           "name": "victory",
           "tokenCount": 2,
+          "fxTokenCount": 1,
           "headerBottom": 91.1875,
           "actionTop": 736,
           "tokens": [
@@ -577,6 +602,7 @@
         {
           "name": "receipt",
           "tokenCount": 1,
+          "fxTokenCount": 1,
           "headerBottom": 91.1875,
           "actionTop": 619.828125,
           "tokens": [
@@ -591,6 +617,7 @@
         {
           "name": "legend",
           "tokenCount": 1,
+          "fxTokenCount": 0,
           "headerBottom": 91.1875,
           "actionTop": 655.609375,
           "tokens": [
@@ -605,6 +632,7 @@
         {
           "name": "mythic",
           "tokenCount": 1,
+          "fxTokenCount": 0,
           "headerBottom": 91.1875,
           "actionTop": 655.609375,
           "tokens": [
@@ -619,6 +647,7 @@
         {
           "name": "hidden",
           "tokenCount": 1,
+          "fxTokenCount": 0,
           "headerBottom": 178,
           "actionTop": 800,
           "tokens": [
@@ -633,6 +662,7 @@
         {
           "name": "ending",
           "tokenCount": 1,
+          "fxTokenCount": 0,
           "headerBottom": 236.21875,
           "actionTop": 702,
           "tokens": [
@@ -647,6 +677,7 @@
         {
           "name": "stress",
           "tokenCount": 12,
+          "fxTokenCount": 12,
           "headerBottom": 107.984375,
           "actionTop": 546.4375,
           "tokens": [
@@ -727,6 +758,7 @@
         {
           "name": "rapid",
           "tokenCount": 2,
+          "fxTokenCount": 2,
           "headerBottom": 80.1875,
           "actionTop": 546.4375,
           "tokens": [
@@ -759,164 +791,172 @@
         {
           "name": "attack",
           "tokenCount": 2,
+          "fxTokenCount": 2,
           "headerBottom": 80.1875,
           "actionTop": 590.4375,
           "tokens": [
             {
               "type": "damage",
               "text": "−3",
-              "y": 113.747802734375,
-              "bottom": 138.638427734375
+              "y": 114.47179412841797,
+              "bottom": 139.3624267578125
             },
             {
               "type": "damage",
               "text": "−23",
-              "y": 113.747802734375,
-              "bottom": 138.638427734375
+              "y": 114.47179412841797,
+              "bottom": 139.3624267578125
             }
           ]
         },
         {
           "name": "potion",
           "tokenCount": 2,
+          "fxTokenCount": 2,
           "headerBottom": 80.1875,
           "actionTop": 590.4375,
           "tokens": [
             {
               "type": "damage",
               "text": "−3",
+              "y": 114.46565246582031,
+              "bottom": 139.3562774658203
+            },
+            {
+              "type": "heal",
+              "text": "회복 +44",
+              "y": 142.88726806640625,
+              "bottom": 167.77789306640625
+            }
+          ]
+        },
+        {
+          "name": "stun",
+          "tokenCount": 2,
+          "fxTokenCount": 2,
+          "headerBottom": 80.1875,
+          "actionTop": 590.4375,
+          "tokens": [
+            {
+              "type": "damage",
+              "text": "−35",
+              "y": 113.74132537841797,
+              "bottom": 138.6319580078125
+            },
+            {
+              "type": "stun",
+              "text": "기절",
+              "y": 142.1510772705078,
+              "bottom": 167.0417022705078
+            }
+          ]
+        },
+        {
+          "name": "burn",
+          "tokenCount": 4,
+          "fxTokenCount": 4,
+          "headerBottom": 107.984375,
+          "actionTop": 590.4375,
+          "tokens": [
+            {
+              "type": "damage",
+              "text": "−6",
+              "y": 142.26779174804688,
+              "bottom": 167.15841674804688
+            },
+            {
+              "type": "damage",
+              "text": "−52",
+              "y": 142.26779174804688,
+              "bottom": 167.15841674804688
+            },
+            {
+              "type": "dot",
+              "text": "지속 피해 −8",
+              "y": 170.6894989013672,
+              "bottom": 195.5801239013672
+            },
+            {
+              "type": "burn",
+              "text": "화상",
+              "y": 199.119873046875,
+              "bottom": 224.010498046875
+            }
+          ]
+        },
+        {
+          "name": "skillHeal",
+          "tokenCount": 3,
+          "fxTokenCount": 3,
+          "headerBottom": 80.1875,
+          "actionTop": 590.4375,
+          "tokens": [
+            {
+              "type": "damage",
+              "text": "−2",
               "y": 113.74634552001953,
               "bottom": 138.636962890625
             },
             {
               "type": "heal",
-              "text": "회복 +44",
+              "text": "회복 +16",
               "y": 142.1561737060547,
               "bottom": 167.0467987060547
-            }
-          ]
-        },
-        {
-          "name": "stun",
-          "tokenCount": 2,
-          "headerBottom": 80.1875,
-          "actionTop": 590.4375,
-          "tokens": [
-            {
-              "type": "damage",
-              "text": "−35",
-              "y": 113.74183654785156,
-              "bottom": 138.63246154785156
-            },
-            {
-              "type": "stun",
-              "text": "기절",
-              "y": 142.15159606933594,
-              "bottom": 167.04222106933594
-            }
-          ]
-        },
-        {
-          "name": "burn",
-          "tokenCount": 4,
-          "headerBottom": 107.984375,
-          "actionTop": 590.4375,
-          "tokens": [
-            {
-              "type": "damage",
-              "text": "−6",
-              "y": 141.53927612304688,
-              "bottom": 166.42990112304688
-            },
-            {
-              "type": "damage",
-              "text": "−52",
-              "y": 141.53927612304688,
-              "bottom": 166.42990112304688
-            },
-            {
-              "type": "dot",
-              "text": "지속 피해 −8",
-              "y": 169.94903564453125,
-              "bottom": 194.83966064453125
-            },
-            {
-              "type": "burn",
-              "text": "화상",
-              "y": 198.36732482910156,
-              "bottom": 223.25794982910156
-            }
-          ]
-        },
-        {
-          "name": "skillHeal",
-          "tokenCount": 3,
-          "headerBottom": 80.1875,
-          "actionTop": 590.4375,
-          "tokens": [
-            {
-              "type": "damage",
-              "text": "−2",
-              "y": 113.7437744140625,
-              "bottom": 138.6343994140625
-            },
-            {
-              "type": "heal",
-              "text": "회복 +16",
-              "y": 142.153564453125,
-              "bottom": 167.044189453125
             },
             {
               "type": "damage",
               "text": "−38",
-              "y": 113.7437744140625,
-              "bottom": 138.6343994140625
+              "y": 113.74634552001953,
+              "bottom": 138.636962890625
             }
           ]
         },
         {
           "name": "critical",
           "tokenCount": 2,
+          "fxTokenCount": 2,
           "headerBottom": 80.1875,
           "actionTop": 590.4375,
           "tokens": [
             {
               "type": "damage",
               "text": "−5",
-              "y": 113.74518585205078,
-              "bottom": 138.63580322265625
+              "y": 113.04036712646484,
+              "bottom": 137.93099975585938
             },
             {
               "type": "critical",
               "text": "치명타 39",
-              "y": 113.74518585205078,
-              "bottom": 144.04205322265625
+              "y": 113.04036712646484,
+              "bottom": 143.33724975585938
             }
           ]
         },
         {
           "name": "dodge",
           "tokenCount": 2,
+          "fxTokenCount": 2,
           "headerBottom": 80.1875,
           "actionTop": 590.4375,
           "tokens": [
             {
               "type": "dodge",
               "text": "회피",
-              "y": 113.74471282958984,
-              "bottom": 138.63534545898438
+              "y": 114.46582794189453,
+              "bottom": 139.3564453125
             },
             {
               "type": "damage",
               "text": "−25",
-              "y": 113.74471282958984,
-              "bottom": 138.63534545898438
+              "y": 114.46582794189453,
+              "bottom": 139.3564453125
             }
           ]
         },
         {
           "name": "boss",
           "tokenCount": 1,
+          "fxTokenCount": 0,
           "headerBottom": 80.1875,
           "actionTop": 590.4375,
           "tokens": [
@@ -931,6 +971,7 @@
         {
           "name": "victory",
           "tokenCount": 2,
+          "fxTokenCount": 1,
           "headerBottom": 91.1875,
           "actionTop": 780,
           "tokens": [
@@ -943,28 +984,30 @@
             {
               "type": "damage",
               "text": "−21",
-              "y": 165.65675354003906,
-              "bottom": 190.54737854003906
+              "y": 164.93234252929688,
+              "bottom": 189.82296752929688
             }
           ]
         },
         {
           "name": "receipt",
           "tokenCount": 1,
+          "fxTokenCount": 1,
           "headerBottom": 91.1875,
           "actionTop": 663.828125,
           "tokens": [
             {
               "type": "receipt",
               "text": "전리품 확보",
-              "y": 124.74698638916016,
-              "bottom": 149.63760375976562
+              "y": 124.74595642089844,
+              "bottom": 149.63658142089844
             }
           ]
         },
         {
           "name": "legend",
           "tokenCount": 1,
+          "fxTokenCount": 0,
           "headerBottom": 91.1875,
           "actionTop": 699.609375,
           "tokens": [
@@ -979,6 +1022,7 @@
         {
           "name": "mythic",
           "tokenCount": 1,
+          "fxTokenCount": 0,
           "headerBottom": 91.1875,
           "actionTop": 699.609375,
           "tokens": [
@@ -993,380 +1037,7 @@
         {
           "name": "hidden",
           "tokenCount": 1,
-          "headerBottom": 184.171875,
-          "actionTop": 844,
-          "tokens": [
-            {
-              "type": "hidden",
-              "text": "숨겨진 비전 · 룬검사",
-              "y": 192.13414001464844,
-              "bottom": 241.32164001464844
-            }
-          ]
-        },
-        {
-          "name": "ending",
-          "tokenCount": 1,
-          "headerBottom": 236.21875,
-          "actionTop": 675,
-          "tokens": [
-            {
-              "type": "ending",
-              "text": "불씨를 놓아준 자",
-              "y": 244.21875,
-              "bottom": 293.40625
-            }
-          ]
-        },
-        {
-          "name": "stress",
-          "tokenCount": 12,
-          "headerBottom": 107.984375,
-          "actionTop": 590.4375,
-          "tokens": [
-            {
-              "type": "damage",
-              "text": "−18",
-              "y": 138.5413360595703,
-              "bottom": 157.3382110595703
-            },
-            {
-              "type": "heal",
-              "text": "회복 +8",
-              "y": 157.8573760986328,
-              "bottom": 176.6542510986328
-            },
-            {
-              "type": "dodge",
-              "text": "회피",
-              "y": 177.18194580078125,
-              "bottom": 195.97882080078125
-            },
-            {
-              "type": "guard",
-              "text": "방어 · 집중",
-              "y": 196.51513671875,
-              "bottom": 215.31201171875
-            },
-            {
-              "type": "poison",
-              "text": "중독",
-              "y": 215.85708618164062,
-              "bottom": 234.65396118164062
-            },
-            {
-              "type": "critical",
-              "text": "치명타 36",
-              "y": 235.20803833007812,
-              "bottom": 256.3955383300781
-            },
-            {
-              "type": "damage",
-              "text": "−18",
-              "y": 138.5413360595703,
-              "bottom": 157.3382110595703
-            },
-            {
-              "type": "heal",
-              "text": "회복 +8",
-              "y": 157.8573760986328,
-              "bottom": 176.6542510986328
-            },
-            {
-              "type": "dodge",
-              "text": "회피",
-              "y": 177.18194580078125,
-              "bottom": 195.97882080078125
-            },
-            {
-              "type": "guard",
-              "text": "방어 · 집중",
-              "y": 196.51513671875,
-              "bottom": 215.31201171875
-            },
-            {
-              "type": "poison",
-              "text": "중독",
-              "y": 215.85708618164062,
-              "bottom": 234.65396118164062
-            },
-            {
-              "type": "critical",
-              "text": "치명타 36",
-              "y": 235.20803833007812,
-              "bottom": 256.3955383300781
-            }
-          ]
-        },
-        {
-          "name": "rapid",
-          "tokenCount": 2,
-          "headerBottom": 80.1875,
-          "actionTop": 590.4375,
-          "tokens": [
-            {
-              "type": "damage",
-              "text": "−3",
-              "y": 113.7419662475586,
-              "bottom": 138.63259887695312
-            },
-            {
-              "type": "damage",
-              "text": "−21",
-              "y": 113.7419662475586,
-              "bottom": 138.63259887695312
-            }
-          ]
-        }
-      ],
-      "oneController": true,
-      "exactTransactions": true,
-      "postCleanupNarrative": true,
-      "reloadNoReplay": true,
-      "errors": 0
-    },
-    {
-      "width": 390,
-      "height": 844,
-      "motion": "reduce",
-      "cases": [
-        {
-          "name": "attack",
-          "tokenCount": 2,
-          "headerBottom": 80.1875,
-          "actionTop": 590.4375,
-          "tokens": [
-            {
-              "type": "damage",
-              "text": "−3",
-              "y": 114.1875,
-              "bottom": 139.078125
-            },
-            {
-              "type": "damage",
-              "text": "−23",
-              "y": 114.1875,
-              "bottom": 139.078125
-            }
-          ]
-        },
-        {
-          "name": "potion",
-          "tokenCount": 2,
-          "headerBottom": 80.1875,
-          "actionTop": 590.4375,
-          "tokens": [
-            {
-              "type": "damage",
-              "text": "−3",
-              "y": 114.1875,
-              "bottom": 139.078125
-            },
-            {
-              "type": "heal",
-              "text": "회복 +44",
-              "y": 142.078125,
-              "bottom": 166.96875
-            }
-          ]
-        },
-        {
-          "name": "stun",
-          "tokenCount": 2,
-          "headerBottom": 80.1875,
-          "actionTop": 590.4375,
-          "tokens": [
-            {
-              "type": "damage",
-              "text": "−35",
-              "y": 114.1875,
-              "bottom": 139.078125
-            },
-            {
-              "type": "stun",
-              "text": "기절",
-              "y": 142.078125,
-              "bottom": 166.96875
-            }
-          ]
-        },
-        {
-          "name": "burn",
-          "tokenCount": 4,
-          "headerBottom": 107.984375,
-          "actionTop": 590.4375,
-          "tokens": [
-            {
-              "type": "damage",
-              "text": "−6",
-              "y": 141.984375,
-              "bottom": 166.875
-            },
-            {
-              "type": "damage",
-              "text": "−52",
-              "y": 141.984375,
-              "bottom": 166.875
-            },
-            {
-              "type": "dot",
-              "text": "지속 피해 −8",
-              "y": 169.875,
-              "bottom": 194.765625
-            },
-            {
-              "type": "burn",
-              "text": "화상",
-              "y": 197.765625,
-              "bottom": 222.65625
-            }
-          ]
-        },
-        {
-          "name": "skillHeal",
-          "tokenCount": 3,
-          "headerBottom": 80.1875,
-          "actionTop": 590.4375,
-          "tokens": [
-            {
-              "type": "damage",
-              "text": "−2",
-              "y": 114.1875,
-              "bottom": 139.078125
-            },
-            {
-              "type": "heal",
-              "text": "회복 +16",
-              "y": 142.078125,
-              "bottom": 166.96875
-            },
-            {
-              "type": "damage",
-              "text": "−38",
-              "y": 114.1875,
-              "bottom": 139.078125
-            }
-          ]
-        },
-        {
-          "name": "critical",
-          "tokenCount": 2,
-          "headerBottom": 80.1875,
-          "actionTop": 590.4375,
-          "tokens": [
-            {
-              "type": "damage",
-              "text": "−5",
-              "y": 114.1875,
-              "bottom": 139.078125
-            },
-            {
-              "type": "critical",
-              "text": "치명타 39",
-              "y": 114.1875,
-              "bottom": 144.484375
-            }
-          ]
-        },
-        {
-          "name": "dodge",
-          "tokenCount": 2,
-          "headerBottom": 80.1875,
-          "actionTop": 590.4375,
-          "tokens": [
-            {
-              "type": "dodge",
-              "text": "회피",
-              "y": 114.1875,
-              "bottom": 139.078125
-            },
-            {
-              "type": "damage",
-              "text": "−25",
-              "y": 114.1875,
-              "bottom": 139.078125
-            }
-          ]
-        },
-        {
-          "name": "boss",
-          "tokenCount": 1,
-          "headerBottom": 80.1875,
-          "actionTop": 590.4375,
-          "tokens": [
-            {
-              "type": "boss",
-              "text": "인장의 수호자 · 가시의 파수꾼",
-              "y": 88.1875,
-              "bottom": 137.375
-            }
-          ]
-        },
-        {
-          "name": "victory",
-          "tokenCount": 2,
-          "headerBottom": 91.1875,
-          "actionTop": 780,
-          "tokens": [
-            {
-              "type": "victory",
-              "text": "전투 승리 · 전리품을 확인하세요",
-              "y": 99.1875,
-              "bottom": 140.375
-            },
-            {
-              "type": "damage",
-              "text": "−21",
-              "y": 169.375,
-              "bottom": 194.265625
-            }
-          ]
-        },
-        {
-          "name": "receipt",
-          "tokenCount": 1,
-          "headerBottom": 91.1875,
-          "actionTop": 663.828125,
-          "tokens": [
-            {
-              "type": "receipt",
-              "text": "전리품 확보",
-              "y": 125.1875,
-              "bottom": 150.078125
-            }
-          ]
-        },
-        {
-          "name": "legend",
-          "tokenCount": 1,
-          "headerBottom": 91.1875,
-          "actionTop": 699.609375,
-          "tokens": [
-            {
-              "type": "legend",
-              "text": "전설 발견 · 백경의 마지막 수평선",
-              "y": 99.1875,
-              "bottom": 148.375
-            }
-          ]
-        },
-        {
-          "name": "mythic",
-          "tokenCount": 1,
-          "headerBottom": 91.1875,
-          "actionTop": 699.609375,
-          "tokens": [
-            {
-              "type": "mythic",
-              "text": "신화 발견 · 시간을 베는 검",
-              "y": 99.1875,
-              "bottom": 148.375
-            }
-          ]
-        },
-        {
-          "name": "hidden",
-          "tokenCount": 1,
+          "fxTokenCount": 0,
           "headerBottom": 184.171875,
           "actionTop": 844,
           "tokens": [
@@ -1381,6 +1052,7 @@
         {
           "name": "ending",
           "tokenCount": 1,
+          "fxTokenCount": 0,
           "headerBottom": 236.21875,
           "actionTop": 675,
           "tokens": [
@@ -1395,6 +1067,397 @@
         {
           "name": "stress",
           "tokenCount": 12,
+          "fxTokenCount": 12,
+          "headerBottom": 107.984375,
+          "actionTop": 590.4375,
+          "tokens": [
+            {
+              "type": "damage",
+              "text": "−18",
+              "y": 138.5400848388672,
+              "bottom": 157.3369598388672
+            },
+            {
+              "type": "heal",
+              "text": "회복 +8",
+              "y": 157.85610961914062,
+              "bottom": 176.65298461914062
+            },
+            {
+              "type": "dodge",
+              "text": "회피",
+              "y": 177.1806640625,
+              "bottom": 195.9775390625
+            },
+            {
+              "type": "guard",
+              "text": "방어 · 집중",
+              "y": 196.51382446289062,
+              "bottom": 215.31069946289062
+            },
+            {
+              "type": "poison",
+              "text": "중독",
+              "y": 215.85577392578125,
+              "bottom": 234.65264892578125
+            },
+            {
+              "type": "critical",
+              "text": "치명타 36",
+              "y": 235.20669555664062,
+              "bottom": 256.3941955566406
+            },
+            {
+              "type": "damage",
+              "text": "−18",
+              "y": 138.5400848388672,
+              "bottom": 157.3369598388672
+            },
+            {
+              "type": "heal",
+              "text": "회복 +8",
+              "y": 157.85610961914062,
+              "bottom": 176.65298461914062
+            },
+            {
+              "type": "dodge",
+              "text": "회피",
+              "y": 177.1806640625,
+              "bottom": 195.9775390625
+            },
+            {
+              "type": "guard",
+              "text": "방어 · 집중",
+              "y": 196.51382446289062,
+              "bottom": 215.31069946289062
+            },
+            {
+              "type": "poison",
+              "text": "중독",
+              "y": 215.85577392578125,
+              "bottom": 234.65264892578125
+            },
+            {
+              "type": "critical",
+              "text": "치명타 36",
+              "y": 235.20669555664062,
+              "bottom": 256.3941955566406
+            }
+          ]
+        },
+        {
+          "name": "rapid",
+          "tokenCount": 2,
+          "fxTokenCount": 2,
+          "headerBottom": 80.1875,
+          "actionTop": 590.4375,
+          "tokens": [
+            {
+              "type": "damage",
+              "text": "−3",
+              "y": 113.74330139160156,
+              "bottom": 138.63392639160156
+            },
+            {
+              "type": "damage",
+              "text": "−21",
+              "y": 113.74330139160156,
+              "bottom": 138.63392639160156
+            }
+          ]
+        }
+      ],
+      "oneController": true,
+      "exactTransactions": true,
+      "postCleanupNarrative": true,
+      "reloadNoReplay": true,
+      "errors": 0
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "motion": "reduce",
+      "cases": [
+        {
+          "name": "attack",
+          "tokenCount": 2,
+          "fxTokenCount": 2,
+          "headerBottom": 80.1875,
+          "actionTop": 590.4375,
+          "tokens": [
+            {
+              "type": "damage",
+              "text": "−3",
+              "y": 114.1875,
+              "bottom": 139.078125
+            },
+            {
+              "type": "damage",
+              "text": "−23",
+              "y": 114.1875,
+              "bottom": 139.078125
+            }
+          ]
+        },
+        {
+          "name": "potion",
+          "tokenCount": 2,
+          "fxTokenCount": 2,
+          "headerBottom": 80.1875,
+          "actionTop": 590.4375,
+          "tokens": [
+            {
+              "type": "damage",
+              "text": "−3",
+              "y": 114.1875,
+              "bottom": 139.078125
+            },
+            {
+              "type": "heal",
+              "text": "회복 +44",
+              "y": 142.078125,
+              "bottom": 166.96875
+            }
+          ]
+        },
+        {
+          "name": "stun",
+          "tokenCount": 2,
+          "fxTokenCount": 2,
+          "headerBottom": 80.1875,
+          "actionTop": 590.4375,
+          "tokens": [
+            {
+              "type": "damage",
+              "text": "−35",
+              "y": 114.1875,
+              "bottom": 139.078125
+            },
+            {
+              "type": "stun",
+              "text": "기절",
+              "y": 142.078125,
+              "bottom": 166.96875
+            }
+          ]
+        },
+        {
+          "name": "burn",
+          "tokenCount": 4,
+          "fxTokenCount": 4,
+          "headerBottom": 107.984375,
+          "actionTop": 590.4375,
+          "tokens": [
+            {
+              "type": "damage",
+              "text": "−6",
+              "y": 141.984375,
+              "bottom": 166.875
+            },
+            {
+              "type": "damage",
+              "text": "−52",
+              "y": 141.984375,
+              "bottom": 166.875
+            },
+            {
+              "type": "dot",
+              "text": "지속 피해 −8",
+              "y": 169.875,
+              "bottom": 194.765625
+            },
+            {
+              "type": "burn",
+              "text": "화상",
+              "y": 197.765625,
+              "bottom": 222.65625
+            }
+          ]
+        },
+        {
+          "name": "skillHeal",
+          "tokenCount": 3,
+          "fxTokenCount": 3,
+          "headerBottom": 80.1875,
+          "actionTop": 590.4375,
+          "tokens": [
+            {
+              "type": "damage",
+              "text": "−2",
+              "y": 114.1875,
+              "bottom": 139.078125
+            },
+            {
+              "type": "heal",
+              "text": "회복 +16",
+              "y": 142.078125,
+              "bottom": 166.96875
+            },
+            {
+              "type": "damage",
+              "text": "−38",
+              "y": 114.1875,
+              "bottom": 139.078125
+            }
+          ]
+        },
+        {
+          "name": "critical",
+          "tokenCount": 2,
+          "fxTokenCount": 2,
+          "headerBottom": 80.1875,
+          "actionTop": 590.4375,
+          "tokens": [
+            {
+              "type": "damage",
+              "text": "−5",
+              "y": 114.1875,
+              "bottom": 139.078125
+            },
+            {
+              "type": "critical",
+              "text": "치명타 39",
+              "y": 114.1875,
+              "bottom": 144.484375
+            }
+          ]
+        },
+        {
+          "name": "dodge",
+          "tokenCount": 2,
+          "fxTokenCount": 2,
+          "headerBottom": 80.1875,
+          "actionTop": 590.4375,
+          "tokens": [
+            {
+              "type": "dodge",
+              "text": "회피",
+              "y": 114.1875,
+              "bottom": 139.078125
+            },
+            {
+              "type": "damage",
+              "text": "−25",
+              "y": 114.1875,
+              "bottom": 139.078125
+            }
+          ]
+        },
+        {
+          "name": "boss",
+          "tokenCount": 1,
+          "fxTokenCount": 0,
+          "headerBottom": 80.1875,
+          "actionTop": 590.4375,
+          "tokens": [
+            {
+              "type": "boss",
+              "text": "인장의 수호자 · 가시의 파수꾼",
+              "y": 88.1875,
+              "bottom": 137.375
+            }
+          ]
+        },
+        {
+          "name": "victory",
+          "tokenCount": 2,
+          "fxTokenCount": 1,
+          "headerBottom": 91.1875,
+          "actionTop": 780,
+          "tokens": [
+            {
+              "type": "victory",
+              "text": "전투 승리 · 전리품을 확인하세요",
+              "y": 99.1875,
+              "bottom": 140.375
+            },
+            {
+              "type": "damage",
+              "text": "−21",
+              "y": 169.375,
+              "bottom": 194.265625
+            }
+          ]
+        },
+        {
+          "name": "receipt",
+          "tokenCount": 1,
+          "fxTokenCount": 1,
+          "headerBottom": 91.1875,
+          "actionTop": 663.828125,
+          "tokens": [
+            {
+              "type": "receipt",
+              "text": "전리품 확보",
+              "y": 125.1875,
+              "bottom": 150.078125
+            }
+          ]
+        },
+        {
+          "name": "legend",
+          "tokenCount": 1,
+          "fxTokenCount": 0,
+          "headerBottom": 91.1875,
+          "actionTop": 699.609375,
+          "tokens": [
+            {
+              "type": "legend",
+              "text": "전설 발견 · 백경의 마지막 수평선",
+              "y": 99.1875,
+              "bottom": 148.375
+            }
+          ]
+        },
+        {
+          "name": "mythic",
+          "tokenCount": 1,
+          "fxTokenCount": 0,
+          "headerBottom": 91.1875,
+          "actionTop": 699.609375,
+          "tokens": [
+            {
+              "type": "mythic",
+              "text": "신화 발견 · 시간을 베는 검",
+              "y": 99.1875,
+              "bottom": 148.375
+            }
+          ]
+        },
+        {
+          "name": "hidden",
+          "tokenCount": 1,
+          "fxTokenCount": 0,
+          "headerBottom": 184.171875,
+          "actionTop": 844,
+          "tokens": [
+            {
+              "type": "hidden",
+              "text": "숨겨진 비전 · 룬검사",
+              "y": 192.171875,
+              "bottom": 241.359375
+            }
+          ]
+        },
+        {
+          "name": "ending",
+          "tokenCount": 1,
+          "fxTokenCount": 0,
+          "headerBottom": 236.21875,
+          "actionTop": 675,
+          "tokens": [
+            {
+              "type": "ending",
+              "text": "불씨를 놓아준 자",
+              "y": 244.21875,
+              "bottom": 293.40625
+            }
+          ]
+        },
+        {
+          "name": "stress",
+          "tokenCount": 12,
+          "fxTokenCount": 12,
           "headerBottom": 107.984375,
           "actionTop": 590.4375,
           "tokens": [
@@ -1475,6 +1538,7 @@
         {
           "name": "rapid",
           "tokenCount": 2,
+          "fxTokenCount": 2,
           "headerBottom": 80.1875,
           "actionTop": 590.4375,
           "tokens": [
@@ -1507,164 +1571,172 @@
         {
           "name": "attack",
           "tokenCount": 2,
+          "fxTokenCount": 2,
           "headerBottom": 80.1875,
           "actionTop": 678.4375,
           "tokens": [
             {
               "type": "damage",
               "text": "−3",
-              "y": 113.7442398071289,
-              "bottom": 138.63485717773438
+              "y": 113.74737548828125,
+              "bottom": 138.63800048828125
             },
             {
               "type": "damage",
               "text": "−23",
-              "y": 113.7442398071289,
-              "bottom": 138.63485717773438
+              "y": 113.74737548828125,
+              "bottom": 138.63800048828125
             }
           ]
         },
         {
           "name": "potion",
           "tokenCount": 2,
+          "fxTokenCount": 2,
           "headerBottom": 80.1875,
           "actionTop": 678.4375,
           "tokens": [
             {
               "type": "damage",
               "text": "−3",
-              "y": 113.74449920654297,
-              "bottom": 138.6351318359375
+              "y": 114.46696472167969,
+              "bottom": 139.3575897216797
             },
             {
               "type": "heal",
               "text": "회복 +44",
-              "y": 142.154296875,
-              "bottom": 167.044921875
+              "y": 142.88861083984375,
+              "bottom": 167.77923583984375
             }
           ]
         },
         {
           "name": "stun",
           "tokenCount": 2,
+          "fxTokenCount": 2,
           "headerBottom": 80.1875,
           "actionTop": 678.4375,
           "tokens": [
             {
               "type": "damage",
               "text": "−35",
-              "y": 114.46753692626953,
-              "bottom": 139.358154296875
+              "y": 113.74763488769531,
+              "bottom": 138.6382598876953
             },
             {
               "type": "stun",
               "text": "기절",
-              "y": 142.88919067382812,
-              "bottom": 167.77981567382812
+              "y": 142.15748596191406,
+              "bottom": 167.04811096191406
             }
           ]
         },
         {
           "name": "burn",
           "tokenCount": 4,
+          "fxTokenCount": 4,
           "headerBottom": 107.984375,
           "actionTop": 678.4375,
           "tokens": [
             {
               "type": "damage",
               "text": "−6",
-              "y": 142.2655487060547,
-              "bottom": 167.15618896484375
+              "y": 142.2637481689453,
+              "bottom": 167.15438842773438
             },
             {
               "type": "damage",
               "text": "−52",
-              "y": 142.2655487060547,
-              "bottom": 167.15618896484375
+              "y": 142.2637481689453,
+              "bottom": 167.15438842773438
             },
             {
               "type": "dot",
               "text": "지속 피해 −8",
-              "y": 170.68722534179688,
-              "bottom": 195.57785034179688
+              "y": 170.68539428710938,
+              "bottom": 195.57601928710938
             },
             {
               "type": "burn",
               "text": "화상",
-              "y": 199.1175537109375,
-              "bottom": 224.0081787109375
+              "y": 199.11570739746094,
+              "bottom": 224.00633239746094
             }
           ]
         },
         {
           "name": "skillHeal",
           "tokenCount": 3,
+          "fxTokenCount": 3,
           "headerBottom": 80.1875,
           "actionTop": 678.4375,
           "tokens": [
             {
               "type": "damage",
               "text": "−2",
-              "y": 114.4682388305664,
-              "bottom": 139.35885620117188
+              "y": 114.46871948242188,
+              "bottom": 139.35934448242188
             },
             {
               "type": "heal",
               "text": "회복 +16",
-              "y": 142.88990783691406,
-              "bottom": 167.78053283691406
+              "y": 142.89039611816406,
+              "bottom": 167.78102111816406
             },
             {
               "type": "damage",
               "text": "−38",
-              "y": 114.4682388305664,
-              "bottom": 139.35885620117188
+              "y": 114.46871948242188,
+              "bottom": 139.35934448242188
             }
           ]
         },
         {
           "name": "critical",
           "tokenCount": 2,
+          "fxTokenCount": 2,
           "headerBottom": 80.1875,
           "actionTop": 678.4375,
           "tokens": [
             {
               "type": "damage",
               "text": "−5",
-              "y": 113.74385833740234,
-              "bottom": 138.63449096679688
+              "y": 113.74475860595703,
+              "bottom": 138.6353759765625
             },
             {
               "type": "critical",
               "text": "치명타 39",
-              "y": 113.74385833740234,
-              "bottom": 144.04074096679688
+              "y": 113.74475860595703,
+              "bottom": 144.0416259765625
             }
           ]
         },
         {
           "name": "dodge",
           "tokenCount": 2,
+          "fxTokenCount": 2,
           "headerBottom": 80.1875,
           "actionTop": 678.4375,
           "tokens": [
             {
               "type": "dodge",
               "text": "회피",
-              "y": 114.46920776367188,
-              "bottom": 139.35983276367188
+              "y": 114.47122192382812,
+              "bottom": 139.36184692382812
             },
             {
               "type": "damage",
               "text": "−25",
-              "y": 114.46920776367188,
-              "bottom": 139.35983276367188
+              "y": 114.47122192382812,
+              "bottom": 139.36184692382812
             }
           ]
         },
         {
           "name": "boss",
           "tokenCount": 1,
+          "fxTokenCount": 0,
           "headerBottom": 80.1875,
           "actionTop": 678.4375,
           "tokens": [
@@ -1679,6 +1751,7 @@
         {
           "name": "victory",
           "tokenCount": 2,
+          "fxTokenCount": 1,
           "headerBottom": 91.1875,
           "actionTop": 868,
           "tokens": [
@@ -1691,28 +1764,30 @@
             {
               "type": "damage",
               "text": "−21",
-              "y": 164.93032836914062,
-              "bottom": 189.82095336914062
+              "y": 164.93504333496094,
+              "bottom": 189.82566833496094
             }
           ]
         },
         {
           "name": "receipt",
           "tokenCount": 1,
+          "fxTokenCount": 1,
           "headerBottom": 91.1875,
           "actionTop": 751.828125,
           "tokens": [
             {
               "type": "receipt",
               "text": "전리품 확보",
-              "y": 124.03697204589844,
-              "bottom": 148.92759704589844
+              "y": 124.74436950683594,
+              "bottom": 149.63499450683594
             }
           ]
         },
         {
           "name": "legend",
           "tokenCount": 1,
+          "fxTokenCount": 0,
           "headerBottom": 91.1875,
           "actionTop": 787.609375,
           "tokens": [
@@ -1727,6 +1802,7 @@
         {
           "name": "mythic",
           "tokenCount": 1,
+          "fxTokenCount": 0,
           "headerBottom": 91.1875,
           "actionTop": 787.609375,
           "tokens": [
@@ -1741,6 +1817,7 @@
         {
           "name": "hidden",
           "tokenCount": 1,
+          "fxTokenCount": 0,
           "headerBottom": 196.484375,
           "actionTop": 932,
           "tokens": [
@@ -1755,6 +1832,7 @@
         {
           "name": "ending",
           "tokenCount": 1,
+          "fxTokenCount": 0,
           "headerBottom": 236.21875,
           "actionTop": 648,
           "tokens": [
@@ -1769,100 +1847,102 @@
         {
           "name": "stress",
           "tokenCount": 12,
+          "fxTokenCount": 12,
           "headerBottom": 107.984375,
           "actionTop": 678.4375,
           "tokens": [
             {
               "type": "damage",
               "text": "−18",
-              "y": 138.54403686523438,
-              "bottom": 157.34091186523438
+              "y": 138.53854370117188,
+              "bottom": 157.33541870117188
             },
             {
               "type": "heal",
               "text": "회복 +8",
-              "y": 157.86013793945312,
-              "bottom": 176.65701293945312
+              "y": 157.85455322265625,
+              "bottom": 176.65142822265625
             },
             {
               "type": "dodge",
               "text": "회피",
-              "y": 177.18475341796875,
-              "bottom": 195.98162841796875
+              "y": 177.1790771484375,
+              "bottom": 195.9759521484375
             },
             {
               "type": "guard",
               "text": "방어 · 집중",
-              "y": 196.51797485351562,
-              "bottom": 215.31484985351562
+              "y": 196.51220703125,
+              "bottom": 215.30908203125
             },
             {
               "type": "poison",
               "text": "중독",
-              "y": 215.8599853515625,
-              "bottom": 234.6568603515625
+              "y": 215.8541259765625,
+              "bottom": 234.6510009765625
             },
             {
               "type": "critical",
               "text": "치명타 36",
-              "y": 235.2109832763672,
-              "bottom": 256.39849853515625
+              "y": 235.20501708984375,
+              "bottom": 256.39251708984375
             },
             {
               "type": "damage",
               "text": "−18",
-              "y": 138.54403686523438,
-              "bottom": 157.34091186523438
+              "y": 138.53854370117188,
+              "bottom": 157.33541870117188
             },
             {
               "type": "heal",
               "text": "회복 +8",
-              "y": 157.86013793945312,
-              "bottom": 176.65701293945312
+              "y": 157.85455322265625,
+              "bottom": 176.65142822265625
             },
             {
               "type": "dodge",
               "text": "회피",
-              "y": 177.18475341796875,
-              "bottom": 195.98162841796875
+              "y": 177.1790771484375,
+              "bottom": 195.9759521484375
             },
             {
               "type": "guard",
               "text": "방어 · 집중",
-              "y": 196.51797485351562,
-              "bottom": 215.31484985351562
+              "y": 196.51220703125,
+              "bottom": 215.30908203125
             },
             {
               "type": "poison",
               "text": "중독",
-              "y": 215.8599853515625,
-              "bottom": 234.6568603515625
+              "y": 215.8541259765625,
+              "bottom": 234.6510009765625
             },
             {
               "type": "critical",
               "text": "치명타 36",
-              "y": 235.2109832763672,
-              "bottom": 256.39849853515625
+              "y": 235.20501708984375,
+              "bottom": 256.39251708984375
             }
           ]
         },
         {
           "name": "rapid",
           "tokenCount": 2,
+          "fxTokenCount": 2,
           "headerBottom": 80.1875,
           "actionTop": 678.4375,
           "tokens": [
             {
               "type": "damage",
               "text": "−3",
-              "y": 114.4652099609375,
-              "bottom": 139.3558349609375
+              "y": 114.46600341796875,
+              "bottom": 139.35662841796875
             },
             {
               "type": "damage",
               "text": "−21",
-              "y": 114.4652099609375,
-              "bottom": 139.3558349609375
+              "y": 114.46600341796875,
+              "bottom": 139.35662841796875
             }
           ]
         }
@@ -1881,6 +1961,7 @@
         {
           "name": "attack",
           "tokenCount": 2,
+          "fxTokenCount": 2,
           "headerBottom": 80.1875,
           "actionTop": 678.4375,
           "tokens": [
@@ -1901,6 +1982,7 @@
         {
           "name": "potion",
           "tokenCount": 2,
+          "fxTokenCount": 2,
           "headerBottom": 80.1875,
           "actionTop": 678.4375,
           "tokens": [
@@ -1921,6 +2003,7 @@
         {
           "name": "stun",
           "tokenCount": 2,
+          "fxTokenCount": 2,
           "headerBottom": 80.1875,
           "actionTop": 678.4375,
           "tokens": [
@@ -1941,6 +2024,7 @@
         {
           "name": "burn",
           "tokenCount": 4,
+          "fxTokenCount": 4,
           "headerBottom": 107.984375,
           "actionTop": 678.4375,
           "tokens": [
@@ -1973,6 +2057,7 @@
         {
           "name": "skillHeal",
           "tokenCount": 3,
+          "fxTokenCount": 3,
           "headerBottom": 80.1875,
           "actionTop": 678.4375,
           "tokens": [
@@ -1999,6 +2084,7 @@
         {
           "name": "critical",
           "tokenCount": 2,
+          "fxTokenCount": 2,
           "headerBottom": 80.1875,
           "actionTop": 678.4375,
           "tokens": [
@@ -2019,6 +2105,7 @@
         {
           "name": "dodge",
           "tokenCount": 2,
+          "fxTokenCount": 2,
           "headerBottom": 80.1875,
           "actionTop": 678.4375,
           "tokens": [
@@ -2039,6 +2126,7 @@
         {
           "name": "boss",
           "tokenCount": 1,
+          "fxTokenCount": 0,
           "headerBottom": 80.1875,
           "actionTop": 678.4375,
           "tokens": [
@@ -2053,6 +2141,7 @@
         {
           "name": "victory",
           "tokenCount": 2,
+          "fxTokenCount": 1,
           "headerBottom": 91.1875,
           "actionTop": 868,
           "tokens": [
@@ -2073,6 +2162,7 @@
         {
           "name": "receipt",
           "tokenCount": 1,
+          "fxTokenCount": 1,
           "headerBottom": 91.1875,
           "actionTop": 751.828125,
           "tokens": [
@@ -2087,6 +2177,7 @@
         {
           "name": "legend",
           "tokenCount": 1,
+          "fxTokenCount": 0,
           "headerBottom": 91.1875,
           "actionTop": 787.609375,
           "tokens": [
@@ -2101,6 +2192,7 @@
         {
           "name": "mythic",
           "tokenCount": 1,
+          "fxTokenCount": 0,
           "headerBottom": 91.1875,
           "actionTop": 787.609375,
           "tokens": [
@@ -2115,6 +2207,7 @@
         {
           "name": "hidden",
           "tokenCount": 1,
+          "fxTokenCount": 0,
           "headerBottom": 196.484375,
           "actionTop": 932,
           "tokens": [
@@ -2129,6 +2222,7 @@
         {
           "name": "ending",
           "tokenCount": 1,
+          "fxTokenCount": 0,
           "headerBottom": 236.21875,
           "actionTop": 648,
           "tokens": [
@@ -2143,6 +2237,7 @@
         {
           "name": "stress",
           "tokenCount": 12,
+          "fxTokenCount": 12,
           "headerBottom": 107.984375,
           "actionTop": 678.4375,
           "tokens": [
@@ -2223,6 +2318,7 @@
         {
           "name": "rapid",
           "tokenCount": 2,
+          "fxTokenCount": 2,
           "headerBottom": 80.1875,
           "actionTop": 678.4375,
           "tokens": [
@@ -2255,164 +2351,172 @@
         {
           "name": "attack",
           "tokenCount": 2,
+          "fxTokenCount": 2,
           "headerBottom": 80.1875,
           "actionTop": 410.4375,
           "tokens": [
             {
               "type": "damage",
               "text": "−3",
-              "y": 113.74398803710938,
-              "bottom": 138.63461303710938
+              "y": 113.74668884277344,
+              "bottom": 138.63731384277344
             },
             {
               "type": "damage",
               "text": "−23",
-              "y": 113.74398803710938,
-              "bottom": 138.63461303710938
+              "y": 113.74668884277344,
+              "bottom": 138.63731384277344
             }
           ]
         },
         {
           "name": "potion",
           "tokenCount": 2,
+          "fxTokenCount": 2,
           "headerBottom": 80.1875,
           "actionTop": 410.4375,
           "tokens": [
             {
               "type": "damage",
               "text": "−3",
-              "y": 113.74446105957031,
-              "bottom": 138.6350860595703
+              "y": 113.74600219726562,
+              "bottom": 138.63662719726562
             },
             {
               "type": "heal",
               "text": "회복 +44",
-              "y": 142.1542510986328,
-              "bottom": 167.0448760986328
+              "y": 142.15582275390625,
+              "bottom": 167.04644775390625
             }
           ]
         },
         {
           "name": "stun",
           "tokenCount": 2,
+          "fxTokenCount": 2,
           "headerBottom": 80.1875,
           "actionTop": 410.4375,
           "tokens": [
             {
               "type": "damage",
               "text": "−35",
-              "y": 113.74098205566406,
-              "bottom": 138.63160705566406
+              "y": 114.46516418457031,
+              "bottom": 139.3557891845703
             },
             {
               "type": "stun",
               "text": "기절",
-              "y": 142.15072631835938,
-              "bottom": 167.04135131835938
+              "y": 142.88677978515625,
+              "bottom": 167.77740478515625
             }
           ]
         },
         {
           "name": "burn",
           "tokenCount": 4,
+          "fxTokenCount": 4,
           "headerBottom": 107.984375,
           "actionTop": 410.4375,
           "tokens": [
             {
               "type": "damage",
               "text": "−6",
-              "y": 142.26524353027344,
-              "bottom": 167.15586853027344
+              "y": 141.54171752929688,
+              "bottom": 166.43234252929688
             },
             {
               "type": "damage",
               "text": "−52",
-              "y": 142.26524353027344,
-              "bottom": 167.15586853027344
+              "y": 141.54171752929688,
+              "bottom": 166.43234252929688
             },
             {
               "type": "dot",
               "text": "지속 피해 −8",
-              "y": 170.68692016601562,
-              "bottom": 214.46817016601562
+              "y": 169.95152282714844,
+              "bottom": 213.73277282714844
             },
             {
               "type": "burn",
               "text": "화상",
-              "y": 218.00787353515625,
-              "bottom": 242.89849853515625
+              "y": 217.26046752929688,
+              "bottom": 242.15109252929688
             }
           ]
         },
         {
           "name": "skillHeal",
           "tokenCount": 3,
+          "fxTokenCount": 3,
           "headerBottom": 80.1875,
           "actionTop": 410.4375,
           "tokens": [
             {
               "type": "damage",
               "text": "−2",
-              "y": 113.7426986694336,
-              "bottom": 138.63333129882812
+              "y": 113.7426528930664,
+              "bottom": 138.63327026367188
             },
             {
               "type": "heal",
               "text": "회복 +16",
-              "y": 142.1524658203125,
-              "bottom": 167.0430908203125
+              "y": 142.1524200439453,
+              "bottom": 167.0430450439453
             },
             {
               "type": "damage",
               "text": "−38",
-              "y": 113.7426986694336,
-              "bottom": 138.63333129882812
+              "y": 113.7426528930664,
+              "bottom": 138.63327026367188
             }
           ]
         },
         {
           "name": "critical",
           "tokenCount": 2,
+          "fxTokenCount": 2,
           "headerBottom": 80.1875,
           "actionTop": 410.4375,
           "tokens": [
             {
               "type": "damage",
               "text": "−5",
-              "y": 113.7423095703125,
-              "bottom": 138.6329345703125
+              "y": 114.46499633789062,
+              "bottom": 139.35562133789062
             },
             {
               "type": "critical",
               "text": "치명타 39",
-              "y": 113.7423095703125,
-              "bottom": 168.3360595703125
+              "y": 114.46499633789062,
+              "bottom": 169.05874633789062
             }
           ]
         },
         {
           "name": "dodge",
           "tokenCount": 2,
+          "fxTokenCount": 2,
           "headerBottom": 80.1875,
           "actionTop": 410.4375,
           "tokens": [
             {
               "type": "dodge",
               "text": "회피",
-              "y": 113.74256896972656,
-              "bottom": 138.63319396972656
+              "y": 114.47113800048828,
+              "bottom": 139.36175537109375
             },
             {
               "type": "damage",
               "text": "−25",
-              "y": 113.74256896972656,
-              "bottom": 138.63319396972656
+              "y": 114.47113800048828,
+              "bottom": 139.36175537109375
             }
           ]
         },
         {
           "name": "boss",
           "tokenCount": 1,
+          "fxTokenCount": 0,
           "headerBottom": 80.1875,
           "actionTop": 410.4375,
           "tokens": [
@@ -2427,6 +2531,7 @@
         {
           "name": "victory",
           "tokenCount": 2,
+          "fxTokenCount": 1,
           "headerBottom": 91.1875,
           "actionTop": 600,
           "tokens": [
@@ -2439,28 +2544,30 @@
             {
               "type": "damage",
               "text": "−21",
-              "y": 164.93063354492188,
-              "bottom": 189.82125854492188
+              "y": 165.6593017578125,
+              "bottom": 190.5499267578125
             }
           ]
         },
         {
           "name": "receipt",
           "tokenCount": 1,
+          "fxTokenCount": 1,
           "headerBottom": 91.1875,
           "actionTop": 483.828125,
           "tokens": [
             {
               "type": "receipt",
               "text": "전리품 확보",
-              "y": 125.4704818725586,
-              "bottom": 150.36111450195312
+              "y": 124.74518585205078,
+              "bottom": 149.63580322265625
             }
           ]
         },
         {
           "name": "legend",
           "tokenCount": 1,
+          "fxTokenCount": 0,
           "headerBottom": 91.1875,
           "actionTop": 519.609375,
           "tokens": [
@@ -2475,6 +2582,7 @@
         {
           "name": "mythic",
           "tokenCount": 1,
+          "fxTokenCount": 0,
           "headerBottom": 91.1875,
           "actionTop": 519.609375,
           "tokens": [
@@ -2489,6 +2597,7 @@
         {
           "name": "hidden",
           "tokenCount": 1,
+          "fxTokenCount": 0,
           "headerBottom": 158.96875,
           "actionTop": 664,
           "tokens": [
@@ -2503,6 +2612,7 @@
         {
           "name": "ending",
           "tokenCount": 1,
+          "fxTokenCount": 0,
           "headerBottom": 236.21875,
           "actionTop": 664,
           "tokens": [
@@ -2517,100 +2627,102 @@
         {
           "name": "stress",
           "tokenCount": 12,
+          "fxTokenCount": 12,
           "headerBottom": 107.984375,
           "actionTop": 410.4375,
           "tokens": [
             {
               "type": "damage",
               "text": "−18",
-              "y": 137.8329620361328,
-              "bottom": 156.6298370361328
+              "y": 139.2647705078125,
+              "bottom": 158.0616455078125
             },
             {
               "type": "heal",
               "text": "회복 +8",
-              "y": 157.13722229003906,
-              "bottom": 175.93409729003906
+              "y": 158.59268188476562,
+              "bottom": 177.38955688476562
             },
             {
               "type": "dodge",
               "text": "회피",
-              "y": 176.449951171875,
-              "bottom": 195.246826171875
+              "y": 177.9292449951172,
+              "bottom": 196.7261199951172
             },
             {
               "type": "guard",
               "text": "방어 · 집중",
-              "y": 195.77117919921875,
-              "bottom": 214.56805419921875
+              "y": 197.27467346191406,
+              "bottom": 216.07154846191406
             },
             {
               "type": "poison",
               "text": "중독",
-              "y": 215.10098266601562,
-              "bottom": 233.89785766601562
+              "y": 216.62921142578125,
+              "bottom": 235.42608642578125
             },
             {
               "type": "critical",
               "text": "치명타 36",
-              "y": 234.43946838378906,
-              "bottom": 255.62696838378906
+              "y": 235.99331665039062,
+              "bottom": 257.1808166503906
             },
             {
               "type": "damage",
               "text": "−18",
-              "y": 137.8329620361328,
-              "bottom": 156.6298370361328
+              "y": 139.2647705078125,
+              "bottom": 158.0616455078125
             },
             {
               "type": "heal",
               "text": "회복 +8",
-              "y": 157.13722229003906,
-              "bottom": 175.93409729003906
+              "y": 158.59268188476562,
+              "bottom": 177.38955688476562
             },
             {
               "type": "dodge",
               "text": "회피",
-              "y": 176.449951171875,
-              "bottom": 195.246826171875
+              "y": 177.9292449951172,
+              "bottom": 196.7261199951172
             },
             {
               "type": "guard",
               "text": "방어 · 집중",
-              "y": 195.77117919921875,
-              "bottom": 214.56805419921875
+              "y": 197.27467346191406,
+              "bottom": 216.07154846191406
             },
             {
               "type": "poison",
               "text": "중독",
-              "y": 215.10098266601562,
-              "bottom": 233.89785766601562
+              "y": 216.62921142578125,
+              "bottom": 235.42608642578125
             },
             {
               "type": "critical",
               "text": "치명타 36",
-              "y": 234.43946838378906,
-              "bottom": 255.62696838378906
+              "y": 235.99331665039062,
+              "bottom": 257.1808166503906
             }
           ]
         },
         {
           "name": "rapid",
           "tokenCount": 2,
+          "fxTokenCount": 2,
           "headerBottom": 80.1875,
           "actionTop": 410.4375,
           "tokens": [
             {
               "type": "damage",
               "text": "−3",
-              "y": 114.46621704101562,
-              "bottom": 139.35684204101562
+              "y": 113.74317169189453,
+              "bottom": 138.6337890625
             },
             {
               "type": "damage",
               "text": "−21",
-              "y": 114.46621704101562,
-              "bottom": 139.35684204101562
+              "y": 113.74317169189453,
+              "bottom": 138.6337890625
             }
           ]
         }
@@ -2629,6 +2741,7 @@
         {
           "name": "attack",
           "tokenCount": 2,
+          "fxTokenCount": 2,
           "headerBottom": 80.1875,
           "actionTop": 410.4375,
           "tokens": [
@@ -2649,6 +2762,7 @@
         {
           "name": "potion",
           "tokenCount": 2,
+          "fxTokenCount": 2,
           "headerBottom": 80.1875,
           "actionTop": 410.4375,
           "tokens": [
@@ -2669,6 +2783,7 @@
         {
           "name": "stun",
           "tokenCount": 2,
+          "fxTokenCount": 2,
           "headerBottom": 80.1875,
           "actionTop": 410.4375,
           "tokens": [
@@ -2689,6 +2804,7 @@
         {
           "name": "burn",
           "tokenCount": 4,
+          "fxTokenCount": 4,
           "headerBottom": 107.984375,
           "actionTop": 410.4375,
           "tokens": [
@@ -2721,6 +2837,7 @@
         {
           "name": "skillHeal",
           "tokenCount": 3,
+          "fxTokenCount": 3,
           "headerBottom": 80.1875,
           "actionTop": 410.4375,
           "tokens": [
@@ -2747,6 +2864,7 @@
         {
           "name": "critical",
           "tokenCount": 2,
+          "fxTokenCount": 2,
           "headerBottom": 80.1875,
           "actionTop": 410.4375,
           "tokens": [
@@ -2767,6 +2885,7 @@
         {
           "name": "dodge",
           "tokenCount": 2,
+          "fxTokenCount": 2,
           "headerBottom": 80.1875,
           "actionTop": 410.4375,
           "tokens": [
@@ -2787,6 +2906,7 @@
         {
           "name": "boss",
           "tokenCount": 1,
+          "fxTokenCount": 0,
           "headerBottom": 80.1875,
           "actionTop": 410.4375,
           "tokens": [
@@ -2801,6 +2921,7 @@
         {
           "name": "victory",
           "tokenCount": 2,
+          "fxTokenCount": 1,
           "headerBottom": 91.1875,
           "actionTop": 600,
           "tokens": [
@@ -2821,6 +2942,7 @@
         {
           "name": "receipt",
           "tokenCount": 1,
+          "fxTokenCount": 1,
           "headerBottom": 91.1875,
           "actionTop": 483.828125,
           "tokens": [
@@ -2835,6 +2957,7 @@
         {
           "name": "legend",
           "tokenCount": 1,
+          "fxTokenCount": 0,
           "headerBottom": 91.1875,
           "actionTop": 519.609375,
           "tokens": [
@@ -2849,6 +2972,7 @@
         {
           "name": "mythic",
           "tokenCount": 1,
+          "fxTokenCount": 0,
           "headerBottom": 91.1875,
           "actionTop": 519.609375,
           "tokens": [
@@ -2863,6 +2987,7 @@
         {
           "name": "hidden",
           "tokenCount": 1,
+          "fxTokenCount": 0,
           "headerBottom": 158.96875,
           "actionTop": 664,
           "tokens": [
@@ -2877,6 +3002,7 @@
         {
           "name": "ending",
           "tokenCount": 1,
+          "fxTokenCount": 0,
           "headerBottom": 236.21875,
           "actionTop": 664,
           "tokens": [
@@ -2891,6 +3017,7 @@
         {
           "name": "stress",
           "tokenCount": 12,
+          "fxTokenCount": 12,
           "headerBottom": 107.984375,
           "actionTop": 410.4375,
           "tokens": [
@@ -2971,6 +3098,7 @@
         {
           "name": "rapid",
           "tokenCount": 2,
+          "fxTokenCount": 2,
           "headerBottom": 80.1875,
           "actionTop": 410.4375,
           "tokens": [

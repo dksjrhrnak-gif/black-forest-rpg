@@ -1,0 +1,26 @@
+{
+  "sourceCommit": "88f1ccd4dded1437d959a795ee5108e2d4567d09",
+  "file": "assets/class_pequod.webp",
+  "checks": [
+    {
+      "status": 200,
+      "bytes": 83088,
+      "sha256": "1acfc3db75c97b02a85df4132a9c8bc1d5782e635e09ccb28dc194c3a181876e",
+      "exactRepositoryBytes": true
+    },
+    {
+      "status": 200,
+      "bytes": 83088,
+      "sha256": "1acfc3db75c97b02a85df4132a9c8bc1d5782e635e09ccb28dc194c3a181876e",
+      "exactRepositoryBytes": true
+    },
+    {
+      "status": 200,
+      "bytes": 83088,
+      "sha256": "1acfc3db75c97b02a85df4132a9c8bc1d5782e635e09ccb28dc194c3a181876e",
+      "exactRepositoryBytes": true
+    }
+  ],
+  "originalImagePreserved": true,
+  "diagnosis": "A prior Firefox console reported Image corrupt or truncated. Three fresh public responses are complete and identical to the repository. This does not establish the cause of the prior console error."
+}
