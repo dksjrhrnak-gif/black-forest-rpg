@@ -15,8 +15,8 @@
 | 390×844 | 탐험 | 84.19 → 84.19 | 285.95 → 309.95 | 112.00 → 112.00 | 173.17 → 173.17 | 3 → 3 | [전](screenshots/before-390x844-exploration.jpg) / [후](screenshots/after-390x844-exploration.jpg) |
 | 390×844 | 강제 전직 | 171.22 → — | — → — | — → — | 99.09 → 99.09 | 1 → 1 | [전](screenshots/before-390x844-promotion.jpg) / [후](screenshots/after-390x844-promotion.jpg) |
 | 390×844 | 보상 | 84.19 → 84.19 | — → — | 48.00 → 112.00 | 137.39 → 137.39 | 3 → 3 | [전](screenshots/before-390x844-reward.jpg) / [후](screenshots/after-390x844-reward.jpg) |
-| 390×664 | 일반 전투 | 73.19 → 73.19 | 62.45 → 184.86 | 112.00 → 48.00 | 253.56 → 246.56 | 5 → 5 | [전](screenshots/before-390x664-battle.jpg) / [후](screenshots/after-390x664-battle.jpg) |
-| 390×664 | 보스 전투 | 73.19 → 73.19 | 62.45 → 184.86 | 112.00 → 48.00 | 253.56 → 246.56 | 5 → 5 | [전](screenshots/before-390x664-boss.jpg) / [후](screenshots/after-390x664-boss.jpg) |
+| 390×664 | 일반 전투 | 73.19 → 73.19 | 62.45 → 272.25 | 112.00 → 48.00 | 253.56 → 246.56 | 5 → 5 | [전](screenshots/before-390x664-battle.jpg) / [후](screenshots/after-390x664-battle.jpg) |
+| 390×664 | 보스 전투 | 73.19 → 73.19 | 62.45 → 272.25 | 112.00 → 48.00 | 253.56 → 246.56 | 5 → 5 | [전](screenshots/before-390x664-boss.jpg) / [후](screenshots/after-390x664-boss.jpg) |
 | 390×664 | 탐험 | 84.19 → 84.19 | 105.95 → 129.95 | 112.00 → 112.00 | 173.17 → 173.17 | 3 → 3 | [전](screenshots/before-390x664-exploration.jpg) / [후](screenshots/after-390x664-exploration.jpg) |
 | 390×664 | 강제 전직 | 171.22 → — | — → — | — → — | 99.09 → 99.09 | 1 → 1 | [전](screenshots/before-390x664-promotion.jpg) / [후](screenshots/after-390x664-promotion.jpg) |
 | 390×664 | 보상 | 84.19 → 84.19 | — → — | 48.00 → 112.00 | 137.39 → 137.39 | 3 → 3 | [전](screenshots/before-390x664-reward.jpg) / [후](screenshots/after-390x664-reward.jpg) |
@@ -25,14 +25,14 @@
 
 ## 추가 스트레스 검사
 
-Chromium과 WebKit에서 같은 결과를 확인했습니다. 모든 항목은 390×664이며 행동 5개가 동시에 보였습니다. 긴 로그와 상태가 많은 경우 이미지 공간이 줄어드는 기존 레이아웃의 절충은 남아 있습니다.
+10/17 최종 가로 배치의 Chromium 실측입니다. 모든 항목은 390×664이며 행동 5개가 동시에 보였습니다. 짧은 화면에서는 이미지와 적 정보를 나란히 배치하여 긴 로그·다수 상태에서도 이미지 높이 150px 이상을 유지합니다. 이미지와 적 정보의 실제 x/y 교차 면적은 모든 전투·스트레스 상태에서 0입니다. WebKit·Firefox의 최종 버전 검증은 최신 CI와 인수인계에서 별도로 구분합니다.
 
 | 조건 | 장면 이미지 높이 | 서술 높이 | 화면 내 행동 |
 |---|---:|---:|---:|
-| long-log | 96.86px | 112.00px | 5 |
-| long-skill | 184.86px | 48.00px | 5 |
-| many-statuses | 96.77px | 48.00px | 5 |
-| large-text-simulation | 128.42px | 48.34px | 5 |
+| long-log | 184.25px | 112.00px | 5 |
+| long-skill | 272.25px | 48.00px | 5 |
+| many-statuses | 208.25px | 48.00px | 5 |
+| large-text-simulation | 226.31px | 48.34px | 5 |
 
 긴 로그는 기존 문장 반복을 포함한 유효 저장 상태로 재현했습니다. 최장 직업 설명은 실제 `x_ranged_2` 데이터이며 전체 설명 패널로 접근됩니다. 여러 상태는 화상·기절·공격 약화·방어를 동시에 가진 저장 상태입니다. 19px 글자 검사는 CSS를 통한 명시적 확대 모사이며 실제 OS 글자 확대는 **NOT TESTED**입니다. End/Home 키로 서술의 끝과 처음에 도달하고, 스크롤 안내가 끝에서 사라지고 처음에서 다시 나타남을 검사했습니다.
 
@@ -53,9 +53,9 @@ Chromium과 WebKit에서 같은 결과를 확인했습니다. 모든 항목은 3
 
 - [개선 전 Chromium 20개 상태](before-chromium.json)
 - [개선 후 Chromium 20개 상태 + 스트레스 4개](after-chromium.json)
-- [개선 후 WebKit 20개 상태 + 스트레스 4개](after-webkit.json)
+- [이전 10/15 세로 배치 WebKit 20개 상태 + 스트레스 4개](after-webkit.json)
 - [보스 이미지 개선 전 Chromium](boss-image-before-chromium.json)
 - [보스 이미지 개선 후 Chromium](boss-image-after-chromium.json)
-- [보스 이미지 개선 후 WebKit](boss-image-after-webkit.json)
+- [보스 이미지 이전 10/15 세로 배치 WebKit](boss-image-after-webkit.json)
 
 이 문서의 로컬 검증은 Chromium·WebKit을 실제 실행한 결과입니다. Firefox·공개 Pages·실제 기기·주소창 변화·OS 확대·실측 FPS·장시간 사람 플레이 결과는 별도 CI 및 최종 인수인계의 실제 실행 결과를 확인해야 합니다.

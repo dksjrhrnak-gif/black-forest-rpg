@@ -40,4 +40,4 @@ for(const modal of ['save','scene-reading','scene-menu'])for(const target of [{w
  }finally{await ctx.close();}
 }}finally{await browser.close();}
 fs.mkdirSync(out,{recursive:true});fs.writeFileSync(`${out}/rotation-${engine}.json`,JSON.stringify({status:'PASS',engine,importerCheck,checks,method:'Real save import reparents HUD during a modal; resize while a modal is open; then close, reopen save/load, and return to portrait. Responsive browser emulation, not a physical device.'},null,2)+'\n');console.log('PASS mobile UX modal rotation',engine,checks.length,'and normal save importer');
-})().catch(e=>{console.error(e);process.exit(1);});
+})().catch(e=>{console.error(e);if(process.env.GITHUB_ACTIONS==='true')console.error('::error::'+String(e.stack||e).replace(/%/g,'%25').replace(/\r/g,'%0D').replace(/\n/g,'%0A'));process.exit(1);});

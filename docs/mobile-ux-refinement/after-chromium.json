@@ -5,6 +5,7 @@
   "url": "http://127.0.0.1:4199/",
   "checks": [
     {
+      "imageEnemyIntersectionArea": 0,
       "viewport": {
         "width": 360,
         "height": 800
@@ -205,6 +206,7 @@
       "inspectionPreservesState": true
     },
     {
+      "imageEnemyIntersectionArea": 0,
       "viewport": {
         "width": 360,
         "height": 800
@@ -405,6 +407,7 @@
       "inspectionPreservesState": true
     },
     {
+      "imageEnemyIntersectionArea": 0,
       "viewport": {
         "width": 360,
         "height": 800
@@ -566,6 +569,7 @@
       "inspectionPreservesState": true
     },
     {
+      "imageEnemyIntersectionArea": 0,
       "viewport": {
         "width": 360,
         "height": 800
@@ -666,6 +670,7 @@
       "inspectionPreservesState": true
     },
     {
+      "imageEnemyIntersectionArea": 0,
       "viewport": {
         "width": 360,
         "height": 800
@@ -827,6 +832,7 @@
       "inspectionPreservesState": true
     },
     {
+      "imageEnemyIntersectionArea": 0,
       "viewport": {
         "width": 390,
         "height": 844
@@ -1028,6 +1034,7 @@
       "inspectionPreservesState": true
     },
     {
+      "imageEnemyIntersectionArea": 0,
       "viewport": {
         "width": 390,
         "height": 844
@@ -1229,6 +1236,7 @@
       "inspectionPreservesState": true
     },
     {
+      "imageEnemyIntersectionArea": 0,
       "viewport": {
         "width": 390,
         "height": 844
@@ -1391,6 +1399,7 @@
       "inspectionPreservesState": true
     },
     {
+      "imageEnemyIntersectionArea": 0,
       "viewport": {
         "width": 390,
         "height": 844
@@ -1492,6 +1501,7 @@
       "inspectionPreservesState": true
     },
     {
+      "imageEnemyIntersectionArea": 0,
       "viewport": {
         "width": 390,
         "height": 844
@@ -1654,6 +1664,7 @@
       "inspectionPreservesState": true
     },
     {
+      "imageEnemyIntersectionArea": 0,
       "viewport": {
         "width": 430,
         "height": 932
@@ -1854,6 +1865,7 @@
       "inspectionPreservesState": true
     },
     {
+      "imageEnemyIntersectionArea": 0,
       "viewport": {
         "width": 430,
         "height": 932
@@ -2054,6 +2066,7 @@
       "inspectionPreservesState": true
     },
     {
+      "imageEnemyIntersectionArea": 0,
       "viewport": {
         "width": 430,
         "height": 932
@@ -2215,6 +2228,7 @@
       "inspectionPreservesState": true
     },
     {
+      "imageEnemyIntersectionArea": 0,
       "viewport": {
         "width": 430,
         "height": 932
@@ -2315,6 +2329,7 @@
       "inspectionPreservesState": true
     },
     {
+      "imageEnemyIntersectionArea": 0,
       "viewport": {
         "width": 430,
         "height": 932
@@ -2476,6 +2491,7 @@
       "inspectionPreservesState": true
     },
     {
+      "imageEnemyIntersectionArea": 0,
       "viewport": {
         "width": 390,
         "height": 664
@@ -2507,18 +2523,18 @@
       "image": {
         "x": 16,
         "y": 85.1875,
-        "width": 358,
-        "height": 184.859375,
-        "bottom": 270.046875,
-        "right": 374
+        "width": 193.328125,
+        "height": 272.25,
+        "bottom": 357.4375,
+        "right": 209.328125
       },
       "imageElement": {
         "x": 16,
         "y": 85.1875,
-        "width": 358,
-        "height": 184.859375,
-        "bottom": 270.046875,
-        "right": 374,
+        "width": 193.328125,
+        "height": 272.25,
+        "bottom": 357.4375,
+        "right": 209.328125,
         "complete": true,
         "naturalWidth": 400,
         "naturalHeight": 600,
@@ -2539,11 +2555,11 @@
         "tabindex": "0"
       },
       "enemy": {
-        "x": 24,
-        "y": 298.4375,
-        "width": 342,
+        "x": 217.328125,
+        "y": 206,
+        "width": 148.671875,
         "height": 56,
-        "bottom": 354.4375,
+        "bottom": 262,
         "right": 366,
         "text": "500 / 500\n\n다음 행동: 공격 · 예상 피해 3",
         "visible": true
@@ -2677,6 +2693,7 @@
       "inspectionPreservesState": true
     },
     {
+      "imageEnemyIntersectionArea": 0,
       "viewport": {
         "width": 390,
         "height": 664
@@ -2708,18 +2725,18 @@
       "image": {
         "x": 16,
         "y": 85.1875,
-        "width": 358,
-        "height": 184.859375,
-        "bottom": 270.046875,
-        "right": 374
+        "width": 193.328125,
+        "height": 272.25,
+        "bottom": 357.4375,
+        "right": 209.328125
       },
       "imageElement": {
         "x": 16,
         "y": 85.1875,
-        "width": 358,
-        "height": 184.859375,
-        "bottom": 270.046875,
-        "right": 374,
+        "width": 193.328125,
+        "height": 272.25,
+        "bottom": 357.4375,
+        "right": 209.328125,
         "complete": true,
         "naturalWidth": 600,
         "naturalHeight": 900,
@@ -2740,11 +2757,11 @@
         "tabindex": "0"
       },
       "enemy": {
-        "x": 24,
-        "y": 298.4375,
-        "width": 342,
+        "x": 217.328125,
+        "y": 206,
+        "width": 148.671875,
         "height": 56,
-        "bottom": 354.4375,
+        "bottom": 262,
         "right": 366,
         "text": "74 / 74\n\n다음 행동: 공격 · 예상 피해 9",
         "visible": true
@@ -2878,6 +2895,7 @@
       "inspectionPreservesState": true
     },
     {
+      "imageEnemyIntersectionArea": 0,
       "viewport": {
         "width": 390,
         "height": 664
@@ -3040,6 +3058,7 @@
       "inspectionPreservesState": true
     },
     {
+      "imageEnemyIntersectionArea": 0,
       "viewport": {
         "width": 390,
         "height": 664
@@ -3141,6 +3160,7 @@
       "inspectionPreservesState": true
     },
     {
+      "imageEnemyIntersectionArea": 0,
       "viewport": {
         "width": 390,
         "height": 664
@@ -3311,10 +3331,11 @@
         390,
         664
       ],
-      "imageHeight": 96.859375,
+      "imageHeight": 184.25,
       "storyHeight": 112,
       "visibleActions": 5,
       "allFiveReachable": true,
+      "imageEnemyIntersectionArea": 0,
       "saveRngPreserved": true,
       "method": "Focused valid saved state; no production content modification"
     },
@@ -3325,10 +3346,11 @@
         390,
         664
       ],
-      "imageHeight": 184.859375,
+      "imageHeight": 272.25,
       "storyHeight": 48,
       "visibleActions": 5,
       "allFiveReachable": true,
+      "imageEnemyIntersectionArea": 0,
       "saveRngPreserved": true,
       "method": "Focused valid saved state; no production content modification"
     },
@@ -3339,10 +3361,11 @@
         390,
         664
       ],
-      "imageHeight": 96.765625,
+      "imageHeight": 208.25,
       "storyHeight": 48,
       "visibleActions": 5,
       "allFiveReachable": true,
+      "imageEnemyIntersectionArea": 0,
       "saveRngPreserved": true,
       "method": "Focused valid saved state; no production content modification"
     },
@@ -3353,10 +3376,11 @@
         390,
         664
       ],
-      "imageHeight": 128.421875,
+      "imageHeight": 226.3125,
       "storyHeight": 48.34375,
       "visibleActions": 5,
       "allFiveReachable": true,
+      "imageEnemyIntersectionArea": 0,
       "saveRngPreserved": true,
       "method": "Explicit 19px CSS presentation test; real OS text zoom NOT TESTED"
     }

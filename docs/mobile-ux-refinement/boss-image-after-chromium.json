@@ -114,16 +114,16 @@
         "image": {
           "x": 16,
           "y": 85.1875,
-          "width": 358,
-          "height": 184.859375,
-          "bottom": 270.046875
+          "width": 193.328125,
+          "height": 272.25,
+          "bottom": 357.4375
         },
         "container": {
           "x": 16,
           "y": 85.1875,
-          "width": 358,
-          "height": 184.859375,
-          "bottom": 270.046875
+          "width": 193.328125,
+          "height": 272.25,
+          "bottom": 357.4375
         },
         "computed": {
           "display": "block",
@@ -155,16 +155,16 @@
         "image": {
           "x": 16,
           "y": 85.1875,
-          "width": 358,
-          "height": 184.859375,
-          "bottom": 270.046875
+          "width": 193.328125,
+          "height": 272.25,
+          "bottom": 357.4375
         },
         "container": {
           "x": 16,
           "y": 85.1875,
-          "width": 358,
-          "height": 184.859375,
-          "bottom": 270.046875
+          "width": 193.328125,
+          "height": 272.25,
+          "bottom": 357.4375
         },
         "computed": {
           "display": "block",
