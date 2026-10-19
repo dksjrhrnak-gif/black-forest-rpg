@@ -63,6 +63,8 @@
 
 ## GitHub 및 배포 기록
 
+공개 Firefox 이미지 오류의 후속 조사와 fixture 준비 검증은 [별도 인수인계](FIREFOX_IMAGE_QA.md)에 기록한다. 후속 진단은 첫 보스 fixture를 위한 인위적 reload 시점의 이전 시작 화면 이미지에서 오류를 확인했고, 해당 응답의 원본 byte 일치도 확인했다. 테스트 새로고침3곳 직전에 시작된 이미지의 실제 decode 검증을 추가하며, 게임 UI/엔진/자산과 기존 행동·콘솔0건·상태/RNG 검사는 보존한다. 아래는 최초 기능 병합의 실제 기록이며, 최종 후속 PR·main CI·Pages·공개3엔진 결과는 PR #10의 배포 기록을 참조한다.
+
 [PR #10](https://github.com/dksjrhrnak-gif/black-forest-rpg/pull/10)은2026-10-17 06:04:49 UTC에 main에 병합했다. 병합 전 검토 HEAD는 `d588b73b45aa7f9b7cff8ab8e003b4883be9fa57`, 실제 병합 커밋은 **`88f1ccd4dded1437d959a795ee5108e2d4567d09`**다. 두 커밋의 제품 트리는 동일하다. [정확한 검토 HEAD·19개 성공 기록](mobile-ux-refinement/public-verification/reviewed-pr-checks.json), [병합 기록](mobile-ux-refinement/public-verification/feature-merge.json).
 
 | 대상 | 실제 결과와 고정 실행 링크 |
