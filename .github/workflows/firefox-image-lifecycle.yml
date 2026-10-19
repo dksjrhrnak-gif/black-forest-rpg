@@ -1,7 +1,7 @@
 name: Public Firefox image lifecycle
 on:
   push:
-    branches: [qa/mobile-ux-firefox-images, qa/mobile-ux-review-images]
+    branches: [qa/mobile-ux-firefox-images, qa/mobile-ux-review-images, qa/mobile-ux-image-lifecycle]
   workflow_dispatch:
 permissions:
   contents: read
@@ -46,7 +46,7 @@ jobs:
           BF_HTTP_BASE: https://dksjrhrnak-gif.github.io/black-forest-rpg/
           BF_EXPECT_LIVE: '1'
         run: node test-http-assets.cjs
-      - name: Verify dormant lazy and broken raster readiness cases
+      - name: Verify dormant, in-flight and broken raster readiness cases
         env:
           BF_BROWSER: firefox
           BF_QA_URL: https://dksjrhrnak-gif.github.io/black-forest-rpg/

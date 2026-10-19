@@ -55,6 +55,20 @@
 
 전용 Firefox 사전 검사도 archived baseline15화면에 이어 현재 PR7 후속 UI 검수를 원문 그대로 실행한다. 이후 기존 공개 byte·전직·새UX·P3·FX·B안 전체 검사와 별도 필수 CI를 유지한다. 새 브랜치에서 두 workflow가 실행되도록 trigger만 추가한다. 로컬 native Chromium은 archived baseline15개와 현재18개(15화면+3기능회귀)를 모두 통과했다. [실행·보고서 해시](mobile-ux-refinement/public-verification/ui-review-fixture-local-chromium.json), [원본 전체 AST 보존 검수](mobile-ux-refinement/public-verification/ui-review-fixture-source-preservation.json)를 보관한다. import1개와 준비 await2개를 제거하면 기존 test-ui-review 전체 AST가 동일하며, assertion44개·실제 입력10개·export22개·고정대기2개의 내용/순서를 유지한다. 최신 main21개와 공개3엔진의 실행·성공 여부는 최종 배포 기록에서 다시 구분한다.
 
+## 진행 중이지만 자연 크기가0인 요청
+
+[PR12](https://github.com/dksjrhrnak-gif/black-forest-rpg/pull/12)는 검토 `d498636`의20개 성공 뒤 main `a75ffaa1d738ec04359ac28738161afd7dc96577`로 병합됐다. 기존 UIreview의 Firefox 실패 구간은 main에서도 성공했다. Pages [39212224920](https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/39212224920)와 exact-SHA deployment `7167565591`은 성공했고, 공개 HTML·149이미지·CSV3 및 최신 문서2개도 원본 byte 일치했다. 그러나 [main 공개 Firefox 전직](https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/39212224101/job/117927959347)에서 별도 이미지 요청이 준비 검사에서 빠진 사실을 확인했다. [원본 주석](mobile-ux-refinement/public-verification/main-a75-firefox-inflight-annotations.json)을 보존한다.
+
+실제 오류는390×844 일반 motion의 boss1 `reload:pending-promotion`에서 `class_windmill.webp`에 발생했다. 준비 시작→reload는3ms였고 준비 목록은 비어 있었다. 진행 중 request15가 HTTP200 응답 후 `NS_BINDING_ABORTED`로 중단되고 디코딩 콘솔 오류와 frame navigation이 뒤따랐다. 기존 문서가 과거에 `networkidle`을 달성한 상태는 새로운 전직 DOM의 이미지 요청 완료를 보장하지 않았고, DOM의 `currentSrc / complete / 자연 크기`만 보는 필터도 이 요청이 실제로 진행 중인지를 보장하지 못했다. 준비 시점의 원본 DOM 전체가 없어 당시 각 속성의 값을 역으로 단정하지 않는다. 이번 첫 응답 body는 navigation 이후라 회수되지 않아 원본 byte 일치라고 주장하지 않는다. 이후206 재요청은 완료됐다. 누적 assertion은 boss6였으므로 실제 최초 오류와 구분한다.
+
+후속 `qa/mobile-ux-image-lifecycle`은 page 생성 직후 이미지 request/requestfinished/requestfailed를 읽기 전용으로 관측한다. 인위적 fixture reload 앞에서 진행 중 이미지가 모두 끝나고 **그 준비 호출 이후의 새500ms 안정 구간**이 확인될 때까지 기다린다. 누락 관측·30초 초과·잘못된 decode는 실패시킨다. 화면 밖 휴면 lazy는 요청시키지 않으며, 실제 게임 클릭·즉시 FX·저장/RNG·콘솔0건 검사에는 대기를 넣지 않는다. 기존 helper의 표면적인 숫자 필터만 늘리거나 오류를 무시하지 않는다.
+
+새 격리 회귀 사례는 이미 idle을 달성한 문서에서 원본 래스터 요청을 시작하고 응답을650ms 이상 보류한다. 자연 크기0인 진행 중 요청이 있는 동안 준비 검사가 반환하지 않고, 원본 응답을 해제한 뒤 실제 decode를 완료해야 성공한다. 기존 eager2개·휴면 lazy 미요청·손상 이미지 EncodingError 거부도 유지한다. 전용 Firefox와 전체3엔진 CI에서 모두 실행한다. 제품 UI/엔진/자산/보상/저장 형식은 그대로다.
+
+로컬 native Chromium의 새3사례는 모두 PASS였다. 동일한 과거 idle/700ms 보류 실험에서 구버전 `a75ffaa` helper는4ms에 `images=[]`로 조기 반환했고, 새 helper는 보류 중 미반환·해제 후1277ms에 정상 decode했다. [구버전 재현](mobile-ux-refinement/public-verification/image-lifecycle-old-guard-reproduction.json), [새 실제 결과](mobile-ux-refinement/public-verification/image-lifecycle-readiness-chromium.json)를 보존한다. 연결은8개 UI 스크립트의 page 생성9곳이다. watch 호출만 제거하면 원본 전체 AST가 동일하며 기존 assertion290개와 모든 입력/대기/trace 순서를 유지한다. [정적 검수](mobile-ux-refinement/public-verification/image-lifecycle-source-preservation.json).
+
+요청 관측 방식의 전체 로컬 재검증도 완료했다. Chromium의 UIreview15+18, 전직24경로/72재접속, 새UX20상태+4스트레스, 회전9개+실제 importer, 보스2개, 전직비교8개, 모바일FX128개와 기존FX360px 두 motion 모두 PASS였다. 시작/종료 helper·unit·연결 소스 해시를 확인했고 실제 게임의 console/pageerror0건을 유지했다. [최신 helper 해시와 보고서 요약](mobile-ux-refinement/public-verification/image-lifecycle-local-chromium-summary.json). 로컬 결과를 공개3엔진 검증으로 대신하지 않는다. 이전 a75 main은 마지막 Chromium/WebKit도 완료돼 실제20/21이며, 실패한 Firefox의 후속 공개 단계는 생략됐다.
+
 ## 검증
 
 로컬 Chromium은 네 크기×두 motion×세 보스24개 경로를 통과했다. 인위적 새로고침72개에서 이미지218개의 실제 디코딩을 확인했으며, 기존 보상·저장/RNG·버튼52px·FX·콘솔0건 검사도 통과했다. [원본 결과](mobile-ux-refinement/public-verification/fixture-ready-chromium.json).

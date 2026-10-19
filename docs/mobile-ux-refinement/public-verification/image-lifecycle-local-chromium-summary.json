@@ -1,0 +1,68 @@
+{
+  "status": "PASS",
+  "method": "Actual native Chromium execution after read-only request observer and fresh quiet interval; physical devices not tested.",
+  "helperSha256": "6fe5806aacd92fa0f9357881a886c2d5f7d4153e84d82911fbcd203df4e108b5",
+  "reports": {
+    "lifecycle-local-ui/after-chromium.json": {
+      "status": "PASS",
+      "engine": "chromium",
+      "checks": 20,
+      "sha256": "adbe69f951134efaed087a7e3b1243646f601efd3b3a2bf5b483d8db8463cbc5",
+      "stressCases": 4
+    },
+    "lifecycle-local-ui/rotation-chromium.json": {
+      "status": "PASS",
+      "engine": "chromium",
+      "checks": 9,
+      "sha256": "0944a3e7b0981b69db889f699b9ada07df53efd475336516f3d51a56df45b6a3"
+    },
+    "lifecycle-local-ui/boss-image-after-chromium.json": {
+      "status": "PASS",
+      "engine": "chromium",
+      "checks": 2,
+      "sha256": "54f76564324fa96dd544464d5a8792d132e7ebb09dbe7a4587958b4f048affe2"
+    },
+    "lifecycle-local-ui/promotion-refinement-chromium.json": {
+      "status": "PASS",
+      "engine": "chromium",
+      "checks": 8,
+      "sha256": "cc4a188fb2c3e50764fc5ba6c6d7566064b5483902c9b934f4c2dda83e904d57"
+    },
+    "lifecycle-local-fx/mobile/chromium.json": {
+      "status": "PASS",
+      "engine": "chromium",
+      "checks": 8,
+      "sha256": "3795887840f9e1869f3f00d910db9f8878886051be40f8d8f2a0801edc603289",
+      "effectCases": 128
+    },
+    "lifecycle-local-fx/original/ui-chromium.json": {
+      "status": "PASS",
+      "engine": "chromium",
+      "checks": 2,
+      "sha256": "7a19155278fa3b1827bb7770d10eeb27df3bcd8b53be9138d9fcb1123cb57899"
+    },
+    "lifecycle-local-review/review/baseline-chromium.json": {
+      "status": "PASS",
+      "engine": "chromium",
+      "checks": 15,
+      "sha256": "b65b1a9a0099710258383eba1eda4dc5b99ec4a772a8d1b86d5cebca2b8a7730"
+    },
+    "lifecycle-local-review/review/ui-chromium.json": {
+      "status": "PASS",
+      "engine": "chromium",
+      "checks": 18,
+      "sha256": "8733375f3361d931a39192921ec14a1091d2b287dda27032c901752941730f0e"
+    },
+    "lifecycle-local-review/forced/ui-chromium.json": {
+      "status": "PASS",
+      "engine": "chromium",
+      "checks": 24,
+      "sha256": "12d7fbe649ed70b182b07d61942d55d1eb84051b6ba6389453beb4d49699d3e0",
+      "reloadBoundaries": 72
+    }
+  },
+  "gameConsoleAndRuntimeErrors": 0,
+  "isolatedUnitCases": 3,
+  "unitReportSha256": "e79293afab90c5abcce91bd39197c97bc9156698204edf033ea5de0b3ef8556b",
+  "productHtmlSha256": "b1b4ffb4aac10761a3b8551bc2c72da9cfb0726aae75d86137702f2c09ce43e0"
+}

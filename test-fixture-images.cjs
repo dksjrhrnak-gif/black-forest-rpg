@@ -49,6 +49,8 @@ async function validAndDormant(browser) {
   const context = await browser.newContext({viewport:{width:800,height:600}});
   try {
     const page = await context.newPage(), errors = observeErrors(page), requests = [];
+    await assert.rejects(() => prepareFixtureImages(page), /prepareFixtureImages\.watch\(page\)/, 'a missing observer must fail instead of silently falling back');
+    prepareFixtureImages.watch(page);
     const warrior = asset('class_warrior.webp'), rogue = asset('class_rogue.webp'), lazy = asset('class_stitch.webp');
     page.on('request', request => {if (request.resourceType() === 'image') requests.push(safeURL(request.url()));});
     await page.setContent(`<!doctype html><html><body style="margin:0">
@@ -74,14 +76,68 @@ async function validAndDormant(browser) {
     assert.equal(requests.includes(safeURL(lazy)), false, 'guard must not fetch the offscreen lazy asset');
     assert(requests.includes(safeURL(warrior)) && requests.includes(safeURL(rogue)), 'both original eager assets must actually be fetched');
     assert.deepEqual(errors.pageErrors, []);assert.deepEqual(errors.consoleErrors, []);
-    report.cases.push({name:'started eager raster images decode; dormant lazy raster stays unrequested',status:'PASS',elapsedMs,images,lazyBefore:before,lazyAfter:after,imageRequests:requests,...errors});
+    report.cases.push({name:'started eager raster images decode; dormant lazy raster stays unrequested',status:'PASS',requiresExplicitWatch:true,elapsedMs,images,lazyBefore:before,lazyAfter:after,imageRequests:requests,...errors});
   } finally {await context.close();}
+}
+
+async function pendingAfterPreviousIdle(browser) {
+  const context = await browser.newContext({viewport:{width:800,height:600}});
+  let release;
+  try {
+    const page = await context.newPage(), errors = observeErrors(page);
+    prepareFixtureImages.watch(page);
+    await page.setContent('<!doctype html><html><body style="margin:0"></body></html>', {waitUntil:'load'});
+    await page.waitForLoadState('networkidle');
+    const original = asset('class_windmill.webp');
+    const gate = new Promise(resolve => {release = resolve;});
+    let requested, fixtureRequests = 0, originalBytes = 0;
+    const ready = new Promise(resolve => {requested = resolve;});
+    await page.route(original, async route => {
+      fixtureRequests++;
+      const response = await route.fetch();
+      assert.equal(response.status(), 200, 'the delayed request must fetch the original asset');
+      const body = await response.body();
+      assert(body.equals(fs.readFileSync(path.join(__dirname, 'assets/class_windmill.webp'))), 'the held response must contain exact original bytes');
+      originalBytes = body.length;
+      requested();
+      await gate;
+      await route.fulfill({response});
+    });
+    await page.evaluate(src => {
+      const img = document.createElement('img');
+      img.id = 'pending';img.loading = 'eager';img.width = 128;img.height = 128;
+      img.style.cssText = 'position:absolute;top:90000px;left:0';
+      document.body.append(img);img.src = src;
+    }, original);
+    await ready;
+    const before = await imageState(page, 'pending');
+    assert.equal(before.complete, false);assert.equal(before.width, 0);assert.equal(before.height, 0);
+    assert.equal(before.top, 90000, 'the already-started eager request must be outside the viewport');
+    let outcome;
+    const started = Date.now();
+    const pending = boundedGuard(page).then(images => {outcome = {images};}, error => {outcome = {error};});
+    await new Promise(resolve => setTimeout(resolve, 700));
+    const heldForMs = Date.now() - started, settledWhileHeld = outcome !== undefined;
+    assert(heldForMs >= 650, 'the image response must remain held beyond the fresh quiet interval');
+    release();
+    await pending;
+    assert.equal(settledWhileHeld, false, 'the guard must not finish while an actual image request is still held after a previous networkidle');
+    if (outcome.error) throw outcome.error;
+    const after = await imageState(page, 'pending');
+    assert.equal(fixtureRequests, 1);
+    assert.equal(outcome.images.length, 1);
+    assert.equal(outcome.images[0].src, safeURL(original));
+    assert(after.complete && after.width > 0 && after.height > 0, 'the original response must decode after release');
+    assert.deepEqual(errors.pageErrors, []);assert.deepEqual(errors.consoleErrors, []);
+    report.cases.push({name:'a new offscreen eager request after prior networkidle remains guarded until released and decoded',status:'PASS',heldForMs,elapsedMs:Date.now()-started,settledWhileHeld,fixtureRequests,exactOriginalBytes:true,originalBytes,images:outcome.images,before,after,...errors});
+  } finally {release?.();await context.close();}
 }
 
 async function brokenDecode(browser) {
   const context = await browser.newContext();
   try {
     const page = await context.newPage(), errors = observeErrors(page);
+    prepareFixtureImages.watch(page);
     const broken = new URL('__qa/broken.webp', base).href;
     let fixtureRequests = 0;
     await page.route(broken, route => {
@@ -117,12 +173,13 @@ async function brokenDecode(browser) {
   const browser = await pw[engine].launch(require('./qa-browser.cjs')());
   try {
     await validAndDormant(browser);
+    await pendingAfterPreviousIdle(browser);
     await brokenDecode(browser);
     report.status = 'PASS';
   } finally {await browser.close();}
   fs.mkdirSync(out, {recursive:true});
   fs.writeFileSync(path.join(out, engine + '.json'), JSON.stringify(report,null,2) + '\n');
-  console.log(`PASS fixture image readiness ${engine}: ${report.cases.length} isolated cases (two eager rasters decoded, dormant lazy unfetched, broken raster rejected)`);
+  console.log(`PASS fixture image readiness ${engine}: ${report.cases.length} isolated cases (two eager rasters decoded, dormant lazy unfetched, active image awaited after prior idle, broken raster rejected)`);
 })().catch(error => {
   report.error = diagnosticText(error.stack || error);
   fs.mkdirSync(out, {recursive:true});

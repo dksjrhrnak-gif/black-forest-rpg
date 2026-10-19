@@ -1,0 +1,110 @@
+{
+  "status": "PASS",
+  "engine": "chromium",
+  "base": "http://127.0.0.1:4251/",
+  "deadlineMs": 5000,
+  "cases": [
+    {
+      "name": "started eager raster images decode; dormant lazy raster stays unrequested",
+      "status": "PASS",
+      "requiresExplicitWatch": true,
+      "elapsedMs": 958,
+      "images": [
+        {
+          "src": "http://127.0.0.1:4251/assets/class_warrior.webp",
+          "complete": true,
+          "width": 400,
+          "height": 600
+        },
+        {
+          "src": "http://127.0.0.1:4251/assets/class_rogue.webp",
+          "complete": true,
+          "width": 400,
+          "height": 600
+        }
+      ],
+      "lazyBefore": {
+        "currentSrc": "",
+        "complete": false,
+        "width": 0,
+        "height": 0,
+        "loading": "lazy",
+        "top": 100000
+      },
+      "lazyAfter": {
+        "currentSrc": "",
+        "complete": false,
+        "width": 0,
+        "height": 0,
+        "loading": "lazy",
+        "top": 100000
+      },
+      "imageRequests": [
+        "http://127.0.0.1:4251/assets/class_warrior.webp",
+        "http://127.0.0.1:4251/assets/class_rogue.webp"
+      ],
+      "pageErrors": [],
+      "consoleErrors": [],
+      "consoleDiagnostics": []
+    },
+    {
+      "name": "a new offscreen eager request after prior networkidle remains guarded until released and decoded",
+      "status": "PASS",
+      "heldForMs": 700,
+      "elapsedMs": 1277,
+      "settledWhileHeld": false,
+      "fixtureRequests": 1,
+      "exactOriginalBytes": true,
+      "originalBytes": 144828,
+      "images": [
+        {
+          "src": "http://127.0.0.1:4251/assets/class_windmill.webp",
+          "complete": true,
+          "width": 600,
+          "height": 900
+        }
+      ],
+      "before": {
+        "currentSrc": "",
+        "complete": false,
+        "width": 0,
+        "height": 0,
+        "loading": "eager",
+        "top": 90000
+      },
+      "after": {
+        "currentSrc": "http://127.0.0.1:4251/assets/class_windmill.webp",
+        "complete": true,
+        "width": 600,
+        "height": 900,
+        "loading": "eager",
+        "top": 90000
+      },
+      "pageErrors": [],
+      "consoleErrors": [],
+      "consoleDiagnostics": []
+    },
+    {
+      "name": "complete broken raster rejects instead of being skipped",
+      "status": "PASS",
+      "elapsedMs": 932,
+      "image": {
+        "currentSrc": "http://127.0.0.1:4251/__qa/broken.webp",
+        "complete": true,
+        "width": 0,
+        "height": 0,
+        "loading": "eager",
+        "top": 8
+      },
+      "fixtureRequests": 1,
+      "nativeFailure": {
+        "name": "EncodingError",
+        "message": "The source image cannot be decoded."
+      },
+      "expectedDecodeFailure": "page.evaluate: EncodingError: The source image cannot be decoded.",
+      "pageErrors": [],
+      "consoleErrors": [],
+      "consoleDiagnostics": []
+    }
+  ]
+}

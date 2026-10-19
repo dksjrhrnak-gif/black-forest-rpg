@@ -1,0 +1,101 @@
+{
+  "status": "PASS",
+  "base": "a75ffaa1d738ec04359ac28738161afd7dc96577",
+  "files": [
+    {
+      "file": "test-forced-career-ui.cjs",
+      "pages": 1,
+      "watchCalls": 1,
+      "lines": [
+        52
+      ],
+      "originalAssertions": 27,
+      "fullOriginalASTAndOrder": "identical after removing watch calls only",
+      "sourceSha256": "d58f3d061e98a0e0d8d853186f9cb558d0dc570fc5d880cd2836a32c506db4d7"
+    },
+    {
+      "file": "test-mobile-ux.cjs",
+      "pages": 1,
+      "watchCalls": 1,
+      "lines": [
+        90
+      ],
+      "originalAssertions": 57,
+      "fullOriginalASTAndOrder": "identical after removing watch calls only",
+      "sourceSha256": "8a01e6868a9969c72f0d2a1c6115b8bac83e49cb33c3eb2092def2500a18c614"
+    },
+    {
+      "file": "test-mobile-ux-rotation.cjs",
+      "pages": 2,
+      "watchCalls": 2,
+      "lines": [
+        15,
+        28
+      ],
+      "originalAssertions": 26,
+      "fullOriginalASTAndOrder": "identical after removing watch calls only",
+      "sourceSha256": "6c4b30cade4500316353c6aeec4f0988b1406b974369e7b262240fcadd5a7394"
+    },
+    {
+      "file": "test-boss-image.cjs",
+      "pages": 1,
+      "watchCalls": 1,
+      "lines": [
+        8
+      ],
+      "originalAssertions": 14,
+      "fullOriginalASTAndOrder": "identical after removing watch calls only",
+      "sourceSha256": "4fd006f432f6ccbe310cd35549389bcecc7a1a1bad4337a1872df5e5b629c6ec"
+    },
+    {
+      "file": "test-promotion-refinement.cjs",
+      "pages": 1,
+      "watchCalls": 1,
+      "lines": [
+        7
+      ],
+      "originalAssertions": 38,
+      "fullOriginalASTAndOrder": "identical after removing watch calls only",
+      "sourceSha256": "1fb253b4c1d6631521f462df0104ac5228938f1f89b0c6700ae255276b623779"
+    },
+    {
+      "file": "test-mobile-fx.cjs",
+      "pages": 1,
+      "watchCalls": 1,
+      "lines": [
+        11
+      ],
+      "originalAssertions": 23,
+      "fullOriginalASTAndOrder": "identical after removing watch calls only",
+      "sourceSha256": "ce3ffa32d32ed246f7eff643fa763cbce61e39e355c761066f52aca33406d467"
+    },
+    {
+      "file": "test-fx-ui.cjs",
+      "pages": 1,
+      "watchCalls": 1,
+      "lines": [
+        4
+      ],
+      "originalAssertions": 61,
+      "fullOriginalASTAndOrder": "identical after removing watch calls only",
+      "sourceSha256": "2f51c007ba382761b54c61ce279c6cb133126bd37424a32e0b5803c81cde02b9"
+    },
+    {
+      "file": "test-ui-review.cjs",
+      "pages": 1,
+      "watchCalls": 1,
+      "lines": [
+        17
+      ],
+      "originalAssertions": 44,
+      "fullOriginalASTAndOrder": "identical after removing watch calls only",
+      "sourceSha256": "eb17d1a248c69bf71c3c5a5cc6c708f58f47695aca2abef18467b0d09567ba11"
+    }
+  ],
+  "totalFiles": 8,
+  "pageCreationSites": 9,
+  "watchCalls": 9,
+  "originalAssertions": 290,
+  "syntax": "PASS all eight scripts",
+  "preservation": "Original full AST, including all actions, awaits, assertions and tracing, is identical after removing only the nine synchronous watch statements. No added helper import or original inline require rewrite."
+}

@@ -14,6 +14,7 @@ function fresh(){const g=new Game(17);g.start('warrior');return g;}
 function state(screen){if(['jobs','equipment'].includes(screen))return Game.load(camp.export());if(screen==='battle')return fixtures.battle();if(screen==='reward'){const g=Game.load(fixtures.rarePurchase(4).code);g.buy('gear-weapon');return g;}const g=fresh();g.enterArea(0);return g;}
 (async()=>{const browser=await pw[engine].launch(require('./qa-browser.cjs')()),checks=[];
 try{for(const width of widths){const height=width===360?800:width===390?844:932,context=await browser.newContext({viewport:{width,height},hasTouch:true,isMobile:engine!=='firefox',colorScheme:'dark'}),page=await context.newPage(),errors=[];
+prepareFixtureImages.watch(page);
 page.on('pageerror',e=>errors.push(e.message));page.on('console',m=>{if(m.type()==='error')errors.push(m.text());});
 const current=async()=>Game.load(await page.evaluate(k=>localStorage.getItem(k),key));
 const restore=async g=>{await page.evaluate(({key,code})=>localStorage.setItem(key,code),{key,code:g.export()});await prepareFixtureImages(page);await page.reload();assert.equal((await current()).export(),g.export());};
