@@ -43,6 +43,8 @@
 
 새 격리 검사의 최초 전체 실행 `120849b`에서는 Chromium/WebKit 두 사례가 성공했으나 Firefox는 손상 이미지의 오류 문구 정규식에서 실패했다([공개](mobile-ux-refinement/public-verification/firefox-negative-fixture-wording-public-annotations.json), [preview](mobile-ux-refinement/public-verification/firefox-negative-fixture-wording-preview-annotations.json)). 실제 오류 유형은 브라우저 안에서 직접 읽어 `EncodingError`임을 확인하고, helper가 그 동일한 원본 오류 문장을 전달하는지 검사하도록 보완했다. 예상된 음성 사례의 콘솔 메시지도 해당 격리 URL의 이미지 디코더 오류로만 제한하며, 모든 실제 게임 스크립트의 콘솔0건 조건은 그대로다.
 
+전체 검사 `570af56`의 Firefox는 현재 전직·P3·FX·B안을 통과한 뒤 이전 PR7의 정적 HTML 비교 단계에서 실패했다. [첫 주석](mobile-ux-refinement/public-verification/firefox-archived-baseline-first-failure-annotations.json)은 종료코드1만 남겨 원인을 확정할 수 없다. 기존 `test-ui-review.cjs`의 실제 동작/대기/assertion을 보존하고 실패 시 브라우저·폭·화면·stack을 주석으로 기록한다. 전용 Firefox workflow 앞에서도 동일한 archived baseline15화면을 먼저 실행해 후반 단계까지 기다리기 전에 원인을 확인한다. 이 기록 단계에서는 baseline에 이미지 helper나 새로운 행동 대기를 추가하지 않는다.
+
 ## 검증
 
 로컬 Chromium은 네 크기×두 motion×세 보스24개 경로를 통과했다. 인위적 새로고침72개에서 이미지218개의 실제 디코딩을 확인했으며, 기존 보상·저장/RNG·버튼52px·FX·콘솔0건 검사도 통과했다. [원본 결과](mobile-ux-refinement/public-verification/fixture-ready-chromium.json).
