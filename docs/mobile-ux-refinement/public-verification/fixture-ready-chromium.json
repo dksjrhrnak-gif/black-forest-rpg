@@ -1,0 +1,1989 @@
+{
+  "status": "PASS",
+  "engine": "chromium",
+  "checks": [
+    {
+      "width": 360,
+      "height": 800,
+      "motion": "no-preference",
+      "tier": 1,
+      "job": "rabbit_guard",
+      "exactSaveRng": true,
+      "paidOnce": true,
+      "errors": 0
+    },
+    {
+      "width": 360,
+      "height": 800,
+      "motion": "no-preference",
+      "tier": 2,
+      "job": "queen_exec",
+      "exactSaveRng": true,
+      "paidOnce": true,
+      "errors": 0
+    },
+    {
+      "width": 360,
+      "height": 800,
+      "motion": "no-preference",
+      "tier": 3,
+      "job": "pagebreaker",
+      "exactSaveRng": true,
+      "paidOnce": true,
+      "errors": 0
+    },
+    {
+      "width": 360,
+      "height": 800,
+      "motion": "reduce",
+      "tier": 1,
+      "job": "rabbit_guard",
+      "exactSaveRng": true,
+      "paidOnce": true,
+      "errors": 0
+    },
+    {
+      "width": 360,
+      "height": 800,
+      "motion": "reduce",
+      "tier": 2,
+      "job": "queen_exec",
+      "exactSaveRng": true,
+      "paidOnce": true,
+      "errors": 0
+    },
+    {
+      "width": 360,
+      "height": 800,
+      "motion": "reduce",
+      "tier": 3,
+      "job": "pagebreaker",
+      "exactSaveRng": true,
+      "paidOnce": true,
+      "errors": 0
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "motion": "no-preference",
+      "tier": 1,
+      "job": "rabbit_guard",
+      "exactSaveRng": true,
+      "paidOnce": true,
+      "errors": 0
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "motion": "no-preference",
+      "tier": 2,
+      "job": "queen_exec",
+      "exactSaveRng": true,
+      "paidOnce": true,
+      "errors": 0
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "motion": "no-preference",
+      "tier": 3,
+      "job": "pagebreaker",
+      "exactSaveRng": true,
+      "paidOnce": true,
+      "errors": 0
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "motion": "reduce",
+      "tier": 1,
+      "job": "rabbit_guard",
+      "exactSaveRng": true,
+      "paidOnce": true,
+      "errors": 0
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "motion": "reduce",
+      "tier": 2,
+      "job": "queen_exec",
+      "exactSaveRng": true,
+      "paidOnce": true,
+      "errors": 0
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "motion": "reduce",
+      "tier": 3,
+      "job": "pagebreaker",
+      "exactSaveRng": true,
+      "paidOnce": true,
+      "errors": 0
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "motion": "no-preference",
+      "tier": 1,
+      "job": "rabbit_guard",
+      "exactSaveRng": true,
+      "paidOnce": true,
+      "errors": 0
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "motion": "no-preference",
+      "tier": 2,
+      "job": "queen_exec",
+      "exactSaveRng": true,
+      "paidOnce": true,
+      "errors": 0
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "motion": "no-preference",
+      "tier": 3,
+      "job": "pagebreaker",
+      "exactSaveRng": true,
+      "paidOnce": true,
+      "errors": 0
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "motion": "reduce",
+      "tier": 1,
+      "job": "rabbit_guard",
+      "exactSaveRng": true,
+      "paidOnce": true,
+      "errors": 0
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "motion": "reduce",
+      "tier": 2,
+      "job": "queen_exec",
+      "exactSaveRng": true,
+      "paidOnce": true,
+      "errors": 0
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "motion": "reduce",
+      "tier": 3,
+      "job": "pagebreaker",
+      "exactSaveRng": true,
+      "paidOnce": true,
+      "errors": 0
+    },
+    {
+      "width": 390,
+      "height": 664,
+      "motion": "no-preference",
+      "tier": 1,
+      "job": "rabbit_guard",
+      "exactSaveRng": true,
+      "paidOnce": true,
+      "errors": 0
+    },
+    {
+      "width": 390,
+      "height": 664,
+      "motion": "no-preference",
+      "tier": 2,
+      "job": "queen_exec",
+      "exactSaveRng": true,
+      "paidOnce": true,
+      "errors": 0
+    },
+    {
+      "width": 390,
+      "height": 664,
+      "motion": "no-preference",
+      "tier": 3,
+      "job": "pagebreaker",
+      "exactSaveRng": true,
+      "paidOnce": true,
+      "errors": 0
+    },
+    {
+      "width": 390,
+      "height": 664,
+      "motion": "reduce",
+      "tier": 1,
+      "job": "rabbit_guard",
+      "exactSaveRng": true,
+      "paidOnce": true,
+      "errors": 0
+    },
+    {
+      "width": 390,
+      "height": 664,
+      "motion": "reduce",
+      "tier": 2,
+      "job": "queen_exec",
+      "exactSaveRng": true,
+      "paidOnce": true,
+      "errors": 0
+    },
+    {
+      "width": 390,
+      "height": 664,
+      "motion": "reduce",
+      "tier": 3,
+      "job": "pagebreaker",
+      "exactSaveRng": true,
+      "paidOnce": true,
+      "errors": 0
+    }
+  ],
+  "reloadImageChecks": [
+    {
+      "scenario": "chromium 360x800 no-preference boss 1",
+      "phase": "reload:boss-fixture",
+      "images": [
+        {
+          "src": "http://127.0.0.1:4201/assets/forest-banner.webp",
+          "complete": true,
+          "width": 1022,
+          "height": 571
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/class_warrior.webp",
+          "complete": true,
+          "width": 400,
+          "height": 600
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/class_rogue.webp",
+          "complete": true,
+          "width": 400,
+          "height": 600
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/class_mage.webp",
+          "complete": true,
+          "width": 400,
+          "height": 600
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/class_adventurer.webp",
+          "complete": true,
+          "width": 640,
+          "height": 960
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/class_hunter.webp",
+          "complete": true,
+          "width": 640,
+          "height": 960
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/class_guardian.webp",
+          "complete": true,
+          "width": 640,
+          "height": 960
+        }
+      ]
+    },
+    {
+      "scenario": "chromium 360x800 no-preference boss 1",
+      "phase": "reload:pending-promotion",
+      "images": [
+        {
+          "src": "http://127.0.0.1:4201/assets/class_rabbit_guard.webp",
+          "complete": true,
+          "width": 600,
+          "height": 720
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/class_pequod.webp",
+          "complete": true,
+          "width": 600,
+          "height": 500
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/class_windmill.webp",
+          "complete": true,
+          "width": 600,
+          "height": 900
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/class_stitch.webp",
+          "complete": true,
+          "width": 400,
+          "height": 600
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/class_card_spear.webp",
+          "complete": true,
+          "width": 400,
+          "height": 600
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/class_coffin.webp",
+          "complete": true,
+          "width": 400,
+          "height": 600
+        }
+      ]
+    },
+    {
+      "scenario": "chromium 360x800 no-preference boss 1",
+      "phase": "reload:completed-promotion",
+      "images": [
+        {
+          "src": "http://127.0.0.1:4201/assets/camp-card.webp",
+          "complete": true,
+          "width": 427,
+          "height": 636
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/gear_armor.svg",
+          "complete": true,
+          "width": 150,
+          "height": 150
+        }
+      ]
+    },
+    {
+      "scenario": "chromium 360x800 no-preference boss 3",
+      "phase": "reload:boss-fixture",
+      "images": [
+        {
+          "src": "http://127.0.0.1:4201/assets/story_adam.webp",
+          "complete": true,
+          "width": 600,
+          "height": 900
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/gear_armor.svg",
+          "complete": true,
+          "width": 150,
+          "height": 150
+        }
+      ]
+    },
+    {
+      "scenario": "chromium 360x800 no-preference boss 3",
+      "phase": "reload:pending-promotion",
+      "images": [
+        {
+          "src": "http://127.0.0.1:4201/assets/class_queen_exec.webp",
+          "complete": true,
+          "width": 600,
+          "height": 900
+        }
+      ]
+    },
+    {
+      "scenario": "chromium 360x800 no-preference boss 3",
+      "phase": "reload:completed-promotion",
+      "images": [
+        {
+          "src": "http://127.0.0.1:4201/assets/camp-card.webp",
+          "complete": true,
+          "width": 427,
+          "height": 636
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/gear_armor.svg",
+          "complete": true,
+          "width": 150,
+          "height": 150
+        }
+      ]
+    },
+    {
+      "scenario": "chromium 360x800 no-preference boss 6",
+      "phase": "reload:boss-fixture",
+      "images": [
+        {
+          "src": "http://127.0.0.1:4201/assets/location_03.webp",
+          "complete": true,
+          "width": 600,
+          "height": 900
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/gear_armor.svg",
+          "complete": true,
+          "width": 150,
+          "height": 150
+        }
+      ]
+    },
+    {
+      "scenario": "chromium 360x800 no-preference boss 6",
+      "phase": "reload:pending-promotion",
+      "images": [
+        {
+          "src": "http://127.0.0.1:4201/assets/class_pagebreaker.webp",
+          "complete": true,
+          "width": 600,
+          "height": 900
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/class_thorn_crown.webp",
+          "complete": true,
+          "width": 600,
+          "height": 900
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/class_court_witness.webp",
+          "complete": true,
+          "width": 640,
+          "height": 960
+        }
+      ]
+    },
+    {
+      "scenario": "chromium 360x800 no-preference boss 6",
+      "phase": "reload:completed-promotion",
+      "images": [
+        {
+          "src": "http://127.0.0.1:4201/assets/camp-card.webp",
+          "complete": true,
+          "width": 427,
+          "height": 636
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/gear_armor.svg",
+          "complete": true,
+          "width": 150,
+          "height": 150
+        }
+      ]
+    },
+    {
+      "scenario": "chromium 360x800 reduce boss 1",
+      "phase": "reload:boss-fixture",
+      "images": [
+        {
+          "src": "http://127.0.0.1:4201/assets/forest-banner.webp",
+          "complete": true,
+          "width": 1022,
+          "height": 571
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/class_warrior.webp",
+          "complete": true,
+          "width": 400,
+          "height": 600
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/class_rogue.webp",
+          "complete": true,
+          "width": 400,
+          "height": 600
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/class_mage.webp",
+          "complete": true,
+          "width": 400,
+          "height": 600
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/class_adventurer.webp",
+          "complete": true,
+          "width": 640,
+          "height": 960
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/class_hunter.webp",
+          "complete": true,
+          "width": 640,
+          "height": 960
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/class_guardian.webp",
+          "complete": true,
+          "width": 640,
+          "height": 960
+        }
+      ]
+    },
+    {
+      "scenario": "chromium 360x800 reduce boss 1",
+      "phase": "reload:pending-promotion",
+      "images": [
+        {
+          "src": "http://127.0.0.1:4201/assets/class_rabbit_guard.webp",
+          "complete": true,
+          "width": 600,
+          "height": 720
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/class_pequod.webp",
+          "complete": true,
+          "width": 600,
+          "height": 500
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/class_windmill.webp",
+          "complete": true,
+          "width": 600,
+          "height": 900
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/class_stitch.webp",
+          "complete": true,
+          "width": 400,
+          "height": 600
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/class_card_spear.webp",
+          "complete": true,
+          "width": 400,
+          "height": 600
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/class_coffin.webp",
+          "complete": true,
+          "width": 400,
+          "height": 600
+        }
+      ]
+    },
+    {
+      "scenario": "chromium 360x800 reduce boss 1",
+      "phase": "reload:completed-promotion",
+      "images": [
+        {
+          "src": "http://127.0.0.1:4201/assets/camp-card.webp",
+          "complete": true,
+          "width": 427,
+          "height": 636
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/gear_armor.svg",
+          "complete": true,
+          "width": 150,
+          "height": 150
+        }
+      ]
+    },
+    {
+      "scenario": "chromium 360x800 reduce boss 3",
+      "phase": "reload:boss-fixture",
+      "images": [
+        {
+          "src": "http://127.0.0.1:4201/assets/story_adam.webp",
+          "complete": true,
+          "width": 600,
+          "height": 900
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/gear_armor.svg",
+          "complete": true,
+          "width": 150,
+          "height": 150
+        }
+      ]
+    },
+    {
+      "scenario": "chromium 360x800 reduce boss 3",
+      "phase": "reload:pending-promotion",
+      "images": [
+        {
+          "src": "http://127.0.0.1:4201/assets/class_queen_exec.webp",
+          "complete": true,
+          "width": 600,
+          "height": 900
+        }
+      ]
+    },
+    {
+      "scenario": "chromium 360x800 reduce boss 3",
+      "phase": "reload:completed-promotion",
+      "images": [
+        {
+          "src": "http://127.0.0.1:4201/assets/camp-card.webp",
+          "complete": true,
+          "width": 427,
+          "height": 636
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/gear_armor.svg",
+          "complete": true,
+          "width": 150,
+          "height": 150
+        }
+      ]
+    },
+    {
+      "scenario": "chromium 360x800 reduce boss 6",
+      "phase": "reload:boss-fixture",
+      "images": [
+        {
+          "src": "http://127.0.0.1:4201/assets/location_03.webp",
+          "complete": true,
+          "width": 600,
+          "height": 900
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/gear_armor.svg",
+          "complete": true,
+          "width": 150,
+          "height": 150
+        }
+      ]
+    },
+    {
+      "scenario": "chromium 360x800 reduce boss 6",
+      "phase": "reload:pending-promotion",
+      "images": [
+        {
+          "src": "http://127.0.0.1:4201/assets/class_pagebreaker.webp",
+          "complete": true,
+          "width": 600,
+          "height": 900
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/class_thorn_crown.webp",
+          "complete": true,
+          "width": 600,
+          "height": 900
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/class_court_witness.webp",
+          "complete": true,
+          "width": 640,
+          "height": 960
+        }
+      ]
+    },
+    {
+      "scenario": "chromium 360x800 reduce boss 6",
+      "phase": "reload:completed-promotion",
+      "images": [
+        {
+          "src": "http://127.0.0.1:4201/assets/camp-card.webp",
+          "complete": true,
+          "width": 427,
+          "height": 636
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/gear_armor.svg",
+          "complete": true,
+          "width": 150,
+          "height": 150
+        }
+      ]
+    },
+    {
+      "scenario": "chromium 390x844 no-preference boss 1",
+      "phase": "reload:boss-fixture",
+      "images": [
+        {
+          "src": "http://127.0.0.1:4201/assets/forest-banner.webp",
+          "complete": true,
+          "width": 1022,
+          "height": 571
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/class_warrior.webp",
+          "complete": true,
+          "width": 400,
+          "height": 600
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/class_rogue.webp",
+          "complete": true,
+          "width": 400,
+          "height": 600
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/class_mage.webp",
+          "complete": true,
+          "width": 400,
+          "height": 600
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/class_adventurer.webp",
+          "complete": true,
+          "width": 640,
+          "height": 960
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/class_hunter.webp",
+          "complete": true,
+          "width": 640,
+          "height": 960
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/class_guardian.webp",
+          "complete": true,
+          "width": 640,
+          "height": 960
+        }
+      ]
+    },
+    {
+      "scenario": "chromium 390x844 no-preference boss 1",
+      "phase": "reload:pending-promotion",
+      "images": [
+        {
+          "src": "http://127.0.0.1:4201/assets/class_rabbit_guard.webp",
+          "complete": true,
+          "width": 600,
+          "height": 720
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/class_pequod.webp",
+          "complete": true,
+          "width": 600,
+          "height": 500
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/class_windmill.webp",
+          "complete": true,
+          "width": 600,
+          "height": 900
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/class_stitch.webp",
+          "complete": true,
+          "width": 400,
+          "height": 600
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/class_card_spear.webp",
+          "complete": true,
+          "width": 400,
+          "height": 600
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/class_coffin.webp",
+          "complete": true,
+          "width": 400,
+          "height": 600
+        }
+      ]
+    },
+    {
+      "scenario": "chromium 390x844 no-preference boss 1",
+      "phase": "reload:completed-promotion",
+      "images": [
+        {
+          "src": "http://127.0.0.1:4201/assets/camp-card.webp",
+          "complete": true,
+          "width": 427,
+          "height": 636
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/gear_armor.svg",
+          "complete": true,
+          "width": 150,
+          "height": 150
+        }
+      ]
+    },
+    {
+      "scenario": "chromium 390x844 no-preference boss 3",
+      "phase": "reload:boss-fixture",
+      "images": [
+        {
+          "src": "http://127.0.0.1:4201/assets/story_adam.webp",
+          "complete": true,
+          "width": 600,
+          "height": 900
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/gear_armor.svg",
+          "complete": true,
+          "width": 150,
+          "height": 150
+        }
+      ]
+    },
+    {
+      "scenario": "chromium 390x844 no-preference boss 3",
+      "phase": "reload:pending-promotion",
+      "images": [
+        {
+          "src": "http://127.0.0.1:4201/assets/class_queen_exec.webp",
+          "complete": true,
+          "width": 600,
+          "height": 900
+        }
+      ]
+    },
+    {
+      "scenario": "chromium 390x844 no-preference boss 3",
+      "phase": "reload:completed-promotion",
+      "images": [
+        {
+          "src": "http://127.0.0.1:4201/assets/camp-card.webp",
+          "complete": true,
+          "width": 427,
+          "height": 636
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/gear_armor.svg",
+          "complete": true,
+          "width": 150,
+          "height": 150
+        }
+      ]
+    },
+    {
+      "scenario": "chromium 390x844 no-preference boss 6",
+      "phase": "reload:boss-fixture",
+      "images": [
+        {
+          "src": "http://127.0.0.1:4201/assets/location_03.webp",
+          "complete": true,
+          "width": 600,
+          "height": 900
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/gear_armor.svg",
+          "complete": true,
+          "width": 150,
+          "height": 150
+        }
+      ]
+    },
+    {
+      "scenario": "chromium 390x844 no-preference boss 6",
+      "phase": "reload:pending-promotion",
+      "images": [
+        {
+          "src": "http://127.0.0.1:4201/assets/class_pagebreaker.webp",
+          "complete": true,
+          "width": 600,
+          "height": 900
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/class_thorn_crown.webp",
+          "complete": true,
+          "width": 600,
+          "height": 900
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/class_court_witness.webp",
+          "complete": true,
+          "width": 640,
+          "height": 960
+        }
+      ]
+    },
+    {
+      "scenario": "chromium 390x844 no-preference boss 6",
+      "phase": "reload:completed-promotion",
+      "images": [
+        {
+          "src": "http://127.0.0.1:4201/assets/camp-card.webp",
+          "complete": true,
+          "width": 427,
+          "height": 636
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/gear_armor.svg",
+          "complete": true,
+          "width": 150,
+          "height": 150
+        }
+      ]
+    },
+    {
+      "scenario": "chromium 390x844 reduce boss 1",
+      "phase": "reload:boss-fixture",
+      "images": [
+        {
+          "src": "http://127.0.0.1:4201/assets/forest-banner.webp",
+          "complete": true,
+          "width": 1022,
+          "height": 571
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/class_warrior.webp",
+          "complete": true,
+          "width": 400,
+          "height": 600
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/class_rogue.webp",
+          "complete": true,
+          "width": 400,
+          "height": 600
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/class_mage.webp",
+          "complete": true,
+          "width": 400,
+          "height": 600
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/class_adventurer.webp",
+          "complete": true,
+          "width": 640,
+          "height": 960
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/class_hunter.webp",
+          "complete": true,
+          "width": 640,
+          "height": 960
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/class_guardian.webp",
+          "complete": true,
+          "width": 640,
+          "height": 960
+        }
+      ]
+    },
+    {
+      "scenario": "chromium 390x844 reduce boss 1",
+      "phase": "reload:pending-promotion",
+      "images": [
+        {
+          "src": "http://127.0.0.1:4201/assets/class_rabbit_guard.webp",
+          "complete": true,
+          "width": 600,
+          "height": 720
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/class_pequod.webp",
+          "complete": true,
+          "width": 600,
+          "height": 500
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/class_windmill.webp",
+          "complete": true,
+          "width": 600,
+          "height": 900
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/class_stitch.webp",
+          "complete": true,
+          "width": 400,
+          "height": 600
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/class_card_spear.webp",
+          "complete": true,
+          "width": 400,
+          "height": 600
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/class_coffin.webp",
+          "complete": true,
+          "width": 400,
+          "height": 600
+        }
+      ]
+    },
+    {
+      "scenario": "chromium 390x844 reduce boss 1",
+      "phase": "reload:completed-promotion",
+      "images": [
+        {
+          "src": "http://127.0.0.1:4201/assets/camp-card.webp",
+          "complete": true,
+          "width": 427,
+          "height": 636
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/gear_armor.svg",
+          "complete": true,
+          "width": 150,
+          "height": 150
+        }
+      ]
+    },
+    {
+      "scenario": "chromium 390x844 reduce boss 3",
+      "phase": "reload:boss-fixture",
+      "images": [
+        {
+          "src": "http://127.0.0.1:4201/assets/story_adam.webp",
+          "complete": true,
+          "width": 600,
+          "height": 900
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/gear_armor.svg",
+          "complete": true,
+          "width": 150,
+          "height": 150
+        }
+      ]
+    },
+    {
+      "scenario": "chromium 390x844 reduce boss 3",
+      "phase": "reload:pending-promotion",
+      "images": [
+        {
+          "src": "http://127.0.0.1:4201/assets/class_queen_exec.webp",
+          "complete": true,
+          "width": 600,
+          "height": 900
+        }
+      ]
+    },
+    {
+      "scenario": "chromium 390x844 reduce boss 3",
+      "phase": "reload:completed-promotion",
+      "images": [
+        {
+          "src": "http://127.0.0.1:4201/assets/camp-card.webp",
+          "complete": true,
+          "width": 427,
+          "height": 636
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/gear_armor.svg",
+          "complete": true,
+          "width": 150,
+          "height": 150
+        }
+      ]
+    },
+    {
+      "scenario": "chromium 390x844 reduce boss 6",
+      "phase": "reload:boss-fixture",
+      "images": [
+        {
+          "src": "http://127.0.0.1:4201/assets/location_03.webp",
+          "complete": true,
+          "width": 600,
+          "height": 900
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/gear_armor.svg",
+          "complete": true,
+          "width": 150,
+          "height": 150
+        }
+      ]
+    },
+    {
+      "scenario": "chromium 390x844 reduce boss 6",
+      "phase": "reload:pending-promotion",
+      "images": [
+        {
+          "src": "http://127.0.0.1:4201/assets/class_pagebreaker.webp",
+          "complete": true,
+          "width": 600,
+          "height": 900
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/class_thorn_crown.webp",
+          "complete": true,
+          "width": 600,
+          "height": 900
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/class_court_witness.webp",
+          "complete": true,
+          "width": 640,
+          "height": 960
+        }
+      ]
+    },
+    {
+      "scenario": "chromium 390x844 reduce boss 6",
+      "phase": "reload:completed-promotion",
+      "images": [
+        {
+          "src": "http://127.0.0.1:4201/assets/camp-card.webp",
+          "complete": true,
+          "width": 427,
+          "height": 636
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/gear_armor.svg",
+          "complete": true,
+          "width": 150,
+          "height": 150
+        }
+      ]
+    },
+    {
+      "scenario": "chromium 430x932 no-preference boss 1",
+      "phase": "reload:boss-fixture",
+      "images": [
+        {
+          "src": "http://127.0.0.1:4201/assets/forest-banner.webp",
+          "complete": true,
+          "width": 1022,
+          "height": 571
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/class_warrior.webp",
+          "complete": true,
+          "width": 400,
+          "height": 600
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/class_rogue.webp",
+          "complete": true,
+          "width": 400,
+          "height": 600
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/class_mage.webp",
+          "complete": true,
+          "width": 400,
+          "height": 600
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/class_adventurer.webp",
+          "complete": true,
+          "width": 640,
+          "height": 960
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/class_hunter.webp",
+          "complete": true,
+          "width": 640,
+          "height": 960
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/class_guardian.webp",
+          "complete": true,
+          "width": 640,
+          "height": 960
+        }
+      ]
+    },
+    {
+      "scenario": "chromium 430x932 no-preference boss 1",
+      "phase": "reload:pending-promotion",
+      "images": [
+        {
+          "src": "http://127.0.0.1:4201/assets/class_rabbit_guard.webp",
+          "complete": true,
+          "width": 600,
+          "height": 720
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/class_pequod.webp",
+          "complete": true,
+          "width": 600,
+          "height": 500
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/class_windmill.webp",
+          "complete": true,
+          "width": 600,
+          "height": 900
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/class_stitch.webp",
+          "complete": true,
+          "width": 400,
+          "height": 600
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/class_card_spear.webp",
+          "complete": true,
+          "width": 400,
+          "height": 600
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/class_coffin.webp",
+          "complete": true,
+          "width": 400,
+          "height": 600
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/class_mirror_fist.webp",
+          "complete": true,
+          "width": 600,
+          "height": 400
+        }
+      ]
+    },
+    {
+      "scenario": "chromium 430x932 no-preference boss 1",
+      "phase": "reload:completed-promotion",
+      "images": [
+        {
+          "src": "http://127.0.0.1:4201/assets/camp-card.webp",
+          "complete": true,
+          "width": 427,
+          "height": 636
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/gear_armor.svg",
+          "complete": true,
+          "width": 150,
+          "height": 150
+        }
+      ]
+    },
+    {
+      "scenario": "chromium 430x932 no-preference boss 3",
+      "phase": "reload:boss-fixture",
+      "images": [
+        {
+          "src": "http://127.0.0.1:4201/assets/story_adam.webp",
+          "complete": true,
+          "width": 600,
+          "height": 900
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/gear_armor.svg",
+          "complete": true,
+          "width": 150,
+          "height": 150
+        }
+      ]
+    },
+    {
+      "scenario": "chromium 430x932 no-preference boss 3",
+      "phase": "reload:pending-promotion",
+      "images": [
+        {
+          "src": "http://127.0.0.1:4201/assets/class_queen_exec.webp",
+          "complete": true,
+          "width": 600,
+          "height": 900
+        }
+      ]
+    },
+    {
+      "scenario": "chromium 430x932 no-preference boss 3",
+      "phase": "reload:completed-promotion",
+      "images": [
+        {
+          "src": "http://127.0.0.1:4201/assets/camp-card.webp",
+          "complete": true,
+          "width": 427,
+          "height": 636
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/gear_armor.svg",
+          "complete": true,
+          "width": 150,
+          "height": 150
+        }
+      ]
+    },
+    {
+      "scenario": "chromium 430x932 no-preference boss 6",
+      "phase": "reload:boss-fixture",
+      "images": [
+        {
+          "src": "http://127.0.0.1:4201/assets/location_03.webp",
+          "complete": true,
+          "width": 600,
+          "height": 900
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/gear_armor.svg",
+          "complete": true,
+          "width": 150,
+          "height": 150
+        }
+      ]
+    },
+    {
+      "scenario": "chromium 430x932 no-preference boss 6",
+      "phase": "reload:pending-promotion",
+      "images": [
+        {
+          "src": "http://127.0.0.1:4201/assets/class_pagebreaker.webp",
+          "complete": true,
+          "width": 600,
+          "height": 900
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/class_thorn_crown.webp",
+          "complete": true,
+          "width": 600,
+          "height": 900
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/class_court_witness.webp",
+          "complete": true,
+          "width": 640,
+          "height": 960
+        }
+      ]
+    },
+    {
+      "scenario": "chromium 430x932 no-preference boss 6",
+      "phase": "reload:completed-promotion",
+      "images": [
+        {
+          "src": "http://127.0.0.1:4201/assets/camp-card.webp",
+          "complete": true,
+          "width": 427,
+          "height": 636
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/gear_armor.svg",
+          "complete": true,
+          "width": 150,
+          "height": 150
+        }
+      ]
+    },
+    {
+      "scenario": "chromium 430x932 reduce boss 1",
+      "phase": "reload:boss-fixture",
+      "images": [
+        {
+          "src": "http://127.0.0.1:4201/assets/forest-banner.webp",
+          "complete": true,
+          "width": 1022,
+          "height": 571
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/class_warrior.webp",
+          "complete": true,
+          "width": 400,
+          "height": 600
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/class_rogue.webp",
+          "complete": true,
+          "width": 400,
+          "height": 600
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/class_mage.webp",
+          "complete": true,
+          "width": 400,
+          "height": 600
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/class_adventurer.webp",
+          "complete": true,
+          "width": 640,
+          "height": 960
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/class_hunter.webp",
+          "complete": true,
+          "width": 640,
+          "height": 960
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/class_guardian.webp",
+          "complete": true,
+          "width": 640,
+          "height": 960
+        }
+      ]
+    },
+    {
+      "scenario": "chromium 430x932 reduce boss 1",
+      "phase": "reload:pending-promotion",
+      "images": [
+        {
+          "src": "http://127.0.0.1:4201/assets/class_rabbit_guard.webp",
+          "complete": true,
+          "width": 600,
+          "height": 720
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/class_pequod.webp",
+          "complete": true,
+          "width": 600,
+          "height": 500
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/class_windmill.webp",
+          "complete": true,
+          "width": 600,
+          "height": 900
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/class_stitch.webp",
+          "complete": true,
+          "width": 400,
+          "height": 600
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/class_card_spear.webp",
+          "complete": true,
+          "width": 400,
+          "height": 600
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/class_coffin.webp",
+          "complete": true,
+          "width": 400,
+          "height": 600
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/class_mirror_fist.webp",
+          "complete": true,
+          "width": 600,
+          "height": 400
+        }
+      ]
+    },
+    {
+      "scenario": "chromium 430x932 reduce boss 1",
+      "phase": "reload:completed-promotion",
+      "images": [
+        {
+          "src": "http://127.0.0.1:4201/assets/camp-card.webp",
+          "complete": true,
+          "width": 427,
+          "height": 636
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/gear_armor.svg",
+          "complete": true,
+          "width": 150,
+          "height": 150
+        }
+      ]
+    },
+    {
+      "scenario": "chromium 430x932 reduce boss 3",
+      "phase": "reload:boss-fixture",
+      "images": [
+        {
+          "src": "http://127.0.0.1:4201/assets/story_adam.webp",
+          "complete": true,
+          "width": 600,
+          "height": 900
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/gear_armor.svg",
+          "complete": true,
+          "width": 150,
+          "height": 150
+        }
+      ]
+    },
+    {
+      "scenario": "chromium 430x932 reduce boss 3",
+      "phase": "reload:pending-promotion",
+      "images": [
+        {
+          "src": "http://127.0.0.1:4201/assets/class_queen_exec.webp",
+          "complete": true,
+          "width": 600,
+          "height": 900
+        }
+      ]
+    },
+    {
+      "scenario": "chromium 430x932 reduce boss 3",
+      "phase": "reload:completed-promotion",
+      "images": [
+        {
+          "src": "http://127.0.0.1:4201/assets/camp-card.webp",
+          "complete": true,
+          "width": 427,
+          "height": 636
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/gear_armor.svg",
+          "complete": true,
+          "width": 150,
+          "height": 150
+        }
+      ]
+    },
+    {
+      "scenario": "chromium 430x932 reduce boss 6",
+      "phase": "reload:boss-fixture",
+      "images": [
+        {
+          "src": "http://127.0.0.1:4201/assets/location_03.webp",
+          "complete": true,
+          "width": 600,
+          "height": 900
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/gear_armor.svg",
+          "complete": true,
+          "width": 150,
+          "height": 150
+        }
+      ]
+    },
+    {
+      "scenario": "chromium 430x932 reduce boss 6",
+      "phase": "reload:pending-promotion",
+      "images": [
+        {
+          "src": "http://127.0.0.1:4201/assets/class_pagebreaker.webp",
+          "complete": true,
+          "width": 600,
+          "height": 900
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/class_thorn_crown.webp",
+          "complete": true,
+          "width": 600,
+          "height": 900
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/class_court_witness.webp",
+          "complete": true,
+          "width": 640,
+          "height": 960
+        }
+      ]
+    },
+    {
+      "scenario": "chromium 430x932 reduce boss 6",
+      "phase": "reload:completed-promotion",
+      "images": [
+        {
+          "src": "http://127.0.0.1:4201/assets/camp-card.webp",
+          "complete": true,
+          "width": 427,
+          "height": 636
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/gear_armor.svg",
+          "complete": true,
+          "width": 150,
+          "height": 150
+        }
+      ]
+    },
+    {
+      "scenario": "chromium 390x664 no-preference boss 1",
+      "phase": "reload:boss-fixture",
+      "images": [
+        {
+          "src": "http://127.0.0.1:4201/assets/forest-banner.webp",
+          "complete": true,
+          "width": 1022,
+          "height": 571
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/class_warrior.webp",
+          "complete": true,
+          "width": 400,
+          "height": 600
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/class_rogue.webp",
+          "complete": true,
+          "width": 400,
+          "height": 600
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/class_mage.webp",
+          "complete": true,
+          "width": 400,
+          "height": 600
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/class_adventurer.webp",
+          "complete": true,
+          "width": 640,
+          "height": 960
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/class_hunter.webp",
+          "complete": true,
+          "width": 640,
+          "height": 960
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/class_guardian.webp",
+          "complete": true,
+          "width": 640,
+          "height": 960
+        }
+      ]
+    },
+    {
+      "scenario": "chromium 390x664 no-preference boss 1",
+      "phase": "reload:pending-promotion",
+      "images": [
+        {
+          "src": "http://127.0.0.1:4201/assets/class_rabbit_guard.webp",
+          "complete": true,
+          "width": 600,
+          "height": 720
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/class_pequod.webp",
+          "complete": true,
+          "width": 600,
+          "height": 500
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/class_windmill.webp",
+          "complete": true,
+          "width": 600,
+          "height": 900
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/class_stitch.webp",
+          "complete": true,
+          "width": 400,
+          "height": 600
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/class_card_spear.webp",
+          "complete": true,
+          "width": 400,
+          "height": 600
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/class_coffin.webp",
+          "complete": true,
+          "width": 400,
+          "height": 600
+        }
+      ]
+    },
+    {
+      "scenario": "chromium 390x664 no-preference boss 1",
+      "phase": "reload:completed-promotion",
+      "images": [
+        {
+          "src": "http://127.0.0.1:4201/assets/camp-card.webp",
+          "complete": true,
+          "width": 427,
+          "height": 636
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/gear_armor.svg",
+          "complete": true,
+          "width": 150,
+          "height": 150
+        }
+      ]
+    },
+    {
+      "scenario": "chromium 390x664 no-preference boss 3",
+      "phase": "reload:boss-fixture",
+      "images": [
+        {
+          "src": "http://127.0.0.1:4201/assets/story_adam.webp",
+          "complete": true,
+          "width": 600,
+          "height": 900
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/gear_armor.svg",
+          "complete": true,
+          "width": 150,
+          "height": 150
+        }
+      ]
+    },
+    {
+      "scenario": "chromium 390x664 no-preference boss 3",
+      "phase": "reload:pending-promotion",
+      "images": [
+        {
+          "src": "http://127.0.0.1:4201/assets/class_queen_exec.webp",
+          "complete": true,
+          "width": 600,
+          "height": 900
+        }
+      ]
+    },
+    {
+      "scenario": "chromium 390x664 no-preference boss 3",
+      "phase": "reload:completed-promotion",
+      "images": [
+        {
+          "src": "http://127.0.0.1:4201/assets/camp-card.webp",
+          "complete": true,
+          "width": 427,
+          "height": 636
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/gear_armor.svg",
+          "complete": true,
+          "width": 150,
+          "height": 150
+        }
+      ]
+    },
+    {
+      "scenario": "chromium 390x664 no-preference boss 6",
+      "phase": "reload:boss-fixture",
+      "images": [
+        {
+          "src": "http://127.0.0.1:4201/assets/location_03.webp",
+          "complete": true,
+          "width": 600,
+          "height": 900
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/gear_armor.svg",
+          "complete": true,
+          "width": 150,
+          "height": 150
+        }
+      ]
+    },
+    {
+      "scenario": "chromium 390x664 no-preference boss 6",
+      "phase": "reload:pending-promotion",
+      "images": [
+        {
+          "src": "http://127.0.0.1:4201/assets/class_pagebreaker.webp",
+          "complete": true,
+          "width": 600,
+          "height": 900
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/class_thorn_crown.webp",
+          "complete": true,
+          "width": 600,
+          "height": 900
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/class_court_witness.webp",
+          "complete": true,
+          "width": 640,
+          "height": 960
+        }
+      ]
+    },
+    {
+      "scenario": "chromium 390x664 no-preference boss 6",
+      "phase": "reload:completed-promotion",
+      "images": [
+        {
+          "src": "http://127.0.0.1:4201/assets/camp-card.webp",
+          "complete": true,
+          "width": 427,
+          "height": 636
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/gear_armor.svg",
+          "complete": true,
+          "width": 150,
+          "height": 150
+        }
+      ]
+    },
+    {
+      "scenario": "chromium 390x664 reduce boss 1",
+      "phase": "reload:boss-fixture",
+      "images": [
+        {
+          "src": "http://127.0.0.1:4201/assets/forest-banner.webp",
+          "complete": true,
+          "width": 1022,
+          "height": 571
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/class_warrior.webp",
+          "complete": true,
+          "width": 400,
+          "height": 600
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/class_rogue.webp",
+          "complete": true,
+          "width": 400,
+          "height": 600
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/class_mage.webp",
+          "complete": true,
+          "width": 400,
+          "height": 600
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/class_adventurer.webp",
+          "complete": true,
+          "width": 640,
+          "height": 960
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/class_hunter.webp",
+          "complete": true,
+          "width": 640,
+          "height": 960
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/class_guardian.webp",
+          "complete": true,
+          "width": 640,
+          "height": 960
+        }
+      ]
+    },
+    {
+      "scenario": "chromium 390x664 reduce boss 1",
+      "phase": "reload:pending-promotion",
+      "images": [
+        {
+          "src": "http://127.0.0.1:4201/assets/class_rabbit_guard.webp",
+          "complete": true,
+          "width": 600,
+          "height": 720
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/class_pequod.webp",
+          "complete": true,
+          "width": 600,
+          "height": 500
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/class_windmill.webp",
+          "complete": true,
+          "width": 600,
+          "height": 900
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/class_stitch.webp",
+          "complete": true,
+          "width": 400,
+          "height": 600
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/class_card_spear.webp",
+          "complete": true,
+          "width": 400,
+          "height": 600
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/class_coffin.webp",
+          "complete": true,
+          "width": 400,
+          "height": 600
+        }
+      ]
+    },
+    {
+      "scenario": "chromium 390x664 reduce boss 1",
+      "phase": "reload:completed-promotion",
+      "images": [
+        {
+          "src": "http://127.0.0.1:4201/assets/camp-card.webp",
+          "complete": true,
+          "width": 427,
+          "height": 636
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/gear_armor.svg",
+          "complete": true,
+          "width": 150,
+          "height": 150
+        }
+      ]
+    },
+    {
+      "scenario": "chromium 390x664 reduce boss 3",
+      "phase": "reload:boss-fixture",
+      "images": [
+        {
+          "src": "http://127.0.0.1:4201/assets/story_adam.webp",
+          "complete": true,
+          "width": 600,
+          "height": 900
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/gear_armor.svg",
+          "complete": true,
+          "width": 150,
+          "height": 150
+        }
+      ]
+    },
+    {
+      "scenario": "chromium 390x664 reduce boss 3",
+      "phase": "reload:pending-promotion",
+      "images": [
+        {
+          "src": "http://127.0.0.1:4201/assets/class_queen_exec.webp",
+          "complete": true,
+          "width": 600,
+          "height": 900
+        }
+      ]
+    },
+    {
+      "scenario": "chromium 390x664 reduce boss 3",
+      "phase": "reload:completed-promotion",
+      "images": [
+        {
+          "src": "http://127.0.0.1:4201/assets/camp-card.webp",
+          "complete": true,
+          "width": 427,
+          "height": 636
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/gear_armor.svg",
+          "complete": true,
+          "width": 150,
+          "height": 150
+        }
+      ]
+    },
+    {
+      "scenario": "chromium 390x664 reduce boss 6",
+      "phase": "reload:boss-fixture",
+      "images": [
+        {
+          "src": "http://127.0.0.1:4201/assets/location_03.webp",
+          "complete": true,
+          "width": 600,
+          "height": 900
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/gear_armor.svg",
+          "complete": true,
+          "width": 150,
+          "height": 150
+        }
+      ]
+    },
+    {
+      "scenario": "chromium 390x664 reduce boss 6",
+      "phase": "reload:pending-promotion",
+      "images": [
+        {
+          "src": "http://127.0.0.1:4201/assets/class_pagebreaker.webp",
+          "complete": true,
+          "width": 600,
+          "height": 900
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/class_thorn_crown.webp",
+          "complete": true,
+          "width": 600,
+          "height": 900
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/class_court_witness.webp",
+          "complete": true,
+          "width": 640,
+          "height": 960
+        }
+      ]
+    },
+    {
+      "scenario": "chromium 390x664 reduce boss 6",
+      "phase": "reload:completed-promotion",
+      "images": [
+        {
+          "src": "http://127.0.0.1:4201/assets/camp-card.webp",
+          "complete": true,
+          "width": 427,
+          "height": 636
+        },
+        {
+          "src": "http://127.0.0.1:4201/assets/gear_armor.svg",
+          "complete": true,
+          "width": 150,
+          "height": 150
+        }
+      ]
+    }
+  ],
+  "method": "actual attack/claim/select/confirm/proceed controls; focused valid boss fixtures, not a human natural campaign"
+}

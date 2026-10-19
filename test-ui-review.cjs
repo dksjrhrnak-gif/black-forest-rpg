@@ -6,6 +6,7 @@ const base=process.env.BF_QA_URL||'http://127.0.0.1:4192/',out=process.env.BF_RE
 const widths=JSON.parse(process.env.BF_REVIEW_WIDTHS||'[360,390,430]');
 const screens=JSON.parse(process.env.BF_REVIEW_SCREENS||'["exploration","battle","jobs","reward","equipment"]');
 const beforePath=path.join(out,`baseline-${engine}.json`);const reference=!baseline&&fs.existsSync(beforePath)?JSON.parse(fs.readFileSync(beforePath)):null;
+let diagnosticScenario={engine,baseline,phase:'initialize'};
 if(!baseline)assert(reference,'Capture the reviewed 1881f2b baseline in the same browser first.');
 const camp=Game.load(require('./fixtures/p3-pre-saves.json').saves.find(r=>r.starter==='warrior'&&r.seed===17&&r.style==='collector'&&r.scene==='middle-camp').code);
 function fresh(){const g=new Game(17);g.start('warrior');return g;}
@@ -17,7 +18,7 @@ const current=async()=>Game.load(await page.evaluate(k=>localStorage.getItem(k),
 const restore=async g=>{await page.evaluate(({key,code})=>localStorage.setItem(key,code),{key,code:g.export()});await page.reload();assert.equal((await current()).export(),g.export());};
 const tap=async l=>{await page.waitForTimeout(280);await l.scrollIntoViewIfNeeded();await l.tap();};
 await page.goto(base);
-for(const screen of screens){const g=state(screen);await restore(g);if(['jobs','equipment'].includes(screen))await tap(page.locator(`[data-ui="${screen}"]`).first());
+for(const screen of screens){diagnosticScenario={engine,baseline,width,height,screen,phase:'restore-and-inspect'};const g=state(screen);await restore(g);if(['jobs','equipment'].includes(screen))await tap(page.locator(`[data-ui="${screen}"]`).first());
 for(const img of await page.locator('#black-forest-game img:visible').all())await img.evaluate(e=>{e.loading='eager';return e.decode();});await page.waitForTimeout(720);
 const panel=await page.locator('#bf-panel').isVisible();await page.evaluate(panel=>{if(panel)document.querySelector('#bf-panel').scrollTop=0;else scrollTo(0,Math.max(0,document.querySelector('#bf-play').getBoundingClientRect().top+scrollY-8));},panel);
 const metrics=await page.evaluate(({screen,panel})=>{const host=document.querySelector(panel?'#bf-panel':'#bf-play'),buttons=[...host.querySelectorAll('button.game-action')].filter(e=>e.getClientRects().length),actions=buttons.map(e=>{const r=e.getBoundingClientRect(),s=getComputedStyle(e);return {command:e.dataset.cmd||e.dataset.ui,x:r.x,y:r.y,w:r.width,h:r.height,font:s.fontSize,weight:s.fontWeight,radius:s.borderRadius,clipped:e.scrollWidth>e.clientWidth+1||e.scrollHeight>e.clientHeight+1};}),first=actions[0],hud=document.querySelector('#bf-stats .stats'),visual=host.querySelector('.scene-visual');return {screen,imageFrameHeight:visual?.getBoundingClientRect().height||0,hudHeight:hud?.getBoundingClientRect().height||0,scrollY,firstActionScroll:first?Math.max(0,first.y+first.h-innerHeight+8):0,firstActionPageScroll:first?Math.max(0,first.y+scrollY+first.h-innerHeight+8):0,visibleActionButtons:actions.filter(e=>e.y>=0&&e.y+e.h<=innerHeight).length,actions,overflow:document.documentElement.scrollWidth>innerWidth};},{screen,panel});
@@ -35,7 +36,7 @@ if(!baseline&&screen==='exploration'){g.chapterChoice(0);await tap(page.locator(
 if(!baseline&&screen==='battle'){g.act('skill');await tap(page.locator('[data-cmd="act"][data-arg="skill"]'));assert.equal((await current()).export(),g.export());}
 if(!baseline&&screen==='reward'){g.collectLoot('sell');await tap(page.locator('[data-cmd="collectLoot"][data-arg="sell"]'));assert.equal((await current()).export(),g.export(),'sale matches engine and reward timing');}
 }
-if(!baseline&&phase>=5){
+if(!baseline&&phase>=5){diagnosticScenario={engine,baseline,width,height,phase:'functional-regression'};
  const g=fresh();g.s.level=3;g.s.cleared=[0];g.s.career.mastery.warrior=8;g.s.hp=g.maxHp();g.s.mp=g.maxMp();await restore(g);await tap(page.locator('[data-ui="jobs"]').first());assert(g.jobAvailable('rabbit_guard'));const career=page.locator('.career-candidate [data-cmd="changeJob"][data-arg="rabbit_guard"]');assert(await career.isEnabled());g.changeJob('rabbit_guard');await tap(career);assert.equal((await current()).export(),g.export(),'ready career matches engine');
  const f=fixtures.entries().burn,combat=Game.load(f.code);await restore(combat);combat.act(f.action);await tap(page.locator('[data-cmd="act"][data-arg="'+f.action+'"]'));assert.equal((await current()).export(),combat.export());assert(combat.combatStatus().statuses.some(x=>x.id==='burn'));assert((await page.locator('.combat-effects').innerText()).includes('화상'),'important active status visible');
  for(const choice of ['equip','bag','sell']){const reward=Game.load(fixtures.rarePurchase(5).code);reward.buy('gear-weapon');await restore(reward);assert.equal(await page.locator('.fx-loot-card').getAttribute('data-grade'),'5');reward.collectLoot(choice);await tap(page.locator(`[data-cmd="collectLoot"][data-arg="${choice}"]`));assert.equal((await current()).export(),reward.export(),'mythic '+choice+' exact once');await page.reload();assert.equal((await current()).export(),reward.export(),'reward reconnect exact');}
@@ -46,4 +47,4 @@ if(!baseline&&phase>=5){
 assert.deepEqual(errors,[]);await context.close();}
 }finally{await browser.close();}
 fs.mkdirSync(out,{recursive:true});fs.writeFileSync(path.join(out,`${baseline?'baseline':'ui'}-${engine}.json`),JSON.stringify({status:'PASS',engine,baseline,base,phase,checks,method:'Same seed-17 chapter/combat and archived campaign camp; actual seeded legendary purchase. Measurements from #bf-play-aligned viewport, page distance recorded separately. Responsive touch emulation, not physical devices.'},null,2)+'\n');
-})().catch(e=>{console.error(e);process.exit(1);});
+})().catch(e=>{console.error(e);if(process.env.GITHUB_ACTIONS==='true')console.error('::error::'+(JSON.stringify(diagnosticScenario)+' '+(e.stack||e)).replace(/%/g,'%25').replace(/\r/g,'%0D').replace(/\n/g,'%0A'));process.exit(1);});

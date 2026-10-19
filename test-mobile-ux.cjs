@@ -1,3 +1,4 @@
+const prepareFixtureImages=require('./qa-fixture-images.cjs');
 /* Rendered comparison against the shipped UI. Fixtures keep the same save/RNG on
  * both versions; combat fixtures are focused QA saves, not a natural campaign. */
 const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto'),pw=require('playwright');
@@ -24,7 +25,7 @@ async function measurements(page){return page.evaluate(()=>{
  return {imageEnemyIntersectionArea,viewport:{width:innerWidth,height:innerHeight},root:box(document.querySelector('#black-forest-game')),top:box(document.querySelector('.top')),hud:box(document.querySelector('#bf-stats')),image:box(document.querySelector('#bf-play .scene-art')),imageElement:image?{...box(image),complete:image.complete,naturalWidth:image.naturalWidth,naturalHeight:image.naturalHeight,loading:image.loading,src:image.getAttribute('src'),objectFit:getComputedStyle(image).objectFit}:null,story:story?{...box(story),scrollHeight:story.scrollHeight,clientHeight:story.clientHeight,text:story.innerText,tabindex:story.getAttribute('tabindex')}:null,enemy:enemy?{...box(enemy),text:enemy.innerText,visible:inside(box(enemy))}:null,actionPanel:box(actionHost),actions,visibleActions:actions.filter(b=>b.visible).length,playerMeters:[...document.querySelectorAll('#bf-stats progress')].map(e=>({label:e.getAttribute('aria-label'),...box(e),visible:inside(box(e))})),overflow:document.documentElement.scrollWidth>innerWidth+1,scrollHint:[...document.querySelectorAll('[data-story-hint],.story-scroll-hint,.scene-scroll-hint')].filter(shown).map(e=>e.innerText),promotionCards:document.querySelectorAll('.promotion-card').length};
  });}
 async function inspect(page,g,scene,width,height){
- const code=g.export();await page.evaluate(({key,code})=>localStorage.setItem(key,code),{key,code});await page.reload({waitUntil:'domcontentloaded'});await page.locator(scene==='promotion'?'.promotion-screen':'#bf-play .main').waitFor();await decoded(page);await page.waitForTimeout(150);
+ const code=g.export();await page.evaluate(({key,code})=>localStorage.setItem(key,code),{key,code});await prepareFixtureImages(page);await page.reload({waitUntil:'domcontentloaded'});await page.locator(scene==='promotion'?'.promotion-screen':'#bf-play .main').waitFor();await decoded(page);await page.waitForTimeout(150);
  const m=await measurements(page);assert(!m.overflow,'horizontal overflow');
  // Capture the same initial presentation state on both versions (before choosing a candidate).
  if(engine==='chromium'&&width===390){const dir=path.join(out,'screenshots');fs.mkdirSync(dir,{recursive:true});const file=`${before?'before':'after'}-${width}x${height}-${scene}.jpg`;await page.screenshot({path:path.join(dir,file),type:'jpeg',quality:86});m.screenshot='screenshots/'+file;}
@@ -67,7 +68,7 @@ async function stressChecks(page){
   const g=fx.battle(17,name==='long-skill'?longJob:'warrior');
   if(name==='long-log')g.s.message=Array(8).fill(g.s.message+' '+JOBS[g.s.job].desc).join('\n');
   if(name==='many-statuses')Object.assign(g.s.enemy,{dot:5,dotTurns:3,dotId:'burn',stun:1,weak:1,guarded:true});
-  const code=g.export();Game.load(code);await page.evaluate(({key,code})=>localStorage.setItem(key,code),{key,code});await page.reload({waitUntil:'domcontentloaded'});await decoded(page);
+  const code=g.export();Game.load(code);await page.evaluate(({key,code})=>localStorage.setItem(key,code),{key,code});await prepareFixtureImages(page);await page.reload({waitUntil:'domcontentloaded'});await decoded(page);
   // Explicit presentation simulation, not OS/browser accessibility text zoom.
   if(name==='large-text-simulation')await page.addStyleTag({content:'#black-forest-game .scene-hero-text,#black-forest-game .intent,#black-forest-game .action-help,#black-forest-game .viewport-identity strong{font-size:19px!important}'});
   await page.waitForTimeout(150);const m=await measurements(page);assert(!m.overflow);assert.equal(m.actions.length,5);assert(m.actions.every(b=>b.height===52&&!b.clipped),'stress actions retain full 52px targets');assert(m.enemy.visible,'enemy HP / next action remain visible');assert(m.playerMeters.find(x=>x.label==='HP')?.visible&&m.playerMeters.find(x=>x.label==='MP')?.visible,'stress vitals visible');assert(m.image.height>=32,'stress image has actual visible space');

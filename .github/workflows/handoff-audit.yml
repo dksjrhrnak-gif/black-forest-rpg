@@ -1,7 +1,7 @@
 name: Handoff audit and requested mobile sizes
 on:
   push:
-    branches: [qa/handoff-audit-20261008, qa/resume-checkpoint-20261008, qa/asset-quality-20261008, qa/p1-class-identity-20261008, feature/p2-exploration-equipment, feature/p3-economy-crafting-endings, qa/gameplay-handoff-20261012, qa/fx-feedback-pass, qa/ui-b-mobile-pass, qa/single-screen-mobile-ui, feature/forced-boss-career, qa/mobile-ux-refinement, main]
+    branches: [qa/handoff-audit-20261008, qa/resume-checkpoint-20261008, qa/asset-quality-20261008, qa/p1-class-identity-20261008, feature/p2-exploration-equipment, feature/p3-economy-crafting-endings, qa/gameplay-handoff-20261012, qa/fx-feedback-pass, qa/ui-b-mobile-pass, qa/single-screen-mobile-ui, feature/forced-boss-career, qa/mobile-ux-refinement, qa/mobile-ux-firefox-images, main]
   workflow_dispatch:
 permissions:
   contents: read
@@ -173,7 +173,7 @@ jobs:
 
   p3-browser:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 40
     strategy:
       fail-fast: false
       matrix:
@@ -191,6 +191,12 @@ jobs:
       - run: python3 -m http.server 4174 --directory dist > /tmp/bf-p3-preview.log 2>&1 &
       - name: Wait for preview server readiness
         run: node -e '(async()=>{for(let i=0;i<100;i++){try{if((await fetch("http://127.0.0.1:4174/")).ok)return}catch{}await new Promise(r=>setTimeout(r,100))}throw Error("Preview server unavailable")})().catch(e=>{console.error(e);process.exit(1)})'
+      - name: Dormant lazy and broken raster fixture readiness
+        env:
+          BF_BROWSER: ${{ matrix.browser }}
+          BF_QA_URL: http://127.0.0.1:4174/
+          BF_FIXTURE_IMAGES_OUT: docs/mobile-ux-refinement/fixture-readiness
+        run: node test-fixture-images.cjs
       - name: Boss reward, forced career choice, saves and mobile FX compatibility
         env:
           BF_BROWSER: ${{ matrix.browser }}

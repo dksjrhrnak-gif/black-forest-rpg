@@ -51,4 +51,4 @@ if(!baseline&&phase>=6){
 console.log(`PASS B UI ${engine} ${width} ${theme} phase ${phase}${baseline?' baseline':''}`);await context.close();}
 }finally{await browser.close();}
 fs.mkdirSync(out,{recursive:true});fs.writeFileSync(path.join(out,`${baseline?'baseline':'ui'}-${engine}.json`),JSON.stringify({status:'PASS',engine,base,baseline,phase,checks,method:'Identical focused saves imported through the real save dialog. Archive camp is a real P2 campaign save; combat/ending fixtures are focused synthetic states. Not an uninterrupted campaign or physical-device test.'},null,2)+'\n');
-})().catch(e=>{console.error(e);process.exit(1);});
+})().catch(e=>{console.error(e);if(process.env.GITHUB_ACTIONS==='true')console.error('::error::'+String(e.stack||e).replace(/%/g,'%25').replace(/\r/g,'%0D').replace(/\n/g,'%0A'));process.exit(1);});

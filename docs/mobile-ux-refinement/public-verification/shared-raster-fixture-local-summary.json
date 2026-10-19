@@ -1,0 +1,54 @@
+{
+  "status": "PASS",
+  "method": "Actual local Chromium execution after the dormant-lazy eligibility correction; original assertions and actions preserved. Physical devices not tested.",
+  "helperSha256": "7fdf2bf2e0bb68cfe5fd98a9d26e13d3b1f0cd053cbc56aa6eada6128292d7d5",
+  "reports": {
+    "after-chromium.json": {
+      "status": "PASS",
+      "engine": "chromium",
+      "rawReportSha256": "8339ab6452b12bdaf4bd0b677dd696fef45e8ab913d8c5ec8d18888e7e6686fc",
+      "checks": 20,
+      "stressCases": 4
+    },
+    "rotation-chromium.json": {
+      "status": "PASS",
+      "engine": "chromium",
+      "rawReportSha256": "0944a3e7b0981b69db889f699b9ada07df53efd475336516f3d51a56df45b6a3",
+      "checks": 9
+    },
+    "boss-image-after-chromium.json": {
+      "status": "PASS",
+      "engine": "chromium",
+      "rawReportSha256": "a635507fd7e5f8f2f8fa74dbb91c9a995d699c9d94f1ce4a963fc1eb43e72650",
+      "checks": 2
+    },
+    "promotion-refinement-chromium.json": {
+      "status": "PASS",
+      "engine": "chromium",
+      "rawReportSha256": "cc4a188fb2c3e50764fc5ba6c6d7566064b5483902c9b934f4c2dda83e904d57",
+      "checks": 8
+    },
+    "fx/chromium.json": {
+      "status": "PASS",
+      "engine": "chromium",
+      "rawReportSha256": "f0b96db011c176a698b172193cef4427cde582bf65870d956f3523d2a245b7a7",
+      "checks": 8,
+      "effectCases": 128
+    },
+    "forced/ui-chromium.json": {
+      "status": "PASS",
+      "engine": "chromium",
+      "rawReportSha256": "703c065ac6b34aeb6977d288e02b4757ca54abd7e46af141220210cfc5ad8785",
+      "checks": 24,
+      "reloadBoundaries": 72
+    },
+    "original-fx/ui-chromium.json": {
+      "status": "PASS",
+      "engine": "chromium",
+      "rawReportSha256": "4180a5462b6ccc88e374ed536cc7803e4b8f9e8695936f6fc7b2ca54b715fb95",
+      "checks": 2
+    }
+  },
+  "consoleAndRuntimeErrors": 0,
+  "productHtmlSha256": "b1b4ffb4aac10761a3b8551bc2c72da9cfb0726aae75d86137702f2c09ce43e0"
+}

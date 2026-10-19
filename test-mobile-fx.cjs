@@ -1,3 +1,4 @@
+const prepareFixtureImages=require('./qa-fixture-images.cjs');
 /* Presentation regression: actual transactions plus a labelled six-token rail
  * stress case. Synthetic feedback never changes the game transaction or RNG. */
 const fs=require('node:fs'),assert=require('node:assert/strict'),pw=require('playwright');
@@ -10,7 +11,7 @@ const out=process.env.BF_MOBILE_FX_OUT||'docs/mobile-ux/fx',key='black-forest-la
   page.on('pageerror',e=>errors.push(e.message));page.on('console',m=>{if(m.type()==='error')errors.push(m.text());});
   await page.addInitScript(()=>{let api;window.__fxCreateCount=0;Object.defineProperty(window,'BFUIFX',{configurable:true,get:()=>api,set:value=>{api=value;const create=api.create;api.create=(...args)=>{window.__fxCreateCount++;return create(...args);};}});});
   await page.goto(base);
-  async function restore(g){const code=g.export();await page.evaluate(({key,code})=>localStorage.setItem(key,code),{key,code});await page.reload();assert.equal(await page.evaluate(k=>localStorage.getItem(k),key),code);assert.equal(await page.locator('[data-fx-layer]').count(),0,'reload never replays results');assert.equal(await page.evaluate(()=>__fxCreateCount),1,'one existing controller per UI');}
+  async function restore(g){const code=g.export();await page.evaluate(({key,code})=>localStorage.setItem(key,code),{key,code});await prepareFixtureImages(page);await page.reload();assert.equal(await page.evaluate(k=>localStorage.getItem(k),key),code);assert.equal(await page.locator('[data-fx-layer]').count(),0,'reload never replays results');assert.equal(await page.evaluate(()=>__fxCreateCount),1,'one existing controller per UI');}
   async function geometry(name,g){await page.waitForTimeout(115);const result=await page.evaluate(()=>{
    const rect=e=>{const r=e.getBoundingClientRect();return {x:r.x,y:r.y,w:r.width,h:r.height,right:r.right,bottom:r.bottom};};
    const visible=e=>e&&e.getClientRects().length&&e.getBoundingClientRect().bottom>0&&e.getBoundingClientRect().top<innerHeight;

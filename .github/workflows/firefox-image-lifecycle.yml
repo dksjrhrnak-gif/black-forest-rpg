@@ -1,0 +1,94 @@
+name: Public Firefox image lifecycle
+on:
+  push:
+    branches: [qa/mobile-ux-firefox-images]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  public-firefox-images:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm ci --ignore-scripts
+      - run: npx playwright install --with-deps firefox
+      - name: Prepare the archived UI comparison preview
+        run: |
+          python3 build.py
+          node export-data.cjs
+          python3 export-site.py
+          python3 verify-html.py
+          git show 1881f2b1181ece2c8240365983710bbd6f4bc5ed:index.html > dist/ui-review-before.html
+          python3 -m http.server 4175 --directory dist > /tmp/bf-firefox-review.log 2>&1 &
+      - name: Wait for the archived comparison server
+        run: node -e '(async()=>{for(let i=0;i<100;i++){try{if((await fetch("http://127.0.0.1:4175/ui-review-before.html")).ok)return}catch{}await new Promise(r=>setTimeout(r,100))}throw Error("Archived comparison preview unavailable")})().catch(e=>{console.error(e);process.exit(1)})'
+      - name: Diagnose the original reviewed Firefox baseline
+        env:
+          BF_BROWSER: firefox
+          BF_QA_URL: http://127.0.0.1:4175/ui-review-before.html
+          BF_REVIEW_BASELINE: '1'
+          BF_REVIEW_OUT: docs/mobile-image-diagnostic/review
+        run: node test-ui-review.cjs
+      - name: Verify the public HTML and original asset bytes
+        env:
+          BF_HTTP_BASE: https://dksjrhrnak-gif.github.io/black-forest-rpg/
+          BF_EXPECT_LIVE: '1'
+        run: node test-http-assets.cjs
+      - name: Verify dormant lazy and broken raster readiness cases
+        env:
+          BF_BROWSER: firefox
+          BF_QA_URL: https://dksjrhrnak-gif.github.io/black-forest-rpg/
+          BF_FIXTURE_IMAGES_OUT: docs/mobile-image-diagnostic/fixture-readiness
+        run: node test-fixture-images.cjs
+      - name: Record actual public Firefox image requests and promotions
+        env:
+          BF_BROWSER: firefox
+          BF_QA_URL: https://dksjrhrnak-gif.github.io/black-forest-rpg/
+          BF_PROMO_OUT: docs/mobile-image-diagnostic
+        run: node test-forced-career-ui.cjs
+      - name: Public Firefox mobile UX and FX regressions
+        env:
+          BF_BROWSER: firefox
+          BF_QA_URL: https://dksjrhrnak-gif.github.io/black-forest-rpg/
+          BF_UX_OUT: docs/mobile-image-diagnostic/mobile
+          BF_PROMO_REFINEMENT_OUT: docs/mobile-image-diagnostic/mobile
+          BF_MOBILE_FX_OUT: docs/mobile-image-diagnostic/mobile/fx
+        run: |
+          node test-mobile-ux.cjs
+          node test-mobile-ux-rotation.cjs
+          node test-boss-image.cjs
+          node test-promotion-refinement.cjs
+          node test-mobile-fx.cjs
+      - name: Public Firefox P3 regressions at five widths
+        env:
+          BF_BROWSER: firefox
+          BF_QA_URL: https://dksjrhrnak-gif.github.io/black-forest-rpg/
+          BF_P3_OUT: docs/mobile-image-diagnostic/p3
+        run: node test-p3-ui.cjs
+      - name: Public Firefox original FX regressions
+        env:
+          BF_BROWSER: firefox
+          BF_QA_URL: https://dksjrhrnak-gif.github.io/black-forest-rpg/
+          BF_FX_OUT: docs/mobile-image-diagnostic/original-fx
+        run: node test-fx-ui.cjs
+      - name: Public Firefox original B UI regressions
+        env:
+          BF_BROWSER: firefox
+          BF_QA_URL: https://dksjrhrnak-gif.github.io/black-forest-rpg/
+          BF_UI_PHASE: '5'
+          BF_UI_OUT: docs/mobile-image-diagnostic/original-b-ui
+          BF_UI_SHOTS: '0'
+        run: node test-ui-b.cjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: public-firefox-image-lifecycle
+          path: |
+            docs/mobile-image-diagnostic/
+            pages-http-results.json

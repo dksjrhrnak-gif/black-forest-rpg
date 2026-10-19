@@ -1,0 +1,22 @@
+{
+  "diagnosticCommit": "05865001707604d1d4c1984ee6bba26bd52c88a2",
+  "run": "https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/39185668901",
+  "status": "FAIL",
+  "consoleOccurrence": {
+    "scenario": "firefox 360x800 reduce boss 1",
+    "phase": "reload:boss-fixture",
+    "documentScene": "start",
+    "asset": "assets/class_mage.webp",
+    "loading": "lazy",
+    "inViewport": false,
+    "complete": true,
+    "naturalWidth": 0
+  },
+  "response": {
+    "status": 200,
+    "bytes": 68828,
+    "sha256": "acc33209fb77c2ac9eb55d8b6ec9bdbc4990b6d6ded6b086bbc0ce846c31b036",
+    "exactRepositoryBytes": true
+  },
+  "scope": "Observed during an artificial fixture reload in the former start document. No evidence of transmission corruption or final-boss promotion failure. Firefox internal decoder/cancellation cause is not established. Original annotation is stored separately and was truncated before its final request trace."
+}

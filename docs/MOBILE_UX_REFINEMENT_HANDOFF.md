@@ -63,6 +63,8 @@
 
 ## GitHub 및 배포 기록
 
+공개 Firefox 이미지 오류의 후속 조사와 fixture 준비 검증은 [별도 인수인계](FIREFOX_IMAGE_QA.md)에 기록한다. 후속 진단은 첫 보스 fixture를 위한 인위적 reload 시점의 이전 시작 화면 이미지에서 오류를 확인했고, 해당 응답의 원본 byte 일치도 확인했다. 테스트 새로고침3곳 직전에 시작된 이미지의 실제 decode 검증을 추가하며, 게임 UI/엔진/자산과 기존 행동·콘솔0건·상태/RNG 검사는 보존한다. 아래는 최초 기능 병합의 실제 기록이며, 최종 후속 PR·main CI·Pages·공개3엔진 결과는 PR #10의 배포 기록을 참조한다.
+
 [PR #10](https://github.com/dksjrhrnak-gif/black-forest-rpg/pull/10)은2026-10-17 06:04:49 UTC에 main에 병합했다. 병합 전 검토 HEAD는 `d588b73b45aa7f9b7cff8ab8e003b4883be9fa57`, 실제 병합 커밋은 **`88f1ccd4dded1437d959a795ee5108e2d4567d09`**다. 두 커밋의 제품 트리는 동일하다. [정확한 검토 HEAD·19개 성공 기록](mobile-ux-refinement/public-verification/reviewed-pr-checks.json), [병합 기록](mobile-ux-refinement/public-verification/feature-merge.json).
 
 | 대상 | 실제 결과와 고정 실행 링크 |
@@ -74,7 +76,7 @@
 | 실제 공개 Firefox 첫 실행 | 로컬 새 UX·전직·FX 등은 SUCCESS. 공개 강제 전직 검사에서 이미지 콘솔 오류로 실패하여 후속 공개 UX/P3/FX/B안은 SKIPPED. 실행하지 않은 단계를 성공이라고 보고하지 않음 |
 | 공개 HTTP 별도 검사 | HTML SHA-256 `b1b4ffb4aac10761a3b8551bc2c72da9cfb0726aae75d86137702f2c09ce43e0`, 이미지149개, CSV3개 모두 HTTP200·저장소 byte 완전 일치. [원본 결과](mobile-ux-refinement/public-verification/feature-http-assets.json) |
 
-이후 문서·증거만 갱신한 최종 main에서도 제품 HTML과 테스트 원문이 동일한지 확인하고, 필수21개와 공개3엔진을 전부 재실행한다. **최종 문서 커밋까지 포함한 main SHA, 전체 CI, Pages 및 공개 Firefox 재검증의 고정 실행 링크와 완료 결과는 [PR #10 배포 기록](https://github.com/dksjrhrnak-gif/black-forest-rpg/pull/10)에서 확인한다.** 이 절의 첫 실행 실패와 최종 실행 결과를 구분한다. [보관한 실제 GitHub 단계 기록](mobile-ux-refinement/public-verification/README.md)은 실행 여부와 결론을 확인할 수 있는 증거이며, 로컬 브라우저 결과를 공개 실행으로 대신하지 않는다.
+당시 문서·증거만 갱신한 main `5b5af13`에서도 제품 HTML과 테스트 원문을 보존해 필수21개를 다시 실행했으나, 다른 정상 이미지의 공개 Firefox 오류로20/21이었다. 이에 [후속 PR #11](https://github.com/dksjrhrnak-gif/black-forest-rpg/pull/11)에서 fixture 준비 검증을 공통화한다. 게임 제품·원본 자산·원래 테스트 assertion과 실제 행동 순서는 보존하며, 테스트의 인위적 reload 직전에만 래스터 이미지 준비 확인을 추가한다. **후속 최종 main SHA, 전체 CI, Pages 및 공개3엔진의 고정 실행 링크와 완료 결과는 PR #11과 [PR #10 배포 기록](https://github.com/dksjrhrnak-gif/black-forest-rpg/pull/10)에서 확인한다.** 첫 실패와 최종 결과를 구분한다. [보관한 실제 GitHub 단계 기록](mobile-ux-refinement/public-verification/README.md)은 실행 여부와 결론을 확인할 수 있는 증거이며, 로컬 브라우저 결과를 공개 실행으로 대신하지 않는다.
 
 로컬 상태 보호 검사도 재실행했다. `npm test` 성공, 보상/전직1,026쌍·보상 확정1,026회·전직540회·저장 복원3,678회에서 전체 상태/RNG 일치, FX3,648개 시드 전투에서도 전체 저장/RNG 일치다. 최종 가로 배치의 Chromium FX8조건×16사례128개는 위치·토큰 수를 같은 DOM 평가에서 측정했고,8개 스트레스 조건 모두12개 숫자를 보존했다. 기존650ms 종료·콘솔 오류0건·장식 종료 후 실제 결과 접근 검사도 유지한다.
 
