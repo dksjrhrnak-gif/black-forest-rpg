@@ -33,6 +33,14 @@
 
 전용 workflow는 main의 공개 P3·기존FX·B안 검사도 같은 조건으로 먼저 실행한다. 추가한 실제 이미지 준비 대기의 실행 시간을 반영해 전용 작업 예산은15→25분, 로컬/공개 양쪽을 실행하는 P3 브라우저 작업은30→40분으로 조정했다. 개별 assertion·횟수·콘솔0건 조건이나 실패 판정은 완화하지 않는다.
 
+## Dormant lazy 이미지의 별도 처리
+
+공통 준비 검사 커밋 `08b7b2a`의 WebKit 작업 [117854007597](https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/39187864056/job/117854007597)은 전직 대기 상태 reload 준비에서30초 제한에 걸렸다. 대상 `class_stitch.webp`는 화면 밖 lazy 이미지이고 `complete=false`, 자연 크기0이었다. 콘솔 오류는 관측되지 않았다. [원본 주석](mobile-ux-refinement/public-verification/webkit-dormant-lazy-first-failure-annotations.json)을 보관한다. WebKit은 lazy 요청을 시작하기 전에도 `currentSrc`를 선택할 수 있으므로 `currentSrc`만으로 시작된 이미지라고 판정한 새 테스트 helper의 오류였다.
+
+준비 대상은 래스터 `currentSrc`와 함께 요소의 `complete` 또는 양수 자연 크기가 관측된 경우로 제한한다. 네트워크 안정화 대기와30초 decode 실패 기준은 유지한다. 아직 요청되지 않은 lazy 이미지는 시작시키지 않으며, `complete=true / 자연 크기0`인 손상 이미지는 포함되어 decode 실패를 그대로 보고한다. URL만 같은 이전 DOM의 resource timing으로 로드 시작을 추정하지 않는다.
+
+`test-fixture-images.cjs`는 실제 브라우저의 격리된 두 문서로 이를 검증한다. 원본 eager 래스터2개는 화면 안/밖에서 실제 요청·디코딩되어야 하고, 아주 먼 화면 밖 lazy 원본은 준비 검사 전후 모두 요청되지 않아야 한다. 별도의 의도적으로 손상된 HTTP200 WebP는 timeout이 아닌 디코딩 오류로 반드시 거부되어야 한다. 이 음성 검사의 의도된 오류는 실제 게임의 콘솔0건 검사와 별개로 기록하며, 예상하지 않은 콘솔/미처리 페이지 오류는 실패한다. 로컬 Chromium의 두 사례는 통과했으며 [실제 결과](mobile-ux-refinement/public-verification/fixture-image-readiness-chromium.json)를 보존한다. 같은 검사를 전체3엔진 CI와 공개 Firefox 사전 검사에 추가했다. Chromium의 dormant `currentSrc`는 빈 값이었다. WebKit 원래 실패와 달리 모든 엔진에서 옛 오류가 재현됐다고 주장하지 않는다.
+
 ## 검증
 
 로컬 Chromium은 네 크기×두 motion×세 보스24개 경로를 통과했다. 인위적 새로고침72개에서 이미지218개의 실제 디코딩을 확인했으며, 기존 보상·저장/RNG·버튼52px·FX·콘솔0건 검사도 통과했다. [원본 결과](mobile-ux-refinement/public-verification/fixture-ready-chromium.json).

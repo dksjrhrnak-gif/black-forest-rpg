@@ -1,14 +1,14 @@
 {
   "status": "PASS",
-  "method": "Actual local Chromium UI execution after shared raster readiness guards; physical devices not tested. Five original UI scripts retain their assertions and commands.",
-  "helperSha256": "997757f2af1fad27305c5a1fbad718975bcbeabf2199e66c736928e25ef7bd0a",
+  "method": "Actual local Chromium execution after the dormant-lazy eligibility correction; original assertions and actions preserved. Physical devices not tested.",
+  "helperSha256": "7fdf2bf2e0bb68cfe5fd98a9d26e13d3b1f0cd053cbc56aa6eada6128292d7d5",
   "reports": {
     "after-chromium.json": {
       "status": "PASS",
       "engine": "chromium",
       "rawReportSha256": "8339ab6452b12bdaf4bd0b677dd696fef45e8ab913d8c5ec8d18888e7e6686fc",
-      "stressCases": 4,
-      "checks": 20
+      "checks": 20,
+      "stressCases": 4
     },
     "rotation-chromium.json": {
       "status": "PASS",
@@ -31,9 +31,22 @@
     "fx/chromium.json": {
       "status": "PASS",
       "engine": "chromium",
-      "rawReportSha256": "f1e72f98cb5fbecedb6fdd514f884a2d09e3d15f1796a49c659aefd44daef552",
-      "effectCases": 128,
-      "checks": 8
+      "rawReportSha256": "f0b96db011c176a698b172193cef4427cde582bf65870d956f3523d2a245b7a7",
+      "checks": 8,
+      "effectCases": 128
+    },
+    "forced/ui-chromium.json": {
+      "status": "PASS",
+      "engine": "chromium",
+      "rawReportSha256": "703c065ac6b34aeb6977d288e02b4757ca54abd7e46af141220210cfc5ad8785",
+      "checks": 24,
+      "reloadBoundaries": 72
+    },
+    "original-fx/ui-chromium.json": {
+      "status": "PASS",
+      "engine": "chromium",
+      "rawReportSha256": "4180a5462b6ccc88e374ed536cc7803e4b8f9e8695936f6fc7b2ca54b715fb95",
+      "checks": 2
     }
   },
   "consoleAndRuntimeErrors": 0,

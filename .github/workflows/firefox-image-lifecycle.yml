@@ -21,6 +21,12 @@ jobs:
           BF_HTTP_BASE: https://dksjrhrnak-gif.github.io/black-forest-rpg/
           BF_EXPECT_LIVE: '1'
         run: node test-http-assets.cjs
+      - name: Verify dormant lazy and broken raster readiness cases
+        env:
+          BF_BROWSER: firefox
+          BF_QA_URL: https://dksjrhrnak-gif.github.io/black-forest-rpg/
+          BF_FIXTURE_IMAGES_OUT: docs/mobile-image-diagnostic/fixture-readiness
+        run: node test-fixture-images.cjs
       - name: Record actual public Firefox image requests and promotions
         env:
           BF_BROWSER: firefox
