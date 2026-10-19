@@ -1,0 +1,59 @@
+{
+  "status": "PASS",
+  "method": "Actual native Chromium archived 1881f2b baseline and current full 3-width UI review; only the existing fixture-readiness helper import and two awaited reload preparations were added.",
+  "base": "ee075e4753093dd05a862350089509fca143c3fa",
+  "engine": "chromium",
+  "executable": "/usr/bin/chromium",
+  "reports": {
+    "baseline-chromium.json": {
+      "status": "PASS",
+      "checks": 15,
+      "widths": [
+        360,
+        390,
+        430
+      ],
+      "functionalRegressions": 0,
+      "sha256": "b65b1a9a0099710258383eba1eda4dc5b99ec4a772a8d1b86d5cebca2b8a7730"
+    },
+    "ui-chromium.json": {
+      "status": "PASS",
+      "checks": 18,
+      "widths": [
+        360,
+        390,
+        430
+      ],
+      "functionalRegressions": 3,
+      "sha256": "8733375f3361d931a39192921ec14a1091d2b287dda27032c901752941730f0e"
+    }
+  },
+  "sourceAST": {
+    "status": "PASS",
+    "base": "ee075e4753093dd05a862350089509fca143c3fa",
+    "file": "test-ui-review.cjs",
+    "fullOriginalASTAndOrder": "identical after removing only one import and two awaited guards",
+    "assertions": 44,
+    "actions": 10,
+    "exports": 22,
+    "fixedWaits": 2,
+    "guardLocations": [
+      19,
+      43
+    ],
+    "sourceSha256": "8d3acbae0e70cfc55b399d30cfa8e2b86f5c56d8f6dddd3eeb6c9b6f8f79bf57",
+    "helperSha256": "7fdf2bf2e0bb68cfe5fd98a9d26e13d3b1f0cd053cbc56aa6eada6128292d7d5",
+    "actionCallCounts": {
+      "l.tap": 1,
+      "tap": 8,
+      "e.click": 1
+    }
+  },
+  "originalArchivedHTMLSha256": "f4de0026226c70466430cfe6745d1d3de37a004af20b55c7170fbbf036c937b3",
+  "originalProductHTMLSha256": "b1b4ffb4aac10761a3b8551bc2c72da9cfb0726aae75d86137702f2c09ce43e0",
+  "consoleAndRuntimeErrors": 0,
+  "limitations": [
+    "Local Chromium verification; Firefox and full CI results are separate.",
+    "No diagnosis of Firefox internal decoder cause."
+  ]
+}

@@ -83,3 +83,9 @@
 ## 미검증 및 남은 한계
 
 실제 휴대폰·주소창 동작·물리 노치 safe area·OS 글자 확대·실기기 FPS·장시간 사람 플레이는 **NOT TESTED**. 이전 로컬 Firefox는 content sandbox/framebuffer 초기화 제한으로 미검증이었다.10/17 새 환경의 로컬 WebKit은 host 라이브러리 누락으로 미실행이며, 최신 WebKit/Firefox는 실제 GitHub CI 실행 결과를 별도로 확인한다. 화면 회전/iframe/viewport 크기와 reduced motion 검증은 브라우저 자동화다. 자동 PASS는 분위기·재미·가독성에 대한 사람의 평가를 대신하지 않는다. 최소 지원 크기보다 작은 화면과 장기 플레이 가독성은 후속 실제 기기 평가 대상이다.
+
+## PR11 이후 기존 UI 검수 경계 보완
+
+PR11은 검토 `6ca3b93`의20개 성공 뒤 main `ee075e4753093dd05a862350089509fca143c3fa`로 병합됐다. Pages는 [39191181360](https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/39191181360) 성공, 공개 HTML·149이미지·CSV3 및 최신 진단 문서도 원본과 byte 일치했다. 다만 main21개 중Firefox의 기존 PR7 UI 검수 한 개가 `class_mage.webp` 콘솔 오류로 실패해20/21이었다. 공개 Chromium/WebKit은 성공했고Firefox의 후속 공개 단계는 생략돼, 이 상태를 완료로 보고하지 않는다.
+
+후속 `qa/mobile-ux-review-images`는 해당 기존 검수의 인위적 reload2곳에만 동일한 이미지 준비 검증을 연결한다. 실제 행동/보상 직후 전체 저장·RNG 일치와 콘솔0건 검사는 보존하고 제품 파일은 수정하지 않는다. [실패 근거·최소 범위](FIREFOX_IMAGE_QA.md)를 보존하며, 후속 PR과 최종 main·CI21개·Pages·공개3엔진 실행 링크는 [PR10 배포 기록](https://github.com/dksjrhrnak-gif/black-forest-rpg/pull/10)에서 확정한다.
