@@ -8,6 +8,7 @@ const out=process.env.BF_MOBILE_FX_OUT||'docs/mobile-ux/fx',key='black-forest-la
 (async()=>{const browser=await pw[engine].launch(require('./qa-browser.cjs')()),checks=[];try{
  for(const [width,height]of [[360,800],[390,844],[430,932],[390,664]])for(const motion of ['no-preference','reduce']){
   const ctx=await browser.newContext({viewport:{width,height},hasTouch:true,isMobile:engine!=='firefox',reducedMotion:motion}),page=await ctx.newPage(),errors=[];
+  prepareFixtureImages.watch(page);
   page.on('pageerror',e=>errors.push(e.message));page.on('console',m=>{if(m.type()==='error')errors.push(m.text());});
   await page.addInitScript(()=>{let api;window.__fxCreateCount=0;Object.defineProperty(window,'BFUIFX',{configurable:true,get:()=>api,set:value=>{api=value;const create=api.create;api.create=(...args)=>{window.__fxCreateCount++;return create(...args);};}});});
   await page.goto(base);

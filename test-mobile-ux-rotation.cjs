@@ -12,6 +12,7 @@ try{
  // open. The dialog's inert background must be restored after that move.
  {const pending=new Game(17);pending.start('warrior');pending.travel(0);pending.fight(true);pending.s.enemy.hp=1;pending.act('attack');pending.collectLoot('bag');assert(pending.promotionStatus().ready);
   const ctx=await browser.newContext({viewport:{width:390,height:664}}),page=await ctx.newPage(),errors=[],imports=[{name:'battle',game:fixtures.battle()},{name:'chapter',game:chapter(0,0)},{name:'promotion',game:pending}];
+  prepareFixtureImages.watch(page);
   page.on('pageerror',e=>errors.push(e.message));page.on('console',m=>{if(m.type()==='error')errors.push(m.text());});
   try{await page.goto(url);await page.locator('[data-cmd=start][data-arg=warrior]').click();
    for(const item of imports){const code=item.game.export();await page.locator('[data-ui=save]').click();await page.locator('#bf-code').fill(code);await page.locator('[data-ui=load]').click();await page.locator('#bf-panel').waitFor({state:'hidden'});if(item.name==='promotion')await page.locator('.promotion-screen').waitFor();
@@ -24,6 +25,7 @@ try{
   }finally{await ctx.close();}}
 for(const modal of ['save','scene-reading','scene-menu'])for(const target of [{width:844,height:390},{width:667,height:375},{width:1024,height:768}]){
  const ctx=await browser.newContext({viewport:{width:390,height:664}}),page=await ctx.newPage(),errors=[],g=fixtures.battle(),code=g.export();
+ prepareFixtureImages.watch(page);
  page.on('pageerror',e=>errors.push(e.message));page.on('console',m=>{if(m.type()==='error')errors.push(m.text());});
  try{await page.goto(url);await page.evaluate(({key,code})=>localStorage.setItem(key,code),{key,code});await prepareFixtureImages(page);await page.reload();
   await page.locator(`[data-ui="${modal}"]`).click();await page.locator('#bf-panel').waitFor({state:'visible'});

@@ -20,3 +20,7 @@
 `webkit-dormant-lazy-first-failure-annotations.json`은 새 helper가 아직 요청되지 않은 WebKit lazy 이미지를 기다린 실패다. `fixture-image-readiness-chromium.json`은 이를 보완한 뒤 시작된 이미지2개·요청되지 않은 lazy 이미지·손상 이미지 거부를 실제 브라우저에서 확인한 격리 회귀 검사다. 최신 `shared-raster-fixture-local-summary.json`은 보완한 helper 해시와 새 로컬 실행 결과에 연결된다.
 
 `main-ee075e4-firefox-ui-review-annotations.json`은 PR11 병합 main의 실제 Firefox PR7 후속 UI 검수 실패다. 공개3엔진 전체 완료와 혼동하지 않으며, 현재/archived 화면과 인위적 reload 경계를 구분한 해석은 `FIREFOX_IMAGE_QA.md`에 기록한다.
+
+`main-a75-firefox-inflight-annotations.json`은 기존 문서의 과거 idle과 자연 크기0 필터가 진행 중 전직 이미지를 누락한 실제 공개 trace다. 첫 응답 body는 navigation으로 미회수이며, 이 응답을 byte 검증됐다고 해석하지 않는다.
+
+`image-lifecycle-old-guard-reproduction.json`은 같은 원본 요청700ms 보류 중 이전 helper의4ms 조기 반환을 재현했다. `image-lifecycle-readiness-chromium.json`은 새 준비 검사의3개 격리 사례, `image-lifecycle-source-preservation.json`은 watch9곳만 제외하면 원본 전체 AST가 동일하다는 검수다. `image-lifecycle-local-chromium-summary.json`은 전체 로컬 재검증을 실제 helper·보고서 해시와 연결한다.

@@ -89,3 +89,7 @@
 PR11은 검토 `6ca3b93`의20개 성공 뒤 main `ee075e4753093dd05a862350089509fca143c3fa`로 병합됐다. Pages는 [39191181360](https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/39191181360) 성공, 공개 HTML·149이미지·CSV3 및 최신 진단 문서도 원본과 byte 일치했다. 다만 main21개 중Firefox의 기존 PR7 UI 검수 한 개가 `class_mage.webp` 콘솔 오류로 실패해20/21이었다. 공개 Chromium/WebKit은 성공했고Firefox의 후속 공개 단계는 생략돼, 이 상태를 완료로 보고하지 않는다.
 
 후속 `qa/mobile-ux-review-images`는 해당 기존 검수의 인위적 reload2곳에만 동일한 이미지 준비 검증을 연결한다. 실제 행동/보상 직후 전체 저장·RNG 일치와 콘솔0건 검사는 보존하고 제품 파일은 수정하지 않는다. [실패 근거·최소 범위](FIREFOX_IMAGE_QA.md)를 보존하며, 후속 PR과 최종 main·CI21개·Pages·공개3엔진 실행 링크는 [PR10 배포 기록](https://github.com/dksjrhrnak-gif/black-forest-rpg/pull/10)에서 확정한다.
+
+## 진행 중 이미지 요청의 최종 준비 검증
+
+PR12는20개 성공 뒤 main `a75ffaa1d738ec04359ac28738161afd7dc96577`로 병합됐다. 기존 UIreview 실패는 main에서도 통과했고 새 Pages/자산/문서 byte 검증도 성공했다. 다만 공개 Firefox의 인위적 전직 재접속에서 자연 크기0인 진행 중 이미지 요청이 기존 준비 필터에서 빠져 취소된 기록을 확인했다. [정확한 trace와 보완 범위](FIREFOX_IMAGE_QA.md)를 보존한다. 후속 `qa/mobile-ux-image-lifecycle`은 page 생성 때부터 이미지 요청을 관측하고 fixture reload 전에 진행 중 요청0개와 새500ms 안정 구간을 검증한다. 게임 DOM/이미지 속성/원본 자산/실제 입력/즉시FX/콘솔0건/저장·RNG 기준은 보존한다. 최종 전체21개·Pages·공개3엔진 고정 링크는 PR10 배포 기록에서 확인한다.

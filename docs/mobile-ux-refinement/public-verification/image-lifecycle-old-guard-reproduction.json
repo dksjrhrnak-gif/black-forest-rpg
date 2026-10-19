@@ -1,0 +1,16 @@
+{
+  "status": "REPRODUCED",
+  "originalHelperCommit": "a75ffaa1d738ec04359ac28738161afd7dc96577",
+  "before": {
+    "complete": false,
+    "width": 0,
+    "height": 0,
+    "currentSrc": false
+  },
+  "heldForMs": 700,
+  "oldGuardSettledWhileHeld": true,
+  "oldGuardResult": {
+    "images": [],
+    "elapsedMs": 4
+  }
+}
