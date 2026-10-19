@@ -27,6 +27,19 @@ jobs:
           BF_QA_URL: https://dksjrhrnak-gif.github.io/black-forest-rpg/
           BF_PROMO_OUT: docs/mobile-image-diagnostic
         run: node test-forced-career-ui.cjs
+      - name: Public Firefox mobile UX and FX regressions
+        env:
+          BF_BROWSER: firefox
+          BF_QA_URL: https://dksjrhrnak-gif.github.io/black-forest-rpg/
+          BF_UX_OUT: docs/mobile-image-diagnostic/mobile
+          BF_PROMO_REFINEMENT_OUT: docs/mobile-image-diagnostic/mobile
+          BF_MOBILE_FX_OUT: docs/mobile-image-diagnostic/mobile/fx
+        run: |
+          node test-mobile-ux.cjs
+          node test-mobile-ux-rotation.cjs
+          node test-boss-image.cjs
+          node test-promotion-refinement.cjs
+          node test-mobile-fx.cjs
       - uses: actions/upload-artifact@v4
         if: always()
         with:

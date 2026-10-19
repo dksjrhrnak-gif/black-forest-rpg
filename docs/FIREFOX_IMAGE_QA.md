@@ -23,6 +23,8 @@
 
 진단은 오류 관련 요청 trace와 DOM/응답 해시를 짧은 주석으로 분리하고, 오류 뒤의 이벤트도 보관한다. URL query/hash/인증정보·쿠키·인증 헤더·응답 본문을 출력하지 않는다. 새 `Public Firefox image lifecycle` workflow는 실제 공개 HTML·149개 이미지·CSV3개의 byte 일치를 확인한 뒤 기존24개 경로를 실행한다. 전체 기존 CI는 별도로 유지한다.
 
+이전 main의 Firefox 후속 공개 UX 검사는 전직 단계 실패 뒤 생략됐으므로, 새 workflow에서도 기존 공개 UX·회전·보스 decode·전직 비교·FX5개 스크립트를 원문 그대로 실행한다. 아직 실행하지 않은 공개 단계를 미리 성공이라고 판단하지 않고 PR에서도 검증하기 위한 추가 검사다.
+
 ## 검증
 
 로컬 Chromium은 네 크기×두 motion×세 보스24개 경로를 통과했다. 인위적 새로고침72개에서 이미지218개의 실제 디코딩을 확인했으며, 기존 보상·저장/RNG·버튼52px·FX·콘솔0건 검사도 통과했다. [원본 결과](mobile-ux-refinement/public-verification/fixture-ready-chromium.json).
