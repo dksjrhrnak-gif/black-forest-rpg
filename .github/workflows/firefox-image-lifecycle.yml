@@ -8,7 +8,7 @@ permissions:
 jobs:
   public-firefox-images:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 25
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -40,6 +40,26 @@ jobs:
           node test-boss-image.cjs
           node test-promotion-refinement.cjs
           node test-mobile-fx.cjs
+      - name: Public Firefox P3 regressions at five widths
+        env:
+          BF_BROWSER: firefox
+          BF_QA_URL: https://dksjrhrnak-gif.github.io/black-forest-rpg/
+          BF_P3_OUT: docs/mobile-image-diagnostic/p3
+        run: node test-p3-ui.cjs
+      - name: Public Firefox original FX regressions
+        env:
+          BF_BROWSER: firefox
+          BF_QA_URL: https://dksjrhrnak-gif.github.io/black-forest-rpg/
+          BF_FX_OUT: docs/mobile-image-diagnostic/original-fx
+        run: node test-fx-ui.cjs
+      - name: Public Firefox original B UI regressions
+        env:
+          BF_BROWSER: firefox
+          BF_QA_URL: https://dksjrhrnak-gif.github.io/black-forest-rpg/
+          BF_UI_PHASE: '5'
+          BF_UI_OUT: docs/mobile-image-diagnostic/original-b-ui
+          BF_UI_SHOTS: '0'
+        run: node test-ui-b.cjs
       - uses: actions/upload-artifact@v4
         if: always()
         with:

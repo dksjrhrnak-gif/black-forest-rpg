@@ -17,7 +17,7 @@
 
 ## 최소 변경
 
-`test-forced-career-ui.cjs`의 인위적 새로고침3곳(보스 저장 주입, 전직 대기 상태 복원, 전직 완료 상태 복원) 직전에만 이미지 준비 검증을 추가했다. 네트워크가 안정된 뒤 현재 문서에서 이미 시작된 이미지의 `decode()`와 `complete / naturalWidth / naturalHeight`를 검사한다. 이미지 src/loading 변경·에러 필터·재시도·자산 교체는 없다. 디코딩 실패는 그대로 테스트 실패다.
+첫 보완은 `test-forced-career-ui.cjs`의 인위적 새로고침3곳(보스 저장 주입, 전직 대기 상태 복원, 전직 완료 상태 복원) 직전에 이미지 준비 검증을 추가했다. 네트워크가 안정된 뒤 현재 문서에서 이미 시작된 래스터 이미지의 `decode()`와 `complete / naturalWidth / naturalHeight`를 검사한다. 이미지 src/loading 변경·에러 필터·재시도·자산 교체는 없다. 디코딩 실패는 그대로 테스트 실패다.
 
 기존 assertion27개, 행동 호출10개, 저장 export7개, 원래 고정 대기3개는 내용과 순서를 유지한다. 실제 공격·전리품 수령·후보 선택·이중 확정·탐험 클릭에는 새 대기를 넣지 않는다. 보상/전직 FX의 즉시 검사는 준비 대기보다 앞에 있어 기존650ms 기준을 보존한다. 콘솔/pageerror0건 기준도 유지한다. 이 변경은 fixture 재접속 준비 안정화이며, 실제 사용자의 로딩 중 외부 새로고침이나 Firefox 내부 오류 전반을 해결했다고 주장하지 않는다.
 
@@ -25,10 +25,22 @@
 
 이전 main의 Firefox 후속 공개 UX 검사는 전직 단계 실패 뒤 생략됐으므로, 새 workflow에서도 기존 공개 UX·회전·보스 decode·전직 비교·FX5개 스크립트를 원문 그대로 실행한다. 아직 실행하지 않은 공개 단계를 미리 성공이라고 판단하지 않고 PR에서도 검증하기 위한 추가 검사다.
 
+이 추가 검사의 [39186589669](https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/39186589669)에서는 전직24경로와 새 UX·회전·보스 이미지가 성공한 뒤, `test-promotion-refinement.cjs`의 최종 콘솔 검사에서 `class_warrior.webp` 오류가 발생했다. 카드/키보드/저장/이중 확정/완료FX 검사는 통과했으나 마지막 모바일FX 스크립트는 실행되지 않았다. [실제 실패 주석](mobile-ux-refinement/public-verification/public-firefox-promotion-first-failure-annotations.json)을 보존한다. 이 두 번째 테스트의 오류 발생 시점을 초기 reload로 확정할 진단은 없으므로 그렇게 단정하지 않는다.
+
+이에 같은 fixture 준비 검사를 `qa-fixture-images.cjs`로 공유한다. 적용은 전직·새 UX·회전·보스 이미지·전직 비교·모바일FX·기존FX7개 스크립트의 프로그램상 reload 직전뿐이다. 실제 게임 행동은 늦추지 않는다. P3/B안 스크립트는 실패 stack을 GitHub 주석으로 남기는 보고만 추가했다. 정적 검수에서 기존 assertion302개와 검사·실제 행동·저장·기존 고정 대기를 합친498개 호출의 원문/순서를 보존했다.
+
+공통 연결 과정의 import가 주석에 포함된 실수는 로컬 검사에서 발견해 수정하고 실행 가능한 최상위 선언임을 다시 확인했다. 또한 `gear_weapon.svg`의 decode가10초 동안 끝나지 않는 현상을 확인했다. 새 준비 검사는 실패가 관측된 WebP 등 래스터 이미지에 한정하며, SVG의 기존 byte·표시·콘솔 검사는 유지한다. 래스터 decode에도30초 제한을 두고 초과하면 실패한다. SVG나 이미지의 콘솔 오류를 무시하지 않는다.
+
+전용 workflow는 main의 공개 P3·기존FX·B안 검사도 같은 조건으로 먼저 실행한다. 추가한 실제 이미지 준비 대기의 실행 시간을 반영해 전용 작업 예산은15→25분, 로컬/공개 양쪽을 실행하는 P3 브라우저 작업은30→40분으로 조정했다. 개별 assertion·횟수·콘솔0건 조건이나 실패 판정은 완화하지 않는다.
+
 ## 검증
 
 로컬 Chromium은 네 크기×두 motion×세 보스24개 경로를 통과했다. 인위적 새로고침72개에서 이미지218개의 실제 디코딩을 확인했으며, 기존 보상·저장/RNG·버튼52px·FX·콘솔0건 검사도 통과했다. [원본 결과](mobile-ux-refinement/public-verification/fixture-ready-chromium.json).
 
 보완 커밋 `969a41b`의 [실제 공개 Firefox 실행39185950625](https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/39185950625)은 전체 SUCCESS였다. 공개 HTML/원본 자산 byte 검사 후 같은24개 전직 경로와72개 fixture 재접속 경계의 이미지 준비 검증, 기존 상태/RNG·보상·FX·콘솔0건 검사를 완료했다. [실제 단계 기록](mobile-ux-refinement/public-verification/fixture-ready-public-firefox-run.json)을 보관한다. 이는 테스트의 인위적 reload 준비 보완을 검증한 결과이며 Firefox 내부 디코더 원인을 확정한 결과는 아니다.
 
-공개 Firefox 전용 실행과 전체 PR/main CI·Pages·공개3엔진의 최종 결과는 [PR #10의 후속 배포 기록](https://github.com/dksjrhrnak-gif/black-forest-rpg/pull/10)에 고정 실행 링크와 함께 기록한다. 성공·실패·생략을 구분하며 첫 실패 기록을 삭제하지 않는다. 실제 휴대폰·OS 확대·실기기 FPS·장시간 사람 플레이는 미검증이다.
+공통 래스터 준비 검사로 재실행한 로컬 Chromium은 새 UX20상태+4스트레스, 회전9개와 실제 importer, 보스 이미지2개, 전직 비교8개, FX128개를 통과했다. 긴 로그184.25px·다수 상태208.25px와5개52px 행동 등 원래 실측도 유지한다. [현재 helper 해시와 실제 결과 요약](mobile-ux-refinement/public-verification/shared-raster-fixture-local-summary.json), [전직 원본 결과](mobile-ux-refinement/public-verification/shared-fixture-promotion-chromium.json)를 보관한다.
+
+기존 FX 스크립트도 로컬 Chromium360px에서 일반/reduced motion 두 경우를 통과했다. [실제 결과](mobile-ux-refinement/public-verification/shared-raster-original-fx-chromium.json). 나머지 화면 폭과 엔진은 최신 전체 CI 및 공개 검사 결과로 별도 확인한다.
+
+공개 Firefox 전용 실행과 전체 PR/main CI·Pages·공개3엔진의 최종 결과는 [후속 PR #11](https://github.com/dksjrhrnak-gif/black-forest-rpg/pull/11)과 [PR #10의 배포 기록](https://github.com/dksjrhrnak-gif/black-forest-rpg/pull/10)에 고정 실행 링크와 함께 기록한다. 성공·실패·생략을 구분하며 첫 실패 기록을 삭제하지 않는다. 실제 휴대폰·OS 확대·실기기 FPS·장시간 사람 플레이는 미검증이다.

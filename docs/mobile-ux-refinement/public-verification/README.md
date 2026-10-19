@@ -14,3 +14,5 @@
 최종 문서 커밋에서도 제품/테스트 원문을 그대로 유지하고 main의 전체 검사와 공개 3엔진을 재실행한다. 그 최종 SHA·CI·Pages·공개 검증 완료 결과는 [PR #10](https://github.com/dksjrhrnak-gif/black-forest-rpg/pull/10)의 배포 기록에 남긴다. 첫 실패 이력을 삭제하거나 성공으로 바꾸지 않는다. GitHub 메타데이터의 success는 실제 해당 단계 실행 완료를 확인한 경우에만 사용한다.
 
 후속 조사에서 두 번째 main의 Firefox 실패도 보존했다(`pre-fixture-fix-*`). 별도 공개 진단(`firefox-image-lifecycle-diagnostic-annotations.json`, `firefox-fixture-diagnostic-summary.json`)은 인위적 첫 fixture reload 시점의 이전 시작 화면 이미지에서 오류와 원본 응답 byte 일치를 확인했다. 이후 실제 행동/오류 기준을 보존하고 fixture reload 준비에 이미지 decode 검증을 추가했다. 로컬 `fixture-ready-chromium.json`과 실제 공개 `fixture-ready-public-firefox-run.json`은 이 보완 이후의 결과다. [해석과 한계](../../FIREFOX_IMAGE_QA.md)를 참조한다.
+
+`public-firefox-promotion-first-failure-annotations.json`은 후속 공개 전직 비교 테스트의 실제 오류다. `shared-raster-fixture-local-summary.json`, `shared-fixture-promotion-chromium.json`, `shared-raster-original-fx-chromium.json`은 공통 래스터 준비 검사 후 로컬 재검증 결과이며, 공개 실행을 대신하지 않는다. 현재 테스트 보완과 최종 배포 기록은 [PR #11](https://github.com/dksjrhrnak-gif/black-forest-rpg/pull/11)에서 확인한다. 앞서 제품/테스트 원문을 보존해 재실행한 문서 전용 커밋은 `5b5af13`의 역사적 기록이며, 후속 PR은 원래 assertion/행동을 보존하고 fixture 이미지 준비 검사를 추가한다.

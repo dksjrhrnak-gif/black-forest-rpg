@@ -45,12 +45,7 @@ async function saveImageFailure(error,checks){
 // image decodes first. Actual game clicks and immediate FX checks stay unchanged.
 async function prepareFixtureReload(page,diagnostic,phase){
  diagnostic.mark('prepare:'+phase);
- await page.waitForLoadState('networkidle');
- const images=await page.evaluate(async()=>Promise.all([...document.images].filter(img=>img.currentSrc).map(async img=>{
-  const src=new URL(img.currentSrc);await img.decode();
-  return {src:src.origin+src.pathname,complete:img.complete,width:img.naturalWidth,height:img.naturalHeight};
- })));
- assert(images.every(img=>img.complete&&img.width>0&&img.height>0),'started images must decode before a fixture reload');
+ const images=await require('./qa-fixture-images.cjs')(page);
  reloadImageChecks.push({scenario,phase,images});
 }
 
