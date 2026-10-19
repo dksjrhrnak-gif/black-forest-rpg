@@ -1,0 +1,36 @@
+name: Public Firefox image lifecycle
+on:
+  push:
+    branches: [qa/mobile-ux-firefox-images]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  public-firefox-images:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm ci --ignore-scripts
+      - run: npx playwright install --with-deps firefox
+      - name: Verify the public HTML and original asset bytes
+        env:
+          BF_HTTP_BASE: https://dksjrhrnak-gif.github.io/black-forest-rpg/
+          BF_EXPECT_LIVE: '1'
+        run: node test-http-assets.cjs
+      - name: Record actual public Firefox image requests and promotions
+        env:
+          BF_BROWSER: firefox
+          BF_QA_URL: https://dksjrhrnak-gif.github.io/black-forest-rpg/
+          BF_PROMO_OUT: docs/mobile-image-diagnostic
+        run: node test-forced-career-ui.cjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: public-firefox-image-lifecycle
+          path: |
+            docs/mobile-image-diagnostic/
+            pages-http-results.json
