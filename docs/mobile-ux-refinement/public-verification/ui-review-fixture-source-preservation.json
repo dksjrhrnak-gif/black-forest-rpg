@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "base": "ee075e4753093dd05a862350089509fca143c3fa",
+  "file": "test-ui-review.cjs",
+  "fullOriginalASTAndOrder": "identical after removing only one import and two awaited guards",
+  "assertions": 44,
+  "actions": 10,
+  "exports": 22,
+  "fixedWaits": 2,
+  "guardLocations": [
+    19,
+    43
+  ],
+  "sourceSha256": "8d3acbae0e70cfc55b399d30cfa8e2b86f5c56d8f6dddd3eeb6c9b6f8f79bf57",
+  "helperSha256": "7fdf2bf2e0bb68cfe5fd98a9d26e13d3b1f0cd053cbc56aa6eada6128292d7d5",
+  "actionCallCounts": {
+    "l.tap": 1,
+    "tap": 8,
+    "e.click": 1
+  }
+}

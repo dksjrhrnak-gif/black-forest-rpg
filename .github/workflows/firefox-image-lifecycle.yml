@@ -1,7 +1,7 @@
 name: Public Firefox image lifecycle
 on:
   push:
-    branches: [qa/mobile-ux-firefox-images]
+    branches: [qa/mobile-ux-firefox-images, qa/mobile-ux-review-images]
   workflow_dispatch:
 permissions:
   contents: read
@@ -33,6 +33,12 @@ jobs:
           BF_BROWSER: firefox
           BF_QA_URL: http://127.0.0.1:4175/ui-review-before.html
           BF_REVIEW_BASELINE: '1'
+          BF_REVIEW_OUT: docs/mobile-image-diagnostic/review
+        run: node test-ui-review.cjs
+      - name: Verify the current reviewed Firefox UI and transactions
+        env:
+          BF_BROWSER: firefox
+          BF_QA_URL: http://127.0.0.1:4175/
           BF_REVIEW_OUT: docs/mobile-image-diagnostic/review
         run: node test-ui-review.cjs
       - name: Verify the public HTML and original asset bytes

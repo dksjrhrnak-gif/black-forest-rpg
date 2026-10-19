@@ -1,6 +1,7 @@
 /* Focused PR #7 follow-up: same saves/camera, real geometry and transactions. */
 const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),pw=require('playwright');
 const {Game,JOBS}=require('./test-support.cjs'),fixtures=require('./fx-test-fixtures.cjs');
+const prepareFixtureImages=require('./qa-fixture-images.cjs');
 const baseline=process.env.BF_REVIEW_BASELINE==='1',engine=process.env.BF_BROWSER||'chromium';
 const base=process.env.BF_QA_URL||'http://127.0.0.1:4192/',out=process.env.BF_REVIEW_OUT||'docs/ui-b/review',phase=Number(process.env.BF_REVIEW_PHASE||5),key='black-forest-last-ember-v2';
 const widths=JSON.parse(process.env.BF_REVIEW_WIDTHS||'[360,390,430]');
@@ -15,7 +16,7 @@ function state(screen){if(['jobs','equipment'].includes(screen))return Game.load
 try{for(const width of widths){const height=width===360?800:width===390?844:932,context=await browser.newContext({viewport:{width,height},hasTouch:true,isMobile:engine!=='firefox',colorScheme:'dark'}),page=await context.newPage(),errors=[];
 page.on('pageerror',e=>errors.push(e.message));page.on('console',m=>{if(m.type()==='error')errors.push(m.text());});
 const current=async()=>Game.load(await page.evaluate(k=>localStorage.getItem(k),key));
-const restore=async g=>{await page.evaluate(({key,code})=>localStorage.setItem(key,code),{key,code:g.export()});await page.reload();assert.equal((await current()).export(),g.export());};
+const restore=async g=>{await page.evaluate(({key,code})=>localStorage.setItem(key,code),{key,code:g.export()});await prepareFixtureImages(page);await page.reload();assert.equal((await current()).export(),g.export());};
 const tap=async l=>{await page.waitForTimeout(280);await l.scrollIntoViewIfNeeded();await l.tap();};
 await page.goto(base);
 for(const screen of screens){diagnosticScenario={engine,baseline,width,height,screen,phase:'restore-and-inspect'};const g=state(screen);await restore(g);if(['jobs','equipment'].includes(screen))await tap(page.locator(`[data-ui="${screen}"]`).first());
@@ -39,7 +40,7 @@ if(!baseline&&screen==='reward'){g.collectLoot('sell');await tap(page.locator('[
 if(!baseline&&phase>=5){diagnosticScenario={engine,baseline,width,height,phase:'functional-regression'};
  const g=fresh();g.s.level=3;g.s.cleared=[0];g.s.career.mastery.warrior=8;g.s.hp=g.maxHp();g.s.mp=g.maxMp();await restore(g);await tap(page.locator('[data-ui="jobs"]').first());assert(g.jobAvailable('rabbit_guard'));const career=page.locator('.career-candidate [data-cmd="changeJob"][data-arg="rabbit_guard"]');assert(await career.isEnabled());g.changeJob('rabbit_guard');await tap(career);assert.equal((await current()).export(),g.export(),'ready career matches engine');
  const f=fixtures.entries().burn,combat=Game.load(f.code);await restore(combat);combat.act(f.action);await tap(page.locator('[data-cmd="act"][data-arg="'+f.action+'"]'));assert.equal((await current()).export(),combat.export());assert(combat.combatStatus().statuses.some(x=>x.id==='burn'));assert((await page.locator('.combat-effects').innerText()).includes('화상'),'important active status visible');
- for(const choice of ['equip','bag','sell']){const reward=Game.load(fixtures.rarePurchase(5).code);reward.buy('gear-weapon');await restore(reward);assert.equal(await page.locator('.fx-loot-card').getAttribute('data-grade'),'5');reward.collectLoot(choice);await tap(page.locator(`[data-cmd="collectLoot"][data-arg="${choice}"]`));assert.equal((await current()).export(),reward.export(),'mythic '+choice+' exact once');await page.reload();assert.equal((await current()).export(),reward.export(),'reward reconnect exact');}
+ for(const choice of ['equip','bag','sell']){const reward=Game.load(fixtures.rarePurchase(5).code);reward.buy('gear-weapon');await restore(reward);assert.equal(await page.locator('.fx-loot-card').getAttribute('data-grade'),'5');reward.collectLoot(choice);await tap(page.locator(`[data-cmd="collectLoot"][data-arg="${choice}"]`));assert.equal((await current()).export(),reward.export(),'mythic '+choice+' exact once');await prepareFixtureImages(page);await page.reload();assert.equal((await current()).export(),reward.export(),'reward reconnect exact');}
  const boss=fresh();boss.fight(true);await restore(boss);assert.equal(await page.locator('.scene-compact').count(),0,'boss keeps large frame');
  const story=require('./script-cases.cjs').chapter(0,1);await restore(story);assert.equal(await page.locator('.scene-compact').count(),0,'inner story keeps portrait presence');assert.equal(await page.locator('.scene-art img').evaluate(e=>getComputedStyle(e).objectFit),'contain');
  checks.push({width,height,screen:'functional-regression',status:'PASS',readyAndLockedCareer:true,activeStatus:true,mythicChoices:3,exactSaveRng:true,bossAndInnerStoryPreserved:true});

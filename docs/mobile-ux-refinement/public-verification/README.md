@@ -18,3 +18,5 @@
 `public-firefox-promotion-first-failure-annotations.json`은 후속 공개 전직 비교 테스트의 실제 오류다. `shared-raster-fixture-local-summary.json`, `shared-fixture-promotion-chromium.json`, `shared-raster-original-fx-chromium.json`은 공통 래스터 준비 검사 후 로컬 재검증 결과이며, 공개 실행을 대신하지 않는다. 현재 테스트 보완과 최종 배포 기록은 [PR #11](https://github.com/dksjrhrnak-gif/black-forest-rpg/pull/11)에서 확인한다. 앞서 제품/테스트 원문을 보존해 재실행한 문서 전용 커밋은 `5b5af13`의 역사적 기록이며, 후속 PR은 원래 assertion/행동을 보존하고 fixture 이미지 준비 검사를 추가한다.
 
 `webkit-dormant-lazy-first-failure-annotations.json`은 새 helper가 아직 요청되지 않은 WebKit lazy 이미지를 기다린 실패다. `fixture-image-readiness-chromium.json`은 이를 보완한 뒤 시작된 이미지2개·요청되지 않은 lazy 이미지·손상 이미지 거부를 실제 브라우저에서 확인한 격리 회귀 검사다. 최신 `shared-raster-fixture-local-summary.json`은 보완한 helper 해시와 새 로컬 실행 결과에 연결된다.
+
+`main-ee075e4-firefox-ui-review-annotations.json`은 PR11 병합 main의 실제 Firefox PR7 후속 UI 검수 실패다. 공개3엔진 전체 완료와 혼동하지 않으며, 현재/archived 화면과 인위적 reload 경계를 구분한 해석은 `FIREFOX_IMAGE_QA.md`에 기록한다.

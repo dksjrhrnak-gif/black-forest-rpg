@@ -45,6 +45,16 @@
 
 전체 검사 `570af56`의 Firefox는 현재 전직·P3·FX·B안을 통과한 뒤 이전 PR7의 정적 HTML 비교 단계에서 실패했다. [첫 주석](mobile-ux-refinement/public-verification/firefox-archived-baseline-first-failure-annotations.json)은 종료코드1만 남겨 원인을 확정할 수 없다. 기존 `test-ui-review.cjs`의 실제 동작/대기/assertion을 보존하고 실패 시 브라우저·폭·화면·stack을 주석으로 기록한다. 전용 Firefox workflow 앞에서도 동일한 archived baseline15화면을 먼저 실행해 후반 단계까지 기다리기 전에 원인을 확인한다. 이 기록 단계에서는 baseline에 이미지 helper나 새로운 행동 대기를 추가하지 않는다.
 
+## PR11 병합 후 기존 UI 검수의 추가 경계
+
+[PR11](https://github.com/dksjrhrnak-gif/black-forest-rpg/pull/11)은 정확한 `6ca3b93604b6bec0958b05dee5c6d9d890a5fb32`의20개 검사 성공 뒤 `ee075e4753093dd05a862350089509fca143c3fa`로 병합됐다. 병합 main의 Journey11개와 Handoff9개는 성공했지만, Firefox의 기존 PR7 후속 검수에서 실패해 총20/21이었다. [실제 main 실행](https://github.com/dksjrhrnak-gif/black-forest-rpg/actions/runs/39191181593), [원본 주석](mobile-ux-refinement/public-verification/main-ee075e4-firefox-ui-review-annotations.json).
+
+이번에는 추가한 오류 주석이 현재 화면(`baseline=false`),390×844 탐험의 `restore-and-inspect` 검사에서 `class_mage.webp`의 `Image corrupt or truncated.` 콘솔 오류를 확인했다. 이것은 누적 오류를 검사한 화면과 단계이며, 이 주석만으로 디코더 내부 원인이나 정확한 최초 발생 시점을 확정하지 않는다. 앞선 상세 기록 없는 archived baseline 실패와 같은 원인이라고 단정하지도 않는다. 공개 Chromium/WebKit의 실제 경로는 모두 실행 성공했고, Firefox의 후속 공개 경로는 이 단계 실패 뒤 생략됐다.
+
+후속 브랜치 `qa/mobile-ux-review-images`에서는 아직 공통 준비 검사가 없던 `test-ui-review.cjs`의 fixture 저장 주입과 보상 수령 후 재접속, 총2개의 기존 reload 바로 앞에 같은 helper를 적용한다. 보상 수령 직후의 원래 전체 export 일치는 대기보다 앞에 유지한다. 실제 클릭·입력·기존 고정 대기·assertion·저장/RNG/콘솔0건 조건은 변경하지 않는다. helper·게임 UI·엔진·자산은 재작성하지 않는다.
+
+전용 Firefox 사전 검사도 archived baseline15화면에 이어 현재 PR7 후속 UI 검수를 원문 그대로 실행한다. 이후 기존 공개 byte·전직·새UX·P3·FX·B안 전체 검사와 별도 필수 CI를 유지한다. 새 브랜치에서 두 workflow가 실행되도록 trigger만 추가한다. 로컬 native Chromium은 archived baseline15개와 현재18개(15화면+3기능회귀)를 모두 통과했다. [실행·보고서 해시](mobile-ux-refinement/public-verification/ui-review-fixture-local-chromium.json), [원본 전체 AST 보존 검수](mobile-ux-refinement/public-verification/ui-review-fixture-source-preservation.json)를 보관한다. import1개와 준비 await2개를 제거하면 기존 test-ui-review 전체 AST가 동일하며, assertion44개·실제 입력10개·export22개·고정대기2개의 내용/순서를 유지한다. 최신 main21개와 공개3엔진의 실행·성공 여부는 최종 배포 기록에서 다시 구분한다.
+
 ## 검증
 
 로컬 Chromium은 네 크기×두 motion×세 보스24개 경로를 통과했다. 인위적 새로고침72개에서 이미지218개의 실제 디코딩을 확인했으며, 기존 보상·저장/RNG·버튼52px·FX·콘솔0건 검사도 통과했다. [원본 결과](mobile-ux-refinement/public-verification/fixture-ready-chromium.json).
