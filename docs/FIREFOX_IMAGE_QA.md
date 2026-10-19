@@ -41,6 +41,8 @@
 
 `test-fixture-images.cjs`는 실제 브라우저의 격리된 두 문서로 이를 검증한다. 원본 eager 래스터2개는 화면 안/밖에서 실제 요청·디코딩되어야 하고, 아주 먼 화면 밖 lazy 원본은 준비 검사 전후 모두 요청되지 않아야 한다. 별도의 의도적으로 손상된 HTTP200 WebP는 timeout이 아닌 디코딩 오류로 반드시 거부되어야 한다. 이 음성 검사의 의도된 오류는 실제 게임의 콘솔0건 검사와 별개로 기록하며, 예상하지 않은 콘솔/미처리 페이지 오류는 실패한다. 로컬 Chromium의 두 사례는 통과했으며 [실제 결과](mobile-ux-refinement/public-verification/fixture-image-readiness-chromium.json)를 보존한다. 같은 검사를 전체3엔진 CI와 공개 Firefox 사전 검사에 추가했다. Chromium의 dormant `currentSrc`는 빈 값이었다. WebKit 원래 실패와 달리 모든 엔진에서 옛 오류가 재현됐다고 주장하지 않는다.
 
+새 격리 검사의 최초 전체 실행 `120849b`에서는 Chromium/WebKit 두 사례가 성공했으나 Firefox는 손상 이미지의 오류 문구 정규식에서 실패했다([공개](mobile-ux-refinement/public-verification/firefox-negative-fixture-wording-public-annotations.json), [preview](mobile-ux-refinement/public-verification/firefox-negative-fixture-wording-preview-annotations.json)). 실제 오류 유형은 브라우저 안에서 직접 읽어 `EncodingError`임을 확인하고, helper가 그 동일한 원본 오류 문장을 전달하는지 검사하도록 보완했다. 예상된 음성 사례의 콘솔 메시지도 해당 격리 URL의 이미지 디코더 오류로만 제한하며, 모든 실제 게임 스크립트의 콘솔0건 조건은 그대로다.
+
 ## 검증
 
 로컬 Chromium은 네 크기×두 motion×세 보스24개 경로를 통과했다. 인위적 새로고침72개에서 이미지218개의 실제 디코딩을 확인했으며, 기존 보상·저장/RNG·버튼52px·FX·콘솔0건 검사도 통과했다. [원본 결과](mobile-ux-refinement/public-verification/fixture-ready-chromium.json).

@@ -7,7 +7,7 @@
     {
       "name": "started eager raster images decode; dormant lazy raster stays unrequested",
       "status": "PASS",
-      "elapsedMs": 428,
+      "elapsedMs": 443,
       "images": [
         {
           "src": "http://127.0.0.1:4201/assets/class_warrior.webp",
@@ -43,12 +43,13 @@
         "http://127.0.0.1:4201/assets/class_rogue.webp"
       ],
       "pageErrors": [],
-      "consoleErrors": []
+      "consoleErrors": [],
+      "consoleDiagnostics": []
     },
     {
       "name": "complete broken raster rejects instead of being skipped",
       "status": "PASS",
-      "elapsedMs": 453,
+      "elapsedMs": 407,
       "image": {
         "currentSrc": "http://127.0.0.1:4201/__qa/broken.webp",
         "complete": true,
@@ -58,9 +59,14 @@
         "top": 8
       },
       "fixtureRequests": 1,
+      "nativeFailure": {
+        "name": "EncodingError",
+        "message": "The source image cannot be decoded."
+      },
       "expectedDecodeFailure": "page.evaluate: EncodingError: The source image cannot be decoded.",
       "pageErrors": [],
-      "consoleErrors": []
+      "consoleErrors": [],
+      "consoleDiagnostics": []
     }
   ]
 }

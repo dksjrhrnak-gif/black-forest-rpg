@@ -35,9 +35,13 @@ async function imageState(page, id) {
 }
 
 function observeErrors(page) {
-  const errors = {pageErrors:[],consoleErrors:[]};
+  const errors = {pageErrors:[],consoleErrors:[],consoleDiagnostics:[]};
   page.on('pageerror', error => errors.pageErrors.push(diagnosticText(error.message)));
-  page.on('console', message => {if (message.type() === 'error') errors.consoleErrors.push(diagnosticText(message.text()));});
+  page.on('console', message => {if (message.type() === 'error') {
+    errors.consoleErrors.push(diagnosticText(message.text()));
+    const location = message.location();
+    errors.consoleDiagnostics.push({text:diagnosticText(message.text()),url:location.url ? safeURL(location.url) : ''});
+  }});
   return errors;
 }
 
@@ -89,17 +93,23 @@ async function brokenDecode(browser) {
     const before = await imageState(page, 'broken');
     assert.equal(fixtureRequests, 1, 'the invalid image must come only from this isolated route');
     assert(before.currentSrc);assert.equal(before.complete, true);assert.equal(before.width, 0);assert.equal(before.height, 0);
+    const nativeFailure = await page.locator('#broken').evaluate(async img => {
+      try {await img.decode();return null;} catch (error) {return {name:error.name,message:error.message};}
+    });
+    assert(nativeFailure, 'the browser itself must reject decoding the broken image');
+    assert.equal(nativeFailure.name, 'EncodingError', 'the native rejection must be an image decoding error');
+    assert(nativeFailure.message, 'record the actual browser decoding error text');
     let expectedDecodeFailure;
     const started = Date.now();
     await assert.rejects(() => boundedGuard(page), error => {
       expectedDecodeFailure = diagnosticText(error.message);
-      assert.match(expectedDecodeFailure, /decode|EncodingError|invalid image/i, 'broken raster must reject because decoding failed');
+      assert(expectedDecodeFailure.includes(nativeFailure.message), 'the fixture guard must propagate the actual native image decoding error: ' + JSON.stringify({nativeFailure,expectedDecodeFailure}));
       assert.doesNotMatch(expectedDecodeFailure, /safety deadline/, 'a timeout is not the expected decode rejection');
       return true;
     });
     assert.deepEqual(errors.pageErrors, [], 'the isolated broken image must not cause an unhandled page error');
-    assert(errors.consoleErrors.every(message => /^Image corrupt or truncated\.?$/.test(message)), 'only the known broken-image decoder message is expected in this negative fixture');
-    report.cases.push({name:'complete broken raster rejects instead of being skipped',status:'PASS',elapsedMs:Date.now()-started,image:before,fixtureRequests,expectedDecodeFailure,...errors});
+    assert(errors.consoleDiagnostics.every(message => (message.url === safeURL(broken) || message.text.includes(safeURL(broken))) && /Image corrupt or truncated\./.test(message.text)), 'only decoder messages from the isolated broken image are expected: ' + JSON.stringify(errors.consoleDiagnostics));
+    report.cases.push({name:'complete broken raster rejects instead of being skipped',status:'PASS',elapsedMs:Date.now()-started,image:before,fixtureRequests,nativeFailure,expectedDecodeFailure,...errors});
   } finally {await context.close();}
 }
 
